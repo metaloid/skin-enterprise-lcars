@@ -18,7 +18,7 @@
                 <control type="image">
                     <top>-35</top>
                     <posx>35</posx>
-                    <width>550</width>
+                    <width>475</width>
                     <height>190</height>
                     <colordiffuse>BBFFFFFF</colordiffuse>
 					<aspectratio>stretch</aspectratio>
@@ -58,57 +58,57 @@
         </control>
 		    <control type="group" description="Icons on Seekbar">
                 <top>40</top>
-				<left>260</left>
-            <control type="button" description="Buffer icon">
+				<left>300</left>
+            <control type="label" description="Buffer icon">
                 <visible>Player.Caching</visible>
                 <label>BUFFERING...</label>
             </control>
-            <control type="button" id="pause" >
+            <!--control type="button" id="pause" >
 				<visible>Player.Paused + !Player.Caching</visible>
                 <label>STANDING BY</label>
-			</control>
-			<control type="button" description="FF">
+			</control-->
+			<control type="label" description="FF">
                 <visible>player.forwarding2x</visible>
                 <label>2x FFW</label>
             </control>
-            <control type="button" description="FFFF">
+            <control type="label" description="FFFF">
                 <visible>player.forwarding4x</visible>
                 <label>4x FFW</label>
             </control>
-            <control type="button" description="2FFFF">
+            <control type="label" description="2FFFF">
                 <visible>player.forwarding8x</visible>
                 <label>8x FFW</label>
             </control>
-            <control type="button" description="4FFFF">
+            <control type="label" description="4FFFF">
                 <visible>player.forwarding16x</visible>
                 <label>16x FFW</label>
             </control>
-            <control type="button" description="8FFFF">
+            <control type="label" description="8FFFF">
                 <visible>player.forwarding32x</visible>
                 <label>32x FFW</label>
             </control>
-            <control type="button" description="RF">
+            <control type="label" description="RF">
                 <visible>player.rewinding2x</visible>
                 <label>2x RW</label>
             </control>
-            <control type="button" description="RFFF">
+            <control type="label" description="RFFF">
                 <visible>player.rewinding4x</visible>
                 <label>4x RW</label>
             </control>
-            <control type="button" description="2RFFF">
+            <control type="label" description="2RFFF">
                 <visible>player.rewinding8x</visible>
                 <label>8x RW</label>
             </control>
-            <control type="button" description="4RFFF">
+            <control type="label" description="4RFFF">
                 <visible>player.rewinding16x</visible>
                 <label>16x RW</label>
             </control>
-            <control type="button" description="8RFFF">
+            <control type="label" description="8RFFF">
                 <visible>player.rewinding32x</visible>
                 <label>32x RW</label>
             </control>
             <control type="group">
-                <control type="button" description="Seek time label">
+                <control type="label" description="Seek time label">
                     <visible>![player.forwarding | player.rewinding]</visible>
                     <visible>Player.DisplayAfterSeek</visible>
 					<label>$INFO[Player.SeekOffset]</label>
