@@ -1,4 +1,3 @@
-skin.sio2x
-==========
+enterprise lcars==========
 
 XBMC Skin
