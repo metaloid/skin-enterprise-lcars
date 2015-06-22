@@ -174,8 +174,8 @@
                             <label2>Wind $INFO[Window(weather).Property(Daily.2.WindSpeed)] $INFO[Window(weather).Property(Daily.2.WindDirection)]</label2>
                             <property name="current">$INFO[Window(weather).Property(Daily.2.Outlook)]</property>
                             <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.2.Precipitation)]</property>
-                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.2.LowTemperature)] $INFO[System.TemperatureUnits]</property>
-                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.2.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.2.LowTemperature)]</property>
+                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.2.HighTemperature)]</property>
                             <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
                         </item>
@@ -184,8 +184,8 @@
                             <label2>Wind $INFO[Window(weather).Property(Daily.3.WindSpeed)] $INFO[Window(weather).Property(Daily.3.WindDirection)]</label2>
                             <property name="current">$INFO[Window(weather).Property(Daily.3.Outlook)]</property>
                             <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.3.Precipitation)]</property>
-                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.3.LowTemperature)] $INFO[System.TemperatureUnits]</property>
-                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.3.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.3.LowTemperature)]</property>
+                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.3.HighTemperature)]</property>
                             <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
                         </item>
@@ -194,8 +194,8 @@
                             <label2>Wind $INFO[Window(weather).Property(Daily.4.WindSpeed)] $INFO[Window(weather).Property(Daily.4.WindDirection)]</label2>
                             <property name="current">$INFO[Window(weather).Property(Daily.4.Outlook)]</property>
                             <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.4.Precipitation)]</property>
-                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.4.LowTemperature)] $INFO[System.TemperatureUnits]</property>
-                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.4.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.4.LowTemperature)]</property>
+                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.4.HighTemperature)]</property>
                             <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
                         </item>
@@ -204,8 +204,8 @@
                             <label2>Wind $INFO[Window(weather).Property(Daily.5.WindSpeed)] $INFO[Window(weather).Property(Daily.5.WindDirection)]</label2>
                             <property name="current">$INFO[Window(weather).Property(Daily.5.Outlook)]</property>
                             <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.5.Precipitation)]</property>
-                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.5.LowTemperature)] $INFO[System.TemperatureUnits]</property>
-                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.5.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.5.LowTemperature)]</property>
+                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.5.HighTemperature)]</property>
                             <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day4.OutlookIcon)]</icon>
                         </item>
@@ -214,8 +214,8 @@
                             <label2>Wind $INFO[Window(weather).Property(Daily.6.WindSpeed)] $INFO[Window(weather).Property(Daily.6.WindDirection)]</label2>
                             <property name="current">$INFO[Window(weather).Property(Daily.6.Outlook)]</property>
                             <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.6.Precipitation)]</property>
-                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.6.LowTemperature)] $INFO[System.TemperatureUnits]</property>
-                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.6.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.6.LowTemperature)]</property>
+                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.6.HighTemperature)]</property>
                             <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day5.OutlookIcon)]</icon>
                         </item>
@@ -224,8 +224,8 @@
                             <label2>Wind $INFO[Window(weather).Property(Daily.7.WindSpeed)] $INFO[Window(weather).Property(Daily.7.WindDirection)]</label2>
                             <property name="current">$INFO[Window(weather).Property(Daily.7.Outlook)]</property>
                             <property name="rain">$LOCALIZE[33021]: $INFO[Window(weather).Property(Daily.7.Precipitation)]</property>
-                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.7.LowTemperature)] $INFO[System.TemperatureUnits]</property>
-                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.7.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+                            <property name="LowTemp">$INFO[Window(weather).Property(Daily.7.LowTemperature)]</property>
+                            <property name="HighTemp">$INFO[Window(weather).Property(Daily.7.HighTemperature)]</property>
                             <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day6.OutlookIcon)]</icon>
                         </item>
