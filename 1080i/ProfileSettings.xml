@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="130" type="dialog">
+    <defaultcontrol always="true">5</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>0xffffffff</backgroundcolor>
+    <include>OpenClose</include>
+    <controls>
+        <include>BlackBackground</include>
+        <control type="image">
+            <width>1920</width>
+            <height>1080</height>
+            <texture >Lcars/lineL.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+		<control type="label" id="1000" description="Profile Name">
+            <include>Heading</include>
+        </control>
+        <control type="image" id="2">
+            <centerleft>540</centerleft>
+            <centertop>540</centertop>
+            <width>600</width>
+            <height>600</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture background="true" diffuse="images/logindiffuse.png">def_user.png</texture>
+        </control>
+        <control type="image">
+            <centerleft>540</centerleft>
+            <centertop>540</centertop>
+            <width>652</width>
+            <height>652</height>
+            <aspectratio>stretch</aspectratio>
+            <texture>images/LoginSlider.png</texture>
+        </control>
+        
+        <include>profilecontent</include>
+        
+    </controls>
+</window>

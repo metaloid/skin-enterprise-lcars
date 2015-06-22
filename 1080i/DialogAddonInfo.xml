@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="146">
+     <defaultcontrol always="true">300</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1400</width>
+				<height>950</height>
+				<texture border="150"  >sidepanel/dialog.png</texture>
+		</control>
+		<control type="image" description="Thumb">
+            <left>1025</left>
+			<top>80</top>
+            <width>350</width>
+            <height>350</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture fallback="defaultmissing.png" diffuse="EmptyCaseMask.png" background="true">$VAR[Locandine]</texture>
+			<bordertexture  border="10">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+        </control>
+        
+        <control type="textbox" description="Plot">
+            <font>LCARS218</font>
+            <left>60</left>
+            <top>450</top>
+            <label>$INFO[ListItem.Property(Addon.Description)]</label>
+            <width>960</width>
+            <height>400</height>
+            <align>justify</align>
+        </control>
+        <control type="grouplist" description="Labels">
+                <left>60</left>
+                <top>90</top>
+                <width>808</width>
+                <orientation>vertical</orientation>
+                <control type="label" description="Author">
+                    <font>LCARS215</font>
+                    <width>808</width>
+                    <height>30</height>
+                    <scroll>false</scroll>
+                    <label>Author: $INFO[ListItem.Property(Addon.Creator)]</label>
+                </control>
+                <control type="label" description="Version">
+                    <font>LCARS215</font>
+                    <width>808</width>
+                    <height>30</height>
+                    <scroll>false</scroll>
+                    <label>Version: [COLOR=red]$INFO[ListItem.Property(Addon.Version)][/COLOR]</label>
+                </control>
+                <control type="label" description="summary">
+                    <font>LCARS215</font>
+                    <width>808</width>
+                    <height>30</height>
+                    <scroll>false</scroll>
+                    <label>Summary: $INFO[ListItem.Property(Addon.Summary)]</label>
+                </control>
+                <control type="textbox" description="Disclaimer">
+                    <font>LCARS215</font>
+                    <width>808</width>
+                    <height>200</height>
+                    <scroll>false</scroll>
+                    <label>Disclaimer: $INFO[ListItem.Property(Addon.Disclaimer)]</label>
+                </control>
+                
+            </control>
+			<control type="group" description="Options">
+            <control type="grouplist" id="300">
+                <top>540</top>
+                <left>1050</left>
+			    <height>400</height>
+				<width>350</width>
+                <onleft>50</onleft>
+                <itemgap>10</itemgap>
+                <aligny>bottom</aligny>
+                <align>center</align>
+                <orientation>vertical</orientation>
+                <control type="button" id="6" description="Install">
+                    <label>24038</label>
+                    <width>300</width>
+                </control>
+                <control type="button" id="7" description="Disable">
+                    <label>24021</label>
+                    <width>300</width>
+                </control>
+                <control type="button" id="8" description="update">
+                    <label>24069</label>
+                    <width>300</width>
+                </control>
+                <control type="button" id="9" description="settings">
+                    <label>5</label>
+                    <width>300</width>
+                </control>
+                <control type="button" id="10" description="changelog">
+                    <label>24054</label>
+                    <width>300</width>
+                </control>
+                <control type="button" id="11" description="rollback">
+                    <label>$LOCALIZE[24048]</label>
+                    <width>300</width>
+                </control>
+				<control type="button" id="677" description="Cancel">
+                    <label>186</label>
+				    <onclick>PreviousMenu</onclick>
+			        <width>300</width>
+                </control>
+			</control>
+        </control>
+        <control type="grouplist" description="centered">
+            <top>30</top>
+            <centerleft>700</centerleft>
+            <width>580</width>
+            <align>center</align>
+            <height>60</height>
+            <orientation>horizontal</orientation>
+            <control type="label" id="7777" description="Heading">
+                <width>auto</width>
+                <height>40</height>
+                <font>LCARS205</font>
+                <scroll>false</scroll>
+                <label>$INFO[ListItem.Property(Addon.Name)]</label>
+            </control>
+        </control>
+    </controls>
+</window>

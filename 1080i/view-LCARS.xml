@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="oldicons">
+    <control type="image">
+          <posx>450</posx>
+		  <posy>70</posy>
+		  <width>1280</width>
+          <height>930</height>
+          <texture  background="true">images/LCARS.png</texture>
+          <colordiffuse>77FFFFFF</colordiffuse>
+		  <aspectratio scalediffuse="false">scale</aspectratio>
+        </control>
+	  <control type="panel" id="54">
+          <visible>![Container.Content(actors) | Container.Content(genres) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
+          <posx>430</posx>
+		  <posy>550</posy>
+		  <width>1280</width>
+          <height>450</height>
+          <onright>60</onright>
+          <onleft>9000</onleft>
+		  <onright>60</onright>
+		  <viewtype label="54">Old Icons</viewtype>
+          <pagecontrol>60</pagecontrol>
+          <scrolltime tween="sine" easing="inout">300</scrolltime>
+          <preloaditems>4</preloaditems>
+          <orientation>vertical</orientation>
+          <scrolltime>400</scrolltime>
+          
+		
+		
+		<itemlayout  height="50" width="640">
+				<control type="image">
+					<centerleft>50</centerleft>
+					<height>40</height>
+					<width>100</width>
+					<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="buttonselect2">button-focus.png</texture>
+				</control>
+				<control type="image">
+					<centerleft>360</centerleft>
+					<height>40</height>
+					<width>510</width>
+					<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+				</control>
+				<control type="label">
+						<centerleft>50</centerleft>
+						<posy>8</posy>
+						<width>80</width>
+						<height>20</height>
+						<font>LCARS218</font>
+						<scroll>false</scroll>
+						<align>center</align>
+						<textcolor>blue</textcolor>
+						<aligny>center</aligny>
+						<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<label>SD</label>
+				</control>
+				<control type="label">
+						<centerleft>50</centerleft>
+						<posy>8</posy>
+						<width>80</width>
+						<height>20</height>
+						<font>LCARS218</font>
+						<scroll>false</scroll>
+						<align>center</align>
+						<textcolor>green</textcolor>
+						<aligny>center</aligny>
+						<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<label>HD</label>
+				</control>
+					
+				<control type="label">
+					<centerleft>360</centerleft>
+						<posy>8</posy>
+						<width>460</width>
+						<height>20</height>
+					<font>LCARS205</font>
+					<scroll>false</scroll>
+                    <aligny>center</aligny>
+					<label >$VAR[VARLabel3]</label>
+				</control>
+				
+				
+			</itemlayout>
+			<focusedlayout  height="50" width="640">
+				<control type="image">
+					<centerleft>50</centerleft>
+					<height>40</height>
+					<width>100</width>
+					<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="buttonselect">button-focus.png</texture>
+				</control>
+				<control type="image">
+					<centerleft>360</centerleft>
+					<height>40</height>
+					<width>510</width>
+					<texture border="5" colordiffuse="$VAR[diffuseselect]">button-focus.png</texture>
+				</control>
+				<control type="label">
+						<centerleft>50</centerleft>
+						<posy>8</posy>
+						<width>80</width>
+						<height>20</height>
+						<font>LCARS218</font>
+						<scroll>false</scroll>
+						<align>center</align>
+						<textcolor>blue</textcolor>
+						<aligny>center</aligny>
+						<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<label>SD</label>
+				</control>
+				<control type="label">
+						<centerleft>50</centerleft>
+						<posy>8</posy>
+						<width>80</width>
+						<height>20</height>
+						<font>LCARS218</font>
+						<scroll>false</scroll>
+						<align>center</align>
+						<textcolor>green</textcolor>
+						<aligny>center</aligny>
+						<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<label>HD</label>
+				</control>
+					
+				<control type="label">
+					<centerleft>360</centerleft>
+						<posy>8</posy>
+						<width>460</width>
+						<height>20</height>
+					<font>LCARS205</font>
+					<aligny>center</aligny>
+					<label >$VAR[VARLabel3]</label>
+				</control>
+			
+				
+			</focusedlayout>
+		</control>
+        <control type="list" id="501">
+            <visible>Container.Content(actors) | Container.Content(genres) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)</visible>
+            <posx>450</posx>
+			<posy>550</posy>
+			<height>450</height>
+            <width>400</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>9000</onleft>
+            <onright>300</onright>
+            <pagecontrol>60</pagecontrol>
+          <orientation>vertical</orientation>
+            <itemlayout  height="50" width="400">
+                <control type="image">
+                    <width>400</width>
+                    <height>40</height>
+                    <texture diffuse="whiteallrounded2.png" colordiffuse="buttonselect2" >button-focus.png</texture>
+                </control>
+                <control type="label">
+                    <left>95</left>
+                    <top>8</top>
+                    <width>300</width>
+                    <height>28</height>
+                    <aligny>center</aligny>
+					<font>LCARS20</font>
+                    <align>left</align>
+                    <scroll>false</scroll>
+				    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout  height="50" width="400">
+                <control type="image">
+                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
+                    <width>400</width>
+                    <height>40</height>
+                    <texture diffuse="whiteallrounded2.png" colordiffuse="buttonselect" >button-focus.png</texture>
+                </control>
+                <control type="label">
+                    <left>95</left>
+                        <top>8</top>
+                        <width>300</width>
+                        <height>28</height>
+                        <aligny>center</aligny>
+					    <font>LCARS20</font>
+                        <align>left</align>
+                        <label>$INFO[ListItem.label]</label>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="list" id="300">
+            <visible>[Container.Content(actors) | Container.Content(genres) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
+            <visible>!StringCompare(ListItem.Label,..)</visible>
+            <posy>550</posy>
+			<posx>860</posx>
+			<height>450</height>
+            <width>400</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>501</onleft>
+            <onright>301</onright>
+            <orientation>vertical</orientation>
+            <itemlayout  height="50" width="400">
+                <control type="image">
+                    <width>400</width>
+                    <height>40</height>
+                    <texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+                </control>
+                <control type="label">
+                    <left>5</left>
+                    <width>390</width>
+                    <height>40</height>
+                    <scroll>false</scroll>
+				    <align>center</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout  height="50" width="400">
+                <control type="image">
+                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(300)" reversible="true">Conditional</animation>
+                    <width>400</width>
+                    <height>40</height>
+                    <texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+                </control>
+                <control type="label">
+                    <left>5</left>
+                    <width>390</width>
+                    <height>40</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+            <content>$VAR[VARmovie]</content>
+        </control>
+		<control type="list" id="301">
+            <visible>[Container.Content(actors) | Container.Content(genres) | Container.Content(studios)]</visible>
+            <visible>!StringCompare(ListItem.Label,..)</visible>
+            <posy>550</posy>
+			<posx>1270</posx>
+			<height>450</height>
+            <width>400</width>
+            <onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>300</onleft>
+            <onright>60</onright>
+            <orientation>vertical</orientation>
+            <itemlayout  height="50" width="410">
+                <control type="image">
+                    <width>400</width>
+                    <height>40</height>
+                    <texture flipx="true"  diffuse="whiteallrounded2.png" colordiffuse="buttonselect2" >button-focus.png</texture>
+                </control>
+                <control type="label">
+                    <left>5</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <scroll>false</scroll>
+				    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </itemlayout>
+            <focusedlayout  height="50" width="410">
+                <control type="image">
+                    <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(301)" reversible="true">Conditional</animation>
+                    <width>400</width>
+                    <height>40</height>
+                    <texture flipx="true"  diffuse="whiteallrounded2.png" colordiffuse="buttonselect" >button-focus.png</texture>
+                </control>
+                <control type="label">
+                    <left>5</left>
+                    <width>290</width>
+                    <height>40</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <info>ListItem.Label</info>
+                </control>
+            </focusedlayout>
+            <content>$VAR[VARtv]</content>
+        </control>
+		<control type="group" description="info">
+               		<posx>430</posx>
+					<posy>100</posy>
+					<width>1280</width>
+					<height>450</height>
+			<control type="image">
+                <posx>25</posx>
+				<posy>25</posy>
+				<width>1230</width>
+				<height>385</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture fallback="sidepanel/LCARS.png" diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >$INFO[ListItem.Art(fanart)]</texture>
+                <bordertexture  border="40">shadow.png</bordertexture>
+                <bordersize>10</bordersize>
+			</control>
+			<control type="image">
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>260</width>
+                   	<height>385</height>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture fallback="defaultmissing.png" diffuse="EmptyCaseMask.png" background="true">$VAR[Locandine]</texture>
+					<!--bordertexture  border="10">shadow.png</bordertexture-->
+                    <bordersize>10</bordersize>
+				</control>
+				<control type="textbox">
+					<visible>!Player.HasVideo</visible>
+					<posx>320</posx>
+					<posy>30</posy>
+					<width>900</width>
+					<height>375</height>
+					<font>LCARS215</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<label>$VAR[Plots]</label>
+				</control>
+			<control type="group">
+				<description>Small Media Window</description>
+				<posx>580</posx>
+				<posy>25</posy>
+				<visible>Control.IsVisible(54)</visible>
+			<control type="videowindow">
+				<left>39</left>
+				<top>14</top>
+				<width>612</width>
+				<height>351</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+				
+			</control>
+			
+					
+			</control>
+			
+		
+             	</control>
+			<control type="group" description="slider">
+               	<control type="scrollbar" id="60">
+                    	<posx>200r</posx>
+                    	<top>125</top>
+                    	<height>840</height>
+                    	<onleft>54</onleft>
+                    	<onright>54</onright>
+                </control>
+            </control>
+			
+				
+            
+      
+	  
+    
+    </include>
+</includes>	
+
+

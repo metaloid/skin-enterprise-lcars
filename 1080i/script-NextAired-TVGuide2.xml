@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="true">200</defaultcontrol>
+    <backgroundcolor>background</backgroundcolor>
+    <controls>
+        <control type="image">
+                <visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>970</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture background="true" colordiffuse="55FFFFFF">$VAR[nextairedfanart]</texture>
+                <fadetime>400</fadetime>
+                <animation effect="fade" time="600">Visible</animation>
+                <animation effect="fade" time="600">Hidden</animation>
+		</control>
+        <control type="image">
+                <top>0</top>
+                <posx>0</posx>
+                <width>455</width>
+                <height>970</height>
+                <aspectratio>strech</aspectratio>
+                <texture background="true" >Lcars/lineR.png</texture>
+		</control> 
+		<control type="image">
+                <top>0</top>
+                <posx>455</posx>
+                <width>1464</width>
+                <height>970</height>
+                <aspectratio>strech</aspectratio>
+                <texture  background="true" >Lcars/lineL.png</texture>
+	     </control>
+		<control type="grouplist">
+			<top>980</top>
+            <posx>70</posx>
+			<align>left</align>
+            <orientation>horizontal</orientation>
+            <itemgap>10</itemgap>
+			<control type="button" description="WebLink">
+                <visible>!Skin.HasSetting(hideconnection)</visible>
+                <width>250</width>
+                <label>$INFO[Network.IPAddress,IP: ]</label>
+            </control>
+			<control type="button" description="cputemp">
+			<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
+            <width>250</width>
+                <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
+            </control>
+			<control type="button" description="Clock">
+                <visible>!Skin.HasSetting(HideClock)</visible>
+                <label>$INFO[System.Time]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="Battery">
+                <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
+                <label>Power Level $INFO[System.BatteryLevel]</label>
+			    <texturenofocus colordiffuse="$VAR[Battery]" border="20">whiteallrounded.png</texturenofocus>
+				<width>250</width>
+            </control>
+		</control>
+			<!-- weekdays -->
+			<control type="list" id="5000">
+				<posx>30</posx>
+				<posy>240</posy>
+				<width>320</width>
+				<height>650</height>
+				<onleft>9000</onleft>
+				<onright condition="Container(5000).HasFocus(1)">200</onright>
+				<onright condition="Container(5000).HasFocus(2)">201</onright>
+				<onright condition="Container(5000).HasFocus(3)">202</onright>
+				<onright condition="Container(5000).HasFocus(4)">203</onright>
+				<onright condition="Container(5000).HasFocus(5)">204</onright>
+				<onright condition="Container(5000).HasFocus(6)">205</onright>
+				<onright condition="Container(5000).HasFocus(7)">206</onright>
+				<onright condition="Container(5000).HasFocus(8)">207</onright>
+				<onright condition="Container(5000).HasFocus(9)">208</onright>
+				<onright condition="Container(5000).HasFocus(10)">209</onright>
+				<onright condition="Container(5000).HasFocus(11)">210</onright>
+				<onright condition="Container(5000).HasFocus(12)">211</onright>
+				<onright condition="Container(5000).HasFocus(13)">212</onright>
+				<onright condition="Container(5000).HasFocus(14)">213</onright>
+				<onright condition="Container(5000).HasFocus(15)">214</onright>
+				<onright condition="Container(5000).HasFocus(16)">215</onright>
+				<onup>9000</onup>
+				<ondown>5000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<itemlayout height="50" width="310">
+					<control type="image">
+						<posx>20</posx>
+                        <width>300</width>
+                        <height>40</height>
+                        <texture colordiffuse="buttonselect2" >whiteallrounded2.png</texture>
+					</control>
+					<control type="label">
+						<left>95</left>
+                        <top>8</top>
+                        <width>150</width>
+                        <height>28</height>
+                        <aligny>center</aligny>
+					    <font>LCARS20</font>
+                        <align>left</align>
+                        <scroll>false</scroll>
+				        <textcolor>black</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>250</posx>
+						<top>8</top>
+                        <width>50</width>
+						<height>28</height>
+                        <font>LCARS20</font>
+						<textcolor>black</textcolor>
+						<align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="310">
+					<control type="image">
+						<posx>20</posx>
+                        <width>300</width>
+                        <height>40</height>
+                        <texture >whiteallrounded2.png</texture>
+					</control>
+					<control type="label">
+						<left>95</left>
+                        <top>8</top>
+                        <width>150</width>
+                        <height>28</height>
+                        <aligny>center</aligny>
+					    <font>LCARS20</font>
+                        <align>left</align>
+                        <scroll>false</scroll>
+				        <textcolor>black</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>250</posx>
+						<top>8</top>
+                        <width>50</width>
+						<height>28</height>
+                        <font>LCARS20</font>
+						<textcolor>black</textcolor>
+						<align>right</align>
+                        <label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>			
+				<content>
+					<item id="1">
+						<label>$INFO[Window(home).Property(NextAired.200.Wday)] $INFO[Window(Home).Property(NextAired.200.Date)]</label>
+						<label2>$INFO[Container(200).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+						<visible>!IsEmpty(Window(home).Property(NextAired.200.Wday))</visible>
+					</item>
+					<item id="2">
+						<label>[COLOR selected]$INFO[Window(home).Property(NextAired.201.Wday)] $INFO[Window(Home).Property(NextAired.201.Date)][/COLOR]</label>
+						<label2>[COLOR selected]$INFO[Container(201).NumItems, (,)][/COLOR]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(home).Property(NextAired.202.Wday)] $INFO[Window(Home).Property(NextAired.202.Date)]</label>
+						<label2>$INFO[Container(202).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(home).Property(NextAired.203.Wday)] $INFO[Window(Home).Property(NextAired.203.Date)]</label>
+						<label2>$INFO[Container(203).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(home).Property(NextAired.204.Wday)] $INFO[Window(Home).Property(NextAired.204.Date)]</label>
+						<label2>$INFO[Container(204).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(home).Property(NextAired.205.Wday)] $INFO[Window(Home).Property(NextAired.205.Date)]</label>
+						<label2>$INFO[Container(205).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(home).Property(NextAired.206.Wday)] $INFO[Window(Home).Property(NextAired.206.Date)]</label>
+						<label2>$INFO[Container(206).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="8">
+						<label>$INFO[Window(home).Property(NextAired.207.Wday)] $INFO[Window(Home).Property(NextAired.207.Date)]</label>
+						<label2>$INFO[Container(207).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(home).Property(NextAired.208.Wday)] $INFO[Window(Home).Property(NextAired.208.Date)]</label>
+						<label2>$INFO[Container(208).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(home).Property(NextAired.209.Wday)] $INFO[Window(Home).Property(NextAired.209.Date)]</label>
+						<label2>$INFO[Container(209).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="11">
+						<label>$INFO[Window(home).Property(NextAired.210.Wday)] $INFO[Window(Home).Property(NextAired.210.Date)]</label>
+						<label2>$INFO[Container(210).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="12">
+						<label>$INFO[Window(home).Property(NextAired.211.Wday)] $INFO[Window(Home).Property(NextAired.211.Date)]</label>
+						<label2>$INFO[Container(211).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="13">
+						<label>$INFO[Window(home).Property(NextAired.212.Wday)] $INFO[Window(Home).Property(NextAired.212.Date)]</label>
+						<label2>$INFO[Container(212).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="14">
+						<label>$INFO[Window(home).Property(NextAired.213.Wday)] $INFO[Window(Home).Property(NextAired.213.Date)]</label>
+						<label2>$INFO[Container(213).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="15">
+						<label>$INFO[Window(home).Property(NextAired.214.Wday)] $INFO[Window(Home).Property(NextAired.214.Date)]</label>
+						<label2>$INFO[Container(214).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="16">
+						<label>$INFO[Window(home).Property(NextAired.215.Wday)] $INFO[Window(Home).Property(NextAired.215.Date)]</label>
+						<label2>$INFO[Container(215).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="group" id="9001">
+				<posx>630</posx>
+				<top>200</top>
+				<control type="panel" id="200">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(1)] | Control.HasFocus(200) | [Container(5000).HasFocus(1) + Control.HasFocus(60)]</visible>
+					<onright>200</onright>
+					<include>TVNextAiredListCommonLayout</include>				
+				</control>
+				<control type="panel" id="201">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(2)] | Control.HasFocus(201) | [Container(5000).HasFocus(2) + Control.HasFocus(60)]</visible>
+					<onright>201</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="202">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(3)] | Control.HasFocus(202) | [Container(5000).HasFocus(3) + Control.HasFocus(60)]</visible>
+					<onright>202</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="203">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(4)] | Control.HasFocus(203) | [Container(5000).HasFocus(4) + Control.HasFocus(60)]</visible>
+					<onright>203</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="204">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(5)] | Control.HasFocus(204) | [Container(5000).HasFocus(5) + Control.HasFocus(60)]</visible>
+					<onright>204</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="205">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(6)] | Control.HasFocus(205) | [Container(5000).HasFocus(6) + Control.HasFocus(60)]</visible>
+					<onright>205</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="206">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(7)] | Control.HasFocus(206) | [Container(5000).HasFocus(7) + Control.HasFocus(60)]</visible>
+					<onright>206</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="207">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(8)] | Control.HasFocus(207) | [Container(5000).HasFocus(8) + Control.HasFocus(60)]</visible>
+					<onright>207</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="208">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(9)] | Control.HasFocus(208) | [Container(5000).HasFocus(9) + Control.HasFocus(60)]</visible>
+					<onright>208</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="209">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(10)] | Control.HasFocus(209) | [Container(5000).HasFocus(10) + Control.HasFocus(60)]</visible>
+					<onright>209</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="210">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(11)] | Control.HasFocus(210) | [Container(5000).HasFocus(11) + Control.HasFocus(60)]</visible>
+					<onright>210</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="211">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(12)] | Control.HasFocus(211) | [Container(5000).HasFocus(12) + Control.HasFocus(60)]</visible>
+					<onright>211</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="212">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(13)] | Control.HasFocus(212) | [Container(5000).HasFocus(13) + Control.HasFocus(60)]</visible>
+					<onright>212</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="213">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(14)] | Control.HasFocus(213) | [Container(5000).HasFocus(14) + Control.HasFocus(60)]</visible>
+					<onright>213</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="214">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(15)] | Control.HasFocus(214) | [Container(5000).HasFocus(15) + Control.HasFocus(60)]</visible>
+					<onright>214</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="215">
+					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(16)] | Control.HasFocus(215) | [Container(5000).HasFocus(16) + Control.HasFocus(60)]</visible>
+					<onright>215</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+			</control>        
+        
+		
+                
+            <control type="grouplist" id="9000">
+                    <width>300</width>
+                    <height>300</height>
+                    <top>120</top>
+					<posx>50</posx>
+					<onleft>9000</onleft>
+                    <onright>9000</onright>
+                    <onup>2000</onup>
+                    <ondown>5000</ondown>
+                    <control type="button" id="8">
+                        <description>Settings</description>
+                        <width>300</width>
+                        <texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+                        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+                        <align>LEFT</align>
+                        <textoffsetx>75</textoffsetx>
+                        <label>5</label>
+                    </control>
+                    <control type="button" id="607">
+                        <onclick>ActivateWindow(Home)</onclick>
+                        <texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+                        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+                        <align>LEFT</align>
+                        <textoffsetx>75</textoffsetx>
+                        <width>300</width>
+                        <label>Home</label>
+                    </control>
+            </control>
+            
+        
+
+    </controls>
+</window>
+

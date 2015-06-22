@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2">
+    <defaultcontrol always="true">54</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <views>54</views>
+	<include>OpenClose</include>
+	<controls>
+        <control type="image">
+                 <top>0</top>
+                <posx>0</posx>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>strech</aspectratio>
+                <texture background="true" flipx="true">Lcars/lineL.png</texture>
+		</control> 
+		<control type="image" >
+					<posx>50</posx>
+                    <top>575</top>
+                    <width>300</width>
+                    <height>330</height>
+                    <aspectratio scalediffuse="true">keep</aspectratio>
+                    <texture background="true" diffuse="EmptyCaseMask.png" >sidepanel/miss3.jpg</texture>
+					<colordiffuse>ccFFFFFF</colordiffuse>
+      </control> 
+	  <include>oldicons</include>		
+        <include>WindowsTopInfos</include>
+		
+            
+            <control type="grouplist" id="9000">
+                <width>300</width>
+                <height>800</height>
+                <top>150</top>
+                <posx>50</posx>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			<control type="button" id="607">
+                <onclick>ActivateWindow(Home)</onclick>
+				<width>300</width>
+				<label>Home</label>
+			</control>
+            <control type="button" id="677">
+                <onclick>ParentDir</onclick>
+				<width>300</width>
+				<label>Back</label>
+			</control>   
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4" description="SortOrder">
+                    <width>300</width>
+					<label>584</label>
+                    <altlabel>585</altlabel>
+                    <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+                </control>
+                <control type="button" id="6" description="Slideshow">
+                    <disabledcolor>Disabled</disabledcolor>
+                    <width>300</width>
+					<label>108</label>
+                    <visible>!ListItem.IsFolder</visible>
+                </control>
+                <control type="button" id="7" description="Recursive slideshow">
+                    <disabledcolor>Disabled</disabledcolor>
+                    <width>300</width>
+					<label>13318</label>
+                    <visible>ListItem.IsFolder</visible>
+                </control>
+                <control type="radiobutton" id="9" description="Randomize">
+                    <width>300</width>
+					<include>Keyboardbuttons</include>
+					<label>13319</label>
+                </control>
+                <control type="edit" id="19">
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<height>40</height>
+					<width>300</width>
+					<textwidth>230</textwidth>
+					<label>587</label>
+				</control>
+				<control type="togglebutton" id="699" description="Playing">
+                    <enable>Player.HasMedia</enable>
+                    <width>300</width>
+					<include>Keyboardbuttons</include>
+					<label>$LOCALIZE[16003]</label>
+                    <altlabel>$LOCALIZE[31055]</altlabel>
+                    <usealttexture>Player.HasMedia</usealttexture>
+                    <onclick>fullscreen</onclick>
+                    <altclick>fullscreen</altclick>
+                    <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
+                </control>
+				
+			</control>
+        
+        
+    </controls>
+</window>

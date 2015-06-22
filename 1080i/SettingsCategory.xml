@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="12">
+    <defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <controls>
+        <include>BlackBackground</include>
+        <control type="image">
+            <width>1920</width>
+            <height>1080</height>
+            <texture >Lcars/lineL.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+		
+        <control type="label" id="6">
+            <top>-500</top>
+            <width>0</width>
+            <height>0</height>
+            <font>LCARS24</font>
+        </control>
+        
+        <control type="label" id="2" description="Heading">
+            <centerleft>960</centerleft>
+            <top>5</top>
+        	<textcolor>black</textcolor>
+            <font>LCARS24</font>
+            <align>center</align>
+            <label>-</label>
+        </control>
+        <control type="grouplist" id="3" description="TopMenu">
+            <top>180</top>
+            <centerleft>540</centerleft>
+			<width>500</width>
+            <height>420</height>
+            <ondown>555</ondown>
+            <onright>5</onright>
+            <onleft>5</onleft>
+            <itemgap>5</itemgap>
+	  
+        </control>
+        <control type="grouplist" id="5" description="Stage">
+            <top>180</top>
+            <left>960</left>
+            <width>800</width>
+            <height>700</height>
+            <onright>60</onright>
+            <onup>5</onup>
+            <ondown>5</ondown>
+            <onright>3</onright>
+            <onleft>3</onleft>
+            <pagecontrol>60</pagecontrol>
+            <orientation>vertical</orientation>
+            <itemgap>5</itemgap>
+        </control>
+        
+	  <control type="button" id="7" description="Button">
+            <description>Default Button</description>
+            <height>40</height>
+            <width>300</width>
+            <font>LCARS20</font>
+            <align>left</align>
+			<textoffsetx>7</textoffsetx>
+			<invalidcolor>invalid</invalidcolor>
+            <texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+         </control>
+        <control type="radiobutton" id="8" description="Radio Button">
+            <width>300</width>
+            <height>40</height>
+            <radioposx>0</radioposx>
+            <font>LCARS20</font>
+            <align>left</align>
+        </control>
+        <control type="spincontrolex" id="9" description="Spin control">
+            <width>820</width>
+            <height>40</height>
+            <align>left</align>
+            <font>LCARS20</font>
+            
+        </control>
+        <control type="button" id="10" description="Category Button">
+            <width>300</width>
+            <textoffsetx>75</textoffsetx>
+			<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+        <align>LEFT</align>
+            <aligny>center</aligny>
+        </control>
+        <control type="scrollbar" id="60">
+            <left>30r</left>
+            <top>90</top>
+            <height>950</height>
+            <onleft>5</onleft>
+            <onright>noop</onright>
+        </control>
+        <control type="grouplist" id="555">
+            <left>290</left>
+            <ondown>3</ondown>
+		<onup>3</onup>
+		<top>280</top>
+            <aligny>top</aligny>
+            <align>center</align>
+            <orientation>vertical</orientation>
+            <control type="button" id="607">
+                    	<onclick>ActivateWindow(Home)</onclick>
+				<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+        <width>300</width>
+				<align>LEFT</align>
+        <textoffsetx>75</textoffsetx>
+			<label>Home</label>
+	 	 </control>
+        	<control type="button" id="677">
+                    	<onclick>ParentDir</onclick>
+				<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+        <width>300</width>
+				<align>LEFT</align>
+        <textoffsetx>75</textoffsetx>
+			<label>Back</label>
+	  	</control>   
+		<control type="button" id="20">
+                		<description>Setting level button</description>
+                		<textoffsetx>75</textoffsetx>
+			<height>40</height>
+				<align>LEFT</align>
+        <texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+        <width>300</width>
+                		<onclick>SettingsLevelChange</onclick>
+                		
+            </control>
+	  </control>
+        <control type="group">
+            <visible>!SubString(Control.GetLabel(6),No info) + !Control.HasFocus(20)</visible>
+            <control type="textbox" id="90">
+            <centerleft>540</centerleft>
+            <top>750</top>
+            <aligny>top</aligny>
+            <align>center</align>
+            <width>470</width>
+                <height>200</height>
+                <font>LCARS20</font>
+                <label>$INFO[Control.GetLabel(6)]</label>
+                <align>justify</align>
+            </control>
+        </control>
+    </controls>
+</window>

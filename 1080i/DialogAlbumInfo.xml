@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2001">
+    <defaultcontrol always="true">300</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1400</width>
+				<height>950</height>
+				<texture border="150"  >sidepanel/dialog.png</texture>
+			</control>
+			<include>MusicInfo</include>
+        <control type="textbox" description="Plot" id="4">
+            <font>LCARS218</font>
+            <left>60</left>
+            <top>450</top>
+            <width>960</width>
+            <height>400</height>
+            <align>justify</align>
+        </control>
+        <control type="group" description="Options">
+            <control type="grouplist" id="300">
+                <top>540</top>
+                <left>1050</left>
+			    <height>300</height>
+				<width>350</width>
+                <onright>50</onright>
+                <onleft>50</onleft>
+                <itemgap>10</itemgap>
+                <aligny>bottom</aligny>
+                <align>center</align>
+                <orientation>vertical</orientation>
+                <control type="button" id="5" description="Switch">
+                    <width>300</width>
+                    <label>-</label>
+                    <onclick>SetFocus(50)</onclick>
+                </control>
+                <control type="button" id="6" description="Refresh">
+                    <width>300</width>
+                    <label>184</label>
+                </control>
+                <control type="button" id="10" description="Get Thumb">
+                    <width>300</width>
+                    <label>13405</label>
+                </control>
+                <control type="button" id="12" description="Get FanArt">
+                    <width>300</width>
+                    <label>20413</label>
+                </control>
+				<control type="button" id="677">
+                    	<onclick>ParentDir</onclick>
+						<width>300</width>
+						<label>OK</label>
+				</control>
+            </control>
+        </control>
+        <control type="list" id="50">
+            <left>60</left>
+            <top>450</top>
+            <width>960</width>
+            <height>450</height>
+			<onup>noop</onup>
+            <ondown>noop</ondown>
+            <onleft>300</onleft>
+            <onright>300</onright>
+            <orientation>vertical</orientation>
+            <scrolltime>250</scrolltime>
+            <itemlayout height="50" width="890">
+                <control type="image" description="THMBSBASECOLOR">
+                    <posx>20</posx>
+                    <width>850</width>
+                    <height>40</height>
+                    <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                </control>
+				<control type="label" description="Main Label">
+                    <top>8</top>
+                    <left>45</left>
+                    <textcolor>black</textcolor>
+                    <height>28</height>
+                    <width>725</width>
+                    <font>LCARS20</font>
+                    <label>$INFO[ListItem.label]</label>
+                </control>
+            </itemlayout>
+            <focusedlayout width="890" height="50">
+                <control type="image" description="THMBSBASECOLOR">
+                    <posx>20</posx>
+                    <width>850</width>
+                    <height>40</height>
+                    <texture border="20" >whiterounded.png</texture>
+                </control>
+                <control type="label" description="Main Label">
+                    <top>8</top>
+                    <left>45</left>
+                    <textcolor>black</textcolor>
+                    <width>725</width>
+                    <height>28</height>
+                    <font>LCARS20</font>
+                    <label>$INFO[ListItem.label]</label>
+                </control>
+            </focusedlayout>
+        </control>
+        <control type="grouplist" description="centered">
+            <top>30</top>
+            <centerleft>700</centerleft>
+            <width>580</width>
+            <align>center</align>
+            <height>60</height>
+            <orientation>horizontal</orientation>
+            <control type="label" id="7777" description="Heading">
+                <width>auto</width>
+                <height>40</height>
+                <font>LCARS205</font>
+                <scroll>false</scroll>
+                <label>$VAR[RootLabel]</label>
+            </control>
+        </control>
+    </controls>
+</window>

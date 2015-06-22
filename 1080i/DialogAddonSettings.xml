@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="10140">
+    <defaultcontrol always="true">9</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1400</width>
+				<height>950</height>
+				<texture border="150"  >sidepanel/dialog.png</texture>
+		</control>
+		<control type="grouplist" description="centered">
+            <top>30</top>
+            <centerleft>700</centerleft>
+            <width>580</width>
+            <align>center</align>
+            <height>60</height>
+            <orientation>horizontal</orientation>
+            <control type="label" id="7777" description="Heading">
+                <width>auto</width>
+                <height>40</height>
+                <font>LCARS205</font>
+                <scroll>false</scroll>
+                <label>$INFO[ListItem.Property(Addon.Name)]: $LOCALIZE[1045]</label>
+            </control>
+        </control><control type="grouplist" id="9" description="TopHat">
+            <left>1050</left>
+			<top>80</top>
+            <width>350</width>
+            <height>500</height>
+            <aligny>bottom</aligny>
+            <align>center</align>
+            <itemgap>10</itemgap>
+            <orientation>vertical</orientation>
+            <onleft>2</onleft>
+            <onright>2</onright>
+            <onup>9001</onup>
+            <ondown>9001</ondown>
+        </control>
+        <control type="group" description="Options">
+            <control type="grouplist" id="9001" description="bottomPanel">
+                <top>640</top>
+                <left>1050</left>
+			    <height>300</height>
+				<width>350</width>
+                <onleft>2</onleft>
+                <onright>2</onright>
+                <onup>9</onup>
+                <ondown>9</ondown>
+                <itemgap>10</itemgap>
+                <aligny>bottom</aligny>
+                <align>center</align>
+                <orientation>vertical</orientation>
+                <control type="button" id="10" description="OK">
+                    <width>300</width>
+                    <label>186</label>
+                </control>
+                <control type="button" id="12" description="Default">
+                    <width>300</width>
+                    <label>409</label>
+                </control>
+                <control type="button" id="11" description="Cancel">
+                    <width>300</width>
+                    <label>222</label>
+                </control>
+            </control>
+        </control>
+		<control type="button" id="13" description="Button Template">
+        </control>
+        <control type="grouplist" id="2" description="Stage">
+            <left>60</left>
+            <top>80</top>
+            <width>960</width>
+            <height>800</height>
+            <itemgap>10</itemgap>
+            <onup>2</onup>
+            <ondown>2</ondown>
+            <onleft>9001</onleft>
+            <onright>9</onright>
+            <pagecontrol>60</pagecontrol>
+        </control>
+        <control type="button" id="3" description="Default Button">
+			<align>left</align>
+			<textoffsetx>7</textoffsetx>
+			<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+        </control>
+        <control type="radiobutton" id="4" description="Default RadioButton">
+            <align>left</align>
+        </control>
+        <control type="spincontrolex" id="5" description="Default spincontrolex">
+            <reverse>yes</reverse>
+        </control>
+        <control type="image" id="6" description="DO NOT REMOVE">
+            <texture>images/Black.png</texture>
+            <height>1</height>
+        </control>
+        <control type="label" id="7">
+            <label>-</label>
+            <font>LCARS20</font>
+            <textcolor>Blue</textcolor>
+        </control>
+        <control type="sliderex" id="8" description="Default Slider Control">
+            <width>900</width>
+        </control>
+        <control type="scrollbar" id="60">
+            <posx>10</posx>
+            <top>100</top>
+            <height>760</height>
+            <onleft>2</onleft>
+            <showonepage>false</showonepage>
+            <onright>2</onright>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="120">
+    <defaultcontrol always="true">14</defaultcontrol>
+    <include>OpenClose</include>
+    <controls>
+        
+	
+        <control type="image">
+            <right>35</right>
+            <top>50</top>
+            <width>380</width>
+            <height>600</height>
+            <colordiffuse>BBFFFFFF</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+            <texture border="40">sidepanel/dialog.png</texture>
+        </control>
+        <control type="grouplist" id="100">
+                <visible>true</visible>
+				<right>50</right>
+				<top>150</top>
+				<width>320</width>
+                <height>450</height>
+                <orientation>vertical</orientation>
+                <align>center</align>
+                <onright>100</onright>
+                <onleft>100</onleft>
+                <onup>1000</onup>
+                <ondown>1000</ondown>
+                <orientation>horizontal</orientation>
+                <control type="button" id="1">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+                    <onclick>XBMC.PlayerControl(Repeat)</onclick>
+                </control>
+		    <control type="button" id="2">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>$LOCALIZE[191]$INFO[Playlist.Random, : ]</label>
+			  <onclick>XBMC.PlayerControl(Random)</onclick>
+                </control>
+                    
+                <control type="button" id="12">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>Prev</label>
+                    <onclick>PlayerControl(Previous)</onclick>
+                </control>    
+                <control type="button" id="13">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>REW</label>
+                    <onclick>PlayerControl(Rewind)</onclick>
+                </control>    
+                <control type="togglebutton" id="14">
+                    <description>Play/Pause</description>
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <alttexturenofocus colordiffuse="Blue" border="20" flipx="true">whiteallrounded2.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</alttexturefocus>
+					<label>Pause</label>
+                    <altlabel>Play</altlabel>
+                    <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+                    <onclick>PlayerControl(Play)</onclick>
+                </control>
+				
+                <control type="button" id="15">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>Stop</label>
+                    <onclick>PlayerControl(Stop)</onclick>
+                </control>    
+                <control type="button" id="16">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>FFWD</label>
+                    <onclick>PlayerControl(Forward)</onclick>
+                </control>    
+                 <control type="button" id="17">
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>Next</label>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>    
+                 <control type="button" id="301">
+                    <description>MENU</description>
+                    <width>300</width>
+                    <align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <label>MENU</label>
+                    <onclick>SetFocus(101,555)</onclick>
+                </control>   
+               
+            
+        </control>
+        <control type="button" id="1000">
+			<description>Close Window button</description>
+			<top>130</top>
+            <right>70</right>
+            <top>0</top>
+			<width>300</width>
+			<label>X</label>
+			<align>left</align>
+                    <textoffsetx>20</textoffsetx>
+					<texturenofocus colordiffuse="buttonselect2" border="20" flipx="true">whiteallrounded2.png</texturenofocus>
+                    <texturefocus colordiffuse="buttonselect" border="20" flipx="true">whiteallrounded2.png</texturefocus>
+                    <onclick>Dialog.Close(MusicOSD,true)</onclick>
+			<onclick>FullScreen</onclick>
+			<onleft>1000</onleft>
+			<onright>1000</onright>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			
+		</control>
+		<control type="group" description="All dialog content">
+            <animation type="Focus">
+                <effect type="slide" tween="Cubic" easing="out" start="0,0" end="0,-850" time="800" />
+            </animation>
+            <posx>630</posx>
+            <top>900</top>
+            <animation type="Unfocus">
+                <effect type="slide" tween="Cubic" easing="in" start="0,-850" end="0,0" time="500" />
+            </animation>
+            <control type="image">
+                <posx>550</posx>
+                    <top>200</top>
+                    <width>400</width>
+                    <height>520</height>
+                    <colordiffuse>BBFFFFFF</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+            <texture border="40">sidepanel/dialog.png</texture>
+            </control>
+            
+            <control type="grouplist" id="101" description="Music OSD Options">
+                <posx>600</posx>
+                    <top>246</top>
+                    <width>400</width>
+                    <height>640</height>
+                    <itemgap>10</itemgap>
+                    <onleft>100</onleft>
+                    <onright>100</onright>
+                    <onup>101</onup>
+                    <ondown>101</ondown>
+                    <scrolltime>240</scrolltime>
+                <control type="button" id="555">
+                    <description>Playlist</description>
+                    <width>300</width>
+                    <label>559</label>
+                    <onclick>Close</onclick>
+                    <onclick>ActivateWindow(MusicPlaylist)</onclick>
+                </control>
+                <control type="button" id="556" description="Fanart">
+                    <width>300</width>
+                        <label>$VAR[Fanartdisplaystatus]</label>
+                    <onclick>Skin.ToggleSetting(MusicPlayingFanart)</onclick>
+                </control>
+                <control type="button" id="500">
+                    <description>Visualisation</description>
+                    <width>300</width>
+                        <label>24010</label>
+                </control>
+                <control type="button" id="19">
+                    <description>Visualisation settings</description>
+                    <width>300</width>
+                        <label>$LOCALIZE[250] $LOCALIZE[10004]</label>
+                    <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+                    <enable>Visualisation.Enabled</enable>
+                    <animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.Enabled">Conditional</animation>
+                </control>
+                <control type="button" id="20">
+                    <description>Visualisation Presets</description>
+                    <width>300</width>
+                        <label>31004</label>
+                    <onclick>ActivateWindow(122)</onclick>
+                    <enable>Visualisation.Enabled</enable>
+                    <animation effect="fade" start="100" end="50" time="100" condition="!Visualisation.Enabled">Conditional</animation>
+                </control>
+                <control type="button" id="13">
+                    <description>Lyrics</description>
+                    <width>300</width>
+                        <label>24013</label>
+                    <onclick>Close</onclick>
+                    <onclick condition="IsEmpty(Skin.String(LyricPath))">Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
+                    <onclick condition="!IsEmpty(Skin.String(LyricPath))">XBMC.RunScript($INFO[Skin.String(LyricPath)])</onclick>
+                </control>
+                
+            </control>
+        </control>
+        <control type="group" description="Main Labels">
+                        <left>920</left>
+                        <top>240</top>
+                        <control type="image" description="Info BG">
+                            <posx>-35</posx>
+                            <top>480</top>
+                            <width>1000</width>
+                            <height>350</height>
+                            <colordiffuse>BBFFFFFF</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+            <texture border="40">sidepanel/dialog.png</texture>
+                        </control>
+                        <control type="label" description="Title label">
+                            <posx>0</posx>
+                            <top>525</top>
+                            <width>900</width>
+                            <scroll>true</scroll>
+                            <align>center</align>
+                            <font>LCARS24</font>
+                            <textcolor>White</textcolor>
+                            <animation effect="fade" time="200">VisibleChange</animation>
+                            <label>$INFO[MusicPlayer.Title]</label>
+                        </control>
+                        <control type="label" description="Artist">
+                            <top>585</top>
+                            <width>900</width>
+                            <label>$INFO[MusicPlayer.Artist]</label>
+                            <scroll>true</scroll>
+                            <align>center</align>
+                            <font>LCARS24</font>
+                            <textcolor>White</textcolor>
+                        </control>
+                        <control type="label" description="Album">
+                            <top>636</top>
+                            <width>900</width>
+                            <label>$INFO[MusicPlayer.Album]</label>
+                            <align>center</align>
+                            <font>LCARS24</font>
+                            <textcolor>White</textcolor>
+                        </control>
+                        <control type="label" description="Track position">
+                            <posx>0</posx>
+                            <top>690</top>
+                            <width>900</width>
+                            <align>center</align>
+                            <textcolor>White</textcolor>
+                            <animation effect="fade" time="200">VisibleChange</animation>
+                            <label>$INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength]</label>
+                            <font>LCARS20</font>
+                        </control>
+                        <control type="group">
+                            <top>756</top>
+                            <control type="label">
+                                <posx>0</posx>
+                                <top>0</top>
+                                <height>30</height>
+                                <width>123</width>
+                                <align>left</align>
+                                <label>$INFO[Player.Time]</label>
+                                <font>LCARS20</font>
+                                <textcolor>White</textcolor>
+                            </control>
+                            <control type="group">
+                <top>10</top>
+                <control type="progress">
+					<posx>122</posx>
+                    <visible>true</visible>
+					<top>1</top>
+                    <width>675</width>
+                    <height>15</height>
+                    <midtexture border="6,0,6,0">progress/OSDProgressMidLight.png</midtexture>
+					<info>Player.CacheLevel</info>
+					<visible>Player.Caching</visible>
+				</control>
+				<control type="progress" id="23" description="Progress Bar">
+                    <posx>122</posx>
+                    <top>1</top>
+                    <width>675</width>
+                    <height>15</height>
+                    <visible>true</visible>
+					<info>Player.Progress</info>
+                </control>
+				<control type="slider" id="401">
+					<description>Seek Slider</description>
+					<visible>true</visible>
+					<posx>122</posx>
+					<top>1</top>
+					<width>675</width>
+					<height>15</height>
+					<action>seek</action>
+					<texturesliderbar>progress/seekslider.png</texturesliderbar>
+					<textureslidernib>progress/osd_slider_nibNF.png</textureslidernib>
+					<textureslidernibfocus>progress/osd_slider_nib.png</textureslidernibfocus>
+				</control>
+            </control>
+			
+                            <control type="label">
+                                <posx>930</posx>
+                                <top>0</top>
+                                <height>30</height>
+                                <width>123</width>
+                                <align>right</align>
+                                <label>$INFO[Player.TimeRemaining,-]</label>
+                                <font>LCARS20</font>
+                                <textcolor>White</textcolor>
+                            </control>
+                            <control type="label">
+                                <posx>777</posx>
+                                <top>45</top>
+                                <height>30</height>
+                                <width>135</width>
+                                <align>left</align>
+                                <label>$INFO[Control.GetLabel(23)]</label>
+                                <font>LCARS20</font>
+                                <textcolor>Red</textcolor>
+                                <visible>Skin.HasSetting(DebugInfo)</visible>
+                            </control>
+                        </control>
+                    </control>
+					<control type="image">
+            <left>60</left>
+            <top>750</top>
+            <width>430</width>
+            <height>200</height>
+            <colordiffuse>BBFFFFFF</colordiffuse>
+			<aspectratio>stretch</aspectratio>
+            <texture border="40">sidepanel/dialog.png</texture>
+        </control>
+        <control type="label" description="Previous">
+                    <posx>70</posx>
+                    <top>280r</top>
+                    <height>40</height>
+                    <width>410</width>
+                    <label>Previous: $INFO[MusicPlayer.offset(-1).Title]</label>
+                    <font>LCARS20</font>
+                    <textcolor>white</textcolor>
+
+                </control>
+            
+                
+                <control type="label" description="Next">
+                    <posx>70</posx>
+                    <top>240r</top>
+                    <height>40</height>
+                    <width>410</width>
+                    <label>Next: $INFO[MusicPlayer.offset(1).Title]</label>
+                    <font>LCARS20</font>
+                    <textcolor>white</textcolor>
+
+                </control>
+            
+        
+        <control type="image">
+            <description>Rating image</description>
+            <posx>100</posx>
+            <top>200r</top>
+            <width>360</width>
+            <height>27</height>
+            <aspectratio align="center">keep</aspectratio>
+            <texture>$INFO[Player.StarRating]</texture>
+        </control>
+    </controls>
+</window>

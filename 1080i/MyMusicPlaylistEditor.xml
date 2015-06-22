@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="503">
+    <defaultcontrol allways="true">50</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <include>OpenClose</include>
+    <views>50</views>
+    <controls>
+        <include>Backgroundcolor</include>
+		
+        <control type="image">
+            <width>1920</width>
+            <height>1080</height>
+            <texture >Lcars/lineL.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control><control type="label">
+            <include>HeadingL</include>
+            <label>10503</label>
+        </control>
+        
+		
+		
+		<control type="group">
+			<description>Left panel</description>
+			<posx>240</posx>
+			<posy>180</posy>
+
+			
+
+			<control type="label">
+				<posx>20</posx>
+				<width>410</width>
+				<height>60</height>
+				<textcolor>Accent</textcolor>
+				<font>LCARS20</font>
+				<label>31101</label>
+			</control>
+			
+			<control type="image">
+				<description>line</description>
+				<width>480</width>
+				<include>Dialog_Line</include>
+			</control>	
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>450</width>
+				<height>480</height>
+				
+			</control>
+
+			<control type="list" id="50">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>600</width>
+				<height>630</height>
+				<onleft>-</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="45" width="600">
+					<control type="image">
+						<width>550</width>
+						<height>40</height>
+					<texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+					</control>
+					
+
+					<control type="label">
+						<posx>10</posx>
+						<aligny>top</aligny>
+						<width>500</width>
+						<textcolor>black</textcolor>
+                        <font>LCARS18</font>
+						<info>ListItem.Label</info>
+					</control>
+
+					
+
+				</itemlayout>
+
+				<focusedlayout height="45" width="600">
+
+					<control type="image">
+						<width>550</width>
+						<height>40</height>
+						<texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<aligny>top</aligny>
+						<width>500</width>
+						<textcolor>textcolor</textcolor>
+                        <font>LCARS18</font>
+						<info>ListItem.Label</info>
+					</control>
+
+					
+
+				</focusedlayout>
+
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<posx>464</posx>
+				<posy>69</posy>
+				<height>482</height>
+				<visible>Control.HasFocus(60)</visible>
+			</control>
+			
+			<control type="scrollbar" id="60">
+				<posx>580</posx>
+				<posy>70</posy>
+				<height>650</height>
+				<width>5</width>
+				<onleft>50</onleft>
+				<onright>9000</onright>
+				<animation type="Conditional" condition="!Control.HasFocus(151) + !Container.Scrolling">
+                <effect type="fade" start="100" end="40" time="200" />
+            </animation>
+			</control>
+
+		</control>
+
+		<control type="group">
+			<description>Middle Panel</description>
+			<posx>820</posx>
+			<posy>180</posy>
+
+			
+
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>200</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Container(50).ListItem.Icon]</texture>
+				<visible>Control.HasFocus(50)</visible>
+			</control>
+			
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>200</height>
+				<aspectratio>keep</aspectratio>
+				<texture fallback="DefaultAlbumCover.png">$INFO[Container(100).ListItem.Icon]</texture>
+				<visible>Control.HasFocus(100)</visible>
+			</control>
+			
+			<control type="grouplist">
+				<posx>10</posx>
+				<posy>240</posy>
+				<width>300</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<visible>Control.HasFocus(50)</visible>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(50).ListItem.Title)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[556]: $INFO[Container(50).ListItem.Title]</label>
+					</control>
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(50).ListItem.Artist)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[557]: $INFO[Container(50).ListItem.Artist]</label>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(50).ListItem.Album)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[558]: $INFO[Container(50).ListItem.Album]</label>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(50).ListItem.Duration)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[555]: $INFO[Container(50).ListItem.Duration]</label>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(50).ListItem.TrackNumber)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[554]: $INFO[Container(50).ListItem.TrackNumber]</label>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(50).ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[515]: $INFO[Container(50).ListItem.Genre]</label>
+					</control>
+					
+					
+					
+				</control>
+
+			</control>
+			
+			<control type="grouplist">
+				<posx>10</posx>
+				<posy>240</posy>
+				<width>300</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<visible>Control.HasFocus(100)</visible>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(100).ListItem.Title)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[556]: $INFO[Container(100).ListItem.Title]</label>
+					</control>
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(100).ListItem.Artist)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[557]: $INFO[Container(100).ListItem.Artist]</label>
+					</control>
+					
+				
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(100).ListItem.Album)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[558]: $INFO[Container(100).ListItem.Album]</label>
+					</control>
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(100).ListItem.Duration)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[555]: $INFO[Container(100).ListItem.Duration]</label>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(100).ListItem.TrackNumber)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[554]: $INFO[Container(100).ListItem.TrackNumber]</label>
+					</control>
+					
+					
+					
+				</control>
+				
+				<control type="group">
+					<height>40</height>
+					<visible>!IsEmpty(Container(100).ListItem.Genre)</visible>
+					
+					<control type="label">
+						<description>Type Label</description>
+						<font>LCARS18</font>
+						<label>$LOCALIZE[515]: $INFO[Container(100).ListItem.Genre]</label>
+					</control>
+					
+					
+				</control>
+
+			</control>
+
+			<control type="group" id="9000">
+				<posx>5</posx>
+				<posy>542</posy>
+				
+				<control type="button" id="6">
+					<description>Open</description>
+					<label>31010</label>
+                    <onup>8</onup>
+					<ondown>7</ondown>
+					<onleft>50</onleft>
+					<onright>100</onright>
+				</control>
+				
+				<control type="button" id="7">
+					<description>Save</description>
+					<posy>60</posy>
+					<label>31011</label>
+                    <onleft>50</onleft>
+					<onright>100</onright>
+					<onup>6</onup>
+					<ondown>8</ondown>
+					
+				</control>
+				
+				<control type="button" id="8">
+					<description>Save</description>
+					<posy>120</posy>
+					<label>31012</label>
+					<onleft>50</onleft>
+					<onright>100</onright>
+					<onup>7</onup>
+					<ondown>6</ondown>
+					<onclick>ReplaceWindow(503)</onclick>
+				</control>
+				
+			</control>
+
+		</control>
+
+		<control type="group">
+			<description>Right Panel</description>
+			<posx>1160</posx>
+			<posy>220</posy>
+
+			
+
+			<control type="list" id="100">
+				<posx>10</posx>
+				<posy>70</posy>
+				<width>600</width>
+				<height>650</height>
+				<onleft>9000</onleft>
+				<onright>61</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<viewtype label="">list</viewtype>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>61</pagecontrol>
+				<itemlayout height="45" width="600">
+					<control type="image">
+						<width>550</width>
+						<height>40</height>
+					<texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+					</control>
+					
+
+					<control type="label">
+						<posx>10</posx>
+						<aligny>top</aligny>
+						<width>500</width>
+						<textcolor>black</textcolor>
+                        <font>LCARS18</font>
+						<info>ListItem.Label</info>
+					</control>
+
+					
+
+				</itemlayout>
+
+				<focusedlayout height="45" width="600">
+
+					<control type="image">
+						<width>550</width>
+						<height>40</height>
+						<texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<aligny>top</aligny>
+						<width>500</width>
+						<textcolor>textcolor</textcolor>
+                        <font>LCARS18</font>
+						<info>ListItem.Label</info>
+					</control>
+
+					
+
+				</focusedlayout>
+
+			</control>
+			
+			<control type="image">
+				<description>outline</description>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<posx>464</posx>
+				<posy>69</posy>
+				<height>482</height>
+				
+				<visible>Control.HasFocus(61)</visible>
+			</control>
+			
+			<control type="scrollbar" id="61">
+				<posx>600</posx>
+				<posy>70</posy>
+				<height>650</height>
+				<width>5</width>
+				<onleft>100</onleft>
+				<animation type="Conditional" condition="!Control.HasFocus(151) + !Container.Scrolling">
+                <effect type="fade" start="100" end="40" time="200" />
+				</animation>
+			</control>
+
+		</control>
+    </controls>
+</window>

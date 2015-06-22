@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <onload>AlarmClock(CloseStartup,ReplaceWindow($INFO[System.StartupWindow]),00:03,silent)</onload>
+    <backgroundcolor>FF000000</backgroundcolor>
+    <animation type="WindowOpen">
+        <effect type="fade" start="0" end="100" time="800" delay="200" />
+    </animation>
+    <controls>
+        <control type="image">
+           <!--animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="600" delay="200" />
+                <effect type="zoom" center="960,540" start="100" end="0" time="600" delay="200" tween="back" easing="in" />
+            </animation-->
+            <centerleft>960</centerleft>
+            <centertop>540</centertop>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio scalediffuse="false">keep</aspectratio>
+            <texture>special://skin/backgrounds/default.jpg</texture>
+        </control>
+		<control type="label" description="Title">
+            <centerleft>960</centerleft>
+            <top>500</top>
+            <align>center</align>
+			<height>100</height>
+            <width>800</width>
+            <font>LCARS236</font>
+            <textcolor>buttonselect2</textcolor>
+            <label>STARFLEET COMMAND</label>
+        </control>
+		<control type="textbox" description="Title">
+            <centerleft>960</centerleft>
+            <top>600</top>
+            <align>center</align>
+			<height>100</height>
+            <width>800</width>
+            <font>LCARS245</font>
+            <textcolor>White</textcolor>
+            <label>L.C.A.R.S System Online...</label>
+        </control>
+    </controls>
+</window>

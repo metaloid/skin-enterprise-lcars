@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="4">
+    <defaultcontrol always="true">575</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <controls>
+        <include>BlackBackground</include>
+        <control type="image">
+            <width>1920</width>
+            <height>1080</height>
+            <texture >Lcars/lineL.png</texture>
+            <aspectratio>stretch</aspectratio>
+        </control>
+		<include>WindowsTopInfos</include>
+		
+        <control type="group">
+            <control type="list" id="575">
+                <top>180</top>
+                <left>960</left>
+                <width>960</width>
+                <height>760</height>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <onup>575</onup>
+                <ondown>575</ondown>
+                <viewtype label="500">500</viewtype>
+                <preloaditems>4</preloaditems>
+                <scrolltime tween="sine" easing="inout">280</scrolltime>
+                <itemlayout width="500" height="54">
+                    <control type="image" description="THMBSBASECOLOR">
+                        <width>825</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                    </control>
+					<control type="label" description="Main Label">
+                        <left>30</left>
+                        <height>40</height>
+                        <width>450</width>
+                        <aligny>center</aligny>
+                        <scroll>false</scroll>
+                        <font>LCARS20</font>
+                        <textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="500" height="54">
+                    <control type="image">
+                        <width>825</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                    </control>
+                    <control type="label" description="Main Label">
+                        <left>30</left>
+                        <height>40</height>
+                        <width>450</width>
+                        <scroll>false</scroll>
+                        <font>LCARS20</font>
+                        <textcolor>black</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1" description="Appearance">
+                        <label>480</label>
+                        <onclick>activatewindow(AppearanceSettings)</onclick>
+                    </item>
+                    <item id="3" description="Videos">
+                        <label>3</label>
+                        <onclick>activatewindow(VideosSettings)</onclick>
+                    </item>
+                    <item id="4" description="Music">
+                        <label>2</label>
+                        <onclick>activatewindow(MusicSettings)</onclick>
+                    </item>
+                    <item id="14" description="LiveTV">
+                        <label>31059</label>
+                        <onclick>activatewindow(PVRSettings)</onclick>
+                    </item>
+                    <item id="5" description="Pictures">
+                        <label>1</label>
+                        <onclick>activatewindow(PicturesSettings)</onclick>
+                    </item>
+                    <item id="8" description="Weather">
+                        <label>8</label>
+                        <onclick>activatewindow(WeatherSettings)</onclick>
+                    </item>
+                    <item id="9" description="Services">
+                        <label>14036</label>
+                        <onclick>Activatewindow(servicesettings)</onclick>
+                    </item>
+                    <item id="10" description="System">
+                        <label>13000</label>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                    </item>
+                    <item id="2" description="Skin Settings">
+                        <label>20077</label>
+                        <onclick>activatewindow(SkinSettings)</onclick>
+                    </item>
+                    <item id="13" description="Addons">
+                        <label>24001</label>
+                        <onclick>activatewindow(AddonBrowser,root)</onclick>
+                    </item>
+                    <item id="15" description="openELEC">
+                        <visible>System.HasAddon(service.openelec.settings)</visible>
+                        <label>$ADDON[service.openelec.settings 600]</label>
+                        <onclick>RunAddon(service.openelec.settings)</onclick>
+                    </item>
+                    <item id="6" description="Sys Info">
+                        <label>$LOCALIZE[138]</label>
+                        <onclick>activatewindow(systeminfo)</onclick>
+                    </item>
+                    <item id="7" description="Maintenance">
+                        <visible>System.HasAddon(service.clean.up)</visible>
+                        <visible>!System.HasAddon(service.openelec.settings)</visible>
+                        <label>$ADDON[service.clean.up 32009]</label>
+                        <onclick>ActivateWindow(1717)</onclick>
+                    </item>
+                    <item id="11" description="Home">
+                        <label>Home</label>
+                        <onclick>PreviousMenu</onclick>
+                    </item>
+                </content>
+            </control>
+        </control>
+        <control type="image" description="Logo">
+            <centerleft>540</centerleft>
+            <top>180</top>
+            <width>420</width>
+            <height>420</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture diffuse="EmptyCaseMask.png" background="true">defaultmissing.png</texture>
+			<bordertexture  border="10">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+        </control>
+        <control type="textbox" description="infos">
+            <visible>Control.HasFocus(575)</visible>
+            <centerleft>540</centerleft>
+            <top>460</top>
+            <width>420</width>
+            <height>500</height>
+            <font>LCARS245</font>
+			<scroll>false</scroll>
+            <aligny>top</aligny>
+            <align>center</align>
+            <label>$VAR[settingsmainico]</label>
+        </control>
+		<control type="textbox" description="infos">
+            <visible>Control.HasFocus(575)</visible>
+            <centerleft>540</centerleft>
+            <top>620</top>
+            <width>420</width>
+            <height>500</height>
+            <font>LCARS205</font>
+            <scroll>false</scroll>
+            <aligny>top</aligny>
+            <align>center</align>
+            <label>$VAR[settingsmain]</label>
+        </control>
+	  
+    </controls>
+</window>
