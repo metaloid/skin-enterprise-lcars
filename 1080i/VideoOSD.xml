@@ -134,7 +134,7 @@
                         <scroll>true</scroll>
                         <font>LCARS24</font>
                         <textcolor>White</textcolor>
-                        <label>[COLOR=buttonselect2]$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,, ]$INFO[VideoPlayer.Season,S , • ]$INFO[VideoPlayer.Episode,E , ][/COLOR]$INFO[VideoPlayer.Title] </label>
+                        <label>[COLOR=buttonselect2]$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,,-][/COLOR]$INFO[VideoPlayer.Title] </label>
                     </control>
                 <control type="group" description="Cover">
                     <animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
