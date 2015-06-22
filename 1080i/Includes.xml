@@ -43,13 +43,13 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>455</width>
-					<height>620</height>
-					<texture border="39">shadow.png</texture>
+					<height>740</height>
+					<texture border="39">sidepanel/dialog.png</texture>
 				</control>
 				<control type="image">
 					<!--Panel icon image-->
 					<posx>18</posx>
-					<posy>18</posy>
+					<posy>38</posy>
 					<width>413</width>
 					<height>240</height>
 					<texture background="true" diffuse="shadow2.png" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Art(poster))]</texture>
@@ -59,7 +59,7 @@
 				 <control type="image">
 					<!--Panel icon image-->
 					<posx>18</posx>
-					<posy>18</posy>
+					<posy>38</posy>
 					<width>413</width>
 					<height>240</height>
 					<texture background="true" diffuse="shadow2.png" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Art(banner))]</texture>
@@ -69,7 +69,7 @@
 				<control type="image">
 					<!--Panel icon image-->
 					<posx>18</posx>
-					<posy>18</posy>
+					<posy>38</posy>
 					<width>413</width>
 					<height>240</height>
 					<texture background="true" diffuse="shadow2.png" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Art(clearlogo))]</texture>
@@ -78,7 +78,7 @@
               	 </control>
 				<control type="label">
 					<posx>30</posx>
-					<posy>245</posy>
+					<posy>265</posy>
 					<width>400</width>
 					<height>40</height>
 					<label>$INFO[ListItem.Label]</label>
@@ -89,7 +89,7 @@
 								
 				<control type="textbox">
 					<posx>30</posx>
-					<posy>300</posy>
+					<posy>320</posy>
 					<width>400</width>
 					<height>330</height>
 					<label>[COLOR=buttonselect2]$LOCALIZE[126]:[/COLOR] $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR][COLOR=buttonselect2]$LOCALIZE[31212]:[/COLOR][CR]$INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)][CR][COLOR=buttonselect2]$LOCALIZE[31213]:[/COLOR][CR]$INFO[ListItem.Property(NextDay)] $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), @ ]</label>
@@ -104,22 +104,22 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>455</width>
-					<height>620</height>
-					<texture border="39">shadow.png</texture>
+					<height>740</height>
+					<texture border="39">sidepanel/dialog.png</texture>
 				</control>
 				<control type="image">
 					<!--Panel icon image-->
 					<posx>18</posx>
-					<posy>18</posy>
+					<posy>38</posy>
 					<width>413</width>
 					<height>240</height>
-					<texture background="true" diffuse="shadow2.png" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Fanart)]</texture>
+					<texture background="true" diffuse="EmptyCaseMask2.png" fallback="DefaultVideoCover.png">$INFO[ListItem.Property(Fanart)]</texture>
 					<aspectratio scalediffuse="true" align="center" aligny="center">stretch</aspectratio>
 				</control>
 				
 				<control type="label">
 					<posx>30</posx>
-					<posy>245</posy>
+					<posy>265</posy>
 					<width>400</width>
 					<height>40</height>
 					<label>$INFO[ListItem.Label]</label>
@@ -130,7 +130,7 @@
 								
 				<control type="textbox">
 					<posx>30</posx>
-					<posy>300</posy>
+					<posy>320</posy>
 					<width>400</width>
 					<height>330</height>
 					<label>[COLOR=buttonselect2]$LOCALIZE[126]:[/COLOR] $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR][CR][COLOR=buttonselect2]$LOCALIZE[31212]:[/COLOR][CR]$INFO[ListItem.Property(NextNumber),,. ]$INFO[ListItem.Property(NextTitle)][CR][COLOR=buttonselect2]$LOCALIZE[31213]:[/COLOR][CR]$INFO[ListItem.Property(NextDay)] $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), @ ]</label>
