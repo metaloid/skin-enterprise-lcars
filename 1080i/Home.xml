@@ -31,39 +31,39 @@
             <itemgap>10</itemgap>
 			<control type="button" description="WebLink">
                 <visible>!Skin.HasSetting(hideconnection)</visible>
-                <width>250</width>
+                <width>230</width>
                 <label>$INFO[Network.IPAddress,IP: ]</label>
             </control>
 			<control type="button" description="cputemp">
 			<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
-            <width>250</width>
+            <width>230</width>
                 <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
             </control>
 			<control type="button" description="Clock">
                 <visible>!Skin.HasSetting(HideClock)</visible>
                 <label>$INFO[System.Time]</label>
-				<width>250</width>
+				<width>230</width>
             </control>
 			<control type="button" description="Battery">
                 <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
                 <label>Power Level $INFO[System.BatteryLevel]</label>
 			    <texturenofocus colordiffuse="$VAR[Battery]" border="20">whiteallrounded.png</texturenofocus>
-				<width>250</width>
+				<width>230</width>
             </control>
 			<control type="button" description="movie">
                 <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(340)</visible>
                 <label>$INFO[Window.Property(Movies.Count),$LOCALIZE[342]: ]</label>
-				<width>250</width>
+				<width>230</width>
             </control>
 			<control type="button" description="tv">
                 <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(341)</visible>
                 <label>$INFO[Window.Property(TVShows.Count),$LOCALIZE[20343]: ]</label>
-				<width>250</width>
+				<width>230</width>
             </control>
 			<control type="button" description="songs">
                 <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(342)</visible>
                 <label>$INFO[Window.Property(Music.SongsCount),$LOCALIZE[134]: ]</label>
-				<width>250</width>
+				<width>230</width>
             </control>
 		</control>
         <control type="group">
@@ -143,15 +143,25 @@
             </control>
 			
             <control type="group" description="Furniture">
-                 <control type="rss" description="RSS Feed">
-                    <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+					<top>970</top>
+					<posx>1330</posx>
+					<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+                <control type="image" description="Logo">
+					<posx>-20</posx>
+					<posy>-10</posy>
+					<width>800</width>
+					<height>100</height>
+					<aspectratio scalediffuse="false">strech</aspectratio>
+					<texture border="20">sidepanel/dialog.png</texture>
+                </control>
+				<control type="rss" description="RSS Feed">
                     <include>OpenClose</include>
-                    <posx>130</posx>
-			  <posy>1025</posy>
-			  <width>1660</width>
-			  <height>33</height>
+                    <posx>0</posx>
+					<posy>20</posy>
+					<width>660</width>
+					<height>33</height>
                     <font>LCARS20</font>
-			  <urlset>1</urlset>
+					<urlset>1</urlset>
                     <shadowcolor>-</shadowcolor>
                     <titlecolor>rsscolor</titlecolor>
                     <headlinecolor>rsscolor</headlinecolor>
