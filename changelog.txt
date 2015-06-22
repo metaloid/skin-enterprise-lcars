@@ -1,16 +1,5 @@
-0.0.2 (June26-14)
-* Changed Homescreen icon sizing and spacing
-* Added Homescreen Shader option in SkinSettings
-* Fixes,Fixes,Fixes! (Font Colors,Images,etc.)
-* Changed font from mplus-2p to roboto
-* Modified Video Views Modes
-* Added Color Schemes (Blue-Blue,Black-Blue,Black-Green)
-
-0.0.1 (June15-14)
-* Modification of SiO2-X - 2.1.6
-* Changed Homescreen Layout to Tiles
-* Modified all View Modes
-* Added Fonts (Big,Bold)
+3.2.0 (June-15)
+* firts draft
 
 
 

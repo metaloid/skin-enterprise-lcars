@@ -17,7 +17,7 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary></summary>
-        <description>Lcars - Skin Base on Fastcolor SiO2-X skin </description>
+        <description>Enterprise Lcars style - Skin Base on Fastcolor SiO2-X skin </description>
         <platform>all</platform>
         <licence></licence>
         <forum></forum>
