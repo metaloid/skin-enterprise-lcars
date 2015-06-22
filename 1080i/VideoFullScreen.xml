@@ -40,9 +40,14 @@
         </control>
         <control type="button" id="88" >
             <visible>Player.Paused</visible>
-            <top>40</top>
-            <left>260</left>
-			<label>STANDING BY</label>
+            <width>300</width>
+            <height>120</height>
+            <textcolor>white</textcolor>
+            <texturenofocus colordiffuse="BBFFFFFF" border="20">sidepanel/dialog.png</texturenofocus>
+            <texturefocus colordiffuse="BBFFFFFF" border="20">sidepanel/dialog.png</texturefocus>
+            <top>240</top>
+            <left>35</left>
+            <label>STANDING BY...</label>
         </control>
     </controls>
 </window>
