@@ -185,7 +185,7 @@
 			</control>
 			<control type="group" id="9001">
 				<posx>630</posx>
-				<top>200</top>
+				<top>150</top>
 				<control type="panel" id="200">
 					<visible allowhiddenfocus="true">[Control.HasFocus(5000) + Container(5000).HasFocus(1)] | Control.HasFocus(200) | [Container(5000).HasFocus(1) + Control.HasFocus(60)]</visible>
 					<onright>200</onright>
