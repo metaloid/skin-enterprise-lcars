@@ -1,3 +1,0 @@
-enterprise lcars==========
-
-XBMC Skin
