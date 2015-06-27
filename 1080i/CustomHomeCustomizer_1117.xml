@@ -601,7 +601,7 @@
                             <thumb>c3.png</thumb>
                             <label>20094</label>
                             <onclick>Skin.ToggleSetting(hideSources)</onclick>
-                        </item-->
+                        </item>
                         <item id="1012" description="Browser">
                             <visible>!Skin.HasSetting(hidebro)</visible>
                             <thumb>c2.png</thumb>
@@ -613,8 +613,8 @@
                             <thumb>c3.png</thumb>
                             <label>7</label>
                             <onclick>Skin.ToggleSetting(hidebro)</onclick>
-                        </item>
-<!-- HOMEPAGE CUSTOMIZER - SKIN SETTINGS -->
+                        </item-->
+<!-- HOMEPAGE CUSTOMIZER - SKIN SETTINGS >
             <item id="1200">
               <visible>!Skin.HasSetting(hideupdate)</visible>
               <thumb>c3.png</thumb>
@@ -626,7 +626,7 @@
               <thumb>c2.png</thumb>
 							<label>653</label>
               <onclick>Skin.ToggleSetting(hideupdate)</onclick>			  			  			  			
-            </item>
+            </item-->
 	         					
 <!--  HOMEPAGE CUSTOMIZER - SKIN SETTINGS - END -->						
                         <!--item id="1013" description="Settings">
@@ -983,7 +983,7 @@
                 <visible allowhiddenfocus="true">Control.HasFocus(50)</visible>
                 <!--animation effect="slide" start="-650,0" end="0,0" time="600">VisibleChange</animation-->
                 <control type="image">
-                    <left>50</left>
+                    <left>750r</left>
                     <top>900</top>
                     <width>650</width>
                     <height>100</height>
@@ -991,7 +991,7 @@
                 </control>
                 <control type="label">
                 <top>910</top>
-                <left>120</left>
+                <left>725r</left>
                 <width>600</width>
                 <textcolor>gray</textcolor>
                 <font>LCARS20</font>

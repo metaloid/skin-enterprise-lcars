@@ -839,27 +839,31 @@
                 <include>FavShortcutsCommons</include>
                 <content>
                     <item id="1" description="Video">
+                        <label>7</label>
+                        <onclick>ActivateWindow(3)</onclick>
+                    </item>
+                    <item id="2" description="Video">
                         <label>Video Source</label>
                         <onclick>ActivateWindow(Videos,files)</onclick>
                     </item>
-                    <item id="2" description="Music">
+                    <item id="3" description="Music">
                         <label>Music Source</label>
                         <onclick>ActivateWindow(501,root)</onclick>
                     </item>
-                    <item id="3" description="UpdateLibrary">
+                    <item id="4" description="UpdateLibrary">
                         <label>Update Library</label>
                         <onclick>UpdateLibrary(video)</onclick>
                         <onclick>UpdateLibrary(music)</onclick>
                     </item>
-                    <item id="4" description="UpdateLibrary">
+                    <item id="5" description="settings">
                         <label>$LOCALIZE[128] $LOCALIZE[5]</label>
                         <onclick>ActivateWindow(Settings)</onclick>
                     </item>
-					<item id="5" description="UpdateLibrary">
+					<item id="6" description="skin settings">
                         <label>20077</label>
                         <onclick>ActivateWindow(SkinSettings)</onclick>
                     </item>
-					<item id="6" description="UpdateLibrary">
+					<item id="7" description="UpdateLibrary">
                         <label>13200</label>
                         <onclick>ActivateWindow(Profiles)</onclick>
                     </item>

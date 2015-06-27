@@ -30,7 +30,7 @@
             <orientation>horizontal</orientation>
             <itemgap>10</itemgap>
 			<control type="button" description="WebLink">
-                <visible>!Skin.HasSetting(hideconnection)</visible>
+                <visible>StringCompare(System.InternetState,Connected) + !Skin.HasSetting(hideconnection)</visible>
                 <width>230</width>
                 <label>$INFO[Network.IPAddress,IP: ]</label>
             </control>
