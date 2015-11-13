@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>506,500</views>
+	<views>500,506</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="image">
