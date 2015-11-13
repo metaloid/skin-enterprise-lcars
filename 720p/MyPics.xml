@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<views>510,500</views>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>strech</aspectratio>
+			<texture>02.png</texture>
+		</control>
+		<control type="group">
+			<!-- view id = 510 -->
+			<include>PicListView1</include>
+			<!-- view id = 500 -->
+			<include>ThumbnailView</include>
+		</control>
+		<include>CommonPageCount</include>
+		<include>CommonNowPlaying</include>
+		<include>ScrollOffsetLabel</include>
+		
+			<control type="label">
+				<include>WindowTitleSide</include>
+				<label>$LOCALIZE[1] [COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
+			</control>
+		<control type="group">
+			<top>75</top>
+			<control type="grouplist" id="9000">
+				<right>20</right>
+				<top>0</top>
+				<width>200</width>
+				<height>500</height>
+				<onleft>60</onleft>
+				<onright>noop</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<control type="button" id="2">
+					<description>View As button</description>
+					<include>ButtonCommonValues</include>
+					<label>-</label>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<include>ButtonCommonValues</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<include>ButtonCommonValues</include>
+					<textoffsetx>7</textoffsetx>
+					<alttexturefocus border="5">-</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<label>31051</label>
+					<altlabel>31050</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				</control>
+				<control type="edit" id="19">
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<textwidth>200</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+				</control>
+				<control type="radiobutton" id="20">
+					<visible>Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<onclick>right</onclick>
+					<onclick>Filter</onclick>
+				</control>
+				<control type="button" id="6">
+					<description>Slideshow</description>
+					<textwidth>235</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>108</label>
+				</control>
+				<control type="button" id="7">
+					<description>Recersive Slideshow</description>
+					<textwidth>235</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>361</label>
+				</control>
+				<control type="radiobutton" id="9">
+					<description>Randomize Toggle</description>
+					<include>ButtonCommonValues</include>
+					<label>13319</label>
+				</control>
+				<include>CommonNowPlaying_Controls</include>
+				<control type="button" id="777">
+					<description>back</description>
+					<include>ButtonCommonValues</include>
+					<onclick>back</onclick>
+					<label>BACK</label>
+				</control>
+				<control type="button" id="778">
+					<description>home</description>
+					<include>ButtonCommonValues</include>
+					<onclick>ActivateWindow(home)</onclick>
+					<label>HOME</label>
+				</control>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

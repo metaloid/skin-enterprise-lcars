@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol />
+	<controls>
+		<control type="group">
+			<left>100</left>
+            <top>630</top>
+            <animation effect="slide" end="0,-80" time="150" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>270</width>
+				<height>60</height>
+				<texture  border="15">ContentPanel.png</texture>
+			</control>
+			<control type="label" id="30">
+				<description>Header Label</description>
+				<left>15</left>
+				<top>4</top>
+				<width>240</width>
+				<height>18</height>
+				<font>font10_title</font>
+				<textcolor>selected</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="31">
+				<description>Title Label</description>
+				<left>15</left>
+				<top>20</top>
+				<width>240</width>
+				<height>20</height>
+				<font>font10</font>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="progress" id="32">
+				<description>progress control</description>
+				<left>15</left>
+				<top>42</top>
+				<width>240</width>
+				<height>8</height>
+			</control>
+		</control>
+	</controls>
+</window>

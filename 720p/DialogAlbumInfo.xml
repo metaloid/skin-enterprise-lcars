@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(FileBrowser)</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>strech</aspectratio>
+				<texture>02.png</texture>
+			</control>
+			<control type="group">
+				<animation effect="fade" delay="300" start="0" end="100" time="150">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<control type="group">
+					<visible>Control.HasFocus(12)</visible>
+					<left>720</left>
+					<top>35</top>
+					<control type="image">
+						<description>Current Fanart image</description>
+						<left>0</left>
+						<top>0</top>
+						<width>270</width>
+						<height>535</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="ContentPanel2.png" border="5">$INFO[ListItem.Art(fanart)]</texture>
+						<bordertexture  border="20">ContentPanel.png</bordertexture>
+						<bordersize>10</bordersize>
+						<visible>!IsEmpty(Listitem.Art(fanart))</visible>
+					</control>
+					<control type="group">
+						<visible>IsEmpty(Listitem.Art(fanart))</visible>
+						<control type="image">
+							<description>No Fanart Back</description>
+							<left>0</left>
+							<top>0</top>
+							<width>270</width>
+							<height>535</height>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<texture background="true" diffuse="ContentPanel2.png" border="5">Fanart_Fallback_Small.jpg</texture>
+							<bordertexture  border="20">ContentPanel.png</bordertexture>
+							<bordersize>10</bordersize>
+							<colordiffuse>99FFFFFF</colordiffuse>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>270</width>
+							<height>535</height>
+							<font>font30_title</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>31311</label>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<visible>container.content(Albums)</visible>
+					<control type="image">
+						<visible>!Control.HasFocus(12)</visible>
+						<left>720</left>
+						<top>35</top>
+						<width>270</width>
+						<height>535</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="ContentPanel2.png" border="5">$INFO[ListItem.Icon]</texture>
+						<bordertexture  border="20">ContentPanel.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
+					<control type="list" id="49">
+						<left>100</left>
+						<top>50</top>
+						<width>580</width>
+						<height>400</height>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>41</height>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>520</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>500</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>41</height>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+							<visible>!Control.HasFocus(49)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>41</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(49)</visible>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>520</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>500</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+						<content>
+							<item>
+								<label>$LOCALIZE[557]:</label>
+								<label2>$INFO[ListItem.Artist]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Artist)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[515]:</label>
+								<label2>$INFO[ListItem.Genre]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Genre)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[563]:</label>
+								<label2>$INFO[ListItem.Rating]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Rating)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[175]:</label>
+								<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Album_Mood))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[176]:</label>
+								<label2>$INFO[ListItem.Property(Album_Style)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Album_Style))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21895]:</label>
+								<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Album_Theme))</visible>
+							</item>
+							<item>
+								<label>146</label>
+								<label2>$INFO[ListItem.Property(Album_Type)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21899]:</label>
+								<label2>$INFO[ListItem.Property(Album_Label)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[562]:</label>
+								<label2>$INFO[ListItem.Year]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Year)</visible>
+							</item>
+						</content>
+					</control>
+					
+				</control>
+				<control type="group">
+					<visible>container.content(Artists)</visible>
+					<control type="image">
+						<visible>!Control.HasFocus(12)</visible>
+						<left>720</left>
+						<top>35</top>
+						<width>270</width>
+						<height>535</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture background="true" diffuse="ContentPanel2.png" border="5">$INFO[ListItem.Icon]</texture>
+						<bordertexture  border="20">ContentPanel.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
+					<control type="list" id="49">
+						<left>100</left>
+						<top>50</top>
+						<width>580</width>
+						<height>400</height>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>41</height>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>520</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>500</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>41</height>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+							<visible>!Control.HasFocus(49)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>41</height>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+							<visible>Control.HasFocus(49)</visible>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>520</width>
+							<height>40</height>
+							<font>font13</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>500</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+						<content>
+							<item>
+								<label>$LOCALIZE[21893]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Born)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21894]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Formed)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[515]:</label>
+								<label2>$INFO[ListItem.Genre]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Genre)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[175]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Mood)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Mood))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[176]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Style))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21892]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Instrument))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21897]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Died)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21896]:</label>
+								<label2>$INFO[ListItem.Property(Artist_Disbanded)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[21898]:</label>
+								<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
+							</item>
+						</content>
+					</control>
+				</control>
+				<control type="textbox" id="4">
+					<description>Description</description>
+					<left>100</left>
+					<top>450</top>
+					<width>580</width>
+					<height>120</height>
+					<font>font13</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<pagecontrol>61</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!Control.IsVisible(50)</visible>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>690</left>
+					<top>450</top>
+					<width>25</width>
+					<height>120</height>
+					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+					<onleft>50</onleft>
+					<onright>9000</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="panel" id="50">
+					<left>100</left>
+					<top>450</top>
+					<width>580</width>
+					<height>120</height>
+					<onleft>9000</onleft>
+					<onright>61</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<viewtype label="">list</viewtype>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>vertical</orientation>
+					<itemlayout condition="Container.Content(Albums)" height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>40</height>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>410</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>([COLOR=selected][B]$INFO[ListItem.TrackNumber][/B][/COLOR]) - $INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>220</left>
+							<top>0</top>
+							<width>200</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Duration]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="Container.Content(Albums)" height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>40</height>
+							<visible>!Control.HasFocus(50)</visible>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>40</height>
+							<visible>Control.HasFocus(50)</visible>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>410</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>([COLOR=selected][B]$INFO[ListItem.TrackNumber][/B][/COLOR]) - $INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>220</left>
+							<top>0</top>
+							<width>200</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Duration]</label>
+						</control>
+					</focusedlayout>
+					<itemlayout condition="Container.Content(Artists)" height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>40</height>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>410</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="Container.Content(Artists)" height="40" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>40</height>
+							<visible>!Control.HasFocus(50)</visible>
+							<texture border="0,2,0,2">MenuItemNF.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>580</width>
+							<height>40</height>
+							<visible>Control.HasFocus(50)</visible>
+							<texture border="0,2,0,2">MenuItemFO.png</texture>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>410</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="grouplist" id="9000">
+					<right>20</right>
+					<top>75</top>
+					<width>200</width>
+					<height>500</height>
+					<onleft>61</onleft>
+					<onright>noop</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<control type="label">
+						<description>Album header label</description>
+						<width>200</width>
+						<height>35</height>
+						<font>font16</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Listitem.Album]</label>
+						<visible>container.content(Albums)</visible>
+					</control>
+					<control type="label">
+						<description>Artist header label</description>
+						<width>200</width>
+						<height>35</height>
+						<font>font16</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Listitem.Artist]</label>
+						<visible>container.content(Artists)</visible>
+					</control>
+					<control type="button" id="5">
+						<description>Cast/Review</description>
+						<include>ButtonCommonValues</include>
+						<label>206</label>
+					</control>
+					<control type="button" id="6">
+						<description>Refresh</description>
+						<include>ButtonCommonValues</include>
+						<label>184</label>
+					</control>
+					<control type="button" id="10">
+						<description>Get Thumb</description>
+						<include>ButtonCommonValues</include>
+						<label>13405</label>
+					</control>
+					<control type="button" id="12">
+						<description>Get Fanart</description>
+						<include>ButtonCommonValues</include>
+						<label>20413</label>
+					</control>
+					<control type="button" id="777">
+						<description>back</description>
+						<include>ButtonCommonValues</include>
+						<onclick>back</onclick>
+						<label>BACK</label>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

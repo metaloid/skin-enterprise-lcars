@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<control type="list" id="9000">
+				<right>20</right>
+				<top>95</top>
+				<width>200</width>
+				<height>500</height>
+				<onleft>603</onleft>
+				<onright>noop</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<focusposition>2</focusposition>
+				<movement>1</movement>
+				<orientation>vertical</orientation>
+				<itemlayout height="35" width="200">
+					<control type="label">
+						<left>5</left>
+						<top>0</top>
+						<width>190</width>
+						<height>25</height>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="200">
+					<control type="label">
+						<left>5</left>
+						<top>0</top>
+						<width>190</width>
+						<height>25</height>
+						<font>font16</font>
+						<textcolor>blue</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>480</label>
+						<label2>31400</label2>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="2">
+						<label>157</label>
+						<label2>31401</label2>
+						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="3">
+						<label>31502</label>
+						<label2>31409</label2>
+						<onclick>ActivateWindow(PVRSettings)</onclick>
+						<icon>special://skin/backgrounds/tv.jpg</icon>
+					</item>
+					<item id="4">
+						<label>2</label>
+						<label2>31402</label2>
+						<onclick>ActivateWindow(MusicSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="5">
+						<label>1</label>
+						<label2>31403</label2>
+						<onclick>ActivateWindow(PicturesSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="6">
+						<label>8</label>
+						<label2>31404</label2>
+						<onclick>ActivateWindow(WeatherSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="7">
+						<label>24001</label>
+						<label2>31408</label2>
+						<onclick>ActivateWindow(AddonBrowser)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="8">
+						<label>14036</label>
+						<label2>31410</label2>
+						<onclick>ActivateWindow(ServiceSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="9">
+						<label>13000</label>
+						<label2>31406</label2>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="10">
+						<label>7</label>
+						<onclick>ActivateWindow(FileManager)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="11">
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="12">
+						<label>13200</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="13">
+						<label>BACK</label>
+						<onclick>back</onclick>
+						<icon>-</icon>
+					</item>
+					
+				</content>
+			</control>
+			<control type="image">
+				<left>90</left>
+				<top>65</top>
+				<width>620</width>
+				<height>480</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>88ffffff</colordiffuse>
+				<texture background="true">04.png</texture>
+			</control>
+			<control type="textbox">
+				<description>Appearance Description</description>
+				<left>80</left>
+				<top>480</top>
+				<width>640</width>
+				<height>98</height>
+				<font>font13</font>
+				<label>$INFO[Container(9000).ListItem.Label2]</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+		</control>
+		<include>CommonNowPlaying</include>
+		<control type="label">
+			<include>WindowTitleSide</include>
+			<label>$LOCALIZE[5] - $INFO[Container(9000).ListItem.Label]</label>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

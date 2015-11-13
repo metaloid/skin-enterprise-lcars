@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="ThumbnailView">
+		<control type="group">
+			<visible>Control.IsVisible(500)</visible>
+			<control type="panel" id="500">
+				<left>90</left>
+				<top>50</top>
+				<width>1000</width>
+				<height>558</height>
+				<onleft>2</onleft>
+				<onright>60</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="21371">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+				<itemlayout height="279" width="216">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>214</width>
+						<height>240</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture  diffuse="poster-mask.png"  background="true">$VAR[PosterThumb]</texture>
+						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+					<control type="label">
+						<left>8</left>
+						<top>240</top>
+						<width>200</width>
+						<height>25</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>210</top>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="276" width="216">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>214</width>
+						<height>240</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture  diffuse="poster-mask.png"  background="true">$VAR[PosterThumb]</texture>
+						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+					<control type="label">
+						<left>8</left>
+						<top>240</top>
+						<width>200</width>
+						<height>25</height>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>210</top>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>960</left>
+				<top>50</top>
+				<width>25</width>
+				<height>550</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>500</onleft>
+				<onright>2</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(500)</visible>
+			</control>
+		</control>
+	</include>
+
+</includes>
