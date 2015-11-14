@@ -6,15 +6,8 @@
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
-		<include>CommonBackground</include>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>strech</aspectratio>
-			<texture>02.png</texture>
-		</control>
+		<include>ContentPanelBackgrounds</include>
+		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 503 -->

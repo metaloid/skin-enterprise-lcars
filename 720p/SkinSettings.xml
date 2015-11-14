@@ -326,7 +326,7 @@
 						<focusedcolor>blue</focusedcolor>
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>
-						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
+						<label>$LOCALIZE[31111] - $LOCALIZE[24001]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 					</control>

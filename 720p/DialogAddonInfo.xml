@@ -10,16 +10,7 @@
 	<controls>
 		<control type="group">
 			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
-			<control type="image">
-				<description>Normal Default Background Image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<aspectratio>strech</aspectratio>
-				<texture>02.png</texture>
-				
-			</control>
+			<include>ContentPanelBackgrounds</include>
 			<control type="image">
 				<left>70</left>
 				<top>70</top>

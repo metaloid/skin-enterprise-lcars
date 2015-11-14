@@ -33,15 +33,16 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
-				<left>40</left>
-				<top>120</top>
+				<left>690</left>
+				<top>250</top>
 				<width>200</width>
 				<height>200</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture  diffuse="poster-mask.png"  background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
 			</control>
 			<control type="group">
-				<left>250</left>
+				<left>40</left>
 				<top>120</top>
 				<control type="label">
 					<description>Artist Title</description>
@@ -193,34 +194,6 @@
 						<aspectratio align="left">keep</aspectratio>
 						<texture>LeftRating/$INFO[ListItem.StarRating]</texture>
 					</control>
-					<control type="button" id="14">
-						<description>Decrease Rating</description>
-						<left>160</left>
-						<top>5</top>
-						<width>33</width>
-						<height>22</height>
-						<onclick>DecreaseRating</onclick>
-						<texturenofocus>scroll-down.png</texturenofocus>
-						<texturefocus>scroll-down-focus.png</texturefocus>
-						<onleft>15</onleft>
-						<onright>15</onright>
-						<ondown>9000</ondown>
-						<onup>9000</onup>
-					</control>
-					<control type="button" id="15">
-						<description>Increase Rating</description>
-						<left>193</left>
-						<top>5</top>
-						<width>33</width>
-						<height>22</height>
-						<onclick>IncreaseRating</onclick>
-						<texturenofocus>scroll-up.png</texturenofocus>
-						<texturefocus>scroll-up-focus.png</texturefocus>
-						<onleft>14</onleft>
-						<onright>14</onright>
-						<ondown>9000</ondown>
-						<onup>9000</onup>
-					</control>
 				</control>
 				<control type="label">
 					<description>Comment Title</description>
@@ -245,9 +218,16 @@
 					<label fallback="161">$INFO[ListItem.Comment]</label>
 				</control>
 			</control>
-			<control type="group" id="9000">
-				<left>40</left>
-				<top>445</top>
+			<control type="grouplist" id="9000">
+				<left>700</left>
+				<top>50</top>
+				<width>200</width>
+				<height>500</height>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
 				<control type="button" id="10">
 					<description>Ok button</description>
 					<label>186</label>
@@ -268,6 +248,23 @@
 					<label>13405</label>
 					<include>ButtonCommonValues</include>
 				</control>
+				<control type="button" id="15">
+					<description>Increase Rating</description>
+					<width>33</width>
+					<height>22</height>
+					<onclick>IncreaseRating</onclick>
+					<texturenofocus>scroll-up.png</texturenofocus>
+					<texturefocus>scroll-up-focus.png</texturefocus>
+				</control>
+				<control type="button" id="14">
+					<description>Decrease Rating</description>
+					<width>33</width>
+					<height>22</height>
+					<onclick>DecreaseRating</onclick>
+					<texturenofocus>scroll-down.png</texturenofocus>
+					<texturefocus>scroll-down-focus.png</texturefocus>
+				</control>
+					
 			</control>
 		</control>
 	</controls>

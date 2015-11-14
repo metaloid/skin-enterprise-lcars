@@ -4,15 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<views>500,550</views>
 	<controls>
-		<include>CommonBackground</include>
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>strech</aspectratio>
-			<texture>02.png</texture>
-		</control>
+		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 550 -->

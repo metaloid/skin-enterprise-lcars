@@ -3,15 +3,7 @@
 	<defaultcontrol>777</defaultcontrol>
 	<controls>
 		<control type="group">
-			<control type="image">
-				<description>Normal Default Background Image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>1280</width>
-				<height>720</height>
-				<aspectratio>strech</aspectratio>
-				<texture>02.png</texture>
-			</control>
+			<include>ContentPanelBackgrounds</include>
 			<control type="group">
 				<left>90</left>
 				<top>50</top>

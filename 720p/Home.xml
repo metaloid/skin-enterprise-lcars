@@ -363,7 +363,7 @@
                 </item>
                 <!--ADDONS-->
                 <item id="4">
-                    <visible>!Skin.HasSetting(HomeMenuNoADDONSButton)</visible>
+                    <visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
                     <label>24001</label>
                     <onclick>ActivateWindow(AddonBrowser.xml)</onclick>
                 </item>
