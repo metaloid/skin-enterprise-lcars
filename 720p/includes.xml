@@ -77,6 +77,83 @@
 		<value condition="!IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
+    <include name="TVNextAiredListCommonLayout">
+        <left>90</left>
+		<top>50</top>
+		<height>560</height>
+        <width>600</width>
+        <onright>5000</onright>
+        <pagecontrol>-</pagecontrol>
+        <orientation>verical</orientation>
+        <itemlayout width="600" height="280">
+            <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>580</width>
+				<height>270</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="01.png">$INFO[ListItem.Property(Fanart)]</texture>
+				<bordertexture  border="20">ContentPanel.png</bordertexture>
+				<bordersize>10</bordersize>
+			</control>
+			<control type="label">
+                <left>35</left>
+				<top>55</top>
+				<textcolor>white</textcolor>
+                <font>font16</font>
+                <width>530</width>
+                <height>40</height>
+                <label>$INFO[ListItem.Label] : $INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
+                <aligny>center</aligny>
+            </control>
+            <control type="textbox">
+				<description>Description Value for Movie</description>
+				<left>35</left>
+				<top>85</top>
+				<width>510</width>
+				<height>155</height>
+				<font>font14</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+		</itemlayout>
+        <focusedlayout width="600" height="280">
+            <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>580</width>
+				<height>270</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="01.png">$INFO[ListItem.Property(Fanart)]</texture>
+				<bordertexture  border="20">ContentPanel.png</bordertexture>
+				<bordersize>10</bordersize>
+			</control>
+			<control type="label">
+                <left>35</left>
+				<top>55</top>
+				<textcolor>blue</textcolor>
+                <font>font16</font>
+                <width>530</width>
+                <height>40</height>
+                <label>$INFO[ListItem.Label] : $INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
+                <aligny>center</aligny>
+            </control>
+            <control type="textbox">
+				<description>Description Value for Movie</description>
+				<left>35</left>
+				<top>85</top>
+				<width>510</width>
+				<height>155</height>
+				<font>font14</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
+				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+        </focusedlayout>
+    </include>
 	<include name="DialogBackgroundCommons">
 		<control type="image">
 			<description>background image</description>
@@ -169,6 +246,8 @@
 		<height>35</height>
 		<textcolor>white</textcolor>
 		<focusedcolor>blue</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>7</textoffsetx>
 		<align>left</align>
 		<textwidth>190</textwidth>
 		<texturefocus>-</texturefocus>

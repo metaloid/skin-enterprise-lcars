@@ -8,7 +8,7 @@
 				<right>20</right>
 				<top>150</top>
 				<width>200</width>
-				<height>300</height>
+				<height>425</height>
 				<onright>noop</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
@@ -19,6 +19,15 @@
 				<onleft condition="Container(5000).HasFocus(5)">204</onleft>
 				<onleft condition="Container(5000).HasFocus(6)">205</onleft>
 				<onleft condition="Container(5000).HasFocus(7)">206</onleft>
+				<onleft condition="Container(5000).HasFocus(8)">207</onleft>
+				<onleft condition="Container(5000).HasFocus(9)">208</onleft>
+				<onleft condition="Container(5000).HasFocus(10)">209</onleft>
+				<onleft condition="Container(5000).HasFocus(11)">210</onleft>
+				<onleft condition="Container(5000).HasFocus(12)">211</onleft>
+				<onleft condition="Container(5000).HasFocus(13)">212</onleft>
+				<onleft condition="Container(5000).HasFocus(14)">213</onleft>
+				<onleft condition="Container(5000).HasFocus(15)">214</onleft>
+				<onleft condition="Container(5000).HasFocus(16)">215</onleft>
 				<pagecontrol>-</pagecontrol>
 				<itemlayout height="35" width="200">
 					<control type="label">
@@ -101,6 +110,51 @@
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
+					<item id="8">
+						<label>$INFO[Window(home).Property(NextAired.207.Wday)] $INFO[Window(Home).Property(NextAired.207.Date)]</label>
+						<label2>$INFO[Container(207).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="9">
+						<label>$INFO[Window(home).Property(NextAired.208.Wday)] $INFO[Window(Home).Property(NextAired.208.Date)]</label>
+						<label2>$INFO[Container(208).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="10">
+						<label>$INFO[Window(home).Property(NextAired.209.Wday)] $INFO[Window(Home).Property(NextAired.209.Date)]</label>
+						<label2>$INFO[Container(209).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="11">
+						<label>$INFO[Window(home).Property(NextAired.210.Wday)] $INFO[Window(Home).Property(NextAired.210.Date)]</label>
+						<label2>$INFO[Container(210).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="12">
+						<label>$INFO[Window(home).Property(NextAired.211.Wday)] $INFO[Window(Home).Property(NextAired.211.Date)]</label>
+						<label2>$INFO[Container(211).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="13">
+						<label>$INFO[Window(home).Property(NextAired.212.Wday)] $INFO[Window(Home).Property(NextAired.212.Date)]</label>
+						<label2>$INFO[Container(212).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="14">
+						<label>$INFO[Window(home).Property(NextAired.213.Wday)] $INFO[Window(Home).Property(NextAired.213.Date)]</label>
+						<label2>$INFO[Container(213).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="15">
+						<label>$INFO[Window(home).Property(NextAired.214.Wday)] $INFO[Window(Home).Property(NextAired.214.Date)]</label>
+						<label2>$INFO[Container(214).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="16">
+						<label>$INFO[Window(home).Property(NextAired.215.Wday)] $INFO[Window(Home).Property(NextAired.215.Date)]</label>
+						<label2>$INFO[Container(215).NumItems, (,)]</label2>
+						<onclick>noop</onclick>
+					</item>
 				</content>
 			</control>
 			
@@ -140,6 +194,51 @@
 					<ondown>206</ondown>
 					<include>TVNextAiredListCommonLayout</include>
 				</control>
+				<control type="panel" id="207">
+					<visible>Container(5000).HasFocus(8)</visible>
+					<onright>207</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="208">
+					<visible>Container(5000).HasFocus(9)</visible>
+					<onright>208</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="209">
+					<visible>Container(5000).HasFocus(10)</visible>
+					<onright>209</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="210">
+					<visible>Container(5000).HasFocus(11)</visible>
+					<onright>210</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="211">
+					<visible>Container(5000).HasFocus(12)</visible>
+					<onright>211</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="212">
+					<visible>Container(5000).HasFocus(13)</visible>
+					<onright>212</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="213">
+					<visible>Container(5000).HasFocus(14)</visible>
+					<onright>213</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="214">
+					<visible>Container(5000).HasFocus(15)</visible>
+					<onright>214</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="215">
+					<visible>Container(5000).HasFocus(16)</visible>
+					<onright>215</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
 			</control>
 			<control type="grouplist" id="9000">
                     <right>20</right>
@@ -153,6 +252,15 @@
 					<onleft condition="Container(5000).HasFocus(5)">204</onleft>
 					<onleft condition="Container(5000).HasFocus(6)">205</onleft>
 					<onleft condition="Container(5000).HasFocus(7)">206</onleft>
+					<onleft condition="Container(5000).HasFocus(8)">207</onleft>
+					<onleft condition="Container(5000).HasFocus(9)">208</onleft>
+					<onleft condition="Container(5000).HasFocus(10)">209</onleft>
+					<onleft condition="Container(5000).HasFocus(11)">210</onleft>
+					<onleft condition="Container(5000).HasFocus(12)">211</onleft>
+					<onleft condition="Container(5000).HasFocus(13)">212</onleft>
+					<onleft condition="Container(5000).HasFocus(14)">213</onleft>
+					<onleft condition="Container(5000).HasFocus(15)">214</onleft>
+					<onleft condition="Container(5000).HasFocus(16)">215</onleft>
 					<onright>noop</onright>
 					<onup>5000</onup>
 					<ondown>5000</ondown>
