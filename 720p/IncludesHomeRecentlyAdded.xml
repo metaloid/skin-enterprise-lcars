@@ -239,9 +239,20 @@
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
+			<control type="image">
+				<visible>Control.HasFocus(311) + !StringCompare(Container(311).listitem.label,get more...)</visible>
+				<left>630</left>
+				<top>-20</top>
+				<width>270</width>
+				<height>300</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" diffuse="poster-mask.png" border="5">$INFO[Container(311).ListItem.icon]</texture>
+				<bordertexture  border="20">ContentPanel.png</bordertexture>
+				<bordersize>10</bordersize>
+			</control>
+			
 			<!--movies-->
-
-            <control type="panel" id="311">
+			<control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(1)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -305,7 +316,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.1.Label),, • ]$INFO[Window(Home).Property(NextAired.1.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.1.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.1.NextDay)] $INFO[Window(Home).Property(NextAired.1.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.1.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.1.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.1.Library)])</onclick>
                     </item>
                     <item id="2" description="Episodes2">
@@ -313,7 +324,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.2.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.2.Label),, • ]$INFO[Window(Home).Property(NextAired.2.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.2.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.2.NextDay)] $INFO[Window(Home).Property(NextAired.2.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.2.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.2.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.2.Library)])</onclick>
                     </item>
                     <item id="3" description="Episodes3">
@@ -321,7 +332,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.3.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.3.Label),, • ]$INFO[Window(Home).Property(NextAired.3.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.3.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.3.NextDay)] $INFO[Window(Home).Property(NextAired.3.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.3.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.3.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.3.Library)])</onclick>
                     </item>
                     <item id="4" description="Episodes4">
@@ -329,7 +340,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.4.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.4.Label),, • ]$INFO[Window(Home).Property(NextAired.4.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.4.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.4.NextDay)] $INFO[Window(Home).Property(NextAired.4.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.4.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.4.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.4.Library)])</onclick>
                     </item>
                     <item id="5" description="Episodes5">
@@ -337,7 +348,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.5.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.5.Label),, • ]$INFO[Window(Home).Property(NextAired.5.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.5.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.5.NextDay)] $INFO[Window(Home).Property(NextAired.5.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.5.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.5.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.5.Library)])</onclick>
                     </item>
                     <item id="6" description="Episodes6">
@@ -345,7 +356,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.6.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.6.Label),, • ]$INFO[Window(Home).Property(NextAired.6.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.6.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.6.NextDay)] $INFO[Window(Home).Property(NextAired.6.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.6.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.6.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.6.Library)])</onclick>
                     </item>
                     <item id="7" description="Episodes7">
@@ -353,7 +364,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.7.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.7.Label),, • ]$INFO[Window(Home).Property(NextAired.7.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.7.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.7.NextDay)] $INFO[Window(Home).Property(NextAired.7.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.7.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.7.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.7.Library)])</onclick>
                     </item>
                     <item id="8" description="Episodes8">
@@ -361,7 +372,7 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.8.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.8.Label),, • ]$INFO[Window(Home).Property(NextAired.8.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.8.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.8.NextDay)] $INFO[Window(Home).Property(NextAired.8.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.9.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.8.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.8.Library)])</onclick>
                     </item>
                     <item id="9" description="Episodes9">
@@ -369,21 +380,21 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.9.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.9.Label),, • ]$INFO[Window(Home).Property(NextAired.9.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.9.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.9.NextDay)] $INFO[Window(Home).Property(NextAired.9.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.9.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.9.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.9.Library)])</onclick>
                     </item>
                     <item id="10" description="Episodes10">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.10.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.10.Label),, • ]$INFO[Window(Home).Property(NextAired.10.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.10.NextTitle)]</label>
                         <label2> $INFO[Window(Home).Property(NextAired.10.NextDay)] $INFO[Window(Home).Property(NextAired.10.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.10.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.10.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.10.Library)])</onclick>
                     </item>
                      <item id="11" description="Episodes11">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.11.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.11.Label),, • ]$INFO[Window(Home).Property(NextAired.11.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.11.NextTitle)]</label>
                         <label2> $INFO[Window(Home).Property(NextAired.11.NextDay)] $INFO[Window(Home).Property(NextAired.11.ShortTime),AT: ] $INFO[Window(Home).Property(NextAired.11.Network)]</label2>
-                        <thumb></thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.11.Art(poster))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.11.Library)])</onclick>
                     </item>
                </content>
@@ -514,29 +525,20 @@
                 <height>300</height>
                 <itemgap>10</itemgap>
                 <control type="button" id="500">
-                    <width>180</width>
-					<height>40</height>
-					<label>157</label>
-                    <texturefocus border="0,0,14,0">MediaItemDetailBG.png</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
+                    <label>157</label>
+                    <include>ButtonCommonValues</include>
 					<onfocus>Skin.SetString(addonshome,addons://sources/video/)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
                 <control type="button" id="501">
-                    <width>180</width>
-					<height>40</height>
-					<label>292</label>
-                    <texturefocus border="0,0,14,0">MediaItemDetailBG.png</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
+                    <label>292</label>
+                    <include>ButtonCommonValues</include>
 					<onfocus>Skin.SetString(addonshome,addons://sources/audio/)</onfocus>
                     <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
                 <control type="button" id="502">
-                    <width>180</width>
-					<height>40</height>
-					<label>350</label>
-                    <texturefocus border="0,0,14,0">MediaItemDetailBG.png</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
+                    <label>350</label>
+                    <include>ButtonCommonValues</include>
 					<onfocus>Skin.SetString(addonshome,addons://sources/executable/)</onfocus>
                     <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
                     <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
@@ -574,36 +576,23 @@
                 <height>300</height>
                 <itemgap>10</itemgap>
                 <control type="button" id="500">
-                    <width>180</width>
-					<height>40</height>
-					<label>157</label>
-                    <texturefocus border="0,0,14,0">MediaItemDetailBG.png</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
+                    <label>157</label>
+                    <include>ButtonCommonValues</include>
 					<onfocus>Skin.SetString(sourceshome,sources://video/)</onfocus>
                     <onclick>ActivateWindow(videos,files)</onclick>
                 </control>
                 <control type="togglebutton" id="501">
-                    <font>font13</font>
-                    <width>180</width>
-					<height>50</height>
-					<textoffsetx>7</textoffsetx>
-					<aligny>center</aligny>
-					<texturefocus border="0,0,14,0">MediaItemDetailBG.png</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
-					<alttexturefocus border="0,0,14,0">MediaItemDetailBG.png</alttexturefocus>
+                    <include>ButtonCommonValues</include>
+					<alttexturefocus border="0,0,14,0">-</alttexturefocus>
 					<alttexturenofocus border="5">-</alttexturenofocus>
 					<label>$VAR[updlibrary]</label>
                     <altlabel>$VAR[updlibrary]</altlabel>
-                    <usealttexture>StringCompare(Skin.String(sourceshome),sources://music/)</usealttexture>
                     <onclick>UpdateLibrary(video)</onclick>
                     <altclick>UpdateLibrary(music)</altclick>
                 </control>
                 <control type="button" id="503">
-                    <width>180</width>
-					<height>40</height>
-					<label>292</label>
-                    <texturefocus border="0,0,14,0">MediaItemDetailBG.png</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
+                    <label>292</label>
+                    <include>ButtonCommonValues</include>
 					<onfocus>Skin.SetString(sourceshome,sources://music/)</onfocus>
                     <onclick>ActivateWindow(MusicFiles)</onclick>
                 </control>
