@@ -224,7 +224,7 @@
 					<texture>04.png</texture>
 				</control>
 					<control type="scrollbar" id="60">
-						<visible>Control.IsVisible(311)</visible>
+						<visible>Container(9000).HasFocus(4) | Container(9000).HasFocus(7) | Container(9000).HasFocus(10)</visible>
 						<left>600</left>
 						<top>15</top>
 						<width>25</width>
@@ -250,26 +250,37 @@
 				<bordertexture  border="20">ContentPanel.png</bordertexture>
 				<bordersize>10</bordersize>
 			</control>
+			<control type="image">
+				<visible>Control.HasFocus(311) + Container(9000).HasFocus(2)</visible>
+				<left>630</left>
+				<top>270</top>
+				<width>270</width>
+				<height>300</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" diffuse="poster-mask.png" border="5">$INFO[Container(311).ListItem.Art(tvshow.poster)]</texture>
+				<bordertexture  border="20">ContentPanel.png</bordertexture>
+				<bordersize>10</bordersize>
+			</control>
 			
 			<!--movies-->
+			
 			<control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <visible>Container(9000).HasFocus(1)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
-				<top>10</top>
+				<top>25</top>
 				<width>580</width>
-				<height>480</height>
+				<height>490</height>
 				<onleft>noop</onleft>
 				<onright>60</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-
-                <content target="video">videodb://recentlyaddedmovies/</content>
+				<content target="video">special://skin/playlists/NewMovies.xsp</content>
             </control>
 
             <!--TV-->
@@ -278,18 +289,18 @@
                 <visible>Container(9000).HasFocus(2)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
-				<top>10</top>
+				<top>25</top>
 				<width>580</width>
-				<height>480</height>
+				<height>490</height>
 				<onleft>noop</onleft>
 				<onright>60</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-				<content target="video">videodb://recentlyaddedepisodes/</content>
+				<content target="video">special://skin/playlists/NewEpisodes.xsp</content>
             </control>
 
             <!--NEXT AIRED-->
@@ -307,7 +318,7 @@
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
                 <content>
@@ -407,7 +418,7 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(3)</visible>
                 <left>0</left>
-				<top>50</top>
+				<top>25</top>
 				<width>580</width>
 				<height>490</height>
 				<onleft>noop</onleft>
@@ -415,101 +426,10 @@
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-                <content>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.1.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.2.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.3.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.4.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.5.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.6.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.7.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.7.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.8.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.8.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.9.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.9.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
-						</item>
-						<item>
-							<label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
-							<label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
-							<onclick>PlayList.Clear</onclick>
-							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.10.Path)]")</onclick>
-							<icon>-</icon>
-							<thumb>$INFO[Window.Property(LatestAlbum.10.Thumb)]</thumb>
-							<visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
-						</item>
-					</content>
+                <content target="music">special://skin/playlists/NewAlbums.xsp</content>
             </control>
 
             <!--plugs-->
@@ -549,9 +469,9 @@
                 <visible>Container(9000).HasFocus(4)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
-				<top>10</top>
+				<top>25</top>
 				<width>580</width>
-				<height>480</height>
+				<height>490</height>
 				<onleft>noop</onleft>
 				<onright>60</onright>
 				<onup>311</onup>
@@ -603,9 +523,9 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(7)</visible>
                 <left>0</left>
-				<top>10</top>
+				<top>25</top>
 				<width>580</width>
-				<height>480</height>
+				<height>490</height>
 				<onleft>noop</onleft>
 				<onright>60</onright>
 				<onup>311</onup>
@@ -639,9 +559,9 @@
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <visible>Container(9000).HasFocus(10)</visible>
                 <left>0</left>
-				<top>10</top>
+				<top>25</top>
 				<width>580</width>
-				<height>480</height>
+				<height>490</height>
 				<onleft>noop</onleft>
 				<onright>60</onright>
 				<onup>311</onup>
