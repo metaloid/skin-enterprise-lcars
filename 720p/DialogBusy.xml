@@ -22,12 +22,11 @@
 			<control type="image">
 				<description>Busy animation</description>
 				<left>20</left>
-				<top>10</top>
+				<top>13</top>
 				<width>32</width>
 				<height>32</height>
-				<texture>busy.png</texture>
+				<texture>spaceatom.gif</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="36,36" time="900" loop="true" condition="true">conditional</animation>
 			</control>
 			<control type="label">
 				<description>Busy label</description>
