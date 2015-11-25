@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>500,503</views>
-	<onload condition="System.HasAddon(script.tv.show.next.aired) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
 		<include>ContentPanelBackgrounds</include>

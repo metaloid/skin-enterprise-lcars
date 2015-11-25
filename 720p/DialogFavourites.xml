@@ -9,6 +9,10 @@
 	<controls>
 		<control type="group">
 			<include>ContentPanelBackgrounds</include>
+			<control type="label">
+				<include>WindowTitleSide</include>
+				<label>$LOCALIZE[1036]</label>
+			</control>
 		
 			<control type="panel" id="450">
 				<left>90</left>

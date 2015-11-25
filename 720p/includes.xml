@@ -26,6 +26,7 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PosterThumb">
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + [Container.Content(Movies) | container.content(TvShows) | container.content(Artists)]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>

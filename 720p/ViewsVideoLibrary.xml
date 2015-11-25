@@ -3,260 +3,114 @@
 	<include name="MediaListView3">
 		<control type="group">
 			<visible>Control.IsVisible(503)</visible>
-			<control type="group">
-				<visible>!StringCompare(listitem.label,..)</visible>
-				<left>720</left>
-				<top>35</top>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>270</width>
-					<height>535</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="ContentPanel2.png" border="5">$VAR[PosterThumb]</texture>
-					<bordertexture  border="20">ContentPanel.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-			</control>
-			<control type="group">
-				<visible>!StringCompare(listitem.label,..)</visible>
-				<left>100</left>
-				<top>300</top>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>580</width>
-					<height>270</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="01.png">$INFO[ListItem.Art(fanart)]</texture>
-					<bordertexture  border="20">ContentPanel.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-			</control>
-			<control type="list" id="503">
-				<left>100</left>
-				<top>50</top>
-				<width>580</width>
-				<height>245</height>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>503</onup>
-				<ondown>503</ondown>
-				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<itemlayout height="40" width="580">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>520</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Year]</label>
-						<visible>Container.Content(movies) | Container.Content(Sets)</visible>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-						<visible>!Container.Content(movies) | Container.Content(Sets)</visible>
-					</control>
-					<control type="image">
-						<left>515</left>
-						<top>8</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
-					</control>
-					<control type="image">
-						<left>555</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>555</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<aspectratio align="left">keep</aspectratio>
-					</control>
-				</itemlayout>
-				<focusedlayout height="40" width="580">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemNF.png</texture>
-						<visible>!Control.HasFocus(503)</visible>
-						
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>580</width>
-						<height>41</height>
-						<texture border="0,2,0,2">MenuItemFO.png</texture>
-						<visible>Control.HasFocus(503)</visible>
-						
-					</control>
-					<control type="image">
-						<left>380</left>
-						<top>5</top>
-						<width>200</width>
-						<height>31</height>
-						<texture border="0,0,14,0">MediaItemDetailBG.png</texture>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>520</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Year]</label>
-						<visible>Container.Content(movies) | Container.Content(Sets)</visible>
-					</control>
-					<control type="label">
-						<left>10</left>
-						<top>0</top>
-						<width>500</width>
-						<height>40</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<align>right</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label2]</label>
-						<visible>!Container.Content(movies) | Container.Content(Sets)</visible>
-					</control>
-					<control type="image">
-						<left>515</left>
-						<top>8</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
-					</control>
-					<control type="image">
-						<left>555</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>OverlayWatching.png</texture>
-						<visible>ListItem.IsResumable</visible>
-					</control>
-					<control type="image">
-						<left>555</left>
-						<top>14</top>
-						<width>16</width>
-						<height>16</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<aspectratio align="left">keep</aspectratio>
-					</control>
-				</focusedlayout>
-			</control>
 			<control type="scrollbar" id="60">
-				<left>690</left>
-				<top>65</top>
+				<left>960</left>
+				<top>50</top>
 				<width>25</width>
-				<height>240</height>
+				<height>550</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>503</onleft>
-				<onright>9000</onright>
+				<onleft>500</onleft>
+				<onright>2</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(503)</visible>
 			</control>
-			
-			
-			<control type="group">
-				<left>135</left>
-				<top>354</top>
-				<visible>Container.Content(movies)</visible>
-				<visible>!StringCompare(listitem.label,..)</visible>
-				<control type="textbox">
-					<description>Description Value for Movie</description>
+			<control type="panel" id="503">
+				<visible>!Container.Content(addons)</visible>
+                <left>100</left>
+				<top>50</top>
+				<width>850</width>
+				<height>558</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>503</onup>
+				<ondown>503</ondown>
+				<viewtype label="$LOCALIZE[544]">panel</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>4</preloaditems>
+				<itemlayout width="850" height="280">
+				<control type="image">
 					<left>0</left>
-					<top>2</top>
-					<width>510</width>
-					<height>155</height>
-					<font>font13</font>
-					<align>justify</align>
-					<textcolor>white</textcolor>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<top>0</top>
+					<width>840</width>
+					<height>270</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="04.png">$VAR[PosterThumb]</texture>
+					<bordertexture  border="20">ContentPanel.png</bordertexture>
+					<bordersize>10</bordersize>
 				</control>
-			</control>
-			<control type="group">
-				<left>135</left>
-				<top>350</top>
+				<control type="label">
+					<left>35</left>
+					<top>55</top>
+					<textcolor>white</textcolor>
+					<font>font16</font>
+					<width>790</width>
+					<height>40</height>
+					<label>$INFO[ListItem.Label]</label>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<left>35</left>
+					<top>55</top>
+					<width>790</width>
+					<height>40</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Year]</label>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<left>35</left>
+					<top>55</top>
+					<width>790</width>
+					<height>40</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>!Container.Content(movies)</visible>
+				</control>
+				<control type="group">
+					<left>35</left>
+					<top>85</top>
+					<visible>Container.Content(movies)</visible>
+					<visible>!StringCompare(listitem.label,..)</visible>
+					<control type="textbox">
+						<description>Description Value for Movie</description>
+						<left>0</left>
+						<top>0</top>
+						<width>790</width>
+						<height>155</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</control>
+				<control type="group">
+				<left>35</left>
+				<top>85</top>
 				<visible>Container.Content(TVShows)</visible>
 				<visible>!StringCompare(listitem.label,..)</visible>
 				<control type="label">
 					<description>Episodes txt</description>
 					<left>0</left>
-					<top>2</top>
-					<width>510</width>
-					<height>25</height>
-					<label>$LOCALIZE[20360]: $INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
-					<align>center</align>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>[COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
+					<align>right</align>
 					<aligny>center</aligny>
 					<font>font12</font>
 					<textcolor>white</textcolor>
@@ -264,9 +118,9 @@
 				<control type="label">
 					<description>Aired txt</description>
 					<left>0</left>
-					<top>27</top>
-					<width>510</width>
-					<height>25</height>
+					<top>20</top>
+					<width>790</width>
+					<height>20</height>
 					<label>$LOCALIZE[31322]: $INFO[listitem.premiered]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -276,9 +130,9 @@
 				<control type="label">
 					<description>Genre txt</description>
 					<left>0</left>
-					<top>52</top>
-					<width>510</width>
-					<height>25</height>
+					<top>40</top>
+					<width>790</width>
+					<height>20</height>
 					<label>$LOCALIZE[515]: $INFO[listitem.Genre]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -289,9 +143,9 @@
 					<description>studio</description>
 					<visible>!IsEmpty(ListItem.Studio)</visible>
 					<left>0</left>
-					<top>77</top>
-					<width>510</width>
-					<height>25</height>
+					<top>60</top>
+					<width>790</width>
+					<height>20</height>
 					<label>$LOCALIZE[572]: $INFO[ListItem.Studio]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -302,23 +156,10 @@
 					<description>mpaa</description>
 					<visible>!IsEmpty(ListItem.Mpaa)</visible>
 					<left>0</left>
-					<top>102</top>
-					<width>510</width>
-					<height>25</height>
+					<top>80</top>
+					<width>790</width>
+					<height>20</height>
 					<label>$INFO[ListItem.Mpaa]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-				</control>
-				<control type="label">
-					<description>next</description>
-					<visible>!IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-					<left>0</left>
-					<top>127</top>
-					<width>510</width>
-					<height>25</height>
-					<label>Next: $INFO[Window(Home).Property(NextAired.NextNumber)] $INFO[Window(Home).Property(NextAired.NextTitle)] $INFO[Window(Home).Property(NextAired.NextDate)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>
@@ -326,16 +167,46 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>135</left>
-				<top>350</top>
+				<left>35</left>
+				<top>85</top>
 				<visible>Container.Content(Episodes)</visible>
 				<visible>!StringCompare(listitem.label,..)</visible>
 				<control type="label">
+					<description>resolution</description>
+					<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>SD: $INFO[ListItem.VideoResolution]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
+					<description>resolution</description>
+					<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>HD : $INFO[ListItem.VideoResolution]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
 					<description>INFO txt</description>
 					<left>0</left>
-					<top>2</top>
-					<width>510</width>
-					<height>30</height>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
 					<label>$INFO[ListItem.Season,[COLOR=blue] $LOCALIZE[20373] :[/COLOR] ] $INFO[ListItem.episode,[COLOR=blue] $LOCALIZE[20359] :[/COLOR] ] $INFO[ListItem.premiered,[COLOR=blue] $LOCALIZE[31322] :[/COLOR] ]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -346,16 +217,16 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>32</top>
-					<width>510</width>
+					<top>25</top>
+					<width>790</width>
 					<height>4</height>
 					<texture>separator.png</texture>
 				</control>
 				<control type="textbox">
 					<description>Description Value for TVShows</description>
 					<left>0</left>
-					<top>39</top>
-					<width>510</width>
+					<top>30</top>
+					<width>790</width>
 					<height>100</height>
 					<font>font13</font>
 					<align>justify</align>
@@ -365,16 +236,16 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>135</left>
-				<top>350</top>
+				<left>35</left>
+				<top>85</top>
 				<visible>Container.Content(Seasons)</visible>
 				<visible>!StringCompare(listitem.label,..)</visible>
 				<control type="label">
 					<description>Watched Count</description>
 					<left>0</left>
-					<top>2</top>
-					<width>510</width>
-					<height>30</height>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
 					<label>[COLOR=white]$LOCALIZE[20360]:[/COLOR] $INFO[ListItem.Property(WatchedEpisodes),([COLOR=blue],[/COLOR]) $LOCALIZE[16102]] $INFO[ListItem.Property(UnWatchedEpisodes),([COLOR=blue],[/COLOR]) $LOCALIZE[16101]]</label>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -384,38 +255,37 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>32</top>
-					<width>510</width>
+					<top>25</top>
+					<width>790</width>
 					<height>4</height>
 					<texture>separator.png</texture>
 				</control>
 				<control type="textbox">
 					<description>Description Value for Seasons</description>
 					<left>0</left>
-					<top>39</top>
-					<width>510</width>
+					<top>30</top>
+					<width>790</width>
 					<height>100</height>
 					<font>font13</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
-					<label>$INFO[Container.ShowPlot]</label>
+					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>Container.Content(Seasons)</visible>
 				</control>
 			</control>
 			<control type="group">
 				<visible>Container.Content(addons)</visible>
-				<left>135</left>
-				<top>350</top>
+				<left>35</left>
+				<top>85</top>
 				<visible>!StringCompare(listitem.label,..)</visible>
 				<visible>!StringCompare(listitem.label,get more...)</visible>
 				<control type="group">
 					<control type="label">
 						<description>Author txt</description>
 						<left>0</left>
-						<top>2</top>
-						<width>510</width>
-						<height>25</height>
+						<top>0</top>
+						<width>790</width>
+						<height>20</height>
 						<label>[COLOR=blue]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.Property(Addon.Creator)]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -425,9 +295,9 @@
 					<control type="label">
 						<description>Version txt</description>
 						<left>0</left>
-						<top>27</top>
-						<width>510</width>
-						<height>25</height>
+						<top>20</top>
+						<width>790</width>
+						<height>20</height>
 						<label>[COLOR=blue]$LOCALIZE[24051]:[/COLOR] $INFO[ListItem.Property(Addon.Version)]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -436,16 +306,16 @@
 					</control>
 					<control type="image">
 						<left>0</left>
-						<top>52</top>
-						<width>510</width>
+						<top>40</top>
+						<width>790</width>
 						<height>4</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="textbox">
 						<description>Description</description>
 						<left>0</left>
-						<top>56</top>
-						<width>510</width>
+						<top>45</top>
+						<width>790</width>
 						<height>100</height>
 						<font>font13</font>
 						<align>left</align>
@@ -454,6 +324,381 @@
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
+			</control>
+			</itemlayout>
+			<focusedlayout width="850" height="280">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>840</width>
+					<height>270</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="04.png">$VAR[PosterThumb]</texture>
+					<bordertexture  border="20">ContentPanel.png</bordertexture>
+					<bordersize>10</bordersize>
+				</control>
+				<control type="label">
+					<left>35</left>
+					<top>55</top>
+					<textcolor>blue</textcolor>
+					<font>font16</font>
+					<width>790</width>
+					<height>40</height>
+					<label>$INFO[ListItem.Label]</label>
+					<aligny>center</aligny>
+				</control>
+				<control type="label">
+					<left>35</left>
+					<top>55</top>
+					<width>790</width>
+					<height>40</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Year]</label>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<left>35</left>
+					<top>55</top>
+					<width>790</width>
+					<height>40</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>!Container.Content(movies)</visible>
+				</control>
+				<control type="group">
+					<left>35</left>
+					<top>85</top>
+					<visible>Container.Content(movies)</visible>
+					<visible>!StringCompare(listitem.label,..)</visible>
+					<control type="textbox">
+						<description>Description Value for Movie</description>
+						<left>0</left>
+						<top>0</top>
+						<width>790</width>
+						<height>155</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</control>
+				<control type="group">
+				<left>35</left>
+				<top>85</top>
+				<visible>Container.Content(TVShows)</visible>
+				<visible>!StringCompare(listitem.label,..)</visible>
+				<control type="label">
+					<description>Episodes txt</description>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>[COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>Aired txt</description>
+					<left>0</left>
+					<top>20</top>
+					<width>790</width>
+					<height>20</height>
+					<label>$LOCALIZE[31322]: $INFO[listitem.premiered]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>Genre txt</description>
+					<left>0</left>
+					<top>40</top>
+					<width>790</width>
+					<height>20</height>
+					<label>$LOCALIZE[515]: $INFO[listitem.Genre]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>studio</description>
+					<visible>!IsEmpty(ListItem.Studio)</visible>
+					<left>0</left>
+					<top>60</top>
+					<width>790</width>
+					<height>20</height>
+					<label>$LOCALIZE[572]: $INFO[ListItem.Studio]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>mpaa</description>
+					<visible>!IsEmpty(ListItem.Mpaa)</visible>
+					<left>0</left>
+					<top>80</top>
+					<width>790</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Mpaa]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+				</control>
+			</control>
+			<control type="group">
+				<left>35</left>
+				<top>85</top>
+				<visible>Container.Content(Episodes)</visible>
+				<visible>!StringCompare(listitem.label,..)</visible>
+				<control type="label">
+					<description>resolution</description>
+					<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>SD: $INFO[ListItem.VideoResolution]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
+					<description>resolution</description>
+					<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>HD : $INFO[ListItem.VideoResolution]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="label">
+					<description>INFO txt</description>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Season,[COLOR=blue] $LOCALIZE[20373] :[/COLOR] ] $INFO[ListItem.episode,[COLOR=blue] $LOCALIZE[20359] :[/COLOR] ] $INFO[ListItem.premiered,[COLOR=blue] $LOCALIZE[31322] :[/COLOR] ]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>25</top>
+					<width>790</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="textbox">
+					<description>Description Value for TVShows</description>
+					<left>0</left>
+					<top>30</top>
+					<width>790</width>
+					<height>100</height>
+					<font>font13</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
+			</control>
+			<control type="group">
+				<left>35</left>
+				<top>85</top>
+				<visible>Container.Content(Seasons)</visible>
+				<visible>!StringCompare(listitem.label,..)</visible>
+				<control type="label">
+					<description>Watched Count</description>
+					<left>0</left>
+					<top>0</top>
+					<width>790</width>
+					<height>20</height>
+					<label>[COLOR=white]$LOCALIZE[20360]:[/COLOR] $INFO[ListItem.Property(WatchedEpisodes),([COLOR=blue],[/COLOR]) $LOCALIZE[16102]] $INFO[ListItem.Property(UnWatchedEpisodes),([COLOR=blue],[/COLOR]) $LOCALIZE[16101]]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>25</top>
+					<width>790</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="textbox">
+					<description>Description Value for Seasons</description>
+					<left>0</left>
+					<top>30</top>
+					<width>790</width>
+					<height>100</height>
+					<font>font13</font>
+					<align>justify</align>
+					<textcolor>white</textcolor>
+					<info>ListItem.Plot</info>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Container.Content(addons)</visible>
+				<left>35</left>
+				<top>85</top>
+				<visible>!StringCompare(listitem.label,..)</visible>
+				<visible>!StringCompare(listitem.label,get more...)</visible>
+				<control type="group">
+					<control type="label">
+						<description>Author txt</description>
+						<left>0</left>
+						<top>0</top>
+						<width>790</width>
+						<height>20</height>
+						<label>[COLOR=blue]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.Property(Addon.Creator)]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="label">
+						<description>Version txt</description>
+						<left>0</left>
+						<top>20</top>
+						<width>790</width>
+						<height>20</height>
+						<label>[COLOR=blue]$LOCALIZE[24051]:[/COLOR] $INFO[ListItem.Property(Addon.Version)]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>40</top>
+						<width>790</width>
+						<height>4</height>
+						<texture>separator.png</texture>
+					</control>
+					<control type="textbox">
+						<description>Description</description>
+						<left>0</left>
+						<top>45</top>
+						<width>790</width>
+						<height>100</height>
+						<font>font13</font>
+						<align>left</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Property(Addon.Description)]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</control>
+			</control>
+			</focusedlayout>
+			</control>
+			<control type="panel" id="501">
+				<visible>Container.Content(addons)</visible>
+                <left>90</left>
+				<top>50</top>
+				<width>1000</width>
+				<height>558</height>
+				<onleft>2</onleft>
+				<onright>60</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="21371">panel</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+				<itemlayout height="279" width="216">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>214</width>
+						<height>240</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
+						<bordertexture colordiffuse="blue" border="20">poster-mask.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+					<control type="label">
+						<left>8</left>
+						<top>240</top>
+						<width>200</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>210</top>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="276" width="216">
+					<control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>214</width>
+						<height>240</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
+						<bordertexture colordiffuse="red" border="20">poster-mask.png</bordertexture>
+						<bordersize>4</bordersize>
+					</control>
+					<control type="label">
+						<left>8</left>
+						<top>240</top>
+						<width>200</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>blue</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>170</left>
+						<top>210</top>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+				</focusedlayout>
 			</control>
 		</control>
 	</include>

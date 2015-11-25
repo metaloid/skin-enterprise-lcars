@@ -12,10 +12,10 @@
 				<onright>60</onright>
 				<onup>500</onup>
 				<ondown>500</ondown>
-				<viewtype label="21371">list</viewtype>
+				<viewtype label="21371">panel</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<preloaditems>2</preloaditems>
+				<preloaditems>4</preloaditems>
 				
 				<itemlayout height="279" width="216">
 					<control type="image">
@@ -24,7 +24,7 @@
 						<width>214</width>
 						<height>240</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="posterfallback.png">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="blue" border="20">poster-mask.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
@@ -56,7 +56,7 @@
 						<width>214</width>
 						<height>240</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="posterfallback.png">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="red" border="20">poster-mask.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
@@ -93,7 +93,7 @@
 				<textureslidernib>ScrollBarNib.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>500</onleft>
-				<onright>2</onright>
+				<onright>9000</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(500)</visible>

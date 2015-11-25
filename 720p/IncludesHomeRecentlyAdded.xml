@@ -224,7 +224,7 @@
 					<texture>04.png</texture>
 				</control>
 					<control type="scrollbar" id="60">
-						<visible>Container(9000).HasFocus(4) | Container(9000).HasFocus(7) | Container(9000).HasFocus(10)</visible>
+						<visible>Container(9000).HasFocus(4) | Container(9000).HasFocus(7)</visible>
 						<left>600</left>
 						<top>15</top>
 						<width>25</width>
@@ -239,27 +239,74 @@
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
+			<control type="group">
+                <visible>Control.HasFocus(311) + Container(9000).HasFocus(2)</visible>
+                <control type="group">
+					<control type="image">
+                        <left>625</left>
+                        <top>270</top>
+                        <width>280</width>
+                        <height>64</height>
+                        <texture colordiffuse="ff9eb4ee" >EpisodesTop.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>630</left>
+                        <top>275</top>
+                        <width>270</width>
+                        <height>59</height>
+                        <texture diffuse="EpisodesTop.png">$INFO[Container(311).ListItem.Art(tvshow.banner)]</texture>
+                    </control>
+				</control>
+                <control type="group">
+					<control type="image">
+						<left>625</left>
+						<top>335</top>
+						<width>280</width>
+						<height>157</height>
+						<texture colordiffuse="ff9eb4ee" >EpisodesBottom.png</texture>
+					</control>
+					<control type="image">
+						<left>630</left>
+						<top>335</top>
+						<width>270</width>
+						<height>152</height>
+						<texture background="true" diffuse="EpisodesBottom.png">$INFO[Container(311).ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+				</control>
+            </control>
 			<control type="image">
-				<visible>Control.HasFocus(311) + !StringCompare(Container(311).listitem.label,get more...)</visible>
+				<visible>Control.HasFocus(311) + !StringCompare(Container(311).listitem.label,get more...) + [Container(9000).HasFocus(4) | Container(9000).HasFocus(7)]</visible>
 				<left>630</left>
-				<top>-20</top>
+				<top>-10</top>
 				<width>270</width>
-				<height>300</height>
+				<height>270</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" diffuse="poster-mask.png" border="5">$INFO[Container(311).ListItem.icon]</texture>
-				<bordertexture  border="20">ContentPanel.png</bordertexture>
-				<bordersize>10</bordersize>
+				<texture background="true" diffuse="poster-mask.png">$INFO[Container(311).ListItem.Icon]</texture>
+				<bordertexture colordiffuse="ff9eb4ee" border="20">poster-mask.png</bordertexture>
+				<bordersize>4</bordersize>
 			</control>
 			<control type="image">
-				<visible>Control.HasFocus(311) + Container(9000).HasFocus(2)</visible>
+				<visible>Control.HasFocus(311) + [Container(9000).HasFocus(9) | Container(9000).HasFocus(1)]</visible>
+				<left>675</left>
+				<top>270</top>
+				<width>180</width>
+				<height>270</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<texture background="true" diffuse="poster-mask.png">$INFO[Container(311).ListItem.Art(thumb)]</texture>
+				<bordertexture colordiffuse="ff9eb4ee" border="20">poster-mask.png</bordertexture>
+				<bordersize>4</bordersize>
+			</control>
+			<control type="image">
+				<visible>Control.HasFocus(311) + ![Container(9000).HasFocus(9) | Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(8) | Container(9000).HasFocus(4) | Container(9000).HasFocus(7)]</visible>
 				<left>630</left>
 				<top>270</top>
 				<width>270</width>
-				<height>300</height>
+				<height>270</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" diffuse="poster-mask.png" border="5">$INFO[Container(311).ListItem.Art(tvshow.poster)]</texture>
-				<bordertexture  border="20">ContentPanel.png</bordertexture>
-				<bordersize>10</bordersize>
+				<texture background="true" diffuse="poster-mask.png">$INFO[Container(311).ListItem.Icon]</texture>
+				<bordertexture colordiffuse="ff9eb4ee" border="20">poster-mask.png</bordertexture>
+				<bordersize>4</bordersize>
 			</control>
 			
 			<!--movies-->
@@ -537,7 +584,7 @@
                 <content target="video">$INFO[Skin.String(sourceshome)]</content>
             </control>
 
-            <!--FAVOURITES-->
+            <!--FAVOURITES>
 
             <control type="button" id="888" description="FakeButton">
                 <visible>Container(9000).HasFocus(10)</visible>
@@ -571,7 +618,7 @@
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
                 <content target="video">favourites://</content>
-            </control>
+            </control-->
 
             <!--weather-->
 
