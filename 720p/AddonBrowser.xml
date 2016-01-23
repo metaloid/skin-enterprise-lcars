@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<views>500,550</views>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 550 -->
@@ -13,7 +13,7 @@
 			<include>ThumbnailView</include>
 		</control>
 		<include>CommonPageCount</include>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		<control type="label">
 			<include>WindowTitleSide</include>
@@ -95,7 +95,7 @@
 					<include>ButtonCommonValues</include>
 					<label>24034</label>
 				</control>
-				<include>CommonNowPlaying_Controls</include>
+				
 				<control type="button" id="777">
 					<description>back</description>
 					<include>ButtonCommonValues</include>
@@ -112,17 +112,18 @@
 			
 		</control>
 		<include>Clock</include>
-		<control type="label">
+			<control type="textbox">
 			<description>Last updated label</description>
-			<right>20</right>
-			<top>550</top>
-			<height>60</height>
-			<width>200</width>
-			<label>[COLOR=blue]$LOCALIZE[31301][/COLOR] $INFO[Window.Property(Updated)]</label>
-			<align>left</align>
-			<aligny>top</aligny>
-			<font>font12</font>
-			<textcolor>white</textcolor>
-		</control>
+				<left>1055</left>
+				<top>645</top>
+				<width>200</width>
+				<height>30</height>
+				<font>font13</font>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>[COLOR=blue]$LOCALIZE[31301][/COLOR] $INFO[Window.Property(Updated)]</label>
+			</control>
 	</controls>
 </window>

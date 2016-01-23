@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-	<defaultcontrol always="true">450</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<left>0</left>
@@ -8,7 +8,16 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<include>ContentPanelBackgrounds</include>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>strech</aspectratio>
+			<texture>02.png</texture>
+		</control>
+		<include>CommonPageCount</include>
 			<control type="label">
 				<include>WindowTitleSide</include>
 				<label>$LOCALIZE[1036]</label>
@@ -33,7 +42,7 @@
 						<width>214</width>
 						<height>240</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
@@ -42,7 +51,7 @@
 						<top>240</top>
 						<width>200</width>
 						<height>25</height>
-						<font>font12</font>
+						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
@@ -56,6 +65,15 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+					<control type="image">
+						<visible>!StringCompare(listitem.label,get more...)</visible>
+						<left>10</left>
+						<top>10</top>
+						<width>40</width>
+						<height>26</height>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
+						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout height="276" width="216">
@@ -65,7 +83,7 @@
 						<width>214</width>
 						<height>240</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
@@ -74,8 +92,8 @@
 						<top>240</top>
 						<width>200</width>
 						<height>25</height>
-						<font>font12</font>
-						<textcolor>white</textcolor>
+						<font>font13</font>
+						<textcolor>blue</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -88,6 +106,15 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
+					<control type="image">
+						<visible>!StringCompare(listitem.label,get more...)</visible>
+						<left>10</left>
+						<top>10</top>
+						<width>40</width>
+						<height>26</height>
+						<texture>$VAR[MediaInfoOverlayVar]</texture>
+						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>

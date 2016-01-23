@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<views>50</views>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -374,7 +374,7 @@
 				<include>Window_OpenClose_Animation</include>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		<include>PVRSideBlade</include>
 		<include>Clock</include>

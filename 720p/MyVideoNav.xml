@@ -6,7 +6,7 @@
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -16,7 +16,7 @@
 			<include>ThumbnailView</include>
 		</control>
 		<include>CommonPageCount</include>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		
 			<control type="label">
@@ -120,7 +120,7 @@
 					<textoffsetx>7</textoffsetx>
 					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
-				<include>CommonNowPlaying_Controls</include>
+				
 				<control type="button" id="777">
 					<description>back</description>
 					<include>ButtonCommonValues</include>

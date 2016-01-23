@@ -4,6 +4,7 @@
     <allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
+		<include>wbg</include>
 		<control type="list" id="5000">
 				<right>20</right>
 				<top>150</top>

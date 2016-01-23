@@ -175,7 +175,7 @@
 					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 				</control>
 				<!-- Playback controls -->
-				<include>CommonNowPlaying_Controls</include>
+				
 				<control type="button" id="777">
 					<description>back</description>
 					<include>ButtonCommonValues</include>

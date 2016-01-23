@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		
 		<control type="group">
 			<control type="image">

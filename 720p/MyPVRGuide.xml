@@ -55,7 +55,7 @@
 			<include>PVRGuideViewNext</include>
 			<include>PVRGuideViewChannel</include>
 		</control>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<left>0</left>

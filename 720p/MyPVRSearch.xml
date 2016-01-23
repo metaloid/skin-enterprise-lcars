@@ -422,7 +422,7 @@
 				<label>([COLOR=blue]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<left>0</left>

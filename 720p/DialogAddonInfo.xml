@@ -10,7 +10,7 @@
 	<controls>
 		<control type="group">
 			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
-			<include>ContentPanelBackgrounds</include>
+			<include>CommonBackground</include>
 			<control type="image">
 				<left>70</left>
 				<top>70</top>
@@ -277,13 +277,18 @@
 				<itemgap>0</itemgap>
 				<control type="button" id="9">
 					<description>Configure Addon</description>
-					<label>24020</label>
 					<include>ButtonCommonValues</include>
+					<label>24020</label>
 				</control>
 				<control type="button" id="8">
 					<description>Update Addon button</description>
 					<include>ButtonCommonValues</include>
 					<label>24069</label>
+				</control>
+				<control type="radiobutton" id="13">
+					<description>Auto-update button</description>
+					<include>ButtonCommonValues</include>
+					<label>21340</label>
 				</control>
 				<control type="button" id="12">
 					<description>Launch Addon button</description>
@@ -299,11 +304,6 @@
 					<description>Enable/Disable Addon button</description>
 					<include>ButtonCommonValues</include>
 					<label>24021</label>
-				</control>
-				<control type="button" id="11">
-					<description>Rollback button</description>
-					<include>ButtonCommonValues</include>
-					<label>24048</label>
 				</control>
 				<control type="button" id="10">
 					<description>Changelog button</description>

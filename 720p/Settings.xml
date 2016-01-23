@@ -4,6 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
+		<include>wbg</include>
 		<control type="group">
 			<control type="list" id="9000">
 				<right>20</right>
@@ -134,18 +135,18 @@
 			</control>
 			<control type="textbox">
 				<description>Appearance Description</description>
-				<left>80</left>
-				<top>480</top>
-				<width>640</width>
-				<height>98</height>
+				<left>745</left>
+                <top>315</top>
+                <width>240</width>
+				<height>290</height>
 				<font>font13</font>
 				<label>$INFO[Container(9000).ListItem.Label2]</label>
-				<align>left</align>
+				<align>justify</align>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		
 		<control type="label">
 			<include>WindowTitleSide</include>
 			<label>$LOCALIZE[5] - $INFO[Container(9000).ListItem.Label]</label>

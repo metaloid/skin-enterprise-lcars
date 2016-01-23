@@ -4,6 +4,7 @@
     <allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
+		<include>wbg</include>
 		<control type="list" id="5000">
 				<right>20</right>
 				<top>150</top>
@@ -69,88 +70,104 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
+						<visible>!StringCompare(Window(Home).Property(NextAired.200.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.200.Weekday)]</label>
 						<label2>$INFO[Container(200).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="2">
+						<visible>!StringCompare(Window(Home).Property(NextAired.201.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.201.Weekday)]</label>
 						<label2>$INFO[Container(201).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="3">
+						<visible>!StringCompare(Window(Home).Property(NextAired.202.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.202.Weekday)]</label>
 						<label2>$INFO[Container(202).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="4">
+						<visible>!StringCompare(Window(Home).Property(NextAired.203.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.203.Weekday)]</label>
 						<label2>$INFO[Container(203).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="5">
+						<visible>!StringCompare(Window(Home).Property(NextAired.204.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.204.Weekday)]</label>
 						<label2>$INFO[Container(204).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="6">
+						<visible>!StringCompare(Window(Home).Property(NextAired.205.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.205.Weekday)]</label>
 						<label2>$INFO[Container(205).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="7">
+						<visible>!StringCompare(Window(Home).Property(NextAired.206.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.206.Weekday)]</label>
 						<label2>$INFO[Container(206).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
 					<item id="8">
+						<visible>!StringCompare(Window(Home).Property(NextAired.207.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.207.Wday)] $INFO[Window(Home).Property(NextAired.207.Date)]</label>
 						<label2>$INFO[Container(207).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="9">
+						<visible>!StringCompare(Window(Home).Property(NextAired.208.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.208.Wday)] $INFO[Window(Home).Property(NextAired.208.Date)]</label>
 						<label2>$INFO[Container(208).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="10">
+						<visible>!StringCompare(Window(Home).Property(NextAired.209.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.209.Wday)] $INFO[Window(Home).Property(NextAired.209.Date)]</label>
 						<label2>$INFO[Container(209).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="11">
+						<visible>!StringCompare(Window(Home).Property(NextAired.210.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.210.Wday)] $INFO[Window(Home).Property(NextAired.210.Date)]</label>
 						<label2>$INFO[Container(210).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="12">
+						<visible>!StringCompare(Window(Home).Property(NextAired.211.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.211.Wday)] $INFO[Window(Home).Property(NextAired.211.Date)]</label>
 						<label2>$INFO[Container(211).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="13">
+						<visible>!StringCompare(Window(Home).Property(NextAired.212.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.212.Wday)] $INFO[Window(Home).Property(NextAired.212.Date)]</label>
 						<label2>$INFO[Container(212).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="14">
+						<visible>!StringCompare(Window(Home).Property(NextAired.213.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.213.Wday)] $INFO[Window(Home).Property(NextAired.213.Date)]</label>
 						<label2>$INFO[Container(213).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="15">
+						<visible>!StringCompare(Window(Home).Property(NextAired.214.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.214.Wday)] $INFO[Window(Home).Property(NextAired.214.Date)]</label>
 						<label2>$INFO[Container(214).NumItems, (,)]</label2>
 						<onclick>noop</onclick>
 					</item>
 					<item id="16">
+						<visible>!StringCompare(Window(Home).Property(NextAired.215.Wday),)</visible>
 						<label>$INFO[Window(home).Property(NextAired.215.Wday)] $INFO[Window(Home).Property(NextAired.215.Date)]</label>
 						<label2>$INFO[Container(215).NumItems, (,)]</label2>
 						<onclick>noop</onclick>

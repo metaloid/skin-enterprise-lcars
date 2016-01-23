@@ -4,14 +4,14 @@
 	<allowoverlay>no</allowoverlay>
 	<views>500</views>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		
 		<control type="group">
 			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
 		</control>
 		<include>CommonPageCount</include>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		
 			<control type="label">
@@ -77,7 +77,7 @@
 					<include>ButtonCommonValues</include>
 					<label>13319</label>
 				</control>
-				<include>CommonNowPlaying_Controls</include>
+				
 				<control type="button" id="777">
 					<description>back</description>
 					<include>ButtonCommonValues</include>

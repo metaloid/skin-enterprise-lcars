@@ -21,12 +21,9 @@
 		<value condition="!ListItem.IsStereoscopic">$INFO[ListItem.VideoResolution,flagging/lists/,.png]</value>
 		<value>flagging/lists/3D.png</value>
 	</variable>
-	<variable name="BannerThumb">
-		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
 	<variable name="PosterThumb">
 		<value condition="!IsEmpty(ListItem.Art(fanart)) + [Container.Content(Movies) | container.content(TvShows) | container.content(Artists)]">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="[Container(9000).HasFocus(1) | Container(9000).HasFocus(3)]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -268,19 +265,6 @@
 		<font>font16</font>
 		<pulseonselect>false</pulseonselect>
 	</include>
-	<include name="HomeSubMenuCommonValues">
-		<left>0</left>
-		<top>0</top>
-		<width>1280</width>
-		<height>35</height>
-		<align>center</align>
-		<onup>9000</onup>
-		<ondown>9002</ondown>
-		<itemgap>0</itemgap>
-		<orientation>Horizontal</orientation>
-		<animation effect="slide" start="0,-40" end="0,0" delay="150" time="150" tween="quadratic" easing="out">Visible</animation>
-		<animation effect="slide" start="0,0" end="0,-40" time="150" tween="quadratic" easing="out">Hidden</animation>
-	</include>
 	<include name="SideBladeLeft">
 		<animation effect="slide" start="0,0" end="250,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-300,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
@@ -410,30 +394,32 @@
 	</include>
 	<include name="CommonPageCount">
 		<control type="group">
-			<control type="label">
+			<left>990</left>
+            <top>610</top>
+			<control type="textbox">
 				<description>Page Count Label</description>
-				<left>760</left>
-				<top>73r</top>
+				<left>65</left>
+				<top>5</top>
 				<width>200</width>
-				<height>20</height>
+				<height>30</height>
 				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container.NumItems,([COLOR=blue],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=blue]]$INFO[Container.NumPages,/,[/COLOR])]</label>
 				<include>Window_OpenClose_Animation</include>
 			</control>
-			<control type="label">
+			<control type="textbox">
 				<description>Container Duration Label</description>
-				<left>760</left>
-				<top>52r</top>
+				<left>65</left>
+				<top>35</top>
 				<width>200</width>
-				<height>20</height>
+				<height>30</height>
 				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<scroll>false</scroll>
-				<align>right</align>
+				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=blue],[/COLOR])]</label>
 				<include>Window_OpenClose_Animation</include>
@@ -931,30 +917,18 @@
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
-		<control type="group">
-			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
-			<left>335</left>
-			<top>270</top>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>70</width>
-				<height>70</height>
-				<aspectratio aligny="bottom">strech</aspectratio>
-				<texture background="true">contentpanel.png</texture>
-			</control>
 			<control type="label">
-				<left>5</left>
-				<top>5</top>
-				<width>60</width>
+			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+				<left>850</left>
+				<top>80</top>
+				<width>100</width>
 				<height>60</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.SortLetter]</label>
 				<textcolor>white</textcolor>
-				<font>font28_title</font>
+				<font>WeatherTemp</font>
 			</control>
-		</control>
 	</include>
 	<include name="Clock">
 		<control type="label">
@@ -970,114 +944,6 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 		</control>
-	</include>
-	<include name="HomeAddonsCommonLayout">
-		<include>Window_OpenClose_Animation</include>
-		<animation type="Visible">
-			<effect type="slide" start="0,30" end="0,0" delay="150" easing="out" tween="quadratic" time="150" />
-			<effect type="fade" start="0" end="100" delay="150" time="150" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="225" />
-			<effect type="fade" start="100" end="0" time="225" />
-		</animation>
-		<hitrect x="0" y="530" w="1280" h="120" />
-		<left>0</left>
-		<top>190r</top>
-		<width>1280</width>
-		<height>200</height>
-		<pagecontrol>-</pagecontrol>
-		<scrolltime>300</scrolltime>
-		<focusposition>3</focusposition>
-		<movement>2</movement>
-		<orientation>Horizontal</orientation>
-		<itemlayout height="200" width="182">
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>180</width>
-				<height>120</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="image">
-				<left>5</left>
-				<top>120</top>
-				<width>170</width>
-				<height>110</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<texture diffuse="diffuse_mirror2.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="label">
-				<left>1</left>
-				<top>125</top>
-				<width>180</width>
-				<height>20</height>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-			</control>
-		</itemlayout>
-		<focusedlayout height="200" width="182">
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>180</width>
-				<height>120</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>3</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>!ControlGroup(9002).HasFocus</visible>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>180</width>
-				<height>120</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<bordertexture border="5">folder-focus.png</bordertexture>
-				<bordersize>3</bordersize>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<visible>ControlGroup(9002).HasFocus</visible>
-			</control>
-			<control type="image">
-				<left>5</left>
-				<top>120</top>
-				<width>170</width>
-				<height>110</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<texture diffuse="diffuse_mirror2.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="label">
-				<left>1</left>
-				<top>125</top>
-				<width>180</width>
-				<height>20</height>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>ControlGroup(9002).HasFocus</visible>
-			</control>
-			<control type="label">
-				<left>1</left>
-				<top>125</top>
-				<width>180</width>
-				<height>20</height>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>!ControlGroup(9002).HasFocus</visible>
-			</control>
-		</focusedlayout>
 	</include>
 	<include name="TVNextAiredListCommonLayout">
 		<itemlayout height="150" width="280">

@@ -3,8 +3,8 @@
 	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
-		
+		<include>CommonBackground</include>
+		<include>wbg</include>
 		<control type="group">
 			<control type="image">
 				<left>90</left>
@@ -84,9 +84,9 @@
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>90</left>
-				<top>80</top>
-				<width>750</width>
-				<height>430</height>
+				<top>50</top>
+				<width>645</width>
+				<height>530</height>
 				<itemgap>-1</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onleft>3</onleft>
@@ -94,7 +94,7 @@
 				<onup>5</onup>
 				<ondown>5</ondown>
 			</control>
-			<control type="scrollbar" id="60">
+			<!--control type="scrollbar" id="60">
 				<left>860</left>
 				<top>90</top>
 				<width>25</width>
@@ -108,13 +108,13 @@
 				<onright>3</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-			</control>
+			</control-->
 			<control type="textbox" id="6">
 				<description>description area</description>
-				<left>97</left>
-				<top>520</top>
-				<width>736</width>
-				<height>50</height>
+				<left>745</left>
+                <top>315</top>
+                <width>240</width>
+				<height>290</height>
 				<font>font13</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
@@ -203,7 +203,7 @@
 			<font>-</font>
 			<visible>false</visible>
 		</control>
-		<include>CommonNowPlaying</include>
+		
 		<control type="label">
 			<include>WindowTitleSide</include>
 			<label>$LOCALIZE[5][COLOR=blue] - [/COLOR]$INFO[Control.GetLabel(2)]</label>

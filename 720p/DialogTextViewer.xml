@@ -3,7 +3,7 @@
 	<defaultcontrol>777</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>ContentPanelBackgrounds</include>
+			<include>CommonBackground</include>
 			<control type="group">
 				<left>90</left>
 				<top>50</top>

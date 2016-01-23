@@ -3,278 +3,37 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<onload condition="!Skin.HasSetting(Hide.Favourites)">RunScript(script.favourites)</onload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<include>HomeRecentlyAddedInfo</include>
-		<control type="image">
-			<left>715</left>
-			<top>35</top>
-			<width>280</width>
-			<height>335</height>
-			<texture border="5">ContentPanel.png</texture>
-			<visible>[Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)]  | Player.HasAudio</visible>
-		</control>
-		<control type="image">
-			<left>720</left>
-			<top>40</top>
-			<width>270</width>
-			<height>152</height>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-			<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-			<visible>Player.HasAudio</visible>
-		</control>
-		<control type="videowindow">
-			<left>720</left>
-			<top>40</top>
-			<width>270</width>
-			<height>152</height>
-			<visible>Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
-		</control>
-		<!-- onscreen Info -->
-		<control type="group">
-			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<control type="textbox">
-				<left>725</left>
-				<top>200</top>
-				<width>250</width>
-				<height>40</height>
-				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
+		<include>wbg</include>
+		<control type="grouplist">
+			<left>100</left>
+            <top>630</top>
+            <width>1000</width>
+			<height>30</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>10</itemgap>
+			<control type="label">
+				<include>WindowTitleCommons2</include>
+				<label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342] ]</label>
+				<visible>!Skin.HasSetting(HomeMenuNoMovieButton)</visible>
 			</control>
-			<control type="textbox">
-				<left>725</left>
-				<top>240</top>
-				<width>250</width>
-				<height>40</height>
-				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasAudio</visible>
+			<control type="label">
+				<include>WindowTitleCommons2</include>
+				<label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343] ]</label>
+				<visible>!Skin.HasSetting(HomeMenuNoTVShowButton)</visible>
 			</control>
-			<control type="textbox">
-				<left>725</left>
-				<top>240</top>
-				<width>250</width>
-				<height>40</height>
-				<label>$INFO[VideoPlayer.Studio]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
-			</control>
-			<control type="textbox">
-				<left>725</left>
-				<top>240</top>
-				<width>250</width>
-				<height>40</height>
-				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
-			</control>
-			<control type="textbox">
-				<left>725</left>
-				<top>240</top>
-				<width>250</width>
-				<height>40</height>
-				<label>$INFO[VideoPlayer.Artist]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
-			</control>
-			<control type="textbox">
-				<left>725</left>
-				<top>240</top>
-				<width>250</width>
-				<height>40</height>
-				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+			<control type="label">
+				<include>WindowTitleCommons2</include>
+				<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134] ]</label>
+				<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 			</control>
 		</control>
-		<control type="group">
-			<visible>Player.HasMedia</visible>
-			<description>Controls for currently playing media</description>
-			<left>740</left>
-			<top>330</top>
-			<control type="group" id="600">
-				<left>10</left>
-				<onleft>888</onleft>
-				<onright>9000</onright>
-				<defaultcontrol>-</defaultcontrol>
-				<enable>Player.HasMedia</enable>
-				<control type="group">
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<control type="button" id="601">
-						<left>10</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDPrevTrackFO.png</texturefocus>
-						<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-						<onleft>888</onleft>
-						<onright>602</onright>
-						<onclick>PlayerControl(Previous)</onclick>
-					</control>
-					<control type="button" id="602">
-						<left>40</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDRewindFO.png</texturefocus>
-						<texturenofocus>OSDRewindNF.png</texturenofocus>
-						<onleft>601</onleft>
-						<onright>603</onright>
-						<onclick>PlayerControl(Rewind)</onclick>
-					</control>
-					<control type="togglebutton" id="603">
-						<left>70</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDPauseFO.png</texturefocus>
-						<texturenofocus>OSDPauseNF.png</texturenofocus>
-						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus>OSDPlayFO.png</alttexturefocus>
-						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-						<onleft>602</onleft>
-						<onright>604</onright>
-						<onclick>PlayerControl(Play)</onclick>
-					</control>
-					<control type="button" id="604">
-						<left>100</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDStopFO.png</texturefocus>
-						<texturenofocus>OSDStopNF.png</texturenofocus>
-						<onleft>603</onleft>
-						<onright>605</onright>
-						<onclick>down</onclick>
-						<onclick>PlayerControl(Stop)</onclick>
-					</control>
-					<control type="button" id="605">
-						<left>130</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDForwardFO.png</texturefocus>
-						<texturenofocus>OSDForwardNF.png</texturenofocus>
-						<onleft>604</onleft>
-						<onright>606</onright>
-						<onclick>PlayerControl(Forward)</onclick>
-					</control>
-					<control type="button" id="606">
-						<left>160</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDNextTrackFO.png</texturefocus>
-						<texturenofocus>OSDNextTrackNF.png</texturenofocus>
-						<onleft>605</onleft>
-						<onright>9000</onright>
-						<onclick>PlayerControl(Next)</onclick>
-					</control>
-				</control>
-				<control type="group" id="600">
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<control type="button" id="601">
-						<left>10</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDChannelUPFO.png</texturefocus>
-						<texturenofocus>OSDChannelUPNF.png</texturenofocus>
-						<onleft>888</onleft>
-						<onright>602</onright>
-						<onclick>ChannelDown</onclick>
-					</control>
-					<control type="button" id="602">
-						<left>40</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDChannelDownFO.png</texturefocus>
-						<texturenofocus>OSDChannelDownNF.png</texturenofocus>
-						<onleft>601</onleft>
-						<onright>603</onright>
-						<onclick>ChannelUp</onclick>
-					</control>
-					<control type="button" id="603">
-						<left>70</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDStopFO.png</texturefocus>
-						<texturenofocus>OSDStopNF.png</texturenofocus>
-						<onleft>602</onleft>
-						<onright>604</onright>
-						<onclick>down</onclick>
-						<onclick>PlayerControl(Stop)</onclick>
-					</control>
-					<control type="togglebutton" id="604">
-						<left>100</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDPauseFO.png</texturefocus>
-						<texturenofocus>OSDPauseNF.png</texturenofocus>
-						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus>OSDPlayFO.png</alttexturefocus>
-						<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-						<onleft>603</onleft>
-						<onright>606</onright>
-						<onclick>PlayerControl(Play)</onclick>
-						<enable>Player.PauseEnabled</enable>
-						<animation effect="fade" start="100" end="30" time="75" condition="!Player.PauseEnabled">Conditional</animation>
-					</control>
-					<control type="button" id="606">
-						<left>160</left>
-						<top>2</top>
-						<width>30</width>
-						<height>30</height>
-						<label>-</label>
-						<texturefocus>OSDRecordOffFO.png</texturefocus>
-						<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-						<onleft>604</onleft>
-						<onright>9000</onright>
-						<onclick>PlayerControl(record)</onclick>
-					</control>
-				</control>
-			</control>
-		</control>
+		
 		
 		<control type="group">
 			<top>95</top>
@@ -331,14 +90,14 @@
 					</control>
 				</focusedlayout>
 				<content>
-				<item id="13">
+				<!--item id="13">
 					<label>31953</label>
 					<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
 					<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
 					<icon>-</icon>
 					<thumb>-</thumb>
 					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-				</item>
+				</item-->
 				<!--MOVIES-->
                 <item id="1">
                     <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
@@ -392,12 +151,12 @@
                 <item id="7">
                     <label>20094</label>
                     <onclick>noop</onclick>
-					<visible>Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+					<!--visible>Skin.HasSetting(HomeMenuNoVideosButton)</visible-->
                 </item>
                 <!--WEATHER-->
                 <item id="8">
                     <visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-                    <label>$INFO[Weather.Temperature]</label>
+                    <label>31950</label>
                     <onclick>ActivateWindow(MyWeather)</onclick>
                 </item>
                 <!--NEXT AIR-->

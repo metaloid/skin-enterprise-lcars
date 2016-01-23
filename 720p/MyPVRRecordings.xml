@@ -296,7 +296,7 @@
 					<info>PVR.backenddiskspaceprogr</info><visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible></control>
 			</control>
 		</control>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<left>0</left>

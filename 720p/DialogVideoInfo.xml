@@ -6,7 +6,7 @@
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<include>ContentPanelBackgrounds</include>
+			<include>CommonBackground</include>
 		
 			<control type="group">
 				<animation effect="fade" delay="300" start="0" end="100" time="150">WindowOpen</animation>
@@ -198,6 +198,12 @@
 								<visible>!IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
+								<label>$LOCALIZE[38018]:</label>
+								<label2>$INFO[ListItem.Userrating]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Userrating)</visible>
+							</item>
+							<item>
 								<label>$LOCALIZE[563]:</label>
 								<label2>$INFO[ListItem.RatingAndVotes]</label2>
 								<onclick>noop</onclick>
@@ -354,6 +360,12 @@
 								<label2>$INFO[ListItem.Year]</label2>
 								<onclick>noop</onclick>
 								<visible>!IsEmpty(ListItem.Year)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[38018]:</label>
+								<label2>$INFO[ListItem.Userrating]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Userrating)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[563]:</label>
@@ -525,6 +537,12 @@
 								<visible>!IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
+								<label>$LOCALIZE[38018]:</label>
+								<label2>$INFO[ListItem.Userrating]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Userrating)</visible>
+							</item>
+							<item>
 								<label>$LOCALIZE[563]:</label>
 								<label2>$INFO[ListItem.RatingAndVotes]</label2>
 								<onclick>noop</onclick>
@@ -686,6 +704,12 @@
 								<label2>$INFO[ListItem.Duration] $LOCALIZE[12391]</label2>
 								<onclick>noop</onclick>
 								<visible>!IsEmpty(ListItem.Duration)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[38018]:</label>
+								<label2>$INFO[ListItem.Userrating]</label2>
+								<onclick>noop</onclick>
+								<visible>!IsEmpty(ListItem.Userrating)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[15311]</label>
@@ -868,6 +892,19 @@
 						<include>ButtonCommonValues</include>
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
+					</control>
+					<control type="button" id="15">
+						<description>Play Trailer Windowed</description>
+						<include>ButtonCommonValues</include>
+						<label>20410</label>
+						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
+						<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer)</visible>
+					</control>
+					<control type="button" id="7">
+						<description>Set my rating</description>
+						<include>ButtonCommonValues</include>
+						<label>38023</label>
+						<visible>Control.IsEnabled(7)</visible>
 					</control>
 					<control type="button" id="100">
 						<description>Fetch TvTunes stuff</description>

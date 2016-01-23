@@ -5,7 +5,7 @@
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<views>50,503</views>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 50 -->
@@ -14,7 +14,7 @@
 			<include>FullWidthList</include>
 		</control>
 		<include>CommonPageCount</include>
-		<include>CommonNowPlaying</include>
+		
 		<include>MainWindowMouseButtons</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
@@ -106,7 +106,7 @@
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 				</control>
-				<include>CommonNowPlaying_Controls</include>
+				
 			</control>
 		</control>
 		<include>Clock</include>

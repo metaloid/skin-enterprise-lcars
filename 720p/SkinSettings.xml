@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<include>CommonBackground</include>
+		<include>wbg</include>
 		<control type="group">
 			<control type="list" id="9000">
 				<right>20</right>
@@ -232,9 +233,9 @@
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>
 					<left>0</left>
-					<top>30</top>
+					<top>0</top>
 					<width>580</width>
-					<height>451</height>
+					<height>530</height>
 					<pagecontrol>-</pagecontrol>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
@@ -250,7 +251,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="221">
+					<!--control type="radiobutton" id="221">
 						<description>Hide Videos Button</description>
 						<width>580</width>
 						<height>40</height>
@@ -262,7 +263,7 @@
 						<label>$LOCALIZE[31111] - $LOCALIZE[3]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
-					</control>
+					</control-->
 					<control type="radiobutton" id="222">
 						<description>Hide Movies Button</description>
 						<width>580</width>
@@ -330,6 +331,84 @@
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 					</control>
+					<control type="button" id="411">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24001] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton1))][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.SetAddon(HomeVideosButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="412">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24001] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton2))][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.SetAddon(HomeVideosButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="413">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24001] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton3))][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.SetAddon(HomeVideosButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="414">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24001] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton4))][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.SetAddon(HomeVideosButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="415">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24001] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton5))][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="416">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24001] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton6))][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>Skin.SetAddon(HomeVideosButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
 					<control type="radiobutton" id="227">
 						<description>Hide favourites Button</description>
 						<width>580</width>
@@ -342,6 +421,84 @@
 						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoFavoritesButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoFavoritesButton)</selected>
+					</control>
+					<control type="button" id="511">
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[1036] [B]1[/B]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeFav.1.Label)][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>RunScript(script.favourites,property=HomeFav.1)</onclick>
+					</control>
+					<control type="button" id="512">
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[1036] [B]2[/B]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeFav.2.Label)][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>RunScript(script.favourites,property=HomeFav.2)</onclick>
+					</control>
+					<control type="button" id="513">
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[1036] [B]3[/B]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeFav.3.Label)][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>RunScript(script.favourites,property=HomeFav.3)</onclick>
+					</control>
+					<control type="button" id="514">
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[1036] [B]4[/B]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeFav.4.Label)][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>RunScript(script.favourites,property=HomeFav.4)</onclick>
+					</control>
+					<control type="button" id="515">
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[1036] [B]5[/B]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeFav.5.Label)][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>RunScript(script.favourites,property=HomeFav.5)</onclick>
+					</control>
+					<control type="button" id="516">
+						<visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[1036] [B]6[/B]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(HomeFav.6.Label)][/COLOR]</label2>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<onclick>RunScript(script.favourites,property=HomeFav.6)</onclick>
 					</control>
 					<control type="radiobutton" id="228">
 						<description>Hide Weather Button</description>

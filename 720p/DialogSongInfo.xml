@@ -230,39 +230,28 @@
 				<itemgap>0</itemgap>
 				<control type="button" id="10">
 					<description>Ok button</description>
-					<label>186</label>
 					<include>ButtonCommonValues</include>
+					<label>186</label>
 				</control>
 				<control type="button" id="11">
 					<description>Cancel button</description>
-					<label>222</label>
 					<include>ButtonCommonValues</include>
+					<label>222</label>
 				</control>
 				<control type="button" id="12">
 					<description>Album Info button</description>
-					<label>10523</label>
 					<include>ButtonCommonValues</include>
+					<label>10523</label>
 				</control>
 				<control type="button" id="13">
 					<description>Get Thumb button</description>
-					<label>13405</label>
 					<include>ButtonCommonValues</include>
+					<label>13405</label>
 				</control>
-				<control type="button" id="15">
-					<description>Increase Rating</description>
-					<width>33</width>
-					<height>22</height>
-					<onclick>IncreaseRating</onclick>
-					<texturenofocus>scroll-up.png</texturenofocus>
-					<texturefocus>scroll-up-focus.png</texturefocus>
-				</control>
-				<control type="button" id="14">
-					<description>Decrease Rating</description>
-					<width>33</width>
-					<height>22</height>
-					<onclick>DecreaseRating</onclick>
-					<texturenofocus>scroll-down.png</texturenofocus>
-					<texturefocus>scroll-down-focus.png</texturefocus>
+				<control type="button" id="7">
+					<description>Set my rating</description>
+					<include>ButtonCommonValues</include>
+					<label>38023</label>
 				</control>
 					
 			</control>

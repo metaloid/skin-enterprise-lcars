@@ -3,7 +3,15 @@
 	<defaultcontrol>20</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>strech</aspectratio>
+			<texture>02.png</texture>
+		</control>
 		<control type="label">
 			<include>WindowTitleSide</include>
 			<label>$LOCALIZE[7]</label>

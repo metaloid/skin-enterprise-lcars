@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<views>500,550</views>
 	<controls>
-		<include>ContentPanelBackgrounds</include>
+		<include>CommonBackground</include>
 		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -14,7 +14,7 @@
 			<include>ThumbnailView</include>
 		</control>
 		<include>CommonPageCount</include>
-		<include>CommonNowPlaying</include>
+		
 		<include>ScrollOffsetLabel</include>
 			<control type="label">
 				<include>WindowTitleSide</include>
