@@ -111,13 +111,11 @@
 				</control>
 				<control type="togglebutton" id="20">
 					<description>Update library</description>
-					<textwidth>190</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>653</label>
 					<altlabel>13353</altlabel>
 					<alttexturefocus>-</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
-					<textoffsetx>7</textoffsetx>
 					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
 				

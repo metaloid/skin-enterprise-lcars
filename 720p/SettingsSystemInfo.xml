@@ -4,16 +4,8 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>CommonBackground</include>
+		<include>wbg</include>
 		<control type="group">
-			<control type="image">
-				<left>90</left>
-				<top>65</top>
-				<width>620</width>
-				<height>480</height>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>33ffffff</colordiffuse>
-				<texture background="true">04.png</texture>
-			</control>
 			<control type="grouplist" id="9000">
 				<right>20</right>
 				<top>95</top>

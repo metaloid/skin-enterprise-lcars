@@ -7,17 +7,26 @@
 		<top>0</top>
 	</coordinates>
 	<controls>
+		<include>CommonBackground1</include>
 		<control type="group">
-		<control type="image">
-			<description>Normal Default Background Image</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>strech</aspectratio>
-			<texture>02.png</texture>
+		<control type="group">
+			<left>990</left>
+            <top>610</top>
+			<control type="textbox">
+				<description>Page Count Label</description>
+				<left>65</left>
+				<top>5</top>
+				<width>200</width>
+				<height>30</height>
+				<font>font13</font>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>([COLOR=blue]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+				<include>Window_OpenClose_Animation</include>
+			</control>
 		</control>
-		<include>CommonPageCount</include>
 			<control type="label">
 				<include>WindowTitleSide</include>
 				<label>$LOCALIZE[1036]</label>

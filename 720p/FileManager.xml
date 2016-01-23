@@ -3,15 +3,8 @@
 	<defaultcontrol>20</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="image">
-			<description>Normal Default Background Image</description>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>strech</aspectratio>
-			<texture>02.png</texture>
-		</control>
+		<include>CommonBackground1</include>
+		<include>wbg</include>
 		<control type="label">
 			<include>WindowTitleSide</include>
 			<label>$LOCALIZE[7]</label>
@@ -23,7 +16,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>430</width>
-				<height>520</height>
+				<height>620</height>
 				<texture border="20">ContentPanel.png</texture>
 			</control>
 			<control type="image">
@@ -66,7 +59,7 @@
 				<left>10</left>
 				<top>110</top>
 				<width>25</width>
-				<height>391</height>
+				<height>491</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -83,7 +76,7 @@
 				<left>40</left>
 				<top>110</top>
 				<width>350</width>
-				<height>391</height>
+				<height>491</height>
 				<onleft>30</onleft>
 				<onright>21</onright>
 				<onup>20</onup>
@@ -182,7 +175,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>430</width>
-				<height>520</height>
+				<height>620</height>
 				<texture border="20">ContentPanel.png</texture>
 			</control>
 			<control type="image">
@@ -225,7 +218,7 @@
 				<left>375</left>
 				<top>110</top>
 				<width>25</width>
-				<height>391</height>
+				<height>491</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -242,7 +235,7 @@
 				<left>30</left>
 				<top>110</top>
 				<width>350</width>
-				<height>391</height>
+				<height>491</height>
 				<onleft>20</onleft>
 				<onright>31</onright>
 				<onup>21</onup>

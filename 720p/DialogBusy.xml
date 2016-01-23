@@ -9,32 +9,35 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<left>380</left>
-            <top>630</top>
+			<left>400</left>
+            <top>80r</top>
             <control type="image">
 				<description>background image</description>
 				<left>0</left>
 				<top>0</top>
 				<width>270</width>
-				<height>60</height>
+				<height>50</height>
 				<texture  border="15">ContentPanel.png</texture>
 			</control>
-			<control type="image">
-				<description>Busy animation</description>
+			<control type="label" id="1" description="Progress label">
+				<visible>IntegerGreaterThan(Control.GetLabel(10), 0)</visible>
 				<left>20</left>
 				<top>13</top>
-				<width>32</width>
+				<width>230</width>
 				<height>32</height>
-				<texture>spaceatom.gif</texture>
-				<aspectratio>keep</aspectratio>
+				<align>center</align>
+				<textcolor>white</textcolor>
+				<font>font12</font>
+				<label>$INFO[Control.GetLabel(10), ,%] STANDING BY...</label>
 			</control>
 			<control type="label">
 				<description>Busy label</description>
-				<left>60</left>
-				<top>14</top>
-				<width>180</width>
+				<visible>!IntegerGreaterThan(Control.GetLabel(10), 0)</visible>
+				<left>20</left>
+				<top>13</top>
+				<width>230</width>
 				<height>32</height>
-				<align>left</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>STANDING BY...</label>
 				<font>font12</font>
@@ -45,6 +48,10 @@
 				<top>42</top>
 				<width>220</width>
 				<height>8</height>
+		        <texturebg>-</texturebg>
+				<midtexture>-</midtexture>
+				<righttexture>-</righttexture>
+				<lefttexture>-</lefttexture>
 			</control>
 		</control>
 	</controls>

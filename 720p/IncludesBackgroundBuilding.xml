@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="CommonBackground1">
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>strech</aspectratio>
+			<texture>03.png</texture>
+		</control>
+			<control type="image">
+				<left>90</left>
+				<top>65</top>
+				<width>620</width>
+				<height>480</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>22ffffff</colordiffuse>
+				<texture background="true">04.png</texture>
+			</control>
+		
+	</include>
 	<include name="CommonBackground">
 		<control type="image">
 			<description>Normal Default Background Image</description>
@@ -10,6 +31,15 @@
 			<aspectratio>strech</aspectratio>
 			<texture>03.png</texture>
 		</control>
+			<control type="image">
+				<left>90</left>
+				<top>65</top>
+				<width>620</width>
+				<height>480</height>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>22ffffff</colordiffuse>
+				<texture background="true">04.png</texture>
+			</control>
 		<control type="image">
 			<left>725</left>
 			<top>35</top>

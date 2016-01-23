@@ -247,9 +247,25 @@
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<align>left</align>
+		<aligny>center</aligny>
 		<textwidth>190</textwidth>
 		<texturefocus>-</texturefocus>
 		<texturenofocus>-</texturenofocus>
+		<font>font16</font>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="ButtonHomeValues">
+		<width>250</width>
+		<height>35</height>
+		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>7</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textwidth>240</textwidth>
+		<texturefocus colordiffuse="red">white.png</texturefocus>
+		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 		<font>font16</font>
 		<pulseonselect>false</pulseonselect>
 	</include>

@@ -10,6 +10,7 @@
 		<include>HomeRecentlyAddedInfo</include>
 		<include>wbg</include>
 		<control type="grouplist">
+            <visible>!Skin.HasSetting(HomeMenuNodata)</visible>
 			<left>100</left>
             <top>630</top>
             <width>1000</width>

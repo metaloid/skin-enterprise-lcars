@@ -8,9 +8,12 @@
 		<!--MUSIC-->
 		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[359]</value>
 		<!--ADDONS-->
-		<value condition="Container(9000).HasFocus(4)">$INFO[Container(9000).ListItem.Label]</value>
+		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/video/)">$LOCALIZE[1037]</value>
+		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/audio/)">$LOCALIZE[1038]</value>
+		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/executable/)">$LOCALIZE[1043]</value>
 		<!--MEDIA SOURCE-->
-		<value condition="Container(9000).HasFocus(7)">$INFO[Container(9000).ListItem.Label]</value>
+		<value condition="Container(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://music/)">$INFO[Container(9000).ListItem.Label] $LOCALIZE[292]</value>
+		<value condition="Container(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://video/)">$INFO[Container(9000).ListItem.Label] $LOCALIZE[157]</value>
 		
 		<value condition="Container(9000).HasFocus(8)">$INFO[Window(Weather).Property(Location)]    $INFO[Container(9000).ListItem.Label]    $INFO[Window(Weather).Property(Current.Condition)]</value>
 		<value condition="Container(9000).HasFocus(9)">$INFO[Container(9000).ListItem.Label]    $INFO[Window(Home).Property(NextAired.Total),, ACTIVE TV SHOW]    $INFO[Window(Home).Property(NextAired.TodayTotal),  , AIRED TODAY ]</value>
@@ -19,8 +22,8 @@
 	</variable>
 	<variable name="updlibrary">
 		<value condition="library.isscanning">$LOCALIZE[13353]</value>
-		<value condition="StringCompare(Skin.String(sourceshome),sources://music/)">$LOCALIZE[653][CR]$LOCALIZE[292]</value>
-		<value>$LOCALIZE[653][CR]$LOCALIZE[157]</value>
+		<value condition="StringCompare(Skin.String(sourceshome),sources://music/)">$LOCALIZE[653] $LOCALIZE[292]</value>
+		<value>$LOCALIZE[653] $LOCALIZE[157]</value>
 	</variable>
 			<include name="homelayout">
 				<itemlayout height="180" width="300">
@@ -133,27 +136,7 @@
 			<control type="group">
 				<left>90</left>
 				<top>50</top>
-				<control type="image">
-					<visible>Control.IsVisible(311)</visible>
-					<left>0</left>
-					<top>15</top>
-					<width>620</width>
-					<height>480</height>
-					<aspectratio>keep</aspectratio>
-					<texture>04.png</texture>
-					<colordiffuse>22ffffff</colordiffuse>
-				</control>
-				<control type="image">
-					<visible>!Control.IsVisible(311)</visible>
-					<left>0</left>
-					<top>15</top>
-					<width>620</width>
-					<aspectratio>keep</aspectratio>
-					<height>480</height>
-					<colordiffuse>88ffffff</colordiffuse>
-					<texture>04.png</texture>
-				</control>
-					<control type="scrollbar" id="60">
+					<!--control type="scrollbar" id="60">
 						<visible>Container(9000).HasFocus(4) | Container(9000).HasFocus(7)</visible>
 						<left>600</left>
 						<top>15</top>
@@ -168,7 +151,7 @@
 						<onright>888</onright>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
-					</control>
+					</control-->
 				<control type="group">
 					<left>625</left>
                     <top>270</top>
@@ -321,22 +304,25 @@
                 <onright>603</onright>
                 <top>325</top>
                 <left>650</left>
-                <width>189</width>
+                <width>289</width>
                 <height>300</height>
                 <itemgap>10</itemgap>
                 <control type="button" id="500">
-                    <label>157</label>
-                    <include>ButtonCommonValues</include>
+                    <label>VIDEO ADDONS</label>
+                    <include>ButtonHomeValues</include>
+					<onfocus>Skin.SetString(addonshome,addons://sources/video/)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
                 <control type="button" id="501">
-                    <label>292</label>
-                    <include>ButtonCommonValues</include>
+                    <label>AUDIO ADDONS</label>
+                    <include>ButtonHomeValues</include>
+					<onfocus>Skin.SetString(addonshome,addons://sources/audio/)</onfocus>
                     <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
                 <control type="button" id="502">
-                    <label>350</label>
-                    <include>ButtonCommonValues</include>
+                    <label>Programs ADDONS</label>
+                    <include>ButtonHomeValues</include>
+					<onfocus>Skin.SetString(addonshome,addons://sources/executable/)</onfocus>
                     <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
                     <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
                 </control>
@@ -354,45 +340,10 @@
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-                <content target="video">
-		<item>
-			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton1))]</label>
-			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton1)])</onclick>
-			<thumb>$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</thumb>
-			<visible>!IsEmpty(Skin.String(HomeVideosButton1))</visible>
-		</item>
-		<item>
-			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton2))]</label>
-			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton2)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</icon>
-			<thumb>-</thumb>
-			<visible>!IsEmpty(Skin.String(HomeVideosButton2))</visible>
-		</item>
-		<item>
-			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton3))]</label>
-			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton3)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</icon>
-			<thumb>-</thumb>
-			<visible>!IsEmpty(Skin.String(HomeVideosButton3))</visible>
-		</item>
-		<item>
-			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton4))]</label>
-			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton4)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</icon>
-			<thumb>-</thumb>
-			<visible>!IsEmpty(Skin.String(HomeVideosButton4))</visible>
-		</item>
-		<item>
-			<label>$INFO[system.addontitle(Skin.String(HomeVideosButton5))]</label>
-			<onclick>RunAddon($INFO[Skin.String(HomeVideosButton5)])</onclick>
-			<icon>$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</icon>
-			<thumb>-</thumb>
-			<visible>!IsEmpty(Skin.String(HomeVideosButton5))</visible>
-		</item>
-			</content>
+                <content target="video">$INFO[Skin.String(addonshome)]</content>
             </control>
 
             <!--sources-->
@@ -404,27 +355,27 @@
                 <onright>603</onright>
                 <top>325</top>
                 <left>650</left>
-                <width>189</width>
+                <width>289</width>
                 <height>300</height>
                 <itemgap>10</itemgap>
                 <control type="button" id="500">
-                    <label>157</label>
-                    <include>ButtonCommonValues</include>
+                    <label>VIDEO SOURCES</label>
+                    <include>ButtonHomeValues</include>
 					<onfocus>Skin.SetString(sourceshome,sources://video/)</onfocus>
                     <onclick>ActivateWindow(videos,files)</onclick>
                 </control>
                 <control type="togglebutton" id="501">
-                    <include>ButtonCommonValues</include>
-					<alttexturefocus border="0,0,14,0">-</alttexturefocus>
-					<alttexturenofocus border="5">-</alttexturenofocus>
 					<label>$VAR[updlibrary]</label>
+                    <include>ButtonHomeValues</include>
+					<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
                     <altlabel>$VAR[updlibrary]</altlabel>
                     <onclick>UpdateLibrary(video)</onclick>
                     <altclick>UpdateLibrary(music)</altclick>
                 </control>
-                <control type="button" id="503">
-                    <label>292</label>
-                    <include>ButtonCommonValues</include>
+                <control type="button" id="502">
+                    <label>AUDIO SOURCES</label>
+                    <include>ButtonHomeValues</include>
 					<onfocus>Skin.SetString(sourceshome,sources://music/)</onfocus>
                     <onclick>ActivateWindow(MusicFiles)</onclick>
                 </control>
@@ -443,7 +394,7 @@
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
                 <content target="video">$INFO[Skin.String(sourceshome)]</content>
