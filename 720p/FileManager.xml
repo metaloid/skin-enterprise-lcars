@@ -328,68 +328,26 @@
 			</control>
 		</control>
 		
-			<control type="list" id="10">
+			<control type="grouplist" id="10">
 				<right>20</right>
-				<top>95</top>
+				<top>80</top>
 				<width>200</width>
 				<height>500</height>
 				<onleft>31</onleft>
 				<onright>noop</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
-				<pagecontrol>-</pagecontrol>
-				<scrolltime>300</scrolltime>
-				<focusposition>2</focusposition>
-				<movement>1</movement>
-				<orientation>vertical</orientation>
-				<itemlayout height="35" width="200">
-					<control type="label">
-						<left>5</left>
-						<top>0</top>
-						<width>190</width>
-						<height>25</height>
-						<font>font16</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="35" width="200">
-					<control type="label">
-						<left>5</left>
-						<top>0</top>
-						<width>190</width>
-						<height>25</height>
-						<font>font16</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>0</top>
-						<width>190</width>
-						<height>25</height>
-						<font>font16</font>
-						<textcolor>blue</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Control.HasFocus(10)</visible>
-					</control>
-				</focusedlayout>
-				<content>
-				<item id="1">
+				<itemgap>5</itemgap>
+				<control type="button" id="1">
+					<include>ButtonCommonValues</include>
 					<label>BACK</label>
 					<onclick>back</onclick>
-				</item>
-				<item id="2">
+				</control>
+				<control type="button" id="2">
+					<include>ButtonCommonValues</include>
                     <label>HOME</label>
                     <onclick>ActivateWindow(home)</onclick>
-				</item>
-                </content>
+				</control>
 			</control>
 		<include>Clock</include>
 	</controls>

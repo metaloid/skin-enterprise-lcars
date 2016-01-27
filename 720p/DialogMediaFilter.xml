@@ -121,8 +121,6 @@
 				<description>Clear Button</description>
 				<left>210</left>
 				<top>0</top>
-				<width>200</width>
-				<height>40</height>
 				<include>ButtonCommonValues</include>
 				<label>192</label>
 				<onup>5</onup>

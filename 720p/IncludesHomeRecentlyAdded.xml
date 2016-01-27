@@ -2,23 +2,23 @@
 	<includes>
 		<variable name="311label">
 		<!--MOVIES-->
-		<value condition="Container(9000).HasFocus(1)">$LOCALIZE[20386]</value>
+		<value condition="ControlGroup(9000).HasFocus(1)">$LOCALIZE[20386]</value>
 		<!--TVSHOWS-->
-		<value condition="Container(9000).HasFocus(2)">$LOCALIZE[20387]</value>
+		<value condition="ControlGroup(9000).HasFocus(2)">$LOCALIZE[20387]</value>
 		<!--MUSIC-->
-		<value condition="Container(9000).HasFocus(3)">$LOCALIZE[359]</value>
+		<value condition="ControlGroup(9000).HasFocus(3)">$LOCALIZE[359]</value>
 		<!--ADDONS-->
-		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/video/)">$LOCALIZE[1037]</value>
-		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/audio/)">$LOCALIZE[1038]</value>
-		<value condition="Container(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/executable/)">$LOCALIZE[1043]</value>
+		<value condition="ControlGroup(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/video/)">$LOCALIZE[1037]</value>
+		<value condition="ControlGroup(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/audio/)">$LOCALIZE[1038]</value>
+		<value condition="ControlGroup(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/executable/)">$LOCALIZE[1043]</value>
 		<!--MEDIA SOURCE-->
-		<value condition="Container(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://music/)">$INFO[Container(9000).ListItem.Label] $LOCALIZE[292]</value>
-		<value condition="Container(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://video/)">$INFO[Container(9000).ListItem.Label] $LOCALIZE[157]</value>
+		<value condition="ControlGroup(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://music/)">$INFO[ControlGroup(9000).ListItem.Label] $LOCALIZE[292]</value>
+		<value condition="ControlGroup(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://video/)">$INFO[ControlGroup(9000).ListItem.Label] $LOCALIZE[157]</value>
 		
-		<value condition="Container(9000).HasFocus(8)">$INFO[Window(Weather).Property(Location)]    $INFO[Container(9000).ListItem.Label]    $INFO[Window(Weather).Property(Current.Condition)]</value>
-		<value condition="Container(9000).HasFocus(9)">$INFO[Container(9000).ListItem.Label]    $INFO[Window(Home).Property(NextAired.Total),, ACTIVE TV SHOW]    $INFO[Window(Home).Property(NextAired.TodayTotal),  , AIRED TODAY ]</value>
+		<value condition="ControlGroup(9000).HasFocus(8)">$INFO[Window(Weather).Property(Location)]    $INFO[ControlGroup(9000).ListItem.Label]    $INFO[Window(Weather).Property(Current.Condition)]</value>
+		<value condition="ControlGroup(9000).HasFocus(9)">$INFO[ControlGroup(9000).ListItem.Label]    $INFO[Window(Home).Property(NextAired.Total),, ACTIVE TV SHOW]    $INFO[Window(Home).Property(NextAired.TodayTotal),  , AIRED TODAY ]</value>
 		<!--GENRAL-->
-		<value>$INFO[Container(9000).ListItem.Label]</value>
+		<value>$INFO[ControlGroup(9000).ListItem.Label]</value>
 	</variable>
 	<variable name="updlibrary">
 		<value condition="library.isscanning">$LOCALIZE[13353]</value>
@@ -34,7 +34,7 @@
 						<width>190</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Icon]</texture>
 						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>
@@ -53,7 +53,7 @@
 					</control>
 					<control type="label">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>5</left>
+						<left>0</left>
 						<top>148</top>
 						<width min="0" max="150">auto</width>
 						<height>20</height>
@@ -63,7 +63,7 @@
 						<align>left</align>
 						<angle>90</angle>
 						<aligny>bottom</aligny>
-						<label>$INFO[ListItem.Label2]$INFO[ListItem.TVShowTitle]</label>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
@@ -83,7 +83,7 @@
 						<width>190</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Icon]</texture>
 						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>
@@ -102,7 +102,7 @@
 					</control>
 					<control type="label">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>5</left>
+						<left>0</left>
 						<top>148</top>
 						<width min="0" max="150">auto</width>
 						<height>20</height>
@@ -112,7 +112,7 @@
 						<align>left</align>
 						<angle>90</angle>
 						<aligny>bottom</aligny>
-						<label>$INFO[ListItem.Label2]$INFO[ListItem.TVShowTitle]</label>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 					<control type="image">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
@@ -130,98 +130,175 @@
 			<include>WindowTitleSide</include>
 			<label>$VAR[311label]</label>
 		</control>
+					<control type="textbox">
+						<description>Description Value for Movie</description>
+						<visible>Control.HasFocus(311) + [ControlGroup(9000).HasFocus(1) | ControlGroup(9000).HasFocus(2)]</visible>
+						<left>745</left>
+						<top>315</top>
+						<width>240</width>
+						<height>290</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[Container(311).ListItem.Property(PlotOutline)]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
 		<control type="group" id="9003">
 			<onleft>20</onleft>
 			<onright>603</onright>
 			<control type="group">
 				<left>90</left>
 				<top>50</top>
-					<!--control type="scrollbar" id="60">
-						<visible>Container(9000).HasFocus(4) | Container(9000).HasFocus(7)</visible>
-						<left>600</left>
-						<top>15</top>
-						<width>25</width>
-						<height>535</height>
-						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-						<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-						<textureslidernib>ScrollBarNib.png</textureslidernib>
-						<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-						<onleft>311</onleft>
-						<onright>888</onright>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
-					</control-->
-				<control type="group">
-					<left>625</left>
-                    <top>270</top>
-                    <visible>Control.HasFocus(311) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2)]</visible>
-					<visible>!StringCompare(listitem.label,..)</visible>
-					<control type="textbox">
-						<description>Description Value for Movie</description>
-						<left>0</left>
-						<top>0</top>
-						<width>270</width>
-						<height>290</height>
-						<font>font13</font>
-						<align>justify</align>
-						<textcolor>white</textcolor>
-						<label>$INFO[Container(311).ListItem.Plot]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-					</control>
-				</control>
 			<!--movies-->
 			<control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>Container(9000).HasFocus(1)</visible>
+                <visible>ControlGroup(9000).HasFocus(1)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-				<content target="video">special://skin/playlists/NewMovies.xsp</content>
+				<content target="video">
+						<item>
+							<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
+							<label2>$INFO[Window.Property(LatestMovie.1.Year)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
+							<icon>$INFO[Window.Property(LatestMovie.1.fanart)]</icon>
+							<property name="PlotOutline">$INFO[Window.Property(LatestMovie.1.Plot)]</property>
+							<visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
+							<label2>$INFO[Window.Property(LatestMovie.2.Year)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
+							<icon>$INFO[Window.Property(LatestMovie.2.fanart)]</icon>
+							<property name="PlotOutline">$INFO[Window.Property(LatestMovie.2.Plot)]</property>
+							<visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
+							<label2>$INFO[Window.Property(LatestMovie.3.Year)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
+							<icon>$INFO[Window.Property(LatestMovie.3.fanart)]</icon>
+							<property name="PlotOutline">$INFO[Window.Property(LatestMovie.3.Plot)]</property>
+							<visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
+							<label2>$INFO[Window.Property(LatestMovie.4.Year)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
+							<icon>$INFO[Window.Property(LatestMovie.4.fanart)]</icon>
+							<property name="PlotOutline">$INFO[Window.Property(LatestMovie.4.Plot)]</property>
+							<visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
+							<label2>$INFO[Window.Property(LatestMovie.5.Year)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
+							<icon>$INFO[Window.Property(LatestMovie.5.fanart)]</icon>
+							<property name="PlotOutline">$INFO[Window.Property(LatestMovie.5.Plot)]</property>
+							<visible>!IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
+							<label2>$INFO[Window.Property(LatestMovie.6.Year)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
+							<icon>$INFO[Window.Property(LatestMovie.6.fanart)]</icon>
+							<property name="PlotOutline">$INFO[Window.Property(LatestMovie.6.Plot)]</property>
+							<visible>!IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
+						</item>
+				</content>
             </control>
 
             <!--TV-->
 			<control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>Container(9000).HasFocus(2)</visible>
+                <visible>ControlGroup(9000).HasFocus(2)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-				<content target="video">special://skin/playlists/NewEpisodes.xsp</content>
+				<content target="video">
+						<item>
+							<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
+							<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.1.Path)])</onclick>
+							<property name="PlotOutline">$INFO[Window.Property(LatestEpisode.1.Plot)]</property>
+							<thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
+							<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.2.Path)])</onclick>
+							<property name="PlotOutline">$INFO[Window.Property(LatestEpisode.2.Plot)]</property>
+							<thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
+							<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.3.Path)])</onclick>
+							<property name="PlotOutline">$INFO[Window.Property(LatestEpisode.3.Plot)]</property>
+							<thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
+							<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.4.Path)])</onclick>
+							<property name="PlotOutline">$INFO[Window.Property(LatestEpisode.4.Plot)]</property>
+							<thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
+							<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] - $INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.5.Path)])</onclick>
+							<property name="PlotOutline">$INFO[Window.Property(LatestEpisode.5.Plot)]</property>
+							<thumb>$INFO[Window.Property(LatestEpisode.5.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
+							<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)] - $INFO[Window.Property(LatestEpisode.6.EpisodeNo)]</label2>
+							<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.6.Path)])</onclick>
+							<property name="PlotOutline">$INFO[Window.Property(LatestEpisode.6.Plot)]</property>
+							<thumb>$INFO[Window.Property(LatestEpisode.6.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
+						</item>
+				</content>
             </control>
 
             <!--NEXT AIRED-->
 
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>Container(9000).HasFocus(9)</visible>
+                <visible>ControlGroup(9000).HasFocus(9)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
@@ -233,42 +310,42 @@
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.1.Label),, • ]$INFO[Window(Home).Property(NextAired.1.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.1.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.1.NextDay)] $INFO[Window(Home).Property(NextAired.1.ShortTime)]</label2>
-                        <thumb>$INFO[Window(Home).Property(NextAired.1.Art(poster))]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.1.Art(fanart))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.1.Library)])</onclick>
                     </item>
                     <item id="2" description="Episodes2">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.2.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.2.Label),, • ]$INFO[Window(Home).Property(NextAired.2.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.2.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.2.NextDay)] $INFO[Window(Home).Property(NextAired.2.ShortTime)]</label2>
-                        <thumb>$INFO[Window(Home).Property(NextAired.2.Art(poster))]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.2.Art(fanart))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.2.Library)])</onclick>
                     </item>
                     <item id="3" description="Episodes3">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.3.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.3.Label),, • ]$INFO[Window(Home).Property(NextAired.3.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.3.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.3.NextDay)] $INFO[Window(Home).Property(NextAired.3.ShortTime)]</label2>
-                        <thumb>$INFO[Window(Home).Property(NextAired.3.Art(poster))]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.3.Art(fanart))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.3.Library)])</onclick>
                     </item>
                     <item id="4" description="Episodes4">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.4.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.4.Label),, • ]$INFO[Window(Home).Property(NextAired.4.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.4.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.4.NextDay)] $INFO[Window(Home).Property(NextAired.4.ShortTime)]</label2>
-                        <thumb>$INFO[Window(Home).Property(NextAired.4.Art(poster))]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.4.Art(fanart))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.4.Library)])</onclick>
                     </item>
                     <item id="5" description="Episodes5">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.5.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.5.Label),, • ]$INFO[Window(Home).Property(NextAired.5.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.5.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.5.NextDay)] $INFO[Window(Home).Property(NextAired.5.ShortTime)]</label2>
-                        <thumb>$INFO[Window(Home).Property(NextAired.5.Art(poster))]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.5.Art(fanart))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.5.Library)])</onclick>
                     </item>
                     <item id="6" description="Episodes6">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.6.NextTitle))</visible>
                         <label>$INFO[Window(Home).Property(NextAired.6.Label),, • ]$INFO[Window(Home).Property(NextAired.6.NextNumber),, • ]$INFO[Window(Home).Property(NextAired.6.NextTitle)]</label>
                         <label2>$INFO[Window(Home).Property(NextAired.6.NextDay)] $INFO[Window(Home).Property(NextAired.6.ShortTime)]</label2>
-                        <thumb>$INFO[Window(Home).Property(NextAired.6.Art(poster))]</thumb>
+                        <thumb>$INFO[Window(Home).Property(NextAired.6.Art(fanart))]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.6.Library)])</onclick>
                     </item>
                </content>
@@ -279,29 +356,84 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>Container(9000).HasFocus(3)</visible>
+                <visible>ControlGroup(9000).HasFocus(3)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-                <content target="music">special://skin/playlists/NewAlbums.xsp</content>
+                <content target="music">
+						<item>
+							<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
+							<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
+							<onclick>PlayList.Clear</onclick>
+							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.1.Path)]")</onclick>
+							<icon>-</icon>
+							<thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
+							<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
+							<onclick>PlayList.Clear</onclick>
+							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.2.Path)]")</onclick>
+							<icon>-</icon>
+							<thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
+							<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
+							<onclick>PlayList.Clear</onclick>
+							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.3.Path)]")</onclick>
+							<icon>-</icon>
+							<thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
+							<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
+							<onclick>PlayList.Clear</onclick>
+							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.4.Path)]")</onclick>
+							<icon>-</icon>
+							<thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
+							<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
+							<onclick>PlayList.Clear</onclick>
+							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.5.Path)]")</onclick>
+							<icon>-</icon>
+							<thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
+						</item>
+						<item>
+							<label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
+							<label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
+							<onclick>PlayList.Clear</onclick>
+							<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.6.Path)]")</onclick>
+							<icon>-</icon>
+							<thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
+							<visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
+						</item>
+				</content>
             </control>
 
             <!--plugs-->
 
             <control type="grouplist" id="888">
-                <visible>Container(9000).HasFocus(4)</visible>
+                <visible>ControlGroup(9000).HasFocus(4)</visible>
                 <onup>9000</onup>
-                <onleft>60</onleft>
-                <onright>603</onright>
+                <onleft>311</onleft>
+                <onright>9000</onright>
                 <top>325</top>
                 <left>650</left>
                 <width>289</width>
@@ -329,14 +461,14 @@
             </control>
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>Container(9000).HasFocus(4)</visible>
+                <visible>ControlGroup(9000).HasFocus(4)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
@@ -349,10 +481,10 @@
             <!--sources-->
 
             <control type="grouplist" id="888">
-                <visible>Container(9000).HasFocus(7)</visible>
+                <visible>ControlGroup(9000).HasFocus(7)</visible>
                 <onup>9000</onup>
-                <onleft>60</onleft>
-                <onright>603</onright>
+                <onleft>311</onleft>
+                <onright>9000</onright>
                 <top>325</top>
                 <left>650</left>
                 <width>289</width>
@@ -384,13 +516,13 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>Container(9000).HasFocus(7)</visible>
+                <visible>ControlGroup(9000).HasFocus(7)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
@@ -405,13 +537,13 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>Container(9000).HasFocus(10)</visible>
+                <visible>ControlGroup(9000).HasFocus(10)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
 				<height>540</height>
 				<onleft>noop</onleft>
-				<onright>60</onright>
+				<onright>888</onright>
 				<onup>311</onup>
 				<ondown>311</ondown>
 				<pagecontrol>-</pagecontrol>
@@ -463,7 +595,7 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>Container(9000).HasFocus(8)</visible>
+                <visible>ControlGroup(9000).HasFocus(8)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>

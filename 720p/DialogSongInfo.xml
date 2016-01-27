@@ -227,20 +227,17 @@
 				<onright>noop</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<itemgap>0</itemgap>
+				<itemgap>5</itemgap>
 				<control type="button" id="10">
 					<description>Ok button</description>
 					<include>ButtonCommonValues</include>
+					<onclick>back</onclick>
 					<label>186</label>
-				</control>
-				<control type="button" id="11">
-					<description>Cancel button</description>
-					<include>ButtonCommonValues</include>
-					<label>222</label>
 				</control>
 				<control type="button" id="12">
 					<description>Album Info button</description>
 					<include>ButtonCommonValues</include>
+					<onclick>back</onclick>
 					<label>10523</label>
 				</control>
 				<control type="button" id="13">

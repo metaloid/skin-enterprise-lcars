@@ -21,7 +21,7 @@
 				<label>$LOCALIZE[0][COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
 			</control>
 		<control type="group">
-			<top>75</top>
+			<top>80</top>
 			<control type="grouplist" id="9000">
 				<right>20</right>
 				<top>0</top>
@@ -31,12 +31,7 @@
 				<onright>noop</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<itemgap>0</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<include>ButtonCommonValues</include>
-					<label>-</label>
-				</control>
+				<itemgap>5</itemgap>
 				<control type="button" id="3">
 					<description>Sort by button</description>
 					<include>ButtonCommonValues</include>
@@ -45,17 +40,15 @@
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
-					<alttexturefocus border="5">-</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
 					<label>31051</label>
-					<textoffsetx>7</textoffsetx>
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 				</control>
 				<control type="edit" id="19">
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
-					<textwidth>200</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 				</control>

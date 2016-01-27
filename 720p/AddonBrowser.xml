@@ -2,13 +2,11 @@
 <window>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>500,550</views>
+	<views>500</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!-- view id = 550 -->
-			<include>AddonInfoListView1</include>
 			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
 		</control>
@@ -20,7 +18,7 @@
 			<label>$LOCALIZE[24001] [COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
 		</control>
 		<control type="group">
-			<top>75</top>
+			<top>80</top>
 			<control type="grouplist" id="9000">
 				<right>20</right>
 				<top>0</top>
@@ -30,12 +28,7 @@
 				<onright>noop</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<itemgap>0</itemgap>
-				<control type="button" id="2">
-					<description>View As button</description>
-					<include>ButtonCommonValues</include>
-					<label>-</label>
-				</control>
+				<itemgap>5</itemgap>
 				<control type="button" id="3">
 					<description>Sort by button</description>
 					<include>ButtonCommonValues</include>
@@ -44,8 +37,8 @@
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
-					<alttexturefocus border="5">-</alttexturefocus>
-					<alttexturenofocus>-</alttexturenofocus>
+					<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
 					<textoffsetx>7</textoffsetx>
 					<label>31051</label>
 					<altlabel>31050</altlabel>
@@ -53,7 +46,6 @@
 				</control>
 				<control type="button" id="5">
 					<description>addon-updates</description>
-					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>24063</label>
 				</control>
@@ -69,26 +61,8 @@
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Hide broken</description>
-					<width>190</width>
-					<height>35</height>
-					<radiowidth>24</radiowidth>
-					<radioheight>24</radioheight>
-					<textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
-					<textureradioonnofocus>radiobutton-focus.png</textureradioonnofocus>
-					<textureradioofffocus>radiobutton-nofocus.png</textureradioofffocus>
-					<textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
-					<texturefocus border="5">-</texturefocus>
-					<texturenofocus border="5">-</texturenofocus>
-					<font>font16</font>
-					<textcolor>white</textcolor>
-					<disabledcolor>grey3</disabledcolor>
-					<textoffsetx>7</textoffsetx>
-					<aligny>center</aligny>
-					<focusedcolor>blue</focusedcolor>
-					<align>left</align>
-					<pulseonselect>no</pulseonselect>
+					<include>ButtonCommonValues</include>
 					<label>24999</label>
-					<textwidth>140</textwidth>
 				</control>
 				<control type="button" id="9">
 					<description>Check for updates</description>

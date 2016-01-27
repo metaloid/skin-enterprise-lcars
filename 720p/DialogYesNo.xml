@@ -31,15 +31,8 @@
 			<description>Yes button</description>
 			<left>95</left>
 			<top>175</top>
-			<width>200</width>
-			<height>40</height>
+			<include>ButtonCommonValues</include>
 			<label>107</label>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>white</textcolor>
-			<focusedcolor>blue</focusedcolor>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>11</onup>
@@ -49,15 +42,8 @@
 			<description>No button</description>
 			<left>305</left>
 			<top>175</top>
-			<width>200</width>
-			<height>40</height>
+			<include>ButtonCommonValues</include>
 			<label>106</label>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>white</textcolor>
-			<focusedcolor>blue</focusedcolor>
 			<onleft>11</onleft>
 			<onright>11</onright>
 			<onup>10</onup>

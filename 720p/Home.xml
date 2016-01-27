@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
-	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<defaultcontrol always="true">7</defaultcontrol>
 	<onload condition="!Skin.HasSetting(Hide.Favourites)">RunScript(script.favourites)</onload>
+	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
 	<controls>
 		<include>CommonBackground</include>
 		<include>HomeRecentlyAddedInfo</include>
 		<include>wbg</include>
+		<include>Clock</include>
 		<control type="grouplist">
             <visible>!Skin.HasSetting(HomeMenuNodata)</visible>
 			<left>100</left>
@@ -35,163 +35,112 @@
 			</control>
 		</control>
 		
-		
-		<control type="group">
-			<top>95</top>
-			<control type="list" id="9000">
+			<control type="grouplist" id="9000">
 				<right>20</right>
-				<top>0</top>
+				<top>80</top>
 				<width>200</width>
 				<height>500</height>
-				<onleft>603</onleft>
-				<onright>noop</onright>
+				<onleft>888</onleft>
+				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<pagecontrol>-</pagecontrol>
-				<scrolltime>300</scrolltime>
-				<focusposition>2</focusposition>
-				<movement>1</movement>
-				<orientation>vertical</orientation>
-				<itemlayout height="35" width="200">
-					<control type="label">
-						<left>5</left>
-						<top>0</top>
-						<width>190</width>
-						<height>25</height>
-						<font>font16</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="35" width="200">
-					<control type="label">
-						<left>5</left>
-						<top>0</top>
-						<width>190</width>
-						<height>25</height>
-						<font>font16</font>
-						<textcolor>white</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<left>5</left>
-						<top>0</top>
-						<width>190</width>
-						<height>25</height>
-						<font>font16</font>
-						<textcolor>blue</textcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Control.HasFocus(9000)</visible>
-					</control>
-				</focusedlayout>
-				<content>
-				<!--item id="13">
-					<label>31953</label>
-					<onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
-					<onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
-					<icon>-</icon>
-					<thumb>-</thumb>
-					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
-				</item-->
+				<itemgap>5</itemgap>
 				<!--MOVIES-->
-                <item id="1">
+				<control type="button" id="1">
                     <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
-                    <label>342</label>
+					<include>ButtonCommonValues</include>
+					<label>342</label>
                     <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
                     <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
-                </item>
+				</control>
                 <!--TVSHOWS-->
-                <item id="2">
+ 				<control type="button" id="2">
                     <visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
-                    <label>20343</label>
-                    <label2>FFFF0000</label2>
+					<include>ButtonCommonValues</include>
+					<label>20343</label>
                     <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
                     <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
-                </item>
+				</control>
                 <!--MUSIC-->
-                <item id="3">
+ 				<control type="button" id="3">
                     <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
-                    <label>2</label>
+					<include>ButtonCommonValues</include>
+					<label>2</label>
                     <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root,return)</onclick>
                     <onclick condition="Library.HasContent(Music)">ActivateWindow(502,return)</onclick>
-                </item>
+				</control>
                 <!--ADDONS-->
-                <item id="4">
+ 				<control type="button" id="4">
                     <visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
-                    <label>24001</label>
+					<include>ButtonCommonValues</include>
+					<label>24001</label>
                     <onclick>ActivateWindow(AddonBrowser.xml)</onclick>
-                </item>
+				</control>
                 <!--LIVETV-->
-                <item id="5">
+ 				<control type="button" id="5">
                     <visible>PVR.HasTVChannels</visible>
-                    <label>19020</label>
+					<include>ButtonCommonValues</include>
+					<label>19020</label>
                     <onclick>ActivateWindow(TVChannels)</onclick>
                     <onclick>noop</onclick>
-                </item>
-                <item id="14">
+				</control>
+ 				<control type="button" id="14">
+					<visible>PVR.HasRadioChannels</visible>
+					<include>ButtonCommonValues</include>
 					<label>31960</label>
 					<onclick>ActivateWindow(RadioChannels)</onclick>
-					<icon>-</icon>
-					<thumb>-</thumb>
-					<visible>PVR.HasRadioChannels</visible>
-				</item>
+				</control>
 				<!--PICTURES-->
-                <item id="6">
+ 				<control type="button" id="6">
                     <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
-                    <label>1</label>
+					<include>ButtonCommonValues</include>
+					<label>1</label>
                     <onclick>ActivateWindow(Pictures)</onclick>
                     <onclick>noop</onclick>
-                </item>
+				</control>
                 <!--SOURCES-->
-                <item id="7">
-                    <label>20094</label>
+ 				<control type="button" id="7">
+					<include>ButtonCommonValues</include>
+					<label>20094</label>
                     <onclick>noop</onclick>
-					<!--visible>Skin.HasSetting(HomeMenuNoVideosButton)</visible-->
-                </item>
+				</control>
                 <!--WEATHER-->
-                <item id="8">
+ 				<control type="button" id="8">
                     <visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-                    <label>31950</label>
+					<include>ButtonCommonValues</include>
+					<label>31950</label>
                     <onclick>ActivateWindow(MyWeather)</onclick>
-                </item>
+				</control>
                 <!--NEXT AIR-->
-                <item id="9">
+ 				<control type="button" id="9">
                     <visible>!Skin.HasSetting(HomeMenuNoNEXTAIRButton)</visible>
                     <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
-                    <label>next air</label>
+					<include>ButtonCommonValues</include>
+					<label>next air</label>
                     <onclick>RunAddon(script.tv.show.next.aired)</onclick>
-                </item>
+				</control>
                 <!--Favorites-->
-                <item id="10">
+ 				<control type="button" id="10">
                     <visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
-                    <label>1036</label>
+					<include>ButtonCommonValues</include>
+					<label>1036</label>
                     <onclick>ActivateWindow(134)</onclick>
-				</item>
+				</control>
                 <!--Settings-->
-                <item id="11">
-                    <label>1390</label>
+ 				<control type="button" id="11">
+					<include>ButtonCommonValues</include>
+					<label>1390</label>
                     <onclick>ActivateWindow(Settings)</onclick>
-                </item>
+				</control>
+				<include>CommonNowPlaying_Controls</include>
                 <!--EXIT-->
-                <item id="12">
-                    <visible>!Player.HasMedia</visible>
-                    <label>EXIT</label>
+ 				<control type="button" id="12">
+					<visible>!Player.HasMedia</visible>
+					<include>ButtonCommonValues</include>
+					<label>exit</label>
                     <onclick>ActivateWindow(ShutdownMenu)</onclick>
-                </item>
-                <item id="12">
-                    <visible>Player.HasMedia</visible>
-                    <label>FULLSCREEN</label>
-                    <onclick>fullscreen</onclick>
-                </item>
-				</content>
+				</control>
 			</control>
-		</control>
 		
 		<control type="group">
 			<left>0</left>
@@ -210,21 +159,6 @@
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
 			</control>
-		</control>
-		<include>Clock</include>
-		<control type="label">
-			<description>Date label</description>
-			<right>20</right>
-			<top>65</top>
-			<width>200</width>
-			<height>15</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font10</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<label>$INFO[System.Date]</label>
-			<include>Window_OpenClose_Animation</include>
 		</control>
 	</controls>
 </window>

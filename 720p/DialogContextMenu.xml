@@ -10,9 +10,9 @@
 		<control type="image" id="999">
 			<description>background image</description>
 			<left>-50</left>
-			<top>0</top>
-			<width>390</width>
-			<height>720</height>
+			<top>-10</top>
+			<width>370</width>
+			<height>730</height>
 			<texture border="40">dialogback.png</texture>
 		</control>
 		<control type="grouplist" id="996">
@@ -21,12 +21,12 @@
 			<top>30</top>
 			<width>300</width>
 			<height max="670">auto</height>
-			<itemgap>2</itemgap>
+			<itemgap>5</itemgap>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>
-			<left>260</left>
-			<top>5</top>
+			<left>270</left>
+			<top>-10</top>
 			<width>64</width>
 			<height>32</height>
 			<label>-</label>
@@ -44,14 +44,7 @@
 			<description>button template</description>
 			<left>-</left>
 			<top>-</top>
-			<width>300</width>
-			<height>38</height>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>white</textcolor>
-			<focusedcolor>blue</focusedcolor>
+			<include>ButtonHomeValues</include>
 		</control>
 	</controls>
 </window>

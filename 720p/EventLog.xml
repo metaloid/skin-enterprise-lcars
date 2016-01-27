@@ -229,7 +229,6 @@
 				</control>
 				<control type="button" id="21">
 					<description>Level button</description>
-					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>-</label>
 				</control>

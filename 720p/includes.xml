@@ -17,13 +17,14 @@
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 	<variable name="MediaInfoOverlayVar">
-		<value condition="ListItem.IsCollection">flagging/video/Set.png</value>
-		<value condition="!ListItem.IsStereoscopic">$INFO[ListItem.VideoResolution,flagging/lists/,.png]</value>
-		<value>flagging/lists/3D.png</value>
+		<value condition="ListItem.IsCollection">SET</value>
+		<value condition="ListItem.Property(Addon.Status)">$INFO[ListItem.Property(Addon.Status)]</value>
+		<value condition="!ListItem.IsStereoscopic">$INFO[ListItem.VideoResolution,, p]</value>
+		<value>3D</value>
 	</variable>
 	<variable name="PosterThumb">
 		<value condition="!IsEmpty(ListItem.Art(fanart)) + [Container.Content(Movies) | container.content(TvShows) | container.content(Artists)]">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="[Container(9000).HasFocus(1) | Container(9000).HasFocus(3)]">$INFO[ListItem.Art(fanart)]</value>
+		<!--value condition="[Container(9000).HasFocus(1) | Container(9000).HasFocus(3)]">$INFO[ListItem.Art(fanart)]</value-->
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -43,11 +44,49 @@
 		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
 	</variable>
 	<variable name="rating">
-		<value condition="substring(listitem.mpaa,Rated G)">mpaa_general</value>
-		<value condition="substring(listitem.mpaa,Rated PG-13)">mpaa_pg13</value>
-		<value condition="substring(listitem.mpaa,Rated PG)">mpaa_pg</value>
-		<value condition="substring(Listitem.mpaa,Rated R)">mpaa_restricted</value>
-		<value condition="substring(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
+        <!-- US (IMDB) -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated R,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated R,Left)]">R</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG-13,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG-13,Left)]">PG 13</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG,Left)]">PG</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated NC,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated NC,Left)]">NC 17</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated G,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated G,Left)]">G</value>
+        <!-- US (TMDB) -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,R)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,R)]">R</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG-13)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG-13)]">PG 13</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG)]">PG</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,NC-17)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,NC-17)]">NC 17</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,G)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,G)]">G</value>
+        <!-- US (TV) -->
+        <value condition="!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-)">$INFO[ListItem.MPAA]</value>
+        <!-- Germany -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:0)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:0)]">0</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:6)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:6)]">6</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:12)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:12)]">12</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:16)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:16)]">16</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:18)]">18</value>
+        <!-- Australia -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:R)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:R)]">R</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:MA)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:MA)]">MA</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:M)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:M)]">M</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:PG)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:PG)]">PG</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:G)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:G)]">G</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Australia:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Australia:X)]">X</value>
+        <!-- Italy -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated All,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated All,Left)]">T</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated T,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated T,Left)]">T</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,it/T)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,it/T)]">T</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM14)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM14)]">VM14</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM16)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM16)]">VM16</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,VM18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,VM18)]">VM18</value>
+        <!-- United Kingdom -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:U)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:U)]">U</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:PG)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:PG)]">PG</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:12A)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:12A)]">12A</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:12)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:12)]">12</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:15)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:15)]">15</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:18)]">18</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:X)]">X</value>
+        <value>$INFO[ListItem.MPAA]</value>
 	</variable>
 	<variable name="videocodec">
 		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
@@ -75,82 +114,92 @@
 		<value condition="!IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
-    <include name="TVNextAiredListCommonLayout">
-        <left>90</left>
-		<top>50</top>
-		<height>560</height>
-        <width>600</width>
-        <onright>5000</onright>
-        <pagecontrol>-</pagecontrol>
-        <orientation>verical</orientation>
-        <itemlayout width="600" height="280">
-            <control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>580</width>
-				<height>270</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="01.png">$INFO[ListItem.Property(Fanart)]</texture>
-				<bordertexture  border="20">ContentPanel.png</bordertexture>
-				<bordersize>10</bordersize>
-			</control>
-			<control type="label">
-                <left>35</left>
-				<top>55</top>
-				<textcolor>white</textcolor>
-                <font>font16</font>
-                <width>530</width>
-                <height>40</height>
-                <label>$INFO[ListItem.Label] : $INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
-                <aligny>center</aligny>
-            </control>
-            <control type="textbox">
-				<description>Description Value for Movie</description>
-				<left>35</left>
-				<top>85</top>
-				<width>510</width>
-				<height>155</height>
-				<font>font14</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
-				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-		</itemlayout>
-        <focusedlayout width="600" height="280">
-            <control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>580</width>
-				<height>270</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" diffuse="ContentPanel3.png" border="5" fallback="01.png">$INFO[ListItem.Property(Fanart)]</texture>
-				<bordertexture  border="20">ContentPanel.png</bordertexture>
-				<bordersize>10</bordersize>
-			</control>
-			<control type="label">
-                <left>35</left>
-				<top>55</top>
-				<textcolor>blue</textcolor>
-                <font>font16</font>
-                <width>530</width>
-                <height>40</height>
-                <label>$INFO[ListItem.Label] : $INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
-                <aligny>center</aligny>
-            </control>
-            <control type="textbox">
-				<description>Description Value for Movie</description>
-				<left>35</left>
-				<top>85</top>
-				<width>510</width>
-				<height>155</height>
-				<font>font14</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<label>$LOCALIZE[126]: $INFO[ListItem.Property(Status)][CR]$INFO[ListItem.Property(Genre)][CR]Air: $INFO[ListItem.Property(NextDay)] At $INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), On ]</label>
-				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-        </focusedlayout>
+   <include name="TVNextAiredListCommonLayout">
+				<left>80</left>
+				<top>50</top>
+				<width>660</width>
+				<height>540</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>500</onup>
+				<ondown>60</ondown>
+				<viewtype label="21371">panel</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+        		<orientation>vertical</orientation>
+				<itemlayout height="180" width="330">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>220</width>
+						<height>160</height>
+						<align>center</align>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Property(Fanart)]</texture>
+						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
+						<bordersize>3</bordersize>
+					</control>
+					<control type="label">
+						<centerleft>110</centerleft>
+						<top>160</top>
+						<width min="0" max="220">auto</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>white</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(NextDay)] $INFO[ListItem.Label]</label>
+					</control>
+ 					<control type="textbox">
+						<description>Description Value for Movie</description>
+						<left>222</left>
+						<top>5</top>
+						<width>105</width>
+						<height>180</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Property(NextNumber),S][CR][CR]$INFO[ListItem.Property(NextTitle)][CR][CR]$INFO[ListItem.Property(ShortTime)][CR][CR]$INFO[ListItem.Property(Network)]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</itemlayout>
+				<focusedlayout height="180" width="330">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>220</width>
+						<height>160</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Property(Fanart)]</texture>
+						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
+						<bordersize>3</bordersize>
+					</control>
+					<control type="label">
+						<centerleft>110</centerleft>
+						<top>160</top>
+						<width min="0" max="220">auto</width>
+						<height>25</height>
+						<font>font13</font>
+						<textcolor>blue</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(NextDay)] $INFO[ListItem.Label]</label>
+					</control>
+ 					<control type="textbox">
+						<description>Description Value for Movie</description>
+						<left>222</left>
+						<top>5</top>
+						<width>105</width>
+						<height>180</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Property(NextNumber),S][CR][CR]$INFO[ListItem.Property(NextTitle)][CR][CR]$INFO[ListItem.Property(ShortTime)][CR][CR]$INFO[ListItem.Property(Network)]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</focusedlayout>
     </include>
 	<include name="DialogBackgroundCommons">
 		<control type="image">
@@ -177,7 +226,7 @@
 		<control type="button">
 			<description>Close Window button</description>
 			<left>$PARAM[CloseButtonLeft]</left>
-			<top>5</top>
+			<top>0</top>
 			<width>64</width>
 			<height>32</height>
 			<label>-</label>
@@ -190,6 +239,13 @@
 			<onup>$PARAM[CloseButtonNav]</onup>
 			<ondown>$PARAM[CloseButtonNav]</ondown>
 		</control>
+	</include>
+		<include name="Badge">
+            <left>222</left>
+            <height>26</height>
+            <width>75</width>
+            <aspectratio>scale</aspectratio>
+            <texture>white.png</texture>
 	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
@@ -241,24 +297,24 @@
 	</include>
 	<include name="ButtonCommonValues">
 		<width>190</width>
-		<height>35</height>
-		<textcolor>white</textcolor>
-		<focusedcolor>blue</focusedcolor>
+		<height>30</height>
+		<textcolor>black</textcolor>
+		<focusedcolor>black</focusedcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textwidth>190</textwidth>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
+		<textwidth>180</textwidth>
+		<texturefocus colordiffuse="red">white.png</texturefocus>
+		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 		<font>font16</font>
-		<pulseonselect>false</pulseonselect>
+		<pulseonselect></pulseonselect>
 	</include>
 	<include name="ButtonHomeValues">
 		<width>250</width>
 		<height>35</height>
-		<textcolor>white</textcolor>
-		<focusedcolor>white</focusedcolor>
+		<textcolor>black</textcolor>
+		<focusedcolor>black</focusedcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<align>left</align>
@@ -267,7 +323,7 @@
 		<texturefocus colordiffuse="red">white.png</texturefocus>
 		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 		<font>font16</font>
-		<pulseonselect>false</pulseonselect>
+		<pulseonselect></pulseonselect>
 	</include>
 	<include name="ButtonHomeSubCommonValues">
 		<width>190</width>
@@ -662,25 +718,26 @@
 		</control>
 	</include>
 	<include name="CommonNowPlaying_Controls">
-		<control type="label" id="202">
-			<width>200</width>
-			<height>35</height>
-			<font>font16</font>
-			<label>31023</label>
-			<textcolor>blue</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<visible>Player.HasMedia</visible>
-			
-		</control>
 		<control type="button" id="610">
 			<description>Fake Button to fix Player Controls Navigation</description>
 			<visible>false</visible>
 		</control>
 		<control type="group" id="9006">
-			<width>200</width>
-			<height>45</height>
+			<width>190</width>
+			<height>33</height>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
+			<control type="image">
+                <visible>!ControlGroup(9006).HasFocus</visible>
+				<width>190</width>
+				<height>33</height>
+				<texture colordiffuse="blue">white.png</texture>
+			</control>
+			<control type="image">
+                <visible>ControlGroup(9006).HasFocus</visible>
+				<width>190</width>
+				<height>33</height>
+				<texture colordiffuse="red">white.png</texture>
+			</control>
 			
 			<control type="button" id="600">
 				<left>0</left>
@@ -765,9 +822,21 @@
 		<control type="group" id="9005">
 			<visible>Player.HasMedia</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<control type="image">
+                <visible>!ControlGroup(9005).HasFocus</visible>
+				<width>190</width>
+				<height>33</height>
+				<texture colordiffuse="blue">white.png</texture>
+			</control>
+			<control type="image">
+                <visible>ControlGroup(9005).HasFocus</visible>
+				<width>190</width>
+				<height>33</height>
+				<texture colordiffuse="red">white.png</texture>
+			</control>
 			
-			<width>200</width>
-			<height>45</height>
+			<width>190</width>
+			<height>33</height>
 			<defaultcontrol always="true">603</defaultcontrol>
 			<control type="button" id="600">
 				<left>0</left>
@@ -913,15 +982,11 @@
 				</control>
 			</control>
 		</control>
-		<control type="radiobutton" id="611">
+		<control type="button" id="611">
 			<description>Go to fullscreen Playback</description>
 			<include>ButtonCommonValues</include>
 			<label>31008</label>
 			<onclick>fullscreen</onclick>
-			<textureradioonfocus>GoFullscreen.png</textureradioonfocus>
-			<textureradioonnofocus>GoFullscreen.png</textureradioonnofocus>
-			<textureradioofffocus>GoFullscreen.png</textureradioofffocus>
-			<textureradiooffnofocus>GoFullscreen.png</textureradiooffnofocus>
 			<visible>Player.HasMedia</visible>
 		</control>
 		<control type="button" id="612">
@@ -959,6 +1024,20 @@
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
+		</control>
+		<control type="label">
+			<description>Date label</description>
+			<right>20</right>
+			<top>65</top>
+			<width>200</width>
+			<height>15</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
 		</control>
 	</include>
 	<include name="TVNextAiredListCommonLayout">

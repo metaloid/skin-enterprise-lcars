@@ -255,11 +255,7 @@
 					<description>OK Button</description>
 					<left>300</left>
 					<top>0</top>
-					<width>200</width>
-					<height>40</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
+					<include>ButtonCommonValues</include>
 					<label>186</label>
 					<onleft>22</onleft>
 					<onright>29</onright>
@@ -270,11 +266,7 @@
 					<description>Cancel Button</description>
 					<left>510</left>
 					<top>0</top>
-					<width>200</width>
-					<height>40</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
+					<include>ButtonCommonValues</include>
 					<label>222</label>
 					<onleft>28</onleft>
 					<onright>22</onright>
@@ -285,11 +277,7 @@
 					<description>Settings Button</description>
 					<left>90</left>
 					<top>0</top>
-					<width>200</width>
-					<height>40</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12_title</font>
+					<include>ButtonCommonValues</include>
 					<label>5</label>
 					<onleft>29</onleft>
 					<onright>28</onright>

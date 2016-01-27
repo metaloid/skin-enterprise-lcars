@@ -6,102 +6,273 @@
 			<control type="panel" id="500">
 				<left>80</left>
 				<top>50</top>
-				<width>680</width>
-				<height>560</height>
-				<onleft>2</onleft>
+				<width>600</width>
+				<height>540</height>
+				<onleft>9000</onleft>
 				<onright>60</onright>
 				<onup>500</onup>
 				<ondown>500</ondown>
 				<viewtype label="21371">panel</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<preloaditems>4</preloaditems>
-				
-				<itemlayout height="279" width="210">
+        		<orientation>vertical</orientation>
+				<itemlayout height="180" width="300">
 					<control type="image">
-						<left>1</left>
+						<left>0</left>
 						<top>0</top>
-						<width>208</width>
-						<height>240</height>
+						<width>220</width>
+						<height>160</height>
+						<align>center</align>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordersize>3</bordersize>
 					</control>
 					<control type="label">
-						<left>4</left>
-						<top>240</top>
-						<width>200</width>
+						<centerleft>110</centerleft>
+						<top>160</top>
+						<width min="0" max="220">auto</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<info>ListItem.Label</info>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
-						<left>10</left>
-						<top>205</top>
-						<width>40</width>
-						<height>26</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>
-					<control type="image">
-						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>10</left>
-						<top>10</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
+                        <control type="group">
+							<visible>!StringCompare(listitem.label,..)</visible>
+							<visible>[Container.Content(Tvshows) | Container.Content(Seasons) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(addons)]</visible>
+                            <top>5</top>
+                            <control type="image">
+							<visible>!IsEmpty(ListItem.Property(TotalEpisodes)) | !IsEmpty(ListItem.VideoResolution) | [Container.Content(addons) +  !IsEmpty(ListItem.Property(Addon.Status))]</visible>
+								<include>Badge</include>
+								<colordiffuse>blue</colordiffuse>
+                            </control>
+                            <control type="label">
+							<visible>Container.Content(Tvshows) | Container.Content(Seasons)</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>[B]$INFO[ListItem.Property(TotalEpisodes),, e][/B]</label>
+                            </control>
+                            <control type="label">
+							<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | [Container.Content(addons) +  !IsEmpty(ListItem.Property(Addon.Status))]]</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$VAR[MediaInfoOverlayVar]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+							<visible>!StringCompare(listitem.label,..)</visible>
+                            <top>35</top>
+                            <control type="image">
+							<visible>[Container.Content(Movies) | Container.Content(Episodes)]</visible>
+							<visible>IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+								<include>Badge</include>
+								<colordiffuse>red</colordiffuse>
+                            </control>
+                            <control type="image">
+							<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
+								<include>Badge</include>
+								<colordiffuse>blue</colordiffuse>
+                            </control>
+                            <control type="image">
+							<visible>[Container.Content(Movies) | Container.Content(Episodes)]</visible>
+								<left>222</left>
+                                <height>26</height>
+                                <width>75</width>
+                                <aspectratio>scale</aspectratio>
+                                <texture>$INFO[ListItem.Overlay]</texture>
+                            </control>
+                            <control type="label">
+							<visible>IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+							<visible>[Container.Content(Movies) | Container.Content(Episodes)]</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$INFO[ListItem.PercentPlayed,, %]</label>
+                            </control>
+                            <control type="label">
+							<visible>[Container.Content(TvShows)]</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$INFO[ListItem.Property(TotalSeasons),, S]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+							<visible>!StringCompare(listitem.label,..)</visible>
+							<visible>!IsEmpty(ListItem.mpaa)</visible>
+                            <top>65</top>
+                            <control type="image">
+								<include>Badge</include>
+								<colordiffuse>blue</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$VAR[rating]</label>
+                            </control>
+                        </control>
 				</itemlayout>
-				<focusedlayout height="276" width="210">
+				<focusedlayout height="180" width="300">
 					<control type="image">
-						<left>1</left>
+						<left>0</left>
 						<top>0</top>
-						<width>208</width>
-						<height>240</height>
+						<width>220</width>
+						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
-						<bordersize>4</bordersize>
+						<bordersize>3</bordersize>
 					</control>
 					<control type="label">
-						<left>4</left>
-						<top>240</top>
-						<width>200</width>
+						<centerleft>110</centerleft>
+						<top>160</top>
+						<width min="0" max="220">auto</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>blue</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<info>ListItem.Label</info>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
-						<left>10</left>
-						<top>205</top>
-						<width>40</width>
-						<height>26</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>
-					<control type="image">
-						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>10</left>
-						<top>10</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
+                        <control type="group">
+							<visible>!StringCompare(listitem.label,..)</visible>
+							<visible>[Container.Content(Tvshows) | Container.Content(Seasons) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(addons)]</visible>
+                            <top>5</top>
+                            <control type="image">
+							<visible>!IsEmpty(ListItem.Property(TotalEpisodes)) | !IsEmpty(ListItem.VideoResolution) | [Container.Content(addons) +  !IsEmpty(ListItem.Property(Addon.Status))]</visible>
+								<include>Badge</include>
+								<colordiffuse>blue</colordiffuse>
+                            </control>
+                            <control type="label">
+							<visible>Container.Content(Tvshows) | Container.Content(Seasons)</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>[B]$INFO[ListItem.Property(TotalEpisodes),, e][/B]</label>
+                            </control>
+                            <control type="label">
+							<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | [Container.Content(addons) +  !IsEmpty(ListItem.Property(Addon.Status))]]</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$VAR[MediaInfoOverlayVar]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+							<visible>!StringCompare(listitem.label,..)</visible>
+                            <top>35</top>
+                            <control type="image">
+							<visible>[Container.Content(Movies) | Container.Content(Episodes)]</visible>
+							<visible>IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+								<include>Badge</include>
+								<colordiffuse>red</colordiffuse>
+                            </control>
+                            <control type="image">
+							<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
+								<include>Badge</include>
+								<colordiffuse>blue</colordiffuse>
+                            </control>
+                            <control type="image">
+							<visible>[Container.Content(Movies) | Container.Content(Episodes)]</visible>
+								<left>222</left>
+                                <height>26</height>
+                                <width>75</width>
+                                <aspectratio>scale</aspectratio>
+                                <texture>$INFO[ListItem.Overlay]</texture>
+                            </control>
+                            <control type="label">
+							<visible>IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+							<visible>[Container.Content(Movies) | Container.Content(Episodes)]</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$INFO[ListItem.PercentPlayed,, %]</label>
+                            </control>
+                            <control type="label">
+							<visible>[Container.Content(TvShows)]</visible>
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$INFO[ListItem.Property(TotalSeasons),, S]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+							<visible>!StringCompare(listitem.label,..)</visible>
+							<visible>!IsEmpty(ListItem.mpaa)</visible>
+                            <top>65</top>
+                            <control type="image">
+								<include>Badge</include>
+								<colordiffuse>blue</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <centerleft>260</centerleft>
+                                <height>26</height>
+                                <width>65</width>
+                                <font>font13</font>
+                                <align>center</align>
+                                <aligny>center</aligny>
+								<shadowcolor>-</shadowcolor>
+                                <textcolor>black</textcolor>
+                                <label>$VAR[rating]</label>
+                            </control>
+                        </control>
 				</focusedlayout>
 			</control>
 					<control type="textbox">
                     <visible>!StringCompare(listitem.label,..)</visible>
+                    <visible>Control.HasFocus(500)</visible>
 						<description>Description Value for Movie</description>
 						<left>745</left>
 						<top>315</top>
@@ -110,7 +281,7 @@
 						<font>font13</font>
 						<align>justify</align>
 						<textcolor>white</textcolor>
-						<label>$INFO[Container(500).ListItem.Plot]</label>
+						<label>$INFO[Container(500).ListItem.Plot]$INFO[Container(500).ListItem.Property(Addon.Description)]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 			<control type="scrollbar" id="60">

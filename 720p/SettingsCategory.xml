@@ -9,11 +9,12 @@
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<right>20</right>
-				<top>95</top>
+				<top>80</top>
 				<width>200</width>
 				<height>500</height>
 				<align>left</align>
 				<aligny>center</aligny>
+				<itemgap>5</itemgap>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>3</onup>
@@ -21,19 +22,10 @@
 			</control>
 			<control type="button" id="777">
 				<description>Setting level button</description>
-				<right>20</right>
+				<right>30</right>
 				<top>450</top>
-				<height>30</height>
-				<width>200</width>
+				<include>ButtonCommonValues</include>
 				<label>BACK</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font16</font>
-				<textcolor>white</textcolor>
-				<focusedcolor>blue</focusedcolor>
-				<texturefocus border="5">-</texturefocus>
-				<texturenofocus border="5">-</texturenofocus>
-				<pulseonselect>false</pulseonselect>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>3</onup>
@@ -42,19 +34,10 @@
 			</control>
 			<control type="button" id="20">
 				<description>Setting level button</description>
-				<right>20</right>
+				<right>30</right>
 				<top>500</top>
-				<height>30</height>
-				<width>200</width>
+				<include>ButtonCommonValues</include>
 				<label>10037</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font16</font>
-				<textcolor>white</textcolor>
-				<focusedcolor>blue</focusedcolor>
-				<texturefocus border="5">-</texturefocus>
-				<texturenofocus border="5">-</texturenofocus>
-				<pulseonselect>false</pulseonselect>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>777</onup>
@@ -81,7 +64,7 @@
 				<itemgap>-1</itemgap>
 				<pagecontrol>60</pagecontrol>
 				<onleft>3</onleft>
-				<onright>60</onright>
+				<onright>3</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
 			</control>
@@ -114,16 +97,7 @@
 		</control>
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<height>30</height>
-			<width>260</width>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font16</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>blue</focusedcolor>
-			<texturefocus border="5">-</texturefocus>
-			<texturenofocus border="5">-</texturenofocus>
-			<pulseonselect>false</pulseonselect>
+			<include>ButtonCommonValues</include>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>

@@ -4,6 +4,7 @@
 	<controls>
 		<control type="group">
 			<include>CommonBackground</include>
+		<include>wbg</include>
 			<control type="group">
 				<left>90</left>
 				<top>50</top>
@@ -55,9 +56,9 @@
 		<include>Clock</include>
 		<control type="button" id="777">
 			<description>back</description>
-			<top>75</top>
+			<right>30</right>
+			<top>80</top>
 			<onleft>61</onleft>
-			<right>20</right>
 			<include>ButtonCommonValues</include>
 			<onclick>back</onclick>
 			<label>BACK</label>

@@ -43,6 +43,12 @@
 					<include>ButtonCommonValues</include>
 					<label>19191</label>
 				</control>
+				<control type="button" id="90126">
+					<include>ButtonCommonValues</include>
+					<label>14111</label>
+					<onclick>ActivateWindow(EventLog,events://,return)</onclick>
+					<visible>system.getbool(eventlog.enabled)</visible>
+				</control>
 				<control type="button" id="777">
 					<description>Back</description>
 					<label>Back</label>

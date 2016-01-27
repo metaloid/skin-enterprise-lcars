@@ -48,15 +48,7 @@
 			<description>Cancel button</description>
 			<left>205</left>
 			<top>175</top>
-			<width>200</width>
-			<height>40</height>
-			<label>222</label>
-			<font>font16</font>
-			<textcolor>white</textcolor>
-			<focusedcolor>blue</focusedcolor>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<align>center</align>
+			<include>ButtonCommonValues</include>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>

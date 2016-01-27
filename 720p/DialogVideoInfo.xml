@@ -6,8 +6,8 @@
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<include>CommonBackground</include>
-		
+			<include>CommonBackground1</include>
+			<include>wbg</include>
 			<control type="group">
 				<animation effect="fade" delay="300" start="0" end="100" time="150">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
@@ -843,14 +843,14 @@
 				</control>
 				<control type="grouplist" id="9000">
 					<right>20</right>
-					<top>75</top>
+					<top>80</top>
 					<width>200</width>
 					<height>500</height>
 					<onleft>61</onleft>
 					<onright>noop</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
-					<itemgap>0</itemgap>
+					<itemgap>5</itemgap>
 					<control type="label">
 						<description>header label</description>
 						<width>200</width>
@@ -867,8 +867,8 @@
 						<include>ButtonCommonValues</include>
 						<textoffsetx>7</textoffsetx>
 						<label>208</label>
-						<alttexturefocus border="2">-</alttexturefocus>
-						<alttexturenofocus border="2">-</alttexturenofocus>
+						<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+						<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
 						<usealttexture>Container.Content(TVShows)</usealttexture>
 					</control>

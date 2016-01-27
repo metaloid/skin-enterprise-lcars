@@ -31,15 +31,8 @@
 			<description>OK button</description>
 			<left>205</left>
 			<top>175</top>
-			<width>200</width>
-			<height>40</height>
+			<include>ButtonCommonValues</include>
 			<label>186</label>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<font>font16</font>
-			<align>center</align>
-			<textcolor>white</textcolor>
-			<focusedcolor>blue</focusedcolor>
 			<onleft>10</onleft>
 			<onright>10</onright>
 			<onup>10</onup>
