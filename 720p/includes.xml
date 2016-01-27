@@ -9,9 +9,7 @@
 	<include file="ViewsLiveTV.xml" />
 	<include file="ViewsPVRGuide.xml" />
 	<include file="ViewsWeather.xml" />
-	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
-	<include file="IncludesHomeMenuItems.xml" />
 	<include file="IncludesPVR.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
@@ -35,13 +33,6 @@
 	<variable name="SelectBack">
 		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">dialogback.png</value>
 		<value>dialogback2.png</value>
-	</variable>
-	<variable name="typehackflagging">
-		<value condition="[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">bluray</value>
-		<value condition="substring(ListItem.FilenameAndPath,hddvd)">hddvd</value>
-		<value condition="substring(ListItem.FilenameAndPath,dvd)">dvd</value>
-		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">TV</value>
-		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
 	</variable>
 	<variable name="rating">
         <!-- US (IMDB) -->
@@ -87,10 +78,6 @@
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:18)]">18</value>
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:X)]">X</value>
         <value>$INFO[ListItem.MPAA]</value>
-	</variable>
-	<variable name="videocodec">
-		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
-		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
 	<variable name="SeekLabel">
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
@@ -305,6 +292,21 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<textwidth>180</textwidth>
+		<texturefocus colordiffuse="red">white.png</texturefocus>
+		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
+		<font>font16</font>
+		<pulseonselect></pulseonselect>
+	</include>
+	<include name="ButtonControls">
+		<width>45</width>
+		<height>30</height>
+		<textcolor>black</textcolor>
+		<focusedcolor>black</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>2</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textwidth>41</textwidth>
 		<texturefocus colordiffuse="red">white.png</texturefocus>
 		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 		<font>font16</font>
@@ -723,59 +725,75 @@
 			<visible>false</visible>
 		</control>
 		<control type="group" id="9006">
+			<visible>Player.HasMedia</visible>
 			<width>190</width>
 			<height>33</height>
-			<visible>VideoPlayer.Content(LiveTV)</visible>
-			<control type="image">
-                <visible>!ControlGroup(9006).HasFocus</visible>
-				<width>190</width>
-				<height>33</height>
-				<texture colordiffuse="blue">white.png</texture>
-			</control>
-			<control type="image">
-                <visible>ControlGroup(9006).HasFocus</visible>
-				<width>190</width>
-				<height>33</height>
-				<texture colordiffuse="red">white.png</texture>
-			</control>
-			
 			<control type="button" id="600">
+			<visible>VideoPlayer.Content(LiveTV)</visible>
 				<left>0</left>
 				<top>2</top>
-				<width>30</width>
+				<width>45</width>
 				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDChannelUPFO.png</texturefocus>
-				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
-				<onleft>50</onleft>
+				<include>ButtonControls</include>
+				<label>▼</label>
+				<onleft>604</onleft>
 				<onright>601</onright>
 				<onup>610</onup>
 				<ondown>611</ondown>
 				<onclick>ChannelDown</onclick>
 			</control>
 			<control type="button" id="601">
-				<left>30</left>
+			<visible>VideoPlayer.Content(LiveTV)</visible>
+				<left>48</left>
 				<top>2</top>
-				<width>30</width>
+				<width>45</width>
 				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDChannelDownFO.png</texturefocus>
-				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
+				<include>ButtonControls</include>
+				<label>▲</label>
 				<onleft>600</onleft>
 				<onright>603</onright>
 				<onup>610</onup>
 				<ondown>611</ondown>
 				<onclick>ChannelUp</onclick>
 			</control>
-			<control type="button" id="603">
-				<left>60</left>
+			<control type="button" id="600">
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<left>0</left>
 				<top>2</top>
-				<width>30</width>
+				<width>45</width>
 				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDStopFO.png</texturefocus>
-				<texturenofocus>OSDStopNF.png</texturenofocus>
-				<onleft>601</onleft>
+				<label>◄◄</label>
+				<include>ButtonControls</include>
+				<onleft>604</onleft>
+				<onright>602</onright>
+				<onup>610</onup>
+				<ondown>611</ondown>
+				<onback>50</onback>
+				<onclick>PlayerControl(Previous)</onclick>
+			</control>
+			<control type="button" id="602">
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+				<left>48</left>
+				<top>2</top>
+				<width>45</width>
+				<height>30</height>
+				<label>►►</label>
+				<include>ButtonControls</include>
+				<onleft>600</onleft>
+				<onright>603</onright>
+				<onup>610</onup>
+				<ondown>611</ondown>
+				<onback>50</onback>
+				<onclick>PlayerControl(Next)</onclick>
+			</control>
+			<control type="button" id="603">
+				<left>96</left>
+				<top>2</top>
+				<width>45</width>
+				<height>30</height>
+				<label>■</label>
+				<include>ButtonControls</include>
+				<onleft>602</onleft>
 				<onright>604</onright>
 				<onup>610</onup>
 				<ondown>611</ondown>
@@ -783,218 +801,24 @@
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="togglebutton" id="604">
-				<left>90</left>
+				<left>144</left>
 				<top>2</top>
-				<width>30</width>
+				<width>45</width>
 				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDPauseFO.png</texturefocus>
-				<texturenofocus>OSDPauseNF.png</texturenofocus>
+				<label>II</label>
+				<include>ButtonControls</include>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
-				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
+					<altlabel>►</altlabel>
 				<onleft>603</onleft>
-				<onright>605</onright>
+				<onright>600</onright>
 				<onup>610</onup>
-				<ondown>606</ondown>
+				<ondown>611</ondown>
 				<onback>50</onback>
 				<onclick>PlayerControl(Play)</onclick>
 				<enable>Player.PauseEnabled</enable>
-				<animation effect="fade" start="100" end="30" time="75" condition="!Player.PauseEnabled">Conditional</animation>
 			</control>
-			<control type="button" id="605">
-				<left>120</left>
-				<top>2</top>
-				<width>30</width>
-				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDRecordOffFO.png</texturefocus>
-				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
-				<onleft>604</onleft>
-				<onright>50</onright>
-				<onup>610</onup>
-				<ondown>611</ondown>
-				<onclick>PlayerControl(record)</onclick>
-				<enable>Player.CanRecord</enable>
-				<animation effect="fade" start="100" end="30" time="75" condition="!Player.CanRecord">Conditional</animation>
-			</control>
-		</control>
-		<control type="group" id="9005">
-			<visible>Player.HasMedia</visible>
-			<visible>!VideoPlayer.Content(LiveTV)</visible>
-			<control type="image">
-                <visible>!ControlGroup(9005).HasFocus</visible>
-				<width>190</width>
-				<height>33</height>
-				<texture colordiffuse="blue">white.png</texture>
-			</control>
-			<control type="image">
-                <visible>ControlGroup(9005).HasFocus</visible>
-				<width>190</width>
-				<height>33</height>
-				<texture colordiffuse="red">white.png</texture>
-			</control>
-			
-			<width>190</width>
-			<height>33</height>
-			<defaultcontrol always="true">603</defaultcontrol>
-			<control type="button" id="600">
-				<left>0</left>
-				<top>2</top>
-				<width>30</width>
-				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDPrevTrackFO.png</texturefocus>
-				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>606</onright>
-				<onup>610</onup>
-				<ondown>611</ondown>
-				<onback>50</onback>
-				<onclick>PlayerControl(Previous)</onclick>
-			</control>
-			<control type="button" id="606">
-				<left>30</left>
-				<top>2</top>
-				<width>30</width>
-				<height>30</height>
-				<label>-</label>
-				<texturefocus>OSDRewindFO.png</texturefocus>
-				<texturenofocus>OSDRewindNF.png</texturenofocus>
-				<onleft>600</onleft>
-				<onright>603</onright>
-				<onup>610</onup>
-				<ondown>611</ondown>
-				<onback>50</onback>
-				<onclick>PlayerControl(Rewind)</onclick>
-				<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
-			</control>
-			<control type="group">
-				<animation effect="slide" start="0,0" end="40,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
-				<control type="togglebutton" id="603">
-					<left>30</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<label>-</label>
-					<texturefocus>OSDPauseFO.png</texturefocus>
-					<texturenofocus>OSDPauseNF.png</texturenofocus>
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturefocus>OSDPlayFO.png</alttexturefocus>
-					<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-					<onleft>606</onleft>
-					<onright>601</onright>
-					<onup>610</onup>
-					<ondown>611</ondown>
-					<onback>50</onback>
-					<onclick>PlayerControl(Play)</onclick>
-				</control>
-				<control type="button" id="601">
-					<left>60</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<label>-</label>
-					<texturefocus>OSDStopFO.png</texturefocus>
-					<texturenofocus>OSDStopNF.png</texturenofocus>
-					<onleft>603</onleft>
-					<onright>607</onright>
-					<onup>610</onup>
-					<ondown>611</ondown>
-					<onback>50</onback>
-					<onclick>down</onclick>
-					<onclick>PlayerControl(Stop)</onclick>
-				</control>
-				<control type="button" id="607">
-					<left>90</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<label>-</label>
-					<texturefocus>OSDForwardFO.png</texturefocus>
-					<texturenofocus>OSDForwardNF.png</texturenofocus>
-					<onleft>601</onleft>
-					<onright>602</onright>
-					<onup>610</onup>
-					<ondown>611</ondown>
-					<onback>50</onback>
-					<onclick>PlayerControl(Forward)</onclick>
-					<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
-				</control>
-				<control type="button" id="602">
-					<left>90</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<label>-</label>
-					<texturefocus>OSDNextTrackFO.png</texturefocus>
-					<texturenofocus>OSDNextTrackNF.png</texturenofocus>
-					<onleft>607</onleft>
-					<onright>604</onright>
-					<onup>610</onup>
-					<ondown>611</ondown>
-					<onback>50</onback>
-					<onclick>PlayerControl(Next)</onclick>
-					<animation effect="slide" start="0,0" end="40,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
-				</control>
-			</control>
-			<control type="group">
-				<visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist) + !Player.HasVideo</visible>
-				<control type="button" id="604">
-					<left>120</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<label>-</label>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<onclick>PlayerControl(Repeat)</onclick>
-					<onleft>602</onleft>
-					<onright>605</onright>
-					<onup>610</onup>
-					<ondown>611</ondown>
-					<onback>50</onback>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<texture>$VAR[PlayerControlsRepeatImageVar]</texture>
-				</control>
-				<control type="togglebutton" id="605">
-					<left>150</left>
-					<top>2</top>
-					<width>30</width>
-					<height>30</height>
-					<label>-</label>
-					<texturefocus>OSDRandomOffFO.png</texturefocus>
-					<texturenofocus>OSDRandomOffNF.png</texturenofocus>
-					<usealttexture>Playlist.IsRandom</usealttexture>
-					<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
-					<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
-					<onclick>PlayerControl(Random)</onclick>
-					<onleft>604</onleft>
-					<onright>50</onright>
-					<onup>610</onup>
-					<ondown>611</ondown>
-					<onback>50</onback>
-				</control>
-			</control>
-		</control>
-		<control type="button" id="611">
-			<description>Go to fullscreen Playback</description>
-			<include>ButtonCommonValues</include>
-			<label>31008</label>
-			<onclick>fullscreen</onclick>
-			<visible>Player.HasMedia</visible>
-		</control>
-		<control type="button" id="612">
-			<description>Go to playlist</description>
-			<include>ButtonCommonValues</include>
-			<label>13350</label>
-			<onclick>$VAR[PlayList]</onclick>
-			<visible>[Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)]</visible>
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
@@ -1040,178 +864,6 @@
 			<include>Window_OpenClose_Animation</include>
 		</control>
 	</include>
-	<include name="TVNextAiredListCommonLayout">
-		<itemlayout height="150" width="280">
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>280</width>
-				<height>145</height>
-				<texture border="10">button-nofocus.png</texture>
-			</control>
-			<control type="image">
-				<description>Thumb</description>
-				<left>5</left>
-				<top>5</top>
-				<width>270</width>
-				<height>55</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-			</control>
-			<control type="image">
-				<description>Banner</description>
-				<left>5</left>
-				<top>5</top>
-				<width>270</width>
-				<height>55</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
-			</control>
-			<control type="image">
-				<description>Logo</description>
-				<left>5</left>
-				<top>5</top>
-				<width>270</width>
-				<height>55</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<left>10</left>
-				<top>60</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(NextNumber),$LOCALIZE[20359] [COLOR=blue]-[/COLOR] ]</label>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<description>Episode Name</description>
-				<left>10</left>
-				<top>80</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(NextTitle)]</label>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<description>Next air date/time</description>
-				<left>10</left>
-				<top>100</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(NextDate), [COLOR=blue]-[/COLOR] ]</label>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<description>Duration</description>
-				<left>10</left>
-				<top>120</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[ListItem.Property(Network), [COLOR=blue]-[/COLOR] (,)]</label>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-		</itemlayout>
-		<focusedlayout height="150" width="280">
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>280</width>
-				<height>145</height>
-				<texture border="10">button-focus2.png</texture>
-			</control>
-			<control type="image">
-				<description>Thumb</description>
-				<left>5</left>
-				<top>5</top>
-				<width>270</width>
-				<height>55</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
-			</control>
-			<control type="image">
-				<description>Banner</description>
-				<left>5</left>
-				<top>5</top>
-				<width>270</width>
-				<height>55</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
-			</control>
-			<control type="image">
-				<description>Logo</description>
-				<left>5</left>
-				<top>5</top>
-				<width>270</width>
-				<height>55</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
-				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
-			</control>
-			<control type="label">
-				<description>Episode Number</description>
-				<left>10</left>
-				<top>60</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(NextNumber),$LOCALIZE[20359] [COLOR=blue]-[/COLOR] ]</label>
-				<textcolor>selected</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<description>Episode Name</description>
-				<left>10</left>
-				<top>80</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(NextTitle)]</label>
-				<textcolor>selected</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<description>Next air date/time</description>
-				<left>10</left>
-				<top>100</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(NextDate), [COLOR=blue]-[/COLOR] ]</label>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<description>Duration</description>
-				<left>10</left>
-				<top>120</top>
-				<width>260</width>
-				<height>15</height>
-				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[ListItem.Property(Network), [COLOR=blue]-[/COLOR] (,)]</label>
-				<textcolor>white</textcolor>
-				<font>font12</font>
-				<align>center</align>
-			</control>
-		</focusedlayout>
-	</include>
-	<include name="backgroundfade">
-		<animation effect="fade" time="450">Visible</animation>
-		<animation effect="fade" time="450">Hidden</animation>
-	</include>
 	<include name="Window_OpenClose_Animation">
 		<animation effect="fade" time="200">WindowOpen</animation>
 		<animation effect="fade" time="200">WindowClose</animation>
@@ -1227,11 +879,12 @@
 	<include name="KeyboardButton">
 		<width>50</width>
 		<height>50</height>
-		<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-		<texturefocus border="5">KeyboardKey.png</texturefocus>
+		<texturefocus colordiffuse="red">white.png</texturefocus>
+		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font13</font>
+		<textcolor>black</textcolor>
 		<focusedcolor>black</focusedcolor>
 	</include>
 </includes>

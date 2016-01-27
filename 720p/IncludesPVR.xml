@@ -133,7 +133,7 @@
 					<description>View As button</description>
 					<include>ButtonCommonValues</include>
 					<label>-</label>
-					<!-- <visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible> -->
+					<visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible>
 				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
@@ -184,6 +184,12 @@
 				</control>
 				<!-- Playback controls -->
 				<include>CommonNowPlaying_Controls</include>
+ 				<control type="button" id="611">
+					<visible>Player.HasMedia</visible>
+					<include>ButtonCommonValues</include>
+					<label>31008</label>
+                    <onclick>fullscreen</onclick>
+				</control>
 				<control type="button" id="777">
 					<description>back</description>
 					<include>ButtonCommonValues</include>

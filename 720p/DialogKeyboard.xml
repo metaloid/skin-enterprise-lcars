@@ -49,10 +49,10 @@
 			</control>
 			<control type="group">
 				<left>30</left>
-				<top>140</top>
+				<top>135</top>
 				<!-- 1st row -->
 				<control type="grouplist">
-					<itemgap>0</itemgap>
+					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="309">
 						<description>Layout button</description>
@@ -61,11 +61,12 @@
 						<label>20177</label>
 						<onup>300</onup>
 						<ondown>302</ondown>
-						<texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
-						<texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="100">
@@ -138,16 +139,14 @@
 						<description>(0,11) key button</description>
 						<onup>306</onup>
 						<ondown>131</ondown>
-						<texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
-						<texturefocus flipx="true" border="5,25,25,5">KeyboardCornerTop.png</texturefocus>
 						<include>KeyboardButton</include>
 					</control>
 				</control>
 				<!-- 2nd row -->
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
-					<top>50</top>
-					<itemgap>0</itemgap>
+					<top>52</top>
+					<itemgap>2</itemgap>
 					<control type="radiobutton" id="302">
 						<description>SHIFT button</description>
 						<width>200</width>
@@ -155,14 +154,15 @@
 						<label>20178</label>
 						<onup>309</onup>
 						<ondown>303</ondown>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="120">
@@ -240,9 +240,9 @@
 				</control>
 				<!-- 3rd row -->
 				<control type="grouplist">
-					<top>100</top>
+					<top>104</top>
 					<orientation>horizontal</orientation>
-					<itemgap>0</itemgap>
+					<itemgap>2</itemgap>
 					<control type="radiobutton" id="303">
 						<description>CAPS LOCK button</description>
 						<width>200</width>
@@ -250,14 +250,15 @@
 						<label>20179</label>
 						<onup>302</onup>
 						<ondown>307</ondown>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="140">
@@ -335,38 +336,40 @@
 				</control>
 				<!-- 4th row -->
 				<control type="grouplist">
-					<top>150</top>
-					<itemgap>0</itemgap>
+					<top>156</top>
+					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="307">
 						<description>IP Input button</description>
-						<width>100</width>
+						<width>99</width>
 						<height>50</height>
 						<onup>303</onup>
 						<ondown>300</ondown>
 						<label>IP</label>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="radiobutton" id="304">
 						<description>Symbols button</description>
-						<width>100</width>
+						<width>99</width>
 						<height>50</height>
 						<label>@#!*   </label>
 						<onup>303</onup>
 						<ondown>300</ondown>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<radioposy>5</radioposy>
 						<radiowidth>20</radiowidth>
 						<radioheight>20</radioheight>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="160">
@@ -444,21 +447,22 @@
 				</control>
 				<!-- 5th row -->
 				<control type="grouplist">
-					<top>200</top>
-					<itemgap>0</itemgap>
+					<top>208</top>
+					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="button" id="300">
 						<description>DONE button</description>
 						<width>200</width>
 						<height>50</height>
-						<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
-						<texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<label>20177</label>
 						<font>font13</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<onup>304</onup>
 						<ondown>309</ondown>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="32">
@@ -466,11 +470,12 @@
 						<width>200</width>
 						<height>50</height>
 						<label>20182</label>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 						<onup>161</onup>
 						<ondown>101</ondown>
@@ -482,11 +487,12 @@
 						<label>20181</label>
 						<onup>165</onup>
 						<ondown>105</ondown>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font13</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 					</control>
 					<control type="button" id="305">
@@ -496,9 +502,10 @@
 						<label>&lt;</label>
 						<align>center</align>
 						<aligny>center</aligny>
-						<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-						<texturefocus border="5">KeyboardKey.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<font>font30</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 						<onup>168</onup>
 						<ondown>108</ondown>
@@ -510,9 +517,10 @@
 						<label>&gt;</label>
 						<align>center</align>
 						<aligny>center</aligny>
-						<texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus>
-						<texturefocus flipx="true" border="5,5,25,25">KeyboardCornerBottom.png</texturefocus>
+						<texturefocus colordiffuse="red">white.png</texturefocus>
+						<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 						<font>font30</font>
+						<textcolor>black</textcolor>
 						<focusedcolor>black</focusedcolor>
 						<onup>170</onup>
 						<ondown>110</ondown>

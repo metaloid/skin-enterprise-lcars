@@ -34,7 +34,7 @@
 						<width>190</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Icon]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="defaultmis.png">$INFO[ListItem.Icon]</texture>
 						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>
@@ -83,7 +83,7 @@
 						<width>190</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Icon]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="defaultmis.png">$INFO[ListItem.Icon]</texture>
 						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>

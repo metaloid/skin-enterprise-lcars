@@ -132,7 +132,6 @@
 					<label>1390</label>
                     <onclick>ActivateWindow(Settings)</onclick>
 				</control>
-				<include>CommonNowPlaying_Controls</include>
                 <!--EXIT-->
  				<control type="button" id="12">
 					<visible>!Player.HasMedia</visible>
@@ -140,8 +139,14 @@
 					<label>exit</label>
                     <onclick>ActivateWindow(ShutdownMenu)</onclick>
 				</control>
+				<include>CommonNowPlaying_Controls</include>
+ 				<control type="button" id="611">
+					<visible>Player.HasMedia</visible>
+					<include>ButtonCommonValues</include>
+					<label>31008</label>
+                    <onclick>fullscreen</onclick>
+				</control>
 			</control>
-		
 		<control type="group">
 			<left>0</left>
 			<top>60r</top>

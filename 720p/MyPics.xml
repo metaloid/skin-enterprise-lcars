@@ -74,6 +74,12 @@
 					<label>13319</label>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
+ 				<control type="button" id="611">
+					<visible>Player.HasMedia</visible>
+					<include>ButtonCommonValues</include>
+					<label>31008</label>
+                    <onclick>fullscreen</onclick>
+				</control>
 				<control type="button" id="777">
 					<description>back</description>
 					<include>ButtonCommonValues</include>

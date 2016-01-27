@@ -24,7 +24,7 @@
 						<height>160</height>
 						<align>center</align>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>
@@ -150,7 +150,7 @@
 						<width>220</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
+						<texture  diffuse="poster-mask.png"  background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
 						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>

@@ -401,26 +401,15 @@
 				<itemgap>5</itemgap>
 				<control type="spincontrolex" id="3">
 					<description>change location button</description>
-					<width>190</width>
-					<height>30</height>
+					<textwidth>120</textwidth>
+					<reverse>yes</reverse>
 					<spinwidth>22</spinwidth>
 					<spinheight>22</spinheight>
-					<texturefocus colordiffuse="red">white.png</texturefocus>
-					<texturenofocus colordiffuse="blue">white.png</texturenofocus>
+					<include>ButtonCommonValues</include>
 					<textureup>scroll-up.png</textureup>
 					<texturedown>scroll-down.png</texturedown>
 					<textureupfocus>scroll-up-focus.png</textureupfocus>
 					<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-					<font>font16</font>
-					<textcolor>white</textcolor>
-					<disabledcolor>grey3</disabledcolor>
-					<focusedcolor>white</focusedcolor>
-					<align>left</align>
-					<textwidth>120</textwidth>
-					<textoffsetx>7</textoffsetx>
-					<aligny>center</aligny>
-					<reverse>yes</reverse>
-					<pulseonselect>no</pulseonselect>
 				</control>
 				<control type="button" id="302">
 					<description>Daily forcast button</description>
