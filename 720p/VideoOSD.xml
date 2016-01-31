@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol>100</defaultcontrol>
 	<onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
 	<coordinates>
 		<system>1</system>
@@ -47,125 +47,81 @@
 			<left>325</left>
 			<top>60r</top>
 			<orientation>horizontal</orientation>
-			<itemgap>0</itemgap>
+			<itemgap>5</itemgap>
 			<animation effect="fade" time="150">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<onup>1000</onup>
 			<control type="button" id="300">
-				<width>55</width>
-				<height>55</height>
-				<label>210</label>
-				<font>-</font>
-				<texturefocus>OSDChannelUPFO.png</texturefocus>
-				<texturenofocus>OSDChannelUPNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>▼</label>
 				<onclick>PlayerControl(Previous)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="301">
-				<width>55</width>
-				<height>55</height>
-				<label>209</label>
-				<font>-</font>
-				<texturefocus>OSDChannelDownFO.png</texturefocus>
-				<texturenofocus>OSDChannelDownNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>▲</label>
 				<onclick>PlayerControl(Next)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="200">
-				<width>55</width>
-				<height>55</height>
-				<label>210</label>
-				<font>-</font>
-				<texturefocus>OSDPrevTrackFO.png</texturefocus>
-				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+				<label>▐◄</label>
+				<include>OsdButton</include>
 				<onclick>PlayerControl(Previous)</onclick>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="201">
-				<width>55</width>
-				<height>55</height>
-				<label>31354</label>
-				<font>-</font>
-				<texturefocus>OSDRewindFO.png</texturefocus>
-				<texturenofocus>OSDRewindNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>◄◄</label>
 				<enable>Player.SeekEnabled</enable>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
 			<control type="togglebutton" id="202">
-				<width>55</width>
-				<height>55</height>
-				<label>31351</label>
-				<altlabel>208</altlabel>
-				<font>-</font>
-				<texturefocus>OSDPauseFO.png</texturefocus>
-				<texturenofocus>OSDPauseNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>▌▐</label>
+				<altlabel>►</altlabel>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
-				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+				<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
 				<onclick>PlayerControl(Play)</onclick>
 				<enable>Player.PauseEnabled</enable>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.PauseEnabled">Conditional</animation>
 			</control>
 			<control type="button" id="203">
-				<width>55</width>
-				<height>55</height>
-				<label>31352</label>
-				<font>-</font>
-				<texturefocus>OSDStopFO.png</texturefocus>
-				<texturenofocus>OSDStopNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>■</label>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="button" id="204">
-				<width>55</width>
-				<height>55</height>
-				<label>31353</label>
-				<font>-</font>
-				<texturefocus>OSDForwardFO.png</texturefocus>
-				<texturenofocus>OSDForwardNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>►►</label>
 				<enable>Player.SeekEnabled</enable>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.SeekEnabled">Conditional</animation>
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="205">
-				<width>55</width>
-				<height>55</height>
-				<label>209</label>
-				<font>-</font>
-				<texturefocus>OSDNextTrackFO.png</texturefocus>
-				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>►▌</label>
 				<onclick>PlayerControl(Next)</onclick>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="306">
-				<width>55</width>
-				<height>55</height>
-				<label>19019</label>
-				<font>-</font>
-				<texturefocus>OSDChannelListFO.png</texturefocus>
-				<texturenofocus>OSDChannelListNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>C</label>
 				<onclick>ActivateWindow(PVROSDChannels)</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="307">
-				<width>55</width>
-				<height>55</height>
-				<label>$LOCALIZE[19029]$INFO[VideoPlayer.ChannelName, - ]</label>
-				<font>-</font>
-				<texturefocus>OSDepgFO.png</texturefocus>
-				<texturenofocus>OSDepgNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>E</label>
 				<onclick>ActivateWindow(PVROSDGuide)</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="350">
-				<width>55</width>
-				<height>55</height>
-				<label>31356</label>
-				<font>-</font>
-				<texturefocus>OSDTeleTextFO.png</texturefocus>
-				<texturenofocus>OSDTeleTextNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>T</label>
 				<onclick>ActivateWindow(Teletext)</onclick>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 			</control>
@@ -182,66 +138,43 @@
 			<control type="button" id="255">
 				<enable>VideoPlayer.IsStereoscopic</enable>
 				<animation effect="fade" start="100" end="0" time="75" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
-				<width>55</width>
-				<height>55</height>
-				<label>36501</label>
-				<font>-</font>
-				<texturefocus>OSDStereoscopicFO.png</texturefocus>
-				<texturenofocus>OSDStereoscopicNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>3D</label>
 				<onup>501</onup>
 				<ondown>1000</ondown>
 			</control>
 			<control type="button" id="250">
-				<width>55</width>
-				<height>55</height>
-				<label>31356</label>
-				<font>-</font>
-				<texturefocus>OSDSubtitlesFO.png</texturefocus>
-				<texturenofocus>OSDSubtitlesNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>S</label>
 				<onup>404</onup>
 				<ondown>1000</ondown>
 			</control>
 			<control type="button" id="251">
-				<width>55</width>
-				<height>55</height>
-				<label>13395</label>
+				<include>OsdButton</include>
+				<label>V</label>
 				<font>-</font>
-				<texturefocus>OSDVideoFO.png</texturefocus>
-				<texturenofocus>OSDVideoNF.png</texturenofocus>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 			</control>
 			<control type="button" id="252">
-				<width>55</width>
-				<height>55</height>
-				<label>13396</label>
-				<font>-</font>
-				<texturefocus>OSDAudioFO.png</texturefocus>
-				<texturenofocus>OSDAudioNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>A</label>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 			</control>
 			<control type="button" id="253">
-				<width>55</width>
-				<height>55</height>
-				<label>298</label>
-				<font>-</font>
-				<texturefocus>OSDBookmarksFO.png</texturefocus>
-				<texturenofocus>OSDBookmarksNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>B</label>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>ActivateWindow(VideoBookmarks)</onclick>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="button" id="254">
-				<width>55</width>
-				<height>55</height>
-				<label>31355</label>
-				<font>-</font>
-				<texturefocus>OSDDvdFO.png</texturefocus>
-				<texturenofocus>OSDDvdNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>D</label>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(ShowVideoMenu)</onclick>
@@ -250,16 +183,12 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="togglebutton" id="353">
-				<width>55</width>
-				<height>55</height>
-				<label>264</label>
-				<altlabel>265</altlabel>
-				<font>-</font>
-				<texturefocus>OSDRecordOffFO.png</texturefocus>
-				<texturenofocus>OSDRecordOffNF.png</texturenofocus>
+				<include>OsdButton</include>
+				<label>○</label>
+				<altlabel>●</altlabel>
 				<usealttexture>Player.Recording</usealttexture>
-				<alttexturefocus>OSDRecordOnFO.png</alttexturefocus>
-				<alttexturenofocus>OSDRecordOnNF.png</alttexturenofocus>
+				<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
 				<onclick>PlayerControl(Record)</onclick>
 				<enable>Player.CanRecord</enable>
 				<animation effect="fade" start="100" end="50" time="75" condition="!Player.CanRecord">Conditional</animation>

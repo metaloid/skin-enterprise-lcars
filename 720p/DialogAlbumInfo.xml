@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">5</defaultcontrol>
+	<defaultcontrol>5</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
 			<include>CommonBackground1</include>
 			<include>wbg</include>
+			<control type="label">
+				<include>WindowTitleSide</include>
+				<label>$INFO[Listitem.Title]</label>
+			</control>
 			<control type="group">
 				<animation effect="fade" delay="300" start="0" end="100" time="150">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>

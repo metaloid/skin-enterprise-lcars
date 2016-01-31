@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">21</defaultcontrol>
+	<defaultcontrol>21</defaultcontrol>
 	<coordinates>
 		<system>2</system>
 		<left>480</left>
@@ -70,15 +70,8 @@
 				<description>1 button</description>
 				<left>0</left>
 				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="25,25,5,5">KeyboardCornerTopNF.png</texturenofocus>
-				<texturefocus border="25,25,5,5">KeyboardCornerTop.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12311</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>23</onleft>
 				<onright>12</onright>
 				<onup>20</onup>
@@ -88,15 +81,8 @@
 				<description>2 button</description>
 				<left>60</left>
 				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12312</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>11</onleft>
 				<onright>13</onright>
 				<onup>10</onup>
@@ -106,15 +92,8 @@
 				<description>3 button</description>
 				<left>120</left>
 				<top>0</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12313</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>12</onleft>
 				<onright>23</onright>
 				<onup>22</onup>
@@ -125,15 +104,10 @@
 				<left>180</left>
 				<top>0</top>
 				<width>60</width>
-				<height>120</height>
-				<font>font12</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus flipx="true" border="5,25,25,5">KeyboardCornerTopNF.png</texturenofocus>
-				<texturefocus flipx="true" border="5,35,25,5">KeyboardCornerTop.png</texturefocus>
-				<textwidth>120</textwidth>
+				<height>110</height>
+				<textwidth>110</textwidth>
+				<include>KeyboardButton</include>
 				<label>20181</label>
-				<focusedcolor>black</focusedcolor>
 				<angle>270</angle>
 				<onleft>13</onleft>
 				<onright>11</onright>
@@ -144,15 +118,8 @@
 				<description>4 button</description>
 				<left>0</left>
 				<top>60</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12314</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>23</onleft>
 				<onright>15</onright>
 				<onup>11</onup>
@@ -162,15 +129,8 @@
 				<description>5 button</description>
 				<left>60</left>
 				<top>60</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12315</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>14</onleft>
 				<onright>16</onright>
 				<onup>12</onup>
@@ -180,15 +140,8 @@
 				<description>6 button</description>
 				<left>120</left>
 				<top>60</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12316</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>15</onleft>
 				<onright>23</onright>
 				<onup>13</onup>
@@ -198,15 +151,8 @@
 				<description>7 button</description>
 				<left>0</left>
 				<top>120</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12317</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>21</onleft>
 				<onright>18</onright>
 				<onup>14</onup>
@@ -216,15 +162,8 @@
 				<description>8 button</description>
 				<left>60</left>
 				<top>120</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12318</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>17</onleft>
 				<onright>19</onright>
 				<onup>15</onup>
@@ -234,15 +173,8 @@
 				<description>9 button</description>
 				<left>120</left>
 				<top>120</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12319</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>18</onleft>
 				<onright>21</onright>
 				<onup>16</onup>
@@ -253,15 +185,10 @@
 				<left>180</left>
 				<top>120</top>
 				<width>60</width>
-				<height>120</height>
-				<font>font12</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus flipx="true" border="5,5,25,25">KeyboardCornerBottomNF.png</texturenofocus>
-				<texturefocus flipx="true" border="5,30,25,25">KeyboardCornerBottom.png</texturefocus>
-				<textwidth>120</textwidth>
+				<height>110</height>
+				<textwidth>110</textwidth>
+				<include>KeyboardButton</include>
 				<label>20177</label>
-				<focusedcolor>black</focusedcolor>
 				<angle>270</angle>
 				<onleft>19</onleft>
 				<onright>17</onright>
@@ -272,15 +199,8 @@
 				<description>prev button</description>
 				<left>0</left>
 				<top>180</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font30</font>
+				<include>KeyboardButton</include>
 				<label>&lt;</label>
-				<focusedcolor>black</focusedcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="25,5,25,5">KeyboardCornerBottomNF.png</texturenofocus>
-				<texturefocus border="25,5,25,5">KeyboardCornerBottom.png</texturefocus>
 				<onleft>21</onleft>
 				<onright>10</onright>
 				<onup>17</onup>
@@ -290,15 +210,8 @@
 				<description>0 button</description>
 				<left>60</left>
 				<top>180</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font13</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
+				<include>KeyboardButton</include>
 				<label>12310</label>
-				<focusedcolor>black</focusedcolor>
 				<onleft>20</onleft>
 				<onright>22</onright>
 				<onup>18</onup>
@@ -308,15 +221,8 @@
 				<description>next button</description>
 				<left>120</left>
 				<top>180</top>
-				<width>60</width>
-				<height>60</height>
-				<font>font30</font>
+				<include>KeyboardButton</include>
 				<label>&gt;</label>
-				<focusedcolor>black</focusedcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
-				<texturefocus border="5">KeyboardKey.png</texturefocus>
 				<onleft>10</onleft>
 				<onright>21</onright>
 				<onup>19</onup>

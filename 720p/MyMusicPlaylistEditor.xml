@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">6</defaultcontrol>
+	<defaultcontrol>6</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<include>CommonBackground1</include>
 		<control type="group">
 			<top>10</top>
 			<include>Window_OpenClose_Animation</include>

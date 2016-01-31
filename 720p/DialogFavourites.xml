@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<left>0</left>
@@ -44,86 +44,54 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
-				<itemlayout height="279" width="216">
+				<itemlayout height="180" width="300">
 					<control type="image">
-						<left>1</left>
+						<left>0</left>
 						<top>0</top>
-						<width>214</width>
-						<height>240</height>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
-						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
-						<bordersize>4</bordersize>
+						<width>220</width>
+						<height>160</height>
+						<align>center</align>
+						<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
+						<texture background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
+						<bordertexture colordiffuse="blue">folder-focus.png</bordertexture>
+						<bordersize>5</bordersize>
 					</control>
 					<control type="label">
-						<left>8</left>
-						<top>240</top>
-						<width>200</width>
+						<centerleft>110</centerleft>
+						<top>160</top>
+						<width min="0" max="220">auto</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<info>ListItem.Label</info>
-					</control>
-					<control type="image">
-						<left>170</left>
-						<top>210</top>
-						<width>30</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>
-					<control type="image">
-						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>10</left>
-						<top>10</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="276" width="216">
+				<focusedlayout height="180" width="300">
 					<control type="image">
-						<left>1</left>
+						<left>0</left>
 						<top>0</top>
-						<width>214</width>
-						<height>240</height>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$VAR[PosterThumb]</texture>
-						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
-						<bordersize>4</bordersize>
+						<width>220</width>
+						<height>160</height>
+						<align>center</align>
+						<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
+						<texture background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
+						<bordertexture colordiffuse="red">folder-focus.png</bordertexture>
+						<bordersize>5</bordersize>
 					</control>
 					<control type="label">
-						<left>8</left>
-						<top>240</top>
-						<width>200</width>
+						<centerleft>110</centerleft>
+						<top>160</top>
+						<width min="0" max="220">auto</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>blue</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
-						<info>ListItem.Label</info>
-					</control>
-					<control type="image">
-						<left>170</left>
-						<top>210</top>
-						<width>30</width>
-						<height>30</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>
-					<control type="image">
-						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>10</left>
-						<top>10</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
 			</control>

@@ -3,7 +3,7 @@
 	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<include>CommonBackground1</include>
 		<include>wbg</include>
 		<control type="group">
 			<control type="grouplist" id="3">

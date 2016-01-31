@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-	<defaultcontrol always="true">100</defaultcontrol>
+	<defaultcontrol>100</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
 	<coordinates>
 		<system>1</system>
@@ -18,7 +18,7 @@
 		<control type="group" id="100">
 			<left>25</left>
 			<top>162</top>
-			<defaultcontrol always="true">603</defaultcontrol>
+			<defaultcontrol>603</defaultcontrol>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<control type="button" id="600">
 				<left>0</left>
@@ -256,7 +256,7 @@
 		<control type="group" id="100">
 			<left>25</left>
 			<top>162</top>
-			<defaultcontrol always="true">700</defaultcontrol>
+			<defaultcontrol>700</defaultcontrol>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
 			<control type="button" id="701">
 				<left>0</left>

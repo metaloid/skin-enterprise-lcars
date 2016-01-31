@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">7</defaultcontrol>
+	<defaultcontrol>907</defaultcontrol>
 	<onload condition="!Skin.HasSetting(Hide.Favourites)">RunScript(script.favourites)</onload>
 	<onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
 	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(2)">ClearProperty(VideosDirectLink)</onunload>
@@ -45,8 +45,14 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>5</itemgap>
+                <!--SOURCES-->
+ 				<control type="button" id="907">
+					<include>ButtonCommonValues</include>
+					<label>20094</label>
+                    <onclick>noop</onclick>
+				</control>
 				<!--MOVIES-->
-				<control type="button" id="1">
+				<control type="button" id="901">
                     <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
 					<include>ButtonCommonValues</include>
 					<label>342</label>
@@ -54,7 +60,7 @@
                     <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
 				</control>
                 <!--TVSHOWS-->
- 				<control type="button" id="2">
+ 				<control type="button" id="902">
                     <visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
 					<include>ButtonCommonValues</include>
 					<label>20343</label>
@@ -62,7 +68,7 @@
                     <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
 				</control>
                 <!--MUSIC-->
- 				<control type="button" id="3">
+ 				<control type="button" id="903">
                     <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					<include>ButtonCommonValues</include>
 					<label>2</label>
@@ -70,49 +76,43 @@
                     <onclick condition="Library.HasContent(Music)">ActivateWindow(502,return)</onclick>
 				</control>
                 <!--ADDONS-->
- 				<control type="button" id="4">
+ 				<control type="button" id="904">
                     <visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					<include>ButtonCommonValues</include>
 					<label>24001</label>
                     <onclick>ActivateWindow(AddonBrowser.xml)</onclick>
 				</control>
                 <!--LIVETV-->
- 				<control type="button" id="5">
+ 				<control type="button" id="905">
                     <visible>PVR.HasTVChannels</visible>
 					<include>ButtonCommonValues</include>
 					<label>19020</label>
                     <onclick>ActivateWindow(TVChannels)</onclick>
                     <onclick>noop</onclick>
 				</control>
- 				<control type="button" id="14">
+ 				<control type="button" id="914">
 					<visible>PVR.HasRadioChannels</visible>
 					<include>ButtonCommonValues</include>
 					<label>31960</label>
 					<onclick>ActivateWindow(RadioChannels)</onclick>
 				</control>
 				<!--PICTURES-->
- 				<control type="button" id="6">
+ 				<control type="button" id="906">
                     <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 					<include>ButtonCommonValues</include>
 					<label>1</label>
                     <onclick>ActivateWindow(Pictures)</onclick>
                     <onclick>noop</onclick>
 				</control>
-                <!--SOURCES-->
- 				<control type="button" id="7">
-					<include>ButtonCommonValues</include>
-					<label>20094</label>
-                    <onclick>noop</onclick>
-				</control>
                 <!--WEATHER-->
- 				<control type="button" id="8">
+ 				<control type="button" id="908">
                     <visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 					<include>ButtonCommonValues</include>
 					<label>31950</label>
                     <onclick>ActivateWindow(MyWeather)</onclick>
 				</control>
                 <!--NEXT AIR-->
- 				<control type="button" id="9">
+ 				<control type="button" id="909">
                     <visible>!Skin.HasSetting(HomeMenuNoNEXTAIRButton)</visible>
                     <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
 					<include>ButtonCommonValues</include>
@@ -120,20 +120,26 @@
                     <onclick>RunAddon(script.tv.show.next.aired)</onclick>
 				</control>
                 <!--Favorites-->
- 				<control type="button" id="10">
+ 				<control type="button" id="910">
                     <visible>!Skin.HasSetting(HomeMenuNoFavoritesButton)</visible>
 					<include>ButtonCommonValues</include>
 					<label>1036</label>
                     <onclick>ActivateWindow(134)</onclick>
 				</control>
                 <!--Settings-->
- 				<control type="button" id="11">
+ 				<control type="button" id="911">
 					<include>ButtonCommonValues</include>
 					<label>1390</label>
                     <onclick>ActivateWindow(Settings)</onclick>
 				</control>
+ 				<control type="button" id="913">
+					<include>ButtonCommonValues</include>
+					<label>31958</label>
+					<onclick>PlayDVD()</onclick>
+					<visible>System.HasMediaDVD</visible>
+				</control>
                 <!--EXIT-->
- 				<control type="button" id="12">
+ 				<control type="button" id="912">
 					<visible>!Player.HasMedia</visible>
 					<include>ButtonCommonValues</include>
 					<label>exit</label>
@@ -147,6 +153,20 @@
                     <onclick>fullscreen</onclick>
 				</control>
 			</control>
+		<control type="label">
+			<description>Date label</description>
+			<right>20</right>
+			<top>65</top>
+			<width>200</width>
+			<height>15</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
+		</control>
 		<control type="group">
 			<left>0</left>
 			<top>60r</top>

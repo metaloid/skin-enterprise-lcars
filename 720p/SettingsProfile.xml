@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<include>CommonBackground1</include>
 		<include>wbg</include>
 		
 		<control type="group">
@@ -42,10 +42,10 @@
 					<top>0</top>
 					<width>90</width>
 					<height>90</height>
-					<aspectratio>scale</aspectratio>
-					<bordertexture border="6">ThumbBorder.png</bordertexture>
-					<bordersize>4</bordersize>
-					<texture fallback="unknown-user.png">$INFO[Container(2).Listitem.Icon]</texture>
+					<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
+					<texture  diffuse="poster-mask.png"  background="true"  fallback="DefaultDirector.png">$INFO[Container(2).Listitem.Icon]</texture>
+					<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
+					<bordersize>3</bordersize>
 				</control>
 				<control type="label">
 					<left>100</left>
@@ -186,10 +186,10 @@
 							<top>0</top>
 							<width>188</width>
 							<height>145</height>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
+							<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
+							<texture  diffuse="poster-mask.png"  background="true" fallback="DefaultDirector.png">$INFO[Listitem.Icon]</texture>
+							<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
+							<bordersize>3</bordersize>
 						</control>
 						<control type="label">
 							<left>6</left>
@@ -210,10 +210,10 @@
 							<top>0</top>
 							<width>188</width>
 							<height>145</height>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
-							<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
+							<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
+							<texture  diffuse="poster-mask.png"  background="true" fallback="DefaultDirector.png">$INFO[Listitem.Icon]</texture>
+							<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
+							<bordersize>3</bordersize>
 						</control>
 						<control type="label">
 							<left>6</left>
@@ -221,7 +221,7 @@
 							<width>178</width>
 							<height>25</height>
 							<font>font13</font>
-							<textcolor>white</textcolor>
+							<textcolor>blue</textcolor>
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>

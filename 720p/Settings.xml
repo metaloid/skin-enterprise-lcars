@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol>9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<include>CommonBackground1</include>
 		<include>wbg</include>
 		<control type="group">
 			<control type="grouplist" id="9000">
@@ -17,72 +17,72 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>5</itemgap>
-				<control type="button" id="1">
+				<control type="button" id="901">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(AppearanceSettings)</onclick>
 					<label>480</label>
 				</control>
-				<control type="button" id="14">
+				<control type="button" id="914">
 					<include>ButtonCommonValues</include>
 					<onclick>noop</onclick>
 					<label>SKIN SETTING</label>
 				</control>
-				<control type="button" id="2">
+				<control type="button" id="902">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(VideosSettings)</onclick>
 					<label>157</label>
 				</control>
-				<control type="button" id="3">
+				<control type="button" id="903">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(PVRSettings)</onclick>
 					<label>31502</label>
 				</control>
-				<control type="button" id="4">
+				<control type="button" id="904">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(MusicSettings)</onclick>
 					<label>2</label>
 				</control>
-				<control type="button" id="5">
+				<control type="button" id="905">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(PicturesSettings)</onclick>
 					<label>1</label>
 				</control>
-				<control type="button" id="6">
+				<control type="button" id="906">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(WeatherSettings)</onclick>
 					<label>8</label>
 				</control>
-				<control type="button" id="7">
+				<control type="button" id="907">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(AddonBrowser)</onclick>
 					<label>24001</label>
 				</control>
-				<control type="button" id="8">
+				<control type="button" id="908">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(ServiceSettings)</onclick>
 					<label>14036</label>
 				</control>
-				<control type="button" id="9">
+				<control type="button" id="909">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(SystemSettings)</onclick>
 					<label>13000</label>
 				</control>
-				<control type="button" id="10">
+				<control type="button" id="910">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(FileManager)</onclick>
 					<label>7</label>
 				</control>
-				<control type="button" id="11">
+				<control type="button" id="911">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 					<label>130</label>
 				</control>
-				<control type="button" id="12">
+				<control type="button" id="912">
 					<include>ButtonCommonValues</include>
 					<onclick>ActivateWindow(Profiles)</onclick>
 					<label>13200</label>
 				</control>
-				<control type="button" id="13">
+				<control type="button" id="913">
 					<include>ButtonCommonValues</include>
 					<onclick>back</onclick>
 					<label>BACK</label>
@@ -102,7 +102,7 @@
 			</control>
 		</control>
 				<control type="grouplist" id="9001">
-					<visible>ControlGroup(9000).Hasfocus(14)</visible>
+					<visible>ControlGroup(9000).Hasfocus(914)</visible>
 					<left>90</left>
 					<top>50</top>
 					<width>645</width>
@@ -321,6 +321,84 @@
 						<label>$LOCALIZE[31111] - $LOCALIZE[24001]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+					</control>
+					<control type="button" id="611">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<label> - $LOCALIZE[24000] 1</label>
+						<label2>$INFO[Skin.String(ShelfAddons.1.Label)]</label2>
+						<onclick>Skin.SetAddon(ShelfAddons.1.Label,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+					</control>
+					<control type="button" id="612">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label> - $LOCALIZE[24000] 2</label>
+						<label2>$INFO[Skin.String(ShelfAddons.2.Label)]</label2>
+						<onclick>Skin.SetAddon(ShelfAddons.2.Label,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="613">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label> - $LOCALIZE[24000] 3</label>
+						<label2>$INFO[Skin.String(ShelfAddons.3.Label)]</label2>
+						<onclick>Skin.SetAddon(ShelfAddons.3.Label,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="614">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label> - $LOCALIZE[24000] 4</label>
+						<label2>$INFO[Skin.String(ShelfAddons.4.Label)]</label2>
+						<onclick>Skin.SetAddon(ShelfAddons.4.Label,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="615">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label> - $LOCALIZE[24000] 5</label>
+						<label2>$INFO[Skin.String(ShelfAddons.5.Label)]</label2>
+						<onclick>Skin.SetAddon(ShelfAddons.5.Label,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+					</control>
+					<control type="button" id="616">
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+						<width>580</width>
+						<height>40</height>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>blue</focusedcolor>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<label> - $LOCALIZE[24000] 6</label>
+						<label2>$INFO[Skin.String(ShelfAddons.6.Label)]</label2>
+						<onclick>Skin.SetAddon(ShelfAddons.6.Label,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 					</control>
 					<control type="radiobutton" id="227">
 						<description>Hide favourites Button</description>

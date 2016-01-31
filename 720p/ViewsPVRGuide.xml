@@ -201,7 +201,7 @@
 						<height>48</height>
 						<left>0</left>
 						<top>0</top>
-						<texture border="5">folder-focus.png</texture>
+						<texture border="5" colordiffuse="blue">folder-focus.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>40</width>

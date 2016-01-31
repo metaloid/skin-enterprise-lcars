@@ -14,6 +14,14 @@
 	<include file="IncludesBackgroundBuilding.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
+	<variable name="Plots" description="Plots and descriptions">
+		<value condition="Container.content(addons) + !IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="Container.Content(albums) + IsEmpty(ListItem.Property(Album_Description))">$LOCALIZE[414]</value>
+		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="Container.Content(Episodes)">$INFO[ListItem.Premiered,Premiered • ][CR]$INFO[ListItem.Plot]</value>
+		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+	</variable>
 	<variable name="MediaInfoOverlayVar">
 		<value condition="ListItem.IsCollection">SET</value>
 		<value condition="ListItem.Property(Addon.Status)">$INFO[ListItem.Property(Addon.Status)]</value>
@@ -21,8 +29,9 @@
 		<value>3D</value>
 	</variable>
 	<variable name="PosterThumb">
-		<value condition="!IsEmpty(ListItem.Art(fanart)) + [Container.Content(Movies) | container.content(TvShows) | container.content(Artists)]">$INFO[ListItem.Art(fanart)]</value>
-		<!--value condition="[Container(9000).HasFocus(1) | Container(9000).HasFocus(3)]">$INFO[ListItem.Art(fanart)]</value-->
+        <value condition="Container.Content(directors) + !StringCompare(listitem.label,..)">DefaultDirector.png</value>
+        <value condition="Container.Content(Country) + !StringCompare(listitem.label,..)">DefaultCountry.png]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + [Container.Content(Movies) | container.content(TvShows) | container.content(Artists) | SubString(ListItem.Path,videodb://movies/sets/)]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
@@ -41,6 +50,9 @@
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG,Left)]">PG</value>
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated NC,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated NC,Left)]">NC 17</value>
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated G,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated G,Left)]">G</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated nr,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated G,Left)]">nr</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated tv-14,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated tv-14,Left)]">tv-14</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,Rated)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,Rated)]">nr</value>
         <!-- US (TMDB) -->
         <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,R)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,R)]">R</value>
         <value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,PG-13)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,PG-13)]">PG 13</value>
@@ -77,7 +89,8 @@
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:15)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:15)]">15</value>
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:18)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:18)]">18</value>
         <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,UK:X)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,UK:X)]">X</value>
-        <value>$INFO[ListItem.MPAA]</value>
+        <value condition="IsEmpty(ListItem.mpaa)">n/a</value>
+       <value>$INFO[ListItem.MPAA]</value>
 	</variable>
 	<variable name="SeekLabel">
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
@@ -122,8 +135,8 @@
 						<height>160</height>
 						<align>center</align>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Property(Fanart)]</texture>
-						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
+						<texture background="true" fallback="defaultmis.png">$INFO[ListItem.Property(Fanart)]</texture>
+						<bordertexture colordiffuse="blue">folder-focus.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>
 					<control type="label">
@@ -158,8 +171,8 @@
 						<width>220</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="04.png">$INFO[ListItem.Property(Fanart)]</texture>
-						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
+						<texture  background="true" fallback="defaultmis.png">$INFO[ListItem.Property(Fanart)]</texture>
+						<bordertexture colordiffuse="red">folder-focus.png</bordertexture>
 						<bordersize>3</bordersize>
 					</control>
 					<control type="label">
@@ -227,12 +240,12 @@
 			<ondown>$PARAM[CloseButtonNav]</ondown>
 		</control>
 	</include>
-		<include name="Badge">
-            <left>222</left>
-            <height>26</height>
-            <width>75</width>
-            <aspectratio>scale</aspectratio>
-            <texture>white.png</texture>
+	<include name="Badge">
+        <left>222</left>
+        <height>26</height>
+        <width>75</width>
+        <aspectratio>scale</aspectratio>
+        <texture>white.png</texture>
 	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
@@ -380,90 +393,6 @@
 			<height>80</height>
 			<aspectratio>keep</aspectratio>
 			<texture>Confluence_Logo.png</texture>
-		</control>
-	</include>
-	<include name="CommonNowPlaying">
-		<control type="group">
-			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<control type="label">
-				<left>100</left>
-				<top>80r</top>
-				<width>700</width>
-				<height>20</height>
-				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<left>100</left>
-				<top>59r</top>
-				<width>700</width>
-				<height>20</height>
-				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasAudio</visible>
-			</control>
-			<control type="label">
-				<left>100</left>
-				<top>57r</top>
-				<width>700</width>
-				<height>20</height>
-				<label>$INFO[VideoPlayer.Studio]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
-			</control>
-			<control type="label">
-				<left>100</left>
-				<top>57r</top>
-				<width>700</width>
-				<height>20</height>
-				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
-			</control>
-			<control type="label">
-				<left>100</left>
-				<top>57r</top>
-				<width>700</width>
-				<height>20</height>
-				<label>$INFO[VideoPlayer.Artist]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
-			</control>
-			<control type="label">
-				<left>100</left>
-				<top>57r</top>
-				<width>700</width>
-				<height>20</height>
-				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
-			</control>
 		</control>
 	</include>
 	<include name="CommonPageCount">
@@ -732,9 +661,7 @@
 			<visible>VideoPlayer.Content(LiveTV)</visible>
 				<left>0</left>
 				<top>2</top>
-				<width>45</width>
-				<height>30</height>
-				<include>ButtonControls</include>
+				<include>PvrButton</include>
 				<label>▼</label>
 				<onleft>604</onleft>
 				<onright>601</onright>
@@ -746,9 +673,7 @@
 			<visible>VideoPlayer.Content(LiveTV)</visible>
 				<left>48</left>
 				<top>2</top>
-				<width>45</width>
-				<height>30</height>
-				<include>ButtonControls</include>
+				<include>PvrButton</include>
 				<label>▲</label>
 				<onleft>600</onleft>
 				<onright>603</onright>
@@ -760,10 +685,8 @@
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<left>0</left>
 				<top>2</top>
-				<width>45</width>
-				<height>30</height>
-				<label>◄◄</label>
-				<include>ButtonControls</include>
+				<label>▐◄</label>
+				<include>PvrButton</include>
 				<onleft>604</onleft>
 				<onright>602</onright>
 				<onup>610</onup>
@@ -775,10 +698,8 @@
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<left>48</left>
 				<top>2</top>
-				<width>45</width>
-				<height>30</height>
-				<label>►►</label>
-				<include>ButtonControls</include>
+				<label>►▌</label>
+				<include>PvrButton</include>
 				<onleft>600</onleft>
 				<onright>603</onright>
 				<onup>610</onup>
@@ -792,7 +713,7 @@
 				<width>45</width>
 				<height>30</height>
 				<label>■</label>
-				<include>ButtonControls</include>
+				<include>PvrButton</include>
 				<onleft>602</onleft>
 				<onright>604</onright>
 				<onup>610</onup>
@@ -803,14 +724,12 @@
 			<control type="togglebutton" id="604">
 				<left>144</left>
 				<top>2</top>
-				<width>45</width>
-				<height>30</height>
-				<label>II</label>
-				<include>ButtonControls</include>
+				<label>▌▐</label>
+				<include>PvrButton</include>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
-					<altlabel>►</altlabel>
+				<alttexturefocus colordiffuse="red">white.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="blue">white.png</alttexturenofocus>
+				<altlabel>►</altlabel>
 				<onleft>603</onleft>
 				<onright>600</onright>
 				<onup>610</onup>
@@ -822,18 +741,18 @@
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
-			<control type="label">
+		<control type="label">
 			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
-				<left>850</left>
-				<top>80</top>
-				<width>100</width>
-				<height>60</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.SortLetter]</label>
-				<textcolor>white</textcolor>
-				<font>WeatherTemp</font>
-			</control>
+			<left>850</left>
+			<top>80</top>
+			<width>100</width>
+			<height>60</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.SortLetter]</label>
+			<textcolor>white</textcolor>
+			<font>WeatherTemp</font>
+		</control>
 	</include>
 	<include name="Clock">
 		<control type="label">
@@ -849,20 +768,6 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 		</control>
-		<control type="label">
-			<description>Date label</description>
-			<right>20</right>
-			<top>65</top>
-			<width>200</width>
-			<height>15</height>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>font10</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<label>$INFO[System.Date]</label>
-			<include>Window_OpenClose_Animation</include>
-		</control>
 	</include>
 	<include name="Window_OpenClose_Animation">
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -876,6 +781,32 @@
 		<animation effect="fade" time="225">Visible</animation>
 		<animation effect="fade" time="225">Hidden</animation>
 	</include>
+	<include name="PvrButton">
+		<width>45</width>
+		<height>30</height>
+		<texturefocus colordiffuse="red">white.png</texturefocus>
+		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font16</font>
+		<textcolor>black</textcolor>
+		<focusedcolor>black</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<pulseonselect></pulseonselect>
+	</include>
+	<include name="OsdButton">
+		<width>50</width>
+		<height>50</height>
+		<texturefocus colordiffuse="red">white.png</texturefocus>
+		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font16</font>
+		<textcolor>black</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<focusedcolor>black</focusedcolor>
+		<pulseonselect></pulseonselect>
+	</include>
 	<include name="KeyboardButton">
 		<width>50</width>
 		<height>50</height>
@@ -883,8 +814,10 @@
 		<texturenofocus colordiffuse="blue">white.png</texturenofocus>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>font13</font>
+		<font>font16k</font>
 		<textcolor>black</textcolor>
+		<disabledcolor>grey3</disabledcolor>
 		<focusedcolor>black</focusedcolor>
+		<pulseonselect></pulseonselect>
 	</include>
 </includes>

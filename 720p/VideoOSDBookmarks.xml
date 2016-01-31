@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">2</defaultcontrol>
+	<defaultcontrol>2</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<left>240</left>
@@ -105,7 +105,7 @@
 					<top>2</top>
 					<width>235</width>
 					<height>211</height>
-					<texture border="3">folder-focus.png</texture>
+					<texture border="3" colordiffuse="blue">folder-focus.png</texture>
 				</control>
 				<control type="image">
 					<left>7</left>

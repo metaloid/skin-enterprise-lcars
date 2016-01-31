@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">52</defaultcontrol>
+	<defaultcontrol>52</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<coordinates>
 		<system>1</system>
@@ -8,7 +8,7 @@
 		<top>0</top>
 	</coordinates>
 	<controls>
-		<include>CommonBackground</include>
+		<include>CommonBackground1</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">

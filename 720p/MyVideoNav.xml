@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">500</defaultcontrol>
+	<defaultcontrol>500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<views>500</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
 		<include>CommonBackground</include>
-		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
 		</control>
 		<include>CommonPageCount</include>
-		
 		<include>ScrollOffsetLabel</include>
-		
-			<control type="label">
-				<include>WindowTitleSide</include>
-				<label>$LOCALIZE[3] [COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
-			</control>
-			
+		<control type="label">
+			<include>WindowTitleSide</include>
+			<label>$LOCALIZE[3] [COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
+		</control>
 		<control type="group">
 			<top>80</top>
 			<control type="grouplist" id="9000">
@@ -29,11 +25,18 @@
 				<top>0</top>
 				<width>200</width>
 				<height>500</height>
+				<align>left</align>
+				<aligny>center</aligny>
 				<onleft>60</onleft>
 				<onright>500</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>5</itemgap>
+				<control type="button" id="10 ">
+					<description>Watched Toggle</description>
+					<include>ButtonCommonValues</include>
+					<label>-</label>
+				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
 					<include>ButtonCommonValues</include>
@@ -75,16 +78,16 @@
 					<selected>Skin.HasSetting(View508HideInfo)</selected>
 					<visible>Control.IsVisible(508)</visible>
 				</control>
-				<control type="radiobutton" id="14">
-					<description>Watched Toggle</description>
-					<textwidth>190</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>20367</label>
-				</control>
 				<control type="button" id="8">
 					<description>Search</description>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
+				</control>
+				<control type="button" id="6">
+					<visible>System.HasMediaDVD</visible>
+					<description>dvd</description>
+					<include>ButtonCommonValues</include>
+					<label>31958</label>
 				</control>
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>

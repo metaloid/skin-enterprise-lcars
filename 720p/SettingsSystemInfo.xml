@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">95</defaultcontrol>
+	<defaultcontrol>95</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonBackground</include>
+		<include>CommonBackground1</include>
 		<include>wbg</include>
 		<control type="group">
 			<control type="grouplist" id="9000">

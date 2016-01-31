@@ -19,7 +19,6 @@
 				<colordiffuse>22ffffff</colordiffuse>
 				<texture background="true">04.png</texture>
 			</control>
-		
 	</include>
 	<include name="CommonBackground">
 		<control type="image">
@@ -41,27 +40,36 @@
 				<texture background="true">04.png</texture>
 			</control>
 		<control type="image">
-			<left>725</left>
+			<left>730</left>
 			<top>35</top>
-			<width>270</width>
+			<width>265</width>
 			<height>275</height>
-			<texture border="5">ContentPanel.png</texture>
+			<texture border="5" colordiffuse="blue">folder-focus.png</texture>
 			<visible>[Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)]  | Player.HasAudio</visible>
 		</control>
-		<control type="image">
-			<left>730</left>
+		<control type="visualisation" id ="3">>
+			<left>735</left>
 			<top>40</top>
-			<width>260</width>
-			<height>152</height>
+			<width>255</width>
+			<height>265</height>
+			<visible>Player.HasAudio</visible>
+			<visible>IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
+		</control>
+		<control type="image">
+			<left>735</left>
+			<top>40</top>
+			<width>255</width>
+			<height>265</height>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+			<colordiffuse>55FFFFFF</colordiffuse>
 			<visible>Player.HasAudio</visible>
 		</control>
-		<control type="videowindow">
-			<left>730</left>
+		<control type="videowindow" id="2">
+			<left>735</left>
 			<top>40</top>
-			<width>260</width>
-			<height>152</height>
+			<width>255</width>
+			<height>265</height>
 			<visible>Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 		</control>
 		<!-- onscreen Info -->
@@ -69,88 +77,52 @@
 			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<control type="textbox">
-				<left>735</left>
-				<top>200</top>
-				<width>240</width>
-				<height>40</height>
+			<control type="label">
+				<left>500</left>
+				<top>610</top>
+				<include>WindowTitleCommons2</include>
 				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="textbox">
-				<left>735</left>
-				<top>240</top>
-				<width>240</width>
-				<height>40</height>
+			<control type="label">
+				<left>500</left>
+				<top>630</top>
+				<include>WindowTitleCommons2</include>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasAudio</visible>
 			</control>
-			<control type="textbox">
-				<left>735</left>
-				<top>240</top>
-				<width>240</width>
-				<height>40</height>
+			<control type="label">
+				<left>500</left>
+				<top>632</top>
+				<include>WindowTitleCommons2</include>
 				<label>$INFO[VideoPlayer.Studio]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
 			</control>
-			<control type="textbox">
-				<left>735</left>
-				<top>240</top>
-				<width>240</width>
-				<height>40</height>
+			<control type="label">
+				<left>500</left>
+				<top>632</top>
+				<include>WindowTitleCommons2</include>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
 			</control>
-			<control type="textbox">
-				<left>735</left>
-				<top>240</top>
-				<width>240</width>
-				<height>40</height>
+			<control type="label">
+				<left>500</left>
+				<top>632</top>
+				<include>WindowTitleCommons2</include>
 				<label>$INFO[VideoPlayer.Artist]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
 			</control>
-			<control type="textbox">
-				<left>735</left>
-				<top>240</top>
-				<width>240</width>
-				<height>40</height>
+			<control type="label">
+				<left>500</left>
+				<top>632</top>
+				<include>WindowTitleCommons2</include>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
-				<align>justify</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
 			</control>
 		</control>
 		<control type="grouplist">
 			<top>610</top>
 			<left>100</left>
-			<width>1000</width>
+			<width>400</width>
 			<height>30</height>
 			<orientation>horizontal</orientation>
 			<align>left</align>

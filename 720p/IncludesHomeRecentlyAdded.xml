@@ -2,21 +2,19 @@
 	<includes>
 		<variable name="311label">
 		<!--MOVIES-->
-		<value condition="ControlGroup(9000).HasFocus(1)">$LOCALIZE[20386]</value>
+		<value condition="ControlGroup(9000).HasFocus(901)">$LOCALIZE[20386]</value>
 		<!--TVSHOWS-->
-		<value condition="ControlGroup(9000).HasFocus(2)">$LOCALIZE[20387]</value>
+		<value condition="ControlGroup(9000).HasFocus(902)">$LOCALIZE[20387]</value>
 		<!--MUSIC-->
-		<value condition="ControlGroup(9000).HasFocus(3)">$LOCALIZE[359]</value>
+		<value condition="ControlGroup(9000).HasFocus(903)">$LOCALIZE[359]</value>
 		<!--ADDONS-->
-		<value condition="ControlGroup(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/video/)">$LOCALIZE[1037]</value>
-		<value condition="ControlGroup(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/audio/)">$LOCALIZE[1038]</value>
-		<value condition="ControlGroup(9000).HasFocus(4) + StringCompare(Skin.String(addonshome),addons://sources/executable/)">$LOCALIZE[1043]</value>
+		<value condition="ControlGroup(9000).HasFocus(904)">$LOCALIZE[24001]</value>
 		<!--MEDIA SOURCE-->
-		<value condition="ControlGroup(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://music/)">$INFO[ControlGroup(9000).ListItem.Label] $LOCALIZE[292]</value>
-		<value condition="ControlGroup(9000).HasFocus(7) + StringCompare(Skin.String(sourceshome),sources://video/)">$INFO[ControlGroup(9000).ListItem.Label] $LOCALIZE[157]</value>
+		<value condition="ControlGroup(9000).HasFocus(907) + StringCompare(Skin.String(sourceshome),sources://music/)">$INFO[ControlGroup(9000).ListItem.Label] $LOCALIZE[292]</value>
+		<value condition="ControlGroup(9000).HasFocus(907) + StringCompare(Skin.String(sourceshome),sources://video/)">$INFO[ControlGroup(9000).ListItem.Label] $LOCALIZE[157]</value>
 		
-		<value condition="ControlGroup(9000).HasFocus(8)">$INFO[Window(Weather).Property(Location)]    $INFO[ControlGroup(9000).ListItem.Label]    $INFO[Window(Weather).Property(Current.Condition)]</value>
-		<value condition="ControlGroup(9000).HasFocus(9)">$INFO[ControlGroup(9000).ListItem.Label]    $INFO[Window(Home).Property(NextAired.Total),, ACTIVE TV SHOW]    $INFO[Window(Home).Property(NextAired.TodayTotal),  , AIRED TODAY ]</value>
+		<value condition="ControlGroup(9000).HasFocus(908)">$INFO[Window(Weather).Property(Location)]    $INFO[ControlGroup(9000).ListItem.Label]    $INFO[Window(Weather).Property(Current.Condition)]</value>
+		<value condition="ControlGroup(9000).HasFocus(909)">$INFO[ControlGroup(9000).ListItem.Label]    $INFO[Window(Home).Property(NextAired.Total),, ACTIVE TV SHOW]    $INFO[Window(Home).Property(NextAired.TodayTotal),  , AIRED TODAY ]</value>
 		<!--GENRAL-->
 		<value>$INFO[ControlGroup(9000).ListItem.Label]</value>
 	</variable>
@@ -31,18 +29,18 @@
 						<visible>!StringCompare(listitem.label,get more...)</visible>
 						<left>20</left>
 						<top>0</top>
-						<width>190</width>
+						<width>220</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="defaultmis.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
-						<bordersize>3</bordersize>
+						<texture background="true" fallback="defaultmis.png">$INFO[ListItem.Icon]</texture>
+						<bordertexture colordiffuse="blue">folder-focus.png</bordertexture>
+						<bordersize>5</bordersize>
 					</control>
 					<control type="label">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
 						<left>20</left>
 						<top>160</top>
-						<width min="0" max="190">auto</width>
+						<width min="0" max="220">auto</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
@@ -65,33 +63,24 @@
 						<aligny>bottom</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					<control type="image">
-						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>25</left>
-						<top>5</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
 				</itemlayout>
 				<focusedlayout height="180" width="300">
 					<control type="image">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
 						<left>20</left>
 						<top>0</top>
-						<width>190</width>
+						<width>220</width>
 						<height>160</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<texture  diffuse="poster-mask.png"  background="true" fallback="defaultmis.png">$INFO[ListItem.Icon]</texture>
-						<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
-						<bordersize>3</bordersize>
+						<texture background="true" fallback="defaultmis.png">$INFO[ListItem.Icon]</texture>
+						<bordertexture colordiffuse="red">folder-focus.png</bordertexture>
+						<bordersize>5</bordersize>
 					</control>
 					<control type="label">
 						<visible>!StringCompare(listitem.label,get more...)</visible>
 						<left>20</left>
 						<top>160</top>
-						<width min="0" max="190">auto</width>
+						<width min="0" max="220">auto</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>blue</textcolor>
@@ -114,15 +103,6 @@
 						<aligny>bottom</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					<control type="image">
-						<visible>!StringCompare(listitem.label,get more...)</visible>
-						<left>25</left>
-						<top>5</top>
-						<width>40</width>
-						<height>26</height>
-						<texture>$VAR[MediaInfoOverlayVar]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
 				</focusedlayout>
 			</include>
 	<include name="HomeRecentlyAddedInfo">
@@ -132,7 +112,7 @@
 		</control>
 					<control type="textbox">
 						<description>Description Value for Movie</description>
-						<visible>Control.HasFocus(311) + [ControlGroup(9000).HasFocus(1) | ControlGroup(9000).HasFocus(2)]</visible>
+						<visible>Control.HasFocus(311) + [ControlGroup(9000).HasFocus(901) | ControlGroup(9000).HasFocus(902)]</visible>
 						<left>745</left>
 						<top>315</top>
 						<width>240</width>
@@ -152,7 +132,7 @@
 			<!--movies-->
 			<control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>ControlGroup(9000).HasFocus(1)</visible>
+                <visible>ControlGroup(9000).HasFocus(901)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
@@ -221,7 +201,7 @@
             <!--TV-->
 			<control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>ControlGroup(9000).HasFocus(2)</visible>
+                <visible>ControlGroup(9000).HasFocus(902)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
@@ -291,7 +271,7 @@
 
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>ControlGroup(9000).HasFocus(9)</visible>
+                <visible>ControlGroup(9000).HasFocus(909)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
@@ -356,7 +336,7 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>ControlGroup(9000).HasFocus(3)</visible>
+                <visible>ControlGroup(9000).HasFocus(903)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
@@ -430,7 +410,7 @@
             <!--plugs-->
 
             <control type="grouplist" id="888">
-                <visible>ControlGroup(9000).HasFocus(4)</visible>
+                <visible>ControlGroup(9000).HasFocus(904)</visible>
                 <onup>9000</onup>
                 <onleft>311</onleft>
                 <onright>9000</onright>
@@ -440,28 +420,32 @@
                 <height>300</height>
                 <itemgap>10</itemgap>
                 <control type="button" id="500">
-                    <label>VIDEO ADDONS</label>
+                    <label>$LOCALIZE[1037]</label>
                     <include>ButtonHomeValues</include>
-					<onfocus>Skin.SetString(addonshome,addons://sources/video/)</onfocus>
                     <onclick>ActivateWindow(Videos,Addons,return)</onclick>
                 </control>
                 <control type="button" id="501">
-                    <label>AUDIO ADDONS</label>
+                    <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+                    <label>$LOCALIZE[1038]</label>
                     <include>ButtonHomeValues</include>
-					<onfocus>Skin.SetString(addonshome,addons://sources/audio/)</onfocus>
                     <onclick>ActivateWindow(Music,Addons,return)</onclick>
                 </control>
                 <control type="button" id="502">
-                    <label>Programs ADDONS</label>
+                    <label>$LOCALIZE[1043]</label>
                     <include>ButtonHomeValues</include>
-					<onfocus>Skin.SetString(addonshome,addons://sources/executable/)</onfocus>
                     <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
                     <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                </control>
+                <control type="button" id="503">
+                    <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+                    <label>$LOCALIZE[1] $LOCALIZE[24001]</label>
+                    <include>ButtonHomeValues</include>
+                    <onclick>ActivateWindow(Pictures,Addons,return)</onclick>
                 </control>
             </control>
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
-                <visible>ControlGroup(9000).HasFocus(4)</visible>
+                <visible>ControlGroup(9000).HasFocus(904)</visible>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
                 <left>0</left>
 				<top>10</top>
@@ -475,13 +459,50 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<include>homelayout</include>
-                <content target="video">$INFO[Skin.String(addonshome)]</content>
+                <content target="video">
+					<item id="1" description="Addons">
+						<visible>!IsEmpty(Skin.String(ShelfAddons.1.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfAddons.1.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.1.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfAddons.1.Label)])</onclick>
+					</item>
+					<item id="2" description="Addons">
+						<visible>!IsEmpty(Skin.String(ShelfAddons.2.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfAddons.2.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.2.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfAddons.2.Label)])</onclick>
+					</item>
+					<item id="3" description="Addons">
+						<visible>!IsEmpty(Skin.String(ShelfAddons.3.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfAddons.3.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.3.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfAddons.3.Label)])</onclick>
+					</item>
+					<item id="4" description="Addons">
+						<visible>!IsEmpty(Skin.String(ShelfAddons.4.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfAddons.4.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.4.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfAddons.4.Label)])</onclick>
+					</item>
+					<item id="5" description="Addons">
+						<visible>!IsEmpty(Skin.String(ShelfAddons.5.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfAddons.5.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.5.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfAddons.5.Label)])</onclick>
+					</item>
+					<item id="6" description="Addons">
+						<visible>!IsEmpty(Skin.String(ShelfAddons.6.Label))</visible>
+						<label>$INFO[system.addontitle(Skin.String(ShelfAddons.6.Label))]</label>
+						<thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.6.Label))]</thumb>
+						<onclick>RunAddon($INFO[Skin.String(ShelfAddons.6.Label)])</onclick>
+					</item>
+				</content>
             </control>
 
             <!--sources-->
 
             <control type="grouplist" id="888">
-                <visible>ControlGroup(9000).HasFocus(7)</visible>
+                <visible>ControlGroup(9000).HasFocus(907)</visible>
                 <onup>9000</onup>
                 <onleft>311</onleft>
                 <onright>9000</onright>
@@ -516,7 +537,7 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>ControlGroup(9000).HasFocus(7)</visible>
+                <visible>ControlGroup(9000).HasFocus(907)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
@@ -537,7 +558,7 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>ControlGroup(9000).HasFocus(10)</visible>
+                <visible>ControlGroup(9000).HasFocus(910)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>
@@ -595,7 +616,7 @@
             <control type="panel" id="311">
                 <animation effect="fade" start="100" end="80" condition="!Control.HasFocus(311) + !Control.HasFocus(60)">Conditional</animation>
                 <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-                <visible>ControlGroup(9000).HasFocus(8)</visible>
+                <visible>ControlGroup(9000).HasFocus(908)</visible>
                 <left>0</left>
 				<top>10</top>
 				<width>600</width>

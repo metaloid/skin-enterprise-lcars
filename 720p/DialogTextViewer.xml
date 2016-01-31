@@ -3,7 +3,7 @@
 	<defaultcontrol>777</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>CommonBackground</include>
+			<include>CommonBackground1</include>
 		<include>wbg</include>
 			<control type="group">
 				<left>90</left>
