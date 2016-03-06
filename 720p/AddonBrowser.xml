@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>500</defaultcontrol>
+	<defaultcontrol>51</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>500</views>
+	<views>51</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!-- view id = 500 -->
-			<include>ThumbnailView</include>
+			<!-- view id = 51 -->
+			<include>ListView</include>
 		</control>
 		<include>CommonPageCount</include>
-		
 		<include>ScrollOffsetLabel</include>
 		<control type="label">
 			<include>WindowTitleSide</include>

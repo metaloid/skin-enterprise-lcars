@@ -10,6 +10,7 @@
 		<label>-</label>
 		<font>font13</font>
 		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
 		<disabledcolor>grey3</disabledcolor>
 	</default>
 	<default type="fadelabel">

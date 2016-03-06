@@ -5,7 +5,6 @@
 	<controls>
 		<include>CommonBackground1</include>
 		<include>wbg</include>
-		
 		<control type="group">
 			<control type="grouplist" id="9000">
 				<right>20</right>
@@ -17,24 +16,24 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>5</itemgap>
-				<control type="button" id="1">
+				<control type="button" id="901">
 					<include>ButtonCommonValues</include>
 					<label>31420</label>
 					<onclick>noop</onclick>
 				</control>
-				<control type="button" id="2">
+				<control type="button" id="902">
 					<include>ButtonCommonValues</include>
 					<label>13200</label>
 					<onclick>noop</onclick>
 				</control>
-				<control type="button" id="3">
+				<control type="button" id="903">
 					<include>ButtonCommonValues</include>
 					<label>BACK</label>
 					<onclick>back</onclick>
 				</control>
 			</control>
 			<control type="group">
-				<visible>ControlGroup(9000).Hasfocus(2)</visible>
+				<visible>ControlGroup(9000).Hasfocus(902)</visible>
 				<left>150</left>
 				<top>475</top>
 				<control type="image">
@@ -99,7 +98,7 @@
 			</control>
 			<control type="group" id="9010">
 				<control type="grouplist" id="9001">
-					<visible>ControlGroup(9000).Hasfocus(1)</visible>
+					<visible>ControlGroup(9000).Hasfocus(901)</visible>
 					<left>90</left>
 					<top>80</top>
 					<width>580</width>
@@ -135,7 +134,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>ControlGroup(9000).Hasfocus(1)</visible>
+					<visible>ControlGroup(9000).Hasfocus(901)</visible>
 					<left>150</left>
 					<top>475</top>
 					<width>750</width>
@@ -168,15 +167,15 @@
 					</control>
 				</control>
 				<control type="panel" id="2">
-					<visible>ControlGroup(9000).Hasfocus(2)</visible>
+					<visible>ControlGroup(9000).Hasfocus(902)</visible>
 					<left>90</left>
 					<top>80</top>
 					<width>580</width>
 					<height>430</height>
 					<onleft>9000</onleft>
-					<onright>60</onright>
-					<onup>9010</onup>
-					<ondown>9010</ondown>
+					<onright>9000</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
 					<viewtype label="21371">list</viewtype>
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -187,8 +186,8 @@
 							<width>188</width>
 							<height>145</height>
 							<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
-							<texture  diffuse="poster-mask.png"  background="true" fallback="DefaultDirector.png">$INFO[Listitem.Icon]</texture>
-							<bordertexture colordiffuse="blue">poster-mask.png</bordertexture>
+							<texture background="true" fallback="DefaultDirector.png">$INFO[Listitem.Icon]</texture>
+							<bordertexture colordiffuse="blue">folder-focus.png</bordertexture>
 							<bordersize>3</bordersize>
 						</control>
 						<control type="label">
@@ -211,8 +210,8 @@
 							<width>188</width>
 							<height>145</height>
 							<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
-							<texture  diffuse="poster-mask.png"  background="true" fallback="DefaultDirector.png">$INFO[Listitem.Icon]</texture>
-							<bordertexture colordiffuse="red">poster-mask.png</bordertexture>
+							<texture background="true" fallback="DefaultDirector.png">$INFO[Listitem.Icon]</texture>
+							<bordertexture colordiffuse="red">folder-focus.png</bordertexture>
 							<bordersize>3</bordersize>
 						</control>
 						<control type="label">

@@ -1,6 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="PicListView1">
+	<include name="PicsView">
+		<control type="group">
+			<visible>Control.IsVisible(500)</visible>
+			<control type="panel" id="500">
+				<left>80</left>
+				<top>50</top>
+				<width>600</width>
+				<height>540</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<viewtype label="21371">panel</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+        		<orientation>vertical</orientation>
+				<itemlayout height="180" width="300">
+                    <control type="image">
+						<left>3</left>
+						<top>3</top>
+						<height>169</height>
+						<width>292</width>
+						<aspectratio>scale</aspectratio>
+						<texture colordiffuse="blue">white.png</texture>
+                    </control>
+					<control type="image">
+						<left>3</left>
+						<top>13</top>
+						<width>284</width>
+						<height>160</height>
+						<align>center</align>
+						<aspectratio scalediffuse="false" aligny="center" >scale</aspectratio>
+						<texture background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>290</width>
+						<height>175</height>
+						<align>center</align>
+						<texture background="true" colordiffuse="blue">folder-focus.png</texture>
+					</control>
+					<control type="label">
+						<centerleft>145</centerleft>
+						<top>4</top>
+						<width min="0" max="280">auto</width>
+						<height>10</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="180" width="300">
+                    <control type="image">
+						<left>3</left>
+						<top>3</top>
+						<height>169</height>
+						<width>292</width>
+						<aspectratio>scale</aspectratio>
+						<texture colordiffuse="blue">white.png</texture>
+                    </control>
+					<control type="image">
+						<left>3</left>
+						<top>13</top>
+						<width>284</width>
+						<height>160</height>
+						<align>center</align>
+						<aspectratio scalediffuse="false" aligny="center" >scale</aspectratio>
+						<texture background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>290</width>
+						<height>175</height>
+						<align>center</align>
+						<texture background="true" colordiffuse="red">folder-focus.png</texture>
+					</control>
+					<control type="label">
+						<centerleft>145</centerleft>
+						<top>4</top>
+						<width min="0" max="280">auto</width>
+						<height>10</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+					<control type="textbox">
+                    <visible>!StringCompare(listitem.label,..)</visible>
+                    <visible>Control.HasFocus(500)</visible>
+						<description>Description Value for Movie</description>
+						<left>745</left>
+						<top>315</top>
+						<width>240</width>
+						<height>290</height>
+						<font>font13</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<label>$VAR[Plots]</label>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+			<control type="scrollbar" id="60">
+				<left>710</left>
+				<top>65</top>
+				<width>25</width>
+				<height>535</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>500</onleft>
+				<onright>9000</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(500)</visible>
+			</control>
+		</control>
 	</include>
 
 </includes>

@@ -10,15 +10,15 @@
 			<aspectratio>strech</aspectratio>
 			<texture>03.png</texture>
 		</control>
-			<control type="image">
-				<left>90</left>
-				<top>65</top>
-				<width>620</width>
-				<height>480</height>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>22ffffff</colordiffuse>
-				<texture background="true">04.png</texture>
-			</control>
+		<control type="image">
+			<left>90</left>
+			<top>65</top>
+			<width>620</width>
+			<height>480</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>22ffffff</colordiffuse>
+			<texture background="true">04.png</texture>
+		</control>
 	</include>
 	<include name="CommonBackground">
 		<control type="image">
@@ -30,15 +30,15 @@
 			<aspectratio>strech</aspectratio>
 			<texture>03.png</texture>
 		</control>
-			<control type="image">
-				<left>90</left>
-				<top>65</top>
-				<width>620</width>
-				<height>480</height>
-				<aspectratio>keep</aspectratio>
-				<colordiffuse>22ffffff</colordiffuse>
-				<texture background="true">04.png</texture>
-			</control>
+		<control type="image">
+			<left>90</left>
+			<top>65</top>
+			<width>620</width>
+			<height>480</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>22ffffff</colordiffuse>
+			<texture background="true">04.png</texture>
+		</control>
 		<control type="image">
 			<left>730</left>
 			<top>35</top>
@@ -73,68 +73,35 @@
 			<visible>Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 		</control>
 		<!-- onscreen Info -->
-		<control type="group">
-			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
-			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<control type="label">
-				<left>500</left>
-				<top>610</top>
-				<include>WindowTitleCommons2</include>
-				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
-			</control>
-			<control type="label">
-				<left>500</left>
-				<top>630</top>
-				<include>WindowTitleCommons2</include>
-				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
-				<visible>Player.HasAudio</visible>
-			</control>
-			<control type="label">
-				<left>500</left>
-				<top>632</top>
-				<include>WindowTitleCommons2</include>
-				<label>$INFO[VideoPlayer.Studio]</label>
-				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
-			</control>
-			<control type="label">
-				<left>500</left>
-				<top>632</top>
-				<include>WindowTitleCommons2</include>
-				<label>$INFO[VideoPlayer.TVShowTitle]</label>
-				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
-			</control>
-			<control type="label">
-				<left>500</left>
-				<top>632</top>
-				<include>WindowTitleCommons2</include>
-				<label>$INFO[VideoPlayer.Artist]</label>
-				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
-			</control>
-			<control type="label">
-				<left>500</left>
-				<top>632</top>
-				<include>WindowTitleCommons2</include>
-				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumberLabel, - ([COLOR=blue],[/COLOR])]</label>
-				<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
-			</control>
+		<control type="label">
+			<description>Current Video label</description>
+			<left>735</left>
+			<top>280</top>
+			<width>255</width>
+			<height>35</height>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[Player.Title]</label>
+			<visible>Player.HasVideo | Player.HasAudio</visible>
 		</control>
 		<control type="grouplist">
 			<top>610</top>
 			<left>100</left>
 			<width>400</width>
-			<height>30</height>
+			<height>40</height>
 			<orientation>horizontal</orientation>
 			<align>left</align>
-			<itemgap>10</itemgap>
+			<itemgap>2</itemgap>
 			<control type="label">
 				<include>WindowTitleCommons2</include>
-				<label>SYSTEM ONLINE</label>
-				<visible>!IsEmpty(network.ipaddress)</visible>
+				<label>SYSTEM OFFLINE</label>
+				<visible>IsEmpty(network.ipaddress)</visible>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons2</include>
-				<label>$INFO[network.ipaddress]</label>
+				<label>$INFO[network.ipaddress,SYSTEM ONLINE ]</label>
 				<visible>system.hasnetwork</visible>
 			</control>
 			<control type="label">

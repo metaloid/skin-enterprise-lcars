@@ -174,7 +174,7 @@
 					<control type="scrollbar" id="60">
 						<left>610</left>
 						<top>195</top>
-						<width>25</width>
+						<width>20</width>
 						<height>190</height>
 						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
@@ -240,7 +240,7 @@
 					<control type="scrollbar" id="61">
 						<left>610</left>
 						<top>205</top>
-						<width>25</width>
+						<width>20</width>
 						<height>260</height>
 						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
@@ -314,7 +314,7 @@
 		<control type="group">
 				<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
 				<left>60</left>
-				<top>600</top>
+				<top>575</top>
 				<control type="image">
 					<description>background image</description>
 					<left>0</left>

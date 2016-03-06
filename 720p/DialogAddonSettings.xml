@@ -115,13 +115,7 @@
 		</control>
 		<control type="button" id="13">
 			<description>Default Category Button</description>
-			<height>40</height>
-			<width>173</width>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12_title</font>
-			<textcolor>white</textcolor>
-			<pulseonselect>false</pulseonselect>
+			<include>ButtonCommonValues</include>
 		</control>
 		<control type="button" id="3">
 			<description>Default Button</description>

@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol>500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>500</views>
+	<views>500,51</views>
 	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<controls>
@@ -11,6 +11,8 @@
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
+			<!-- view id = 51 -->
+			<include>ListView</include>
 		</control>
 		<include>CommonPageCount</include>
 		<include>ScrollOffsetLabel</include>
@@ -32,6 +34,11 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>5</itemgap>
+				<control type="button" id="2">
+					<description>View Toggle</description>
+					<include>ButtonCommonValues</include>
+					<label>-</label>
+				</control>
 				<control type="button" id="10 ">
 					<description>Watched Toggle</description>
 					<include>ButtonCommonValues</include>

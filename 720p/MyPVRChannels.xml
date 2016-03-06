@@ -5,10 +5,8 @@
 	<views>50</views>
 	<controls>
 		<include>CommonBackground1</include>
-		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			
 		</control>
 		<control type="label">
 			<include>WindowTitleSide</include>
@@ -22,41 +20,40 @@
 		</control>
 		<control type="group">
 			<description>Small Media Window</description>
-			<left>530</left>
+			<left>730</left>
 			<top>35</top>
 			<visible>Control.IsVisible(50)</visible>
-			
 			<include>Window_OpenClose_Animation</include>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>460</width>
-				<height>240</height>
-				<texture border="20">ContentPanel.png</texture>
+				<width>265</width>
+				<height>275</height>
+				<texture border="5" colordiffuse="blue">folder-focus.png</texture>
 			</control>
 			<control type="image">
-				<left>25</left>
-				<top>10</top>
-				<width>420</width>
-				<height>190</height>
+				<left>5</left>
+				<top>5</top>
+				<width>255</width>
+				<height>265</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<texture>special://skin/backgrounds/tv.jpg</texture>
-				
+				<colordiffuse>55FFFFFF</colordiffuse>
 				<visible>!Player.HasVideo</visible>
 			</control>
 			<control type="videowindow">
-				<left>10</left>
+				<left>5</left>
 				<top>5</top>
-				<width>440</width>
-				<height>230</height>
+				<width>255</width>
+				<height>265</height>
 				<visible>Player.HasVideo</visible>
 				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
 			</control>
 			<control type="label">
 				<description>Current Video label</description>
-				<left>30</left>
+				<left>5</left>
 				<top>245</top>
-				<width>440</width>
+				<width>255</width>
 				<height>35</height>
 				<font>font12</font>
 				<textcolor>white</textcolor>
@@ -70,7 +67,6 @@
 			<include>Window_OpenClose_Animation</include>
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
-			
 			<control type="group">
 				<left>530</left>
 				<top>360</top>
@@ -167,7 +163,6 @@
 						<width>390</width>
 						<height>61</height>
 						<texture border="2">MenuItemNF.png</texture>
-						
 					</control>
 					<control type="label">
 						<left>5</left>
@@ -254,7 +249,6 @@
 						<height>61</height>
 						<texture border="2">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(50)</visible>
-						
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -263,7 +257,6 @@
 						<height>61</height>
 						<texture border="2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(50)</visible>
-						
 					</control>
 					<control type="label">
 						<left>5</left>

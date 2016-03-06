@@ -2,13 +2,15 @@
 <window>
 	<defaultcontrol>500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>500</views>
+	<views>500,51</views>
 	<controls>
 		<include>CommonBackground</include>
 		
 		<control type="group">
 			<!-- view id = 500 -->
-			<include>ThumbnailView</include>
+			<include>PicsView</include>
+			<!-- view id = 51 -->
+			<include>ListView</include>
 		</control>
 		<include>CommonPageCount</include>
 		
@@ -30,6 +32,10 @@
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<itemgap>5</itemgap>
+				<control type="button" id="2">
+					<description>view</description>
+					<include>ButtonCommonValues</include>
+				</control>
 				<control type="button" id="3">
 					<description>Sort by button</description>
 					<include>ButtonCommonValues</include>

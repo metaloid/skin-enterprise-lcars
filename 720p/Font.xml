@@ -44,6 +44,12 @@
 			<size>15</size>
 		</font>
 		<font>
+			<name>font16b</name>
+			<filename>lcars.ttf</filename>
+            <style>uppercase bold</style>
+			<size>18</size>
+		</font>
+		<font>
 			<name>font30</name>
 			<filename>lcars.ttf</filename>
             <style>uppercase bold</style>

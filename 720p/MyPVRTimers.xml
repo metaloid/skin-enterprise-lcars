@@ -5,30 +5,11 @@
 	<views>50</views>
 	<controls>
 		<include>CommonBackground</include>
-		<control type="image">
-			<left>0</left>
-			<top>100r</top>
-			<width>1280</width>
-			<height>100</height>
-			<texture>floor.png</texture>
-			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<left>0</left>
-				<top>100r</top>
-				<width>1280</width>
-				<height>100</height>
-				<texture>floor.png</texture>
-				<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
-				<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			</control>
 			<control type="group">
 				<include>Window_OpenClose_Animation</include>
 				<control type="group">
-					
 					<control type="image">
 						<left>55</left>
 						<top>60</top>
@@ -46,7 +27,6 @@
 				</control>
 			</control>
 		</control>
-		<include>MainWindowMouseButtons</include>
 		<include>PVRHeader</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -116,8 +96,8 @@
 				<control type="list" id="50">
 					<left>0</left>
 					<top>55</top>
-					<width>1100</width>
-					<height>480</height>
+					<width>630</width>
+					<height>540</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>103</onleft>

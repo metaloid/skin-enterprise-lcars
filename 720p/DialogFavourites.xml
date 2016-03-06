@@ -36,7 +36,7 @@
 				<left>90</left>
 				<top>50</top>
 				<width>1000</width>
-				<height>558</height>
+				<height>620</height>
 				<onleft>778</onleft>
 				<onright>60</onright>
 				<onup>500</onup>
@@ -45,50 +45,72 @@
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
 				<itemlayout height="180" width="300">
+                    <control type="image">
+						<left>3</left>
+						<top>3</top>
+						<height>169</height>
+						<width>292</width>
+						<aspectratio>scale</aspectratio>
+						<texture colordiffuse="blue">white.png</texture>
+                    </control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>220</width>
+						<left>3</left>
+						<top>13</top>
+						<width>210</width>
 						<height>160</height>
 						<align>center</align>
 						<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
-						<texture background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
-						<bordertexture colordiffuse="blue">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<texture background="true" fallback="defaultmis.png" colordiffuse="BBFFFFFF">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>290</width>
+						<height>175</height>
+						<align>center</align>
+						<texture background="true" colordiffuse="blue">folder-focus.png</texture>
 					</control>
 					<control type="label">
-						<centerleft>110</centerleft>
-						<top>160</top>
-						<width min="0" max="220">auto</width>
-						<height>25</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<centerleft>145</centerleft>
+						<top>4</top>
+						<width min="0" max="280">auto</width>
+						<height>10</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="180" width="300">
+                    <control type="image">
+						<left>3</left>
+						<top>3</top>
+						<height>169</height>
+						<width>292</width>
+						<aspectratio>scale</aspectratio>
+						<texture colordiffuse="blue">white.png</texture>
+                    </control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>220</width>
+						<left>3</left>
+						<top>13</top>
+						<width>210</width>
 						<height>160</height>
 						<align>center</align>
 						<aspectratio scalediffuse="false" aligny="top" >scale</aspectratio>
-						<texture background="true" fallback="defaultmis.png">$VAR[PosterThumb]</texture>
-						<bordertexture colordiffuse="red">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
+						<texture background="true" fallback="defaultmis.png" colordiffuse="BBFFFFFF">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>290</width>
+						<height>175</height>
+						<align>center</align>
+						<texture background="true" colordiffuse="red">folder-focus.png</texture>
 					</control>
 					<control type="label">
-						<centerleft>110</centerleft>
-						<top>160</top>
-						<width min="0" max="220">auto</width>
-						<height>25</height>
-						<font>font13</font>
-						<textcolor>blue</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<centerleft>145</centerleft>
+						<top>4</top>
+						<width min="0" max="280">auto</width>
+						<height>10</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -96,10 +118,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>960</left>
+				<left>980</left>
 				<top>50</top>
-				<width>25</width>
-				<height>550</height>
+				<width>20</width>
+				<height>620</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
