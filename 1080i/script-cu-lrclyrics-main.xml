@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <allowoverlay>yes</allowoverlay>
+	<defaultcontrol always="true">110</defaultcontrol>
+	<visible>StringCompare(Skin.String(osd-lyricpath),script.cu.lrclyrics)</visible>
+	<coordinates>
+		<left>500</left>
+		<top>60</top>
+	</coordinates>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1150</width>
+			<height>650</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="45FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
+            <control type="grouplist" id="112">
+                <!--posx>1000</posx-->
+                <posx>30</posx>
+                <top>565</top>
+                <onright>noop</onright>
+                <onleft>noop</onleft>
+                <onup>110</onup>
+                <ondown>noop</ondown>
+                <width>800</width>
+                <height>50</height>
+                <align>center</align>
+                <orientation>horizontal</orientation>
+				<control type="button" id="600">
+					<width>135</width>
+					<label>PREV</label>
+					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded2.png</texturefocus>
+					<onclick>PlayerControl(Previous)</onclick>
+                </control>
+                <control type="button" id="601">
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<visible>!MusicPlayer.Content(LiveTV)</visible>
+			        <label>REW</label>
+                    <onclick>PlayerControl(Rewind)</onclick>
+                </control>
+                <control type="togglebutton" id="602">
+                    <visible>!MusicPlayer.Content(LiveTV)</visible>
+					<enable>Player.PauseEnabled</enable>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturenofocus colordiffuse="Blue">c6.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="buttonselect">c0.png</alttexturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>PAUSE</label>
+                    <altlabel>PLAY</altlabel>
+                    <onclick>PlayerControl(Play)</onclick>
+                </control>
+                <control type="button" id="603">
+                    <width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>STOP</label>
+                    <onclick>PlayerControl(Stop)</onclick>
+				</control>
+                <control type="button" id="604">
+                    <visible>!MusicPlayer.Content(LiveTV)</visible>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>FFWD</label>
+                    <onclick>PlayerControl(Forward)</onclick>
+                </control>
+                <control type="button" id="605">
+                    <visible>!MusicPlayer.Content(LiveTV)</visible>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>NEXT</label>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>
+                <control type="button" id="306">
+                    <visible>MusicPlayer.Content(LiveTV)</visible>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>LIST</label>
+                    <onclick>ActivateWindow(PVROSDChannels)</onclick>
+                </control>
+                <control type="button" id="307">
+                    <visible>MusicPlayer.Content(LiveTV) + !RDS.HasRadiotextPlus</visible>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>EPG</label>
+                    <onclick>ActivateWindow(PVROSDGuide)</onclick>
+                </control>
+                <control type="button" id="308">
+                    <visible>RDS.HasRadiotextPlus</visible>
+					<visible>MusicPlayer.Content(LiveTV) + RDS.HasRadiotextPlus</visible>
+                    <width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<label>209</label>
+                    <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
+                </control>
+				<control type="button" id="1000" >
+                    <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<width>135</width>
+                    <texturenofocus colordiffuse="buttonselect2" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect" flipx="true" border="20">whiteallrounded2.png</texturefocus>
+					<label>CLOSE</label>
+                    <onclick>close</onclick>
+					<onclick>FullScreen</onclick>
+				</control>
+            </control>
+		<control type="group">
+			<control type="label"><!-- Scraper -->
+				<left>40</left>
+				<top>50</top>
+				<width>550</width>
+				<height>30</height>
+				<label>$LOCALIZE[21870] - $INFO[Control.GetLabel(200)]</label>
+				<font>LCARS218</font>
+			</control>
+			<control type="label" id="200">
+				<visible>false</visible>
+			</control>
+			<control type="label"><!--Dialog heading -->
+				<left>946</left>
+				<top>50</top>
+				<width>360</width>
+				<height>37</height>
+				<font>LCARS218</font>
+				<label>$ADDON[script.cu.lrclyrics 32199]</label>
+			</control>
+
+			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
+			<control type="list" id="110">
+				<left>40</left>
+				<top>100</top>
+				<width>1070</width>
+				<height>400</height>
+				<onleft>112</onleft>
+				<onright>112</onright>
+				<onup>noop</onup>
+				<ondown>112</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40">
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>1240</width>
+						<height>40</height>
+						<font>LCARS218</font>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50">
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>1240</width>
+						<height>50</height>
+						<font>LCARS218</font>
+						<textcolor>orange</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(110)</visible>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>0</top>
+						<width>1240</width>
+						<height>50</height>
+						<font>LCARS218</font>
+						<textcolor>orange</textcolor>
+						<align>left</align>
+						<label fallback="--">$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(110)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label" id="2"><!-- Pick -->
+				<left>20</left>
+				<top>130</top>
+				<width>1240</width>
+				<height>30</height>
+				<align>center</align>
+				<selectedcolor>red</selectedcolor>
+				<label>$LOCALIZE[179]?</label>
+				<visible>Control.IsVisible(120) + ![Control.IsVisible(100) | Control.IsVisible(110)]</visible>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
+			<control type="list" id="120">
+				<left>40</left>
+				<top>100</top>
+				<width>1070</width>
+				<height>400</height>
+				<onleft>111</onleft>
+				<onright>111</onright>
+				<onup>noop</onup>
+				<ondown>111</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(121)">Conditional</animation>
+				<itemlayout height="40">
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>1240</width>
+						<height>40</height>
+						<selectedcolor>red</selectedcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>1240</width>
+						<height>40</height>
+						<textcolor>red</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>

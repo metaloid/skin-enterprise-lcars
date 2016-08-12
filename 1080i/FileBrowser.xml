@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+ 		<left>0</left>
+		<top>0</top>
+ 	</coordinates>
+  <include>DialogOpenClose</include>
+    <controls>
+		<include>DialogOpenCloseVisible</include>
+            
+		<control type="group">
+			<control type="image" description="Logo">
+                <top>250</top>
+				<posx>690</posx>
+				<width>1180</width>
+        		<height>450</height>
+        		<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <bordertexture  border="40">shadow.png</bordertexture>
+        		<bordersize>10</bordersize>
+			</control>
+			<control type="image">
+				<posx>1380</posx>
+				<top>250</top>
+				<width>480</width>
+                    <visible>!SubString(Control.GetLabel(416),*)</visible>
+					<height>450</height>
+                    <texture  colordiffuse="77FFFFFF" fallback="defaultalbumcover.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+                    <bordersize>10</bordersize>
+			</control>
+			<control type="image">
+				<posx>1380</posx>
+				<top>250</top>
+				<width>480</width>
+                    <visible>SubString(Control.GetLabel(416),*)</visible>
+					<height>450</height>
+                    <texture  colordiffuse="77FFFFFF" fallback="defaultalbumcover.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+                    <bordersize>10</bordersize>
+			</control>
+					
+			<control type="label" id="411">
+				<description>header label</description>
+				<posx>1400</posx>
+				<top>275</top>
+				<width>530</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<label>1023</label>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<textcolor>shelffont</textcolor>
+				
+			</control>
+			<control type="label" id="412">
+				<description>path label</description>
+				<posx>1400</posx>
+				<top>315</top>
+				<width>440</width>
+				<height>60</height>
+				<font>LCARS20</font>
+				<haspath>true</haspath>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<textcolor>shelffont</textcolor>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="9000">
+            <posx>1400</posx>
+			<top>475</top>
+			<width>280</width>
+        	<height>365</height>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>450</onleft>
+			<onright>noop</onright>
+			<itemgap>10</itemgap>
+			<orientation>vertical</orientation>
+					<control type="button" id="413">
+						<description>OK button</description>
+						<width>270</width>
+						<label>186</label>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					</control>
+					<control type="button" id="414">
+						<description>Cancel button</description>
+						<width>270</width>
+						<label>222</label>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					</control>
+					<control type="button" id="415">
+						<description>Create folder button</description>
+						<width>270</width>
+						<label>119</label>
+						<align>left</align>
+						<textoffsetx>7</textoffsetx>
+						<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					</control>
+					<control type="radiobutton" id="416">
+						<description>Flip Image button</description>
+						<width>270</width>
+						<label>749</label>
+					</control>
+			</control>
+				<control type="panel" id="450">
+					<left>760</left>
+					<top>275</top>
+					<width>620</width>
+					<height>400</height>
+					<onleft>60</onleft>
+					<onright>9000</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="50" width="620">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>620</width>
+							<height>40</height>
+							<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>8</top>
+							<width>585</width>
+							<height>28</height>
+							<aligny>center</aligny>
+							<font>LCARS20</font>
+							<align>left</align>
+							<scroll>false</scroll>
+							<textcolor>black</textcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="620">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>620</width>
+							<height>41</height>
+							<visible>!Control.HasFocus(450)</visible>
+							<height>40</height>
+							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>620</width>
+							<height>41</height>
+							<visible>Control.HasFocus(450)</visible>
+							<height>40</height>
+							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>8</top>
+							<width>585</width>
+							<height>28</height>
+							<aligny>center</aligny>
+							<font>LCARS20</font>
+							<align>left</align>
+							<scroll>false</scroll>
+							<textcolor>black</textcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="451">
+					<left>760</left>
+					<top>275</top>
+					<width>620</width>
+					<height>400</height>
+					<onleft>60</onleft>
+					<onright>9000</onright>
+					<onup>451</onup>
+					<ondown>451</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="50" width="620">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>620</width>
+							<height>40</height>
+							<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>8</top>
+							<width>585</width>
+							<height>28</height>
+							<aligny>center</aligny>
+							<font>LCARS20</font>
+							<align>left</align>
+							<scroll>false</scroll>
+							<textcolor>black</textcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="620">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>620</width>
+							<height>40</height>
+							<visible>!Control.HasFocus(451)</visible>
+							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>620</width>
+							<height>40</height>
+							<visible>Control.HasFocus(451)</visible>
+							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						</control>
+						<control type="label">
+							<left>30</left>
+							<top>8</top>
+							<width>585</width>
+							<height>28</height>
+							<aligny>center</aligny>
+							<font>LCARS20</font>
+							<align>left</align>
+							<scroll>false</scroll>
+							<textcolor>black</textcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+		<control type="scrollbar" id="60">
+			<posx>720</posx>
+            <height>400</height>
+            <top>275</top>
+            <width>19</width>
+			<onleft>3</onleft>
+			<onright>450</onright>
+			<ondown>60</ondown>
+			<onup>60</onup>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			
+		</control>
+		
+						
+	</controls>
+</window>

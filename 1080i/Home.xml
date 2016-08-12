@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <onload>RunScript(script.favourites)</onload>
+    <include>OpenClose</include>
+     <controls>
+        <include>Backgroundcolor</include>
+		<control type="image">
+            <top>0</top>
+            <posx>0</posx>
+            <width>455</width>
+            <height>970</height>
+            <aspectratio>strech</aspectratio>
+            <texture background="true" >Lcars/lineR.png</texture>
+		</control> 
+		<control type="image">
+            <top>0</top>
+            <posx>455</posx>
+            <width>1464</width>
+            <height>970</height>
+            <aspectratio>strech</aspectratio>
+            <texture  background="true" >Lcars/lineL.png</texture>
+	    </control>
+        <include>InfoPanel</include>
+        <control type="group">
+        <!--ICON SETTINGS-->			
+			<control type="panel" id="9000" description="ICONE">
+				<scrolltime>300</scrolltime>
+				<width>320</width>
+				<height>750</height>
+				<top>120</top>
+				<posx>50</posx>
+				<onleft>60</onleft>
+				<pagecontrol>60</pagecontrol>
+				<onright condition="Container(9000).HasFocus(352)">ActivateWindow(134)</onright>
+				<onright condition="Container(9000).HasFocus(345)">ActivateWindow(1120)</onright>
+				<onright condition="!Container(9000).HasFocus(345)">700</onright>
+				<focusposition>1</focusposition>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<orientation>vertical</orientation>
+				<!--scrolltime tween="sine" easing="inout">280</scrolltime-->
+				<itemlayout height="50" width="310">
+					<control type="image" description="THMBSBASECOLOR">
+						<visible>Skin.HasSetting(colormenu)</visible>
+						<posx>20</posx>
+						<width>270</width>
+						<height>40</height>
+						<texture colordiffuse="buttonselect2" >whiteallrounded2.png</texture>
+					</control>
+					<control type="image" description="Color Base">
+						<visible>!Skin.HasSetting(colormenu)</visible>
+						<posx>20</posx>
+						<width>270</width>
+						<height>40</height>
+						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+						<texture diffuse="whiteallrounded2.png">$INFO[ListItem.Property(color),,.png]</texture>
+					</control>
+					<control type="label" description="LABEL">
+						<left>95</left>
+						<top>8</top>
+						<width>200</width>
+						<height>28</height>
+						<aligny>center</aligny>
+						<font>LCARS20</font>
+						<align>left</align>
+						<scroll>false</scroll>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.label]</label>
+					</control>
+				</itemlayout>								
+				<focusedlayout height="50" width="310">
+					<control type="image" description="THMBSBASE">
+						<posx>20</posx>
+						<width>270</width>
+						<height>40</height>
+						<texture >whiteallrounded2.png</texture>
+					</control>
+					<control type="label" description="label">
+						<left>95</left>
+						<top>8</top>
+						<width>200</width>
+						<height>28</height>
+						<aligny>center</aligny>
+						<font>LCARS20</font>
+						<align>left</align>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.label]</label>
+					</control>
+				</focusedlayout>			
+				<content>
+					<include>homepanel</include>
+				</content>
+			</control>
+			<control type="grouplist" id="9001">
+				<width>280</width>
+				<height>800</height>
+				<top>810</top>
+				<posx>70</posx>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<include>CommonNowPlaying_Controls</include>
+			</control>
+			<control type="group" description="Furniture">
+				<control type="rss" description="RSS Feed">
+					<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+					<include>OpenClose</include>
+					<posx>130</posx>
+					<posy>1025</posy>
+					<width>1660</width>
+					<height>33</height>
+					<font>LCARS20</font>
+					<urlset>1</urlset>
+					<shadowcolor>-</shadowcolor>
+					<titlecolor>rsscolor</titlecolor>
+					<headlinecolor>rsscolor</headlinecolor>
+					<textcolor>rsscolor</textcolor>
+				</control>				
+			</control>
+			<control type="group" id="700" description="Shelf items">
+				<posx>630</posx>
+				<top>200</top>
+				<control type="image" description="Logo">
+					<top>50</top>
+					<posx>60</posx>
+					<width>1180</width>
+					<height>450</height>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="79FFFFFF" >LCARS.png</texture>
+					<bordertexture  border="40">shadow.png</bordertexture>
+					<bordersize>10</bordersize>
+				</control>
+				<include>weather_shelf</include>
+				<include condition="Library.HasContent(TVShows)">TV_RA</include>
+				<include>Addons_Shortcuts</include>
+				<include condition="System.HasAddon(script.tv.show.next.aired)">TV_NA</include>
+				<include condition="Library.HasContent(Movies)">Movies</include>
+				<include>Music_RA</include>
+				<include>epg</include>
+				<include>dvd</include>
+				<include>energize</include>
+				<include>mediasource</include>
+				<control type="label" description="Top Label">
+					<include>ShelfTitle</include>
+					<label> $VAR[shelflabel] </label>
+				</control>
+			</control>
+		</control>
+		<control type="spincontrolex" id="66">
+			<visible>[Container(9000).HasFocus(340) + [Container(311).HasPrevious |  Container(311).HasNext]] | [Container(9000).HasFocus(341) + [Container(312).HasPrevious |  Container(312).HasNext]] | [Container(9000).HasFocus(358) + [Container(316).HasPrevious |  Container(316).HasNext]] | [Container(9000).HasFocus(343) + [Container(315).HasPrevious |  Container(315).HasNext]] | [Container(9000).HasFocus(342) + [Container(313).HasPrevious |  Container(313).HasNext]]</visible>
+			<description>Next page button</description>
+			<left>700</left>
+			<width>270</width>
+			<height>40</height>
+			<top>705</top>
+			<subtype>page</subtype>
+			<font>-</font>
+			<onleft>9000</onleft>
+			<onright>500</onright>
+			<ondown condition="Container(9000).HasFocus(343)">324</ondown>
+			<ondown>9000</ondown>
+			<onup condition="Container(9000).HasFocus(340)">311</onup>
+			<onup condition="Container(9000).HasFocus(341)">312</onup>
+			<onup condition="Container(9000).HasFocus(342)">313</onup>
+			<onup condition="Container(9000).HasFocus(343)">315</onup>
+			<onup condition="Container(9000).HasFocus(358)">316</onup>
+			<onup>9000</onup>
+			<textcolor>-</textcolor>
+			<showonepage>false</showonepage>
+			<spinwidth>100</spinwidth>
+			<spinheight>40</spinheight>
+			<texturenofocus></texturenofocus>
+			<texturefocus></texturefocus>
+			<textureup colordiffuse="buttonselect2" >left.png</textureup>
+			<texturedown colordiffuse="buttonselect2">right.png</texturedown>
+			<textureupfocus colordiffuse="buttonselect2">leftp.png</textureupfocus>
+			<texturedownfocus colordiffuse="buttonselect2">rightp.png</texturedownfocus>
+		</control>
+		<control type="button" id="500">
+			<visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)]</visible>
+			<onleft>66</onleft>
+			<onup condition="Container(9000).HasFocus(342)">313</onup>
+			<onright>9000</onright>
+			<description>Play all music</description>
+			<left>980</left>
+			<width>270</width>
+			<height>40</height>
+			<top>705</top>
+			<label>Play All</label>
+			<onclick>PlayMedia(special://skin/resources/randomMusic.xsp)</onclick>
+		</control>
+		<control type="button" id="500">
+			<visible>[Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
+			<onleft>66</onleft>
+			<onup condition="Container(9000).HasFocus(342)">313</onup>
+			<onright>9000</onright>
+			<description>Play Random</description>
+			<left>980</left>
+			<width>270</width>
+			<height>40</height>
+			<top>705</top>
+			<label>Play Random</label>
+			<onclick>PlayMedia(special://skin/resources/randomMov.xsp)</onclick>
+		</control>
+		<control type="grouplist">
+			<posx>730</posx>
+			<top>200</top>
+			<include>playTop</include>
+		</control>
+	</controls>
+</window>

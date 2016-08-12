@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="147">
+     <defaultcontrol always="true">300</defaultcontrol>
+	<coordinates>
+		<left>1050</left>
+		<top>105</top>
+	</coordinates>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+            <width>720</width>
+            <height>900</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
+		<control type="textbox" id="5" description="Textarea">
+            <font>LCARS218</font>
+            <left>60</left>
+            <top>80</top>
+            <width>600</width>
+            <height>720</height>
+            <align>justify</align>
+        </control>
+        <control type="grouplist" id="300">
+            <top>830</top>
+            <left>60</left>
+			<height>100</height>
+			<width>350</width>
+            <control type="button" id="677" description="Cancel">
+                <label>Close</label>
+			    <onclick>back</onclick>
+		        <width>300</width>
+            </control>
+		</control>
+        <control type="label" id="1" description="Header">
+			<left>40</left>
+			<top>15</top>
+			<width>640</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>LCARS245</font>
+   			<textcolor>orange</textcolor>
+			<scroll>true</scroll>
+            <label>$INFO[ListItem.Property(Addon.Name)]</label>
+        </control>
+    </controls>
+</window>

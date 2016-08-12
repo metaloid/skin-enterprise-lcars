@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="139">
+    <defaultcontrol always="true">9000</defaultcontrol>
+	<coordinates>
+		<left>1050</left>
+		<top>105</top>
+	</coordinates>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+            <width>720</width>
+            <height>900</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
+        <control type="label" description="Heading">
+				<left>40</left>
+				<top>15</top>
+				<width>640</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>LCARS245</font>
+            <label>13406</label>
+				<textcolor>orange</textcolor>
+				<scroll>true</scroll>
+        </control>
+            <control type="list" id="5">
+                <top>90</top>
+				<left>60</left>
+				<width>600</width>
+				<height>720</height>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <pagecontrol>66</pagecontrol>
+                <itemlayout height="45">
+                    <control type="label">
+                        <left>0</left>
+                        <height>40</height>
+                        <width>150</width>
+                        <scroll>false</scroll>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <left>160</left>
+                        <height>40</height>
+                        <width>500</width>
+                        <scroll>false</scroll>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="45">
+                     <control type="label">
+                        <left>0</left>
+                        <height>40</height>
+                        <width>150</width>
+                        <scroll>false</scroll>
+                        <align>right</align>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <left>160</left>
+                        <height>40</height>
+                        <width>500</width>
+                        <scroll>false</scroll>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </focusedlayout>
+            </control>
+			<control type="grouplist" id="9000">
+				<left>60</left>
+				<top>820</top>
+			    <height>300</height>
+				<width>420</width>
+                <onleft>50</onleft>
+                <itemgap>10</itemgap>
+                <orientation>horizontal</orientation>
+                <control type="button" id="677">
+                    <onclick>back</onclick>
+					<width>200</width>
+                    <label>Close</label>
+                </control>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(5).HasPrevious |  Container(5).HasNext]</visible>
+				<width>210</width>
+                <subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>false</showonepage>
+				<spinwidth>100</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+			</control>    
+                </control>
+    </controls>
+</window>

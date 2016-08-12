@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="106">
+    <defaultcontrol always="true">996</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <include>DialogOpenClose</include>
+    <coordinates>
+        <system>1</system>
+        <origin x="560" y="120" />
+    </coordinates>
+    <controls>
+        <control type="image" id="999" description="Background image">
+            <width>380</width>
+            <height max="940">auto</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+        </control>
+        <control type="grouplist" id="996" description="Context menu container">
+            <posx>40</posx>
+            <top>40</top>
+            <width>480</width>
+            <height max="860">auto</height>
+            <itemgap>10</itemgap>
+        <control type="button" id="677">
+            <onclick>back</onclick>
+			<width>300</width>
+			<label>Cancel</label>
+		</control>
+		<control type="button" id="1500">
+                <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
+                <width>300</width>
+                <label>Cinema Experiance</label>
+                <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
+        </control>
+		<control type="button" id="2001">
+                <width>300</width>
+                <label>Extra Info</label>
+                <visible>Container.Content(Actors) | Container.Content(Directors)</visible>
+                <visible>System.HasAddon(script.extendedinfo)</visible>
+                <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Label])</onclick>
+        </control>
+		
+        </control>
+        <control type="button" id="1000" description="Buttons">
+            <posx>40</posx>
+            <top></top>
+            <width>300</width>
+        </control>
+   
+
+    </controls>
+</window>

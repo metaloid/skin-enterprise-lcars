@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="homepanel">
+        <item id="355">
+            <visible>Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)</visible>
+            <label>Video</label>
+           	<property name="color">c1</property>
+            <onclick >ActivateWindow(Videos,root)</onclick>
+        </item>
+        <item id="340">
+            <visible>!Skin.HasSetting(hidemovie)</visible>
+			<label>342</label>
+            <property name="color">c1</property>
+            <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
+        </item>
+		<item id="341">
+            <visible>!Skin.HasSetting(hidetv)</visible>
+            <label>20343</label>
+            <property name="color">c1</property>
+            <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+            <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
+        </item>
+        <!--LIVE TV-->
+        <item id="355">
+            <label>LiveTV</label>
+            <property name="color">c1</property>
+            <onclick>ActivateWindow(TVChannels)</onclick>
+            <visible>PVR.HasTVChannels</visible>
+        </item>
+        <item id="342">
+            <visible>!Skin.HasSetting(hidemusic)</visible>
+            <label>2</label>
+            <property name="color">c5</property>
+            <onclick>ActivateWindow(502,$INFO[Skin.String(MusicLink)])</onclick>
+            <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root)</onclick>
+        </item>
+        <item id="352">
+            <visible>!Skin.HasSetting(hidefav)</visible>
+            <property name="color">c5</property>
+            <label>$LOCALIZE[1036]</label>
+            <onclick>ActivateWindow(134)</onclick>
+        </item>
+         <item id="344">
+            <visible>!Skin.HasSetting(hidepic)</visible>
+            <property name="color">c9</property>
+            <label>1</label>
+            <onclick>ActivateWindow(2)</onclick>
+        </item>
+       <item id="358">
+            <visible>!Skin.HasSetting(nextair) + System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
+            <property name="color">c9</property>
+            <label>$ADDON[script.tv.show.next.aired 32019]</label>
+            <onclick>RunAddon(script.tv.show.next.aired)</onclick>
+        </item>
+		<item id="343">
+            <visible>!Skin.HasSetting(hideaddon)</visible>
+            <property name="color">c2</property>
+            <label>24001</label>
+			<onclick>noop</onclick>
+        </item>
+        <item id="345">
+            <visible>!Skin.HasSetting(hidewtr)</visible>
+            <property name="color">c2</property>
+            <label>$INFO[Weather.Temperature]</label>
+			<onclick>ActivateWindow(1120)</onclick>
+        </item>
+        <item id="346">
+          <visible>!Skin.HasSetting(hideupdate)</visible>
+          <property name="color">c4</property>
+          <label>653</label>
+          <onclick>UpdateLibrary(Video)</onclick>
+          <onclick condition="Library.HasContent(Music)">UpdateLibrary(Music)</onclick>
+        </item>		
+        <item id="354">
+            <visible>![System.Platform.ios | System.Platform.atv2]</visible>
+            <property name="color">c4</property>
+            <visible>!Skin.HasSetting(XBMC3)</visible>
+            <visible>System.HasMediadvd</visible>
+            <label>$INFO[System.DVDLabel]</label>
+            <onclick>noop</onclick>
+        </item>
+        <item id="348">
+            <property name="color">c4</property>
+            <label>5</label>
+            <onclick>noop</onclick>
+        </item>
+        <item id="349">
+            <visible>Player.HasMedia</visible>
+            <property name="color">c6</property>
+            <label>31064</label>
+            <onclick condition="Player.HasMedia">Fullscreen</onclick>
+        </item>
+        <item id="349">
+            <visible>!Player.HasMedia + Skin.HasSetting(quitter)</visible>
+            <property name="color">c3</property>
+            <label>Engage</label>
+            <onclick condition="StringCompare(Skin.String(shutdown),quit)">XBMC.quit()</onclick>
+            <onclick condition="StringCompare(Skin.String(shutdown),powerdown)">XBMC.powerdown()</onclick>
+            <onclick condition="StringCompare(Skin.String(shutdown),hibernate)">XBMC.hibernate()</onclick>
+            <onclick condition="StringCompare(Skin.String(shutdown),suspend)">XBMC.suspend()</onclick>
+            <onclick condition="StringCompare(Skin.String(shutdown),reboot)">XBMC.reboot()</onclick>
+        </item>
+        <item id="349">
+            <visible>!Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+            <property name="color">c3</property>
+            <label>Energize</label>
+            <onclick>noop</onclick>
+        </item>
+	</include>
+</includes>

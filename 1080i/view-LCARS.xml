@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="VideoLcars">
+		<!--control type="image">
+          <posx>450</posx>
+		  <posy>70</posy>
+		  <width>1280</width>
+          <height>930</height>
+          <texture  background="true">images/LCARS.png</texture>
+          <colordiffuse>77FFFFFF</colordiffuse>
+		  <aspectratio scalediffuse="false">scale</aspectratio>
+		</control-->
+		<control type="panel" id="54">
+			<visible>![Container.Content(years) | Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
+			<include>ListLcars</include>
+		</control>
+		<control type="panel" id="504">
+			<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
+			<posx>430</posx>
+			<posy>110</posy>
+			<width>1300</width>
+			<height>850</height>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<onright>noop</onright>
+			<onleft>9000</onleft>
+		    <viewtype label="54">VideoLcars</viewtype>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime tween="sine" easing="inout">300</scrolltime>
+			<preloaditems>4</preloaditems>
+			<orientation>vertical</orientation>
+			<include>IconLcars</include>
+		</control>
+        <control type="panel" id="503">
+          <visible>Container.Content(years)</visible>
+		  <include>YearsLcars</include>
+        </control>
+		<control type="group" description="info">
+			<include>InfoLcars</include>
+		</control>
+
+    </include>
+</includes>	
+
+

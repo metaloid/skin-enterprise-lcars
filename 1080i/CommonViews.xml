@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Scrollanim">
+        <animation condition="Control.HasFocus(60)" effect="fade" start="100" end="0" time="250" reversible="true">Conditional</animation>
+    </include>
+	<include name="Keyboardbuttons">
+        <width>85</width>
+        <height>40</height>
+        <texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded.png</texturenofocus>
+        <texturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</texturefocus>
+        <alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
+        <alttexturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</alttexturefocus>
+        <align>center</align>
+        <aligny>center</aligny>
+        <textoffsetx>0</textoffsetx>
+		<font>LCARS20</font>
+		<textcolor>keys</textcolor>
+		<focusedcolor>keys2</focusedcolor>
+    </include>
+    <!--PANEL FOR BIG LIST-->
+    
+    <include name="LargeListItemCount">
+        <animation effect="slide" start="0,0" end="0,-333" time="0" condition="StringCompare(Container.NumItems,1)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-222" time="0" condition="StringCompare(Container.NumItems,2)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-222" time="0" condition="StringCompare(Container.NumItems,3)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-111" time="0" condition="StringCompare(Container.NumItems,4)">conditional</animation>
+        <animation effect="slide" start="0,0" end="0,-111" time="0" condition="StringCompare(Container.NumItems,5)">conditional</animation>
+    </include>
+    <include name="52MainLabel">
+        <posx>30</posx>
+        <height>80</height>
+        <width>900</width>
+        <aligny>center</aligny>
+        <scroll>false</scroll>
+        <font>LCARS20</font>
+        <textcolor>White</textcolor>
+        <shadowcolor>-</shadowcolor>
+    </include>
+    <include name="BigListDetails">
+        <posx>128</posx>
+        <top>63</top>
+        <height>33</height>
+        <width>350</width>
+        <font>LCARS20</font>
+        <textcolor>White</textcolor>
+        <scroll>false</scroll>
+    </include>
+    <include name="SettingsSubmenuButtons">
+        <width>720</width>
+        <textoffsetx>22</textoffsetx>
+        <height>40</height>
+        <align>left</align>
+        <font>LCARS20</font>
+        <disabledcolor>Disabled</disabledcolor>
+    </include>
+</includes>

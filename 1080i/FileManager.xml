@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="3">
+    <defaultcontrol always="true">20</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <include>OpenClose</include>
+     <controls>
+        <include>Backgroundcolor</include>
+		<control type="image">
+                <top>0</top>
+                <posx>-524</posx>
+                <width>1464</width>
+                <height>970</height>
+                <aspectratio>strech</aspectratio>
+                <texture background="true" flipx="true">Lcars/lineL.png</texture>
+		</control> 
+		<control type="image">
+                <top>0</top>
+                <posx>970</posx>
+                <width>1464</width>
+                <height>970</height>
+                <aspectratio>strech</aspectratio>
+                <texture  background="true" >Lcars/lineL.png</texture>
+	     </control>
+		<control type="grouplist">
+			<top>980</top>
+            <posx>70</posx>
+			<align>left</align>
+            <orientation>horizontal</orientation>
+            <itemgap>10</itemgap>
+			<control type="button" description="WebLink">
+                <visible>!Skin.HasSetting(hideconnection)</visible>
+                <width>250</width>
+                <label>$INFO[Network.IPAddress,IP: ]</label>
+            </control>
+			<control type="button" description="cputemp">
+			<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
+            <width>250</width>
+                <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
+            </control>
+			<control type="button" description="Clock">
+                <visible>!Skin.HasSetting(HideClock)</visible>
+                <label>$INFO[System.Time]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="Battery">
+                <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
+                <label>Power Level $INFO[System.BatteryLevel]</label>
+			    <texturenofocus colordiffuse="$VAR[Battery]" border="20">whiteallrounded.png</texturenofocus>
+				<width>250</width>
+            </control>
+			<control type="button" id="607">
+				<onclick>ActivateWindow(Home)</onclick>
+				<onup>20</onup>
+				<width>250</width>
+				<label>Home</label>
+			</control>
+		</control>
+		<control type="group" description="Left panel">
+            <posx>80</posx>
+			<posy>130</posy>
+			<animation condition="!Control.HasFocus(20)" effect="fade" start="100" end="50" time="20" reversible="true">Conditional</animation>
+            <control type="label" id="101" description="Header Label">
+                <posx>35</posx>
+                <width>700</width>
+                <align>left</align>
+                <label>-</label>
+                <font>LCARS24</font>
+                <haspath>true</haspath>
+                <textcolor>Yellow</textcolor>
+            </control>
+            <control type="list" id="20" description="Left File List">
+                <posx>10</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>630</height>
+				<onleft>60</onleft>
+                <onright>21</onright>
+                <onup>20</onup>
+                <ondown>607</ondown>
+                <pagecontrol>60</pagecontrol>
+                <itemlayout height="50" width="700">
+                    <control type="image" description="THMBSBASECOLOR">
+                       <width>700</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect2"  flipx="true">whiterounded.png</texture>
+                    </control>
+					<control type="label">
+                        <posx>10</posx>
+                        <scroll>false</scroll>
+                    <width>655</width>
+                        <height>40</height>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <selectedcolor>Red</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <posx>600</posx>
+                        <height>40</height>
+                        <width>150</width>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="50" width="700">
+                    <control type="image">
+                        <width>700</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect" flipx="true">whiterounded.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>10</posx>
+                        <width>655</width>
+                        <height>40</height>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <selectedcolor>Red</selectedcolor>
+                        <textcolor>black</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <posx>600</posx>
+                        <height>40</height>
+                        <width>150</width>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="label" id="12" description="itemcount">
+                <posx>35</posx>
+                <top>40</top>
+                <width>600</width>
+                <align>left</align>
+                <font>LCARS20</font>
+                <textcolor>White</textcolor>
+                <label>-</label>
+            </control>
+        </control>
+        <control type="group" description="Right panel">
+            <posx>1120</posx>
+			<posy>130</posy>
+			<animation condition="!Control.HasFocus(21)" effect="fade" start="100" end="60" time="20" reversible="true">Conditional</animation>
+            <control type="label" id="102" description="Right Header Label">
+                <posx>25</posx>
+                <width>700</width>
+                <align>left</align>
+                <label>-</label>
+                <font>LCARS24</font>
+                <haspath>true</haspath>
+                <textcolor>Red</textcolor>
+            </control>
+            <control type="list" id="21" description="Right File List">
+                <posx>0</posx>
+                <top>100</top>
+                <width>700</width>
+				<height>630</height>
+				<onleft>20</onleft>
+                <onright>61</onright>
+                <onup>21</onup>
+                <ondown>607</ondown>
+                <pagecontrol>61</pagecontrol>
+                <itemlayout height="54" width="700">
+                    <control type="image" description="THMBSBASECOLOR">
+                       <width>700</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                    </control>
+					<control type="label">
+                        <posx>10</posx>
+                        <width>655</width>
+                        <height>40</height>
+                        <scroll>false</scroll>
+                    <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <selectedcolor>Red</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <posx>600</posx>
+                        <height>40</height>
+                        <width>150</width>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="54" width="700">
+                    <control type="image">
+                        <width>700</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>10</posx>
+                        <width>655</width>
+                        <height>40</height>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <selectedcolor>Red</selectedcolor>
+                        <textcolor>black</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="label">
+                        <posx>600</posx>
+                        <height>40</height>
+                        <width>150</width>
+                        <font>LCARS18</font>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <info>ListItem.Label2</info>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="label" id="13" description="itemcount">
+                <posx>25</posx>
+                <top>40</top>
+                <width>600</width>
+                <align>left</align>
+                <font>LCARS20</font>
+                <textcolor>White</textcolor>
+                <label>-</label>
+            </control>
+        </control>
+		 <control type="scrollbar" id="60">
+            <posx>40</posx>
+            <top>240</top>
+            <height>610</height>
+            <onleft>20</onleft>
+            <onright>20</onright>
+        </control>
+        <control type="scrollbar" id="61">
+            <posx>60r</posx>
+            <top>240</top>
+            <height>610</height>
+            <onleft>21</onleft>
+            <onright>21</onright>
+        </control>
+    </controls>
+</window>

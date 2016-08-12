@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="10140">
+    <defaultcontrol always="true">9</defaultcontrol>
+	<coordinates>
+		<left>370</left>
+		<top>60</top>
+	</coordinates>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1400</width>
+			<height>950</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
+		<control type="grouplist" description="centered">
+            <top>30</top>
+            <centerleft>700</centerleft>
+            <width>580</width>
+            <align>center</align>
+            <height>60</height>
+            <orientation>horizontal</orientation>
+            <control type="label" id="7777" description="Heading">
+                <width>auto</width>
+                <height>40</height>
+                <font>LCARS205</font>
+                <scroll>false</scroll>
+                <label>$INFO[ListItem.Property(Addon.Name)]: $LOCALIZE[1045]</label>
+            </control>
+        </control>
+		<control type="grouplist" id="9" description="TopHat">
+            <left>1050</left>
+			<top>80</top>
+            <width>350</width>
+            <height>500</height>
+            <aligny>bottom</aligny>
+            <align>center</align>
+            <itemgap>10</itemgap>
+            <orientation>vertical</orientation>
+            <onleft>2</onleft>
+            <onright>2</onright>
+            <onup>9001</onup>
+            <ondown>9001</ondown>
+        </control>
+        <control type="group" description="Options">
+            <control type="grouplist" id="9001" description="bottomPanel">
+                <top>640</top>
+                <left>1050</left>
+			    <height>300</height>
+				<width>350</width>
+                <onleft>2</onleft>
+                <onright>2</onright>
+                <onup>9</onup>
+                <ondown>9</ondown>
+                <itemgap>10</itemgap>
+                <orientation>vertical</orientation>
+				<control type="spincontrolex" id="66">
+					<description>Next page button</description>
+					<visible>[Container(2).HasPrevious |  Container(2).HasNext]</visible>
+					<width>307</width>
+					<subtype>page</subtype>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<showonepage>false</showonepage>
+					<spinwidth>150</spinwidth>
+					<spinheight>40</spinheight>
+					<texturenofocus></texturenofocus>
+					<texturefocus></texturefocus>
+					<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+					<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+					<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+					<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				</control>    
+                <control type="button" id="10" description="OK">
+                    <width>300</width>
+                    <label>186</label>
+                </control>
+                <control type="button" id="12" description="Default">
+                    <width>300</width>
+                    <label>409</label>
+                </control>
+                <control type="button" id="11" description="Cancel">
+                    <width>300</width>
+                    <label>222</label>
+                </control>
+            </control>
+        </control>
+		<control type="button" id="13" description="Button Template">
+        </control>
+        <control type="grouplist" id="2" description="Stage">
+            <left>60</left>
+            <top>80</top>
+            <width>960</width>
+            <height>850</height>
+            <itemgap>10</itemgap>
+            <onup>2</onup>
+            <ondown>2</ondown>
+            <onleft>9001</onleft>
+            <onright>9</onright>
+            <pagecontrol>66</pagecontrol>
+        </control>
+        <control type="button" id="3" description="Default Button">
+			<align>left</align>
+			<textoffsetx>7</textoffsetx>
+			<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+        </control>
+        <control type="radiobutton" id="4" description="Default RadioButton">
+            <align>left</align>
+        </control>
+        <control type="spincontrolex" id="5" description="Default spincontrolex">
+            <reverse>yes</reverse>
+        </control>
+        <control type="image" id="6" description="DO NOT REMOVE">
+            <texture>images/Black.png</texture>
+            <height>1</height>
+        </control>
+        <control type="label" id="7">
+            <label>-</label>
+            <font>LCARS20</font>
+            <textcolor>Blue</textcolor>
+        </control>
+        <control type="sliderex" id="8" description="Default Slider Control">
+            <width>900</width>
+        </control>
+    </controls>
+</window>

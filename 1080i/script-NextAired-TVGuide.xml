@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <backgroundcolor>background</backgroundcolor>
+    <controls>
+        <include>Backgroundcolor</include>
+        <!--control type="image">
+                <visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
+                <posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>970</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture background="true" colordiffuse="55FFFFFF">$VAR[nextairedfanart]</texture>
+                <fadetime>400</fadetime>
+                <animation effect="fade" time="600">Visible</animation>
+                <animation effect="fade" time="600">Hidden</animation>
+		</control-->
+        <control type="image">
+                <top>0</top>
+                <posx>0</posx>
+                <width>455</width>
+                <height>970</height>
+                <aspectratio>strech</aspectratio>
+                <texture background="true" >Lcars/lineR.png</texture>
+		</control> 
+		<control type="image">
+                <top>0</top>
+                <posx>455</posx>
+                <width>1464</width>
+                <height>970</height>
+                <aspectratio>strech</aspectratio>
+                <texture  background="true" >Lcars/lineL.png</texture>
+	     </control>
+        <include>InfoPanel</include>
+        <control type="list" id="5000">
+				<posx>30</posx>
+				<posy>240</posy>
+				<width>320</width>
+				<height>740</height>
+				<onleft>noop</onleft>
+				<onright condition="Container(5000).HasFocus(1)">200</onright>
+				<onright condition="Container(5000).HasFocus(2)">201</onright>
+				<onright condition="Container(5000).HasFocus(3)">202</onright>
+				<onright condition="Container(5000).HasFocus(4)">203</onright>
+				<onright condition="Container(5000).HasFocus(5)">204</onright>
+				<onright condition="Container(5000).HasFocus(6)">205</onright>
+				<onright condition="Container(5000).HasFocus(7)">206</onright>
+				<onup>9000</onup>
+				<ondown>5000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<itemlayout height="45" width="310">
+					<control type="image">
+						<posx>20</posx>
+                        <width>300</width>
+                        <height>40</height>
+                        <texture colordiffuse="buttonselect2" >whiteallrounded2.png</texture>
+					</control>
+					<control type="label">
+						<left>95</left>
+						<posy>10</posy>
+						<width>460</width>
+						<height>20</height>
+						<textcolor>black</textcolor>
+						<font>LCARS20</font>
+						<scroll>false</scroll>
+						<aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<centerleft>50</centerleft>
+						<posy>10</posy>
+						<width>80</width>
+						<height>20</height>
+						<font>LCARS218</font>
+						<scroll>false</scroll>
+						<align>center</align>
+						<textcolor>black</textcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="45" width="310">
+					<control type="image">
+						<posx>20</posx>
+                        <width>300</width>
+                        <height>40</height>
+                        <texture >whiteallrounded2.png</texture>
+					</control>
+					<control type="label">
+						<left>95</left>
+						<posy>10</posy>
+						<width>460</width>
+						<height>20</height>
+						<textcolor>black</textcolor>
+						<font>LCARS20</font>
+						<scroll>false</scroll>
+						<aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<centerleft>50</centerleft>
+						<posy>10</posy>
+						<width>80</width>
+						<height>20</height>
+						<font>LCARS218</font>
+						<scroll>false</scroll>
+						<align>center</align>
+						<textcolor>black</textcolor>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>			
+				<content>
+					<item id="1">
+						<label>$INFO[Window(home).Property(NextAired.200.Weekday)]</label>
+						<label2>$INFO[Container(200).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(home).Property(NextAired.201.Weekday)]</label>
+						<label2>$INFO[Container(201).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(home).Property(NextAired.202.Weekday)]</label>
+						<label2>$INFO[Container(202).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(home).Property(NextAired.203.Weekday)]</label>
+						<label2>$INFO[Container(203).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(home).Property(NextAired.204.Weekday)]</label>
+						<label2>$INFO[Container(204).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(home).Property(NextAired.205.Weekday)]</label>
+						<label2>$INFO[Container(205).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="7">
+						<label>$INFO[Window(home).Property(NextAired.206.Weekday)]</label>
+						<label2>$INFO[Container(206).NumItems]</label2>
+						<onclick>noop</onclick>
+					</item>
+					<item id="8">
+						<label>Home</label>
+						<onclick>ActivateWindow(Home)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="group" id="9001">
+				<control type="panel" id="200">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(1)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+				<control type="panel" id="201">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(2)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+				<control type="panel" id="202">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(3)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+				<control type="panel" id="203">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(4)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+				<control type="panel" id="204">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(5)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+				<control type="panel" id="205">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(6)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+				<control type="panel" id="206">
+					<visible allowhiddenfocus="false">[Container(5000).HasFocus(7)]</visible>
+					<posx>630</posx>
+					<top>70</top>
+					<width>1300</width>
+					<height>860</height>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
+					<onleft>5000</onleft>
+					<onright>noop</onright>
+					<pagecontrol>-</pagecontrol>
+					<orientation>vertical</orientation>
+					<include>SquareIconLcars</include>				
+				</control>
+			</control>
+		
+              
+                <control type="grouplist" id="9000">
+                    <width>300</width>
+                    <height>300</height>
+                    <top>120</top>
+					<posx>50</posx>
+					<onleft>noop</onleft>
+                    <onright>noop</onright>
+                    <onup>noop</onup>
+                    <ondown>5000</ondown>
+                    <control type="button" id="8">
+                        <description>Settings</description>
+                        <width>300</width>
+                        <texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
+                        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+                        <align>LEFT</align>
+                        <textoffsetx>75</textoffsetx>
+                        <label>5</label>
+                    </control>
+                </control>
+            
+            
+        
+
+    </controls>
+</window>

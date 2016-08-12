@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="ShortcutsCommons">
+        <itemlayout height="50" width="210">
+            <control type="image" description="THMBSBASECOLOR">
+                <centerleft>105</centerleft>
+				<width>200</width>
+                <height>40</height>
+                <texture colordiffuse="buttonselect2"  border="20">whiteallrounded.png</texture>
+            </control>
+            <control type="label" description="LABEL">
+                <centerleft>105</centerleft>
+				<top>8</top>
+                <width>180</width>
+                <height>28</height>
+                <aligny>center</aligny>
+				<font>LCARS20</font>
+                <align>center</align>
+                <scroll>false</scroll>
+				<textcolor>black</textcolor>
+                <label>$INFO[ListItem.label]</label>
+            </control>
+   		</itemlayout>
+       	<focusedlayout height="50" width="210">
+            <control type="image" description="THMBSBASE">
+                <centerleft>105</centerleft>
+				<width>200</width>
+                <height>40</height>
+                <texture  border="20">whiteallrounded.png</texture>
+                </control>
+			<control type="label" description="label">
+                <centerleft>105</centerleft>
+				<top>8</top>
+                <width>180</width>
+                <height>28</height>
+                <aligny>center</aligny>
+				<font>LCARS20</font>
+                <align>center</align>
+                <textcolor>black</textcolor>
+                <label>$INFO[ListItem.label]</label>
+            </control>
+       	</focusedlayout>
+    </include>
+    <include name="Movies">
+        <control type="panel" id="311" description="Movies Shelf Shortcuts">
+            <visible>[Library.HasContent(Movies) + [Container(9000).HasFocus(340) | Container(9000).HasFocus(357) | Control.HasFocus(311)]]</visible>
+            <onup>9000</onup>
+            <ondown>66</ondown>
+            <onleft>311</onleft>
+            <onright>311</onright>
+			<pagecontrol>66</pagecontrol>
+			<top>50</top>
+			<posx>65</posx>
+			<width>1150</width>
+			<height>450</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
+            <content target="video">videodb://recentlyaddedmovies/</content>
+        </control>
+    </include>
+	<include name="TV_RA">
+        <control type="group">
+            <visible>Library.HasContent(TVShows)</visible>
+            <control type="panel" id="312" description="TOP Shortcuts">
+                <visible>[Library.HasContent(TVShows) | !Skin.HasSetting(TVShelf_Watchlist)] + [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
+                <onup>9000</onup>
+                <ondown>66</ondown>
+                <onleft>312</onleft>
+                <onright>312</onright>
+				<pagecontrol>66</pagecontrol>
+				<top>50</top>
+				<posx>65</posx>
+				<width>1150</width>
+				<height>450</height>
+				<focusposition>2</focusposition>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+                <include>SquareIconLcars</include>
+                <content target="video">videodb://recentlyaddedepisodes/</content>
+            </control>
+         </control>
+    </include>
+    <include name="TV_NA">
+        <control type="group">
+            <control type="panel" id="316" description="TOP Shortcuts">
+                <visible>Container(9000).HasFocus(358)</visible>
+                <onup>9000</onup>
+                <ondown>66</ondown>
+                <onleft>311</onleft>
+                <onright>311</onright>
+				<pagecontrol>66</pagecontrol>
+				<top>50</top>
+				<posx>65</posx>
+				<width>1150</width>
+				<height>450</height>
+				<focusposition>2</focusposition>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+                <include>SquareIconLcars</include>
+                <content>
+                    <item id="1" description="Episodes1">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
+                        <label>$INFO[Window(Home).Property(NextAired.1.NextDay)]</label>
+                        <label2>S$INFO[Window(Home).Property(NextAired.1.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.1.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.1.NextTitle)]</label2>
+                        <thumb>$INFO[Window(Home).Property(NextAired.1.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.1.Library)])</onclick>
+                    </item>
+                    <item id="2" description="Episodes2">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.2.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.2.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.2.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.2.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.2.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.2.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.2.Library)])</onclick>
+                    </item>
+                    <item id="3" description="Episodes3">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.3.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.3.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.3.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.3.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.3.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.3.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.3.Library)])</onclick>
+                    </item>
+                    <item id="4" description="Episodes4">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.4.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.4.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.4.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.4.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.4.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.4.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.4.Library)])</onclick>
+                    </item>
+                    <item id="5" description="Episodes5">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.5.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.5.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.5.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.5.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.5.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.5.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.5.Library)])</onclick>
+                    </item>
+                    <item id="6" description="Episodes6">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.6.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.6.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.6.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.6.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.6.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.6.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.6.Library)])</onclick>
+                    </item>
+                    <item id="7" description="Episodes7">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.7.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.7.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.7.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.7.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.7.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.7.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.7.Library)])</onclick>
+                    </item>
+                    <item id="8" description="Episodes8">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.8.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.8.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.8.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.8.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.8.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.8.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.8.Library)])</onclick>
+                    </item>
+                    <item id="9" description="Episodes9">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.9.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.9.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.9.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.9.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.9.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.9.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.9.Library)])</onclick>
+                    </item>
+                    <item id="10" description="Episodes10">
+                        <visible>!IsEmpty(Window(Home).Property(NextAired.10.NextTitle))</visible>
+                        <label2>S$INFO[Window(Home).Property(NextAired.10.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.10.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.10.NextTitle)]</label2>
+                        <label>$INFO[Window(Home).Property(NextAired.10.NextDay)]</label>
+                        <thumb>$INFO[Window(Home).Property(NextAired.10.fanart)]</thumb>
+                        <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.10.Library)])</onclick>
+                    </item>
+                </content>
+            </control>
+        </control>
+    </include>
+    <include name="Music_RA">
+        <control type="panel" id="313" description="TOP Shortcuts">
+                <onup>9000</onup>
+                <ondown>66</ondown>
+                <onleft>313</onleft>
+                <onright>313</onright>
+                <visible>Library.HasContent(Music) | Library.HasContent(MusicVideos) | Skin.HasSetting(MusicShelf_Custom)</visible>
+                <visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)] + !StringCompare(Skin.String(musicshelf),mushoff)</visible>
+				<pagecontrol>66</pagecontrol>
+				<top>50</top>
+				<posx>65</posx>
+				<width>1150</width>
+				<height>450</height>
+				<focusposition>2</focusposition>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+                <include>SquareIconLcars</include>
+                <content target="music">$VAR[musicshelfcontent]</content>
+            </control>
+    </include>
+	<include name="Addons_Shortcuts">
+				<control type="panel" id="324" description="TOP Shortcuts">
+                <visible>[Container(9000).HasFocus(343) | Control.HasFocus(324)]</visible>
+                <onup>66</onup>
+                <ondown>315</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+				<top>550</top>
+				<left>130</left>
+				<width>1200</width>
+				<height>60</height>
+				<include>ShelfFade</include>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+                <include>ShortcutsCommons</include>
+                <content>
+                    <item id="1" description="tvchannels">
+                        <label>1037</label>
+						<onclick>ActivateWindow(Videos,Addons)</onclick>
+                    </item>
+                    <item id="2" description="radiochannels">
+                        <label>1038</label>
+						<onclick>ActivateWindow(Music,Addons)</onclick>
+                    </item>
+                    <item id="3" description="tvchannels">
+                        <label>$LOCALIZE[31098]</label>
+						<onclick>ActivateWindow(Programs,Addons)</onclick>
+                    </item>
+                    <item id="4" description="radiochannels">
+                        <label>31037</label>
+						<onclick>ActivateWindow(AddonBrowser,root)</onclick>
+                    </item>
+                    <item id="5" description="shelf custom">
+                        <label>31040</label>
+						<onclick>ActivateWindow(1617)</onclick>
+                    </item>
+        </content>
+        </control>
+		<control type="group">
+            <control type="panel" id="315" description="TOP Shortcuts">
+                <visible> Skin.HasSetting(AddonsShelf_Custom)+ [Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+                <onup>324</onup>
+                <ondown>66</ondown>
+                <onleft>315</onleft>
+                <onright>315</onright>
+				<pagecontrol>66</pagecontrol>
+				<top>50</top>
+				<posx>65</posx>
+				<width>1150</width>
+				<height>450</height>
+				<focusposition>2</focusposition>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+                <include>SquareIconLcars</include>
+                <content>
+                    <item id="1" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.1.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.1.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.1.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.1.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="2" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.2.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.2.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.2.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.2.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="3" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.3.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.3.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.3.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.3.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="4" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.4.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.4.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.4.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.4.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="5" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.5.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.5.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.5.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.5.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="6" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.6.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.6.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.6.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.6.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="7" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.7.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.7.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.7.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.7.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="8" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.8.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.8.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.8.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.8.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="9" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.9.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.9.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.9.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.9.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="10" description="Addons">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.10.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.10.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.10.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.10.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
+                    </item>
+                    <item id="11" description="Scripts">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.11.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.11.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.11.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.11.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24009]</property>
+                    </item>
+                    <item id="12" description="Scripts">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.12.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.12.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.12.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.12.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24009]</property>
+                    </item>
+                    <item id="13" description="Scripts">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.13.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.13.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.13.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.13.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24009]</property>
+                    </item>
+                    <item id="14" description="Scripts">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.14.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.14.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.14.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.14.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24009]</property>
+                    </item>
+                    <item id="15" description="Scripts">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.15.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.15.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.15.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.15.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24009]</property>
+                    </item>
+                </content>
+            </control>
+        </control>
+    </include>
+<!-- WEATHER SHELF -->	
+    <include name="weather_shelf">
+        <control type="group">
+            <left>40</left>
+            <visible>[Container(9000).HasFocus(345)]</visible>
+            <include>ShelfFade</include>
+			<control type="image">
+					<left>50</left>
+					<top>80</top>
+					<width>400</width>
+					<height>40</height>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+					<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
+			</control>
+			<control type="label">
+                <posx>475</posx>
+                <top>80</top>
+                <width>600</width>
+                <height>40</height>
+                <textcolor>yellow</textcolor>
+                <font>LCARS205</font>
+				<label>Last Update - $INFO[Window(Weather).Property(Updated)]</label>
+				<description>update label</description>
+			</control>
+            <control type="group">
+                    <control type="image">
+                        <left>50</left>
+                        <top>150</top>
+                        <width>345</width>
+                        <height>270</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+                    </control>
+				<control type="label">
+						<left>475</left>
+						<top>150</top>
+						<width>800</width>
+						<height>35</height>
+						<font>LCARS20</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Window(Weather).Property(Current.Condition)] : $INFO[Window(Weather).Property(Current.Humidity)] Humidity : Wind $INFO[Window(Weather).Property(Current.Wind)]</label>
+				</control>
+				<control type="label">
+                        <left>475</left>
+                        <top>200</top>
+                        <width>800</width>
+                        <height>35</height>
+                        <label>$LOCALIZE[402] : $INFO[Window(Weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits]</label>
+                        <font>LCARS20</font>
+                </control>
+				<control type="label">
+                            <left>475</left>
+                            <top>250</top>
+                            <width>800</width>
+                            <height>35</height>
+                            <label>$LOCALIZE[405]: $INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+                            <font>LCARS20</font>
+                </control>
+				<control type="label">
+                        <left>475</left>
+                        <top>300</top>
+                        <height>35</height>
+						<width>800</width>
+                        <font>LCARS20</font>
+                        <label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]     $LOCALIZE[418] : $INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
+                </control>
+				<control type="label">
+						<description>current Precipitation label</description>
+						<left>475</left>
+						<top>350</top>
+						<width>800</width>
+						<height>35</height>
+						<font>LCARS20</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[33021] : $INFO[Window(Weather).Property(Daily.1.Precipitation)]</label>
+						<visible>!IsEmpty(Window(Weather).Property(Current.Precipitation))</visible>
+					</control>
+					<control type="label">
+						<description>Sunrise Label</description>
+						<left>475</left>
+						<top>400</top>
+						<width>300</width>
+						<height>35</height>
+						<font>LCARS20</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[33027] : $INFO[Window(Weather).Property(Today.Sunrise)]</label>
+						<visible>!IsEmpty(Window(Weather).Property(Today.Sunrise))</visible>
+					</control>
+					<control type="label">
+						<description>Sunset label</description>
+						<left>625</left>
+						<top>400</top>
+						<width>300</width>
+						<height>35</height>
+						<font>LCARS20</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[33028] : $INFO[Window(Weather).Property(Today.Sunset)]</label>
+						<visible>!IsEmpty(Window(Weather).Property(Today.Sunset))</visible>
+					</control>
+                </control>
+        </control>
+    </include>
+    <include name="mediasource">
+        <control type="panel" id="320" description="TOP Shortcuts">
+                <visible>[Container(9000).HasFocus(348) | Control.HasFocus(320)] </visible>
+                <onup>320</onup>
+                <ondown>320</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+				<top>550</top>
+				<left>130</left>
+				<width>1200</width>
+				<height>60</height>
+				<include>ShelfFade</include>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+                <include>ShortcutsCommons</include>
+                <content>
+                    <item id="1" description="Video">
+                        <label>Video Source</label>
+                        <onclick>ActivateWindow(Videos,files)</onclick>
+                    </item>
+                    <item id="2" description="Music">
+                        <label>Music Source</label>
+                        <onclick>ActivateWindow(501,root)</onclick>
+                    </item>
+                    <item id="3" description="UpdateLibrary">
+                        <label>7</label>
+                        <onclick>ActivateWindow(3)</onclick>
+                    </item>
+                    <item id="4" description="UpdateLibrary">
+                        <label>$LOCALIZE[128] $LOCALIZE[5]</label>
+                        <onclick>ActivateWindow(Settings)</onclick>
+                    </item>
+					<item id="5" description="UpdateLibrary">
+                        <label>20077</label>
+                        <onclick>ActivateWindow(1718)</onclick>
+                    </item>
+					<!--item id="6" description="UpdateLibrary">
+                        <label>13200</label>
+                        <onclick>ActivateWindow(Profiles)</onclick>
+                    </item-->
+                </content>
+        </control>
+    </include>
+	<include name="energize">
+        <control type="panel" id="321" description="TOP Shortcuts">
+                <visible>[Container(9000).HasFocus(349) | Control.HasFocus(321)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+                <onup>321</onup>
+                <ondown>321</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+				<top>550</top>
+				<left>130</left>
+				<width>1200</width>
+				<height>60</height>
+				<include>ShelfFade</include>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+                <include>ShortcutsCommons</include>
+                <content>
+                    <item id="1" description="Exit button">
+                        <label>13009</label>
+                        <onclick>XBMC.Quit()</onclick>
+                    </item>
+                    <item id="2" description="Shutdown button">
+                        <visible>System.CanPowerDown</visible>
+                        <label>13005</label>
+                        <onclick>XBMC.Powerdown()</onclick>
+                    </item>
+                    <item id="3" description="Suspend button">
+                        <label>13011</label>
+                        <visible>System.CanSuspend</visible>
+                        <onclick>XBMC.Suspend()</onclick>
+                    </item>
+                    <item id="4" description="Reboot button">
+                        <visible>System.CanReboot</visible>
+                <label>13013</label>
+                        <onclick>XBMC.Reset()</onclick>
+                    </item>
+					<!--item id="5" description="LogOff">
+                        <visible>System.HasLoginScreen</visible>
+					<label>20126</label>
+                        <onclick>Activatewindow(29)</onclick>
+                    </item-->
+					<item id="6" description="TimerOff">
+                        <visible>!System.Platform.ATV2 + !System.Platform.IOS</visible>
+                <label>Timer</label>
+                        <onclick>AlarmClock(Timer,Quit())</onclick>
+                    </item>
+                </content>
+        </control>
+    </include>
+	<include name="epg">
+        <control type="panel" id="322" description="TOP Shortcuts">
+                <visible>[Container(9000).HasFocus(355) | Control.HasFocus(322)]</visible>
+                <onup>322</onup>
+                <ondown>322</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+				<top>550</top>
+				<left>130</left>
+				<width>1200</width>
+				<height>60</height>
+				<include>ShelfFade</include>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+                <include>ShortcutsCommons</include>
+                <content>
+                    <item id="1" description="tvchannels">
+                        <label>19023</label>
+						<onclick>ActivateWindow(tvchannels)</onclick>
+                    </item>
+                    <item id="2" description="radiochannels">
+                        <label>19024</label>
+						<onclick>ActivateWindow(radiochannels)</onclick>
+                    </item>
+                    <item id="3" description="tvguide">
+                        <label>19069</label>
+						<onclick>ActivateWindow(tvguide)</onclick>
+                    </item>
+                    <item id="4" description="tvrecordings">
+                        <label>19163</label>
+						<onclick>ActivateWindow(tvrecordings)</onclick>
+                    </item>
+					<item id="5" description="tvtimers">
+                        <label>19040</label>
+						<onclick>ActivateWindow(tvtimers)</onclick>
+                    </item>
+					
+                </content>
+        </control>
+    </include>
+	<include name="dvd">
+        <control type="panel" id="323" description="TOP Shortcuts">
+                <visible>[Container(9000).HasFocus(354) | Control.HasFocus(323)]</visible>
+                <onup>323</onup>
+                <ondown>323</ondown>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+				<top>550</top>
+				<left>130</left>
+				<width>1200</width>
+				<height>60</height>
+				<include>ShelfFade</include>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+                <include>ShortcutsCommons</include>
+                <content>
+                    <item id="1" description="tvchannels">
+                        <label>Play</label>
+						<onclick>PlayDVD</onclick>
+                    </item>
+                    <item id="2" description="radiochannels">
+                        <label>Eject</label>
+						<onclick>EjectTray()</onclick>
+                    </item>
+                </content>
+        </control>
+    </include>
+	<include name="playTop">
+        <control type="group" description="Player Info">
+			<width>1150</width>
+			<height>450</height>
+            <visible>Container(9000).HasFocus(349) + Player.HasMedia + ![Window.IsActive(DialogBusy.xml) | Window.IsActive(VideoFullscreen.xml) | Window.IsActive(myPVR.xml)]</visible>
+			<animation effect="fade" start="0" end="100" time="60" delay="0" reversible="true">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="160" delay="260" reversible="true">Hidden</animation>
+			<control type="visualisation" id ="3">>
+				<top>60</top>
+				<posx>00</posx>
+				<width>1100</width>
+				<height>430</height>
+				<aspectratio scalediffuse="false">strech</aspectratio>
+				<visible>Player.HasAudio</visible>
+				<visible>IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
+			</control>
+			<control type="image">
+				<top>60</top>
+				<posx>60</posx>
+				<width>430</width>
+				<height>430</height>
+				<aspectratio scalediffuse="false">strech</aspectratio>
+				<texture fallback="logo2.png">$INFO[MusicPlayer.Cover]</texture>
+				<colordiffuse>55FFFFFF</colordiffuse>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="videowindow" id="2">
+				<top>60</top>
+				<posx>0</posx>
+				<height>420</height>
+				<visible>Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+			</control>
+			<control type="group">
+ 			<visible>Player.HasAudio</visible>
+               <control type="label">
+                    <posx>550</posx>
+                    <top>160</top>
+                    <aligny>center</aligny>
+                    <width>550</width>
+                    <height>40</height>
+                    <font>LCARS24</font>
+                    <textcolor>White</textcolor>
+                    <label>$INFO[MusicPlayer.Title]</label>
+                </control>
+                <control type="label">
+                    <posx>550</posx>
+                    <top>210</top>
+                    <aligny>center</aligny>
+                    <width>550</width>
+                    <height>40</height>
+                    <font>LCARS24</font>
+                    <label>ARTIST: $INFO[MusicPlayer.Artist]</label>
+                </control>
+                <control type="textbox">
+                    <posx>550</posx>
+                    <top>270</top>
+                    <aligny>center</aligny>
+                    <width>550</width>
+                    <height>100</height>
+                    <font>LCARS24</font>
+                    <label>ALBUM: $INFO[MusicPlayer.Album]</label>
+                </control>
+            </control>
+        </control>
+	</include>
+
+</includes>

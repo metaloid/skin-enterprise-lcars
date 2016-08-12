@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="502">
+    <!--defaultcontrol always="true">54</defaultcontrol-->
+    <defaultcontrol always="true">54</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <!--views>54</views-->
+     <views>54,501,503,504</views>
+    <include>OpenClose</include>
+    <controls>
+        <include>Backgroundcolor</include>
+        <control type="image">
+                 <top>0</top>
+                <posx>0</posx>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>strech</aspectratio>
+                <texture background="true" flipx="true">Lcars/lineL.png</texture>
+		</control> 
+		<control type="multiimage" >
+			<posx>50</posx>
+			<top>575</top>
+            <width>300</width>
+            <height>330</height>
+            <imagepath>sidepanel/panel2</imagepath>
+            <timeperimage>185</timeperimage>
+            <fadetime>0</fadetime>
+            <loop>yes</loop>
+            <aspectratio>keep</aspectratio>
+		</control>
+      <include>MusicLcars</include>
+	  <include>WindowsTopInfos</include>
+	<control type="grouplist" id="9000">
+                <width>300</width>
+                <height>800</height>
+            <top>110</top>
+            <posx>50</posx>
+		    <onleft>noop</onleft>
+		    <onright>54</onright>
+		    <onup>noop</onup>
+		    <ondown>66</ondown>
+		<control type="button" id="607">
+                <onclick>ActivateWindow(Home)</onclick>
+		    <width>300</width>
+		    <label>Home</label>
+		</control>
+            <control type="button" id="677">
+                <onclick>back</onclick>
+		    <width>300</width>
+		    <label>Back</label>
+		</control>   
+            <control type="button" id="3" description="Sort">
+                <width>300</width>
+		</control>
+            <control type="togglebutton" id="4" description="SortOrder">
+                <width>300</width>
+		    <label>585</label>
+                <altlabel>584</altlabel>
+                <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+            </control>
+            <control type="togglebutton" id="16" description="PartyMode">
+                <width>300</width>
+		    <label>$LOCALIZE[589]: $LOCALIZE[1223]</label>
+                <altlabel>$LOCALIZE[589]: $LOCALIZE[305]</altlabel>
+            </control>
+            <control type="radiobutton" id="98" description="Filter">
+                <width>300</width>
+		    <include>Keyboardbuttons</include>
+		    <visible>Container.CanFilterAdvanced</visible>
+                <onclick>Filter</onclick>
+                <label>587</label>
+            </control>
+            <control type="edit" id="19">
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<height>40</height>
+					<width>300</width>
+					<textwidth>230</textwidth>
+					<label>587</label>
+					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<textcolor>black</textcolor>
+					<focusedcolor>black</focusedcolor>
+					<selectedcolor>black</selectedcolor>
+			</control>
+            <control type="togglebutton" id="699" description="Playing">
+                <width>300</width>
+		    <enable>Player.HasMedia</enable>
+                <label>$LOCALIZE[16003]</label>
+                <altlabel>$LOCALIZE[31055]</altlabel>
+                <usealttexture>Player.HasMedia</usealttexture>
+                <onclick>fullscreen</onclick>
+                <altclick>fullscreen</altclick>
+                <!--animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation-->
+            </control>
+            <control type="togglebutton" id="20">
+                <description>Update library</description>
+                <width>300</width>
+		    <label>653</label>
+                <altlabel>13353</altlabel>
+                <usealttexture>library.isscanningmusic</usealttexture>
+            </control>
+      </control>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(504).HasPrevious |  Container(504).HasNext] | [Container(54).HasPrevious |  Container(54).HasNext] | [Container(503).HasPrevious |  Container(503).HasNext] | [Container(501).HasPrevious |  Container(501).HasNext]</visible>
+				<onleft>noop</onleft>
+				<onright>50</onright>
+				<onup>9000</onup>
+				<ondown>noop</ondown>
+				<top>470</top>
+                <posx>-15</posx>
+				<width>370</width>
+				<height>40</height>
+                <subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>false</showonepage>
+				<spinwidth>150</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+			</control>    
+         
+    </controls>
+</window>

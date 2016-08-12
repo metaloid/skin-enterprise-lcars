@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">12</defaultcontrol>
+	<coordinates>
+		<left>1050</left>
+		<top>105</top>
+	</coordinates>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+            <width>670</width>
+            <height>900</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
+		<control type="group">
+			<control type="label">
+				<description>Song Title value</description>
+				<left>40</left>
+				<top>15</top>
+				<width>590</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>LCARS245</font>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>orange</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<left>185</left>
+				<top>75</top>
+				<width>300</width>
+				<height>300</height>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <texture background="true" diffuse="EmptyCaseMask.png" fallback="logo.png">$INFO[ListItem.Icon]</texture>
+                <bordertexture  border="10">shadow.png</bordertexture>
+                <bordersize>10</bordersize>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>375</top>
+				<control type="label">
+					<description>Artist Title</description>
+					<left>0</left>
+					<top>0</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[557]:</label>
+				</control>
+				<control type="fadelabel">
+					<description>Artist Value</description>
+					<left>160</left>
+					<top>0</top>
+					<width>450</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>white</textcolor>
+					<label fallback="161">$INFO[ListItem.Artist]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description>Album Title</description>
+					<left>0</left>
+					<top>30</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[558]:</label>
+				</control>
+				<control type="fadelabel">
+					<description>Album Value</description>
+					<left>160</left>
+					<top>30</top>
+					<width>450</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>white</textcolor>
+					<label fallback="161">$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="label">
+					<description>Genre Title</description>
+					<left>0</left>
+					<top>60</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[515]:</label>
+					<scrollout>false</scrollout>
+					<pauseatend>2000</pauseatend>
+				</control>
+				<control type="fadelabel">
+					<description>Genre Value</description>
+					<left>160</left>
+					<top>60</top>
+					<width>450</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>white</textcolor>
+					<label fallback="161">$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label">
+					<description>Year Title</description>
+					<left>0</left>
+					<top>90</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[562]:</label>
+				</control>
+				<control type="fadelabel">
+					<description>Year Value</description>
+					<left>160</left>
+					<top>90</top>
+					<width>450</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>white</textcolor>
+					<label fallback="161">$INFO[ListItem.Year]</label>
+				</control>
+				<control type="label">
+					<description>Track Number Title</description>
+					<left>0</left>
+					<top>120</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[554]:</label>
+				</control>
+				<control type="fadelabel">
+					<description>Track Number Value</description>
+					<left>160</left>
+					<top>120</top>
+					<width>450</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>white</textcolor>
+					<label fallback="161">$INFO[ListItem.TrackNumber]</label>
+				</control>
+				<control type="label">
+					<description>Rating Title</description>
+					<left>0</left>
+					<top>150</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[563]:</label>
+				</control>
+				<control type="group">
+					<left>160</left>
+					<top>148</top>
+					<control type="image">
+						<description>Rating value</description>
+						<left>0</left>
+						<top>0</top>
+						<width>150</width>
+						<height>32</height>
+						<aspectratio align="left">keep</aspectratio>
+						<texture>$INFO[ListItem.StarRating]</texture>
+					</control>
+				</control>
+				<control type="label">
+					<description>Comment Title</description>
+					<left>0</left>
+					<top>180</top>
+					<width>150</width>
+					<height>25</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>LCARS216</font>
+					<textcolor>orange</textcolor>
+					<label>$LOCALIZE[569]:</label>
+				</control>
+				<control type="textbox">
+					<description>Comment value</description>
+					<left>160</left>
+					<top>179</top>
+					<width>450</width>
+					<height>100</height>
+					<font>LCARS216</font>
+					<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
+					<label fallback="161">$INFO[ListItem.Comment]</label>
+				</control>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>190</left>
+				<top>620</top>
+			    <height>300</height>
+				<width>350</width>
+                <onleft>50</onleft>
+                <itemgap>10</itemgap>
+                <aligny>bottom</aligny>
+                <align>center</align>
+                <orientation>vertical</orientation>
+                <control type="button" id="12" description="Album Info">
+                    <width>300</width>
+                    <label>10523</label>
+                </control>
+                <control type="button" id="13" description="Get Thumb">
+                    <width>300</width>
+                    <label>13405</label>
+                </control>
+                <control type="button" id="7" description="Save rating">
+                    <width>300</width>
+                    <label>38023</label>
+                </control>
+                <control type="button" id="677">
+                    <onclick>back</onclick>
+					<width>300</width>
+                    <label>Close</label>
+                </control>
+			</control>
+		</control>
+	</controls>
+</window>

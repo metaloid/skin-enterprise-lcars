@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="614">
+    <defaultcontrol></defaultcontrol>
+    <include>OpenClose</include>
+    <controls>
+        <control type="group">
+			<left>810r</left>
+			<top>20</top>
+			<control type="image">
+				<left>0</left>
+				<top>-10</top>
+				<width>800</width>
+				<height>170</height>
+				<texture  border="40">sidepanel/dialog.png</texture>
+			</control>
+			<control type="label" id="30">
+				<description>Header Label</description>
+				<left>30</left>
+				<top>20</top>
+				<width>750</width>
+				<height>32</height>
+				<font>LCARS20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="31">
+				<description>Title Label</description>
+				<left>30</left>
+				<top>60</top>
+				<width>750</width>
+				<height>32</height>
+				<font>LCARS20</font>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" description="Progress label">
+				<visible>IntegerGreaterThan(Control.GetLabel(32), 0)</visible>
+				<left>30</left>
+				<top>100</top>
+				<width>750</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>shelffont</textcolor>
+				<font>LCARS20</font>
+				<label>$INFO[Control.GetLabel(32),STANDING BY...,%] </label>
+			</control>
+			<control type="progress" id="32">
+				<description>progress control</description>
+				<left>15</left>
+				<top>120</top>
+				<width>770</width>
+				<height>8</height>
+				<texturebg border="4">-</texturebg>
+                <midtexture border="4">-</midtexture>
+                <righttexture border="4">-</righttexture>
+                <lefttexture border="4">-</lefttexture>
+			</control>
+		</control>
+    </controls>
+</window>

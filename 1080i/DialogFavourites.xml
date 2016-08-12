@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="134">
+    <defaultcontrol always="true">677</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>DialogOpenClose</include>
+    <onunload>RunScript(script.favourites)</onunload>
+    <controls>
+        <control type="group">
+        <control type="panel" id="450">
+       		<posx>700</posx>
+			<top>250</top>
+			<width>1150</width>
+       		<height>450</height>
+       		<onleft>450</onleft>
+       		<onright>450</onright>
+       		<onup>450</onup>
+       		<ondown>66</ondown>
+       		<pagecontrol>66</pagecontrol>
+       		<focusposition>1</focusposition>
+       		<movement>4</movement>
+       		<orientation>horizontal</orientation>
+       		<scrolltime tween="sine" easing="inout">280</scrolltime>
+			<include>SquareIconLcars</include>
+        </control>
+		<control type="grouplist">
+			<top>705</top>
+            <posx>760</posx>
+			<align>left</align>
+            <orientation>horizontal</orientation>
+            <onup>450</onup>
+			<onright>noop</onright>
+			<ondown>noop</ondown>
+			<onleft>ParentDir</onleft>
+			<itemgap>10</itemgap>
+			<control type="button" id="677">
+				<onclick>back</onclick>
+				<width>200</width>
+				<label>Close</label>
+			</control>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(450).HasPrevious |  Container(450).HasNext]</visible>
+				<width>210</width>
+				<subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>true</showonepage>
+				<spinwidth>100</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="buttonselect2" >left.png</textureup>
+				<texturedown colordiffuse="buttonselect2">right.png</texturedown>
+				<textureupfocus colordiffuse="buttonselect2">leftp.png</textureupfocus>
+				<texturedownfocus colordiffuse="buttonselect2">rightp.png</texturedownfocus>
+			</control>    
+		</control>		
+            
+		</control>
+    </controls>
+</window>

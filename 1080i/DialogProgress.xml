@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="101">
+    <defaultcontrol always="true">10</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+        <control type="image">
+            <width>310</width>
+            <height>425</height>
+            <top>100</top>
+            <posx>45</posx>
+            <texture border="20"  >sidepanel/dialog.png</texture>
+        </control>
+        <control type="group">
+            <posx>75</posx>
+            <top>125</top>
+            <control type="label" id="1" description="Heading">
+                <width>250</width>
+                <label>-</label>
+                <textcolor>shelffont</textcolor>
+                <font>LCARS20</font>
+                <align>center</align>
+            </control>
+            <control type="textbox" id="9" description="content">
+                <top>60</top>
+                <font>LCARS20</font>
+                <label>-</label>
+                <width>250</width>
+                <height>150</height>
+                <align>center</align>
+                <autoscroll>false</autoscroll>
+            </control>
+			<control type="label" description="Progress label">
+				<visible>IntegerGreaterThan(Control.GetLabel(32), 0)</visible>
+				<left>20</left>
+				<top>250</top>
+				<width>250</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>shelffont</textcolor>
+				<font>LCARS20</font>
+				<label>$INFO[Control.GetLabel(32),STANDING BY...,%] </label>
+			</control>
+            <control type="progress" description="Progressbar" id="32" >
+                <top>250</top>
+                <align>center</align>
+                <width>250</width>
+                <height>9</height>
+                <texturebg border="5,0,5,0">-</texturebg>
+                <midtexture border="0,1,0,1">-</midtexture>
+                <righttexture border="1,1,5,1">-</righttexture>
+                <lefttexture border="5,1,1,1">-</lefttexture>
+                <info>System.Progressbar</info>
+            </control>
+            <control type="button" id="10" description="Cancel">
+                <top>300</top>
+                <align>center</align>
+                <width>250</width>
+                <label>222</label>
+            </control>
+        </control>
+    </controls>
+</window>

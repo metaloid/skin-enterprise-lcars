@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2006">
+    <defaultcontrol always="true">-</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <backgroundcolor>background</backgroundcolor>
+    <onload condition="system.hasaddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
+    <controls>
+        <control type="group">
+            <control type="visualisation" id="2" description="Visualisation">
+                <posx>0</posx>
+                <top>0</top>
+                <width>1920</width>
+                <height>1080</height>
+            </control>
+            <control type="progress" id="23" description="Progress Bar">
+                <visible>FALSE</visible>
+                <posx>84</posx>
+                <top>-750</top>
+                <width>747</width>
+                <info>Player.Progress</info>
+            </control>
+        </control>
+    </controls>
+</window>

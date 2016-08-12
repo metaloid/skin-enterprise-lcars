@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+	<zorder>1</zorder>
+	<defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <include>DialogOpenClose</include>
+    <controls>
+		<include>DialogOpenCloseVisible</include>
+            
+			<control type="group">
+			<visible>Control.IsVisible(6)</visible>
+			<control type="image" description="Logo">
+                <top>250</top>
+				<posx>690</posx>
+				<width>1000</width>
+        		<height>450</height>
+        		<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <bordertexture  border="40">shadow.png</bordertexture>
+        		<bordersize>10</bordersize>
+			</control>
+					
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>1330</left>
+				<top>250</top>
+				<width>530</width>
+				<height>30</height>
+				<font>LCARS24</font>
+				<label>$LOCALIZE[13406]</label>
+				<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>shelffont</textcolor>
+				
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Control.IsVisible(6)</visible>
+			<control type="image" description="Logo">
+                <top>250</top>
+				<posx>690</posx>
+				<width>650</width>
+        		<height>450</height>
+        		<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <bordertexture  border="40">shadow.png</bordertexture>
+        		<bordersize>10</bordersize>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>780</left>
+				<top>250</top>
+				<width>530</width>
+				<height>30</height>
+				<font>LCARS24</font>
+				<label>$LOCALIZE[13406]</label>
+				<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>shelffont</textcolor>
+				
+			</control>
+			
+		</control>
+		
+		<control type="list" id="3">
+            <posx>760</posx>
+			<top>300</top>
+			<width>1150</width>
+        	<height>345</height>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<onleft>5</onleft>
+			<onright>66</onright>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="50" width="550">
+				<control type="image" description="THMBSBASECOLOR">
+                        <posx>20</posx>
+                        <width>500</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                </control>
+				<control type="label">
+					<posx>35</posx>
+                    <top>8</top>
+                    <width>460</width>
+					<height>28</height>
+					<font>LCARS20</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+					<scroll>false</scroll>
+				    <align>left</align>
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50" width="550">
+				<control type="image" description="THMBSBASECOLOR">
+                        <posx>20</posx>
+                        <width>500</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                </control>
+				<control type="label">
+					<posx>35</posx>
+                    <top>8</top>
+                    <width>460</width>
+					<height>28</height>
+					<font>LCARS20</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+					    <align>left</align>
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="list" id="6">
+            <posx>760</posx>
+			<top>275</top>
+			<width>1150</width>
+        	<height>365</height>
+			<onup>6</onup>
+			<ondown>5</ondown>
+			<onleft>61</onleft>
+			<onright>61</onright>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="50" width="550">
+				<control type="image" description="THMBSBASECOLOR">
+                        <posx>20</posx>
+                        <width>500</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                </control>
+				<control type="label">
+					<posx>35</posx>
+                    <top>8</top>
+                    <width>460</width>
+					<height>28</height>
+					<font>LCARS20</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+					<scroll>false</scroll>
+				    <align>left</align>
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50" width="550">
+				<control type="image" description="THMBSBASECOLOR">
+                        <posx>20</posx>
+                        <width>500</width>
+                        <height>40</height>
+                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                </control>
+				<control type="label">
+					<posx>35</posx>
+                    <top>8</top>
+                    <width>460</width>
+					<height>28</height>
+					<font>LCARS20</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+					    <align>left</align>
+                    <label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		
+			<control type="image">
+				<visible>Control.IsVisible(6)</visible>
+				<posx>1330</posx>
+				<top>300</top>
+				<width>324</width>
+                    <height>370</height>
+                    <texture fallback="defaultalbumcover.png" diffuse="EmptyCaseMask.png" background="true">$INFO[Container(6).ListItem.Icon]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+                    <bordertexture  border="10">shadow.png</bordertexture>
+                    <bordersize>10</bordersize>
+			</control>
+		<control type="grouplist">
+			<left>780</left>
+			<top>650</top>
+			<align>left</align>
+            <orientation>horizontal</orientation>
+            <itemgap>5</itemgap>
+		<control type="button" id="5">
+			<description>Manual button</description>
+			<width>200</width>
+			<label>186</label>
+			<onup>6</onup>
+			<ondown>5</ondown>
+			<onleft>677</onleft>
+			<onright>677</onright>
+		</control>
+		<control type="button" id="677">
+			<visible>!Control.IsVisible(66)</visible>
+			<onup>6</onup>
+			<ondown>677</ondown>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<top>650</top>
+			<onclick>back</onclick>
+			<width>200</width>
+			<label>Close</label>
+		</control>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(6).HasPrevious |  Container(6).HasNext] | [Container(3).HasPrevious |  Container(3).HasNext]</visible>
+				<width>210</width>
+                <subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>false</showonepage>
+				<spinwidth>100</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+			</control>    
+		</control>		
+						
+	</controls>
+</window>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin-enterprise-lcars"
+  version="5.0.0"
+  name="Enterprise LCARS"
+  provider-name="MetAloid">
+<!-- based off SiO2-X 2.1.6 -->
+    <requires>
+        <import addon="xbmc.gui" version="5.10.0"/>
+        <import addon="service.library.data.provider" version="0.0.4"/>
+        <import addon="script.tv.show.next.aired" version="6.0.10"/>
+        <import addon="service.skin.widgets" version="0.0.30"/>
+    </requires>
+    <extension
+            point="xbmc.gui.skin"
+            defaultthemename="Textures.xbt"
+            debugging="true">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_AU">Enterprise Skin by MetAloid</summary>
+    <summary lang="en_GB">Enterprise Skin by MetAloid</summary>
+    <summary lang="en_NZ">Enterprise Skin by MetAloid</summary>
+    <summary lang="en_US">Enterprise Skin by MetAloid</summary>
+    <summary lang="fr_CA">Habillage Enterprise par MetAloid.</summary>
+    <summary lang="fr_FR">Habillage Enterprise par MetAloid.</summary>
+    <description lang="en_AU">Enterprise attempts to embrace and integrate the LCARS system from the TV show Star Trek.</description>
+    <description lang="en_GB">Enterprise attempts to embrace and integrate the LCARS system from the TV show Star Trek.</description>
+    <description lang="en_NZ">Enterprise attempts to embrace and integrate the LCARS system from the TV show Star Trek.</description>
+    <description lang="en_US">Enterprise attempts to embrace and integrate the LCARS system from the TV show Star Trek.</description>
+    <description lang="fr_CA">Enterprise  et une tentative d'inclure et d'intégrer le systeme LCARS de la serie televise Star Trek</description>
+    <description lang="fr_FR">Enterprise  et une tentative d'inclure et d'intégrer le systeme LCARS de la serie televise Star Trek</description>
+    <disclaimer lang="en_AU">STAR TREK and related marks are trademarks of CBS Studios Inc. </disclaimer>
+    <disclaimer lang="en_GB">STAR TREK and related marks are trademarks of CBS Studios Inc.</disclaimer>
+    <disclaimer lang="en_NZ">STAR TREK and related marks are trademarks of CBS Studios Inc.</disclaimer>
+    <disclaimer lang="en_US">STAR TREK and related marks are trademarks of CBS Studios Inc.</disclaimer>
+    <disclaimer lang="fr_CA">STAR TREK and related marks are trademarks of CBS Studios Inc.</disclaimer>
+    <disclaimer lang="fr_FR">STAR TREK and related marks are trademarks of CBS Studios Inc.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
