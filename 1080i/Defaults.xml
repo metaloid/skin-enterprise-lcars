@@ -178,10 +178,10 @@
         <height>75</height>
         <width>450</width>
         <sliderwidth>150</sliderwidth>
-        <sliderheight>45</sliderheight>
-        <texturesliderbar>images/slider_bg.png</texturesliderbar>
-        <textureslidernib>images/slider_nib_nf.png</textureslidernib>
-        <textureslidernibfocus>images/slider_nib.png</textureslidernibfocus>
+        <sliderheight>50</sliderheight>
+        <texturesliderbar>sliderbg.png</texturesliderbar>
+        <textureslidernib>slidernibnf.png</textureslidernib>
+        <textureslidernibfocus>slidernibfo.png</textureslidernibfocus>
         <texturefocus colordiffuse="buttonselect" border="20">images/buttonselect.png</texturefocus>
         <texturenofocus>-</texturenofocus>
         <font>LCARS20</font>
