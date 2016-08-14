@@ -38,6 +38,16 @@
 		<control type="group" description="info">
 			<include>InfoLcars</include>
 		</control>
+		<control type="panel" description="info">
+			<visible>![Container.Content(years) | Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
+			<posx>1110</posx>
+			<posy>550</posy>
+			<width>670</width>
+			<height>900</height>
+			<include>MultiLcars</include>
+			<preloaditems>4</preloaditems>
+			<content target="video" limit="3">$VAR[VARmovie]</content>
+		</control>
 
     </include>
 </includes>	

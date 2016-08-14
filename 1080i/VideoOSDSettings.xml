@@ -3,8 +3,7 @@
     <defaultcontrol always="true">5</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>background</backgroundcolor>
-    <include>DialogOpenClose</include>
-    <controls>
+    <include>OpenClose</include>    <controls>
         <control type="group">
             <animation effect="fade" end="100" time="400">Visible</animation>
             <animation effect="fade" end="0" time="100">Hidden</animation>

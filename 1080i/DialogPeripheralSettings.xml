@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="123">
     <defaultcontrol>5</defaultcontrol>
-    <include>DialogOpenClose</include>
-    <coordinates>
+    <include>OpenClose</include>    <coordinates>
         <system>1</system>
     </coordinates>
     <controls>

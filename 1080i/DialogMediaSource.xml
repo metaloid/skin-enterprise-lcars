@@ -7,7 +7,7 @@
  		<left>0</left>
 		<top>0</top>
  	</coordinates>
-  <include>DialogOpenClose</include>
+  <include>OpenClose</include>
     <controls>
 		<include>DialogOpenCloseVisible</include>
 		<control type="group" description="Right panel">

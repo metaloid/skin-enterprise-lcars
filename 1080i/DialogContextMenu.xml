@@ -3,8 +3,7 @@
     <defaultcontrol always="true">996</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>background</backgroundcolor>
-    <include>DialogOpenClose</include>
-    <coordinates>
+    <include>OpenClose</include>    <coordinates>
         <system>1</system>
         <origin x="560" y="120" />
     </coordinates>

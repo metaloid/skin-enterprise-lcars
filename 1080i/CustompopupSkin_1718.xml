@@ -2,7 +2,7 @@
 <window  type="dialog" id="1718">
     <defaultcontrol always="true">575</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <include>DialogOpenClose</include>
+    <include>OpenClose</include>
     <controls>
         <control type="image" description="Logo">
                 <top>70</top>
@@ -209,7 +209,7 @@
 				<control type="radiobutton" id="300" description="Recent">
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
 					<width>520</width>
-					<label>359</label>
+					<label>Music Shelf $LOCALIZE[31100]</label>
 					<include>Keyboardbuttons</include>
 					<selected>StringCompare(Skin.String(musicshelf),)</selected>
 					<enable>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</enable>
@@ -221,7 +221,7 @@
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
 					<width>520</width>
 					<include>Keyboardbuttons</include>
-					<label>31097</label>
+					<label>Music Shelf $LOCALIZE[31097]</label>
 					<selected>StringCompare(Skin.String(Musicshelf),custom)</selected>
 					<enable>!Skin.HasSetting(hidemusic)</enable>
 					<onclick>Skin.ToggleSetting(MusicShelf_Custom)</onclick>
@@ -233,7 +233,7 @@
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
 					<width>520</width>
 					<include>Keyboardbuttons</include>
-					<label>Artists</label>
+					<label>Music Shelf $LOCALIZE[31099]</label>
 					<selected>StringCompare(Skin.String(musicshelf),top)</selected>
 					<enable>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</enable>
 					<onclick>Skin.Reset(MusicShelf_Custom)</onclick>

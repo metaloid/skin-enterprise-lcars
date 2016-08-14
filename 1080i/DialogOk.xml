@@ -4,8 +4,7 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>background</backgroundcolor>
-    <include>DialogOpenClose</include>
-    <controls>
+    <include>OpenClose</include>    <controls>
         <<control type="image">
             <posx>460</posx>
             <top>300</top>

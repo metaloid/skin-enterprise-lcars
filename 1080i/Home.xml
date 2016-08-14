@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <allowoverlay>no</allowoverlay>
+     <allowoverlay>no</allowoverlay>
     <backgroundcolor>background</backgroundcolor>
     <onload>RunScript(script.favourites)</onload>
     <include>OpenClose</include>
@@ -34,9 +34,9 @@
 				<posx>50</posx>
 				<onleft>60</onleft>
 				<pagecontrol>60</pagecontrol>
-				<onright condition="Container(9000).HasFocus(352)">ActivateWindow(134)</onright>
+				<onright condition="Container(9000).HasFocus(352)">ActivateWindow(Favourites)</onright>
 				<onright condition="Container(9000).HasFocus(345)">ActivateWindow(1120)</onright>
-				<onright condition="!Container(9000).HasFocus(345)">700</onright>
+				<onright condition="![Container(9000).HasFocus(345) | Container(9000).HasFocus(352)]">700</onright>
 				<focusposition>1</focusposition>
 				<onup>9001</onup>
 				<ondown>9001</ondown>
@@ -142,6 +142,7 @@
 				<include>Music_RA</include>
 				<include>epg</include>
 				<include>dvd</include>
+				<include>Favorites</include>
 				<include>energize</include>
 				<include>mediasource</include>
 				<control type="label" description="Top Label">

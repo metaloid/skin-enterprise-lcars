@@ -62,6 +62,7 @@
         <align>center</align>
         <aligny>center</aligny>
         <font>LCARS20</font>
+		<invalidcolor>invalid</invalidcolor>
         <textcolor>keys</textcolor>
 		<focusedcolor>keys2</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>

@@ -46,7 +46,7 @@
             <visible>[Library.HasContent(Movies) + [Container(9000).HasFocus(340) | Container(9000).HasFocus(357) | Control.HasFocus(311)]]</visible>
             <onup>9000</onup>
             <ondown>66</ondown>
-            <onleft>311</onleft>
+            <onleft>9000</onleft>
             <onright>311</onright>
 			<pagecontrol>66</pagecontrol>
 			<top>50</top>
@@ -57,7 +57,27 @@
 			<scrolltime>400</scrolltime>
 			<include>ShelfFade</include>
             <include>IconLcars</include>
-            <content target="video">videodb://recentlyaddedmovies/</content>
+            <content target="video" limit="10">videodb://recentlyaddedmovies/</content>
+        </control>
+    </include>
+    <include name="Favorites">
+        <control type="panel" id="317" description="Movies Shelf Shortcuts">
+            <visible>!Window.IsActive(134) + [Container(9000).HasFocus(352) | Control.HasFocus(317)]</visible>
+            <onup>9000</onup>
+            <ondown>66</ondown>
+            <onleft>9000</onleft>
+            <onright>311</onright>
+			<onfocus>ActivateWindow(Favourites)</onfocus>
+			<pagecontrol>66</pagecontrol>
+			<top>50</top>
+			<posx>65</posx>
+			<width>1200</width>
+			<height>450</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<!--include>ShelfFade</include-->
+            <include>SquareIconLcars</include>
+            <content limit="3">favourites://</content>
         </control>
     </include>
 	<include name="TV_RA">
@@ -67,7 +87,7 @@
                 <visible>[Library.HasContent(TVShows) | !Skin.HasSetting(TVShelf_Watchlist)] + [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
                 <onup>9000</onup>
                 <ondown>66</ondown>
-                <onleft>312</onleft>
+                <onleft>9000</onleft>
                 <onright>312</onright>
 				<pagecontrol>66</pagecontrol>
 				<top>50</top>
@@ -79,7 +99,7 @@
 				<scrolltime>400</scrolltime>
 				<include>ShelfFade</include>
                 <include>SquareIconLcars</include>
-                <content target="video">videodb://recentlyaddedepisodes/</content>
+                <content target="video" limit="10">videodb://recentlyaddedepisodes/</content>
             </control>
          </control>
     </include>
@@ -89,7 +109,7 @@
                 <visible>Container(9000).HasFocus(358)</visible>
                 <onup>9000</onup>
                 <ondown>66</ondown>
-                <onleft>311</onleft>
+                <onleft>9000</onleft>
                 <onright>311</onright>
 				<pagecontrol>66</pagecontrol>
 				<top>50</top>
@@ -180,7 +200,7 @@
         <control type="panel" id="313" description="TOP Shortcuts">
                 <onup>9000</onup>
                 <ondown>66</ondown>
-                <onleft>313</onleft>
+                <onleft>9000</onleft>
                 <onright>313</onright>
                 <visible>Library.HasContent(Music) | Library.HasContent(MusicVideos) | Skin.HasSetting(MusicShelf_Custom)</visible>
                 <visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)] + !StringCompare(Skin.String(musicshelf),mushoff)</visible>
@@ -194,7 +214,7 @@
 				<scrolltime>400</scrolltime>
 				<include>ShelfFade</include>
                 <include>SquareIconLcars</include>
-                <content target="music">$VAR[musicshelfcontent]</content>
+                <content target="music" limit="10">$VAR[musicshelfcontent]</content>
             </control>
     </include>
 	<include name="Addons_Shortcuts">
@@ -366,7 +386,7 @@
     <include name="weather_shelf">
         <control type="group">
             <left>40</left>
-            <visible>[Container(9000).HasFocus(345)]</visible>
+            <visible>[!Window.IsActive(1120) + Container(9000).HasFocus(345)]</visible>
             <include>ShelfFade</include>
 			<control type="image">
 					<left>50</left>
@@ -470,11 +490,11 @@
     </include>
     <include name="mediasource">
         <control type="panel" id="320" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(348) | Control.HasFocus(320)] </visible>
+                <visible>[Container(9000).HasFocus(365) | Container(9000).HasFocus(348) | Control.HasFocus(320)] </visible>
                 <onup>320</onup>
                 <ondown>320</ondown>
                 <onleft>9000</onleft>
-                <onright>9000</onright>
+                <onright>320</onright>
 				<top>550</top>
 				<left>130</left>
 				<width>1200</width>
@@ -489,18 +509,21 @@
                         <onclick>ActivateWindow(Videos,files)</onclick>
                     </item>
                     <item id="2" description="Music">
-                        <label>Music Source</label>
+                        <label>Audio Source</label>
                         <onclick>ActivateWindow(501,root)</onclick>
                     </item>
                     <item id="3" description="UpdateLibrary">
+						<visible>!Container(9000).HasFocus(365)</visible>
                         <label>7</label>
                         <onclick>ActivateWindow(3)</onclick>
                     </item>
                     <item id="4" description="UpdateLibrary">
+						<visible>!Container(9000).HasFocus(365)</visible>
                         <label>$LOCALIZE[128] $LOCALIZE[5]</label>
                         <onclick>ActivateWindow(Settings)</onclick>
                     </item>
 					<item id="5" description="UpdateLibrary">
+						<visible>!Container(9000).HasFocus(365)</visible>
                         <label>20077</label>
                         <onclick>ActivateWindow(1718)</onclick>
                     </item>
@@ -517,7 +540,7 @@
                 <onup>321</onup>
                 <ondown>321</ondown>
                 <onleft>9000</onleft>
-                <onright>9000</onright>
+                <onright>321</onright>
 				<top>550</top>
 				<left>130</left>
 				<width>1200</width>
@@ -565,7 +588,7 @@
                 <onup>322</onup>
                 <ondown>322</ondown>
                 <onleft>9000</onleft>
-                <onright>9000</onright>
+                <onright>322</onright>
 				<top>550</top>
 				<left>130</left>
 				<width>1200</width>
@@ -605,7 +628,7 @@
                 <onup>323</onup>
                 <ondown>323</ondown>
                 <onleft>9000</onleft>
-                <onright>9000</onright>
+                <onright>323</onright>
 				<top>550</top>
 				<left>130</left>
 				<width>1200</width>

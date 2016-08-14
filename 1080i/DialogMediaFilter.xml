@@ -6,7 +6,7 @@
 		<left>240</left>
 		<top>100</top>
 	</coordinates>
-	<include>DialogOpenClose</include>
+	<include>OpenClose</include>
     <controls>
         <control type="image">
             <left>-50</left>

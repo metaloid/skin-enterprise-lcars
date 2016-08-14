@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="homepanel">
-        <item id="355">
+        <item id="365">
             <visible>Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)</visible>
-            <label>Video</label>
+            <label>Media Source</label>
            	<property name="color">c1</property>
             <onclick >ActivateWindow(Videos,root)</onclick>
         </item>
@@ -39,7 +39,7 @@
             <visible>!Skin.HasSetting(hidefav)</visible>
             <property name="color">c5</property>
             <label>$LOCALIZE[1036]</label>
-            <onclick>ActivateWindow(134)</onclick>
+            <onclick>ActivateWindow(Favourites)</onclick>
         </item>
          <item id="344">
             <visible>!Skin.HasSetting(hidepic)</visible>

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="134">
-    <defaultcontrol always="true">677</defaultcontrol>
+    <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <include>DialogOpenClose</include>
     <onunload>RunScript(script.favourites)</onunload>
     <controls>
         <control type="group">
         <control type="panel" id="450">
-       		<posx>700</posx>
+       		<posx>695</posx>
 			<top>250</top>
 			<width>1150</width>
        		<height>450</height>
-       		<onleft>450</onleft>
+       		<onleft>close</onleft>
        		<onright>450</onright>
        		<onup>450</onup>
-       		<ondown>66</ondown>
+       		<ondown>9000</ondown>
        		<pagecontrol>66</pagecontrol>
        		<focusposition>1</focusposition>
        		<movement>4</movement>
@@ -22,7 +21,7 @@
        		<scrolltime tween="sine" easing="inout">280</scrolltime>
 			<include>SquareIconLcars</include>
         </control>
-		<control type="grouplist">
+		<control type="grouplist" id="9000">
 			<top>705</top>
             <posx>760</posx>
 			<align>left</align>
@@ -30,7 +29,7 @@
             <onup>450</onup>
 			<onright>noop</onright>
 			<ondown>noop</ondown>
-			<onleft>ParentDir</onleft>
+			<onleft>close</onleft>
 			<itemgap>10</itemgap>
 			<control type="button" id="677">
 				<onclick>back</onclick>

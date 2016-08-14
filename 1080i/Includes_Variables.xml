@@ -112,7 +112,7 @@
     <variable name="TopLabel" description="INFOS">
         <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
         <value condition="Container.Content(Episodes) + !StringCompare(ListItem.Label,..)">Air Date: $INFO[ListItem.Premiered][CR]$LOCALIZE[180]:  $INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
-        <value condition="Container.Content(Addons) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Property(Addon.Creator,Creator : ,)][CR]$LOCALIZE[24051] [COLOR=red]$INFO[ListItem.Property(Addon.Version)] [/COLOR] [CR]Status:  $INFO[ListItem.Property(Addon.Status)]</value>
+        <value condition="Container.Content(Addons) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Property(Addon.Creator,Creator :)][CR]$LOCALIZE[24051] [COLOR=red]$INFO[ListItem.Property(Addon.Version)] [/COLOR] [CR]Status:  $INFO[ListItem.Property(Addon.Status)]</value>
         <value condition="Container.Content(songs) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Album][CR]$LOCALIZE[180]:  $INFO[ListItem.Duration,, $LOCALIZE[31038]][CR]$LOCALIZE[515]:  $INFO[ListItem.Genre][CR]Year:  $INFO[ListItem.Year]</value>
         <value condition="Container.Content(MusicVideos) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Label]</value>
         <value condition="SubString(ListItem.Path,videodb://movies/sets/) + !StringCompare(ListItem.Label,..)">$INFO[ListItem.Year]</value>
@@ -158,17 +158,14 @@
         <value>$INFO[ListItem.Label]</value>
 	</variable>
 
-	<!--variable name="VARmovie">
-        <value condition="Window.IsActive(MovieActors)">$INFO[Container(54).ListItem.DBID,videodb://movies/actors/]</value>
-        <value condition="Window.IsActive(Videos,TvShowActors)">$INFO[Container(54).ListItem.DBID,videodb://tvshows/actors/]</value>
-        <value condition="Container.Content(genres)">$INFO[ListItem.DBID,videodb://movies/genres/]</value>
-        <value condition="Container.Content(directors)">$INFO[ListItem.DBID,videodb://movies/directors/]</value>
-        <value condition="Container.Content(studios)">$INFO[ListItem.DBID,videodb://movies/studios/]</value>
-        <value condition="Container.Content(artists)">$INFO[ListItem.DBID,musicdb://artists/]</value>
-        <value condition="Container.Content(countries)">$INFO[ListItem.DBID,videodb://movies/countries/]</value>
+	<variable name="VARmovie">
+        <value condition="Container.Content(genres)">$INFO[Container(54).ListItem.DBID,videodb://movies/genres/]</value>
+        <value condition="Container.Content(directors)">$INFO[Container(54).ListItem.DBID,videodb://movies/directors/]</value>
+        <value condition="Container.Content(studios)">$INFO[Container(54).ListItem.DBID,videodb://movies/studios/]</value>
+        <value condition="Container.Content(countries)">$INFO[Container(54).ListItem.DBID,videodb://movies/countries/]</value>
     </variable>
 
-	<variable name="VARtv">
+	<!--variable name="VARtv">
         <value condition="Container.Content(Actors)">$INFO[Container(54).ListItem.DBID,videodb://tvshows/actors/]</value>
         <value condition="Container.Content(genres)">$INFO[ListItem.DBID,videodb://tvshows/genres/]</value>
         <value condition="Container.Content(artists)">$INFO[Container(300).ListItem.DBID,musicdb://albums/]</value>
@@ -295,8 +292,8 @@
         <value condition="Container(9000).HasFocus(341)">$LOCALIZE[20387]</value>
         <!--MUSIC-->
         <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),custom)">$LOCALIZE[31097]</value>
-        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),top)">$LOCALIZE[36917]</value>
-        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music)">NEW $LOCALIZE[36918]</value>
+        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),top)">$LOCALIZE[31099]</value>
+        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music)">$LOCALIZE[31100]</value>
         <!--ADDONS-->
         <value condition="Container(9000).HasFocus(343)">Custom Shelf Addons</value>
         <!--PICTURES>

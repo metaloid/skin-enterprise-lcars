@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="buttonMenu">
     <defaultcontrol always="true">1</defaultcontrol>
-    <include>DialogOpenClose</include>
-    <controls>
+    <include>OpenClose</include>    <controls>
         <control type="image" description="BG">
             <animation effect="fade" start="0" end="50" delay="150" time="300">WindowOpen</animation>
             <animation effect="fade" start="50" end="0" time="50">WindowClose</animation>

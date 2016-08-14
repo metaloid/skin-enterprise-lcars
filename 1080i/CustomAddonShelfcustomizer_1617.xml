@@ -2,8 +2,7 @@
 <window type="dialog" id="1617">
     <defaultcontrol always="true">52</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <include>DialogOpenClose</include>
-    <controls>
+    <include>OpenClose</include>    <controls>
         <control type="image" description="Logo">
                 <top>250</top>
 				<posx>690</posx>
