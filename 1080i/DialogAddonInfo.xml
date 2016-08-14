@@ -116,7 +116,7 @@
 					<include>Keyboardbuttons</include>
 				</control>
 				<control type="button" id="677" description="Cancel">
-                    <label>CLose</label>
+                    <label>Close</label>
 				    <onclick>back</onclick>
 			        <width>300</width>
                 </control>
