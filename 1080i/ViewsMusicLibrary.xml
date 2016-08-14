@@ -11,7 +11,7 @@
 		  <aspectratio scalediffuse="false">scale</aspectratio>
 		</control-->
 		<control type="panel" id="54">
-			<visible>![Container.Content(years) | Container.Content(artists) | Container.Content(albums)]</visible>
+			<visible>![Container.Content(years) | Container.Content(albums)]</visible>
 			<include>ListLcars</include>
 		</control>
         <control type="panel" id="503">
@@ -28,7 +28,7 @@
 			<ondown>55</ondown>
 			<onright>noop</onright>
 			<onleft>9000</onleft>
-		    <viewtype label="54">VideoLcars</viewtype>
+		    <viewtype label="54">albumsLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
 			<preloaditems>4</preloaditems>
@@ -38,7 +38,7 @@
 		<control type="group" description="info">
 			<include>InfoLcars</include>
 		</control>
-        <control type="list" id="501">
+        <!--control type="list" id="501">
             <visible>Container.Content(artists)</visible>
             <posx>450</posx>
 			<posy>550</posy>
@@ -183,8 +183,8 @@
                 </control>
             </focusedlayout>
             <content>$INFO[Container(300).ListItem.DBID,musicdb://albums/]</content>
-        </control>
-		<control type="group" description="info">
+        </control-->
+		<!--control type="group" description="info">
             <visible>!Control.IsVisible(54)</visible>
 			<visible>![Container.Content(years) | Container.Content(albums)]</visible>
 			<posx>430</posx>
@@ -212,6 +212,15 @@
                 <bordertexture  border="40">sidepanel/dialog.png</bordertexture>
                 <bordersize>50</bordersize>
 			</control>
+		</control-->
+		<control type="panel" description="info">
+			<visible>![Container.Content(years) | Container.Content(albums)]</visible>
+			<posx>1110</posx>
+			<posy>550</posy>
+			<width>670</width>
+			<height>450</height>
+			<include>MultiLcars</include>
+			<content target="music" limit="3">$VAR[VARmusic]</content>
 		</control>
 
     </include>

@@ -98,6 +98,7 @@
                 <bordersize>10</bordersize>
 			</control>
 			<control type="textbox">
+				<visible>!Container.Content(artists)</visible>
 				<posx>45</posx>
 				<posy>440</posy>
 				<width>630</width>
@@ -108,6 +109,7 @@
 				<label>$VAR[TopLabel]</label>
 			</control>
 			<control type="textbox">
+				<visible>!Container.Content(artists)</visible>
 				<posx>45</posx>
 				<posy>590</posy>
 				<width>630</width>
@@ -174,26 +176,24 @@
    	<include name="MultiLcars">
 			<itemlayout height="420" width="160">
             <control type="image">
-                <posx>35</posx>
-                <top>25</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Thumb]</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
+				<posx>35</posx>
+				<width>250</width>
+				<height>375</height>
+				<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
+				<bordersize>10</bordersize>
             </control>
 			</itemlayout>
 			<focusedlayout height="420" width="160">
             <control type="image">
-                <posx>35</posx>
-                <top>25</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Thumb]</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
+				<posx>35</posx>
+				<width>250</width>
+				<height>375</height>
+				<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
+				<bordersize>10</bordersize>
             </control>
 			</focusedlayout>
 

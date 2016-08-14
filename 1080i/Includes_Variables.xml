@@ -163,15 +163,17 @@
         <value condition="Container.Content(directors)">$INFO[Container(54).ListItem.DBID,videodb://movies/directors/]</value>
         <value condition="Container.Content(studios)">$INFO[Container(54).ListItem.DBID,videodb://movies/studios/]</value>
         <value condition="Container.Content(countries)">$INFO[Container(54).ListItem.DBID,videodb://movies/countries/]</value>
+	</variable>
+
+	<variable name="VARtv">
+        <value condition="Container.Content(genres)">$INFO[Container(54).ListItem.DBID,videodb://tvshows/genres/]</value>
+        <value condition="Container.Content(studios)">$INFO[Container(54).ListItem.DBID,videodb://tvshows/studios/]</value>
     </variable>
 
-	<!--variable name="VARtv">
-        <value condition="Container.Content(Actors)">$INFO[Container(54).ListItem.DBID,videodb://tvshows/actors/]</value>
-        <value condition="Container.Content(genres)">$INFO[ListItem.DBID,videodb://tvshows/genres/]</value>
-        <value condition="Container.Content(artists)">$INFO[Container(300).ListItem.DBID,musicdb://albums/]</value>
-        <value condition="Container.Content(studios)">$INFO[ListItem.DBID,videodb://tvshows/studios/]</value>
-    </variable-->
-
+	<variable name="VARmusic">
+        <value condition="Container.Content(genres)">$INFO[Container(54).ListItem.DBID,musicdb://genres/]</value>
+        <value condition="Container.Content(artists) + !StringCompare(ListItem.Label,* All albums)">$INFO[Container(54).ListItem.DBID,musicdb://artists/]</value>
+    </variable>
 
     <variable name="settingsmain">
         <value condition="Container(575).HasFocus(1)">$LOCALIZE[31079]</value>
