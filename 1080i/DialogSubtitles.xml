@@ -11,14 +11,10 @@
                 <centerleft>960</centerleft>
                 <width>1500</width>
                 <height>880</height>
-                <texture border="50" >sidepanel/back1.png</texture>
-            </control>
-            <control type="image">
-                <posx>1557</posx>
-                <top>160</top>
-                <width>98</width>
-                <height>45</height>
-                <texture>images/rightarrow.png</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+				<texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+				<bordertexture  border="40">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
             </control>
             <control type="image" id="110">
                 <description>Service Logo</description>
@@ -70,23 +66,22 @@
                 </control>
             </control>
             <control type="list" id="120">
-                <centerleft>960</centerleft>
+                <centerleft>860</centerleft>
                 <top>281</top>
-                <width>1360</width>
+                <width>1110</width>
                 <height>540</height>
-                <onleft>60</onleft>
-                <onright>150</onright>
+                <onleft>noop</onleft>
+                <onright>300</onright>
                 <onup>120</onup>
                 <ondown>120</ondown>
                 <viewtype label="535">list</viewtype>
-                <pagecontrol>60</pagecontrol>
+                <pagecontrol>66</pagecontrol>
                 <scrolltime>200</scrolltime>
-                <itemlayout width="1360" height="50">
+                <itemlayout width="1100" height="50">
                     <control type="image">
-                        <width>1300</width>
+                        <width>1000</width>
                         <height>40</height>
                         <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
-                        
                     </control>
                     <control type="image">
                         <posx>10</posx>
@@ -124,7 +119,7 @@
                     </control>
                     <control type="label">
                         <posx>315</posx>
-                        <width>900</width>
+                        <width>600</width>
                         <height>40</height>
                         <font>LCARS20</font>
                         <aligny>center</aligny>
@@ -134,16 +129,16 @@
                         <info>ListItem.Label2</info>
                     </control>
                     <control type="image">
-                        <posx>1230</posx>
+                        <posx>950</posx>
                         <width>120</width>
                         <height>40</height>
                         <aspectratio>keep</aspectratio>
                         <texture>badges/$INFO[ListItem.ActualIcon].0.png</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout width="1360" height="50">
+                <focusedlayout width="1100" height="50">
                     <control type="image">
-                        <width>1300</width>
+                        <width>1000</width>
                         <height>40</height>
                         <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
                     </control>
@@ -182,7 +177,7 @@
                     </control>
                     <control type="label">
                         <posx>315</posx>
-                        <width>900</width>
+                        <width>600</width>
                         <height>40</height>
                         <font>LCARS20</font>
                         <aligny>center</aligny>
@@ -191,7 +186,7 @@
                         <info>ListItem.Label2</info>
                     </control>
                     <control type="image">
-                        <posx>1230</posx>
+                        <posx>950</posx>
                         <width>120</width>
                         <height>40</height>
                         <aspectratio>keep</aspectratio>
@@ -199,60 +194,69 @@
                     </control>
                 </focusedlayout>
             </control>
-            <control type="scrollbar" id="60">
-                <posx>240</posx>
-                <top>303</top>
-                <height>522</height>
-                <onleft>noop</onleft>
-                <onright>120</onright>
-                <showonepage>false</showonepage>
-            </control>
         </control>
         <control type="group" id="350">
             <top>90</top>
-            <animation effect="slide" start="0,0" end="-350,0" time="400" reversible="true" condition="Control.HasFocus(150) | Control.HasFocus(160)">Conditional</animation>
-            <control type="image" description="BG">
-                <centerleft>2130</centerleft>
-                <top>135</top>
-                <width>708</width>
-                <height>330</height>
-                <texture border="50" >sidepanel/dialog.png</texture>
-            </control>
-            <control type="button" id="160">
-                <description>Manual search button</description>
-                <centerleft>2030</centerleft>
+            <control type="grouplist" id="300">
+                <centerleft>1540</centerleft>
+			    <height>155</height>
+				<width>300</width>
+                <itemgap>5</itemgap>
+                <orientation>vertical</orientation>
                 <top>190</top>
-                <width>300</width>
                 <onleft>120</onleft>
-                <onright>120</onright>
-                <onup>150</onup>
+                <onright>noop</onright>
+                <onup>noop</onup>
                 <ondown>150</ondown>
-                <label>$LOCALIZE[24120]</label>
-                <align>center</align>
+				<control type="button" id="160">
+					<description>Manual search button</description>
+					<width>300</width>
+					<label>$LOCALIZE[24120]</label>
+				</control>
+				<control type="button" id="677" description="Cancel">
+                    <label>Close</label>
+				    <onclick>back</onclick>
+			        <width>300</width>
+                </control>
+				<control type="spincontrolex" id="66">
+					<description>Next page button</description>
+					<visible>[Container(120).HasPrevious |  Container(120).HasNext]</visible>
+					<width>307</width>
+					<subtype>page</subtype>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<showonepage>false</showonepage>
+					<spinwidth>150</spinwidth>
+					<spinheight>40</spinheight>
+					<texturenofocus></texturenofocus>
+					<texturefocus></texturefocus>
+					<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+					<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+					<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+					<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				</control>    
             </control>
             <control type="list" id="150">
-                <centerleft>2030</centerleft>
-                <top>240</top>
-                <width>380</width>
+                <centerleft>1540</centerleft>
+                <top>325</top>
+                <width>310</width>
                 <height>442</height>
                 <onleft>120</onleft>
-                <onright>120</onright>
-                <onup>160</onup>
+                <onright>noop</onright>
+                <onup>300</onup>
                 <ondown>noop</ondown>
                 <viewtype label="535">list</viewtype>
                 <scrolltime>200</scrolltime>
-                <itemlayout width="380" height="50">
+                <itemlayout width="300" height="50">
                     <control type="image">
-                        <centerleft>190</centerleft>
-                        <width>300</width>
+                        <posx>5</posx>
+						<width>300</width>
                         <height>40</height>
-                        <aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-						<texture border="20" diffuse="whiteallrounded.png">defaultaddon.png</texture>
-                        
+						<texture colordiffuse="buttonselect2" border="20">whiteallrounded.png</texture>
                     </control>
                     <control type="label">
-                        <centerleft>190</centerleft>
-                        <top>8</top>
+                        <left>10</left>
+						<top>8</top>
                         <width>280</width>
                         <height>28</height>
                         <font>LCARS20</font>
@@ -262,18 +266,16 @@
 						<info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout width="380" height="50">
+                <focusedlayout width="300" height="50">
                     <control type="image">
-                        <centerleft>190</centerleft>
-                        <width>300</width>
+                        <posx>5</posx>
+						<width>300</width>
                         <height>40</height>
-                        <aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-						<texture border="20" diffuse="whiteallrounded.png" >DefaultFolder.png</texture>
-                        
+						<texture colordiffuse="buttonselect" border="20">whiteallrounded.png</texture>
                     </control>
                     <control type="label">
-                        <centerleft>190</centerleft>
-                        <top>8</top>
+                        <left>10</left>
+						<top>8</top>
                         <width>280</width>
                         <height>28</height>
                         <font>LCARS20</font>
