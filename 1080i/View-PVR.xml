@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PVRTimelineView">
-	
 		<control type="group"><!-- TV guide timeline -->
 			<visible>Control.IsVisible(10)</visible>
 			<control type="epggrid" id="10"><!-- EPG grid -->
@@ -35,7 +34,6 @@
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 				</rulerlayout>
 				<channellayout height="50" width="300">
 					<animation effect="fade" start="110" time="200">UnFocus</animation>
@@ -61,6 +59,7 @@
 						<width>220</width>
 						<height>40</height>
 						<font>LCARS218</font>
+						<textcolor>black</textcolor>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -88,6 +87,7 @@
 						<posy>0</posy>
 						<width>220</width>
 						<height>40</height>
+						<textcolor>black</textcolor>
 						<font>LCARS218</font>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelName]</label>
@@ -108,9 +108,8 @@
 						<width>10</width>
 						<height>40</height>
 						<font>LCARS20</font>
-						
                         <scroll>false</scroll>
-                    <wrapmultiline>true</wrapmultiline>
+						<wrapmultiline>true</wrapmultiline>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
@@ -165,7 +164,7 @@
 				<width>700</width>
 				<height>32</height>
 				<font>LCARS20</font>
-						<wrapmultiline>true</wrapmultiline>
+				<wrapmultiline>true</wrapmultiline>
 			</control>
 			<control type="label"><!-- Start time -->
 				<visible>!IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.StartTime) + !IsEmpty(ListItem.EndTime)</visible>
@@ -174,7 +173,7 @@
 				<width>320</width>
 				<height>24</height>
 				<font>LCARS20</font>
-						<align>right</align>
+				<align>right</align>
 				<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
 			</control>
 			<control type="textbox"><!-- Plot -->
@@ -183,7 +182,7 @@
 				<width>1220</width>
 				<height>78</height>
 				<font>LCARS20</font>
-						<label>$INFO[ListItem.Plot]</label>
+				<label>$INFO[ListItem.Plot]</label>
 				<visible>!IsEmpty(ListItem.Plot)</visible>
 			</control>
 		</control>
@@ -191,9 +190,8 @@
 
 	<include name="PVRTimerListView">
 		<control type="group"><!-- Timers group -->
-			<visible>Control.IsVisible(14)</visible>
 			<control type="group">
-				<visible>Control.IsVisible(14)</visible>
+				<visible>Control.IsVisible(50)</visible>
 				<posx>80</posx>
 				<posy>90</posy>
 				<control type="label"><!-- Channel heading -->
@@ -202,7 +200,7 @@
 					<width>220</width>
 					<height>20</height>
 					<font>LCARS20</font>
-						<align>center</align>
+					<align>center</align>
 					<label>$LOCALIZE[19029]</label>
 				</control>
 				<control type="label"><!-- Title heading -->
@@ -232,20 +230,18 @@
 					<align>center</align>
 					<label>$LOCALIZE[126]</label>
 				</control>
-				
 			</control>
-			<control type="list" id="14">
+			<control type="list" id="50">
 				<posx>48</posx>
 				<posy>150</posy>
 				<width>1160</width>
 				<height>600</height>
 				<onleft>9000</onleft>
-				<onright>27</onright>
+				<onright>noop</onright>
 				<onup>14</onup>
 				<ondown>14</ondown>
 				<scrolltime>200</scrolltime>
-				<viewtype label="536">List</viewtype>
-				<pagecontrol>27</pagecontrol>
+				<pagecontrol>66</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<itemlayout height="50">
 					<control type="image">
@@ -261,6 +257,7 @@
 						<width>180</width>
 						<height>40</height>
 						<scroll>false</scroll>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -270,6 +267,7 @@
 						<width>240</width>
 						<height>40</height>
 						<scroll>false</scroll>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -278,6 +276,7 @@
 						<posy>0</posy>
 						<width>655</width>
 						<scroll>false</scroll>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<height>40</height>
 						<label>$INFO[ListItem.Date]</label>
@@ -312,6 +311,7 @@
 						<posy>0</posy>
 						<width>180</width>
 						<font>LCARS20</font>
+						<textcolor>black</textcolor>
 						<height>40</height>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -320,6 +320,7 @@
 						<posy>0</posy>
 						<width>240</width>
 						<font>LCARS20</font>
+						<textcolor>black</textcolor>
 						<height>40</height>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -328,6 +329,7 @@
 						<posy>0</posy>
 						<width>655</width>
 						<font>LCARS20</font>
+						<textcolor>black</textcolor>
 						<height>40</height>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
@@ -349,81 +351,70 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="group">
+			<control type="label">
 				<visible>PVR.HasTimer</visible>
-				<control type="label">
-					<posx>68</posx>
-					<posy>660</posy>
-					<font>LCARS20</font>
-					<height>50</height>
-					<label>$INFO[PVR.NextTimer]</label>
-				</control>
-			</control>
-			<control type="scrollbar" id="27">
-				<posx>1244</posx>
-				<posy>150</posy>
-				<width>18</width>
-				<height>500</height>
-				<onleft>14</onleft>
-				<onright>14</onright>
-				
+				<posx>68</posx>
+				<posy>660</posy>
+				<font>LCARS20</font>
+				<height>50</height>
+				<label>$INFO[PVR.NextTimer]</label>
 			</control>
 		</control>
 	</include>
 	<include name="PVRListView">
 		<control type="grouplist">
-                <posy>120</posy>
-				<posx>1050</posx>
-				<itemgap>15</itemgap>
-                    <control type="label">
-                        <width>600</width>
-                        <height>30</height>
-                        <font>LCARS215</font>
-                        <textcolor>gray</textcolor>
-                        <scroll>false</scroll>
-                    <align>center</align>
-                        <visible>Container(50).ListItem.HasEpg</visible>
-                        <label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
-                    </control>
-                    <control type="label">
-                        <width>600</width>
-                        <height>30</height>
-                        <font>LCARS215</font>
-                        <textcolor>gray</textcolor>
-                        <align>center</align>
-                        <scroll>false</scroll>
-                        <visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
-                        <label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
-                    </control>
-                    <control type="progress">
-                        <description>Progressbar</description>
-                        <left>100</left>
-                        <width>600</width>
-                        <height>8</height>
-                        <texturebg border="6,6,6,6">progress/ProgressBG.png</texturebg>
-                        <midtexture border="6,6,6,6">progress/ProgressM.png</midtexture>
-                        <righttexture border="0,6,0,6">progress/ProgressR.png</righttexture>
-                        <lefttexture border="0,6,0,6">progress/ProgressL.png</lefttexture>
-                        <visible>Container(50).ListItem.HasEpg</visible>
-                        <info>Container(50).ListItem.Progress</info>
-                    </control>
-                    <control type="textbox">
-                        <description>Plot Value for TVShow</description>
-                        <font>LCARS215</font>
-                        <width>600</width>
-                        <height>250</height>
-                        <align>justify</align>
-                        <label>$INFO[Container(50).ListItem.Plot]</label>
-                        <autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-                    </control>
-                </control>
+            <posy>120</posy>
+			<posx>1050</posx>
+			<itemgap>15</itemgap>
+            <control type="label">
+                <width>600</width>
+                <height>30</height>
+                <font>LCARS215</font>
+                <textcolor>gray</textcolor>
+                <scroll>false</scroll>
+				<align>center</align>
+                <visible>Container(50).ListItem.HasEpg</visible>
+                <label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
+            </control>
+            <control type="label">
+                <width>600</width>
+                <height>30</height>
+                <font>LCARS215</font>
+                <textcolor>gray</textcolor>
+                <align>center</align>
+                <scroll>false</scroll>
+                <visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
+                <label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
+            </control>
+            <control type="progress">
+                <description>Progressbar</description>
+                <left>100</left>
+                <width>600</width>
+                <height>8</height>
+                <texturebg border="6,6,6,6">progress/ProgressBG.png</texturebg>
+                <midtexture border="6,6,6,6">progress/ProgressM.png</midtexture>
+                <righttexture border="0,6,0,6">progress/ProgressR.png</righttexture>
+                <lefttexture border="0,6,0,6">progress/ProgressL.png</lefttexture>
+                <visible>Container(50).ListItem.HasEpg</visible>
+                <info>Container(50).ListItem.Progress</info>
+            </control>
+            <control type="textbox">
+                <description>Plot Value for TVShow</description>
+                <font>LCARS215</font>
+                <width>600</width>
+                <height>250</height>
+                <align>justify</align>
+                <label>$INFO[Container(50).ListItem.Plot]</label>
+                <autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+            </control>
+        </control>
 		<control type="group">
 			<description>Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<posx>330</posx>
-				<posy>550</posy>
-				<width>1480</width>
-				<height>450</height>
+			<posy>550</posy>
+			<width>1480</width>
+			<height>450</height>
 			<control type="panel" id="50">
 				<left>82</left>
 				<top>10</top>
@@ -435,19 +426,19 @@
 				<pagecontrol>66</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
 				<itemlayout height="50" width="640">
-				<control type="image">
-					<centerleft>50</centerleft>
-					<height>40</height>
-					<width>100</width>
-					<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="buttonselect2">button-focus.png</texture>
-				</control>
-				<control type="image">
-					<centerleft>360</centerleft>
-					<height>40</height>
-					<width>510</width>
-					<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
-				</control>
-				<control type="label">
+					<control type="image">
+						<centerleft>50</centerleft>
+						<height>40</height>
+						<width>100</width>
+						<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="buttonselect2">button-focus.png</texture>
+					</control>
+					<control type="image">
+						<centerleft>360</centerleft>
+						<height>40</height>
+						<width>510</width>
+						<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+					</control>
+					<control type="label">
 						<centerleft>50</centerleft>
 						<posy>10</posy>
 						<width>80</width>
@@ -459,7 +450,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 					</control>
-					
 					<control type="label">
 						<centerleft>360</centerleft>
 						<posy>10</posy>
@@ -471,22 +461,21 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 				</itemlayout>
 				<focusedlayout height="50" width="640">
 					<control type="image">
-					<centerleft>50</centerleft>
-					<height>40</height>
-					<width>100</width>
-					<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="buttonselect">button-focus.png</texture>
-				</control>
-				<control type="image">
-					<centerleft>360</centerleft>
-					<height>40</height>
-					<width>510</width>
-					<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
-				</control>
-				<control type="label">
+						<centerleft>50</centerleft>
+						<height>40</height>
+						<width>100</width>
+						<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="buttonselect">button-focus.png</texture>
+					</control>
+					<control type="image">
+						<centerleft>360</centerleft>
+						<height>40</height>
+						<width>510</width>
+						<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+					</control>
+					<control type="label">
 						<centerleft>50</centerleft>
 						<posy>10</posy>
 						<width>80</width>
@@ -498,7 +487,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 					</control>
-					
 					<control type="label">
 						<centerleft>360</centerleft>
 						<posy>10</posy>
@@ -512,7 +500,6 @@
 					</control>
 				</focusedlayout>
 			</control>
-			
 		</control>
 	</include>
 	<include name="PVRSearchListView">
@@ -526,7 +513,7 @@
 					<posy>20</posy>
 					<width>240</width>
 					<font>LCARS20</font>
-						<height>24</height>
+					<height>24</height>
 					<label>$LOCALIZE[19148]</label>
 					<visible>Control.IsVisible(17)</visible>
 				</control>
@@ -535,7 +522,7 @@
 					<posy>20</posy>
 					<width>350</width>
 					<font>LCARS20</font>
-						<height>24</height>
+					<height>24</height>
 					<label>$LOCALIZE[369]</label>
 					<visible>Control.IsVisible(17)</visible>
 				</control>
@@ -544,7 +531,7 @@
 					<posy>20</posy>
 					<width>260</width>
 					<font>LCARS20</font>
-						<height>24</height>
+					<height>24</height>
 					<align>center</align>
 					<label>$LOCALIZE[21820]</label>
 					<visible>Control.IsVisible(17)</visible>
@@ -555,11 +542,10 @@
 					<width>140</width>
 					<height>24</height>
 					<font>LCARS20</font>
-						<align>center</align>
+					<align>center</align>
 					<label>$LOCALIZE[126]</label>
 					<visible>Control.IsVisible(17)</visible>
 				</control>
-				
 			</control>
 			<control type="list" id="17">
 				<posx>48</posx>
@@ -572,14 +558,14 @@
 				<ondown>17</ondown>
 				<scrolltime>200</scrolltime>
 				<viewtype label="536">List</viewtype>
-				<pagecontrol>27</pagecontrol>
+				<pagecontrol>66</pagecontrol>
 				<preloaditems>2</preloaditems>
-				<itemlayout height="46">
+				<itemlayout height="50">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>1160</width>
-						<height>46</height>
+						<height>40</height>
 						<texture  border="5" colordiffuse="buttonselect2">button-focus.png</texture>
 					</control>
 					<control type="label">
@@ -588,6 +574,7 @@
 						<width>240</width>
 						<height>24</height>
 						<scroll>false</scroll>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -597,6 +584,7 @@
 						<width>350</width>
 						<height>24</height>
 						<scroll>false</scroll>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -607,6 +595,7 @@
 						<height>24</height>
 						<scroll>false</scroll>
 						<font>LCARS20</font>
+						<textcolor>black</textcolor>
 						<align>center</align>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
@@ -618,12 +607,12 @@
 						<texture>$VAR[PVROverlay]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="46">
+				<focusedlayout height="50">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>1160</width>
-						<height>46</height>
+						<height>40</height>
 						<texture  border="5" colordiffuse="buttonselect">button-focus.png</texture>
 					</control>
 					<control type="label">
@@ -631,6 +620,7 @@
 						<posy>10</posy>
 						<width>240</width>
 						<height>24</height>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -639,6 +629,7 @@
 						<posy>10</posy>
 						<width>350</width>
 						<height>24</height>
+						<textcolor>black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -648,6 +639,7 @@
 						<width>260</width>
 						<height>24</height>
 						<font>LCARS20</font>
+						<textcolor>black</textcolor>
 						<align>center</align>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
@@ -659,15 +651,6 @@
 						<texture>$VAR[PVROverlay]</texture>
 					</control>
 				</focusedlayout>
-			</control>
-			<control type="scrollbar" id="27">
-				<posx>1244</posx>
-				<posy>146</posy>
-				<width>18</width>
-				<height>506</height>
-				<onleft>17</onleft>
-				<onright>9000</onright>
-				
 			</control>
 		</control>
 	</include>

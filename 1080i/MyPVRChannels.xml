@@ -7,12 +7,12 @@
 	<include>OpenClose</include>
     <controls>
         <control type="image">
-                 <top>0</top>
-                <posx>0</posx>
-                <width>1920</width>
-                <height>1080</height>
-                <aspectratio>strech</aspectratio>
-                <texture background="true" flipx="true">Lcars/lineL.png</texture>
+            <top>0</top>
+            <posx>0</posx>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio>strech</aspectratio>
+            <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
 		<control type="multiimage" >
 			<posx>50</posx>
@@ -26,107 +26,25 @@
             <aspectratio>keep</aspectratio>
 		</control>
 		<include>WindowsTopInfos</include>
- 		<control type="grouplist" id="9000">
-                <width>300</width>
-                <height>800</height>
-                <top>110</top>
-                <posx>50</posx>
-				<onleft>noop</onleft>
-				<onright>50</onright>
-				<onup>noop</onup>
-				<ondown>66</ondown>
-			<control type="button" id="607">
-                    	<onclick>ActivateWindow(Home)</onclick>
-				<width>300</width>
-				<label>Home</label>
-			</control>
-            <control type="button" id="28"><!--Change Channel Groups-->
-					<width>300</width>
-					<label>-</label>
-			</control>
-			<control type="button" id="3" description="Sort">
-                    	<width>300</width>
-			</control>
-            <control type="togglebutton" id="4" description="SortOrder">
-                    <width>300</width>
-			       	<label>585</label>
-                    <altlabel>584</altlabel>
-                    <usealttexture>Container.SortDirection(Ascending)</usealttexture>
-                	</control>
-            <control type="togglebutton" id="699" description="Playing">
-                    	<enable>Player.HasMedia</enable>
-                    	<width>300</width>
-						<label>$LOCALIZE[16003]</label>
-                    	<altlabel>$LOCALIZE[31055]</altlabel>
-                    	<usealttexture>Player.HasMedia</usealttexture>
-                    	<onclick>fullscreen</onclick>
-                    	<altclick>fullscreen</altclick>
-            </control>
-                <control type="button" id="101"><!-- Guide -->
-					<description>TV Guide</description>
-					<label>22020</label>
-					<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				</control>
-				<control type="button" id="102"><!-- Recordings -->
-					<width>300</width>
-					<label>$LOCALIZE[19163]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvrecordings)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiorecordings)</onclick>
-				</control>
-				<control type="button" id="104"><!-- Search -->
-					<width>300</width>
-					<label>$LOCALIZE[137]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvsearch)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiosearch)</onclick>
-				</control>
-				<control type="button" id="103"><!-- Timers -->
-					<width>300</width>
-					<label>$LOCALIZE[19040]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvtimers)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiotimers)</onclick>
-				</control>
-            </control>
-       
-		<control type="group">
-				<description>Small Media Window</description>
-				<posx>415</posx>
-				<posy>100</posy>
-				<visible>Control.IsVisible(50)</visible>
-			<control type="image">
-				<left>5</left>
-				<top>5</top>
-				<width>1250</width>
-				<height>385</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
-                <bordertexture  border="40">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-			</control>
-			<control type="videowindow">
-				<left>39</left>
-				<top>19</top>
-				<width>512</width>
-				<height>351</height>
-				<visible>Player.HasVideo</visible>
-				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-			</control>
-			
-					
+		<control type="panel" id="50">
+			<include>ListLcars</include>
+			<onright>61</onright>
 		</control>
+		<control type="grouplist" id="9000">
+            <width>300</width>
+            <height>800</height>
+            <top>110</top>
+            <posx>50</posx>
+			<onleft>noop</onleft>
+			<onright>50</onright>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+			<include>PvrLcarsB</include>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(50).HasPrevious |  Container(50).HasNext]</visible>
-				<onleft>noop</onleft>
-				<onright>50</onright>
-				<onup>9000</onup>
-				<ondown>noop</ondown>
-				<top>515</top>
-                <posx>-15</posx>
-				<width>370</width>
-				<height>40</height>
-                <subtype>page</subtype>
+				<width>307</width>
+				<subtype>page</subtype>
 				<font>-</font>
 				<textcolor>-</textcolor>
 				<showonepage>false</showonepage>
@@ -139,11 +57,97 @@
 				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
 				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
 			</control>    
+        </control>
 		<control type="group">
-			<include file="View-PVR.xml">PVRListView</include>
+			<description>Small Media Window</description>
+			<left>1050</left>
+			<top>105</top>
+			<visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>670</width>
+				<height>900</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+				<bordertexture  border="40">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+			</control>
+			<control type="image">
+				<left>40</left>
+				<top>15</top>
+				<width>590</width>
+				<height>351</height>
+				<texture>$INFO[Container(50).ListItem.icon]</texture>
+				<visible>!Player.HasVideo</visible>
+			</control>
+			<control type="button" id="61">
+				<left>34</left>
+				<top>9</top>
+				<width>602</width>
+				<height>363</height>
+				<texturefocus border="3">c1.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<font>-</font>
+				<pulseonselect>no</pulseonselect>
+				<onleft>50</onleft>
+				<onclick>Fullscreen</onclick>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="videowindow">
+				<left>40</left>
+				<top>15</top>
+				<width>590</width>
+				<height>351</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+			</control>
+			<control type="grouplist">
+				<top>375</top>
+				<left>40</left>
+				<itemgap>15</itemgap>
+				<control type="label">
+					<width>590</width>
+					<height>30</height>
+					<font>LCARS215</font>
+					<textcolor>gray</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+					<visible>Container(50).ListItem.HasEpg</visible>
+					<label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
+				</control>
+				<control type="label">
+					<width>590</width>
+					<height>30</height>
+					<font>LCARS215</font>
+					<textcolor>gray</textcolor>
+					<align>center</align>
+					<scroll>false</scroll>
+					<visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
+					<label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<left>100</left>
+					<width>590</width>
+					<height>8</height>
+					<texturebg border="6,6,6,6">progress/ProgressBG.png</texturebg>
+					<midtexture border="6,6,6,6">progress/ProgressM.png</midtexture>
+					<righttexture border="0,6,0,6">progress/ProgressR.png</righttexture>
+					<lefttexture border="0,6,0,6">progress/ProgressL.png</lefttexture>
+					<visible>Container(50).ListItem.HasEpg</visible>
+					<info>Container(50).ListItem.Progress</info>
+				</control>
+				<control type="textbox">
+					<description>Plot Value for TVShow</description>
+					<font>LCARS215</font>
+					<width>590</width>
+					<height>250</height>
+					<align>justify</align>
+					<label>$INFO[Container(50).ListItem.Plot]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+				</control>
+			</control>
 		</control>
-
-		
-			
 	</controls>
 </window>

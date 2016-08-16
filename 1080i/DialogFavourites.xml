@@ -35,6 +35,7 @@
 				<onclick>back</onclick>
 				<width>200</width>
 				<label>Close</label>
+				<onclick>ReloadSkin()</onclick>
 			</control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>

@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">9</defaultcontrol>
-    <include>OpenClose</include>    <controls>
+	<coordinates>
+		<left>370</left>
+		<top>60</top>
+	</coordinates>
+    <include>OpenClose</include>
+    <controls>
         <control type="image">
-            <left>230</left>
-            	<top>50</top>
-				<width>1400</width>
-				<height>950</height>
-				<texture border="150"  >sidepanel/dialog.png</texture>
-        </control>
+			<left>0</left>
+			<top>0</top>
+			<width>1400</width>
+			<height>950</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
         <control type="label">
             <description>header label</description>
-            <left>240</left>
-            	<top>100</top>
-            <width>1380</width>
+            <left>40</left>
+            <top>10</top>
+            <width>1320</width>
             <height>30</height>
-            <font>LCARS20</font>
+            <font>LCARS216</font>
             <label>$LOCALIZE[19142]</label>
             <align>center</align>
             <aligny>center</aligny>
@@ -24,8 +32,8 @@
         </control>
         <control type="image">
             <description>Search string bkg</description>
-            <posx>335</posx>
-            <top>200</top>
+            <posx>135</posx>
+            <top>110</top>
             <width>1190</width>
             <height>70</height>
             <aspectratio>stretch</aspectratio>
@@ -33,13 +41,12 @@
         </control>
         <control type="edit" id="9">
             <description>Search string</description>
-            <posx>335</posx>
-            <top>210</top>
+            <posx>135</posx>
+            <top>120</top>
             <width>1180</width>
             <height>50</height>
             <font>LCARS20</font>
             <textcolor>White</textcolor>
-
             <texturefocus>-</texturefocus>
             <texturenofocus>-</texturenofocus>
             <align>left</align>
@@ -50,8 +57,8 @@
         </control>
         <control type="textbox">
             <description>Search help</description>
-            <posx>335</posx>
-            <top>900</top>
+            <posx>235</posx>
+            <top>810</top>
             <width>1180</width>
             <height>70</height>
             <align>center</align>
@@ -60,8 +67,8 @@
             <label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
         </control>
         <control type="group">
-            <posx>300</posx>
-            <top>280</top>
+            <posx>100</posx>
+            <top>190</top>
             <control type="radiobutton" id="10">
                 <description>Include Description</description>
                 <posx>0</posx>
@@ -181,8 +188,8 @@
             </control>
         </control>
         <control type="group">
-            <posx>950</posx>
-            <top>280</top>
+            <posx>750</posx>
+            <top>190</top>
             <control type="spincontrolex" id="12">
                 <description>Min Duration</description>
                 <posx>0</posx>
@@ -290,8 +297,8 @@
             </control>
         </control>
         <control type="group" id="9000">
-            <top>840</top>
-            <posx>400</posx>
+            <top>750</top>
+            <posx>200</posx>
             <control type="button" id="28">
                 <description>Defaults Button</description>
                 <width>250</width>

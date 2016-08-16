@@ -255,6 +255,20 @@
 				<bordertexture  border="10">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
             </control>
+			<control type="label">
+				<visible>Container.Content(Movies)</visible>
+				<posx>37</posx>
+				<top>27</top>
+				<width>75</width>
+				<height>40</height>
+				<font>LCARS218</font>
+				<scroll>false</scroll>
+				<align>center</align>
+				<textcolor>orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<aligny>center</aligny>
+				<label>$VAR[Extra]</label>
+			</control>
         </itemlayout>
         <focusedlayout height="420" width="320">
             <control type="image">
@@ -267,6 +281,20 @@
 				<bordertexture  border="10">shadow.png</bordertexture>
                 <bordersize>10</bordersize>
             </control>
+			<control type="label">
+				<visible>Container.Content(Movies)</visible>
+				<posx>37</posx>
+				<top>27</top>
+				<width>75</width>
+				<height>40</height>
+				<font>LCARS218</font>
+				<scroll>false</scroll>
+				<align>center</align>
+				<textcolor>orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<aligny>center</aligny>
+				<label>$VAR[Extra]</label>
+			</control>
             <control type="image">
                 <centerleft>160</centerleft>
                 <top>244</top>
@@ -752,8 +780,8 @@
 <!--VIEWTOPINFOS-->
         <include name="WindowsTopInfos">
         <control type="grouplist" description="LCARS">
-            <visible>!Window.IsActive(DialogPictureInfo.xml)</visible>
-            <visible>Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRTimers.xml)</visible>
+            <!--visible>!Window.IsActive(DialogPictureInfo.xml)</visible-->
+            <visible>Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRTimers.xml)</visible>
             <bottom>120</bottom>
             <posx>50</posx>
 			<width>300</width>
@@ -777,8 +805,8 @@
             </control>
 	  </control>
 	  <control type="grouplist" description="LCARS">
-            <visible>!Window.IsActive(DialogPictureInfo.xml)</visible>
-            <visible>Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)</visible>
+            <!--visible>!Window.IsActive(DialogPictureInfo.xml)</visible-->
+            <visible>Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)</visible>
             <bottom>60</bottom>
             <posx>50</posx>
 			<width>300</width>
@@ -791,7 +819,7 @@
                 <align>center</align>
                 <label>$INFO[Network.IPAddress,IP: ]</label>
             </control>
-        </control>
+      </control>
         
         <control type="grouplist" description="ukn">
             <visible>!Window.IsActive(DialogPictureInfo.xml)</visible>
@@ -916,8 +944,104 @@
             <control type="button" id="29" description="Cancel">
                 <width>300 </width>
                 <label>222</label>
-                
             </control>
         </control>
+    </include>
+    <include name="PvrLcarsB">
+            <control type="button" id="100">
+                <visible>![Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)]</visible>
+                <description>Channels</description>
+				<width>300</width>
+                <label>19019</label>
+                <onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
+                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+            </control>
+            <control type="button" id="101">
+                <description>TV Guide</description>
+                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
+				<width>300</width>
+                <label>22020</label>
+                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
+                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+            </control>
+            <control type="button" id="102">
+                <description>Recordings</description>
+                <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible><textwidth>235</textwidth>
+				<width>300</width>
+                <label>19163</label>
+                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+            </control>
+            <control type="button" id="103">
+                <description>Timers</description>
+                <visible>![Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)]</visible><textwidth>235</textwidth>
+				<width>300</width>
+                <label>19040</label>
+                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+            </control>
+            <control type="button" id="104">
+                <description>Search</description>
+                <visible>![Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)]</visible><textwidth>235</textwidth>
+				<width>300</width>
+                <label>137</label>
+                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+            </control>
+            <control type="button" id="28">
+                <description>Channel Groups</description>
+				<width>300</width>
+                <label>-</label>
+            </control>
+            <control type="button" id="3">
+                <description>Sort by button</description>
+				<width>300</width>
+                <label>103</label>
+            </control>
+            <control type="togglebutton" id="4">
+                <description>Sort asc</description>
+				<width>300</width>
+                <label>585</label>
+                <altlabel>584</altlabel>
+                <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+            </control>
+            <control type="radiobutton" id="31">
+                <description>Filter</description>
+				<width>300</width>
+                <label>587</label>
+				<include>Keyboardbuttons</include>
+                <onclick>right</onclick>
+                <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+            </control>
+            <!-- Misc Options (ID is completely arbitrary) -->
+            <control type="radiobutton" id="5">
+                <description>Group recording items by folder structure</description>
+				<width>300</width>
+                <include>Keyboardbuttons</include>
+				<label>19270</label>
+                <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+            </control>
+            <control type="radiobutton" id="6">
+                <description>Show hidden channels</description>
+				<width>300</width>
+                <include>Keyboardbuttons</include>
+                <label>hidden channels</label>
+                <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+            </control>
+            <control type="radiobutton" id="7">
+                <description>Show deleted recordings</description>
+				<width>300</width>
+                <include>Keyboardbuttons</include>
+                <label>19184</label>
+                <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+            </control>
+			<control type="button" id="607">
+                <onclick>ActivateWindow(Home)</onclick>
+				<width>300</width>
+				<width>300</width>
+				<label>Home</label>
+			</control>
     </include>
 </includes>

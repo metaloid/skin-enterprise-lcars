@@ -7,12 +7,12 @@
     <controls>
         <include>Backgroundcolor</include>
         <control type="image">
-                 <top>0</top>
-                <posx>0</posx>
-                <width>1920</width>
-                <height>1080</height>
-                <aspectratio>strech</aspectratio>
-                <texture background="true" flipx="true">Lcars/lineL.png</texture>
+            <top>0</top>
+            <posx>0</posx>
+            <width>1920</width>
+            <height>1080</height>
+            <aspectratio>strech</aspectratio>
+            <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
 		<control type="multiimage" >
 			<posx>50</posx>
@@ -27,73 +27,63 @@
 		</control>
 		<include>WindowsTopInfos</include>
         <include>VideoLcars</include>		
-         
-	<control type="grouplist" id="9000">
-                <width>300</width>
-                <height>800</height>
-                <top>150</top>
-                <posx>50</posx>
-				<onleft>noop</onleft>
-				<onright>54</onright>
-				<onup>noop</onup>
-				<ondown>66</ondown>
-		<control type="button" id="607">
+		<control type="grouplist" id="9000">
+            <width>300</width>
+            <height>800</height>
+            <top>150</top>
+            <posx>50</posx>
+			<onleft>noop</onleft>
+			<onright>54</onright>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+			<control type="button" id="607">
                 <onclick>ActivateWindow(Home)</onclick>
-		    <width>300</width>
-		    <label>Home</label>
-		</control>
+				<width>300</width>
+				<label>Home</label>
+			</control>
             <control type="button" id="677">
                 <onclick>ParentDir</onclick>
-		    <width>300</width>
-		    <label>Back</label>
-		</control>   
+				<width>300</width>
+				<label>Back</label>
+			</control>   
             <control type="button" id="3" description="Sort">
-                    <width>300</width>
-	      </control>
+                <width>300</width>
+			</control>
             <control type="togglebutton" id="4" description="SortMode">
-                    <width>300</width>
-					<include>Keyboardbuttons</include>
-					<label>585</label>
-                    <altlabel>584</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+                <width>300</width>
+				<include>Keyboardbuttons</include>
+				<label>585</label>
+                <altlabel>584</altlabel>
+				<usealttexture>Container.SortDirection(Ascending)</usealttexture>
             </control>
             <control type="edit" id="19">
-					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-					<description>Filter</description>
-					<height>40</height>
-					<width>300</width>
-					<textwidth>230</textwidth>
-					<label>587</label>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<textcolor>black</textcolor>
-					<focusedcolor>black</focusedcolor>
-					<selectedcolor>black</selectedcolor>
+				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+				<description>Filter</description>
+				<height>40</height>
+				<width>300</width>
+				<textwidth>230</textwidth>
+				<label>587</label>
+				<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+				<textcolor>black</textcolor>
+				<focusedcolor>black</focusedcolor>
+				<selectedcolor>black</selectedcolor>
 			</control>
 			<control type="togglebutton" id="699" description="Playing">
-                    <enable>Player.HasMedia</enable>
-			  <width>300</width>
-			  <include>Keyboardbuttons</include>
-			  <label>$LOCALIZE[16003]</label>
-                    <altlabel>$LOCALIZE[31055]</altlabel>
-                    <usealttexture>Player.HasMedia</usealttexture>
-                    <onclick>fullscreen</onclick>
-                    <altclick>fullscreen</altclick>
-                    <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
+                <visible>Player.HasMedia</visible>
+				<width>300</width>
+				<include>Keyboardbuttons</include>
+				<label>$LOCALIZE[16003]</label>
+                <altlabel>$LOCALIZE[31055]</altlabel>
+                <usealttexture>Player.HasMedia</usealttexture>
+                <onclick>fullscreen</onclick>
+                <altclick>fullscreen</altclick>
+                <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
             </control>
-                 
-      </control>
-        	<control type="spincontrolex" id="66">
+			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(54).HasPrevious |  Container(54).HasNext]</visible>
-				<onleft>noop</onleft>
-				<onright>54</onright>
-				<onup>9000</onup>
-				<ondown>noop</ondown>
-				<top>510</top>
-                <posx>-15</posx>
-				<width>370</width>
-				<height>40</height>
+				<width>307</width>
                 <subtype>page</subtype>
 				<font>-</font>
 				<textcolor>-</textcolor>
@@ -106,6 +96,7 @@
 				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
 				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
 				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
-			</control>
+			</control>    
+		</control>
     </controls>
 </window>

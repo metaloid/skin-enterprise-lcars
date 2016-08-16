@@ -2,23 +2,24 @@
 <window>
 	<defaultcontrol always="true">7</defaultcontrol>
 	<coordinates>
-		<left>225</left>
-		<top>30</top>
+		<left>1050</left>
+		<top>105</top>
 	</coordinates>
-	<include>dialogeffect</include>
-	<controls>
-		<include name="DialogBackgroundCommons">
-			<param name="DialogBackgroundWidth" value="830" />
-			<param name="DialogBackgroundHeight" value="660" />
-			<param name="DialogHeaderWidth" value="750" />
-			<param name="DialogHeaderLabel" value="$INFO[ListItem.Title]" />
-			<param name="DialogHeaderId" value="2" />
-			<param name="CloseButtonLeft" value="740" />
-			<param name="CloseButtonNav" value="10" />
-		</include>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+            <width>720</width>
+            <height>900</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
+		</control>
 		<control type="list" id="49">
-			<left>40</left>
-			<top>80</top>
+			<left>0</left>
+			<top>75</top>
 			<width>640</width>
 			<height>330</height>
 			<onleft>49</onleft>
@@ -28,67 +29,58 @@
 			<pagecontrol>-</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="30">
-				<control type="label">
-					<left>5</left>
-					<top>0</top>
-					<width>160</width>
-					<height>30</height>
-					<font>font13</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="label">
-					<left>175</left>
-					<top>0</top>
-					<width>465</width>
-					<height>30</height>
-					<font>font13</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
-					<info>ListItem.Label2</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="30">
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>640</width>
-					<height>30</height>
-					<visible>Control.HasFocus(49)</visible>
-					<texture>MenuItemFO.png</texture>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="label">
-					<left>5</left>
-					<top>0</top>
-					<width>160</width>
-					<height>30</height>
-					<font>font13</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>blue</textcolor>
-					<selectedcolor>selected</selectedcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="label">
-					<left>175</left>
-					<top>0</top>
-					<width>465</width>
-					<height>30</height>
-					<font>font13</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<selectedcolor>white</selectedcolor>
-					<info>ListItem.Label2</info>
-					<scroll>true</scroll>
-				</control>
-			</focusedlayout>
+							<control type="label">
+								<left>0</left>
+								<top>0</top>
+								<width>140</width>
+								<height>30</height>
+								<font>LCARS216</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>orange</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Label</info>
+							</control>
+							<control type="label">
+								<left>150</left>
+								<top>0</top>
+								<width>500</width>
+								<height>30</height>
+								<font>LCARS216</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<info>ListItem.Label2</info>
+							</control>
+						</itemlayout>
+						<focusedlayout height="30">
+							<control type="label">
+								<left>0</left>
+								<top>0</top>
+								<width>140</width>
+								<height>30</height>
+								<font>LCARS216</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>orange</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Label</info>
+							</control>
+							<control type="label">
+								<left>150</left>
+								<top>0</top>
+								<width>500</width>
+								<height>30</height>
+								<font>LCARS216</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>white</textcolor>
+								<selectedcolor>white</selectedcolor>
+								<info>ListItem.Label2</info>
+							</control>
+						</focusedlayout>
+						
 			<content>
 				<item>
 					<label>$LOCALIZE[21442]:</label>
@@ -115,7 +107,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[142]</label>
-					<label2>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label2>
+					<label2>$INFO[ListItem.Date] - $INFO[ListItem.EndTime]</label2>
 					<onclick>noop</onclick>
 				</item>
 				<item>
@@ -148,20 +140,18 @@
 				</item>
 			</content>
 		</control>
-		<control type="label">
-			<left>310</left>
-			<top>370</top>
-			<width>400</width>
+		<control type="label" id="2">
+			<left>40</left>
+			<top>15</top>
+			<width>640</width>
 			<height>30</height>
-			<font>font12</font>
-			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<scroll>true</scroll>
-			<align>right</align>
+			<align>center</align>
 			<aligny>center</aligny>
-			<label>[COLOR=blue]$LOCALIZE[207][/COLOR]$INFO[Container(400).CurrentPage, ( $LOCALIZE[31024] ]$INFO[Container(400).NumPages,/, )]</label>
+			<font>LCARS245</font>
+			<scroll>true</scroll>
+			<label>$INFO[ListItem.Title]</label>
 		</control>
-		<control type="spincontrol" id="60">
+		<!--control type="spincontrol" id="60">
 			<description>Next page button</description>
 			<left>720</left>
 			<top>375</top>
@@ -173,57 +163,55 @@
 			<onup>9000</onup>
 			<textcolor>-</textcolor>
 			<showonepage>true</showonepage>
-		</control>
+		</control-->
 		<control type="textbox" id="400">
 			<description>PLOT</description>
-			<left>40</left>
-			<top>402</top>
-			<width>750</width>
-			<height>178</height>
-			<font>font13</font>
+			<left>60</left>
+			<top>300</top>
+			<width>600</width>
+			<height>575</height>
+			<font>LCARS216</font>
 			<align>justify</align>
-			<pagecontrol>60</pagecontrol>
+			<textcolor>white</textcolor>
 			<label fallback="161">$INFO[ListItem.Plot]</label>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>40</left>
-			<top>590</top>
-			<width>740</width>
-			<height>40</height>
-			<itemgap>5</itemgap>
-			<align>center</align>
-			<orientation>horizontal</orientation>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onup>60</onup>
-			<ondown>60</ondown>
-			<control type="button" id="4">
+			<left>220</left>
+			<top>620</top>
+			<height>300</height>
+			<width>350</width>
+            <onleft>50</onleft>
+            <itemgap>10</itemgap>
+            <aligny>bottom</aligny>
+            <align>center</align>
+            <orientation>vertical</orientation>
+            <control type="button" id="4">
 				<description>Find similar</description>
-				<include>ButtonInfoDialogsCommonValues</include>
+				<width>280</width>
 				<label>19003</label>
 				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="5">
 				<description>Switch to Channel</description>
-				<include>ButtonInfoDialogsCommonValues</include>
+				<width>280</width>
 				<label>19165</label>
 				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="8">
 				<description>Play recording</description>
-				<include>ButtonInfoDialogsCommonValues</include>
+				<width>280</width>
 				<label>19687</label>
 				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="6">
 				<description>Record</description>
-				<include>ButtonInfoDialogsCommonValues</include>
+				<width>280</width>
 				<label>-</label>
 				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="7">
+				<width>280</width>
 				<description>OK</description>
-				<include>ButtonInfoDialogsCommonValues</include>
 				<label>186</label>
 			</control>
 		</control>

@@ -7,12 +7,12 @@
 	<include>OpenClose</include>
 	<controls>
 		<control type="image">
-                 <top>0</top>
-                <posx>0</posx>
-                <width>1920</width>
-                <height>1080</height>
-                <aspectratio>strech</aspectratio>
-                <texture background="true" flipx="true">Lcars/lineL.png</texture>
+            <top>0</top>
+            <posx>0</posx>
+			<width>1920</width>
+            <height>1080</height>
+            <aspectratio>strech</aspectratio>
+            <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
 		<control type="multiimage" >
 			<posx>50</posx>
@@ -27,10 +27,10 @@
 		</control>
 		<include>WindowsTopInfos</include>
  		<control type="group">
-				<description>Small Media Window</description>
-				<posx>415</posx>
-				<posy>100</posy>
-				<visible>Control.IsVisible(50)</visible>
+			<description>Small Media Window</description>
+			<posx>415</posx>
+			<posy>100</posy>
+			<visible>Control.IsVisible(50)</visible>
 			<control type="image">
 				<left>5</left>
 				<top>5</top>
@@ -45,76 +45,40 @@
         <control type="group">
 			<include file="View-PVR.xml">PVRListView</include>
 		</control>
-		
 		<control type="grouplist" id="9000">
-                <width>300</width>
-                <height>800</height>
-                <top>110</top>
-                <posx>50</posx>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-			<control type="button" id="607">
-                <onclick>ActivateWindow(Home)</onclick>
+            <width>300</width>
+            <height>800</height>
+            <top>110</top>
+            <posx>50</posx>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+			<include>PvrLcarsB</include>
+            <control type="button" id="222">
+                <description>Fullscreen As button</description>
 				<width>300</width>
-				<label>Home</label>
-			</control>
-            <control type="button" id="28"><!--Change Channel Groups-->
-					<width>300</width>
-					<label>-</label>
-			</control>
-			<control type="button" id="3" description="Sort">
-                    	<width>300</width>
-			</control>
-            <control type="togglebutton" id="4" description="SortOrder">
-                    <width>300</width>
-			       	<label>584</label>
-                    <altlabel>585</altlabel>
-                    <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+                <label>Fullscreen</label>
+                <visible>Player.HasMedia</visible>
+                <onclick>fullscreen</onclick>
             </control>
-			<control type="togglebutton" id="699" description="Playing">
-                    	<enable>Player.HasMedia</enable>
-                    	<width>300</width>
-						<label>$LOCALIZE[16003]</label>
-                    	<altlabel>$LOCALIZE[31055]</altlabel>
-                    	<usealttexture>Player.HasMedia</usealttexture>
-                    	<onclick>fullscreen</onclick>
-                    	<altclick>fullscreen</altclick>
-            </control>
-				<control type="button" id="901"><!-- Channels -->
-					<width>300</width>
-					<label>$LOCALIZE[19019]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvchannels)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiochannels)</onclick>
-				</control>
-				<control type="button" id="902"><!-- Guide -->
-					<label>$LOCALIZE[22020]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvguide)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radioguide)</onclick>
-				</control>
-				<control type="button" id="904"><!-- Search -->
-					<width>300</width>
-					<label>$LOCALIZE[137]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvsearch)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiosearch)</onclick>
-				</control>
-				<control type="button" id="905"><!-- Timers -->
-					<width>300</width>
-					<label>$LOCALIZE[19040]</label>
-					<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(tvtimers)</onclick>
-					<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(radiotimers)</onclick>
-				</control>
-			</control>
-		<control type="group" description="slider">
-               	<control type="scrollbar" id="60">
-                    	<posx>200r</posx>
-                    	<top>125</top>
-                    	<height>840</height>
-                    	<onleft>50</onleft>
-                    	<onright>50</onright>
-                </control>
-        </control>
-		
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(50).HasPrevious |  Container(50).HasNext]</visible>
+				<width>307</width>
+                <subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>false</showonepage>
+				<spinwidth>150</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+			</control>    
+		</control>
 	</controls>
 </window>

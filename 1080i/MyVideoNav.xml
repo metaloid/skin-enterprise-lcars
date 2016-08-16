@@ -27,10 +27,8 @@
             <loop>yes</loop>
             <aspectratio>keep</aspectratio>
 		</control>
-	 
 		<include>VideoLcars</include>		
 		<include>WindowsTopInfos</include>
-        
 		<control type="grouplist" id="9000">
             <width>300</width>
             <height>800</height>
@@ -39,7 +37,7 @@
 			<onleft>noop</onleft>
 			<onright>54</onright>
 			<onup>noop</onup>
-		    <ondown>66</ondown>
+		    <ondown>noop</ondown>
 			<control type="button" id="607">
                 <onclick>ActivateWindow(Home)</onclick>
 				<width>300</width>
@@ -86,11 +84,11 @@
             </control>
             <control type="button" id="8" description="search">
                 <width>300</width>
-		    <label>137</label>
+				<label>137</label>
             </control>
             <control type="togglebutton" id="699" description="Playing">
-                <enable>Player.HasMedia</enable>
-                <width>300</width>
+                <visible>Player.HasMedia</visible>
+				<width>300</width>
 				<label>$LOCALIZE[16003]</label>
                 <altlabel>$LOCALIZE[31055]</altlabel>
                 <usealttexture>Player.HasMedia</usealttexture>
@@ -104,19 +102,10 @@
                 <altlabel>13353</altlabel>
                 <usealttexture>library.isscanningvideo</usealttexture>
            </control>
-                 
-        </control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(504).HasPrevious |  Container(504).HasNext] | [Container(54).HasPrevious |  Container(54).HasNext] | [Container(503).HasPrevious |  Container(503).HasNext] | [Container(501).HasPrevious |  Container(501).HasNext]</visible>
-				<onleft>noop</onleft>
-				<onright>54</onright>
-				<onup>9000</onup>
-				<ondown>noop</ondown>
-				<top>515</top>
-                <posx>-15</posx>
-				<width>370</width>
-				<height>40</height>
+				<width>307</width>
                 <subtype>page</subtype>
 				<font>-</font>
 				<textcolor>-</textcolor>
@@ -130,7 +119,6 @@
 				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
 				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
 			</control>    
-       
-    
+        </control>
     </controls>
 </window>

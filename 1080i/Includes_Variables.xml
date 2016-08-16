@@ -3,8 +3,10 @@
    <!--nouvelle variable-->
 	
 	<variable name="PVROverlay">
-		<value condition="ListItem.IsRecording">overlayisrecording.png</value>
-		<value condition="ListItem.HasTimer + !ListItem.IsRecording">overlayhastimer.png</value>
+		<value condition="ListItem.IsRecording">pvr-isrecording.png</value>
+		<value condition="ListItem.HasTimer + !ListItem.IsRecording + !ListItem.HasTimerSchedule">pvr-hastimer.png</value>
+		<value condition="ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer">pvr-hasrecording.png</value>
+		<value condition="ListItem.HasTimerSchedule + !ListItem.IsRecording">pvr-hastimer.png</value>
 	</variable>
 	<variable name="FlagExtra">
 		<value condition="ListItem.IsResumable + [Container.Content(movies) | Container.Content(Episodes)]">IN PROGRESSE</value>
@@ -16,6 +18,7 @@
 		<value condition="!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)">HD</value>
 		<value condition="Container.Content(tvshows) | Container.Content(Seasons)">$INFO[ListItem.Property(TotalEpisodes)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]</value>
+		<value condition="Control.IsVisible(50)">$INFO[ListItem.ChannelNumber]</value>
 	</variable>
 	<variable name="rating">
         <!-- US (IMDB) -->
