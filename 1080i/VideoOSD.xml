@@ -201,8 +201,8 @@
 					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
 					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>EPG</label>
+                    <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
                 </control>
                 <control type="togglebutton" id="353">
                     <width>90</width>

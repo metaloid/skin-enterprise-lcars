@@ -204,7 +204,7 @@
                             <font>LCARS20</font>
                             <align>left</align>
                             <aligny>center</aligny>
-                            <textcolor>White</textcolor>
+                            <textcolor>Blue</textcolor>
                             <selectedcolor>Yellow</selectedcolor>
                             <info>ListItem.Label</info>
                         </control>

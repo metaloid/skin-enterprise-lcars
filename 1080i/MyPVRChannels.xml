@@ -114,7 +114,7 @@
 					<scroll>false</scroll>
 					<align>center</align>
 					<visible>Container(50).ListItem.HasEpg</visible>
-					<label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
+					<label>$INFO[Container(50).ListItem.StartTime] • [COLOR=Blue]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
 				</control>
 				<control type="label">
 					<width>590</width>
