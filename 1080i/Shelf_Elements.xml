@@ -490,7 +490,7 @@
     </include>
     <include name="mediasource">
         <control type="panel" id="320" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(365) | Container(9000).HasFocus(348) | Control.HasFocus(320)] </visible>
+                <visible>[Container(9000).HasFocus(365) | Control.HasFocus(320)] </visible>
                 <onup>320</onup>
                 <ondown>320</ondown>
                 <onleft>9000</onleft>
@@ -507,23 +507,49 @@
                     <item id="1" description="Video">
                         <label>Video Source</label>
                         <onclick>ActivateWindow(Videos,files)</onclick>
-                    </item>
+                   </item>
                     <item id="2" description="Music">
                         <label>Audio Source</label>
                         <onclick>ActivateWindow(501,root)</onclick>
                     </item>
+                </content>
+        </control>
+    </include>
+    <include name="settingshelf">
+        <control type="panel" id="325" description="TOP Shortcuts">
+                <visible>[Container(9000).HasFocus(348) | Control.HasFocus(325)] </visible>
+                <onup>325</onup>
+                <ondown>325</ondown>
+                <onleft>9000</onleft>
+                <onright>325</onright>
+				<top>550</top>
+				<left>130</left>
+				<width>1200</width>
+				<height>60</height>
+				<include>ShelfFade</include>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+                <include>ShortcutsCommons</include>
+                <content>
+                    <item id="1" description="Video">
+                        <visible>![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]</visible>
+						<label>Video Source</label>
+                        <onclick>ActivateWindow(Videos,files)</onclick>
+                   </item>
+                    <item id="2" description="Music">
+                        <visible>![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]</visible>
+						<label>Audio Source</label>
+                        <onclick>ActivateWindow(501,root)</onclick>
+                    </item>
                     <item id="3" description="UpdateLibrary">
-						<visible>!Container(9000).HasFocus(365)</visible>
                         <label>7</label>
                         <onclick>ActivateWindow(3)</onclick>
                     </item>
                     <item id="4" description="UpdateLibrary">
-						<visible>!Container(9000).HasFocus(365)</visible>
                         <label>$LOCALIZE[128] $LOCALIZE[5]</label>
                         <onclick>ActivateWindow(Settings)</onclick>
                     </item>
 					<item id="5" description="UpdateLibrary">
-						<visible>!Container(9000).HasFocus(365)</visible>
                         <label>20077</label>
                         <onclick>ActivateWindow(1718)</onclick>
                     </item>
@@ -584,7 +610,7 @@
     </include>
 	<include name="epg">
         <control type="panel" id="322" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(355) | Control.HasFocus(322)]</visible>
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355) | Control.HasFocus(322)]</visible>
                 <onup>322</onup>
                 <ondown>322</ondown>
                 <onleft>9000</onleft>
@@ -601,24 +627,53 @@
                     <item id="1" description="tvchannels">
                         <label>19023</label>
 						<onclick>ActivateWindow(tvchannels)</onclick>
+						<onclick>PVR.HasTVChannels</onclick>
                     </item>
-                    <item id="2" description="radiochannels">
-                        <label>19024</label>
-						<onclick>ActivateWindow(radiochannels)</onclick>
-                    </item>
-                    <item id="3" description="tvguide">
+                    <item id="2" description="tvguide">
                         <label>19069</label>
 						<onclick>ActivateWindow(tvguide)</onclick>
+						<onclick>PVR.HasTVChannels</onclick>
                     </item>
-                    <item id="4" description="tvrecordings">
+                    <item id="3" description="tvrecordings">
                         <label>19163</label>
 						<onclick>ActivateWindow(tvrecordings)</onclick>
-                    </item>
-					<item id="5" description="tvtimers">
+ 						<onclick>PVR.HasTVChannels</onclick>
+                   </item>
+					<item id="4" description="tvtimers">
                         <label>19040</label>
 						<onclick>ActivateWindow(tvtimers)</onclick>
+						<onclick>PVR.HasTVChannels</onclick>
                     </item>
-					
+					<item id="5">
+                        <visible>PVR.HasTVChannels</visible>
+						<label>137</label>
+						<onclick>ActivateWindow(tvSearch)</onclick>
+					</item>
+					<item id="6">
+                        <visible>PVR.HasRadioChannels</visible>
+						<label>19019</label>
+						<onclick>ActivateWindow(RadioChannels)</onclick>
+					</item>
+					<item id="7">
+                        <visible>PVR.HasRadioChannels</visible>
+						<label>22020</label>
+						<onclick>ActivateWindow(RadioGuide)</onclick>
+					</item>
+					<item id="8">
+                        <visible>PVR.HasRadioChannels</visible>
+						<label>19163</label>
+						<onclick>ActivateWindow(RadioRecordings)</onclick>
+					</item>
+					<item id="9">
+                        <visible>PVR.HasRadioChannels</visible>
+						<label>19040</label>
+						<onclick>ActivateWindow(RadioTimers)</onclick>
+					</item>
+					<item id="10">
+                        <visible>PVR.HasRadioChannels</visible>
+						<label>137</label>
+						<onclick>ActivateWindow(RadioSearch)</onclick>
+					</item>
                 </content>
         </control>
     </include>

@@ -28,6 +28,12 @@
             <onclick>ActivateWindow(TVChannels)</onclick>
             <visible>PVR.HasTVChannels</visible>
         </item>
+        <item id="356">
+            <label>Radio</label>
+            <property name="color">c1</property>
+            <onclick>ActivateWindow(RadioChannels)</onclick>
+            <visible>PVR.HasRadioChannels</visible>
+        </item>
         <item id="342">
             <visible>!Skin.HasSetting(hidemusic)</visible>
             <label>2</label>

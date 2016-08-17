@@ -28,7 +28,6 @@
 		<include>WindowsTopInfos</include>
 		<control type="panel" id="50">
 			<include>ListLcars</include>
-			<onright>61</onright>
 		</control>
 		<control type="grouplist" id="9000">
             <width>300</width>
@@ -81,19 +80,6 @@
 				<texture>$INFO[Container(50).ListItem.icon]</texture>
 				<visible>!Player.HasVideo</visible>
 			</control>
-			<control type="button" id="61">
-				<left>34</left>
-				<top>9</top>
-				<width>602</width>
-				<height>363</height>
-				<texturefocus border="3">c1.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<font>-</font>
-				<pulseonselect>no</pulseonselect>
-				<onleft>50</onleft>
-				<onclick>Fullscreen</onclick>
-				<visible>Player.HasVideo</visible>
-			</control>
 			<control type="videowindow">
 				<left>40</left>
 				<top>15</top>
@@ -103,7 +89,7 @@
 				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
 			</control>
 			<control type="grouplist">
-				<top>375</top>
+				<top>365</top>
 				<left>40</left>
 				<itemgap>15</itemgap>
 				<control type="label">
@@ -114,7 +100,7 @@
 					<scroll>false</scroll>
 					<align>center</align>
 					<visible>Container(50).ListItem.HasEpg</visible>
-					<label>$INFO[Container(50).ListItem.StartTime] • [COLOR=Blue]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
+					<label>$INFO[Container(50).ListItem.StartTime] • [COLOR=red]$INFO[Container(50).ListItem.Title][/COLOR] • $INFO[Container(50).ListItem.EndTime]</label>
 				</control>
 				<control type="label">
 					<width>590</width>

@@ -130,6 +130,10 @@
                         <label>$LOCALIZE[138]</label>
                         <onclick>noop</onclick>
                     </item>
+                    <item id="16" description="Sys Info">
+                        <label>Event Log</label>
+                        <onclick>activatewindow(EventLog)</onclick>
+                    </item>
                     <item id="11" description="Home">
                         <label>Home</label>
                         <onclick>Back</onclick>

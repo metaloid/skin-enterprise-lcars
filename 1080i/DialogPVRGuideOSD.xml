@@ -1,246 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">11</defaultcontrol>
+	<coordinates>
+		<left>1050</left>
+		<top>105</top>
+	</coordinates>
+    <include>OpenClose</include>
     <controls>
         <control type="image">
-            <top>310</top>
-            <height>600</height>
-            <width>1920</width>
+			<left>0</left>
+			<top>0</top>
+            <width>720</width>
+            <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture fallback="LCARS.png" diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >$INFO[ListItem.Art(fanart)]</texture>
+            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
-        	<bordersize>10</bordersize>
-                
+            <bordersize>10</bordersize>
+		</control>
+        <control type="label">
+			<left>40</left>
+			<top>15</top>
+			<width>640</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>LCARS245</font>
+			<textcolor>orange</textcolor>
+			<scroll>true</scroll>
+            <label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
         </control>
-        <control type="group">
-            <description>TV Guide Channel</description>
-            <include>VisibleFade</include>
-            <control type="group">
-                <posx>80</posx>
-                <top>340</top>
-                <control type="label">
-                    <description>Date Time label</description>
-                    <posx>0</posx>
-                    <top>20</top>
-                    <width>300</width>
-                    <height>20</height>
-                    <font>LCARS20</font>
-                    <textcolor>White</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>21820</label>
-                </control>
-                <control type="label">
-                    <description>Title</description>
-                    <posx>300</posx>
-                    <top>20</top>
-                    <width>600</width>
-                    <height>20</height>
-                    <font>LCARS20</font>
-                    <textcolor>White</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>369</label>
-                </control>
-                <control type="label">
-                    <description>Status header label</description>
-                    <posx>960</posx>
-                    <top>20</top>
-                    <width>140</width>
-                    <height>20</height>
-                    <font>LCARS20</font>
-                    <textcolor>White</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>126</label>
-                </control>
-                <control type="image">
-                    <description>separator image</description>
-                    <posx>60</posx>
-                    <top>57</top>
-                    <width>1760</width>
-                    <height>2</height>
-                    <texture>images/line.png</texture>
-                </control>
-                <control type="list" id="11">
-                    <posx>0</posx>
-                    <top>60</top>
-                    <width>1760</width>
-                    <height>480</height>
-                    <onup>11</onup>
-                    <ondown>11</ondown>
-                    <onleft>noop</onleft>
-                    <onright>60</onright>
-                    <pagecontrol>60</pagecontrol>
-                    <scrolltime>200</scrolltime>
-                    <itemlayout height="40">
-                        <control type="image">
-                            <width>1760</width>
-                            <height>40</height>
-                            <texture border="5">pstvButtonNoFocus.png</texture>
-                            <colordiffuse>90FFFFFF</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <posx>120</posx>
-                            <top>0</top>
-                            <width>400</width>
-                            <height>40</height>
-                            <font>LCARS18</font>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <info>ListItem.Date</info>
-                        </control>
-                        <control type="label">
-                            <posx>550</posx>
-                            <top>0</top>
-                            <width>640</width>
-                            <height>40</height>
-                            <font>LCARS20</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <info>ListItem.Label</info>
-                        </control>
-                        <control type="image">
-                            <posx>970</posx>
-                            <top>10</top>
-                            <width>30</width>
-                            <height>20</height>
-                            <texture>overlayisrecording.png</texture>
-                            <visible>ListItem.IsRecording</visible>
-                        </control>
-                        <control type="label">
-                            <posx>1005</posx>
-                            <top>0</top>
-                            <width>80</width>
-                            <height>40</height>
-                            <font>LCARS18</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <label>19043</label>
-                            <visible>ListItem.IsRecording</visible>
-                        </control>
-                        <control type="image">
-                            <posx>970</posx>
-                            <top>10</top>
-                            <width>20</width>
-                            <height>20</height>
-                            <texture>overlayhastimer.png</texture>
-                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-                        </control>
-                        <control type="label">
-                            <posx>1600</posx>
-                            <width>80</width>
-                            <height>40</height>
-                            <font>LCARS18</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <label>31510</label>
-                            <visible>ListItem.HasTimer</visible>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="120">
-                        <control type="image">
-                            <width>1760</width>
-                            <height>120</height>
-                            <texture border="5">pstvButtonFocus.png</texture>
-                            <colordiffuse>90777777</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <posx>120</posx>
-                            <top>0</top>
-                            <width>400</width>
-                            <height>40</height>
-                            <font>LCARS18</font>
-                            <align>center</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <info>ListItem.Date</info>
-                        </control>
-                        <control type="label">
-                            <posx>550</posx>
-                            <top>0</top>
-                            <width>640</width>
-                            <height>40</height>
-                            <font>LCARS20</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <info>ListItem.Label</info>
-                        </control>
-                        <control type="textbox">
-                            <description>Plot Value for TVShow</description>
-                            <posx>60</posx>
-                            <top>40</top>
-                            <width>1600</width>
-                            <height>70</height>
-                            <font>LCARS18</font>
-                            <align>justify</align>
-                            <textcolor>White</textcolor>
-                            <label>$INFO[ListItem.Plot]</label>
-                        </control>
-                        <control type="image">
-                            <posx>970</posx>
-                            <top>10</top>
-                            <width>30</width>
-                            <height>20</height>
-                            <texture>overlayisrecording.png</texture>
-                            <visible>ListItem.IsRecording</visible>
-                        </control>
-                        <control type="label">
-                            <posx>1005</posx>
-                            <top>0</top>
-                            <width>80</width>
-                            <height>40</height>
-                            <font>LCARS18</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <label>19043</label>
-                            <visible>ListItem.IsRecording</visible>
-                        </control>
-                        <control type="image">
-                            <posx>970</posx>
-                            <top>10</top>
-                            <width>20</width>
-                            <height>20</height>
-                            <texture>overlayhastimer.png</texture>
-                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-                        </control>
-                        <control type="label">
-                            <posx>1600</posx>
-                            <width>80</width>
-                            <height>40</height>
-                            <font>LCARS18</font>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <textcolor>White</textcolor>
-                            <selectedcolor>Yellow</selectedcolor>
-                            <label>31510</label>
-                            <visible>ListItem.HasTimer</visible>
-                        </control>
-                    </focusedlayout>
-                </control>
-                <control type="scrollbar" id="60">
-                    <posx>1780</posx>
-                    <top>60</top>
-                    <height>480</height>
-                    <onleft>11</onleft>
-                    <onright>noop</onright>
-                    <showonepage>false</showonepage>
-                    <orientation>vertical</orientation>
-                </control>
-            </control>
+        <control type="label">
+			<left>40</left>
+			<top>50</top>
+			<width>640</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>LCARS216</font>
+			<scroll>true</scroll>
+            <label>$INFO[Container(11).ListItem.StartDate]</label>
         </control>
+        <control type="list" id="11">
+			<left>5</left>
+			<top>85</top>
+			<width>700</width>
+			<height>700</height>
+			<onleft>49</onleft>
+			<onright>49</onright>
+			<onup>9000</onup>
+			<ondown>61</ondown>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="35">
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>150</width>
+					<height>30</height>
+					<font>LCARS216</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>orange</textcolor>
+					<selectedcolor>selected</selectedcolor>
+                    <info>ListItem.StartTime</info>
+                </control>
+				<control type="label">
+					<left>180</left>
+					<top>0</top>
+					<width>600</width>
+					<height>30</height>
+					<font>LCARS216</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<info>ListItem.Title</info>
+				</control>
+            </itemlayout>
+            <focusedlayout height="35">
+				<control type="label">
+					<left>10</left>
+					<top>0</top>
+					<width>150</width>
+					<height>30</height>
+					<font>LCARS216</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>Blue</textcolor>
+					<selectedcolor>selected</selectedcolor>
+                    <info>ListItem.StartTime</info>
+                </control>
+				<control type="label">
+					<left>180</left>
+					<top>0</top>
+					<width>600</width>
+					<height>30</height>
+					<font>LCARS216</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>Blue</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<info>ListItem.Title</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="grouplist" id="9000">
+			<left>220</left>
+			<top>690</top>
+			<height>300</height>
+			<width>350</width>
+            <onleft>50</onleft>
+            <itemgap>10</itemgap>
+            <aligny>bottom</aligny>
+            <align>center</align>
+            <orientation>vertical</orientation>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(11).HasPrevious |  Container(11).HasNext]</visible>
+				<width>287</width>
+                <subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>false</showonepage>
+				<spinwidth>140</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
+				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
+				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+			</control>    
+			<control type="button" id="677">
+				<onclick>close</onclick>
+				<width>280</width>
+				<label>186</label>
+			</control>
+		</control>
     </controls>
 </window>

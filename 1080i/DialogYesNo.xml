@@ -44,7 +44,7 @@
 				<onright>noop</onright>
 				<onup>noop</onup>
 				<ondown>noop</ondown>
-                <itemgap>5</itemgap>
+                <itemgap>10</itemgap>
                 <orientation>horizontal</orientation>
 				<control type="button" id="10" description="No">
 					<width>150</width>

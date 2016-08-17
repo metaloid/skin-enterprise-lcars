@@ -134,6 +134,7 @@
 					<bordertexture  border="40">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
 				</control>
+				<include>settingshelf</include>
 				<include>weather_shelf</include>
 				<include condition="Library.HasContent(TVShows)">TV_RA</include>
 				<include>Addons_Shortcuts</include>

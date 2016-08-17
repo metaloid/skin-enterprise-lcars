@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">17</defaultcontrol>
+	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<backgroundcolor>background</backgroundcolor>
-    <views>17</views>
+    <views>50</views>
 	<include>OpenClose</include>
 	<controls>
 		<control type="image">
@@ -29,15 +29,163 @@
         <control type="group">
 			<posx>415</posx>
 			<posy>100</posy>
-			<include file="View-PVR.xml">PVRSearchListView</include>
+		<control type="group"><!-- TV search group -->
+			<visible>Control.IsVisible(50)</visible>
+			<control type="group">
+				<posx>80</posx>
+				<posy>90</posy>
+				<control type="label"><!-- Channel -->
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>240</width>
+					<font>LCARS20</font>
+					<height>24</height>
+					<label>$LOCALIZE[19148]</label>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
+				<control type="label"><!-- Title -->
+					<posx>350</posx>
+					<posy>20</posy>
+					<width>350</width>
+					<font>LCARS20</font>
+					<height>24</height>
+					<label>$LOCALIZE[369]</label>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
+				<control type="label"><!-- Time -->
+					<posx>720</posx>
+					<posy>20</posy>
+					<width>260</width>
+					<font>LCARS20</font>
+					<height>24</height>
+					<align>center</align>
+					<label>$LOCALIZE[21820]</label>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
+				<control type="label"><!-- Status header -->
+					<posx>970</posx>
+					<posy>20</posy>
+					<width>140</width>
+					<height>24</height>
+					<font>LCARS20</font>
+					<align>center</align>
+					<label>$LOCALIZE[126]</label>
+					<visible>Control.IsVisible(50)</visible>
+				</control>
+			</control>
+			<control type="list" id="50">
+				<posx>48</posx>
+				<posy>146</posy>
+				<width>1160</width>
+				<height>600</height>
+				<onleft>9000</onleft>
+				<onright>27</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>66</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<itemlayout height="50">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1160</width>
+						<height>40</height>
+						<texture  border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>10</posy>
+						<width>240</width>
+						<height>24</height>
+						<scroll>false</scroll>
+						<textcolor>black</textcolor>
+						<font>LCARS20</font>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="label">
+						<posx>382</posx>
+						<posy>10</posy>
+						<width>350</width>
+						<height>24</height>
+						<scroll>false</scroll>
+						<textcolor>black</textcolor>
+						<font>LCARS20</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>874</posx>
+						<posy>10</posy>
+						<width>260</width>
+						<height>24</height>
+						<scroll>false</scroll>
+						<font>LCARS20</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+						<label>$INFO[ListItem.Date]</label>
+					</control>
+					<control type="image">
+						<posx>1056</posx>
+						<posy>7</posy>
+						<width>32</width>
+						<height>32</height>
+						<texture>$VAR[PVROverlay]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1160</width>
+						<height>40</height>
+						<texture  border="5" colordiffuse="buttonselect">button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>52</posx>
+						<posy>10</posy>
+						<width>240</width>
+						<height>24</height>
+						<textcolor>black</textcolor>
+						<font>LCARS20</font>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="label">
+						<posx>382</posx>
+						<posy>10</posy>
+						<width>350</width>
+						<height>24</height>
+						<textcolor>black</textcolor>
+						<font>LCARS20</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>874</posx>
+						<posy>10</posy>
+						<width>260</width>
+						<height>24</height>
+						<font>LCARS20</font>
+						<textcolor>black</textcolor>
+						<align>center</align>
+						<label>$INFO[ListItem.Date]</label>
+					</control>
+					<control type="image">
+						<posx>1056</posx>
+						<posy>7</posy>
+						<width>32</width>
+						<height>32</height>
+						<texture>$VAR[PVROverlay]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
 		</control>
 		<control type="grouplist" id="9000">
             <width>300</width>
             <height>800</height>
             <top>110</top>
             <posx>50</posx>
-			<onleft>17</onleft>
-			<onright>noop</onright>
+			<onleft>noop</onleft>
+			<onright>50</onright>
 			<onup>noop</onup>
 			<ondown>noop</ondown>
 			<include>PvrLcarsB</include>
@@ -50,7 +198,7 @@
             </control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
-				<visible>[Container(17).HasPrevious |  Container(17).HasNext]</visible>
+				<visible>[Container(50).HasPrevious |  Container(50).HasNext]</visible>
 				<width>307</width>
                 <subtype>page</subtype>
 				<font>-</font>
