@@ -234,15 +234,15 @@
                 <include>ShortcutsCommons</include>
                 <content>
                     <item id="1" description="tvchannels">
-                        <label>1037</label>
+                        <label>3</label>
 						<onclick>ActivateWindow(Videos,Addons)</onclick>
                     </item>
                     <item id="2" description="radiochannels">
-                        <label>1038</label>
+                        <label>2</label>
 						<onclick>ActivateWindow(Music,Addons)</onclick>
                     </item>
                     <item id="3" description="tvchannels">
-                        <label>$LOCALIZE[31098]</label>
+                        <label>31098</label>
 						<onclick>ActivateWindow(Programs,Addons)</onclick>
                     </item>
                     <item id="4" description="radiochannels">
@@ -546,7 +546,7 @@
                         <onclick>ActivateWindow(3)</onclick>
                     </item>
                     <item id="4" description="UpdateLibrary">
-                        <label>$LOCALIZE[128] $LOCALIZE[5]</label>
+                        <label>$LOCALIZE[5]</label>
                         <onclick>ActivateWindow(Settings)</onclick>
                     </item>
 					<item id="5" description="UpdateLibrary">

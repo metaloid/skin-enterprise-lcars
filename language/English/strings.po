@@ -164,8 +164,8 @@ msgid "Reset ALL skin settings to default"
 msgstr "Reset ALL skin settings to default"
 
 msgctxt "#31037"
-msgid "Add-ons manager"
-msgstr "Add-ons manager"
+msgid "manager"
+msgstr "manager"
 
 msgctxt "#31038"
 msgid "min"
@@ -409,8 +409,8 @@ msgid "New Albums"
 msgstr "New Albums"
 
 msgctxt "#31098"
-msgid "Programs Add-ons"
-msgstr "Programs Add-ons"
+msgid "Programs"
+msgstr "Programs"
 
 msgctxt "#31099"
 msgid "Artists"

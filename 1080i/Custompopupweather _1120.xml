@@ -10,7 +10,7 @@
 			<width>1180</width>
         	<height>450</height>
         	<aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true">WorldMap.png</texture>
+            <texture colordiffuse="33ffffff" background="true">Capture8.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
 			<bordersize>10</bordersize>
         </control>
