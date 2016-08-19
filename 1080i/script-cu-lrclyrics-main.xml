@@ -15,7 +15,7 @@
 			<width>1150</width>
 			<height>650</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="45FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="45FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -125,7 +125,7 @@
 				<width>550</width>
 				<height>30</height>
 				<label>$LOCALIZE[21870] - $INFO[Control.GetLabel(200)]</label>
-				<font>LCARS218</font>
+				<font>LCARS18</font>
 			</control>
 			<control type="label" id="200">
 				<visible>false</visible>
@@ -135,7 +135,7 @@
 				<top>50</top>
 				<width>360</width>
 				<height>37</height>
-				<font>LCARS218</font>
+				<font>LCARS18</font>
 				<label>$ADDON[script.cu.lrclyrics 32199]</label>
 			</control>
 
@@ -157,7 +157,7 @@
 						<top>0</top>
 						<width>1240</width>
 						<height>40</height>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -168,7 +168,7 @@
 						<top>0</top>
 						<width>1240</width>
 						<height>50</height>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<textcolor>orange</textcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
@@ -179,7 +179,7 @@
 						<top>0</top>
 						<width>1240</width>
 						<height>50</height>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<textcolor>orange</textcolor>
 						<align>left</align>
 						<label fallback="--">$INFO[ListItem.Label]</label>

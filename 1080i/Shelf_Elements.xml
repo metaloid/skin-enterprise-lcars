@@ -402,7 +402,7 @@
                 <width>600</width>
                 <height>40</height>
                 <textcolor>yellow</textcolor>
-                <font>LCARS205</font>
+                <font>LCARS20</font>
 				<label>Last Update - $INFO[Window(Weather).Property(Updated)]</label>
 				<description>update label</description>
 			</control>
@@ -627,22 +627,22 @@
                     <item id="1" description="tvchannels">
                         <label>19023</label>
 						<onclick>ActivateWindow(tvchannels)</onclick>
-						<onclick>PVR.HasTVChannels</onclick>
+						<visible>PVR.HasTVChannels</visible>
                     </item>
                     <item id="2" description="tvguide">
                         <label>19069</label>
 						<onclick>ActivateWindow(tvguide)</onclick>
-						<onclick>PVR.HasTVChannels</onclick>
+						<visible>PVR.HasTVChannels</visible>
                     </item>
                     <item id="3" description="tvrecordings">
                         <label>19163</label>
 						<onclick>ActivateWindow(tvrecordings)</onclick>
- 						<onclick>PVR.HasTVChannels</onclick>
+ 						<visible>PVR.HasTVChannels</visible>
                    </item>
 					<item id="4" description="tvtimers">
                         <label>19040</label>
 						<onclick>ActivateWindow(tvtimers)</onclick>
-						<onclick>PVR.HasTVChannels</onclick>
+						<visible>PVR.HasTVChannels</visible>
                     </item>
 					<item id="5">
                         <visible>PVR.HasTVChannels</visible>

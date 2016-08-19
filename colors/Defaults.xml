@@ -10,7 +10,7 @@
 	<color name="gray2">FF9595A2</color>
 	<color name="gray3">FF676767</color>	
 	
-	<color name="Red">FFFF0000</color>
+	<color name="Red">FFcc6699</color>
 	<color name="Blue">FF99CCFF</color>
 	<color name="Blue2">FF3399FF</color>
 	<color name="Silver">FFFFFFFF</color>
@@ -20,7 +20,7 @@
 	<color name="searchband">99FFFFFF</color>	
 
     <color name="textcolor">FF000000</color>	     <!-- Text  -->	
-	<color name="rsscolor">FF882211</color>	         <!-- RSS Text -->
+	<color name="rsscolor">FFcc6699</color>	         <!-- RSS Text -->
     <color name="selected">FF882211</color>	         <!-- Selected/Focused  -->
     <color name="weather">FF882211</color>	         <!-- Weather Borders  -->	
 			
@@ -43,6 +43,6 @@
 	<color name="lines2">FFbb4411</color>	         <!-- Lines -->	
 	<color name="bgcolor2clear">AAA7EA00</color>	 <!-- Background 2 - Transparent -->	
 	<color name="buttonselect">FFFFFFFF</color>      <!-- Button Select Bars -->
-	<color name="buttonselect2">EEffcc66</color>	 <!-- Background 2 - Transparent -->	
+	<color name="buttonselect2">EEf7c64a</color>	 <!-- Background 2 - Transparent -->	
 <!-- Default Colors -->
 </colors>

@@ -78,7 +78,7 @@
 				<posy>440</posy>
 				<width>630</width>
 				<height>170</height>
-				<font>LCARS215</font>
+				<font>LCARS18</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<label>$VAR[TopLabel]</label>
@@ -89,7 +89,7 @@
 				<posy>590</posy>
 				<width>630</width>
 				<height>310</height>
-				<font>LCARS215</font>
+				<font>LCARS18</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<label>$VAR[Plots]</label>
@@ -208,9 +208,8 @@
 					<centerleft>192</centerleft>
 					<top>310</top>
 					<width>310</width>
-					<font>LCARS215</font>
-					<autoscroll delay="3000" time="5000" repeat="10000"></autoscroll>
-					<height>80</height>
+					<font>LCARS18</font>
+					<height>90</height>
 					<align>center</align>
 					<textcolor>White</textcolor>
 					<label>$VAR[LcarsLabel]</label>
@@ -235,7 +234,7 @@
 				<top>27</top>
 				<width>75</width>
 				<height>40</height>
-				<font>LCARS218</font>
+				<font>LCARS18</font>
 				<scroll>false</scroll>
 				<align>center</align>
 				<textcolor>orange</textcolor>
@@ -261,8 +260,7 @@
 				<top>27</top>
 				<width>75</width>
 				<height>40</height>
-				<font>LCARS218</font>
-				<scroll>false</scroll>
+				<font>LCARS18</font>
 				<align>center</align>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -281,7 +279,7 @@
                 <centerleft>160</centerleft>
                 <top>275</top>
                 <width>244</width>
-                <font>LCARS215</font>
+                <font>LCARS18</font>
 				<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
 				<height>115</height>
 				<align>center</align>
@@ -293,9 +291,9 @@
                 <centerleft>160</centerleft>
                 <top>275</top>
                 <width>244</width>
-                <font>LCARS215</font>
+                <font>LCARS18</font>
 				<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
-				<height>115</height>
+				<height>120</height>
 				<align>center</align>
 				<textcolor>White</textcolor>
 				<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Year,(,)] $VAR[rating]</label>
@@ -334,7 +332,7 @@
 					<posy>10</posy>
 					<width>80</width>
 					<height>20</height>
-					<font>LCARS218</font>
+					<font>LCARS18</font>
 					<scroll>false</scroll>
 					<align>center</align>
 					<textcolor>black</textcolor>
@@ -371,7 +369,7 @@
 					<posy>10</posy>
 					<width>80</width>
 					<height>20</height>
-					<font>LCARS218</font>
+					<font>LCARS18</font>
 					<scroll>false</scroll>
 					<align>center</align>
 					<textcolor>black</textcolor>
@@ -472,7 +470,7 @@
 					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>black</textcolor>
@@ -484,7 +482,7 @@
 					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>right</align>
 					<textcolor>black</textcolor>
 					<aligny>center</aligny>
@@ -504,7 +502,7 @@
 					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>left</align>
 					<textcolor>black</textcolor>
 					<aligny>center</aligny>
@@ -516,7 +514,7 @@
 					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>right</align>
 					<textcolor>black</textcolor>
 					<aligny>center</aligny>
@@ -571,7 +569,7 @@
                     <centerleft>160</centerleft>
                     <top>275</top>
                     <width>244</width>
-                    <font>LCARS215</font>
+                    <font>LCARS15</font>
 					<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
 					<height>115</height>
 					<align>center</align>
@@ -697,7 +695,7 @@
         <width>750</width>
         <align>left</align>
         <aligny>center</aligny>
-        <font>LCARS205</font>
+        <font>LCARS20</font>
         <textcolor>White</textcolor>
 	</include>
     <include name="Icon_Fade">
@@ -862,7 +860,7 @@
                     <height>250</height>
                     <align>center</align>
                 <aligny>center</aligny>
-                <font>LCARS236</font>
+                <font>LCARS36</font>
                 <textcolor>shelffont</textcolor>
                 <label>$INFO[ListItem.SortLetter]</label>
 				</control>

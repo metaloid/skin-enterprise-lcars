@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -34,7 +34,7 @@
 					<top>0</top>
 					<width>140</width>
 					<height>30</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>orange</textcolor>
@@ -46,7 +46,7 @@
 					<top>0</top>
 					<width>500</width>
 					<height>30</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -60,7 +60,7 @@
 					<top>0</top>
 					<width>140</width>
 					<height>30</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>orange</textcolor>
@@ -72,7 +72,7 @@
 					<top>0</top>
 					<width>500</width>
 					<height>30</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -146,7 +146,7 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>LCARS245</font>
+			<font>LCARS24</font>
 			<scroll>true</scroll>
 			<label>$INFO[ListItem.Title]</label>
 		</control>
@@ -156,7 +156,7 @@
 			<top>300</top>
 			<width>600</width>
 			<height>575</height>
-			<font>LCARS216</font>
+			<font>LCARS15</font>
 			<align>justify</align>
 			<textcolor>white</textcolor>
 			<label fallback="161">$INFO[ListItem.Plot]</label>

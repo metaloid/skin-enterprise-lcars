@@ -84,7 +84,7 @@
             </control>
             <control type="button" id="8" description="search">
                 <width>300</width>
-		    <label>137</label>
+				<label>137</label>
             </control>
             <control type="togglebutton" id="699" description="Playing">
                 <visible>Player.HasMedia</visible>

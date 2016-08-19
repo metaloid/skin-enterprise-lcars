@@ -57,7 +57,7 @@
 				<aligny>center</aligny>
 				<textcolor>shelffont</textcolor>
                 <label>Accessing...</label>
-				<font>LCARS218</font>
+				<font>LCARS18</font>
 			</control>
 			<control type="progress" id="10">
 				<description>Progressbar</description>

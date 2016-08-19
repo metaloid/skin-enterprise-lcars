@@ -14,7 +14,7 @@
             <width>720</width>
             <height>500</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>

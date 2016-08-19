@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -33,7 +33,7 @@
 			<top>660</top>
 			<width>600</width>
 			<height>225</height>
-			<font>LCARS216</font>
+			<font>LCARS15</font>
 			<align>justify</align>
 			<textcolor>white</textcolor>
             <label>$INFO[ListItem.Property(Addon.Description)]</label>
@@ -44,28 +44,28 @@
                 <width>600</width>
                 <orientation>vertical</orientation>
                 <control type="label" description="Author">
-                    <font>LCARS215</font>
+                    <font>LCARS15</font>
                     <width>600</width>
                     <height>30</height>
                     <scroll>false</scroll>
                     <label>Author: $INFO[ListItem.Property(Addon.Creator)]</label>
                 </control>
                 <control type="label" description="Version">
-                    <font>LCARS215</font>
+                    <font>LCARS15</font>
                     <width>600</width>
                     <height>30</height>
                     <scroll>false</scroll>
                     <label>Version: [COLOR=red]$INFO[ListItem.Property(Addon.Version)][/COLOR]</label>
                 </control>
                 <control type="label" description="summary">
-                    <font>LCARS215</font>
+                    <font>LCARS15</font>
                     <width>600</width>
                     <height>30</height>
                     <scroll>false</scroll>
                     <label>Summary: $INFO[ListItem.Property(Addon.Summary)]</label>
                 </control>
                 <control type="textbox" description="Disclaimer">
-                    <font>LCARS215</font>
+                    <font>LCARS15</font>
                     <width>600</width>
                     <height>70</height>
                     <scroll>false</scroll>
@@ -128,7 +128,7 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>LCARS245</font>
+			<font>LCARS24</font>
    			<textcolor>orange</textcolor>
 			<scroll>true</scroll>
             <label>$INFO[ListItem.Property(Addon.Name)]</label>

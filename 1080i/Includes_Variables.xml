@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
    <!--nouvelle variable-->
+	<variable name="shelfpic">
+		<value condition="[Container(9000).HasFocus(346)]">scan.png</value>
+		<value condition="[Container(9000).HasFocus(348)]">Capture4.png</value>
+		<value condition="[Container(9000).HasFocus(344)]">Capture7.png</value>
+		<value condition="[Container(9000).HasFocus(349)]">Capture2.png</value>
+		<value condition="[Container(9000).HasFocus(356)  | Container(9000).HasFocus(355)  | Container(9000).HasFocus(354)]">Capture5.png</value>
+		<value condition="[Container(9000).HasFocus(345)]">Capture8.png</value>
+		<value>LCARS.png</value>
+	</variable>
 	<variable name="PVRChannelMgrHeader">
 		<value condition="!IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
@@ -281,9 +290,9 @@
         <!--TV-->
         <value condition="Container(9000).HasFocus(341)">$LOCALIZE[20387]</value>
         <!--MUSIC-->
-        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),custom)">$LOCALIZE[31097]</value>
+        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),custom)">$LOCALIZE[31100]</value>
         <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),top)">$LOCALIZE[31099]</value>
-        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music)">$LOCALIZE[31100]</value>
+        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music)">$LOCALIZE[31097]</value>
         <!--ADDONS-->
         <value condition="Container(9000).HasFocus(343)">Custom Shelf Addons</value>
         <!--PICTURES>

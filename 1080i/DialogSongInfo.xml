@@ -13,7 +13,7 @@
             <width>670</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -26,7 +26,7 @@
 				<height>30</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>LCARS245</font>
+				<font>LCARS24</font>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>orange</textcolor>
 				<scroll>true</scroll>
@@ -52,7 +52,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[557]:</label>
 				</control>
@@ -64,7 +64,7 @@
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>white</textcolor>
 					<label fallback="161">$INFO[ListItem.Artist]</label>
 					<scrollout>false</scrollout>
@@ -78,7 +78,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[558]:</label>
 				</control>
@@ -90,7 +90,7 @@
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>white</textcolor>
 					<label fallback="161">$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label>
 					<scrollout>false</scrollout>
@@ -104,7 +104,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[515]:</label>
 					<scrollout>false</scrollout>
@@ -118,7 +118,7 @@
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>white</textcolor>
 					<label fallback="161">$INFO[ListItem.Genre]</label>
 				</control>
@@ -130,7 +130,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[562]:</label>
 				</control>
@@ -142,7 +142,7 @@
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>white</textcolor>
 					<label fallback="161">$INFO[ListItem.Year]</label>
 				</control>
@@ -154,7 +154,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[554]:</label>
 				</control>
@@ -166,7 +166,7 @@
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>white</textcolor>
 					<label fallback="161">$INFO[ListItem.TrackNumber]</label>
 				</control>
@@ -178,7 +178,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[563]:</label>
 				</control>
@@ -203,7 +203,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<textcolor>orange</textcolor>
 					<label>$LOCALIZE[569]:</label>
 				</control>
@@ -213,7 +213,7 @@
 					<top>179</top>
 					<width>450</width>
 					<height>100</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
 					<label fallback="161">$INFO[ListItem.Comment]</label>
 				</control>

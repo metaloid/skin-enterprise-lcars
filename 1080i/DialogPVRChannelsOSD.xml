@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -26,7 +26,7 @@
 				<height>30</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>LCARS245</font>
+				<font>LCARS24</font>
 				<scroll>true</scroll>
                 <textcolor>orange</textcolor>
 				<label>$INFO[VideoPlayer.ChannelGroup]</label>
@@ -48,7 +48,7 @@
 						<top>0</top>
 						<width>210</width>
 						<height>30</height>
-						<font>LCARS216</font>
+						<font>LCARS15</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>orange</textcolor>
@@ -60,7 +60,7 @@
 						<top>0</top>
 						<width>100</width>
 						<height>30</height>
-						<font>LCARS216</font>
+						<font>LCARS15</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -72,7 +72,7 @@
 						<top>0</top>
 						<width>440</width>
 						<height>30</height>
-						<font>LCARS216</font>
+						<font>LCARS15</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
@@ -86,7 +86,7 @@
 						<top>0</top>
 						<width>210</width>
 						<height>30</height>
-						<font>LCARS216</font>
+						<font>LCARS15</font>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>Blue</textcolor>
@@ -98,7 +98,7 @@
 						<top>0</top>
 						<width>100</width>
 						<height>30</height>
-						<font>LCARS216</font>
+						<font>LCARS15</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>Blue</textcolor>
@@ -110,7 +110,7 @@
 						<top>0</top>
 						<width>440</width>
 						<height>30</height>
-						<font>LCARS216</font>
+						<font>LCARS15</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>Blue</textcolor>

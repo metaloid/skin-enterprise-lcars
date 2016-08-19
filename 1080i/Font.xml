@@ -158,67 +158,35 @@
             
         </font>
 		<font>
-            <name>LCARS12</name>
-            <filename>LCARS.ttf</filename>
+            <name>LCARS10</name>
+            <filename>LCARSGTJ3.ttf</filename>
             <size>20</size>
         </font>
         <font>
             <name>LCARS18</name>
-            <filename>LCARS.ttf</filename>
-            <size>34</size>
-        </font>
-		<font>
-            <name>LCARS216</name>
-            <filename>LCARS2.ttf</filename>
-            <size>30</size>
-        </font>
-		<font>
-            <name>LCARS218</name>
-            <filename>LCARS2.ttf</filename>
-            <size>34</size>
+            <filename>LCARSGTJ3.ttf</filename>
+            <size>36</size>
         </font>
 		<font>
             <name>LCARS15</name>
-            <filename>LCARS.ttf</filename>
+            <filename>LCARSGTJ3.ttf</filename>
             <size>30</size>
-        </font>
-		<font>
-            <name>LCARS215</name>
-            <filename>LCARS2.ttf</filename>
-            <size>30</size>
-        </font>
-		<font>
-            <name>LCARS205</name>
-            <filename>LCARS2.ttf</filename>
-            <size>40</size>
         </font>
         <font>
             <name>LCARS20</name>
-            <filename>LCARS.ttf</filename>
+            <filename>LCARSGTJ3.ttf</filename>
             <size>40</size>
         </font>
-         <font>
-            <name>LCARS245</name>
-            <filename>LCARS2.ttf</filename>
-            <size>48</size>
-        </font>				
         <font>
             <name>LCARS24</name>
-            <filename>LCARS.ttf</filename>
+            <filename>LCARSGTJ3.ttf</filename>
             <size>48</size>
         </font>
         <font>
             <name>LCARS36</name>
-            <filename>LCARS.ttf</filename>
+            <filename>LCARSGTJ3.ttf</filename>
             <size>72</size>
         </font>
-        <font>
-            <name>LCARS236</name>
-            <filename>LCARS2.ttf</filename>
-            <size>72</size>
-        </font>
-		
     </fontset>
-	
 </fonts>
 

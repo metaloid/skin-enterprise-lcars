@@ -212,16 +212,12 @@ msgid "Recommended"
 msgstr "Recommended"
 
 msgctxt "#31049"
-msgid "Select Power icon function - Now Set to:"
-msgstr "Select Power icon function - Now Set to:"
+msgid "Select Power function - Now Set to:"
+msgstr "Select Power function - Now Set to:"
 
 msgctxt "#31050"
 msgid "Menu"
 msgstr "Menu"
-
-msgctxt "#31097"
-msgid "Songs"
-msgstr "Songs"
 
 msgctxt "#31051"
 msgid "Custom Shelf Shortcuts"
@@ -408,9 +404,21 @@ msgctxt "#31096"
 msgid "Started Movies"
 msgstr "Started Movies"
 
+msgctxt "#31097"
+msgid "New Albums"
+msgstr "New Albums"
+
 msgctxt "#31098"
 msgid "Programs Add-ons"
 msgstr "Programs Add-ons"
+
+msgctxt "#31099"
+msgid "Artists"
+msgstr "Artists"
+
+msgctxt "#31100"
+msgid "Random Songs"
+msgstr "Random Songs"
 
 msgctxt "#31212"
 msgid "Next episode"

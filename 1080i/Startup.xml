@@ -24,7 +24,7 @@
             <align>center</align>
 			<height>100</height>
             <width>800</width>
-            <font>LCARS236</font>
+            <font>LCARS36</font>
             <textcolor>buttonselect2</textcolor>
             <label>STARFLEET COMMAND</label>
         </control>
@@ -34,7 +34,7 @@
             <align>center</align>
 			<height>100</height>
             <width>800</width>
-            <font>LCARS245</font>
+            <font>LCARS24</font>
             <textcolor>White</textcolor>
             <label>L.C.A.R.S System Online...</label>
         </control>

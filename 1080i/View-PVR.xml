@@ -58,7 +58,7 @@
 						<posy>0</posy>
 						<width>220</width>
 						<height>40</height>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelName]</label>
@@ -88,7 +88,7 @@
 						<width>220</width>
 						<height>40</height>
 						<textcolor>black</textcolor>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -369,7 +369,7 @@
             <control type="label">
                 <width>600</width>
                 <height>30</height>
-                <font>LCARS215</font>
+                <font>LCARS15</font>
                 <textcolor>gray</textcolor>
                 <scroll>false</scroll>
 				<align>center</align>
@@ -379,7 +379,7 @@
             <control type="label">
                 <width>600</width>
                 <height>30</height>
-                <font>LCARS215</font>
+                <font>LCARS15</font>
                 <textcolor>gray</textcolor>
                 <align>center</align>
                 <scroll>false</scroll>
@@ -400,7 +400,7 @@
             </control>
             <control type="textbox">
                 <description>Plot Value for TVShow</description>
-                <font>LCARS215</font>
+                <font>LCARS15</font>
                 <width>600</width>
                 <height>250</height>
                 <align>justify</align>
@@ -443,7 +443,7 @@
 						<posy>10</posy>
 						<width>80</width>
 						<height>20</height>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<align>center</align>
 						<textcolor>black</textcolor>
@@ -456,7 +456,7 @@
 						<width>460</width>
 						<height>20</height>
 						<textcolor>black</textcolor>
-						<font>LCARS205</font>
+						<font>LCARS20</font>
 						<scroll>false</scroll>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -480,7 +480,7 @@
 						<posy>10</posy>
 						<width>80</width>
 						<height>20</height>
-						<font>LCARS218</font>
+						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<align>center</align>
 						<textcolor>black</textcolor>
@@ -493,7 +493,7 @@
 						<width>460</width>
 						<height>20</height>
 						<textcolor>black</textcolor>
-						<font>LCARS205</font>
+						<font>LCARS20</font>
 						<scroll>true</scroll>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>

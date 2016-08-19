@@ -23,7 +23,7 @@
         </item>
         <!--LIVE TV-->
         <item id="355">
-            <label>LiveTV</label>
+            <label>TV</label>
             <property name="color">c1</property>
             <onclick>ActivateWindow(TVChannels)</onclick>
             <visible>PVR.HasTVChannels</visible>

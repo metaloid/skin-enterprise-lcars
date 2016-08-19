@@ -108,7 +108,7 @@
 					<top>302</top>
 					<width>320</width>
 					<height>418</height>
-					<font>LCARS218</font>
+					<font>LCARS18</font>
 					<align>center</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -131,7 +131,7 @@
 					<top>302</top>
 					<width>350</width>
 					<height>418</height>
-					<font>LCARS218</font>
+					<font>LCARS18</font>
 					<align>center</align>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>

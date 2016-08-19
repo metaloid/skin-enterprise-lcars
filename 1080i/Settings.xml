@@ -150,7 +150,7 @@
 					<width>1180</width>
 					<height>450</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+					<texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
 					<bordertexture  border="40">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
                 </control>
@@ -230,7 +230,7 @@
 				<posx>60</posx>
 				<width>1180</width>
 				<height>500</height>
-				<font>LCARS245</font>
+				<font>LCARS24</font>
 				<scroll>false</scroll>
 				<aligny>top</aligny>
 				<align>center</align>
@@ -242,7 +242,7 @@
 				<posx>100</posx>
 				<width>1100</width>
         		<height>450</height>
-        		<font>LCARS205</font>
+        		<font>LCARS20</font>
 				<scroll>false</scroll>
 				<aligny>top</aligny>
 				<align>center</align>

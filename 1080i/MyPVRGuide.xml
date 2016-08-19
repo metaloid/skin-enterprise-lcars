@@ -41,6 +41,13 @@
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<include>PvrLcarsB</include>
+            <control type="button" id="222">
+                <description>Fullscreen As button</description>
+				<width>300</width>
+                <label>Fullscreen</label>
+                <visible>Player.HasMedia</visible>
+                <onclick>fullscreen</onclick>
+            </control>
 		</control>
 	</controls>
 </window>

@@ -45,7 +45,7 @@
         <focusedcolor>White</focusedcolor>
         <selectedcolor>White</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
-        <pagecontrol>61</pagecontrol>
+        <pagecontrol>-</pagecontrol>
         <pulseonselect></pulseonselect>
         <autoscroll delay="10000" time="3000" repeat="10000"></autoscroll>
     </default>
@@ -57,10 +57,11 @@
         <aspectratio>stretch</aspectratio>
     </default>
     <default type="button">
+        <textoffsety>-2</textoffsety>
         <width>300</width>
         <height>40</height>
         <align>center</align>
-        <aligny>center</aligny>
+        <aligny>top</aligny>
         <font>LCARS20</font>
 		<invalidcolor>invalid</invalidcolor>
         <textcolor>keys</textcolor>

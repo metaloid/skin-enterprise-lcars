@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -28,7 +28,7 @@
 				<height>30</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>LCARS245</font>
+				<font>LCARS24</font>
 				<label>$INFO[Listitem.Album]</label>
 				<textcolor>orange</textcolor>
 				<scroll>true</scroll>
@@ -43,7 +43,7 @@
 				<height>30</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>LCARS245</font>
+				<font>LCARS24</font>
 				<label>$INFO[Listitem.Artist]</label>
 				<textcolor>orange</textcolor>
 				<scroll>true</scroll>
@@ -132,7 +132,7 @@
 								<top>0</top>
 								<width>140</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>orange</textcolor>
@@ -144,7 +144,7 @@
 								<top>0</top>
 								<width>500</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -158,7 +158,7 @@
 								<top>0</top>
 								<width>140</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>orange</textcolor>
@@ -170,7 +170,7 @@
 								<top>0</top>
 								<width>500</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -253,7 +253,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>orange</textcolor>
@@ -265,7 +265,7 @@
 								<top>0</top>
 								<width>465</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -279,7 +279,7 @@
 								<top>0</top>
 								<width>160</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>orange</textcolor>
@@ -291,7 +291,7 @@
 								<top>0</top>
 								<width>465</width>
 								<height>30</height>
-								<font>LCARS216</font>
+								<font>LCARS15</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
@@ -351,7 +351,7 @@
 					<top>600</top>
 					<width>600</width>
 					<height>275</height>
-					<font>LCARS216</font>
+					<font>LCARS15</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<visible>!Control.IsVisible(50)</visible>
