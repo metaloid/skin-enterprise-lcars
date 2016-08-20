@@ -25,9 +25,9 @@
 		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + [Container.Content(movies) | Container.Content(Episodes)]">WATCHED</value>
 	</variable>
 	<variable name="Extra">
-		<value condition="!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)">SD</value>
-		<value condition="!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)">HD</value>
-		<value condition="Container.Content(tvshows) | Container.Content(Seasons)">$INFO[ListItem.Property(TotalEpisodes)]</value>
+		<value condition="!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719) + !Control.IsVisible(50)">SD</value>
+		<value condition="!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719) + !Control.IsVisible(50)">HD</value>
+		<value condition="Container.Content(tvshows) | Container.Content(Seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]</value>
 		<value condition="Control.IsVisible(50)">$INFO[ListItem.ChannelNumber]</value>
 	</variable>

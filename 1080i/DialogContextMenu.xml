@@ -30,6 +30,7 @@
 		<control type="button" id="1500">
                 <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
                 <width>300</width>
+				<textwidth>280</textwidth>
                 <label>Cinema Experiance</label>
                 <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
         </control>
@@ -44,6 +45,7 @@
         </control>
         <control type="button" id="1000" description="Buttons">
             <posx>40</posx>
+			<textwidth>280</textwidth>
             <top></top>
             <width>300</width>
         </control>

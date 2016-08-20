@@ -229,7 +229,7 @@
 				<bordersize>10</bordersize>
             </control>
 			<control type="label">
-				<visible>Container.Content(Movies)</visible>
+				<visible>Container.Content(Movies) | Container.Content(tvshows) | Container.Content(Seasons)</visible>
 				<posx>37</posx>
 				<top>27</top>
 				<width>75</width>
@@ -255,7 +255,7 @@
                 <bordersize>10</bordersize>
             </control>
 			<control type="label">
-				<visible>Container.Content(Movies)</visible>
+				<visible>Container.Content(Movies) | Container.Content(tvshows) | Container.Content(Seasons)</visible>
 				<posx>37</posx>
 				<top>27</top>
 				<width>75</width>
@@ -458,7 +458,6 @@
 			<orientation>vertical</orientation>
 			<itemlayout height="45" width="$PARAM[item-width]">
                     <control type="image" description="THMBSBASECOLOR">
-                        <visible>Skin.HasSetting(colormenu)</visible>
                         <width>$PARAM[item-width]</width>
                         <height>40</height>
 						<texture colordiffuse="buttonselect2" border="40" >whiterounded.png</texture>
@@ -490,7 +489,6 @@
 			</itemlayout>
 			<focusedlayout height="45" width="$PARAM[item-width]">
                     <control type="image" description="THMBSBASECOLOR">
-                        <visible>Skin.HasSetting(colormenu)</visible>
                         <width>$PARAM[item-width]</width>
                         <height>40</height>
 						<texture colordiffuse="buttonselect"  border="40">whiterounded.png</texture>
