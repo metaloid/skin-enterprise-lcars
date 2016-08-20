@@ -21,7 +21,7 @@
             <left>30</left>
 			<top>10</top>
 			<label></label>
-            <width>540</width>
+            <width>550</width>
             <font>LCARS24</font>
             <textcolor>orange</textcolor>
 			<align>left</align>
@@ -31,7 +31,7 @@
 			<left>30</left>
 			<top>62</top>
 			<width>550</width>
-			<height>98</height>
+			<height>108</height>
 			<align>left</align>
 			<label>-</label>
 			<font>LCARS24</font>

@@ -49,7 +49,7 @@
 			  <control type="label" description="LABEL">
                         <left>95</left>
                         <top>8</top>
-                        <width>200</width>
+                        <width>180</width>
                         <height>28</height>
                         <aligny>center</aligny>
 					    <font>LCARS20</font>
@@ -71,7 +71,7 @@
 			  <control type="label" description="label">
                         <left>95</left>
                         <top>8</top>
-                        <width>200</width>
+                        <width>180</width>
                         <height>28</height>
                         <aligny>center</aligny>
 					    <font>LCARS20</font>
@@ -150,7 +150,7 @@
 					<width>1180</width>
 					<height>450</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+					<texture  background="true" colordiffuse="69FFFFFF" >Capture4.png</texture>
 					<bordertexture  border="40">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
                 </control>

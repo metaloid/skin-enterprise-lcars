@@ -11,7 +11,6 @@
         <focusedcolor>black</focusedcolor>
         <selectedcolor>red</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
-        
         <scroll>true</scroll>
         <scrollspeed>50</scrollspeed>
         <scrollsuffix> • </scrollsuffix>
@@ -57,11 +56,11 @@
         <aspectratio>stretch</aspectratio>
     </default>
     <default type="button">
-        <textoffsety>-2</textoffsety>
         <width>300</width>
         <height>40</height>
         <align>center</align>
         <aligny>top</aligny>
+        <textoffsety>-2</textoffsety>
         <font>LCARS20</font>
 		<invalidcolor>invalid</invalidcolor>
         <textcolor>keys</textcolor>
@@ -100,7 +99,8 @@
         <alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
         <alttexturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</alttexturefocus>
         <align>center</align>
-        <aligny>center</aligny>
+        <aligny>top</aligny>
+        <textoffsety>-2</textoffsety>
         <textoffsetx>0</textoffsetx>
 		<font>LCARS20</font>
 		<textcolor>keys</textcolor>

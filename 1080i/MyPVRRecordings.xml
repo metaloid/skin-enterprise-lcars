@@ -20,7 +20,7 @@
             <width>300</width>
             <height>330</height>
             <imagepath>sidepanel/panel2</imagepath>
-            <timeperimage>185</timeperimage>
+            <timeperimage>600</timeperimage>
             <fadetime>0</fadetime>
             <loop>yes</loop>
             <aspectratio>keep</aspectratio>

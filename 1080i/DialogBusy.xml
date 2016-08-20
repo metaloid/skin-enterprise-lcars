@@ -29,7 +29,7 @@
                 <width>250</width>
                 <height>250</height>
                 <imagepath>busy/anim</imagepath>
-                <timeperimage>125</timeperimage>
+                <timeperimage>100</timeperimage>
                 <fadetime>0</fadetime>
                 <loop>yes</loop>
                 <aspectratio>keep</aspectratio>

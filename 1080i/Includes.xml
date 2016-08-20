@@ -206,8 +206,8 @@
 				</control>
 				<control type="textbox">
 					<centerleft>192</centerleft>
-					<top>310</top>
-					<width>310</width>
+					<top>307</top>
+					<width>280</width>
 					<font>LCARS18</font>
 					<height>90</height>
 					<align>center</align>
@@ -277,11 +277,10 @@
 			<control type="textbox">
                 <visible>!Library.HasContent(Movies) </visible>
                 <centerleft>160</centerleft>
-                <top>275</top>
-                <width>244</width>
+                <top>272</top>
+                <width>220</width>
                 <font>LCARS18</font>
-				<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
-				<height>115</height>
+				<height>125</height>
 				<align>center</align>
 				<textcolor>White</textcolor>
 				<label>$INFO[ListItem.Label]</label>
@@ -289,11 +288,10 @@
 			<control type="textbox">
                 <visible>Library.HasContent(Movies) </visible>
                 <centerleft>160</centerleft>
-                <top>275</top>
-                <width>244</width>
+                <top>272</top>
+                <width>220</width>
                 <font>LCARS18</font>
-				<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
-				<height>120</height>
+				<height>125</height>
 				<align>center</align>
 				<textcolor>White</textcolor>
 				<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Year,(,)] $VAR[rating]</label>

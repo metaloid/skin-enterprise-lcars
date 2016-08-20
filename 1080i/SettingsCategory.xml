@@ -107,7 +107,6 @@
             <onright>60</onright>
             <onup>5</onup>
             <ondown>5</ondown>
-            <onright>60</onright>
             <onleft>3</onleft>
             <pagecontrol>66</pagecontrol>
             <orientation>vertical</orientation>
@@ -142,9 +141,10 @@
         <control type="button" id="10" description="Category Button">
             <width>270</width>
             <textoffsetx>75</textoffsetx>
+			<textwidth>180</textwidth>
 			<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
-        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
-        <align>LEFT</align>
+			<texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+			<align>LEFT</align>
             <aligny>center</aligny>
         </control>
         <control type="grouplist" id="555">
