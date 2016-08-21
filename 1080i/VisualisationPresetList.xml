@@ -8,7 +8,7 @@
             <top>100</top>
             <width>1000</width>
             <height>800</height>
-            <texture border="50"  >sidepanel/back1.png</texture>
+            <texture border="50"  >dialog2.png</texture>
         </control>
         <control type="group">
             <posx>510</posx>

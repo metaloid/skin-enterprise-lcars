@@ -14,7 +14,7 @@
                 <height>400</height>
                 <aspectratio>stretch</aspectratio>
                 <colordiffuse>CCFFFFFF</colordiffuse>
-				<texture border="50" >sidepanel/dialog.png</texture>
+				<texture border="50" >dialog.png</texture>
             </control>
             <control type="grouplist" id="101" description="OSD Options">
                 <posx>85</posx>
@@ -85,7 +85,7 @@
                         <height>320</height>
                         <colordiffuse>BBFFFFFF</colordiffuse>
 						<aspectratio>stretch</aspectratio>
-                        <texture border="40">sidepanel/dialog.png</texture>
+                        <texture border="40">dialog.png</texture>
                     </control>
                 </control>
                 <control type="label" description="Title">

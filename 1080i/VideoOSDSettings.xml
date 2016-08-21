@@ -12,7 +12,7 @@
                 <posx>-50</posx>
                 <width>950</width>
 				<height max="960">auto</height>
-                <texture border="50">sidepanel/dialog.png</texture>
+                <texture border="50">dialog.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
 			<control type="button" id="677">

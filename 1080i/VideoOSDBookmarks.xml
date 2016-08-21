@@ -9,7 +9,7 @@
             <top>100</top>
             <width>1270</width>
             <height>840</height>
-            <texture border="140" >sidepanel/dialog.png</texture>
+            <texture border="140" >dialog.png</texture>
         </control>
         <control type="group">
             <posx>360</posx>

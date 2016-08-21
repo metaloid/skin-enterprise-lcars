@@ -3,11 +3,11 @@
    <!--nouvelle variable-->
 	<variable name="shelfpic">
 		<value condition="[Container(9000).HasFocus(346)]">scan.png</value>
-		<value condition="[Container(9000).HasFocus(348)]">Capture4.png</value>
-		<value condition="[Container(9000).HasFocus(344)]">Capture7.png</value>
-		<value condition="[Container(9000).HasFocus(349)]">Capture2.png</value>
-		<value condition="[Container(9000).HasFocus(356)  | Container(9000).HasFocus(355)  | Container(9000).HasFocus(354)]">Capture5.png</value>
-		<value condition="[Container(9000).HasFocus(345)]">Capture8.png</value>
+		<value condition="[Container(9000).HasFocus(348)]">Capture4.PNG</value>
+		<value condition="[Container(9000).HasFocus(344)]">Capture7.PNG</value>
+		<value condition="[Container(9000).HasFocus(349)]">Capture2.PNG</value>
+		<value condition="[Container(9000).HasFocus(356)  | Container(9000).HasFocus(355)  | Container(9000).HasFocus(354)]">Capture5.PNG</value>
+		<value condition="[Container(9000).HasFocus(345)]">Capture8.PNG</value>
 		<value>LCARS.png</value>
 	</variable>
 	<variable name="PVRChannelMgrHeader">

@@ -154,7 +154,7 @@
 				<posx>35</posx>
 				<width>250</width>
 				<height>375</height>
-				<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+				<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -165,7 +165,7 @@
 				<posx>35</posx>
 				<width>250</width>
 				<height>375</height>
-				<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+				<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -179,7 +179,7 @@
 					<top>46</top>
 					<width>324</width>
 					<height>324</height>
-					<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+					<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<bordertexture  border="10">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
@@ -191,7 +191,7 @@
 					<top>46</top>
 					<width>324</width>
 					<height>324</height>
-					<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+					<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<bordertexture  border="10">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
@@ -201,7 +201,7 @@
 					<centerleft>192</centerleft>
 					<width>324</width>
 					<height>140</height>
-					<texture background="true" border="100">sidepanel/dialog.png</texture>
+					<texture background="true" border="100">dialog.png</texture>
 					<aspectratio>strech</aspectratio>
 				</control>
 				<control type="textbox">
@@ -223,7 +223,7 @@
 				<top>25</top>
 				<width>250</width>
 				<height>375</height>
-				<texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+				<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -249,11 +249,12 @@
                 <top>25</top>
                 <width>250</width>
                 <height>375</height>
-                <texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[IconSquare]</texture>
+                <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
                 <bordersize>10</bordersize>
             </control>
+
 			<control type="label">
 				<visible>Container.Content(Movies) | Container.Content(tvshows) | Container.Content(Seasons)</visible>
 				<posx>37</posx>
@@ -271,7 +272,7 @@
                 <centerleft>160</centerleft>
                 <top>244</top>
                 <width>255</width>
-				<texture background="true"  border="140">sidepanel/dialog.png</texture>
+				<texture background="true"  border="140">dialog.png</texture>
                 <aspectratio>strech</aspectratio>
             </control>
 			<control type="textbox">
@@ -537,7 +538,7 @@
                     <top>25</top>
                     <width>250</width>
                     <height>375</height>
-                    <texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+                    <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.Property(Art(poster))]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
@@ -549,7 +550,7 @@
                     <top>25</top>
                     <width>250</width>
                     <height>375</height>
-                    <texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+                    <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.Property(Art(poster))]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
@@ -846,7 +847,7 @@
                     <width>300</width>
                     <height>330</height>
                     <aspectratio scalediffuse="true">strech</aspectratio>
-                    <texture background="true"  >sidepanel/dialog.png</texture>
+                    <texture background="true"  >dialog.png</texture>
 					
 				</control>
 				<control type="label">

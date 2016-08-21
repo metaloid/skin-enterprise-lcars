@@ -168,7 +168,7 @@
 				<top>300</top>
 				<width>324</width>
                     <height>370</height>
-                    <texture fallback="defaultalbumcover.png" diffuse="EmptyCaseMask.png" background="true">$INFO[Container(6).ListItem.Icon]</texture>
+                    <texture fallback="defaultalbumcover.png" diffuse="poster-mask.png" background="true">$INFO[Container(6).ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>

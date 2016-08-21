@@ -11,7 +11,7 @@
             <control type="image" description="Dialog BG">
                 <width>310</width>
                 <height>330</height>
-                <texture border="20"  >sidepanel/dialog.png</texture>
+                <texture border="20"  >dialog.png</texture>
             </control>
             <control type="group">
                 <posx>30</posx>

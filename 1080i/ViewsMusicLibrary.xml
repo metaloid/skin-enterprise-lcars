@@ -198,7 +198,7 @@
 				<height>385</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
                 <texture fallback="logo.png" background="true" diffuse="poster-mask.png">$VAR[Locandine]</texture>
-                <bordertexture  border="40">sidepanel/dialog.png</bordertexture>
+                <bordertexture  border="40">dialog.png</bordertexture>
                 <bordersize>50</bordersize>
 			</control>
 			<control type="image">
@@ -209,7 +209,7 @@
 				<height>385</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
                 <texture fallback="logo2.png" background="true" diffuse="poster-mask.png">$INFO[Container(300).ListItem.Icon]</texture>
-                <bordertexture  border="40">sidepanel/dialog.png</bordertexture>
+                <bordertexture  border="40">dialog.png</bordertexture>
                 <bordersize>50</bordersize>
 			</control>
 		</control-->

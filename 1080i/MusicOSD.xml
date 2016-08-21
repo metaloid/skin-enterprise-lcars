@@ -21,7 +21,7 @@
                         <height>320</height>
                         <colordiffuse>BBFFFFFF</colordiffuse>
 						<aspectratio>stretch</aspectratio>
-                        <texture border="40">sidepanel/dialog.png</texture>
+                        <texture border="40">dialog.png</texture>
                     </control>
                 </control>
                 <control type="label" description="Title">
@@ -214,7 +214,7 @@
                 <height>450</height>
                 <colordiffuse>BBFFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
-				<texture border="40">sidepanel/dialog.png</texture>
+				<texture border="40">dialog.png</texture>
             </control>
             <control type="grouplist" id="101" description="Music OSD Options">
                 <posx>85</posx>
@@ -293,7 +293,7 @@
 				<height>200</height>
 				<colordiffuse>BBFFFFFF</colordiffuse>
 				<aspectratio>stretch</aspectratio>
-				<texture border="40">sidepanel/dialog.png</texture>
+				<texture border="40">dialog.png</texture>
 			</control>
 			<control type="label" description="Previous">
 				<posx>50</posx>

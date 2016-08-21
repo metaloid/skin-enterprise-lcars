@@ -22,7 +22,7 @@
                     <height>190</height>
                     <colordiffuse>BBFFFFFF</colordiffuse>
 					<aspectratio>stretch</aspectratio>
-                    <texture border="40">sidepanel/dialog.png</texture>
+                    <texture border="40">dialog.png</texture>
                 </control>
 				<control type="label" description="Clock">
                     <posx>60</posx>

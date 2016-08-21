@@ -23,7 +23,7 @@
 						<height>35</height>
 						<posx>0</posx>
 						<posy>0</posy>
-						<texture>black.png</texture>
+						<texture>images/black.png</texture>
 					</control>
 					<control type="label" id="2">
 						<posx>10</posx>

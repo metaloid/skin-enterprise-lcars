@@ -11,7 +11,7 @@
 				<top>-10</top>
 				<width>800</width>
 				<height>170</height>
-				<texture  border="40">sidepanel/dialog.png</texture>
+				<texture  border="40">dialog.png</texture>
 			</control>
 			<control type="label" id="30">
 				<description>Header Label</description>

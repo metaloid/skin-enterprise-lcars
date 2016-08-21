@@ -19,7 +19,7 @@
 			<top>575</top>
             <width>300</width>
             <height>330</height>
-            <imagepath>sidepanel/panel2</imagepath>
+            <imagepath>panel2</imagepath>
             <timeperimage>600</timeperimage>
             <fadetime>0</fadetime>
             <loop>yes</loop>
@@ -37,7 +37,7 @@
 				<width>1250</width>
 				<height>385</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture diffuse="EmptyCaseMask2.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture diffuse="poster-mask.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
                 <bordersize>10</bordersize>
 			</control>

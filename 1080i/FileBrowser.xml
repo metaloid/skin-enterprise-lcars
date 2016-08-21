@@ -27,7 +27,7 @@
 				<width>480</width>
                     <visible>!SubString(Control.GetLabel(416),*)</visible>
 					<height>450</height>
-                    <texture  colordiffuse="77FFFFFF" fallback="defaultalbumcover.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Icon]</texture>
+                    <texture  colordiffuse="77FFFFFF" fallback="defaultalbumcover.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
                     <bordersize>10</bordersize>
 			</control>
@@ -37,7 +37,7 @@
 				<width>480</width>
                     <visible>SubString(Control.GetLabel(416),*)</visible>
 					<height>450</height>
-                    <texture  colordiffuse="77FFFFFF" fallback="defaultalbumcover.png" diffuse="EmptyCaseMask.png" background="true">$INFO[ListItem.Icon]</texture>
+                    <texture  colordiffuse="77FFFFFF" fallback="defaultalbumcover.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
                     <bordersize>10</bordersize>
 			</control>

@@ -23,7 +23,7 @@
 				<top>0</top>
 				<width>1500</width>
 				<height>400</height>
-				<texture border="40">sidepanel/back1.png</texture>
+				<texture border="40">dialog2.png</texture>
 			</control>
 			
 			

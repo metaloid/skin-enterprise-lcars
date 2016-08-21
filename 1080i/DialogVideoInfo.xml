@@ -23,7 +23,7 @@
             <height>350</height>
             <width>235</width>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture fallback="logo.png" diffuse="EmptyCaseMask.png" background="true">$VAR[Locandine]</texture>
+            <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[Locandine]</texture>
 			<bordertexture  border="10">shadow.png</bordertexture>
             <bordersize>10</bordersize>
         </control>
@@ -47,7 +47,7 @@
                     <height>320</height>
                     <width>235</width>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture background="true" diffuse="EmptyCaseMask.png" fallback="logo.png">$INFO[ListItem.Thumb]</texture>
+                    <texture background="true" diffuse="poster-mask.png" fallback="logo.png">$INFO[ListItem.Thumb]</texture>
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
                 </control>
@@ -59,7 +59,7 @@
                     <height>320</height>
                     <width>235</width>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture background="true" diffuse="EmptyCaseMask.png" fallback="logo.png">$INFO[ListItem.Thumb]</texture>
+                    <texture background="true" diffuse="poster-mask.png" fallback="logo.png">$INFO[ListItem.Thumb]</texture>
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
                 </control>
