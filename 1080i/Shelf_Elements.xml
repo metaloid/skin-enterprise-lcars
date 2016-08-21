@@ -397,7 +397,7 @@
 					<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
 			</control>
 			<control type="label">
-                <posx>475</posx>
+                <posx>350</posx>
                 <top>80</top>
                 <width>600</width>
                 <height>40</height>
@@ -408,7 +408,7 @@
 			</control>
             <control type="group">
                     <control type="image">
-                        <left>50</left>
+                        <left>0</left>
                         <top>150</top>
                         <width>345</width>
                         <height>270</height>
@@ -416,9 +416,9 @@
                         <texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
                     </control>
 				<control type="label">
-						<left>475</left>
+						<left>350</left>
 						<top>150</top>
-						<width>800</width>
+						<width>825</width>
 						<height>35</height>
 						<font>LCARS20</font>
 						<align>left</align>
@@ -426,7 +426,7 @@
 						<label>$INFO[Window(Weather).Property(Current.Condition)] : $INFO[Window(Weather).Property(Current.Humidity)] Humidity : Wind $INFO[Window(Weather).Property(Current.Wind)]</label>
 				</control>
 				<control type="label">
-                        <left>475</left>
+                        <left>350</left>
                         <top>200</top>
                         <width>800</width>
                         <height>35</height>
@@ -434,7 +434,7 @@
                         <font>LCARS20</font>
                 </control>
 				<control type="label">
-                            <left>475</left>
+                            <left>350</left>
                             <top>250</top>
                             <width>800</width>
                             <height>35</height>
@@ -442,7 +442,7 @@
                             <font>LCARS20</font>
                 </control>
 				<control type="label">
-                        <left>475</left>
+                        <left>350</left>
                         <top>300</top>
                         <height>35</height>
 						<width>800</width>
@@ -451,7 +451,7 @@
                 </control>
 				<control type="label">
 						<description>current Precipitation label</description>
-						<left>475</left>
+						<left>350</left>
 						<top>350</top>
 						<width>800</width>
 						<height>35</height>
@@ -463,7 +463,7 @@
 					</control>
 					<control type="label">
 						<description>Sunrise Label</description>
-						<left>475</left>
+						<left>350</left>
 						<top>400</top>
 						<width>300</width>
 						<height>35</height>
@@ -475,7 +475,7 @@
 					</control>
 					<control type="label">
 						<description>Sunset label</description>
-						<left>625</left>
+						<left>500</left>
 						<top>400</top>
 						<width>300</width>
 						<height>35</height>
