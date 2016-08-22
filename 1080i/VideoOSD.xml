@@ -4,57 +4,39 @@
 	<onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
     <controls>
 	<control type="group">
-        <control type="group" id="101" description="Options content">
+        <control type="grouplist" id="101" description="Options content">
             <animation effect="fade" end="100" time="400">Visible</animation>
             <animation effect="fade" end="0" time="100">Hidden</animation>
-            <control type="image">
-                <posx>35</posx>
-                <top>270</top>
-                <width>400</width>
-                <height>400</height>
-                <aspectratio>stretch</aspectratio>
-                <colordiffuse>CCFFFFFF</colordiffuse>
-				<texture border="50" >dialog.png</texture>
-            </control>
-            <control type="grouplist" id="101" description="OSD Options">
-                <posx>85</posx>
-                <top>310</top>
-                <width>400</width>
-                <height>370</height>
-                <itemgap>10</itemgap>
-                <onleft>noop</onleft>
+                <posx>60</posx>
+                <top>220</top>
+				<onleft>noop</onleft>
                 <onright>noop</onright>
                 <onup>100</onup>
                 <ondown>100</ondown>
 				<control type="button" id="350">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<width>300</width>
 					<label>Teletext</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(Teletext)</onclick>
 				</control>
 				<control type="togglebutton" id="250" description="Subtitles">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<width>300</width>
 					<label>$LOCALIZE[33003] $LOCALIZE[287]</label>
 					<onclick>SetFocus(100,2)</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
 				</control>
 				<control type="button" id="251">
-					<width>300</width>
 					<label>13395</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 				</control>
 				<control type="button" id="252">
-					<width>300</width>
 					<label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 				</control>
 				<control type="button" id="253">
-					<width>300</width>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 					<label>298</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
@@ -62,12 +44,10 @@
 				</control>
 				<control type="button" id="254">
 				<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasMenu</visible>
-					<width>300</width>
 					<label>25003</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
 				</control>
-			</control>
 		</control>
         <control type="group">
             <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>

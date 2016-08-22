@@ -38,11 +38,11 @@
                 </control>
             </control>
         </control>
-        <control type="button" id="88" >
+        <!--control type="button" id="88" >
             <visible>Player.Paused</visible>
             <top>40</top>
             <left>260</left>
 			<label>STANDING BY</label>
-        </control>
+        </control-->
     </controls>
 </window>
