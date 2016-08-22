@@ -76,7 +76,7 @@
 						<posx>20</posx>
 						<width>270</width>
 						<height>40</height>
-						<texture >whiteallrounded2.png</texture>
+						<texture  colordiffuse="buttonselect">whiteallrounded2.png</texture>
 					</control>
 					<control type="label" description="label">
 						<left>95</left>
@@ -95,6 +95,7 @@
 				</content>
 			</control>
 			<control type="grouplist" id="9001">
+		<visible>Player.HasMedia</visible>
 				<width>280</width>
 				<height>800</height>
 				<top>810</top>
@@ -103,7 +104,35 @@
 				<onright>noop</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
-				<include>CommonNowPlaying_Controls</include>
+			<control type="button" id="610">
+				<description>Fake Button to fix Player Controls Navigation</description>
+				<visible>false</visible>
+			</control>
+			<control type="button" id="603">
+				<width>270</width>
+				<height>40</height>
+				<textoffsetx>75</textoffsetx>
+				<align>left</align>
+				<label>Stop</label>
+                <texturenofocus diffuse="whiteallrounded2.png">c3.png</texturenofocus>
+                <texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+				<onclick>PlayerControl(Stop)</onclick>
+			</control>
+			<control type="togglebutton" id="604">
+				<width>270</width>
+				<height>40</height>
+				<textoffsetx>75</textoffsetx>
+				<align>left</align>
+				<label>Pause</label>
+				<texturenofocus colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
+                <texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+				<alttexturenofocus colordiffuse="Blue">whiteallrounded2.png</alttexturenofocus>
+				<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<altlabel>Play</altlabel>
+				<onclick>PlayerControl(Play)</onclick>
+				<enable>Player.PauseEnabled</enable>
+			</control>
 			</control>
 			<control type="group" description="Furniture">
 				<control type="rss" description="RSS Feed">

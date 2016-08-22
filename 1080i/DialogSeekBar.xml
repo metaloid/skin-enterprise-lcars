@@ -18,12 +18,8 @@
                 <control type="button"  description="Clock">
                     <label>$LOCALIZE[142] $INFO[System.Time]</label>
                 </control>
-				<control type="button"  description="End time">
-                    <top>45</top>
-                    <label>$LOCALIZE[31005]: $INFO[Player.FinishTime]</label>
-                </control>
 		    <control type="group" description="Icons on Seekbar">
-                <top>90</top>
+                <top>45</top>
             <control type="button" description="Buffer icon">
                 <visible>Player.Caching</visible>
                 <label>BUFFERING...</label>
@@ -92,7 +88,7 @@
             </control>
             <control type="button" description="ptogress">
                 <visible>IntegerGreaterThan(Control.GetLabel(23), 0)</visible>
-                <top>135</top>
+                <top>90</top>
 				<label>$INFO[Control.GetLabel(23), ,%]</label>
             </control>
             </control>
