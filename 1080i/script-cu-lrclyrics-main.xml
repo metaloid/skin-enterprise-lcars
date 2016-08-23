@@ -5,7 +5,7 @@
 	<visible>StringCompare(Skin.String(osd-lyricpath),script.cu.lrclyrics)</visible>
 	<coordinates>
 		<left>500</left>
-		<top>60</top>
+		<top>360</top>
 	</coordinates>
     <include>OpenClose</include>
     <controls>
@@ -50,7 +50,7 @@
                     <visible>!MusicPlayer.Content(LiveTV)</visible>
 					<enable>Player.PauseEnabled</enable>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturenofocus colordiffuse="Blue">c6.png</alttexturenofocus>
+					<alttexturenofocus>c9.png</alttexturenofocus>
 					<alttexturefocus colordiffuse="buttonselect">c0.png</alttexturefocus>
 					<width>90</width>
 					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
@@ -59,13 +59,13 @@
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
-                <control type="button" id="603">
+                <!--control type="button" id="603">
                     <width>90</width>
 					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
 					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>STOP</label>
                     <onclick>PlayerControl(Stop)</onclick>
-				</control>
+				</control-->
                 <control type="button" id="604">
                     <visible>!MusicPlayer.Content(LiveTV)</visible>
 					<width>90</width>

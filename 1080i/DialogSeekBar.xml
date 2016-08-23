@@ -2,96 +2,221 @@
 <window type="dialog" id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <zorder>5</zorder>
     <include>OpenClose</include>
     <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
     <visible>Window.IsVisible(FullScreenVideo) + [Window.IsActive(videoosd.xml) | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Caching]</visible>
     <animation effect="fade" start="0" end="100" time="400">Visible</animation>
     <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
     <controls>
-            <control type="group" description="Top Bar">
-                <visible>!Window.IsActive(142)</visible>
-                <animation effect="fade" start="0" end="70" time="400">Visible</animation>
-                <animation effect="fade" start="70" end="0" time="100">Hidden</animation>
-                <top>40</top>
-				<posx>60</posx>
-                <control type="button"  description="Clock">
-                    <label>$LOCALIZE[142] $INFO[System.Time]</label>
-                </control>
-		    <control type="group" description="Icons on Seekbar">
-                <top>45</top>
-            <control type="button" description="Buffer icon">
-                <visible>Player.Caching</visible>
-                <label>BUFFERING...</label>
-            </control>
-            <control type="button" id="pause" >
-				<visible>Player.Paused + !Player.Caching</visible>
-                <label>STANDING BY</label>
-			</control>
-			<control type="button" description="FF">
-                <visible>player.forwarding2x</visible>
-                <label>2x FFW </label>
-            </control>
-            <control type="button" description="FFFF">
-                <visible>player.forwarding4x</visible>
-                <label>4x FFW</label>
-            </control>
-            <control type="button" description="2FFFF">
-                <visible>player.forwarding8x</visible>
-                <label>8x FFW</label>
-            </control>
-            <control type="button" description="4FFFF">
-                <visible>player.forwarding16x</visible>
-                <label>16x FFW</label>
-            </control>
-            <control type="button" description="8FFFF">
-                <visible>player.forwarding32x</visible>
-                <label>32x FFW</label>
-            </control>
-            <control type="button" description="RF">
-                <visible>player.rewinding2x</visible>
-                <label>2x RW</label>
-            </control>
-            <control type="button" description="RFFF">
-                <visible>player.rewinding4x</visible>
-                <label>4x RW</label>
-            </control>
-            <control type="button" description="2RFFF">
-                <visible>player.rewinding8x</visible>
-                <label>8x RW</label>
-            </control>
-            <control type="button" description="4RFFF">
-                <visible>player.rewinding16x</visible>
-                <label>16x RW</label>
-            </control>
-            <control type="button" description="8RFFF">
-                <visible>player.rewinding32x</visible>
-                <label>32x RW</label>
-            </control>
-            <control type="button" description="Seek time label">
-                <visible>![player.forwarding | player.rewinding]</visible>
-                <visible>Player.DisplayAfterSeek</visible>
-				<label>$INFO[Player.SeekOffset]</label>
-            </control>
-			<control type="progress" id="23">
-				<description>Progressbar</description>
-				<posx>75</posx>
-				<top>870</top>
-                <width>250</width>
-				<info>Player.Progress</info>
-				<height>8</height>
-				<texturebg>-</texturebg>
-            <midtexture>-</midtexture>
-            <righttexture>-</righttexture>
-            <lefttexture>-</lefttexture>
-			</control>
-            </control>
-            <control type="button" description="ptogress">
-                <visible>IntegerGreaterThan(Control.GetLabel(23), 0)</visible>
-                <top>90</top>
+        <control type="group" description="Top Bar">
+            <visible>!Window.IsActive(142)</visible>
+            <animation effect="fade" start="0" end="70" time="400">Visible</animation>
+            <animation effect="fade" start="70" end="0" time="100">Hidden</animation>
+            <top>40</top>
+			<posx>60</posx>
+				<control type="button">
+                <top>80r</top>
+					<width>270</width>
+			        <textwidth>190</textwidth>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+				<label>$LOCALIZE[142] $INFO[System.Time]</label>
+				</control>
+			<control type="button" description="Next item">
+                <top>80r</top>
+                <posx>275</posx>
+				<width>1250</width>
+				<textwidth>900</textwidth>
+				<textoffsetx>150</textoffsetx>
+				<align>left</align>
+                <width>1250</width>
+                <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ]</label>
+ 				<texturenofocus  colordiffuse="orange" border="20">button-focus.png</texturenofocus>
+				<texturefocus colordiffuse="orange"  border="20">button-focus.png</texturefocus>
+           </control>
+				<control type="button">
+                <top>80r</top>
+					<posx>330r</posx>
+					<width>270</width>
+			        <textwidth>190</textwidth>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<texturenofocus diffuse="whiteallrounded2.png" flipx="true">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect"  flipx="true">whiteallrounded2.png</texturefocus>
 				<label>$INFO[Control.GetLabel(23), ,%]</label>
+				</control>
+				<control type="button">
+					<width>270</width>
+			        <textwidth>190</textwidth>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<label>$INFO[Player.Time]</label>
+				</control>
+				<control type="progress">
+					<visible>true</visible>
+					<posx>275</posx>
+					<width>1250</width>
+					<height>40</height>
+					<texturebg colordiffuse="orange" border="20">button-focus.png</texturebg>
+					<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
+					<info>Player.CacheLevel</info>
+					<visible>Player.Caching</visible>
+				</control>
+				<control type="progress" id="23" description="Progress Bar">
+					<width>1250</width>
+					<posx>275</posx>
+					<height>40</height>
+					<visible>true</visible>
+					<texturebg colordiffuse="orange" border="20">button-focus.png</texturebg>
+					<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
+					<info>Player.Progress</info>
+				</control>
+				<control type="button">
+					<posx>330r</posx>
+					<width>270</width>
+			        <textwidth>190</textwidth>
+					<textoffsetx>75</textoffsetx>
+					<align>left</align>
+					<texturenofocus diffuse="whiteallrounded2.png" flipx="true">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect"  flipx="true">whiteallrounded2.png</texturefocus>
+					<label>- $INFO[Player.TimeRemaining]</label>
+				</control>
+				<control type="label" description="Title item">
+					<top>3</top>
+					<posx>125</posx>
+					<height>40</height>
+					<align>center</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+					<width>925</width>
+                <label>$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,, ]$INFO[VideoPlayer.Season,S , • ]$INFO[VideoPlayer.Episode,E , ]$INFO[VideoPlayer.Title] </label>
+				</control>
+		    <control type="group" description="Icons on Seekbar">
+                <top>3</top>
+                <posx>285</posx>
+				<control type="label" description="Buffer icon">
+					<visible>Player.Caching</visible>
+					<label>BUFFERING...</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" id="pause" >
+					<visible>Player.Paused + !Player.Caching</visible>
+					<label>STANDING BY</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="FF">
+					<visible>player.forwarding2x</visible>
+					<label>2x FFW </label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="FFFF">
+					<visible>player.forwarding4x</visible>
+					<label>4x FFW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="2FFFF">
+					<visible>player.forwarding8x</visible>
+					<label>8x FFW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="4FFFF">
+					<visible>player.forwarding16x</visible>
+					<label>16x FFW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="8FFFF">
+					<visible>player.forwarding32x</visible>
+					<label>32x FFW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="RF">
+					<visible>player.rewinding2x</visible>
+					<label>2x RW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="RFFF">
+					<visible>player.rewinding4x</visible>
+					<label>4x RW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="2RFFF">
+					<visible>player.rewinding8x</visible>
+					<label>8x RW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="4RFFF">
+					<visible>player.rewinding16x</visible>
+					<label>16x RW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="8RFFF">
+					<visible>player.rewinding32x</visible>
+					<label>32x RW</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<control type="label" description="Seek time label">
+					<visible>![player.forwarding | player.rewinding]</visible>
+					<visible>Player.DisplayAfterSeek</visible>
+					<label>$INFO[Player.SeekOffset]</label>
+					<width>270</width>
+					<height>40</height>
+					<align>left</align>
+					<textcolor>black</textcolor>
+					<scroll>false</scroll>
+				</control>
             </control>
-            </control>
-        <!-- 3D -->
+        </control>
     </controls>
 </window>

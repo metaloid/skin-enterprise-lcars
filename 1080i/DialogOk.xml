@@ -34,7 +34,7 @@
 			<height>108</height>
 			<align>left</align>
 			<label>-</label>
-			<font>LCARS24</font>
+			<font>LCARS20</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>
 		<control type="button" id="10">

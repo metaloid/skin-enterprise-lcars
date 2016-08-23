@@ -4,89 +4,41 @@
 	<onload condition="!VideoPlayer.Content(LiveTV)">SetFocus(202)</onload>
     <controls>
 	<control type="group">
+        <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
+        <control type="group">
+            <posx>60</posx>
+			<top>40</top>
+			<control type="slider" id="87">
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
+				<description>Seek Slider</description>
+				<visible>true</visible>
+				<posx>275</posx>
+				<width>1250</width>
+				<height>40</height>
+				<action>seek</action>
+				<texturesliderbar>-</texturesliderbar>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				</control>
+		</control>
         <control type="grouplist" id="100" description="Options content">
-            <animation effect="fade" end="100" time="400">Visible</animation>
-            <animation effect="fade" end="0" time="100">Hidden</animation>
-                <posx>60</posx>
-                <top>175</top>
-				<width>300</width>
+                <posx>130</posx>
+                <top>130r</top>
+				<width>1250</width>
 				<onleft>noop</onleft>
                 <onright>noop</onright>
-                <onup>100</onup>
-                <ondown>100</ondown>
-				<control type="button" id="350">
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<width>300</width>
-					<label>Teletext</label>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(Teletext)</onclick>
-				</control>
-				<control type="togglebutton" id="250" description="Subtitles">
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<width>300</width>
-					<label>$LOCALIZE[287]</label>
-					<onclick>SetFocus(100,2)</onclick>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(SubtitleSearch)</onclick>
-				</control>
-				<control type="button" id="251">
-					<label>13395</label>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<width>300</width>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
-				</control>
-				<control type="button" id="252">
-					<label>$LOCALIZE[292] &amp; $LOCALIZE[287]</label>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<width>300</width>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
-				</control>
-				<control type="button" id="253">
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<width>300</width>
-					<label>298</label>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>ActivateWindow(VideoBookmarks)</onclick>
-				</control>
-				<control type="button" id="254">
-				<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasMenu</visible>
-					<label>25003</label>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<width>300</width>
-					<onclick>Dialog.Close(VideoOSD)</onclick>
-					<onclick>PlayerControl(ShowVideoMenu)</onclick>
-				</control>
+				<orientation>horizontal</orientation>
 				<control type="button" id="200">
-					<width>300</width>
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-			        <label>PREVIOUS</label>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<onclick>PlayerControl(Previous)</onclick>
-                </control>
-				<control type="button" id="200">
-					<width>300</width>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
-			        <label>CH DOWN</label>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<width>135</width>
+					<label>PREV</label>
+					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded2.png</texturefocus>
 					<onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="201">
-					<width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 			        <label>REW</label>
                     <onclick>PlayerControl(Rewind)</onclick>
@@ -94,73 +46,60 @@
                 <control type="togglebutton" id="202">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
 					<enable>Player.PauseEnabled</enable>
-					<textoffsetx>75</textoffsetx>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<align>left</align>
-					<width>300</width>
-					<texturenofocus diffuse="whiteallrounded2.png">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<alttexturenofocus diffuse="whiteallrounded2.png">c2.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="Blue">c6.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="buttonselect">c0.png</alttexturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>PAUSE</label>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="203">
-                    <width>300</width>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c3.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+                    <width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>STOP</label>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="204">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
-					<width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="205">
-                    <visible>!VideoPlayer.Content(LiveTV)</visible>
-			        <width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>NEXT</label>
-                    <onclick>PlayerControl(Next)</onclick>
-                </control>
-                <control type="button" id="205">
-                    <visible>VideoPlayer.Content(LiveTV)</visible>
-			        <width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-					<label>CH UP</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="306">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-					<width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>LIST</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="307">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
-					<width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>EPG</label>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="togglebutton" id="353">
-                    <width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+                    <width>90</width>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
 					<label>REC</label>
 					<altlabel>[COLOR=red]REC[/COLOR]</altlabel>
 					<onclick>PlayerControl(Record)</onclick>
@@ -168,138 +107,72 @@
 					<animation effect="fade" start="100" end="50" time="75" condition="!Player.CanRecord">Conditional</animation>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
                 </control>
+				<control type="togglebutton" id="250" description="Subtitles">
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<alttexturenofocus diffuse="whiteallrounded2.png">c6.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+					<width>90</width>
+					<label>sub</label>
+					<onclick>SetFocus(100,2)</onclick>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(SubtitleSearch)</onclick>
+				</control>
+				<control type="button" id="251">
+					<label>vid</label>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<width>90</width>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+				</control>
+				<control type="button" id="252">
+					<label>aud</label>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<width>90</width>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+				</control>
+				<control type="button" id="253">
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<width>90</width>
+					<label>bm</label>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(VideoBookmarks)</onclick>
+				</control>
+				<control type="button" id="254">
+					<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasMenu</visible>
+					<label>dvd</label>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<width>90</width>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>PlayerControl(ShowVideoMenu)</onclick>
+				</control>
+				<control type="button" id="350">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<width>90</width>
+					<label>Txt</label>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(Teletext)</onclick>
+				</control>
 				<control type="button" id="1000" >
-                    <width>300</width>
-                    <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+                    <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<width>135</width>
+                    <texturenofocus colordiffuse="buttonselect2" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="buttonselect" flipx="true" border="20">whiteallrounded2.png</texturefocus>
 					<label>CLOSE</label>
                     <onclick>Dialog.Close(VideoOSD,true)</onclick>
 					<onclick>FullScreen</onclick>
 				</control>
-
 		</control>
-        <control type="group">
-            <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-            <animation effect="fade" end="100" time="400">Visible</animation>
-            <animation effect="fade" end="0" time="100">Hidden</animation>
-            <posx>0</posx>
-            <top>0</top>
-            <control type="group">
-                <control type="group" description="Dialog Background">
-                    <visible>Window.IsVisible(videoosd.xml) + Window.IsActive(dialogseekbar.xml)</visible>
-					<control type="image">
-                        <posx>35</posx>
-                        <top>720</top>
-                        <width>830</width>
-                        <height>320</height>
-                        <colordiffuse>BBFFFFFF</colordiffuse>
-						<aspectratio>stretch</aspectratio>
-                        <texture border="40">dialog.png</texture>
-                    </control>
-                </control>
-                <control type="label" description="Title">
-                    <posx>50</posx>
-                    <top>865</top>
-                    <align>center</align>
-					<height>40</height>
-                    <width>800</width>
-                    <scroll>true</scroll>
-                    <font>LCARS24</font>
-                    <textcolor>White</textcolor>
-                    <label>[COLOR=buttonselect2]$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,, ]$INFO[VideoPlayer.Season,S , • ]$INFO[VideoPlayer.Episode,E , ][/COLOR]$INFO[VideoPlayer.Title] </label>
-                </control>
-                <control type="label" description="Next item">
-                    <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
-                    <posx>50</posx>
-                    <top>965</top>
-                    <height>40</height>
-                    <width>800</width>
-                    <scroll>true</scroll>
-                    <font>LCARS24</font>
-                    <textcolor>White</textcolor>
-                    <label>$INFO[VideoPlayer.NextTitle,[COLOR=gray]$LOCALIZE[209]:  [/COLOR]]</label>
-                </control>
-				<control type="group" description="Cover">
-                    <animation effect="fade" start="0" end="100" time="600">VisibleChange</animation>
-                    <posx>50</posx>
-                    <top>735</top>
-					<control type="image">
-						<posx>35</posx>
-						<top>25</top>
-						<width>730</width>
-						<height>100</height>
-						<texture  fallback="default.png"  background="true">$INFO[Player.Art(fanart)]</texture>
-						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-						<align>center</align>
-						<colordiffuse>BBFFFFFF</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>35</posx>
-						<top>25</top>
-						<width>730</width>
-						<height>100</height>
-						<texture   background="true">$INFO[Player.Art(tvshow.banner)]</texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-						<colordiffuse>BBFFFFFF</colordiffuse>
-					</control>
-                </control>
-            </control>
-		</control>
-		<control type="group">
-            <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-            <top>920</top>
-            <posx>175</posx>
-            <control type="progress">
-				<visible>true</visible>
-				<top>1</top>
-                <width>535</width>
-                <height>15</height>
-                <midtexture border="6,0,6,0">progress/OSDProgressMidLight.png</midtexture>
-				<info>Player.CacheLevel</info>
-				<visible>Player.Caching</visible>
-			</control>
-			<control type="progress" id="23" description="Progress Bar">
-                <top>1</top>
-                <width>535</width>
-                <height>15</height>
-                <visible>true</visible>
-				<info>Player.Progress</info>
-            </control>
-			<control type="slider" id="401">
-				<description>Seek Slider</description>
-				<visible>true</visible>
-				<top>1</top>
-				<width>535</width>
-				<height>15</height>
-				<action>seek</action>
-				<texturesliderbar>progress/seekslider.png</texturesliderbar>
-				<textureslidernib>progress/osd_slider_nibNF.png</textureslidernib>
-				<textureslidernibfocus>progress/osd_slider_nib.png</textureslidernibfocus>
-			</control>
-        </control>
-		<control type="group" description="Top Bar">
-            <visible>![Window.IsActive(DialogSelect.xml) | Window.IsActive(SliderDialog) | Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings) | Window.IsActive(VideoBookmarks) | Window.IsActive(script-XBMC-Subtitles-main.xml)]</visible>
-            <animation effect="fade" start="0" end="70" time="400">Visible</animation>
-            <animation effect="fade" start="70" end="0" time="100">Hidden</animation>
-            <top>905</top>
-            <control type="label">
-                <posx>75</posx>
-                <width>200</width>
-                <height>40</height>
-                <textcolor>White</textcolor>
-                <label>$INFO[Player.Time]</label>
-                <font>LCARS20</font>
-            </control>
-            <control type="label">
-                <posx>820</posx>
-                <height>40</height>
-                <width>200</width>
-                <align>right</align>
-                <textcolor>White</textcolor>
-                <label>- $INFO[Player.TimeRemaining]</label>
-                <font>LCARS20</font>
-            </control>
-        </control>
-    </control>
+	</control>
     </controls>
 </window>
