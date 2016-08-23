@@ -54,14 +54,14 @@
                 <control type="image">
                     <width>400</width>
                     <height>40</height>
-                    <texture diffuse="whiteallrounded2.png" colordiffuse="buttonselect2" >button-focus.png</texture>
+                    <texture diffuse="whiteallrounded2.png" colordiffuse="HellOrange" >button-focus.png</texture>
                 </control>
                 <control type="label">
                     <left>95</left>
                     <top>8</top>
                     <width>300</width>
                     <height>28</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <aligny>center</aligny>
 					<font>LCARS20</font>
                     <align>left</align>
@@ -74,14 +74,14 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(501)" reversible="true">Conditional</animation>
                     <width>400</width>
                     <height>40</height>
-                    <texture diffuse="whiteallrounded2.png" colordiffuse="buttonselect" >button-focus.png</texture>
+                    <texture diffuse="whiteallrounded2.png" colordiffuse="White" >button-focus.png</texture>
                 </control>
                 <control type="label">
                     <left>95</left>
                     <top>8</top>
                     <width>300</width>
                     <height>28</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <aligny>center</aligny>
 					<font>LCARS20</font>
                     <align>left</align>
@@ -104,13 +104,13 @@
                 <control type="image">
                     <width>400</width>
                     <height>40</height>
-                    <texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+                    <texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
                 </control>
                 <control type="label">
                     <left>5</left>
                     <width>390</width>
                     <height>40</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <scroll>false</scroll>
 				    <align>center</align>
                     <aligny>center</aligny>
@@ -122,13 +122,13 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(300)" reversible="true">Conditional</animation>
                     <width>400</width>
                     <height>40</height>
-                    <texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+                    <texture border="5" colordiffuse="White">button-focus.png</texture>
                 </control>
                 <control type="label">
                     <left>5</left>
                     <width>390</width>
                     <height>40</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
                     <info>ListItem.Label</info>
@@ -152,13 +152,13 @@
                 <control type="image">
                     <width>400</width>
                     <height>40</height>
-                    <texture flipx="true"  diffuse="whiteallrounded2.png" colordiffuse="buttonselect2" >button-focus.png</texture>
+                    <texture flipx="true"  diffuse="whiteallrounded2.png" colordiffuse="HellOrange" >button-focus.png</texture>
                 </control>
                 <control type="label">
                     <left>5</left>
                     <width>290</width>
                     <height>40</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <scroll>false</scroll>
 				    <align>right</align>
                     <aligny>center</aligny>
@@ -170,13 +170,13 @@
                     <animation effect="fade" start="100" end="50" condition="!Control.Hasfocus(301)" reversible="true">Conditional</animation>
                     <width>400</width>
                     <height>40</height>
-                    <texture flipx="true"  diffuse="whiteallrounded2.png" colordiffuse="buttonselect" >button-focus.png</texture>
+                    <texture flipx="true"  diffuse="whiteallrounded2.png" colordiffuse="White" >button-focus.png</texture>
                 </control>
                 <control type="label">
                     <left>5</left>
                     <width>290</width>
                     <height>40</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <align>right</align>
                     <aligny>center</aligny>
                     <info>ListItem.Label</info>

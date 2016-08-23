@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -26,7 +26,7 @@
 				<aligny>center</aligny>
 				<font>LCARS24</font>
             <label>13406</label>
-				<textcolor>orange</textcolor>
+				<textcolor>Orange</textcolor>
 				<scroll>true</scroll>
         </control>
             <control type="list" id="5">
@@ -99,10 +99,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
                 </control>
     </controls>

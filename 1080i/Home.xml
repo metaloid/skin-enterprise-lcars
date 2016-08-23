@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
      <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <onload>RunScript(script.favourites)</onload>
     <include>OpenClose</include>
      <controls>
@@ -48,7 +48,7 @@
 						<posx>20</posx>
 						<width>270</width>
 						<height>40</height>
-						<texture colordiffuse="buttonselect2" >whiteallrounded2.png</texture>
+						<texture colordiffuse="HellOrange" >whiteallrounded2.png</texture>
 					</control>
 					<control type="image" description="Color Base">
 						<visible>!Skin.HasSetting(colormenu)</visible>
@@ -67,7 +67,7 @@
 						<font>LCARS20</font>
 						<align>left</align>
 						<scroll>false</scroll>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<label>$INFO[ListItem.label]</label>
 					</control>
 				</itemlayout>								
@@ -76,7 +76,7 @@
 						<posx>20</posx>
 						<width>270</width>
 						<height>40</height>
-						<texture  colordiffuse="buttonselect">whiteallrounded2.png</texture>
+						<texture  colordiffuse="White">whiteallrounded2.png</texture>
 					</control>
 					<control type="label" description="label">
 						<left>95</left>
@@ -86,7 +86,7 @@
 						<aligny>center</aligny>
 						<font>LCARS20</font>
 						<align>left</align>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<label>$INFO[ListItem.label]</label>
 					</control>
 				</focusedlayout>			
@@ -115,7 +115,7 @@
 					<align>left</align>
 					<label>Stop</label>
 					<texturenofocus diffuse="whiteallrounded2.png">c3.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<control type="togglebutton" id="604">
@@ -124,10 +124,10 @@
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
 					<label>Pause</label>
-					<texturenofocus colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
 					<alttexturenofocus colordiffuse="Blue">whiteallrounded2.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+					<alttexturefocus colordiffuse="White">whiteallrounded2.png</alttexturefocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<altlabel>Play</altlabel>
 					<onclick>PlayerControl(Play)</onclick>
@@ -144,10 +144,9 @@
 					<height>33</height>
 					<font>LCARS20</font>
 					<urlset>1</urlset>
-					<shadowcolor>-</shadowcolor>
-					<titlecolor>rsscolor</titlecolor>
-					<headlinecolor>rsscolor</headlinecolor>
-					<textcolor>rsscolor</textcolor>
+					<titlecolor>Red</titlecolor>
+					<headlinecolor>Red</headlinecolor>
+					<textcolor>Red</textcolor>
 				</control>				
 			</control>
 			<control type="group" id="700" description="Shelf items">
@@ -206,10 +205,10 @@
 			<spinheight>40</spinheight>
 			<texturenofocus></texturenofocus>
 			<texturefocus></texturefocus>
-			<textureup colordiffuse="buttonselect2" >left.png</textureup>
-			<texturedown colordiffuse="buttonselect2">right.png</texturedown>
-			<textureupfocus colordiffuse="buttonselect2">leftp.png</textureupfocus>
-			<texturedownfocus colordiffuse="buttonselect2">rightp.png</texturedownfocus>
+			<textureup colordiffuse="HellOrange" >left.png</textureup>
+			<texturedown colordiffuse="HellOrange">right.png</texturedown>
+			<textureupfocus colordiffuse="HellOrange">leftp.png</textureupfocus>
+			<texturedownfocus colordiffuse="HellOrange">rightp.png</texturedownfocus>
 		</control>
 		<control type="button" id="500">
 			<visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)]</visible>

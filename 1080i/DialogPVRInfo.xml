@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -37,7 +37,7 @@
 					<font>LCARS15</font>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -63,7 +63,7 @@
 					<font>LCARS15</font>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>

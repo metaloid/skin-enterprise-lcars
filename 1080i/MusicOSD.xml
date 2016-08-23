@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">100</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
 	<onload condition="!MusicPlayer.Content(LiveTV)">SetFocus(602)</onload>
-	<onunload>Dialog.close(all,true)</onunload>
     <include>OpenClose</include>
     <controls>
         <control type="group">
@@ -12,120 +11,210 @@
             <animation effect="fade" end="0" time="100">Hidden</animation>
             <posx>60</posx>
 			<top>40</top>
-				<control type="progress">
-					<visible>true</visible>
-					<top>1</top>
-					<width>1200</width>
-					<height>40</height>
-					<texturebg colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturebg>
-					<midtexture colordiffuse="Blue" border="20">whiteallrounded.png</midtexture>
-					<info>Player.CacheLevel</info>
-					<visible>Player.Caching</visible>
-				</control>
-				<control type="progress" id="23" description="Progress Bar">
-					<top>1</top>
-					<width>1200</width>
-					<height>40</height>
-					<visible>true</visible>
-					<texturebg colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturebg>
-					<midtexture colordiffuse="Blue" border="20">whiteallrounded.png</midtexture>
-					<info>Player.Progress</info>
-				</control>
-				<control type="label">
-					<top>3</top>
-					<posx>25</posx>
-					<width>200</width>
-					<height>40</height>
-					<textcolor>black</textcolor>
-					<label>$INFO[Player.Time]</label>
-					<font>LCARS20</font>
-				</control>
-				<control type="label">
-					<top>3</top>
-					<posx>1170</posx>
-					<height>40</height>
-					<width>200</width>
-					<align>right</align>
-					<textcolor>black</textcolor>
-					<label>- $INFO[Player.TimeRemaining]</label>
-					<font>LCARS20</font>
-				</control>
-				<control type="label" description="Title item">
-					<top>3</top>
-					<posx>125</posx>
-					<height>40</height>
-					<align>center</align>
-					<textcolor>black</textcolor>
-					<width>925</width>
-					<scroll>false</scroll>
-					<label>$INFO[MusicPlayer.Title]</label>
-				</control>
-				<control type="slider" id="401">
-					<description>Seek Slider</description>
-					<visible>true</visible>
-					<top>1</top>
-					<width>1200</width>
-					<height>40</height>
-					<action>seek</action>
-					<texturesliderbar>-</texturesliderbar>
-					<textureslidernib>slidernibnf.png</textureslidernib>
-					<textureslidernibfocus>slidernibfo.png</textureslidernibfocus>
-				</control>
-				<control type="button" description="Previous">
-					<top>45</top>
-					<textoffsetx>75</textoffsetx>
-					<width>600</width>
-					<label>Prev: $INFO[MusicPlayer.offset(-1).Title]</label>
-					<font>LCARS20</font>
-				</control>
-				<control type="button" description="Next">
-					<top>90</top>
-					<textoffsetx>75</textoffsetx>
-					<width>600</width>
-					<label>Next: $INFO[MusicPlayer.offset(1).Title]</label>
-					<font>LCARS20</font>
-				</control>
-				<control type="button" description="progress">
-					<top>135</top>
-					<label>$INFO[Control.GetLabel(23), ,%]</label>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-				</control>
+			<control type="button">
+				<width>270</width>
+				<textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>left</align>
+				<texturenofocus colordiffuse="Orange">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
+				<label>$INFO[Player.Time]</label>
+			</control>
+			<control type="progress">
+				<visible>true</visible>
+				<posx>275</posx>
+				<width>1250</width>
+				<height>40</height>
+				<texturebg colordiffuse="Orange" border="20">button-focus.png</texturebg>
+				<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
+				<info>Player.CacheLevel</info>
+				<visible>Player.Caching</visible>
+			</control>
+			<control type="progress" id="23" description="Progress Bar">
+				<width>1250</width>
+				<posx>275</posx>
+				<height>40</height>
+				<visible>true</visible>
+				<texturebg colordiffuse="Orange" border="20">button-focus.png</texturebg>
+				<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
+				<info>Player.Progress</info>
+			</control>
+			<control type="button">
+				<posx>330r</posx>
+				<width>270</width>
+				<textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>right</align>
+				<texturenofocus colordiffuse="Orange"  flipx="true">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White"  flipx="true">whiteallrounded2.png</texturefocus>
+				<label>$INFO[Player.TimeRemaining]</label>
+			</control>
+			<control type="label" description="Title item">
+				<top>2</top>
+				<posx>300</posx>
+				<height>40</height>
+				<align>left</align>
+				<textcolor>Black</textcolor>
+				<scroll>false</scroll>
+				<width>1050</width>
+				<label>$INFO[MusicPlayer.Artist,, : ]$INFO[MusicPlayer.Title]</label>
+			</control>
+			<control type="image">
+				<description>Rating</description>
+				<left>1400</left>
+				<top>0</top>
+				<width>100</width>
+				<height>35</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture fallback="rating0.png" colordiffuse="Black">$INFO[Player.StarRating]</texture>
+			</control>
+			<control type="slider" id="401">
+				<description>Seek Slider</description>
+				<posx>275</posx>
+				<visible>true</visible>
+				<width>1250</width>
+				<height>40</height>
+				<action>seek</action>
+				<texturesliderbar>-</texturesliderbar>
+				<textureslidernib>slidernibnf.png</textureslidernib>
+				<textureslidernibfocus>slidernibfo.png</textureslidernibfocus>
+			</control>
+			<control type="button">
+				<top>80r</top>
+				<width>270</width>
+		        <textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>left</align>
+				<texturenofocus colordiffuse="Orange">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
+				<label>$LOCALIZE[142] $INFO[System.Time]</label>
+			</control>
+			<control type="image">
+				<posx>275</posx>
+				<top>80r</top>
+				<width>1250</width>
+				<height>40</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture colordiffuse="Orange" border="20">button-focus.png</texture>
+			</control>
+			<control type="label" description="Title item">
+				<top>77r</top>
+				<posx>285</posx>
+				<height>40</height>
+				<align>left</align>
+				<textcolor>Black</textcolor>
+				<scroll>false</scroll>
+				<width>600</width>
+				<label>Prev: $INFO[MusicPlayer.offset(-1).Title]</label>
+			</control>
+			<control type="label" description="Title item">
+				<top>77r</top>
+				<posx>1500</posx>
+				<height>40</height>
+				<align>right</align>
+				<textcolor>Black</textcolor>
+				<scroll>false</scroll>
+				<width>600</width>
+				<label>Next: $INFO[MusicPlayer.offset(1).Title]</label>
+			</control>
+			<control type="button">
+				<top>80r</top>
+				<posx>330r</posx>
+				<width>270</width>
+				<textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>right</align>
+				<texturenofocus colordiffuse="Orange"  flipx="true">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White"  flipx="true">whiteallrounded2.png</texturefocus>
+				<label>$INFO[Control.GetLabel(23), ,%]</label>
+			</control>
 
 		</control>
 		<control type="group">
             <control type="grouplist" id="100" description="Music OSD Options">
-                <animation effect="fade" end="100" time="400">Visible</animation>
-				<animation effect="fade" end="0" time="100">Hidden</animation>
-				<posx>60</posx>
-                <top>250</top>
-				<width>300</width>
+                <posx>130</posx>
+                <top>130r</top>
+				<width>1650</width>
 				<onleft>noop</onleft>
                 <onright>noop</onright>
-                <control type="button" id="500">
-                    <description>Visualisation</description>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-                    <label>24010</label>
-                    <onclick>Close</onclick>
+				<orientation>horizontal</orientation>
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+				<control type="button" id="600">
+					<width>135</width>
+					<label>PREV</label>
+					<texturenofocus colordiffuse="Flieder" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiteallrounded2.png</texturefocus>
+					<onclick>PlayerControl(Previous)</onclick>
                 </control>
-                <control type="button" id="702">
+                <control type="button" id="601">
+					<width>90</width>
+					<texturenofocus colordiffuse="Flieder">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+			        <label>REW</label>
+                    <onclick>PlayerControl(Rewind)</onclick>
+                </control>
+                <control type="togglebutton" id="602">
+					<visible>!MusicPlayer.Content(LiveTV)</visible>
+					<enable>Player.PauseEnabled</enable>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturenofocus colordiffuse="Blue">button-focus.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="White">button-focus.png</alttexturefocus>
+					<width>90</width>
+					<texturenofocus colordiffuse="Flieder">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<label>PAUSE</label>
+                    <altlabel>PLAY</altlabel>
+                    <onclick>PlayerControl(Play)</onclick>
+                </control>
+                <control type="button" id="603">
+                    <width>90</width>
+					<texturenofocus colordiffuse="Red">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<label>STOP</label>
+                    <onclick>PlayerControl(Stop)</onclick>
+                </control>
+                <control type="button" id="604">
+					<width>90</width>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<label>FFWD</label>
+                    <onclick>PlayerControl(Forward)</onclick>
+                </control>
+                <control type="button" id="605">
+					<width>90</width>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<label>NEXT</label>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>
+				<control type="button" id="704">
+					<width>90</width>
+					<label>REC</label>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<onclick>PlayerControl(record)</onclick>
+					<visible>Player.CanRecord</visible>
+				</control>
+				<control type="button" id="700">
+					<width>120</width>
+					<label>15047</label>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<onclick>ActivateWindow(OSDAudioDSPSettings)</onclick>
+					<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
+				</control>
+				<control type="button" id="500">
+					<width>120</width>
+					<label>VISUAL</label>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+				</control>
+               <control type="button" id="702">
                     <description>Visualisation settings</description>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-                    <label>$LOCALIZE[250] $LOCALIZE[10004]</label>
+					<width>120</width>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+                    <label>$LOCALIZE[10004]</label>
                     <onclick>Close</onclick>
                     <onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
                     <enable>Visualisation.Enabled</enable>
@@ -133,13 +222,10 @@
                 </control>
                 <control type="button" id="703">
                     <description>Visualisation Presets</description>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<label>31004</label>
+					<width>120</width>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<label>Presets</label>
                     <onclick>Close</onclick>
                     <onclick>ActivateWindow(122)</onclick>
                     <enable>Visualisation.Enabled</enable>
@@ -147,14 +233,11 @@
                 </control>
                 <control type="togglebutton" id="701">
                     <description>Lyrics</description>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<alttexturenofocus diffuse="whiteallrounded2.png">c6.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+					<width>120</width>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<alttexturenofocus colordiffuse="HellOrange">c6.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="White">button-focus.png</alttexturefocus>
                     <label>24013</label>
 					<onclick>Skin.SetAddon(osd-lyricpath,xbmc.python.lyrics)</onclick>
 					<onclick>Dialog.Close(musicosd)</onclick>
@@ -165,165 +248,57 @@
 					<usealttexture>IsEmpty(Skin.String(osd-lyricpath))</usealttexture>
                 </control>
 				<control type="button" id="606">
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c4.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<width>120</width>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
                     <textoffsetx>20</textoffsetx>
-					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
+					<label>$INFO[Playlist.Repeat,]</label>
                     <onclick>XBMC.PlayerControl(Repeat)</onclick>
                 </control>
 				<control type="button" id="607">
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c4.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<width>120</width>
+					<texturenofocus colordiffuse="Leuchtblau">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
                     <textoffsetx>20</textoffsetx>
-					<label>$LOCALIZE[191]$INFO[Playlist.Random, : ]</label>
+					<label>$INFO[Playlist.Random,]</label>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
-                </control>
- 				<control type="button" id="600">
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c4.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<label>PREVious</label>
-					<onclick>PlayerControl(Previous)</onclick>
-                </control>
-                <control type="button" id="601">
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c9.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<visible>!MusicPlayer.Content(LiveTV)</visible>
-			        <label>REW</label>
-                    <onclick>PlayerControl(Rewind)</onclick>
-                </control>
-                <control type="togglebutton" id="602">
-                    <visible>!MusicPlayer.Content(LiveTV)</visible>
-					<enable>Player.PauseEnabled</enable>
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c9.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<alttexturenofocus diffuse="whiteallrounded2.png">c6.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
-					<label>PAUSE</label>
-                    <altlabel>PLAY</altlabel>
-                    <onclick>PlayerControl(Play)</onclick>
-                </control>
-                <control type="button" id="603">
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c9.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<label>STOP</label>
-                    <onclick>PlayerControl(Stop)</onclick>
-				</control>
-                <control type="button" id="604">
-                    <visible>!MusicPlayer.Content(LiveTV)</visible>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c5.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<label>FFWD</label>
-                    <onclick>PlayerControl(Forward)</onclick>
-                </control>
-                <control type="button" id="605">
-                    <visible>!MusicPlayer.Content(LiveTV)</visible>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c5.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<label>NEXT</label>
-                    <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="306">
                     <visible>MusicPlayer.Content(LiveTV)</visible>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c5.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<width>120</width>
+					<texturenofocus colordiffuse="Leuchtblau">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>LIST</label>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="307">
                     <visible>MusicPlayer.Content(LiveTV) + !RDS.HasRadiotextPlus</visible>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<width>120</width>
+					<texturenofocus colordiffuse="Leuchtblau">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>EPG</label>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="button" id="308">
                     <visible>RDS.HasRadiotextPlus</visible>
 					<visible>MusicPlayer.Content(LiveTV) + RDS.HasRadiotextPlus</visible>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<width>120</width>
+					<texturenofocus colordiffuse="Blue">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>209</label>
                     <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
                 </control>
 				<control type="button" id="1000" >
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+                    <align>left</align>
+					<textoffsetx>30</textoffsetx>
+					<width>135</width>
+                    <texturenofocus colordiffuse="Blue" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" flipx="true" border="20">whiteallrounded2.png</texturefocus>
 					<label>CLOSE</label>
                     <onclick>Dialog.Close(MusicOSD,true)</onclick>
 					<onclick>FullScreen</onclick>
 				</control>
-				<control type="button"  description="Clock">
-					<label>$LOCALIZE[142] $INFO[System.Time]</label>
-					<width>270</width>
-					<textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-				</control>
            </control>
-        </control>
-		<control type="group" description="next prev info">
-            <animation effect="fade" end="100" time="400">Visible</animation>
-            <animation effect="fade" end="0" time="100">Hidden</animation>
-			<control type="label">
-				<description>Rating image</description>
-				<posx>75</posx>
-				<top>200</top>
-				<width>360</width>
-				<height>27</height>
-				<font>LCARS20</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Player.StarRating]</label>
-			</control>
         </control>
     </controls>
 </window>

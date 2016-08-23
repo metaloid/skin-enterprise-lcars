@@ -2,7 +2,7 @@
 <window id="25">
     <defaultcontrol always="true">54</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <onload condition="System.HasAddon(script.tv.show.next.aired) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tv.show.next.aired,backend=True)</onload>
     <views>54,501,503,504</views>
     <include>OpenClose</include>
@@ -67,11 +67,11 @@
 				<width>300</width>
 				<textwidth>230</textwidth>
 				<label>587</label>
-				<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
-				<textcolor>black</textcolor>
-				<focusedcolor>black</focusedcolor>
-				<selectedcolor>black</selectedcolor>
+				<texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus>
+				<textcolor>Black</textcolor>
+				<focusedcolor>Black</focusedcolor>
+				<selectedcolor>Black</selectedcolor>
 			</control>
 			<control type="button" id="3" description="Sort">
                 <width>300</width>
@@ -114,10 +114,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
         </control>
     </controls>

@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="false">120</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
     <controls>
         <control type="group" id="250">
@@ -12,7 +12,7 @@
                 <width>1500</width>
                 <height>880</height>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-				<texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+				<texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
 				<bordertexture  border="40">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
             </control>
@@ -81,7 +81,7 @@
                     <control type="image">
                         <width>1000</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiterounded.png</texture>
                     </control>
                     <control type="image">
                         <posx>10</posx>
@@ -96,7 +96,7 @@
                         <height>40</height>
                         <font>LCARS20</font>
                         <aligny>center</aligny>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <info>ListItem.Label</info>
@@ -123,7 +123,7 @@
                         <height>40</height>
                         <font>LCARS20</font>
                         <aligny>center</aligny>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <scroll>false</scroll>
                         <align>left</align>
                         <info>ListItem.Label2</info>
@@ -140,7 +140,7 @@
                     <control type="image">
                         <width>1000</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiterounded.png</texture>
                     </control>
                     <control type="image">
                         <posx>10</posx>
@@ -155,7 +155,7 @@
                         <height>40</height>
                         <font>LCARS20</font>
                         <aligny>center</aligny>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <align>left</align>
                         <info>ListItem.Label</info>
                     </control>
@@ -181,7 +181,7 @@
                         <height>40</height>
                         <font>LCARS20</font>
                         <aligny>center</aligny>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <align>left</align>
                         <info>ListItem.Label2</info>
                     </control>
@@ -230,10 +230,10 @@
 					<spinheight>40</spinheight>
 					<texturenofocus></texturenofocus>
 					<texturefocus></texturefocus>
-					<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-					<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-					<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-					<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+					<textureup colordiffuse="HellOrange" >down1.png</textureup>
+					<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+					<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+					<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 				</control>    
             </control>
             <control type="list" id="150">
@@ -252,7 +252,7 @@
                         <posx>5</posx>
 						<width>300</width>
                         <height>40</height>
-						<texture colordiffuse="buttonselect2" border="20">whiteallrounded.png</texture>
+						<texture colordiffuse="HellOrange" border="20">whiteallrounded.png</texture>
                     </control>
                     <control type="label">
                         <left>10</left>
@@ -262,7 +262,7 @@
                         <font>LCARS20</font>
                         <align>center</align>
                         <scroll>false</scroll>
-				        <textcolor>black</textcolor>
+				        <textcolor>Black</textcolor>
 						<info>ListItem.Label</info>
                     </control>
                 </itemlayout>
@@ -271,7 +271,7 @@
                         <posx>5</posx>
 						<width>300</width>
                         <height>40</height>
-						<texture colordiffuse="buttonselect" border="20">whiteallrounded.png</texture>
+						<texture colordiffuse="White" border="20">whiteallrounded.png</texture>
                     </control>
                     <control type="label">
                         <left>10</left>
@@ -281,7 +281,7 @@
                         <font>LCARS20</font>
                         <align>center</align>
                         <scroll>false</scroll>
-				        <textcolor>black</textcolor>
+				        <textcolor>Black</textcolor>
 						<info>ListItem.Label</info>
                     </control>
                 </focusedlayout>

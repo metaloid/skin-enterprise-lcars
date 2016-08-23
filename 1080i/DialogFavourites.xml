@@ -49,10 +49,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >left.png</textureup>
-				<texturedown colordiffuse="buttonselect2">right.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">leftp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">rightp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >left.png</textureup>
+				<texturedown colordiffuse="HellOrange">right.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">leftp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">rightp.png</texturedownfocus>
 			</control>    
 		</control>		
             

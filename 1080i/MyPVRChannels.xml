@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>Black</backgroundcolor>
       <views>50</views>
 	<include>OpenClose</include>
     <controls>
@@ -52,10 +52,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
         </control>
 		<control type="group">
@@ -69,7 +69,7 @@
 				<width>670</width>
 				<height>900</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+				<texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
 				<bordertexture  border="40">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
 			</control>
@@ -110,7 +110,7 @@
 					<width>590</width>
 					<height>30</height>
 					<font>LCARS18</font>
-					<textcolor>gray</textcolor>
+					<textcolor>White</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<visible>Container(50).ListItem.HasEpg</visible>
@@ -120,7 +120,7 @@
 					<width>590</width>
 					<height>30</height>
 					<font>LCARS18</font>
-					<textcolor>gray</textcolor>
+					<textcolor>White</textcolor>
 					<align>center</align>
 					<scroll>false</scroll>
 					<visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>

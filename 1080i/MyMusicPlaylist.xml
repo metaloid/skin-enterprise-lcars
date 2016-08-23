@@ -2,7 +2,7 @@
 <window id="500">
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
 		<include>OpenClose</include>
      <controls>
         <include>Backgroundcolor</include>
@@ -142,40 +142,40 @@
 					<label>191</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
                 </control>
                 <control type="button" id="21" description="Save">
 					<width>270</width>
 					<label>190</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
                 </control>
                 <control type="button" id="22" description="Clear">
 					<width>270</width>
 					<label>192</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
                 </control>
                 <control type="button" id="23" description="Play">
 					<width>270</width>
 					<label>208</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
                 </control>
                 <control type="button" id="26" description="Repeat">
 					<width>270</width>
 					<label>-</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
                 </control>
 				<control type="button" id="607">
 					<onclick>ActivateWindow(Home)</onclick>
@@ -183,8 +183,8 @@
 					<label>Home</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
 				</control>
 				<control type="button" id="677">
 					<onclick>back</onclick>
@@ -192,8 +192,8 @@
 					<label>Back</label>
 					<textoffsetx>75</textoffsetx>
 					<align>left</align>
-					<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-					<texturefocus border="20" colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+					<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+					<texturefocus border="20" colordiffuse="White">whiteallrounded2.png</texturefocus>
 				</control>   
 			</control>
          </control>

@@ -2,7 +2,7 @@
 <window id="20">
     <defaultcontrol always="true">54</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <views>54,501,503</views>
     <include>OpenClose</include>
      <controls>
@@ -86,10 +86,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
 				<control type="button" id="677">
 					<onclick>back</onclick>

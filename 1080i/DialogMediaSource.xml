@@ -17,7 +17,7 @@
 				<width>1180</width>
         		<height>450</height>
         		<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
         		<bordersize>10</bordersize>
 			</control>
@@ -92,7 +92,7 @@
                         <visible>Control.HasFocus(10)</visible>
                         <width>800</width>
                         <height>75</height>
-                        <texture border="8" colordiffuse="buttonselect">images/Buttonselect.png</texture>
+                        <texture border="8" colordiffuse="White">images/Buttonselect.png</texture>
                         <!--<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>-->
                     </control>
                     <control type="label" description="Path label">
@@ -119,8 +119,8 @@
                 <label>-</label>
                 <textcolor>white</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<texturefocus border="8" colordiffuse="white">images/Buttonselect.png</texturefocus>
-                <texturenofocus border="8" colordiffuse="white">images/Buttonselect.png</texturenofocus>
+				<texturefocus border="8" colordiffuse="White">images/Buttonselect.png</texturefocus>
+                <texturenofocus border="8" colordiffuse="White">images/Buttonselect.png</texturenofocus>
                 <textoffsetx>20</textoffsetx>
                 <onup>10</onup>
                 <onleft>noop</onleft>

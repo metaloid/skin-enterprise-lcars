@@ -2,7 +2,7 @@
 <window id="34">
     <defaultcontrol always="true">2</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
     <controls>
         <include>BlackBackground</include>
@@ -55,14 +55,14 @@
                         <posx>45</posx>
                         <width>725</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiterounded.png</texture>
                     </control>
 					<control type="label" description="Main Label">
                         <posx>52</posx>
                         <height>40</height>
 						<width>725</width>
                         <font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<label>$INFO[ListItem.Label]</label>
                     </control>
                 </itemlayout>
@@ -71,14 +71,14 @@
                         <posx>45</posx>
                         <width>725</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiterounded.png</texture>
                     </control>
 					<control type="label" description="Main Label">
                         <posx>52</posx>
                         <height>40</height>
 						<width>725</width>
                         <font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
@@ -87,7 +87,7 @@
         <control type="label">
                 <posx>200</posx>
 				<top>1000</top>
-				<textcolor>black</textcolor>
+				<textcolor>Black</textcolor>
 				<width>1800</width>
                 <height>80</height>
                 <label>$LOCALIZE[20125] : $INFO[System.ProfileName]</label>

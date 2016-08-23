@@ -44,7 +44,7 @@
 				<height>40</height>
 				<align>center</align>
                 <aligny>center</aligny>
-                <textcolor>black</textcolor>
+                <textcolor>Black</textcolor>
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>

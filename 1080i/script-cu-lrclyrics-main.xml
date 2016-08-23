@@ -4,8 +4,8 @@
 	<defaultcontrol always="true">110</defaultcontrol>
 	<visible>StringCompare(Skin.String(osd-lyricpath),script.cu.lrclyrics)</visible>
 	<coordinates>
-		<left>500</left>
-		<top>360</top>
+		<left>385</left>
+		<top>200</top>
 	</coordinates>
     <include>OpenClose</include>
     <controls>
@@ -34,14 +34,14 @@
 				<control type="button" id="600">
 					<width>135</width>
 					<label>PREV</label>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded2.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiteallrounded2.png</texturefocus>
 					<onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="601">
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<visible>!MusicPlayer.Content(LiveTV)</visible>
 			        <label>REW</label>
                     <onclick>PlayerControl(Rewind)</onclick>
@@ -50,51 +50,44 @@
                     <visible>!MusicPlayer.Content(LiveTV)</visible>
 					<enable>Player.PauseEnabled</enable>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturenofocus>c9.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">c0.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="Blue">button-focus.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="White">button-focus.png</alttexturefocus>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Orange">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>PAUSE</label>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
-                <!--control type="button" id="603">
-                    <width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
-					<label>STOP</label>
-                    <onclick>PlayerControl(Stop)</onclick>
-				</control-->
                 <control type="button" id="604">
                     <visible>!MusicPlayer.Content(LiveTV)</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Orange">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="605">
                     <visible>!MusicPlayer.Content(LiveTV)</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="306">
                     <visible>MusicPlayer.Content(LiveTV)</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>LIST</label>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                 </control>
                 <control type="button" id="307">
                     <visible>MusicPlayer.Content(LiveTV) + !RDS.HasRadiotextPlus</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>EPG</label>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
@@ -102,8 +95,8 @@
                     <visible>RDS.HasRadiotextPlus</visible>
 					<visible>MusicPlayer.Content(LiveTV) + RDS.HasRadiotextPlus</visible>
                     <width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>209</label>
                     <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
                 </control>
@@ -111,8 +104,8 @@
                     <align>left</align>
 					<textoffsetx>30</textoffsetx>
 					<width>135</width>
-                    <texturenofocus colordiffuse="buttonselect2" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" flipx="true" border="20">whiteallrounded2.png</texturefocus>
+                    <texturenofocus colordiffuse="Beige" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" flipx="true" border="20">whiteallrounded2.png</texturefocus>
 					<label>CLOSE</label>
                     <onclick>close</onclick>
 					<onclick>FullScreen</onclick>
@@ -169,7 +162,7 @@
 						<width>1240</width>
 						<height>50</height>
 						<font>LCARS18</font>
-						<textcolor>orange</textcolor>
+						<textcolor>Orange</textcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!Control.HasFocus(110)</visible>
@@ -180,7 +173,7 @@
 						<width>1240</width>
 						<height>50</height>
 						<font>LCARS18</font>
-						<textcolor>orange</textcolor>
+						<textcolor>Orange</textcolor>
 						<align>left</align>
 						<label fallback="--">$INFO[ListItem.Label]</label>
 						<visible>Control.HasFocus(110)</visible>

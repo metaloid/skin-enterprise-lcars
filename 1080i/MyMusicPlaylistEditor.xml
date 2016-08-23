@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
      <controls>
         <include>Backgroundcolor</include>
@@ -111,7 +111,7 @@
 					<font>LCARS18</font>
 					<align>center</align>
 					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(50).ListItem.Title,[COLOR=orange]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Artist,[COLOR=orange]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Album,[COLOR=orange]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Duration,[COLOR=orange]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.TrackNumber,[COLOR=orange]$LOCALIZE[554]:[/COLOR] ,[CR]]$INFO[Container(50).ListItem.Genre,[COLOR=orange]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
 				</control>
@@ -134,7 +134,7 @@
 					<font>LCARS18</font>
 					<align>center</align>
 					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(100).ListItem.Title,[COLOR=orange]$LOCALIZE[556]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Artist,[COLOR=orange]$LOCALIZE[557]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Album,[COLOR=orange]$LOCALIZE[558]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Duration,[COLOR=orange]$LOCALIZE[555]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.TrackNumber,[COLOR=orange]$LOCALIZE[554]:[/COLOR] ,[CR]]$INFO[Container(100).ListItem.Genre,[COLOR=orange]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
 				</control>
@@ -157,7 +157,7 @@
                     <control type="image" description="THMBSBASECOLOR">
                        <width>400</width>
                        <height>40</height>
-                       <texture border="20" colordiffuse="buttonselect2"  flipx="true">whiterounded.png</texture>
+                       <texture border="20" colordiffuse="HellOrange"  flipx="true">whiterounded.png</texture>
                     </control>
 					<control type="label">
                         <posx>10</posx>
@@ -166,7 +166,7 @@
                         <height>40</height>
                         <font>LCARS18</font>
                         <aligny>center</aligny>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <selectedcolor>Red</selectedcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -176,13 +176,13 @@
                         <width>400</width>
                         <height>40</height>
 						<visible>Control.HasFocus(50)</visible>
-                        <texture border="20" colordiffuse="buttonselect" flipx="true">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="White" flipx="true">whiterounded.png</texture>
                     </control>
                     <control type="image">
                         <width>400</width>
                         <height>40</height>
 						<visible>!Control.HasFocus(50)</visible>
-                        <texture border="20" colordiffuse="buttonselect2" flipx="true">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange" flipx="true">whiterounded.png</texture>
                     </control>
                     <control type="label">
                         <posx>10</posx>
@@ -191,7 +191,7 @@
                         <font>LCARS18</font>
                         <aligny>center</aligny>
                         <selectedcolor>Red</selectedcolor>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
@@ -215,7 +215,7 @@
                     <control type="image" description="THMBSBASECOLOR">
                        <width>400</width>
                        <height>40</height>
-                       <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                       <texture border="20" colordiffuse="HellOrange">whiterounded.png</texture>
                     </control>
 					<control type="label">
                         <posx>10</posx>
@@ -223,7 +223,7 @@
                         <height>40</height>
                         <font>LCARS18</font>
                         <aligny>center</aligny>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <selectedcolor>Red</selectedcolor>
                         <scroll>false</scroll>
 						<info>ListItem.Label</info>
@@ -234,13 +234,13 @@
                         <width>400</width>
                         <height>40</height>
 						<visible>Control.HasFocus(100)</visible>
-                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiterounded.png</texture>
                     </control>
                     <control type="image">
                         <width>400</width>
                         <height>40</height>
 						<visible>!Control.HasFocus(100)</visible>
-                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiterounded.png</texture>
                     </control>
                     <control type="label">
                         <posx>10</posx>
@@ -249,7 +249,7 @@
                         <font>LCARS18</font>
                         <aligny>center</aligny>
                         <selectedcolor>Red</selectedcolor>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>

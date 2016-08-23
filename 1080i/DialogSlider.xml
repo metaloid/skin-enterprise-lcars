@@ -2,7 +2,7 @@
 <window id="145">
     <defaultcontrol always="true">11</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
     <controls>
         <control type="group">

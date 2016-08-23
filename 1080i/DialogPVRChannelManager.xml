@@ -12,7 +12,7 @@
             <width>1170</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
         </control>
@@ -110,8 +110,8 @@
                     <label>19201</label>
                 </control>
                 <control type="button" id ="9">
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
                     <description>Channel logo Button</description>
@@ -140,8 +140,8 @@
                     <label>19267</label>
                 </control>
                 <control type="button" id ="30">
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
                     <description>Group Manager Button</description>
@@ -149,8 +149,8 @@
                     <label>19205</label>
                 </control>
                 <control type="button" id ="34">
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
                     <description>TV/Radio Button</description>
@@ -158,8 +158,8 @@
                     <label>$LOCALIZE[19023] / $LOCALIZE[19024]</label>
                 </control>
                 <control type="button" id ="31">
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
                     <description>Edit channel Button</description>
@@ -167,8 +167,8 @@
                     <label>19203</label>
                 </control>
                 <control type="button" id ="32">
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
                     <description>Delete channel Button</description>
@@ -176,8 +176,8 @@
                     <label>19211</label>
                 </control>
                 <control type="button" id ="33">
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
                     <description>New channel Button</description>
@@ -186,8 +186,8 @@
                 </control>
 				<control type="button" id ="4">
 					<description>OK Button</description>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
 					<width>450</width>
@@ -195,8 +195,8 @@
 				</control>
 				<control type="button" id ="5">
 					<description>Apply changes Button</description>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
 					<width>450</width>
@@ -204,8 +204,8 @@
 				</control>
 				<control type="button" id ="6">
 					<description>Cancel Button</description>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<textoffsetx>7</textoffsetx>
 					<align>left</align>
 					<width>450</width>

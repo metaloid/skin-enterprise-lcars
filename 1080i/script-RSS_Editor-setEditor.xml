@@ -26,7 +26,7 @@
 			<aligny>center</aligny>
 			<font>font12</font>
 			<textcolor>blue</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<shadowcolor>Black</shadowcolor>
 		</control>
 		<control type="list" id="10">
 			<left>30</left>

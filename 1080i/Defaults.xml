@@ -8,7 +8,7 @@
         <aligny>center</aligny>
         <font>LCARS20</font>
         <textcolor>White</textcolor>
-        <focusedcolor>black</focusedcolor>
+        <focusedcolor>Black</focusedcolor>
         <selectedcolor>red</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <scroll>true</scroll>
@@ -63,11 +63,11 @@
         <textoffsety>-2</textoffsety>
         <font>LCARS20</font>
 		<invalidcolor>invalid</invalidcolor>
-        <textcolor>keys</textcolor>
-		<focusedcolor>keys2</focusedcolor>
+        <textcolor>Black</textcolor>
+		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-        <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-        <texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+        <texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded.png</texturenofocus>
+        <texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus>
         <pulseonselect>no</pulseonselect>
     </default>
     <default type="edit">
@@ -84,7 +84,7 @@
         <selectedcolor>White</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <invalidcolor>invalid</invalidcolor>
-        <texturefocus colordiffuse="buttonselect" border="20">images/buttonselect.png</texturefocus>
+        <texturefocus colordiffuse="White" border="20">images/buttonselect.png</texturefocus>
         <pulseonselect>false</pulseonselect>
     </default>
     <default type="togglebutton">
@@ -94,17 +94,17 @@
         <height>40</height>
         <disabledcolor>Disabled</disabledcolor>
         <pulseonselect>false</pulseonselect>
-		<texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded.png</texturenofocus>
-        <texturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</texturefocus>
-        <alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
-        <alttexturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</alttexturefocus>
+		<texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded.png</texturenofocus>
+        <texturefocus border="20" colordiffuse="White">whiteallrounded.png</texturefocus>
+        <alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
+        <alttexturefocus border="20" colordiffuse="White">whiteallrounded.png</alttexturefocus>
         <align>center</align>
         <aligny>top</aligny>
         <textoffsety>-2</textoffsety>
         <textoffsetx>0</textoffsetx>
 		<font>LCARS20</font>
-		<textcolor>keys</textcolor>
-		<focusedcolor>keys2</focusedcolor>
+		<textcolor>Black</textcolor>
+		<focusedcolor>Black</focusedcolor>
     </default>
     <default type="radiobutton">
         <left>300</left>
@@ -115,12 +115,12 @@
         <radioheight>35</radioheight>
         <textureradiofocus aspectratio="keep">radio/options-radio-button-fo.png</textureradiofocus>
         <textureradionofocus aspectratio="keep">radio/options-radio-button-nf.png</textureradionofocus>
-        <texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-        <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+        <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+        <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
         <label>215</label>
         <font>LCARS20</font>
-        <textcolor>keys</textcolor>
-		<focusedcolor>keys2</focusedcolor>
+        <textcolor>Black</textcolor>
+		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
         <textoffsetx>7</textoffsetx>
         <pulseonselect>no</pulseonselect>
@@ -129,16 +129,16 @@
         <posx>0</posx>
         <top>0</top>
         <textureup>up.png</textureup>
-        <textureupfocus colordiffuse="bgcolor2">upf.png</textureupfocus>
+        <textureupfocus colordiffuse="Green">upf.png</textureupfocus>
         <texturedown>down.png</texturedown>
-        <texturedownfocus colordiffuse="bgcolor2">downf.png</texturedownfocus>
-        <texturefocus colordiffuse="buttonselect" border="20">images/buttonselect.png</texturefocus>
+        <texturedownfocus colordiffuse="Green">downf.png</texturedownfocus>
+        <texturefocus colordiffuse="White" border="20">images/buttonselect.png</texturefocus>
         <spinwidth>50</spinwidth>
         <spinheight>40</spinheight>
         <font>LCARS20</font>
-        <textcolor>keys</textcolor>
-        <focusedcolor>keys2</focusedcolor>
-        <selectedcolor>keys2</selectedcolor>
+        <textcolor>Black</textcolor>
+        <focusedcolor>Black</focusedcolor>
+        <selectedcolor>Black</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <textoffsetx>30</textoffsetx>
         <align>left</align>
@@ -153,15 +153,15 @@
         <height>42</height>
         <spinwidth>35</spinwidth>
         <spinheight>35</spinheight>
-        <texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-        <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+        <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+        <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
         <textureup>up.png</textureup>
         <texturedown>down.png</texturedown>
         <textureupfocus>upf.png</textureupfocus>
         <texturedownfocus>downf.png</texturedownfocus>
         <font>LCARS20</font>
-        <textcolor>keys</textcolor>
-		<focusedcolor>keys2</focusedcolor>
+        <textcolor>Black</textcolor>
+		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
         <textoffsetx>7</textoffsetx>
         <aligny>center</aligny>
@@ -183,7 +183,7 @@
         <texturesliderbar>sliderbg.png</texturesliderbar>
         <textureslidernib>slidernibnf.png</textureslidernib>
         <textureslidernibfocus>slidernibfo.png</textureslidernibfocus>
-        <texturefocus colordiffuse="buttonselect" border="20">images/buttonselect.png</texturefocus>
+        <texturefocus colordiffuse="White" border="20">images/buttonselect.png</texturefocus>
         <texturenofocus>-</texturenofocus>
         <font>LCARS20</font>
         <aligny>center</aligny>
@@ -200,7 +200,7 @@
         <orientation>vertical</orientation>
         <texturesliderbackground colordiffuse="99ffffff" border="4">progress/progressbg.png</texturesliderbackground>
         <texturesliderbar colordiffuse="77ffffff" border="4">progress/progressm.png</texturesliderbar>
-        <texturesliderbarfocus colordiffuse="buttonselect2"  border="4" >progress/progressm.png</texturesliderbarfocus>
+        <texturesliderbarfocus colordiffuse="HellOrange"  border="4" >progress/progressm.png</texturesliderbarfocus>
         <pulseonselect>false</pulseonselect>
         <showonepage>false</showonepage>
     </default>

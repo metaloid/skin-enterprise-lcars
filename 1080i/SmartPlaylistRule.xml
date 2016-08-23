@@ -14,7 +14,7 @@
             <width>720</width>
             <height>500</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -49,14 +49,14 @@
 				<control type="spincontrolex" id="15">
                     <description>Rule Field</description>
                     <width>400</width>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded2.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiteallrounded2.png</texturefocus>
                 </control>
                 <control type="spincontrolex" id="16">
                     <description>Rule operator</description>
                     <width>400</width>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded2.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiteallrounded2.png</texturefocus>
                 </control>
 				<control type="edit" id="17">
 					<description>Name Button</description>
@@ -70,8 +70,8 @@
 					<label>-</label>
 					<textoffsetx>20</textoffsetx>
 					<pulseonselect>false</pulseonselect>
-					<texturenofocus colordiffuse="buttonselect2" flipy="true" border="8">images/Buttonselect.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" flipy="true" border="8">images/Buttonselect.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" flipy="true" border="8">images/Buttonselect.png</texturenofocus>
+					<texturefocus colordiffuse="White" flipy="true" border="8">images/Buttonselect.png</texturefocus>
 				</control>    
             </control>
             <control type="grouplist" id="9000">

@@ -63,8 +63,8 @@
 		<control type="button" id="7"><!-- Default button -->
 		        <textoffsetx>7</textoffsetx>
                 <align>left</align>
-                <texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-                <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+                <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+                <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
         </control>
 		<control type="radiobutton" id="8"><!-- Default radiobutton -->
 			<radioposx>630</radioposx>

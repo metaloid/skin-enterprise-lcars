@@ -13,7 +13,7 @@
 			<width>1400</width>
 			<height>950</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -70,10 +70,10 @@
 					<spinheight>40</spinheight>
 					<texturenofocus></texturenofocus>
 					<texturefocus></texturefocus>
-					<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-					<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-					<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-					<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+					<textureup colordiffuse="HellOrange" >down1.png</textureup>
+					<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+					<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+					<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 				</control>    
                 <control type="button" id="10" description="OK">
                     <width>300</width>
@@ -106,8 +106,8 @@
         <control type="button" id="3" description="Default Button">
 			<align>left</align>
 			<textoffsetx>7</textoffsetx>
-			<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-            <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+			<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
         </control>
         <control type="radiobutton" id="4" description="Default RadioButton">
             <align>left</align>

@@ -29,7 +29,7 @@
 				<align>left</align>
 				<label>Stop</label>
                 <texturenofocus diffuse="whiteallrounded2.png">c3.png</texturenofocus>
-                <texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+                <texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
 			<control type="togglebutton" id="604">
@@ -38,10 +38,10 @@
 				<textoffsetx>75</textoffsetx>
 				<align>left</align>
 				<label>Pause</label>
-				<texturenofocus colordiffuse="buttonselect2">whiteallrounded2.png</texturenofocus>
-                <texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
+                <texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
 				<alttexturenofocus colordiffuse="Blue">whiteallrounded2.png</alttexturenofocus>
-				<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+				<alttexturefocus colordiffuse="White">whiteallrounded2.png</alttexturefocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<altlabel>Play</altlabel>
 				<onclick>PlayerControl(Play)</onclick>
@@ -112,14 +112,14 @@
                     <posx>0</posx>
                     <width>270</width>
                     <height>40</height>
-					<texture colordiffuse="buttonselect2" border="40">whiteallrounded.png</texture>
+					<texture colordiffuse="HellOrange" border="40">whiteallrounded.png</texture>
                 </control>
 				<control type="label">
                     <left>10</left>
                     <top>8</top>
                     <width>250</width>
                     <height>20</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <aligny>center</aligny>
 					<font>LCARS20</font>
                     <align>center</align>
@@ -132,14 +132,14 @@
                     <posx>0</posx>
                     <width>270</width>
                     <height>40</height>
-					<texture colordiffuse="buttonselect" border="40">whiteallrounded.png</texture>
+					<texture colordiffuse="White" border="40">whiteallrounded.png</texture>
                 </control>
 				<control type="label">
                     <left>10</left>
                     <top>8</top>
                     <width>250</width>
                     <height>20</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
                     <aligny>center</aligny>
 					<font>LCARS20</font>
                     <align>center</align>
@@ -237,8 +237,8 @@
 				<font>LCARS18</font>
 				<scroll>false</scroll>
 				<align>center</align>
-				<textcolor>orange</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>Orange</textcolor>
+				<shadowcolor>Black</shadowcolor>
 				<aligny>center</aligny>
 				<label>$VAR[Extra]</label>
 			</control>
@@ -263,8 +263,8 @@
 				<height>40</height>
 				<font>LCARS18</font>
 				<align>center</align>
-				<textcolor>orange</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>Orange</textcolor>
+				<shadowcolor>Black</shadowcolor>
 				<aligny>center</aligny>
 				<label>$VAR[Extra]</label>
 			</control>
@@ -318,13 +318,13 @@
 					<centerleft>50</centerleft>
 					<height>40</height>
 					<width>100</width>
-					<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="buttonselect2">button-focus.png</texture>
+					<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="HellOrange">button-focus.png</texture>
 				</control>
 				<control type="image">
 					<centerleft>360</centerleft>
 					<height>40</height>
 					<width>510</width>
-					<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+					<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
 				</control>
 				<control type="label">
 					<centerleft>50</centerleft>
@@ -334,7 +334,7 @@
 					<font>LCARS18</font>
 					<scroll>false</scroll>
 					<align>center</align>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<label>$VAR[Extra]</label>
 				</control>
@@ -343,7 +343,7 @@
 					<posy>10</posy>
 					<width>460</width>
 					<height>20</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<font>LCARS20</font>
 					<scroll>false</scroll>
                     <aligny>center</aligny>
@@ -371,7 +371,7 @@
 					<font>LCARS18</font>
 					<scroll>false</scroll>
 					<align>center</align>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<label>$VAR[Extra]</label>
 				</control>
@@ -380,7 +380,7 @@
 					<posy>10</posy>
 					<width>460</width>
 					<height>20</height>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<font>LCARS20</font>
 					<aligny>center</aligny>
 					<label >$VAR[VARLabel3]</label>
@@ -461,7 +461,7 @@
                     <control type="image" description="THMBSBASECOLOR">
                         <width>$PARAM[item-width]</width>
                         <height>40</height>
-						<texture colordiffuse="buttonselect2" border="40" >whiterounded.png</texture>
+						<texture colordiffuse="HellOrange" border="40" >whiterounded.png</texture>
                     </control>
 				<control type="label">
 					<left>10</left>
@@ -471,7 +471,7 @@
 					<font>LCARS15</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<selectedcolor>red</selectedcolor>
 					<label>$VAR[AlbumInfoPanelLabel]</label>
 				</control>
@@ -482,7 +482,7 @@
 					<height>40</height>
 					<font>LCARS15</font>
 					<align>right</align>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<selectedcolor>red</selectedcolor>
 					<label>$INFO[ListItem.Duration]</label>
@@ -492,7 +492,7 @@
                     <control type="image" description="THMBSBASECOLOR">
                         <width>$PARAM[item-width]</width>
                         <height>40</height>
-						<texture colordiffuse="buttonselect"  border="40">whiterounded.png</texture>
+						<texture colordiffuse="White"  border="40">whiterounded.png</texture>
                     </control>
 				<control type="label">
 					<left>10</left>
@@ -501,7 +501,7 @@
 					<height>40</height>
 					<font>LCARS15</font>
 					<align>left</align>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<selectedcolor>red</selectedcolor>
 					<label>$VAR[AlbumInfoPanelLabel]</label>
@@ -513,7 +513,7 @@
 					<height>40</height>
 					<font>LCARS15</font>
 					<align>right</align>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<selectedcolor>red</selectedcolor>
 					<label>$INFO[ListItem.Duration]</label>
@@ -580,7 +580,7 @@
                     <control type="image" description="THMBSBASECOLOR">
                         <width>185</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect2">whiteallrounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiteallrounded.png</texture>
                     </control>
 					<control type="label" description="LABEL">
                         <centerleft>95</centerleft>
@@ -590,7 +590,7 @@
                         <font>LCARS20</font>
                         <align>center</align>
                         <scroll>false</scroll>
-				        <textcolor>black</textcolor>
+				        <textcolor>Black</textcolor>
                         <label>$INFO[ListItem.label]</label>
                     </control>
                 </itemlayout>								
@@ -599,7 +599,7 @@
                     <control type="image" description="THMBSBASE">
                         <width>185</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect">whiteallrounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiteallrounded.png</texture>
                     </control>
 					<control type="label" description="label">
                         <centerleft>95</centerleft>
@@ -608,7 +608,7 @@
                         <height>28</height>
                         <font>LCARS20</font>
                         <align>center</align>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <label>$INFO[ListItem.label]</label>
                     </control>
                 </focusedlayout>
@@ -715,7 +715,7 @@
         <aligny>center</aligny>
         <width>1920</width>
         <height>40</height>
-        <textcolor>black</textcolor>
+        <textcolor>Black</textcolor>
 		<font>LCARS24</font>
     </include>
     <include name="HeadingL">
@@ -725,7 +725,7 @@
         <aligny>center</aligny>
         <width>1110</width>
         <height>45</height>
-        <textcolor>black</textcolor>
+        <textcolor>Black</textcolor>
         <font>LCARS24</font>
     </include>
     <include name="HeadingR">
@@ -760,14 +760,14 @@
                 <height>60</height>
                 <font>LCARS20</font>
                 <scroll>false</scroll>
-                <textcolor>buttonselect2</textcolor>
+                <textcolor>HellOrange</textcolor>
 		    <label>$VAR[RootLabel]</label>
             </control>
             <control type="label" description="Number of files">
                 <width>auto</width>
                 <height>60</height>
                 <font>LCARS20</font>
-                <textcolor>buttonselect</textcolor>
+                <textcolor>White</textcolor>
 		    <label>$INFO[Container.NumItems, (,)]</label>
             </control>
 	  </control>
@@ -882,8 +882,8 @@
             </control>
             <control type="button" id="7">
             <align>left</align>
-            <texturenofocus border="20" colordiffuse="buttonselect2">whiterounded.png</texturenofocus>
-			<texturefocus border="20" colordiffuse="buttonselect">whiterounded.png</texturefocus>
+            <texturenofocus border="20" colordiffuse="HellOrange">whiterounded.png</texturenofocus>
+			<texturefocus border="20" colordiffuse="White">whiterounded.png</texturefocus>
 			<textoffsetx>7</textoffsetx>
             </control>
             <control type="radiobutton" id="8">
@@ -1014,16 +1014,16 @@
 		<include name="Keyboardbuttons">
         <width>85</width>
         <height>40</height>
-        <texturenofocus border="20" colordiffuse="buttonselect2">whiteallrounded.png</texturenofocus>
-        <texturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</texturefocus>
+        <texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded.png</texturenofocus>
+        <texturefocus border="20" colordiffuse="White">whiteallrounded.png</texturefocus>
         <alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
-        <alttexturefocus border="20" colordiffuse="buttonselect">whiteallrounded.png</alttexturefocus>
+        <alttexturefocus border="20" colordiffuse="White">whiteallrounded.png</alttexturefocus>
         <align>center</align>
         <aligny>center</aligny>
         <textoffsetx>0</textoffsetx>
 		<font>LCARS20</font>
-		<textcolor>keys</textcolor>
-		<focusedcolor>keys2</focusedcolor>
+		<textcolor>Black</textcolor>
+		<focusedcolor>Black</focusedcolor>
     </include>
     <!--PANEL FOR BIG LIST-->
     <include name="LargeListItemCount">

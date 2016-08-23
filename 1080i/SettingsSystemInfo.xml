@@ -2,7 +2,7 @@
 <window id="7">
     <defaultcontrol always="true">9001</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
     <controls>
         <include>BlackBackground</include>

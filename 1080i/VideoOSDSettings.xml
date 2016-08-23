@@ -2,7 +2,7 @@
 <window id="123">
     <defaultcontrol always="true">5</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>    <controls>
         <control type="group">
             <animation effect="fade" end="100" time="400">Visible</animation>
@@ -48,8 +48,8 @@
             <control type="button" id="7">
                 <description>Default Button</description>
                 <textoffsetx>7</textoffsetx>
-				<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+				<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 				<align>left</align>
                 <aligny>center</aligny>
             </control>

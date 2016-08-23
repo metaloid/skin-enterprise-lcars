@@ -2,7 +2,7 @@
 <window>
     <allowoverlay>no</allowoverlay>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <controls>
         <include>Backgroundcolor</include>
         <!--control type="image">
@@ -56,14 +56,14 @@
 						<posx>20</posx>
                         <width>300</width>
                         <height>40</height>
-                        <texture colordiffuse="buttonselect2" >whiteallrounded2.png</texture>
+                        <texture colordiffuse="HellOrange" >whiteallrounded2.png</texture>
 					</control>
 					<control type="label">
 						<left>95</left>
 						<posy>10</posy>
 						<width>460</width>
 						<height>20</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<scroll>false</scroll>
 						<aligny>center</aligny>
@@ -77,7 +77,7 @@
 						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<align>center</align>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
@@ -94,7 +94,7 @@
 						<posy>10</posy>
 						<width>460</width>
 						<height>20</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<scroll>false</scroll>
 						<aligny>center</aligny>
@@ -108,7 +108,7 @@
 						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<align>center</align>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
@@ -269,8 +269,8 @@
                     <control type="button" id="8">
                         <description>Settings</description>
                         <width>300</width>
-                        <texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
-                        <texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+                        <texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+                        <texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
                         <align>LEFT</align>
                         <textoffsetx>75</textoffsetx>
                         <label>5</label>

@@ -40,7 +40,7 @@
 					<control type="image">
                     	<width>300</width>
                     	<height>40</height>
-                    	<texture diffuse="whiteallrounded2.png" colordiffuse="buttonselect2" >button-focus.png</texture>
+                    	<texture diffuse="whiteallrounded2.png" colordiffuse="HellOrange" >button-focus.png</texture>
                 	</control>
                 	<control type="label">
 						<posx>4</posx>
@@ -59,7 +59,7 @@
 						<width>220</width>
 						<height>40</height>
 						<font>LCARS18</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -69,7 +69,7 @@
 					<control type="image">
                     	<width>300</width>
                     	<height>40</height>
-                    	<texture diffuse="whiteallrounded2.png" colordiffuse="buttonselect" >button-focus.png</texture>
+                    	<texture diffuse="whiteallrounded2.png" colordiffuse="White" >button-focus.png</texture>
                 	</control>
                 	<control type="label">
 						<posx>4</posx>
@@ -87,7 +87,7 @@
 						<posy>0</posy>
 						<width>220</width>
 						<height>40</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.ChannelName]</label>
@@ -249,7 +249,7 @@
 						<posy>0</posy>
 						<width>1160</width>
 						<height>40</height>
-						<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+						<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -257,7 +257,7 @@
 						<width>180</width>
 						<height>40</height>
 						<scroll>false</scroll>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -267,7 +267,7 @@
 						<width>240</width>
 						<height>40</height>
 						<scroll>false</scroll>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -276,7 +276,7 @@
 						<posy>0</posy>
 						<width>655</width>
 						<scroll>false</scroll>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<height>40</height>
 						<label>$INFO[ListItem.Date]</label>
@@ -304,14 +304,14 @@
 						<posy>0</posy>
 						<width>1160</width>
 						<height>40</height>
-						<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						<texture border="5" colordiffuse="White">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<posx>15</posx>
 						<posy>0</posy>
 						<width>180</width>
 						<font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<height>40</height>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -320,7 +320,7 @@
 						<posy>0</posy>
 						<width>240</width>
 						<font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<height>40</height>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -329,7 +329,7 @@
 						<posy>0</posy>
 						<width>655</width>
 						<font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<height>40</height>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
@@ -370,7 +370,7 @@
                 <width>600</width>
                 <height>30</height>
                 <font>LCARS15</font>
-                <textcolor>gray</textcolor>
+                <textcolor>White</textcolor>
                 <scroll>false</scroll>
 				<align>center</align>
                 <visible>Container(50).ListItem.HasEpg</visible>
@@ -380,7 +380,7 @@
                 <width>600</width>
                 <height>30</height>
                 <font>LCARS15</font>
-                <textcolor>gray</textcolor>
+                <textcolor>White</textcolor>
                 <align>center</align>
                 <scroll>false</scroll>
                 <visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
@@ -430,13 +430,13 @@
 						<centerleft>50</centerleft>
 						<height>40</height>
 						<width>100</width>
-						<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="buttonselect2">button-focus.png</texture>
+						<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="HellOrange">button-focus.png</texture>
 					</control>
 					<control type="image">
 						<centerleft>360</centerleft>
 						<height>40</height>
 						<width>510</width>
-						<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+						<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<centerleft>50</centerleft>
@@ -446,7 +446,7 @@
 						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<align>center</align>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 					</control>
@@ -455,7 +455,7 @@
 						<posy>10</posy>
 						<width>460</width>
 						<height>20</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<scroll>false</scroll>
 						<aligny>center</aligny>
@@ -467,13 +467,13 @@
 						<centerleft>50</centerleft>
 						<height>40</height>
 						<width>100</width>
-						<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="buttonselect">button-focus.png</texture>
+						<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="White">button-focus.png</texture>
 					</control>
 					<control type="image">
 						<centerleft>360</centerleft>
 						<height>40</height>
 						<width>510</width>
-						<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						<texture border="5" colordiffuse="White">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<centerleft>50</centerleft>
@@ -483,7 +483,7 @@
 						<font>LCARS18</font>
 						<scroll>false</scroll>
 						<align>center</align>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 					</control>
@@ -492,7 +492,7 @@
 						<posy>10</posy>
 						<width>460</width>
 						<height>20</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<scroll>true</scroll>
 						<aligny>center</aligny>
@@ -566,7 +566,7 @@
 						<posy>0</posy>
 						<width>1160</width>
 						<height>40</height>
-						<texture  border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+						<texture  border="5" colordiffuse="HellOrange">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<posx>52</posx>
@@ -574,7 +574,7 @@
 						<width>240</width>
 						<height>24</height>
 						<scroll>false</scroll>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -584,7 +584,7 @@
 						<width>350</width>
 						<height>24</height>
 						<scroll>false</scroll>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -595,7 +595,7 @@
 						<height>24</height>
 						<scroll>false</scroll>
 						<font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<align>center</align>
 						<label>$INFO[ListItem.Date]</label>
 					</control>
@@ -613,14 +613,14 @@
 						<posy>0</posy>
 						<width>1160</width>
 						<height>40</height>
-						<texture  border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						<texture  border="5" colordiffuse="White">button-focus.png</texture>
 					</control>
 					<control type="label">
 						<posx>52</posx>
 						<posy>10</posy>
 						<width>240</width>
 						<height>24</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -629,7 +629,7 @@
 						<posy>10</posy>
 						<width>350</width>
 						<height>24</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<font>LCARS20</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -639,7 +639,7 @@
 						<width>260</width>
 						<height>24</height>
 						<font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
 						<align>center</align>
 						<label>$INFO[ListItem.Date]</label>
 					</control>

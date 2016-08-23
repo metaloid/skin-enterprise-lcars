@@ -31,14 +31,14 @@
 				<control type="button" id="200">
 					<width>135</width>
 					<label>PREV</label>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded2.png</texturefocus>
+					<texturenofocus colordiffuse="Flieder" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiteallrounded2.png</texturefocus>
 					<onclick>PlayerControl(Previous)</onclick>
                 </control>
                 <control type="button" id="201">
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Flieder">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 			        <label>REW</label>
                     <onclick>PlayerControl(Rewind)</onclick>
@@ -47,42 +47,42 @@
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
 					<enable>Player.PauseEnabled</enable>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturenofocus colordiffuse="Blue">c6.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">c0.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="Blue">button-focus.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="White">button-focus.png</alttexturefocus>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Flieder">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>PAUSE</label>
                     <altlabel>PLAY</altlabel>
                     <onclick>PlayerControl(Play)</onclick>
                 </control>
                 <control type="button" id="203">
                     <width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Red">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>STOP</label>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="204">
                     <visible>!VideoPlayer.Content(LiveTV)</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>FFWD</label>
                     <onclick>PlayerControl(Forward)</onclick>
                 </control>
                 <control type="button" id="205">
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>NEXT</label>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="306">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Apricot">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>LIST</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
@@ -90,16 +90,16 @@
                 <control type="button" id="307">
                     <visible>VideoPlayer.Content(LiveTV)</visible>
 					<width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>EPG</label>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                 </control>
                 <control type="togglebutton" id="353">
                     <width>90</width>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<label>REC</label>
 					<altlabel>[COLOR=red]REC[/COLOR]</altlabel>
 					<onclick>PlayerControl(Record)</onclick>
@@ -109,10 +109,10 @@
                 </control>
 				<control type="togglebutton" id="250" description="Subtitles">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
-					<alttexturenofocus diffuse="whiteallrounded2.png">c6.png</alttexturenofocus>
-					<alttexturefocus colordiffuse="buttonselect">whiteallrounded2.png</alttexturefocus>
+					<texturenofocus colordiffuse="Beige">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
+					<alttexturenofocus colordiffuse="Blue">button-focus.png</alttexturenofocus>
+					<alttexturefocus colordiffuse="White">whiteallrounded2.png</alttexturefocus>
 					<width>90</width>
 					<label>sub</label>
 					<onclick>SetFocus(100,2)</onclick>
@@ -121,24 +121,24 @@
 				</control>
 				<control type="button" id="251">
 					<label>vid</label>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Pink">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<width>90</width>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 				</control>
 				<control type="button" id="252">
 					<label>aud</label>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Pink">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<width>90</width>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 				</control>
 				<control type="button" id="253">
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Pink">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<width>90</width>
 					<label>bm</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
@@ -147,16 +147,16 @@
 				<control type="button" id="254">
 					<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasMenu</visible>
 					<label>dvd</label>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Leuchtblau">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<width>90</width>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
 				</control>
 				<control type="button" id="350">
 					<visible>VideoPlayer.Content(LiveTV)</visible>
-					<texturenofocus colordiffuse="buttonselect2">c2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">c0.png</texturefocus>
+					<texturenofocus colordiffuse="Leuchtblau">button-focus.png</texturenofocus>
+					<texturefocus colordiffuse="White">button-focus.png</texturefocus>
 					<width>90</width>
 					<label>Txt</label>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
@@ -166,8 +166,8 @@
                     <align>left</align>
 					<textoffsetx>30</textoffsetx>
 					<width>135</width>
-                    <texturenofocus colordiffuse="buttonselect2" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" flipx="true" border="20">whiteallrounded2.png</texturefocus>
+                    <texturenofocus colordiffuse="Leuchtblau" flipx="true" border="20">whiteallrounded2.png</texturenofocus>
+					<texturefocus colordiffuse="White" flipx="true" border="20">whiteallrounded2.png</texturefocus>
 					<label>CLOSE</label>
                     <onclick>Dialog.Close(VideoOSD,true)</onclick>
 					<onclick>FullScreen</onclick>

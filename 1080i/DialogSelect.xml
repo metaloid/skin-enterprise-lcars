@@ -12,7 +12,7 @@
 				<width>1000</width>
         		<height>450</height>
         		<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
         		<bordersize>10</bordersize>
 			</control>
@@ -39,7 +39,7 @@
 				<width>650</width>
         		<height>450</height>
         		<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
         		<bordersize>10</bordersize>
 			</control>
@@ -75,7 +75,7 @@
                         <posx>20</posx>
                         <width>500</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiterounded.png</texture>
                 </control>
 				<control type="label">
 					<posx>35</posx>
@@ -83,7 +83,7 @@
                     <width>460</width>
 					<height>28</height>
 					<font>LCARS20</font>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
 				    <align>left</align>
@@ -95,7 +95,7 @@
                         <posx>20</posx>
                         <width>500</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiterounded.png</texture>
                 </control>
 				<control type="label">
 					<posx>35</posx>
@@ -103,7 +103,7 @@
                     <width>460</width>
 					<height>28</height>
 					<font>LCARS20</font>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					    <align>left</align>
                     <label>$INFO[ListItem.Label]</label>
@@ -126,7 +126,7 @@
                         <posx>20</posx>
                         <width>500</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect2">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiterounded.png</texture>
                 </control>
 				<control type="label">
 					<posx>35</posx>
@@ -134,7 +134,7 @@
                     <width>460</width>
 					<height>28</height>
 					<font>LCARS20</font>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
 				    <align>left</align>
@@ -146,7 +146,7 @@
                         <posx>20</posx>
                         <width>500</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect">whiterounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiterounded.png</texture>
                 </control>
 				<control type="label">
 					<posx>35</posx>
@@ -154,7 +154,7 @@
                     <width>460</width>
 					<height>28</height>
 					<font>LCARS20</font>
-					<textcolor>black</textcolor>
+					<textcolor>Black</textcolor>
 					<aligny>center</aligny>
 					    <align>left</align>
                     <label>$INFO[ListItem.Label]</label>
@@ -211,10 +211,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
 		</control>		
 						

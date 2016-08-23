@@ -17,7 +17,7 @@
 				<width>1180</width>
         		<height>450</height>
         		<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
         		<bordersize>10</bordersize>
 			</control>
@@ -86,8 +86,8 @@
 						<label>186</label>
 						<align>left</align>
 						<textoffsetx>7</textoffsetx>
-						<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+						<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					</control>
 					<control type="button" id="414">
 						<description>Cancel button</description>
@@ -95,8 +95,8 @@
 						<label>222</label>
 						<align>left</align>
 						<textoffsetx>7</textoffsetx>
-						<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+						<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					</control>
 					<control type="button" id="415">
 						<description>Create folder button</description>
@@ -104,8 +104,8 @@
 						<label>119</label>
 						<align>left</align>
 						<textoffsetx>7</textoffsetx>
-						<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-						<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+						<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+						<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					</control>
 					<control type="radiobutton" id="416">
 						<description>Flip Image button</description>
@@ -130,7 +130,7 @@
 							<top>0</top>
 							<width>620</width>
 							<height>40</height>
-							<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+							<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -141,7 +141,7 @@
 							<font>LCARS20</font>
 							<align>left</align>
 							<scroll>false</scroll>
-							<textcolor>black</textcolor>
+							<textcolor>Black</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -153,7 +153,7 @@
 							<height>41</height>
 							<visible>!Control.HasFocus(450)</visible>
 							<height>40</height>
-							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+							<texture border="5" colordiffuse="White">button-focus.png</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -162,7 +162,7 @@
 							<height>41</height>
 							<visible>Control.HasFocus(450)</visible>
 							<height>40</height>
-							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+							<texture border="5" colordiffuse="White">button-focus.png</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -173,7 +173,7 @@
 							<font>LCARS20</font>
 							<align>left</align>
 							<scroll>false</scroll>
-							<textcolor>black</textcolor>
+							<textcolor>Black</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -195,7 +195,7 @@
 							<top>0</top>
 							<width>620</width>
 							<height>40</height>
-							<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+							<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -206,7 +206,7 @@
 							<font>LCARS20</font>
 							<align>left</align>
 							<scroll>false</scroll>
-							<textcolor>black</textcolor>
+							<textcolor>Black</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -217,7 +217,7 @@
 							<width>620</width>
 							<height>40</height>
 							<visible>!Control.HasFocus(451)</visible>
-							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+							<texture border="5" colordiffuse="White">button-focus.png</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -225,7 +225,7 @@
 							<width>620</width>
 							<height>40</height>
 							<visible>Control.HasFocus(451)</visible>
-							<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+							<texture border="5" colordiffuse="White">button-focus.png</texture>
 						</control>
 						<control type="label">
 							<left>30</left>
@@ -236,7 +236,7 @@
 							<font>LCARS20</font>
 							<align>left</align>
 							<scroll>false</scroll>
-							<textcolor>black</textcolor>
+							<textcolor>Black</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>

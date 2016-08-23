@@ -14,106 +14,106 @@
             <animation effect="fade" start="70" end="0" time="100">Hidden</animation>
             <top>40</top>
 			<posx>60</posx>
-				<control type="button">
-                <top>80r</top>
-					<width>270</width>
-			        <textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
+			<control type="button">
+				<top>80r</top>
+				<width>270</width>
+		        <textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>left</align>
+				<texturenofocus colordiffuse="Orange">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
 				<label>$LOCALIZE[142] $INFO[System.Time]</label>
-				</control>
+			</control>
 			<control type="button" description="Next item">
-                <top>80r</top>
-                <posx>275</posx>
+				<top>80r</top>
+				<posx>275</posx>
 				<width>1250</width>
 				<textwidth>900</textwidth>
-				<textoffsetx>150</textoffsetx>
+				<textoffsetx>25</textoffsetx>
 				<align>left</align>
-                <width>1250</width>
-                <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ]</label>
- 				<texturenofocus  colordiffuse="orange" border="20">button-focus.png</texturenofocus>
-				<texturefocus colordiffuse="orange"  border="20">button-focus.png</texturefocus>
-           </control>
-				<control type="button">
-                <top>80r</top>
-					<posx>330r</posx>
-					<width>270</width>
-			        <textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png" flipx="true">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect"  flipx="true">whiteallrounded2.png</texturefocus>
+				<width>1250</width>
+				<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ]</label>
+				<texturenofocus  colordiffuse="Orange" border="20">button-focus.png</texturenofocus>
+				<texturefocus colordiffuse="Orange"  border="20">button-focus.png</texturefocus>
+			</control>
+			<control type="button">
+				<top>80r</top>
+				<posx>330r</posx>
+				<width>270</width>
+				<textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>right</align>
+				<texturenofocus colordiffuse="Orange"  flipx="true">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White"  flipx="true">whiteallrounded2.png</texturefocus>
 				<label>$INFO[Control.GetLabel(23), ,%]</label>
-				</control>
-				<control type="button">
-					<width>270</width>
-			        <textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect">whiteallrounded2.png</texturefocus>
-					<label>$INFO[Player.Time]</label>
-				</control>
-				<control type="progress">
-					<visible>true</visible>
-					<posx>275</posx>
-					<width>1250</width>
-					<height>40</height>
-					<texturebg colordiffuse="orange" border="20">button-focus.png</texturebg>
-					<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
-					<info>Player.CacheLevel</info>
-					<visible>Player.Caching</visible>
-				</control>
-				<control type="progress" id="23" description="Progress Bar">
-					<width>1250</width>
-					<posx>275</posx>
-					<height>40</height>
-					<visible>true</visible>
-					<texturebg colordiffuse="orange" border="20">button-focus.png</texturebg>
-					<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
-					<info>Player.Progress</info>
-				</control>
-				<control type="button">
-					<posx>330r</posx>
-					<width>270</width>
-			        <textwidth>190</textwidth>
-					<textoffsetx>75</textoffsetx>
-					<align>left</align>
-					<texturenofocus diffuse="whiteallrounded2.png" flipx="true">c1.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect"  flipx="true">whiteallrounded2.png</texturefocus>
-					<label>- $INFO[Player.TimeRemaining]</label>
-				</control>
-				<control type="label" description="Title item">
-					<top>3</top>
-					<posx>125</posx>
-					<height>40</height>
-					<align>center</align>
-					<textcolor>black</textcolor>
-					<scroll>false</scroll>
-					<width>925</width>
-                <label>$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,, ]$INFO[VideoPlayer.Season,S , • ]$INFO[VideoPlayer.Episode,E , ]$INFO[VideoPlayer.Title] </label>
-				</control>
+			</control>
+			<control type="button">
+				<width>270</width>
+				<textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>left</align>
+				<texturenofocus colordiffuse="Orange">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
+				<label>$INFO[Player.Time]</label>
+			</control>
+			<control type="progress">
+				<visible>true</visible>
+				<posx>275</posx>
+				<width>1250</width>
+				<height>40</height>
+				<texturebg colordiffuse="Orange" border="20">button-focus.png</texturebg>
+				<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
+				<info>Player.CacheLevel</info>
+				<visible>Player.Caching</visible>
+			</control>
+			<control type="progress" id="23" description="Progress Bar">
+				<width>1250</width>
+				<posx>275</posx>
+				<height>40</height>
+				<visible>true</visible>
+				<texturebg colordiffuse="Orange" border="20">button-focus.png</texturebg>
+				<midtexture colordiffuse="Blue" border="20">button-focus.png</midtexture>
+				<info>Player.Progress</info>
+			</control>
+			<control type="button">
+				<posx>330r</posx>
+				<width>270</width>
+				<textwidth>190</textwidth>
+				<textoffsetx>75</textoffsetx>
+				<align>right</align>
+				<texturenofocus colordiffuse="Orange"  flipx="true">whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White"  flipx="true">whiteallrounded2.png</texturefocus>
+				<label>$INFO[Player.TimeRemaining]</label>
+			</control>
+			<control type="label" description="Title item">
+				<top>2</top>
+				<posx>300</posx>
+				<height>40</height>
+				<align>left</align>
+				<textcolor>Black</textcolor>
+				<scroll>false</scroll>
+				<width>1050</width>
+				<label>$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,, ]$INFO[VideoPlayer.Season,S , • ]$INFO[VideoPlayer.Episode,E , ]$INFO[VideoPlayer.Title] </label>
+			</control>
 		    <control type="group" description="Icons on Seekbar">
-                <top>3</top>
-                <posx>285</posx>
+                <top>2</top>
+                <posx>1500</posx>
 				<control type="label" description="Buffer icon">
 					<visible>Player.Caching</visible>
 					<label>BUFFERING...</label>
-					<width>270</width>
+					<width>200</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" id="pause" >
 					<visible>Player.Paused + !Player.Caching</visible>
 					<label>STANDING BY</label>
-					<width>270</width>
+					<width>200</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="FF">
@@ -121,8 +121,8 @@
 					<label>2x FFW </label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="FFFF">
@@ -130,8 +130,8 @@
 					<label>4x FFW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="2FFFF">
@@ -139,8 +139,8 @@
 					<label>8x FFW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="4FFFF">
@@ -148,8 +148,8 @@
 					<label>16x FFW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="8FFFF">
@@ -157,8 +157,8 @@
 					<label>32x FFW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="RF">
@@ -166,8 +166,8 @@
 					<label>2x RW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="RFFF">
@@ -175,8 +175,8 @@
 					<label>4x RW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="2RFFF">
@@ -184,8 +184,8 @@
 					<label>8x RW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="4RFFF">
@@ -193,8 +193,8 @@
 					<label>16x RW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="8RFFF">
@@ -202,8 +202,8 @@
 					<label>32x RW</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
 				<control type="label" description="Seek time label">
@@ -212,8 +212,8 @@
 					<label>$INFO[Player.SeekOffset]</label>
 					<width>270</width>
 					<height>40</height>
-					<align>left</align>
-					<textcolor>black</textcolor>
+					<align>right</align>
+					<textcolor>Black</textcolor>
 					<scroll>false</scroll>
 				</control>
             </control>

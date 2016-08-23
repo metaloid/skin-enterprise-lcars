@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="true">575</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
 		<include>OpenClose</include>
     <controls>
         <include>Backgroundcolor</include>
@@ -41,8 +41,8 @@
                 <control type="togglebutton" id="4">
                     <width>270</width>
 					<label>Database info</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidedb)</onclick>
                     <selected>!Skin.HasSetting(hidedb)</selected>
@@ -50,8 +50,8 @@
                 <control type="togglebutton" id="5">
                     <width>270</width>
 					<label>$LOCALIZE[31033]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(colormenu)</onclick>
                     <selected>!Skin.HasSetting(colormenu)</selected>
@@ -59,8 +59,8 @@
 				<control type="togglebutton" id="9">
                     <width>270</width>
 					<label>$LOCALIZE[31047]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(HideClock)</onclick>
                     <selected>!Skin.HasSetting(HideClock)</selected>
@@ -68,8 +68,8 @@
                 <control type="togglebutton" id="13">
                     <width>270</width>
 					<label>Show IP adress</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hideconnection)</onclick>
                     <selected>!Skin.HasSetting(hideconnection)</selected>
@@ -78,8 +78,8 @@
                     <width>270</width>
 					<visible>System.Platform.Linux.RaspberryPi</visible>
 					<label>CPU Temp</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidecpu)</onclick>
                     <selected>!Skin.HasSetting(hidecpu)</selected>
@@ -105,8 +105,8 @@
                 <control type="togglebutton" id="1001">
                     <width>270</width>
 					<label>$LOCALIZE[20342]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidemovie)</onclick>
                     <selected>!Skin.HasSetting(hidemovie)</selected>
@@ -114,8 +114,8 @@
                 <control type="togglebutton" id="1002">
                     <width>270</width>
 					<label>$LOCALIZE[20343]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidetv)</onclick>
                     <selected>!Skin.HasSetting(hidetv)</selected>
@@ -123,8 +123,8 @@
 				<control type="togglebutton" id="1003">
                     <width>270</width>
 					<label>$LOCALIZE[1]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidepic)</onclick>
                     <selected>!Skin.HasSetting(hidepic)</selected>
@@ -133,8 +133,8 @@
 					<visible>System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
                     <width>270</width>
 					<label>$ADDON[script.tv.show.next.aired 32019]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(nextair)</onclick>
                     <selected>!Skin.HasSetting(nextair)</selected>
@@ -142,8 +142,8 @@
                 <control type="togglebutton" id="1005">
                     <width>270</width>
 					<label>$LOCALIZE[1036]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidefav)</onclick>
                     <selected>!Skin.HasSetting(hidefav)</selected>
@@ -151,8 +151,8 @@
                 <control type="togglebutton" id="1006">
                     <width>270</width>
 					<label>$LOCALIZE[24001]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hideaddon)</onclick>
                     <selected>!Skin.HasSetting(hideaddon)</selected>
@@ -160,8 +160,8 @@
                 <control type="togglebutton" id="1007">
                     <width>270</width>
 					<label>$LOCALIZE[653]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hideupdate)</onclick>
                     <selected>!Skin.HasSetting(hideupdate)</selected>
@@ -187,8 +187,8 @@
                 <control type="togglebutton" id="1009">
                     <width>270</width>
 					<label>$LOCALIZE[8]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidewtr)</onclick>
                     <selected>!Skin.HasSetting(hidewtr)</selected>
@@ -196,8 +196,8 @@
                 <control type="togglebutton" id="1008">
                     <width>270</width>
 					<label>$LOCALIZE[2]</label>
-					<texturenofocus border="20" colordiffuse="red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue2">whiteallrounded.png</alttexturenofocus>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
 					<include>Keyboardbuttons</include>
 					<onclick>Skin.ToggleSetting(hidemusic)</onclick>
                     <selected>!Skin.HasSetting(hidemusic)</selected>

@@ -70,8 +70,8 @@
             </control>
             <control type="button" id="7">
                 <description>Default Button</description>
-                <texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+                <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+				<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 				<textoffsetx>7</textoffsetx>
 				<height>40</height>
                 <align>left</align>

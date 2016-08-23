@@ -1,48 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="2005">
+<window>
     <defaultcontrol>-</defaultcontrol>
-    <!--<onunload>Dialog.close(all,true)</onunload>-->
     <controls>
-        <control type="group" >
-            <visible>!Window.IsActive(DialogFullscreenInfo.xml)</visible>
-            <animation effect="fade" time="200">VisibleChange</animation>
-            <control type="grouplist" id="0">
-                <posx>60</posx>
-                <top>90</top>
-                <width>1800</width>
-                <height>500</height>
-                <itemgap>10</itemgap>
-                <control type="label" id="10" description="row 1 sys label">
-                    <width>1800</width>
-                    <height>50</height>
-                    <align>left</align>
-                    <font>LCARS18</font>
-                    <aligny>center</aligny>
-                    <label>-</label>
-                </control>
-                <control type="label" id="11" description="row 2 sys label">
-                    <width>1800</width>
-                    <height>50</height>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>LCARS18</font>
-                    <label>-</label>
-                </control>
-                <control type="label" id="12" description="row 3 sys label">
-                    <width>1800</width>
-                    <height>90</height>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>LCARS18</font>
-                    <label>-</label>
-                </control>
-            </control>
-        </control>
-        <!--control type="button" id="88" >
+        <control type="label" id="88" >
             <visible>Player.Paused</visible>
-            <top>40</top>
-            <left>260</left>
+            <top>42</top>
+            <posx>1560</posx>
 			<label>STANDING BY</label>
-        </control-->
+			<width>200</width>
+			<height>40</height>
+			<align>right</align>
+			<textcolor>White</textcolor>
+			<shadowcolor>Black</shadowcolor>
+			<scroll>false</scroll>
+        </control>
     </controls>
 </window>

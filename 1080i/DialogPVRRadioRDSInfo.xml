@@ -44,7 +44,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>selected</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<shadowcolor>Black</shadowcolor>
 		</control>
 		<control type="button">
 			<description>Close Window button</description>

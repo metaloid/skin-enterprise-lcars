@@ -55,7 +55,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>selected</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 		</control>
 		<control type="list" id="9000">
@@ -207,7 +207,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="image">
 					<description>available modes list border</description>
@@ -377,7 +377,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="image">
 					<description>active modes list border</description>

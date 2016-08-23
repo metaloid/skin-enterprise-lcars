@@ -36,7 +36,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>selected</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -92,7 +92,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>selected</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 			<control type="image">
 				<description>Audio DSP Image</description>
@@ -154,7 +154,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>grey2</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 			<control type="label">
 				<description>type label</description>
@@ -167,7 +167,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>selected</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 		</control>
 		<control type="button" id="7">
@@ -238,7 +238,7 @@
 			<aligny>bottom</aligny>
 			<font>font13_title</font>
 			<textcolor>grey</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<shadowcolor>Black</shadowcolor>
 		</control>
 	</controls>
 </window>

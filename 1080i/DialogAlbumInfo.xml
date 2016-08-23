@@ -13,7 +13,7 @@
             <width>720</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -30,7 +30,7 @@
 				<aligny>center</aligny>
 				<font>LCARS24</font>
 				<label>$INFO[Listitem.Album]</label>
-				<textcolor>orange</textcolor>
+				<textcolor>Orange</textcolor>
 				<scroll>true</scroll>
 				<visible>container.content(Albums)</visible>
 			</control>
@@ -45,7 +45,7 @@
 				<aligny>center</aligny>
 				<font>LCARS24</font>
 				<label>$INFO[Listitem.Artist]</label>
-				<textcolor>orange</textcolor>
+				<textcolor>Orange</textcolor>
 				<scroll>true</scroll>
 				<visible>container.content(Artists)</visible>
 			</control>
@@ -96,7 +96,7 @@
 							<height>380</height>
 							<font>font30_title</font>
 							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
+							<shadowcolor>Black</shadowcolor>
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>31311</label>
@@ -135,7 +135,7 @@
 								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>orange</textcolor>
+								<textcolor>Orange</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -161,7 +161,7 @@
 								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>orange</textcolor>
+								<textcolor>Orange</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -256,7 +256,7 @@
 								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>orange</textcolor>
+								<textcolor>Orange</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -282,7 +282,7 @@
 								<font>LCARS15</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>orange</textcolor>
+								<textcolor>Orange</textcolor>
 								<selectedcolor>selected</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -424,10 +424,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
 			</control>
 			</control>

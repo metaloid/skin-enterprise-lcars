@@ -3,7 +3,7 @@
     <type>dialog</type>
     <zorder>2</zorder>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <controls>
         <control type="group">
             <posx>350r</posx>

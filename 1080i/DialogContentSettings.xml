@@ -17,7 +17,7 @@
 				<width>1180</width>
         		<height>450</height>
         		<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
         		<bordersize>10</bordersize>
 			</control>
@@ -44,7 +44,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 			<control type="spincontrolex" id="20">
 				<description>Content Picker</description>
@@ -65,7 +65,7 @@
 				<posx>1555</posx>
 				<top>370</top>
 				<width>240</width>
-				<textcolor>black</textcolor>
+				<textcolor>Black</textcolor>
 				<height>40</height>
 				<font>LCARS20</font>
 				<label>$INFO[Control.GetLabel(20)]</label>
@@ -133,7 +133,7 @@
 						<top>0</top>
 						<width>620</width>
 						<height>40</height>
-						<texture border="5" colordiffuse="buttonselect2">button-focus.png</texture>
+						<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
                     </control>
 					<control type="image">
 						<left>5</left>
@@ -148,7 +148,7 @@
 						<width>290</width>
 						<height>40</height>
 						<font>LCARS20</font>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
                         <scroll>false</scroll>
 				        <align>left</align>
 						<aligny>center</aligny>
@@ -161,7 +161,7 @@
 						<top>0</top>
 						<width>620</width>
 						<height>40</height>
-						<texture border="5" colordiffuse="buttonselect">button-focus.png</texture>
+						<texture border="5" colordiffuse="White">button-focus.png</texture>
                     </control>
 					<control type="image">
 						<left>5</left>
@@ -175,7 +175,7 @@
 						<top>0</top>
 						<width>290</width>
 						<height>40</height>
-						<textcolor>black</textcolor>
+						<textcolor>Black</textcolor>
                         <font>LCARS20</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -223,14 +223,14 @@
 				<description>Default Button</description>
 				<left>0</left>
 				<top>0</top>
-				<texturenofocus colordiffuse="buttonselect2" border="5">button-focus.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" border="5">button-focus.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange" border="5">button-focus.png</texturenofocus>
+				<texturefocus colordiffuse="White" border="5">button-focus.png</texturefocus>
 				<height>40</height>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
-				<texturenofocus colordiffuse="buttonselect2" border="5">button-focus.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" border="5">button-focus.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange" border="5">button-focus.png</texturenofocus>
+				<texturefocus colordiffuse="White" border="5">button-focus.png</texturefocus>
 				<left>0</left>
 				<top>0</top>
 				<height>40</height>
@@ -249,8 +249,8 @@
 				<control type="button" id="28">
 					<align>left</align>
 					<textoffsetx>7</textoffsetx>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<description>OK Button</description>
 					<width>270</width>
 					<label>186</label>
@@ -258,8 +258,8 @@
 				<control type="button" id="29">
 					<align>left</align>
 					<textoffsetx>7</textoffsetx>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<width>270</width>
 					<description>Cancel Button</description>
 					<label>222</label>
@@ -267,8 +267,8 @@
 				<control type="button" id="22">
 					<align>left</align>
 					<textoffsetx>7</textoffsetx>
-					<texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-					<texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+					<texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+					<texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
 					<width>270</width>
 					<description>Settings Button</description>
 					<label>5</label>

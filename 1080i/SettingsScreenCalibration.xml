@@ -2,7 +2,7 @@
 <window id="11">
     <defaultcontrol always="true">8</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <controls>
         <control type="videowindow" id="20" description="videowindow">
             <include>Dimensions_Fullscreen</include>
@@ -12,7 +12,7 @@
             <top>0</top>
             <width>256</width>
             <height>256</height>
-            <texturefocus colordiffuse="bgcolor2">calibrate/CalibrateTopLeft.png</texturefocus>
+            <texturefocus colordiffuse="Green">calibrate/CalibrateTopLeft.png</texturefocus>
             <texturenofocus>-</texturenofocus>
         </control>
         <control type="mover" id="9" description="right bottom">
@@ -20,7 +20,7 @@
             <top>824</top>
             <width>256</width>
             <height>256</height>
-            <texturefocus colordiffuse="bgcolor2" >calibrate/CalibrateBottomRight.png</texturefocus>
+            <texturefocus colordiffuse="Green" >calibrate/CalibrateBottomRight.png</texturefocus>
             <texturenofocus>-</texturenofocus>
         </control>
         <control type="mover" id="10" description="subtitle position">
@@ -28,7 +28,7 @@
             <top>592</top>
             <width>256</width>
             <height>128</height>
-            <texturefocus border="0,3,0,3" colordiffuse="bgcolor2">calibrate/CalibrateSubs.png</texturefocus>
+            <texturefocus border="0,3,0,3" colordiffuse="Green">calibrate/CalibrateSubs.png</texturefocus>
             <texturenofocus>-</texturenofocus>
         </control>
         <control type="resize" id="11" description="pixel aspect ratio">
@@ -36,7 +36,7 @@
             <top>348</top>
             <width>384</width>
             <height>384</height>
-            <texturefocus colordiffuse="bgcolor2" >calibrate/CalibratePixelRatio.png</texturefocus>
+            <texturefocus colordiffuse="Green" >calibrate/CalibratePixelRatio.png</texturefocus>
             <texturenofocus>-</texturenofocus>
         </control>
         <control type="label" id="2" description="coordinates label">

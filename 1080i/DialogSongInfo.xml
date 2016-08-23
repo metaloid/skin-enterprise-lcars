@@ -13,7 +13,7 @@
             <width>670</width>
             <height>900</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -28,7 +28,7 @@
 				<aligny>center</aligny>
 				<font>LCARS24</font>
 				<label>$INFO[ListItem.Title]</label>
-				<textcolor>orange</textcolor>
+				<textcolor>Orange</textcolor>
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
@@ -53,7 +53,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[557]:</label>
 				</control>
 				<control type="fadelabel">
@@ -79,7 +79,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[558]:</label>
 				</control>
 				<control type="fadelabel">
@@ -105,7 +105,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[515]:</label>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
@@ -131,7 +131,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[562]:</label>
 				</control>
 				<control type="fadelabel">
@@ -155,7 +155,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[554]:</label>
 				</control>
 				<control type="fadelabel">
@@ -179,7 +179,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[563]:</label>
 				</control>
 				<control type="group">
@@ -204,7 +204,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>LCARS15</font>
-					<textcolor>orange</textcolor>
+					<textcolor>Orange</textcolor>
 					<label>$LOCALIZE[569]:</label>
 				</control>
 				<control type="textbox">

@@ -2,7 +2,7 @@
 <window id="2600">
     <defaultcontrol always="true">2</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
     <controls>
         <include>Backgroundcolor</include>
@@ -37,8 +37,8 @@
                 <posx>250</posx>
                 <top>190</top>
                 <width>300</width>
-                <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-            <texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus><onright>7510</onright>
+                <texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded.png</texturenofocus>
+            <texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus><onright>7510</onright>
 				<onright>2</onright>
             <onleft>2</onleft>
             

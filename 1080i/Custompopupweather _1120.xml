@@ -88,7 +88,7 @@
                     <height>34</height>
                     <font>LCARS18</font>
                     <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
-                    <textcolor>orange</textcolor>
+                    <textcolor>Orange</textcolor>
                 </control>
                 <control type="label">
                     <left>390</left>
@@ -150,7 +150,7 @@
                         <height>34</height>
                         <font>LCARS18</font>
                         <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
-                        <textcolor>orange</textcolor>
+                        <textcolor>Orange</textcolor>
                     </control>
                     <control type="label">
                         <left>390</left>

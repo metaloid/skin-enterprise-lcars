@@ -38,7 +38,7 @@
                     <control type="image" description="THMBSBASECOLOR">
                         <width>870</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect2">whiteallrounded.png</texture>
+                        <texture border="20" colordiffuse="HellOrange">whiteallrounded.png</texture>
                     </control>
 					<control type="label" description="label">
                         <top>8</top>
@@ -47,7 +47,7 @@
                         <width>810</width>
                         <height>28</height>
                         <font>LCARS20</font>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <info>ListItem.Label</info>
                         
                     </control>
@@ -56,7 +56,7 @@
                     <control type="image" description="THMBSBASE">
                         <width>870</width>
                         <height>40</height>
-                        <texture border="20" colordiffuse="buttonselect">whiteallrounded.png</texture>
+                        <texture border="20" colordiffuse="White">whiteallrounded.png</texture>
                     </control>
 			        <control type="label" description="label">
                         <top>8</top>
@@ -65,7 +65,7 @@
                         <width>810</width>
                         <height>28</height>
                         <font>LCARS20</font>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <info>ListItem.Label</info>
                         
                     </control>

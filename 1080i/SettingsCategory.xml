@@ -2,7 +2,7 @@
 <window id="12">
     <defaultcontrol always="true">3</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
 		<include>OpenClose</include>
     <controls>
         <include>Backgroundcolor</include>
@@ -66,10 +66,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
 		</control>		
         <control type="label" id="6">
@@ -121,8 +121,8 @@
             <align>left</align>
 			<textoffsetx>7</textoffsetx>
 			<invalidcolor>invalid</invalidcolor>
-            <texturenofocus colordiffuse="buttonselect2" border="20">whiterounded.png</texturenofocus>
-            <texturefocus colordiffuse="buttonselect" border="20">whiterounded.png</texturefocus>
+            <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
          </control>
         <control type="radiobutton" id="8" description="Radio Button">
             <width>300</width>
@@ -142,8 +142,8 @@
             <width>270</width>
             <textoffsetx>75</textoffsetx>
 			<textwidth>180</textwidth>
-			<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
-			<texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+			<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+			<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
 			<align>LEFT</align>
             <aligny>center</aligny>
         </control>
@@ -158,8 +158,8 @@
 			<orientation>vertical</orientation>
             <control type="button" id="607">
                 <onclick>ActivateWindow(Home)</onclick>
-				<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
 				<width>270</width>
 				<align>LEFT</align>
 				<textoffsetx>75</textoffsetx>
@@ -167,8 +167,8 @@
 			</control>
         	<control type="button" id="677">
                 <onclick>back</onclick>
-				<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
 				<width>270</width>
 				<align>LEFT</align>
 				<textoffsetx>75</textoffsetx>
@@ -179,8 +179,8 @@
                 <textoffsetx>75</textoffsetx>
 				<height>40</height>
 				<align>LEFT</align>
-				<texturenofocus colordiffuse="buttonselect2" >whiteallrounded2.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" >whiteallrounded2.png</texturefocus>
+				<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
 				<width>270</width>
            		<onclick>SettingsLevelChange</onclick>
             </control>

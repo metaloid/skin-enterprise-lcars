@@ -6,7 +6,7 @@
                 <centerleft>105</centerleft>
 				<width>200</width>
                 <height>40</height>
-                <texture colordiffuse="buttonselect2"  border="20">whiteallrounded.png</texture>
+                <texture colordiffuse="HellOrange"  border="20">whiteallrounded.png</texture>
             </control>
             <control type="label" description="LABEL">
                 <centerleft>105</centerleft>
@@ -17,7 +17,7 @@
 				<font>LCARS20</font>
                 <align>center</align>
                 <scroll>false</scroll>
-				<textcolor>black</textcolor>
+				<textcolor>Black</textcolor>
                 <label>$INFO[ListItem.label]</label>
             </control>
    		</itemlayout>
@@ -36,7 +36,7 @@
                 <aligny>center</aligny>
 				<font>LCARS20</font>
                 <align>center</align>
-                <textcolor>black</textcolor>
+                <textcolor>Black</textcolor>
                 <label>$INFO[ListItem.label]</label>
             </control>
        	</focusedlayout>
@@ -389,7 +389,7 @@
             <visible>[!Window.IsActive(1120) + Container(9000).HasFocus(345)]</visible>
             <include>ShelfFade</include>
 			<control type="image">
-					<left>50</left>
+					<left>650</left>
 					<top>80</top>
 					<width>400</width>
 					<height>40</height>
@@ -397,7 +397,7 @@
 					<texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
 			</control>
 			<control type="label">
-                <posx>350</posx>
+                <posx>50</posx>
                 <top>80</top>
                 <width>600</width>
                 <height>40</height>
@@ -406,19 +406,19 @@
 				<label>Last Update - $INFO[Window(Weather).Property(Updated)]</label>
 				<description>update label</description>
 			</control>
+			<control type="image">
+                <left>820</left>
+                <top>180</top>
+                <width>345</width>
+                <height>270</height>
+                <aspectratio>keep</aspectratio>
+                <texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+            </control>
             <control type="group">
-                    <control type="image">
-                        <left>0</left>
-                        <top>150</top>
-                        <width>345</width>
-                        <height>270</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
-                    </control>
 				<control type="label">
-						<left>350</left>
+						<left>50</left>
 						<top>150</top>
-						<width>825</width>
+						<width>1125</width>
 						<height>35</height>
 						<font>LCARS20</font>
 						<align>left</align>
@@ -426,34 +426,34 @@
 						<label>$INFO[Window(Weather).Property(Current.Condition)] : $INFO[Window(Weather).Property(Current.Humidity)] Humidity : Wind $INFO[Window(Weather).Property(Current.Wind)]</label>
 				</control>
 				<control type="label">
-                        <left>350</left>
+                        <left>50</left>
                         <top>200</top>
-                        <width>800</width>
+                        <width>1100</width>
                         <height>35</height>
                         <label>$LOCALIZE[402] : $INFO[Window(Weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits]</label>
                         <font>LCARS20</font>
                 </control>
 				<control type="label">
-                            <left>350</left>
+                            <left>50</left>
                             <top>250</top>
-                            <width>800</width>
+                            <width>1100</width>
                             <height>35</height>
                             <label>$LOCALIZE[405]: $INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
                             <font>LCARS20</font>
                 </control>
 				<control type="label">
-                        <left>350</left>
+                        <left>50</left>
                         <top>300</top>
                         <height>35</height>
-						<width>800</width>
+						<width>1100</width>
                         <font>LCARS20</font>
                         <label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]     $LOCALIZE[418] : $INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
                 </control>
 				<control type="label">
 						<description>current Precipitation label</description>
-						<left>350</left>
+						<left>50</left>
 						<top>350</top>
-						<width>800</width>
+						<width>1100</width>
 						<height>35</height>
 						<font>LCARS20</font>
 						<align>left</align>
@@ -463,7 +463,7 @@
 					</control>
 					<control type="label">
 						<description>Sunrise Label</description>
-						<left>350</left>
+						<left>50</left>
 						<top>400</top>
 						<width>300</width>
 						<height>35</height>
@@ -475,7 +475,7 @@
 					</control>
 					<control type="label">
 						<description>Sunset label</description>
-						<left>500</left>
+						<left>200</left>
 						<top>400</top>
 						<width>300</width>
 						<height>35</height>

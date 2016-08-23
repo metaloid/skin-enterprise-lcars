@@ -2,7 +2,7 @@
 <window id="4">
     <defaultcontrol always="true">575</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>background</backgroundcolor>
+    <backgroundcolor>Black</backgroundcolor>
 		<include>OpenClose</include>
      <controls>
         <include>Backgroundcolor</include>
@@ -44,7 +44,7 @@
                         <posx>20</posx>
                         <width>270</width>
                         <height>40</height>
-						<texture colordiffuse="buttonselect2" >whiteallrounded2.png</texture>
+						<texture colordiffuse="HellOrange" >whiteallrounded2.png</texture>
                     </control>
 			  <control type="label" description="LABEL">
                         <left>95</left>
@@ -55,7 +55,7 @@
 					    <font>LCARS20</font>
                         <align>left</align>
                         <scroll>false</scroll>
-				        <textcolor>black</textcolor>
+				        <textcolor>Black</textcolor>
                         <label>$INFO[ListItem.label]</label>
                     </control>
                 </itemlayout>								
@@ -76,7 +76,7 @@
                         <aligny>center</aligny>
 					    <font>LCARS20</font>
                         <align>left</align>
-                        <textcolor>black</textcolor>
+                        <textcolor>Black</textcolor>
                         <label>$INFO[ListItem.label]</label>
                     </control>
                 </focusedlayout>			
@@ -150,7 +150,7 @@
 					<width>1180</width>
 					<height>450</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture  background="true" colordiffuse="69FFFFFF" >Capture4.png</texture>
+					<texture  background="true" colordiffuse="Fog" >Capture4.png</texture>
 					<bordertexture  border="40">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
                 </control>

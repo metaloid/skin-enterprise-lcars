@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<backgroundcolor>background</backgroundcolor>
+	<backgroundcolor>Black</backgroundcolor>
     <views>50</views>
 	<include>OpenClose</include>
 	<controls>
@@ -37,7 +37,7 @@
 				<width>1250</width>
 				<height>385</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture diffuse="poster-mask.png" background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture diffuse="poster-mask.png" background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
                 <bordersize>10</bordersize>
 			</control>
@@ -74,10 +74,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
 		</control>
 	</controls>

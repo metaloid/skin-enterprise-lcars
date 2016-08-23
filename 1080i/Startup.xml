@@ -32,7 +32,7 @@
 			<height>100</height>
             <width>800</width>
             <font>LCARS36</font>
-            <textcolor>buttonselect2</textcolor>
+            <textcolor>HellOrange</textcolor>
             <label>STARFLEET COMMAND</label>
         </control>
 		<control type="textbox" description="Title">

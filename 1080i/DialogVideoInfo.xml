@@ -13,7 +13,7 @@
 			<width>1400</width>
 			<height>950</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
             <bordertexture  border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
 		</control>
@@ -104,10 +104,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="buttonselect2" >down1.png</textureup>
-				<texturedown colordiffuse="buttonselect2">up1.png</texturedown>
-				<textureupfocus colordiffuse="buttonselect2">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="buttonselect2">upp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
         <control type="group">
             <left>60</left>
@@ -123,7 +123,7 @@
                     <height>50</height>
                     <font>LCARS24</font>
                     <align>Left</align>
-                    <textcolor>orange</textcolor>
+                    <textcolor>Orange</textcolor>
                     <label>$INFO[ListItem.Title]</label>
                 </control>
                 <control type="label" description="title">
@@ -131,7 +131,7 @@
                     <height>60</height>
                     <font>LCARS24</font>
                     <align>Left</align>
-                    <textcolor>gray</textcolor>
+                    <textcolor>White</textcolor>
                     <label>$INFO[ListItem.Year, (,)]</label>
                 </control>
             </control>
@@ -141,7 +141,7 @@
                 <width>auto</width>
                 <height>45</height>
                 <font>LCARS20</font>
-                <textcolor>orange</textcolor>
+                <textcolor>Orange</textcolor>
                 <label>$INFO[ListItem.Studio]</label>
             </control>
            <!--plot-->
@@ -172,7 +172,7 @@
                             <height>40</height>
                             <font>LCARS18</font>
                             <align>right</align>
-                            <textcolor>orange</textcolor>
+                            <textcolor>Orange</textcolor>
                             <info>ListItem.Label</info>
                         </control>
                         <control type="label">
@@ -180,7 +180,7 @@
                             <width>670</width>
                             <height>40</height>
                             <font>LCARS18</font>
-                            <textcolor>gray</textcolor>
+                            <textcolor>White</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
                     </itemlayout>
@@ -190,7 +190,7 @@
                             <height>40</height>
                             <font>LCARS18</font>
                             <align>right</align>
-                            <textcolor>orange</textcolor>
+                            <textcolor>Orange</textcolor>
                             <info>ListItem.Label</info>
                         </control>
                         <control type="label">
@@ -198,7 +198,7 @@
                             <width>670</width>
                             <height>40</height>
                             <font>LCARS18</font>
-                            <textcolor>gray</textcolor>
+                            <textcolor>White</textcolor>
                             <info>ListItem.Label2</info>
                         </control>
                     </focusedlayout>
@@ -426,7 +426,7 @@
                 <centerleft>520</centerleft>
                 <width>800</width>
                 <align>center</align>
-                <textcolor>gray</textcolor>
+                <textcolor>White</textcolor>
                 <font>LCARS20</font>
                 <label>$INFO[Container(50).ListItem.Label]</label>
             </control>

@@ -9,7 +9,7 @@
 				<width>1180</width>
         		<height>450</height>
         		<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture  background="true" colordiffuse="69FFFFFF" >LCARS.png</texture>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
                 <bordertexture  border="40">shadow.png</bordertexture>
         		<bordersize>10</bordersize>
         </control>
@@ -32,8 +32,8 @@
 			</control>
 			<control type="radiobutton" id="503" description="Custom">
                 <visible>!Skin.HasSetting(AddonsSectionHide)</visible>
-                <texturenofocus colordiffuse="buttonselect2" border="20">whiteallrounded.png</texturenofocus>
-				<texturefocus colordiffuse="buttonselect" border="20">whiteallrounded.png</texturefocus>
+                <texturenofocus colordiffuse="HellOrange" border="20">whiteallrounded.png</texturenofocus>
+				<texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus>
 				<include>SettingsSubmenuButtons</include>
                 <label>31051</label>
                 <onclick>Skin.ToggleSetting(AddonsShelf_Custom)</onclick>
