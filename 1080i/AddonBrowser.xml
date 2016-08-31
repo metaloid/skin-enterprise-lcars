@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="20">
-    <defaultcontrol always="true">54</defaultcontrol>
+    <defaultcontrol always="true">504</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-    <views>54,501,503</views>
+    <views>504</views>
     <include>OpenClose</include>
      <controls>
         <include>Backgroundcolor</include>
@@ -26,7 +26,22 @@
             <loop>yes</loop>
             <aspectratio>keep</aspectratio>
 		</control>
-		<include>VideoLcars</include>		
+		<control type="panel" id="504">
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>1300</width>
+			<height>850</height>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<onright>noop</onright>
+			<onleft>9000</onleft>
+		    <viewtype label="504">VideoLcars</viewtype>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime tween="sine" easing="inout">300</scrolltime>
+			<preloaditems>8</preloaditems>
+			<orientation>horizontal</orientation>
+			<include>SquareIconLcars</include>
+		</control>
 		<include>WindowsTopInfos</include>
         <control type="grouplist" id="9000">
             <width>300</width>
@@ -34,11 +49,12 @@
             <top>110</top>
             <posx>50</posx>
 			<onleft>noop</onleft>
-			<onright>54</onright>
+			<onright>504</onright>
 			<onup>noop</onup>
 		    <ondown>noop</ondown>
 				<control type="button" id="3" description="Sort">
 					<width>300</width>
+					<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
@@ -46,26 +62,31 @@
 					<label>585</label>
 					<altlabel>584</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+					<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
 				</control>
 				<control type="togglebutton" id="5" description="Updates">
 					<width>300</width>
 					<label>$LOCALIZE[24063]: $LOCALIZE[1223]</label>
 					<altlabel>$LOCALIZE[24063]: $LOCALIZE[305]</altlabel>
+					<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
 				</control>
                 <control type="togglebutton" id="6" description="Notifications">
 					<width>300</width>
 					<label>$LOCALIZE[25000]: $LOCALIZE[1223]</label>
 					<altlabel>$LOCALIZE[25000]: $LOCALIZE[305]</altlabel>
+				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>
 					<width>300</width>
+				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
 					<include>Keyboardbuttons</include>
 					<label>25001</label>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Hide broken</description>
 					<width>300</width>
+				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
 					<include>Keyboardbuttons</include>
 					<label>24999</label>
 				</control>
@@ -73,10 +94,11 @@
 					<description>Check for updates</description>
 					<label>24034</label>
 					<width>300</width>
+				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
 				</control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
-				<visible>[Container(54).HasPrevious |  Container(54).HasNext] | [Container(503).HasPrevious |  Container(503).HasNext] | [Container(501).HasPrevious |  Container(501).HasNext]</visible>
+				<visible>[Container(504).HasPrevious |  Container(504).HasNext]</visible>
 				<width>307</width>
                 <subtype>page</subtype>
 				<font>-</font>
@@ -86,16 +108,17 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="HellOrange" >down1.png</textureup>
-				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
-				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
+				<textureup colordiffuse="$VAR[butcolor3]" >left.png</textureup>
+				<texturedown colordiffuse="$VAR[butcolor3]">right.png</texturedown>
+				<textureupfocus colordiffuse="$VAR[butcolor3]">leftp.png</textureupfocus>
+				<texturedownfocus colordiffuse="$VAR[butcolor3]">rightp.png</texturedownfocus>
 			</control>    
-				<control type="button" id="677">
-					<onclick>back</onclick>
-					<width>300</width>
-					<label>Back</label>
-				</control>
+			<control type="button" id="677">
+				<onclick>back</onclick>
+				<width>300</width>
+				<label>Back</label>
+				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
 			</control>
+		</control>
     </controls>
 </window>

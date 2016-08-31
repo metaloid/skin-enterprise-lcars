@@ -5,18 +5,6 @@
     <backgroundcolor>Black</backgroundcolor>
     <controls>
         <include>Backgroundcolor</include>
-        <!--control type="image">
-                <visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
-                <posx>0</posx>
-				<posy>0</posy>
-				<width>1920</width>
-				<height>970</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture background="true" colordiffuse="55FFFFFF">$VAR[nextairedfanart]</texture>
-                <fadetime>400</fadetime>
-                <animation effect="fade" time="600">Visible</animation>
-                <animation effect="fade" time="600">Hidden</animation>
-		</control-->
         <control type="image">
                 <top>0</top>
                 <posx>0</posx>
@@ -53,10 +41,19 @@
 				<scrolltime tween="quadratic">300</scrolltime>
 				<itemlayout height="45" width="310">
 					<control type="image">
+						<visible>Skin.HasSetting(colormenu)</visible>
 						<posx>20</posx>
                         <width>300</width>
                         <height>40</height>
                         <texture colordiffuse="HellOrange" >whiteallrounded2.png</texture>
+					</control>
+					<control type="image">
+						<visible>!Skin.HasSetting(colormenu)</visible>
+						<posx>20</posx>
+                        <width>300</width>
+                        <height>40</height>
+						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+						<texture diffuse="whiteallrounded2.png">$INFO[ListItem.Property(color),,.png]</texture>
 					</control>
 					<control type="label">
 						<left>95</left>
@@ -118,40 +115,49 @@
 						<label>$INFO[Window(home).Property(NextAired.200.Weekday)]</label>
 						<label2>$INFO[Container(200).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c1</property>
+						<visible>!IsEmpty(Window(home).Property(NextAired.200.Weekday))</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Window(home).Property(NextAired.201.Weekday)]</label>
 						<label2>$INFO[Container(201).NumItems]</label2>
+						<property name="color">c1</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(NextAired.202.Weekday)]</label>
 						<label2>$INFO[Container(202).NumItems]</label2>
+						<property name="color">c1</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<label>$INFO[Window(home).Property(NextAired.203.Weekday)]</label>
 						<label2>$INFO[Container(203).NumItems]</label2>
+						<property name="color">c5</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="5">
 						<label>$INFO[Window(home).Property(NextAired.204.Weekday)]</label>
 						<label2>$INFO[Container(204).NumItems]</label2>
+						<property name="color">c5</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="6">
 						<label>$INFO[Window(home).Property(NextAired.205.Weekday)]</label>
 						<label2>$INFO[Container(205).NumItems]</label2>
+						<property name="color">c5</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="7">
 						<label>$INFO[Window(home).Property(NextAired.206.Weekday)]</label>
 						<label2>$INFO[Container(206).NumItems]</label2>
+						<property name="color">c9</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="8">
 						<label>Home</label>
 						<onclick>ActivateWindow(Home)</onclick>
+						<property name="color">c9</property>
 					</item>
 				</content>
 			</control>

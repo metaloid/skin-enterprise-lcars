@@ -7,44 +7,45 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-		
-		<control type="image" description="Busy BG">
-			<description>background image</description>
+			<control type="image" description="Busy BG">
+				<description>background image</description>
 				<posx>50</posx>
                 <top>575</top>
                 <width>300</width>
                 <height>330</height>
                 <texture border="20"  >dialog.png</texture>
-    </control>
-   <control type="group" description="Busy animation">
-        <posx>70</posx>
-        <top>615</top>
-        <control type="image" description="Busy animation">
-                <width>250</width>
-                <height>250</height>
-                <texture>busy/WarpCore2.png</texture>
-				<aspectratio>keep</aspectratio>
-            </control>
-			<control type="multiimage" description="Busy animation">
-                <width>250</width>
-                <height>250</height>
-                <imagepath>busy/anim</imagepath>
-                <timeperimage>100</timeperimage>
-                <fadetime>0</fadetime>
-                <loop>yes</loop>
-                <aspectratio>keep</aspectratio>
-            </control>
-	</control>
-			<control type="label" id="1" description="Progress label">
+			</control>
+			<control type="group" description="Busy animation">
+			<posx>70</posx>
+			<top>615</top>
+				<control type="image" description="Busy animation">
+					<width>250</width>
+					<height>250</height>
+					<texture>busy/WarpCore2.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="multiimage" description="Busy animation">
+					<width>250</width>
+					<height>250</height>
+					<imagepath>busy/anim</imagepath>
+					<timeperimage>100</timeperimage>
+					<fadetime>0</fadetime>
+					<loop>yes</loop>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<control type="label" description="Progress label">
 				<visible>IntegerGreaterThan(Control.GetLabel(10), 0)</visible>
-				<posx>70</posx>
-				<top>650</top>
+				<description>Busy label</description>
+				<left>70</left>
+				<top>630</top>
                 <width>250</width>
                 <height>32</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>shelffont</textcolor>
-				<label>$INFO[Control.GetLabel(10), ,%]</label>
+				<textcolor>HellOrange</textcolor>
+                <label>Accessing $INFO[Control.GetLabel(10), ,%]</label>
+				<font>LCARS18</font>
 			</control>
 			<control type="label">
 				<visible>!IntegerGreaterThan(Control.GetLabel(10), 0)</visible>
@@ -55,8 +56,8 @@
                 <height>32</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>shelffont</textcolor>
-                <label>Accessing...</label>
+				<textcolor>HellOrange</textcolor>
+                <label>Accessing</label>
 				<font>LCARS18</font>
 			</control>
 			<control type="progress" id="10">
@@ -66,10 +67,10 @@
                 <width>250</width>
 				<height>8</height>
 				<texturebg>-</texturebg>
-            <midtexture>-</midtexture>
-            <righttexture>-</righttexture>
-            <lefttexture>-</lefttexture>
+				<midtexture>-</midtexture>
+				<righttexture>-</righttexture>
+				<lefttexture>-</lefttexture>
 			</control>
-	</control>
+		</control>
     </controls>
 </window>

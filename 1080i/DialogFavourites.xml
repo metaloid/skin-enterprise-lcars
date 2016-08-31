@@ -4,48 +4,46 @@
     <allowoverlay>no</allowoverlay>
     <onunload>RunScript(script.favourites)</onunload>
     <controls>
-        <control type="group">
         <control type="panel" id="450">
-       		<posx>695</posx>
-			<top>250</top>
-			<width>1150</width>
-       		<height>450</height>
-       		<onleft>close</onleft>
-       		<onright>450</onright>
+       		<posx>895</posx>
+			<top>85</top>
+       		<onleft>9000</onleft>
+       		<onright>noop</onright>
        		<onup>450</onup>
-       		<ondown>9000</ondown>
+       		<ondown>450</ondown>
        		<pagecontrol>66</pagecontrol>
-       		<focusposition>1</focusposition>
-       		<movement>4</movement>
-       		<orientation>horizontal</orientation>
-       		<scrolltime tween="sine" easing="inout">280</scrolltime>
-			<include>SquareIconLcars</include>
+			<width>930</width>
+			<height>850</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
         </control>
 		<control type="grouplist" id="9000">
-			<top>705</top>
-            <posx>760</posx>
+			<top>315</top>
+            <posx>625</posx>
 			<align>left</align>
-            <orientation>horizontal</orientation>
-            <onup>450</onup>
-			<onright>noop</onright>
-			<ondown>noop</ondown>
+            <orientation>vertical</orientation>
+            <onup>9000</onup>
+			<onright>450</onright>
+			<ondown>9000</ondown>
 			<onleft>close</onleft>
 			<itemgap>10</itemgap>
 			<control type="button" id="677">
 				<onclick>back</onclick>
-				<width>200</width>
-				<label>Close</label>
 				<onclick>ReloadSkin()</onclick>
+				<width>250</width>
+				<label>Close</label>
 			</control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(450).HasPrevious |  Container(450).HasNext]</visible>
-				<width>210</width>
+				<width>258</width>
 				<subtype>page</subtype>
 				<font>-</font>
 				<textcolor>-</textcolor>
 				<showonepage>true</showonepage>
-				<spinwidth>100</spinwidth>
+				<spinwidth>125</spinwidth>
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
@@ -55,7 +53,5 @@
 				<texturedownfocus colordiffuse="HellOrange">rightp.png</texturedownfocus>
 			</control>    
 		</control>		
-            
-		</control>
     </controls>
 </window>

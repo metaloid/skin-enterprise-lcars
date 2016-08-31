@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="146">
-     <defaultcontrol always="true">300</defaultcontrol>
+    <defaultcontrol always="true">300</defaultcontrol>
 	<coordinates>
 		<left>1050</left>
 		<top>105</top>
@@ -27,7 +27,6 @@
 			<bordertexture  border="10">shadow.png</bordertexture>
             <bordersize>10</bordersize>
         </control>
-        
         <control type="textbox" description="Plot">
 			<left>60</left>
 			<top>660</top>
@@ -39,10 +38,10 @@
             <label>$INFO[ListItem.Property(Addon.Description)]</label>
         </control>
         <control type="grouplist" description="Labels">
-                <left>60</left>
-                <top>450</top>
-                <width>600</width>
-                <orientation>vertical</orientation>
+            <left>60</left>
+            <top>450</top>
+            <width>600</width>
+            <orientation>vertical</orientation>
                 <control type="label" description="Author">
                     <font>LCARS15</font>
                     <width>600</width>

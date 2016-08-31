@@ -162,10 +162,20 @@
             <filename>LCARSGTJ3.ttf</filename>
             <size>20</size>
         </font>
+		<font>
+            <name>LCARS12</name>
+            <filename>LCARSGTJ3.ttf</filename>
+            <size>26</size>
+        </font>
         <font>
             <name>LCARS18</name>
             <filename>LCARSGTJ3.ttf</filename>
             <size>36</size>
+        </font>
+        <font>
+            <name>LCARS16</name>
+            <filename>LCARSGTJ3.ttf</filename>
+            <size>32</size>
         </font>
 		<font>
             <name>LCARS15</name>

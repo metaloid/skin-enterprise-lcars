@@ -11,12 +11,12 @@
             <control type="image" description="Dialog BG">
                 <width>310</width>
                 <height>330</height>
-                <texture border="20"  >dialog.png</texture>
+                <texture border="20">dialog.png</texture>
             </control>
             <control type="group">
                 <posx>30</posx>
-            <top>50</top>
-            <control type="image" id="400" description="File Icon">
+				<top>50</top>
+				<control type="image" id="400" description="File Icon">
                     <width>250</width>
 					<height>80</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
@@ -45,19 +45,19 @@
                 <control type="label" id="401" description="Heading">
                     <top>100</top>
                     <width>250</width>
-                <height>27</height>
-                    <font>LCARS20</font>
-                    <align>center</align>
+					<height>27</height>
+                    <font>LCARS18</font>
+                    <align>left</align>
                     <scroll>true</scroll>
                     <label>-</label>
                 </control>
-                <control type="label" id="402" description="Message">
+                <control type="textbox" id="402" description="Message">
                     <top>134</top>
                     <width>250</width>
-                <height>70</height>
+					<height>125</height>
                     <scroll>true</scroll>
-                    <font>LCARS20</font>
-                    <align>center</align>
+                    <font>LCARS16</font>
+                    <align>left</align>
                     <label>-</label>
                 </control>
             </control>

@@ -63,10 +63,19 @@
 				<scrolltime tween="quadratic">300</scrolltime>
 				<itemlayout height="45" width="310">
 					<control type="image">
+						<visible>Skin.HasSetting(colormenu)</visible>
 						<posx>20</posx>
                         <width>300</width>
                         <height>40</height>
                         <texture colordiffuse="HellOrange" >whiteallrounded2.png</texture>
+					</control>
+					<control type="image">
+						<visible>!Skin.HasSetting(colormenu)</visible>
+						<posx>20</posx>
+                        <width>300</width>
+                        <height>40</height>
+						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+						<texture diffuse="whiteallrounded2.png">$INFO[ListItem.Property(color),,.png]</texture>
 					</control>
 					<control type="label">
 						<left>95</left>
@@ -128,86 +137,103 @@
 						<label>$INFO[Window(home).Property(NextAired.200.Wday)] $INFO[Window(Home).Property(NextAired.200.Date)]</label>
 						<label2>$INFO[Container(200).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c1</property>
 						<visible>!IsEmpty(Window(home).Property(NextAired.200.Wday))</visible>
 					</item>
 					<item id="2">
-						<label>[COLOR selected]$INFO[Window(home).Property(NextAired.201.Wday)] $INFO[Window(Home).Property(NextAired.201.Date)][/COLOR]</label>
-						<label2>[COLOR selected]$INFO[Container(201).NumItems][/COLOR]</label2>
+						<label>$INFO[Window(home).Property(NextAired.201.Wday)] $INFO[Window(Home).Property(NextAired.201.Date)]</label>
+						<label2>$INFO[Container(201).NumItems]</label2>
+						<property name="color">c1</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(NextAired.202.Wday)] $INFO[Window(Home).Property(NextAired.202.Date)]</label>
 						<label2>$INFO[Container(202).NumItems]</label2>
+						<property name="color">c1</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="4">
 						<label>$INFO[Window(home).Property(NextAired.203.Wday)] $INFO[Window(Home).Property(NextAired.203.Date)]</label>
 						<label2>$INFO[Container(203).NumItems]</label2>
+						<property name="color">c5</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="5">
 						<label>$INFO[Window(home).Property(NextAired.204.Wday)] $INFO[Window(Home).Property(NextAired.204.Date)]</label>
 						<label2>$INFO[Container(204).NumItems]</label2>
+						<property name="color">c5</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="6">
 						<label>$INFO[Window(home).Property(NextAired.205.Wday)] $INFO[Window(Home).Property(NextAired.205.Date)]</label>
 						<label2>$INFO[Container(205).NumItems]</label2>
+						<property name="color">c5</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="7">
 						<label>$INFO[Window(home).Property(NextAired.206.Wday)] $INFO[Window(Home).Property(NextAired.206.Date)]</label>
 						<label2>$INFO[Container(206).NumItems]</label2>
+						<property name="color">c9</property>
 						<onclick>noop</onclick>
 					</item>
 					<item id="8">
 						<label>$INFO[Window(home).Property(NextAired.207.Wday)] $INFO[Window(Home).Property(NextAired.207.Date)]</label>
 						<label2>$INFO[Container(207).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c9</property>
 					</item>
 					<item id="9">
 						<label>$INFO[Window(home).Property(NextAired.208.Wday)] $INFO[Window(Home).Property(NextAired.208.Date)]</label>
 						<label2>$INFO[Container(208).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c9</property>
 					</item>
 					<item id="10">
 						<label>$INFO[Window(home).Property(NextAired.209.Wday)] $INFO[Window(Home).Property(NextAired.209.Date)]</label>
 						<label2>$INFO[Container(209).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c2</property>
 					</item>
 					<item id="11">
 						<label>$INFO[Window(home).Property(NextAired.210.Wday)] $INFO[Window(Home).Property(NextAired.210.Date)]</label>
 						<label2>$INFO[Container(210).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c2</property>
 					</item>
 					<item id="12">
 						<label>$INFO[Window(home).Property(NextAired.211.Wday)] $INFO[Window(Home).Property(NextAired.211.Date)]</label>
 						<label2>$INFO[Container(211).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c2</property>
 					</item>
 					<item id="13">
 						<label>$INFO[Window(home).Property(NextAired.212.Wday)] $INFO[Window(Home).Property(NextAired.212.Date)]</label>
 						<label2>$INFO[Container(212).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c4</property>
 					</item>
 					<item id="14">
 						<label>$INFO[Window(home).Property(NextAired.213.Wday)] $INFO[Window(Home).Property(NextAired.213.Date)]</label>
 						<label2>$INFO[Container(213).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c4</property>
 					</item>
 					<item id="15">
 						<label>$INFO[Window(home).Property(NextAired.214.Wday)] $INFO[Window(Home).Property(NextAired.214.Date)]</label>
 						<label2>$INFO[Container(214).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c4</property>
 					</item>
 					<item id="16">
 						<label>$INFO[Window(home).Property(NextAired.215.Wday)] $INFO[Window(Home).Property(NextAired.215.Date)]</label>
 						<label2>$INFO[Container(215).NumItems]</label2>
 						<onclick>noop</onclick>
+						<property name="color">c6</property>
 					</item>
 					<item id="17">
 						<label>Home</label>
 						<onclick>ActivateWindow(Home)</onclick>
+						<property name="color">c6</property>
 					</item>
 				</content>
 			</control>

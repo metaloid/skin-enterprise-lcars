@@ -4,227 +4,217 @@
    <allowoverlay>no</allowoverlay>
    <include>OpenClose</include>
    <controls>
-		<control type="image" description="Logo">
-            <top>250</top>
-			<posx>690</posx>
-			<width>1180</width>
-        	<height>450</height>
-        	<aspectratio scalediffuse="false">scale</aspectratio>
-            <texture colordiffuse="33ffffff" background="true">Capture8.png</texture>
-            <bordertexture  border="40">shadow.png</bordertexture>
-			<bordersize>10</bordersize>
-        </control>
 		<control type="grouplist" id="9000">
-            <top>740</top>
-            <posx>760</posx>
-			<onleft>Back</onleft>
+			<top>315</top>
+            <posx>625</posx>
+			<align>left</align>
+            <orientation>vertical</orientation>
+            <onup>noop</onup>
 			<onright>noop</onright>
-			<onup>noop</onup>
-		    <ondown>noop</ondown>
-			<width>1200</width>
-			<height>60</height>
-			<include>ShelfFade</include>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
+			<ondown>noop</ondown>
+			<onleft>close</onleft>
+			<itemgap>10</itemgap>
 			<control type="button" id="677">
-				<width>200</width>
-				<onclick>back</onclick>
+				<width>250</width>
+				<onclick>Close</onclick>
 				<label>Close</label>
 			</control>
 		</control>
 		<control type="panel" id="7510">
-            <posx>695</posx>
-			<top>300</top>
-			<width>1150</width>
-        	<height>365</height>
-        	<orientation>horizontal</orientation>
-            <scrolltime tween="quadratic">200</scrolltime>
-			<itemlayout width="575" height="109">
-				<control type="image">
-					<left>22</left>
-					<top>0</top>
-					<width>109</width>
-					<height>109</height>
-					<aspectratio align="center">keep</aspectratio>
-					<info>ListItem.ActualIcon</info>
-				</control>
-                <control type="label">
-                    <left>165</left>
-                    <top>5</top>
-                    <width>375</width>
-                    <height>34</height>
-                    <label>$INFO[ListItem.Label]</label>
-                    <font>LCARS18</font>
-                </control>
-                <control type="label">
-                    <left>390</left>
-                    <top>5</top>
-                    <width>620</width>
-                    <font>LCARS18</font>
-                    <height>34</height>
-                    <label>$INFO[ListItem.Property(current)]</label>
-                </control>
-                <control type="label">
-                    <left>165</left>
-                    <top>35</top>
-                    <width>620</width>
-                    <height>34</height>
-                    <label>$INFO[ListItem.Label2]</label>
-                    <font>LCARS18</font>
-                    <scroll>true</scroll>
-                </control>
-                <control type="label">
-                    <left>390</left>
-                    <top>35</top>
-                    <width>620</width>
-                    <font>LCARS18</font>
-                    <height>34</height>
-                    <label>$INFO[ListItem.Property(rain)]</label>
-                </control>
-                <control type="label">
-                    <left>165</left>
-                    <top>66</top>
-                    <width>620</width>
-                    <height>34</height>
-                    <font>LCARS18</font>
-                    <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
-                    <textcolor>Orange</textcolor>
-                </control>
-                <control type="label">
-                    <left>390</left>
-                    <top>66</top>
-                    <width>620</width>
-                    <font>LCARS18</font>
-                    <height>34</height>
-                    <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
-                    <textcolor>Blue</textcolor>
-                </control>
-            </itemlayout>
-            <focusedlayout width="575" height="109">
-                <control type="image">
-                    <left>22</left>
-                    <top>0</top>
-                    <width>109</width>
-                    <height>109</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <info>ListItem.ActualIcon</info>
-                </control>
-                <control type="group">
-                    <control type="label">
-                        <left>165</left>
-                        <top>5</top>
-                        <width>375</width>
-                        <height>34</height>
-                        <label>$INFO[ListItem.Label]</label>
-                        <font>LCARS18</font>
-                    </control>
-                    <control type="label">
-                        <left>390</left>
-                        <top>5</top>
-                        <width>620</width>
-                        <font>LCARS18</font>
-                        <height>34</height>
-                        <label>$INFO[ListItem.Property(current)]</label>
-                    </control>
-                    <control type="label">
-                        <left>165</left>
-                        <top>35</top>
-                        <width>620</width>
-                        <height>34</height>
-                        <label>$INFO[ListItem.Label2]</label>
-                        <font>LCARS18</font>
-                        <scroll>true</scroll>
-                    </control>
-                    <control type="label">
-                        <left>390</left>
-                        <top>35</top>
-                        <width>620</width>
-                        <font>LCARS18</font>
-                        <height>34</height>
-                        <label>$INFO[ListItem.Property(rain)]</label>
-                    </control>
-                    <control type="label">
-                        <left>165</left>
-                        <top>66</top>
-                        <width>620</width>
-                        <height>34</height>
-                        <font>LCARS18</font>
-                        <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
-                        <textcolor>Orange</textcolor>
-                    </control>
-                    <control type="label">
-                        <left>390</left>
-                        <top>66</top>
-                        <width>620</width>
-                        <font>LCARS18</font>
-                        <height>34</height>
-                        <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
-                        <textcolor>Blue</textcolor>
-                    </control>
-                </control>
-            </focusedlayout>
-            <content>
-                <item id="1">
-                    <label>$INFO[Window(weather).Property(Daily.2.ShortDay)] $INFO[Window(weather).Property(Daily.2.ShortDate)] </label>
-                    <label2>Wind $INFO[Window(weather).Property(Daily.2.WindSpeed)] $INFO[Window(weather).Property(Daily.2.WindDirection)]</label2>
-                    <property name="current">$INFO[Window(weather).Property(Daily.2.Outlook)]</property>
-                    <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.2.Precipitation)]</property>
-                    <property name="LowTemp">$INFO[Window(weather).Property(Daily.2.LowTemperature)]</property>
-                    <property name="HighTemp">$INFO[Window(weather).Property(Daily.2.HighTemperature)] </property>
-                    <onclick>noop</onclick>
-                    <icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
-                </item>
-                <item id="2">
-                    <label>$INFO[Window(weather).Property(Daily.3.ShortDay)] $INFO[Window(weather).Property(Daily.3.ShortDate)] </label>
-                    <label2>Wind $INFO[Window(weather).Property(Daily.3.WindSpeed)] $INFO[Window(weather).Property(Daily.3.WindDirection)]</label2>
-                    <property name="current">$INFO[Window(weather).Property(Daily.3.Outlook)]</property>
-                    <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.3.Precipitation)]</property>
-                    <property name="LowTemp">$INFO[Window(weather).Property(Daily.3.LowTemperature)] </property>
-                    <property name="HighTemp">$INFO[Window(weather).Property(Daily.3.HighTemperature)] </property>
-                    <onclick>noop</onclick>
-                    <icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
-                </item>
-                <item id="3">
-                    <label>$INFO[Window(weather).Property(Daily.4.ShortDay)] $INFO[Window(weather).Property(Daily.4.ShortDate)] </label>
-                    <label2>Wind $INFO[Window(weather).Property(Daily.4.WindSpeed)] $INFO[Window(weather).Property(Daily.4.WindDirection)]</label2>
-                    <property name="current">$INFO[Window(weather).Property(Daily.4.Outlook)]</property>
-                    <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.4.Precipitation)]</property>
-                    <property name="LowTemp">$INFO[Window(weather).Property(Daily.4.LowTemperature)] </property>
-                    <property name="HighTemp">$INFO[Window(weather).Property(Daily.4.HighTemperature)] </property>
-                    <onclick>noop</onclick>
-                    <icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
-                </item>
-                <item id="4">
-                    <label>$INFO[Window(weather).Property(Daily.5.ShortDay)] $INFO[Window(weather).Property(Daily.5.ShortDate)] </label>
-                    <label2>Wind $INFO[Window(weather).Property(Daily.5.WindSpeed)] $INFO[Window(weather).Property(Daily.5.WindDirection)]</label2>
-                    <property name="current">$INFO[Window(weather).Property(Daily.5.Outlook)]</property>
-                    <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.5.Precipitation)]</property>
-                    <property name="LowTemp">$INFO[Window(weather).Property(Daily.5.LowTemperature)] </property>
-                    <property name="HighTemp">$INFO[Window(weather).Property(Daily.5.HighTemperature)] </property>
-                    <onclick>noop</onclick>
-                    <icon>$INFO[Window(weather).Property(Day4.OutlookIcon)]</icon>
-                </item>
-                <item id="5">
-                    <label>$INFO[Window(weather).Property(Daily.6.ShortDay)] $INFO[Window(weather).Property(Daily.6.ShortDate)] </label>
-                    <label2>Wind $INFO[Window(weather).Property(Daily.6.WindSpeed)] $INFO[Window(weather).Property(Daily.6.WindDirection)]</label2>
-                    <property name="current">$INFO[Window(weather).Property(Daily.6.Outlook)]</property>
-                    <property name="rain">$LOCALIZE[33021] : $INFO[Window(weather).Property(Daily.6.Precipitation)]</property>
-                    <property name="LowTemp">$INFO[Window(weather).Property(Daily.6.LowTemperature)] </property>
-                    <property name="HighTemp">$INFO[Window(weather).Property(Daily.6.HighTemperature)] </property>
-                    <onclick>noop</onclick>
-                    <icon>$INFO[Window(weather).Property(Day5.OutlookIcon)]</icon>
-                </item>
-                <item id="6">
-                    <label>$INFO[Window(weather).Property(Daily.7.ShortDay)] $INFO[Window(weather).Property(Daily.7.ShortDate)] </label>
-                    <label2>Wind $INFO[Window(weather).Property(Daily.7.WindSpeed)] $INFO[Window(weather).Property(Daily.7.WindDirection)]</label2>
-                    <property name="current">$INFO[Window(weather).Property(Daily.7.Outlook)]</property>
-                    <property name="rain">$LOCALIZE[33021]: $INFO[Window(weather).Property(Daily.7.Precipitation)]</property>
-                    <property name="LowTemp">$INFO[Window(weather).Property(Daily.7.LowTemperature)] </property>
-                    <property name="HighTemp">$INFO[Window(weather).Property(Daily.7.HighTemperature)] </property>
-                    <onclick>noop</onclick>
-                    <icon>$INFO[Window(weather).Property(Day6.OutlookIcon)]</icon>
-                </item>
-            </content>
+       		<posx>895</posx>
+			<top>85</top>
+       		<onleft>9000</onleft>
+       		<onright>noop</onright>
+       		<onup>450</onup>
+       		<ondown>450</ondown>
+       		<pagecontrol>66</pagecontrol>
+			<width>1000</width>
+			<height>850</height>
+			<orientation>vertical</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+			<itemlayout height="420" width="320" >
+            <control type="image">
+				<posx>35</posx>
+				<top>25</top>
+				<width>250</width>
+				<height>375</height>
+				<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="10">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+            <control type="image">
+				<posx>35</posx>
+				<top>25</top>
+				<width>250</width>
+				<height>375</height>
+				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			<control type="label">
+				<posx>50</posx>
+				<top>40</top>
+				<width>220</width>
+				<height>30</height>
+				<font>LCARS12</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<textcolor>Black</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<posx>50</posx>
+				<top>355</top>
+				<width>220</width>
+				<height>30</height>
+				<font>LCARS12</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<textcolor>Black</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+            <control type="label">
+                <posx>50</posx>
+                <top>315</top>
+                <width>220</width>
+                <height>34</height>
+                <align>left</align>
+				<font>LCARS18</font>
+                <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
+                <textcolor>Orange</textcolor>
+            </control>
+            <control type="label">
+                <posx>50</posx>
+                <top>315</top>
+                <width>220</width>
+                <font>LCARS18</font>
+                <align>right</align>
+				<height>34</height>
+                <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
+                <textcolor>Blue</textcolor>
+            </control>
+        </itemlayout>
+        <focusedlayout height="420" width="320" >
+            <control type="image">
+                <posx>35</posx>
+                <top>25</top>
+                <width>250</width>
+                <height>375</height>
+                <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="10">shadow.png</bordertexture>
+                <bordersize>10</bordersize>
+            </control>
+            <control type="image">
+				<posx>35</posx>
+				<top>25</top>
+				<width>250</width>
+				<height>375</height>
+				<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="10">shadow2.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			<control type="label">
+				<posx>50</posx>
+				<top>40</top>
+				<width>220</width>
+				<height>30</height>
+				<font>LCARS12</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>true</scroll>
+				<textcolor>Black</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<posx>50</posx>
+				<top>355</top>
+				<width>220</width>
+				<height>30</height>
+				<font>LCARS12</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>true</scroll>
+				<textcolor>Black</textcolor>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+            <control type="label">
+                <posx>50</posx>
+                <top>315</top>
+                <width>220</width>
+                <height>34</height>
+                <align>left</align>
+				<font>LCARS18</font>
+                <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
+                <textcolor>Orange</textcolor>
+            </control>
+            <control type="label">
+                <posx>50</posx>
+                <top>315</top>
+                <width>220</width>
+                <font>LCARS18</font>
+                <align>right</align>
+				<height>34</height>
+                <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
+                <textcolor>Blue</textcolor>
+            </control>
+		</focusedlayout>
+			<content>
+				<item id="1">
+					<label>$INFO[Window(weather).Property(Day1.Title)] $INFO[Window(weather).Property(Daily.2.ShortDate)] </label>
+					<label2>$INFO[Window(weather).Property(Day1.Outlook)]</label2>
+					<property name="LowTemp">$INFO[Window(weather).Property(Day1.LowTemp)]</property>
+					<property name="HighTemp">$INFO[Window(weather).Property(Day1.HighTemp)] </property>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
+				</item>
+				<item id="2">
+					<label>$INFO[Window(weather).Property(Day2.Title)] $INFO[Window(weather).Property(Daily.3.ShortDate)] </label>
+					<label2>$INFO[Window(weather).Property(Day2.Outlook)]</label2>
+					<property name="LowTemp">$INFO[Window(weather).Property(Day2.LowTemp)] </property>
+					<property name="HighTemp">$INFO[Window(weather).Property(Day2.HighTemp)] </property>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
+				</item>
+				<item id="3">
+					<label>$INFO[Window(weather).Property(Day3.Title)] $INFO[Window(weather).Property(Daily.4.ShortDate)] </label>
+					<label2>$INFO[Window(weather).Property(Day3.Outlook)]</label2>
+					<property name="LowTemp">$INFO[Window(weather).Property(Day3.LowTemp)] </property>
+					<property name="HighTemp">$INFO[Window(weather).Property(Day3.HighTemp)] </property>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
+				</item>
+				<item id="4">
+					<label>$INFO[Window(weather).Property(Day4.Title)] $INFO[Window(weather).Property(Daily.5.ShortDate)] </label>
+					<label2>$INFO[Window(weather).Property(Day4.Outlook)]</label2>
+					<property name="LowTemp">$INFO[Window(weather).Property(Day4.LowTemp)] </property>
+					<property name="HighTemp">$INFO[Window(weather).Property(Day4.HighTemp)] </property>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(weather).Property(Day4.OutlookIcon)]</icon>
+				</item>
+				<item id="5">
+					<label>$INFO[Window(weather).Property(Day5.Title)] $INFO[Window(weather).Property(Daily.6.ShortDate)] </label>
+					<label2>$INFO[Window(weather).Property(Day5.Outlook)]</label2>
+					<property name="LowTemp">$INFO[Window(weather).Property(Day5.LowTemp)] </property>
+					<property name="HighTemp">$INFO[Window(weather).Property(Day5.HighTemp)] </property>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(weather).Property(Day5.OutlookIcon)]</icon>
+				</item>
+				<item id="6">
+					<label>$INFO[Window(weather).Property(Day6.Title)] $INFO[Window(weather).Property(Daily.7.ShortDate)] </label>
+					<label2>$INFO[Window(weather).Property(Day6.Outlook)]</label2>
+					<property name="LowTemp">$INFO[Window(weather).Property(Day6.LowTemp)] </property>
+					<property name="HighTemp">$INFO[Window(weather).Property(Day6.HighTemp)] </property>
+					<onclick>noop</onclick>
+					<icon>$INFO[Window(weather).Property(Day6.OutlookIcon)]</icon>
+				</item>
+			</content>
 		</control>	
     </controls>
 </window>

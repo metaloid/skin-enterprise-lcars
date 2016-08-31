@@ -3,7 +3,8 @@
     <defaultcontrol always="true">996</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-    <include>OpenClose</include>    <coordinates>
+    <include>OpenClose</include>
+    <coordinates>
         <system>1</system>
         <origin x="560" y="120" />
     </coordinates>
@@ -22,26 +23,11 @@
             <width>480</width>
             <height max="860">auto</height>
             <itemgap>10</itemgap>
-        <control type="button" id="677">
-            <onclick>back</onclick>
-			<width>300</width>
-			<label>Cancel</label>
-		</control>
-		<control type="button" id="1500">
-                <visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
-                <width>300</width>
-				<textwidth>280</textwidth>
-                <label>Cinema Experiance</label>
-                <onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-        </control>
-		<control type="button" id="2001">
-                <width>300</width>
-                <label>Extra Info</label>
-                <visible>Container.Content(Actors) | Container.Content(Directors)</visible>
-                <visible>System.HasAddon(script.extendedinfo)</visible>
-                <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Label])</onclick>
-        </control>
-		
+			<control type="button" id="677">
+				<onclick>back</onclick>
+				<width>300</width>
+				<label>Cancel</label>
+			</control>
         </control>
         <control type="button" id="1000" description="Buttons">
             <posx>40</posx>
@@ -49,7 +35,5 @@
             <top></top>
             <width>300</width>
         </control>
-   
-
     </controls>
 </window>

@@ -51,6 +51,40 @@
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
                 </control>
+                <control type="image" description="Thumb">
+                    <left>15</left>
+                    <top>15</top>
+                    <height>320</height>
+                    <width>235</width>
+					<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
+					<bordersize>10</bordersize>
+                </control>
+				<control type="label">
+					<posx>25</posx>
+					<top>25</top>
+					<width>215</width>
+					<height>30</height>
+					<font>LCARS12</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<scroll>false</scroll>
+					<textcolor>Black</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<top>295</top>
+					<width>215</width>
+					<height>30</height>
+					<font>LCARS12</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<scroll>false</scroll>
+					<textcolor>Black</textcolor>
+					<label>$INFO[ListItem.Label2, as  , ]</label>
+				</control>
             </itemlayout>
             <focusedlayout width="250" height="360">
                 <control type="image" description="Thumb">
@@ -63,26 +97,40 @@
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
                 </control>
-				<control type="image">
-                    <centerleft>133</centerleft>
-                    <height>125</height>
-					<top>245</top>
-                    <width>238</width>
-                    <texture background="true"  border="40">shadow.png</texture>
-                    <aspectratio>strech</aspectratio>
-					
+                <control type="image" description="Thumb">
+                    <left>15</left>
+                    <top>15</top>
+                    <height>320</height>
+                    <width>235</width>
+					<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordertexture colordiffuse="White" border="10">shadow2.png</bordertexture>
+					<bordersize>10</bordersize>
                 </control>
-			<control type="textbox">
-                    <centerleft>133</centerleft>
-                    <top>255</top>
-                    <width>230</width>
-                    <font>LCARS15</font>
-					<autoscroll delay="6000" time="5000" repeat="10000"></autoscroll>
-					<height>100</height>
+				<control type="label">
+					<posx>25</posx>
+					<top>25</top>
+					<width>215</width>
+					<height>30</height>
+					<font>LCARS12</font>
 					<align>center</align>
-					<textcolor>White</textcolor>
-					<label>$INFO[ListItem.Label] $INFO[ListItem.Label2, as  , ]</label>
-                </control>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>Black</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<top>295</top>
+					<width>215</width>
+					<height>30</height>
+					<font>LCARS12</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>Black</textcolor>
+					<label>$INFO[ListItem.Label2, as  , ]</label>
+				</control>
 			</focusedlayout>
         </control>
 			<control type="spincontrolex" id="66">
@@ -341,14 +389,6 @@
 					<altlabel>1024</altlabel>
 					<usealttexture>Container.Content(TVShows)</usealttexture>
                 </control>
-                <control type="button" id="299" description="Cinema">
-                    <visible>Container.Content(Movies) + system.hasaddon(script.cinema.experience)</visible>
-                    <width>200</width>
-                    <label>Cinema</label>
-					<onclick>Dialog.Close(all,true)</onclick>
-                    <onclick>Playlist.Clear</onclick>
-                    <onclick>RunScript(script.cinema.experience)</onclick>
-                </control>
                 <control type="button" id="11" description="Trailer">
                     <width>200</width>
                     <label>20410</label>
@@ -367,6 +407,21 @@
 					<label>38023</label>
 					<visible>Control.IsEnabled(7)</visible>
                 </control>
+				<control type="button" id="677">
+                    	<onclick>back</onclick>
+						<width>200</width>
+						<label>Close</label>
+				</control>
+				
+            </control>
+            <control type="grouplist">
+                <left>-30</left>
+                <top>660</top>
+                <width>210</width>
+                <height>800</height>
+                <onright>50</onright>
+                <itemgap>5</itemgap>
+                <orientation>vertical</orientation>
 				<control type="button" id="678">
                     <width>200</width>
 					<label>SD: $INFO[ListItem.VideoResolution]</label>
@@ -403,12 +458,6 @@
 					<onclick>noop</onclick>
 					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
                 </control>
-				<control type="button" id="677">
-                    	<onclick>back</onclick>
-						<width>200</width>
-						<label>Close</label>
-				</control>
-				
             </control>
         </control>
         <!--ActorsandRoles-->

@@ -18,28 +18,28 @@
         <control type="group">
             <control type="label" id="1" description="Heading">
                 <left>30</left>
-				<top>10</top>
+				<top>5</top>
 				<label></label>
                 <width>540</width>
-                <font>LCARS24</font>
+                <font>LCARS20</font>
                 <textcolor>Orange</textcolor>
 				<align>left</align>
             </control>
             <control type="textbox" id="9" description="content">
                 <left>30</left>
-				<top>65</top>
+				<top>60</top>
 				<width>540</width>
-				<height>98</height>
+				<height>110</height>
 				<align>left</align>
-				<font>LCARS24</font>
+				<font>LCARS16</font>
                 <label>-</label>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
             <control type="grouplist">
-				<left>150</left>
+				<left>100</left>
 				<top>175</top>
 			    <height>50</height>
-				<width>310</width>
+				<width>410</width>
                 <onleft>noop</onleft>
 				<onright>noop</onright>
 				<onup>noop</onup>
@@ -47,11 +47,13 @@
                 <itemgap>10</itemgap>
                 <orientation>horizontal</orientation>
 				<control type="button" id="10" description="No">
-					<width>150</width>
+					<width>200</width>
+					<textwidth>180</textwidth>
 					<label>106</label>
 				</control>
 				<control type="button" id="11" description="Yes">
-					<width>150</width>
+					<width>200</width>
+					<textwidth>180</textwidth>
 					<label>107</label>
 				</control>
 			</control>

@@ -1,130 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="ShortcutsCommons">
-        <itemlayout height="50" width="210">
-            <control type="image" description="THMBSBASECOLOR">
-                <centerleft>105</centerleft>
-				<width>200</width>
-                <height>40</height>
-                <texture colordiffuse="HellOrange"  border="20">whiteallrounded.png</texture>
-            </control>
-            <control type="label" description="LABEL">
-                <centerleft>105</centerleft>
-				<top>8</top>
-                <width>180</width>
-                <height>28</height>
-                <aligny>center</aligny>
-				<font>LCARS20</font>
-                <align>center</align>
-                <scroll>false</scroll>
-				<textcolor>Black</textcolor>
-                <label>$INFO[ListItem.label]</label>
-            </control>
-   		</itemlayout>
-       	<focusedlayout height="50" width="210">
-            <control type="image" description="THMBSBASE">
-                <centerleft>105</centerleft>
-				<width>200</width>
-                <height>40</height>
-                <texture  border="20">whiteallrounded.png</texture>
-                </control>
-			<control type="label" description="label">
-                <centerleft>105</centerleft>
-				<top>8</top>
-                <width>180</width>
-                <height>28</height>
-                <aligny>center</aligny>
-				<font>LCARS20</font>
-                <align>center</align>
-                <textcolor>Black</textcolor>
-                <label>$INFO[ListItem.label]</label>
-            </control>
-       	</focusedlayout>
-    </include>
     <include name="Movies">
         <control type="panel" id="311" description="Movies Shelf Shortcuts">
-            <visible>[Library.HasContent(Movies) + [Container(9000).HasFocus(340) | Container(9000).HasFocus(357) | Control.HasFocus(311)]]</visible>
-            <onup>9000</onup>
-            <ondown>66</ondown>
-            <onleft>9000</onleft>
-            <onright>311</onright>
+            <visible>Library.HasContent(Movies) + [Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
+            <onup>311</onup>
+            <ondown>311</ondown>
+            <onleft>9002</onleft>
+            <onright>noop</onright>
 			<pagecontrol>66</pagecontrol>
 			<top>50</top>
 			<posx>65</posx>
-			<width>1150</width>
-			<height>450</height>
+			<width>930</width>
+			<height>850</height>
 			<orientation>horizontal</orientation>
 			<scrolltime>400</scrolltime>
 			<include>ShelfFade</include>
             <include>IconLcars</include>
-            <content target="video" limit="10">videodb://recentlyaddedmovies/</content>
+            <content target="video" limit="16">videodb://recentlyaddedmovies/</content>
+            <!--content target="video" limit="10">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</content-->
+        </control>
+    </include>
+    <include name="Trailers">
+        <control type="panel" id="310" description="Movies Shelf Shortcuts">
+            <visible>[Container(9000).HasFocus(339) | Control.HasFocus(310)]</visible>
+            <onup>311</onup>
+            <ondown>311</ondown>
+            <onleft>9002</onleft>
+            <onright>noop</onright>
+			<pagecontrol>66</pagecontrol>
+			<top>50</top>
+			<posx>65</posx>
+			<width>930</width>
+			<height>850</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
+            <content target="video" limit="24">plugin://script.extendedinfo/?info=incinemas</content>
         </control>
     </include>
     <include name="Favorites">
         <control type="panel" id="317" description="Movies Shelf Shortcuts">
             <visible>!Window.IsActive(134) + [Container(9000).HasFocus(352) | Control.HasFocus(317)]</visible>
-            <onup>9000</onup>
-            <ondown>66</ondown>
-            <onleft>9000</onleft>
-            <onright>311</onright>
+            <onup>317</onup>
+            <ondown>317</ondown>
+            <onleft>9002</onleft>
+            <onright>noop</onright>
 			<onfocus>ActivateWindow(Favourites)</onfocus>
 			<pagecontrol>66</pagecontrol>
 			<top>50</top>
 			<posx>65</posx>
-			<width>1200</width>
-			<height>450</height>
+			<width>930</width>
+			<height>850</height>
 			<orientation>horizontal</orientation>
 			<scrolltime>400</scrolltime>
-			<!--include>ShelfFade</include-->
-            <include>SquareIconLcars</include>
-            <content limit="3">favourites://</content>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
+            <content limit="6">favourites://</content>
         </control>
     </include>
 	<include name="TV_RA">
-        <control type="group">
-            <visible>Library.HasContent(TVShows)</visible>
             <control type="panel" id="312" description="TOP Shortcuts">
-                <visible>[Library.HasContent(TVShows) | !Skin.HasSetting(TVShelf_Watchlist)] + [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
-                <onup>9000</onup>
-                <ondown>66</ondown>
-                <onleft>9000</onleft>
-                <onright>312</onright>
+                <visible>Library.HasContent(TVShows) + [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
+                <onup>312</onup>
+                <ondown>312</ondown>
+                <onleft>9002</onleft>
+                <onright>noop</onright>
 				<pagecontrol>66</pagecontrol>
 				<top>50</top>
 				<posx>65</posx>
-				<width>1150</width>
-				<height>450</height>
-				<focusposition>2</focusposition>
+				<width>930</width>
+				<height>850</height>
 				<orientation>horizontal</orientation>
 				<scrolltime>400</scrolltime>
 				<include>ShelfFade</include>
-                <include>SquareIconLcars</include>
-                <content target="video" limit="10">videodb://recentlyaddedepisodes/</content>
-            </control>
-         </control>
+				<include>IconLcars</include>
+                <content target="video" limit="16">videodb://recentlyaddedepisodes/</content>
+			</control>
     </include>
-    <include name="TV_NA">
-        <control type="group">
+ <include name="TV_NA">
             <control type="panel" id="316" description="TOP Shortcuts">
                 <visible>Container(9000).HasFocus(358)</visible>
-                <onup>9000</onup>
-                <ondown>66</ondown>
-                <onleft>9000</onleft>
-                <onright>311</onright>
+                <onup>316</onup>
+                <ondown>316</ondown>
+                <onleft>9002</onleft>
+                <onright>noop</onright>
 				<pagecontrol>66</pagecontrol>
-				<top>50</top>
-				<posx>65</posx>
-				<width>1150</width>
-				<height>450</height>
-				<focusposition>2</focusposition>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-				<include>ShelfFade</include>
-                <include>SquareIconLcars</include>
+			<top>50</top>
+			<posx>65</posx>
+			<width>930</width>
+			<height>850</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
                 <content>
                     <item id="1" description="Episodes1">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
-                        <label>$INFO[Window(Home).Property(NextAired.1.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.1.Label)] $INFO[Window(Home).Property(NextAired.1.NextDay)]</label>
                         <label2>S$INFO[Window(Home).Property(NextAired.1.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.1.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.1.NextTitle)]</label2>
                         <thumb>$INFO[Window(Home).Property(NextAired.1.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.1.Library)])</onclick>
@@ -132,146 +105,106 @@
                     <item id="2" description="Episodes2">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.2.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.2.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.2.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.2.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.2.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.2.Label)] $INFO[Window(Home).Property(NextAired.2.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.2.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.2.Library)])</onclick>
                     </item>
                     <item id="3" description="Episodes3">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.3.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.3.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.3.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.3.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.3.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.3.Label)] $INFO[Window(Home).Property(NextAired.3.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.3.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.3.Library)])</onclick>
                     </item>
                     <item id="4" description="Episodes4">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.4.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.4.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.4.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.4.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.4.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.4.Label)] $INFO[Window(Home).Property(NextAired.4.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.4.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.4.Library)])</onclick>
                     </item>
                     <item id="5" description="Episodes5">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.5.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.5.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.5.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.5.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.5.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.5.Label)] $INFO[Window(Home).Property(NextAired.5.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.5.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.5.Library)])</onclick>
                     </item>
                     <item id="6" description="Episodes6">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.6.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.6.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.6.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.6.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.6.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.6.Label)] $INFO[Window(Home).Property(NextAired.6.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.6.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.6.Library)])</onclick>
                     </item>
                     <item id="7" description="Episodes7">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.7.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.7.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.7.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.7.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.7.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.7.Label)] $INFO[Window(Home).Property(NextAired.7.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.7.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.7.Library)])</onclick>
                     </item>
                     <item id="8" description="Episodes8">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.8.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.8.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.8.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.8.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.8.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.8.Label)] $INFO[Window(Home).Property(NextAired.8.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.8.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.8.Library)])</onclick>
                     </item>
                     <item id="9" description="Episodes9">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.9.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.9.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.9.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.9.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.9.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.9.Label)] $INFO[Window(Home).Property(NextAired.9.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.9.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.9.Library)])</onclick>
                     </item>
                     <item id="10" description="Episodes10">
                         <visible>!IsEmpty(Window(Home).Property(NextAired.10.NextTitle))</visible>
                         <label2>S$INFO[Window(Home).Property(NextAired.10.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.10.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.10.NextTitle)]</label2>
-                        <label>$INFO[Window(Home).Property(NextAired.10.NextDay)]</label>
+                        <label>$INFO[Window(Home).Property(NextAired.10.Label)] $INFO[Window(Home).Property(NextAired.10.NextDay)]</label>
                         <thumb>$INFO[Window(Home).Property(NextAired.10.fanart)]</thumb>
                         <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.10.Library)])</onclick>
                     </item>
                 </content>
             </control>
-        </control>
     </include>
     <include name="Music_RA">
         <control type="panel" id="313" description="TOP Shortcuts">
-                <onup>9000</onup>
-                <ondown>66</ondown>
-                <onleft>9000</onleft>
-                <onright>313</onright>
+                <onup>313</onup>
+                <ondown>313</ondown>
+                <onleft>9002</onleft>
+                <onright>noop</onright>
                 <visible>Library.HasContent(Music) | Library.HasContent(MusicVideos) | Skin.HasSetting(MusicShelf_Custom)</visible>
                 <visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)] + !StringCompare(Skin.String(musicshelf),mushoff)</visible>
 				<pagecontrol>66</pagecontrol>
-				<top>50</top>
-				<posx>65</posx>
-				<width>1150</width>
-				<height>450</height>
-				<focusposition>2</focusposition>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-				<include>ShelfFade</include>
-                <include>SquareIconLcars</include>
-                <content target="music" limit="10">$VAR[musicshelfcontent]</content>
+			<top>50</top>
+			<posx>65</posx>
+			<width>930</width>
+			<height>850</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
+                <content target="music" limit="16">$VAR[musicshelfcontent]</content>
             </control>
     </include>
 	<include name="Addons_Shortcuts">
-				<control type="panel" id="324" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(343) | Control.HasFocus(324)]</visible>
-                <onup>66</onup>
-                <ondown>315</ondown>
-                <onleft>9000</onleft>
-                <onright>9000</onright>
-				<top>550</top>
-				<left>130</left>
-				<width>1200</width>
-				<height>60</height>
-				<include>ShelfFade</include>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-                <include>ShortcutsCommons</include>
-                <content>
-                    <item id="1" description="tvchannels">
-                        <label>3</label>
-						<onclick>ActivateWindow(Videos,Addons)</onclick>
-                    </item>
-                    <item id="2" description="radiochannels">
-                        <label>2</label>
-						<onclick>ActivateWindow(Music,Addons)</onclick>
-                    </item>
-                    <item id="3" description="tvchannels">
-                        <label>31098</label>
-						<onclick>ActivateWindow(Programs,Addons)</onclick>
-                    </item>
-                    <item id="4" description="radiochannels">
-                        <label>31037</label>
-						<onclick>ActivateWindow(AddonBrowser,root)</onclick>
-                    </item>
-                    <item id="5" description="shelf custom">
-                        <label>31040</label>
-						<onclick>ActivateWindow(1617)</onclick>
-                    </item>
-        </content>
-        </control>
 		<control type="group">
             <control type="panel" id="315" description="TOP Shortcuts">
                 <visible> Skin.HasSetting(AddonsShelf_Custom)+ [Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
-                <onup>324</onup>
-                <ondown>66</ondown>
-                <onleft>315</onleft>
-                <onright>315</onright>
+                <onup>315</onup>
+                <ondown>315</ondown>
+                <onleft>9002</onleft>
+                <onright>noop</onright>
 				<pagecontrol>66</pagecontrol>
-				<top>50</top>
-				<posx>65</posx>
-				<width>1150</width>
-				<height>450</height>
-				<focusposition>2</focusposition>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-				<include>ShelfFade</include>
-                <include>SquareIconLcars</include>
+			<top>50</top>
+			<posx>65</posx>
+			<width>930</width>
+			<height>850</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
                 <content>
                     <item id="1" description="Addons">
                         <visible>!IsEmpty(Skin.String(ShelfAddons.1.Label))</visible>
@@ -406,14 +339,14 @@
 				<label>Last Update - $INFO[Window(Weather).Property(Updated)]</label>
 				<description>update label</description>
 			</control>
-			<control type="image">
+			<!--control type="image">
                 <left>820</left>
                 <top>180</top>
                 <width>345</width>
                 <height>270</height>
                 <aspectratio>keep</aspectratio>
                 <texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
-            </control>
+            </control-->
             <control type="group">
 				<control type="label">
 						<left>50</left>
@@ -458,7 +391,7 @@
 						<font>LCARS20</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$LOCALIZE[33021] : $INFO[Window(Weather).Property(Daily.1.Precipitation)]</label>
+						<label>$LOCALIZE[33021] : $INFO[Window(Weather).Property(Current.Precipitation)]</label>
 						<visible>!IsEmpty(Window(Weather).Property(Current.Precipitation))</visible>
 					</control>
 					<control type="label">
@@ -486,288 +419,99 @@
 						<visible>!IsEmpty(Window(Weather).Property(Today.Sunset))</visible>
 					</control>
                 </control>
+        <control type="panel">
+			<top>450</top>
+			<posx>25</posx>
+			<width>1000</width>
+			<height>450</height>
+			<orientation>vertical</orientation>
+			<scrolltime>400</scrolltime>
+			<include>ShelfFade</include>
+            <include>IconLcars</include>
+            <content>
+                <item id="1">
+                    <label>$INFO[Window(weather).Property(Day0.Title)] </label>
+                    <onclick>noop</onclick>
+                    <thumb>$INFO[Window(Weather).Property(Current.ConditionIcon)]</thumb>
+                </item>
+                <item id="2">
+                    <label>$INFO[Window(weather).Property(Day1.Title)]</label>
+                    <onclick>noop</onclick>
+                    <thumb>$INFO[Window(weather).Property(Day1.OutlookIcon)]</thumb>
+                </item>
+                <item id="3">
+                    <label>$INFO[Window(weather).Property(Day2.Title)]</label>
+                    <onclick>noop</onclick>
+                    <thumb>$INFO[Window(weather).Property(Day2.OutlookIcon)]</thumb>
+                </item>
+			</content>
         </control>
-    </include>
-    <include name="mediasource">
-        <control type="panel" id="320" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(365) | Control.HasFocus(320)] </visible>
-                <onup>320</onup>
-                <ondown>320</ondown>
-                <onleft>9000</onleft>
-                <onright>320</onright>
-				<top>550</top>
-				<left>130</left>
-				<width>1200</width>
-				<height>60</height>
-				<include>ShelfFade</include>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-                <include>ShortcutsCommons</include>
-                <content>
-                    <item id="1" description="Video">
-                        <label>Video Source</label>
-                        <onclick>ActivateWindow(Videos,files)</onclick>
-                   </item>
-                    <item id="2" description="Music">
-                        <label>Audio Source</label>
-                        <onclick>ActivateWindow(501,root)</onclick>
-                    </item>
-                </content>
-        </control>
-    </include>
-    <include name="settingshelf">
-        <control type="panel" id="325" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(348) | Control.HasFocus(325)] </visible>
-                <onup>325</onup>
-                <ondown>325</ondown>
-                <onleft>9000</onleft>
-                <onright>325</onright>
-				<top>550</top>
-				<left>130</left>
-				<width>1200</width>
-				<height>60</height>
-				<include>ShelfFade</include>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-                <include>ShortcutsCommons</include>
-                <content>
-                    <item id="1" description="Video">
-                        <visible>![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]</visible>
-						<label>Video Source</label>
-                        <onclick>ActivateWindow(Videos,files)</onclick>
-                   </item>
-                    <item id="2" description="Music">
-                        <visible>![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]</visible>
-						<label>Audio Source</label>
-                        <onclick>ActivateWindow(501,root)</onclick>
-                    </item>
-                    <item id="3" description="UpdateLibrary">
-                        <label>7</label>
-                        <onclick>ActivateWindow(3)</onclick>
-                    </item>
-                    <item id="4" description="UpdateLibrary">
-                        <label>$LOCALIZE[5]</label>
-                        <onclick>ActivateWindow(Settings)</onclick>
-                    </item>
-					<item id="5" description="UpdateLibrary">
-                        <label>20077</label>
-                        <onclick>ActivateWindow(1718)</onclick>
-                    </item>
-					<!--item id="6" description="UpdateLibrary">
-                        <label>13200</label>
-                        <onclick>ActivateWindow(Profiles)</onclick>
-                    </item-->
-                </content>
-        </control>
-    </include>
-	<include name="energize">
-        <control type="panel" id="321" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(349) | Control.HasFocus(321)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
-                <onup>321</onup>
-                <ondown>321</ondown>
-                <onleft>9000</onleft>
-                <onright>321</onright>
-				<top>550</top>
-				<left>130</left>
-				<width>1200</width>
-				<height>60</height>
-				<include>ShelfFade</include>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-                <include>ShortcutsCommons</include>
-                <content>
-                    <item id="1" description="Exit button">
-                        <label>13009</label>
-                        <onclick>XBMC.Quit()</onclick>
-                    </item>
-                    <item id="2" description="Shutdown button">
-                        <visible>System.CanPowerDown</visible>
-                        <label>13005</label>
-                        <onclick>XBMC.Powerdown()</onclick>
-                    </item>
-                    <item id="3" description="Suspend button">
-                        <label>13011</label>
-                        <visible>System.CanSuspend</visible>
-                        <onclick>XBMC.Suspend()</onclick>
-                    </item>
-                    <item id="4" description="Reboot button">
-                        <visible>System.CanReboot</visible>
-                <label>13013</label>
-                        <onclick>XBMC.Reset()</onclick>
-                    </item>
-					<!--item id="5" description="LogOff">
-                        <visible>System.HasLoginScreen</visible>
-					<label>20126</label>
-                        <onclick>Activatewindow(29)</onclick>
-                    </item-->
-					<item id="6" description="TimerOff">
-                        <visible>!System.Platform.ATV2 + !System.Platform.IOS</visible>
-                <label>Timer</label>
-                        <onclick>AlarmClock(Timer,Quit())</onclick>
-                    </item>
-                </content>
-        </control>
-    </include>
-	<include name="epg">
-        <control type="panel" id="322" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355) | Control.HasFocus(322)]</visible>
-                <onup>322</onup>
-                <ondown>322</ondown>
-                <onleft>9000</onleft>
-                <onright>322</onright>
-				<top>550</top>
-				<left>130</left>
-				<width>1200</width>
-				<height>60</height>
-				<include>ShelfFade</include>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-                <include>ShortcutsCommons</include>
-                <content>
-                    <item id="1" description="tvchannels">
-                        <label>19023</label>
-						<onclick>ActivateWindow(tvchannels)</onclick>
-						<visible>PVR.HasTVChannels</visible>
-                    </item>
-                    <item id="2" description="tvguide">
-                        <label>19069</label>
-						<onclick>ActivateWindow(tvguide)</onclick>
-						<visible>PVR.HasTVChannels</visible>
-                    </item>
-                    <item id="3" description="tvrecordings">
-                        <label>19163</label>
-						<onclick>ActivateWindow(tvrecordings)</onclick>
- 						<visible>PVR.HasTVChannels</visible>
-                   </item>
-					<item id="4" description="tvtimers">
-                        <label>19040</label>
-						<onclick>ActivateWindow(tvtimers)</onclick>
-						<visible>PVR.HasTVChannels</visible>
-                    </item>
-					<item id="5">
-                        <visible>PVR.HasTVChannels</visible>
-						<label>137</label>
-						<onclick>ActivateWindow(tvSearch)</onclick>
-					</item>
-					<item id="6">
-                        <visible>PVR.HasRadioChannels</visible>
-						<label>19019</label>
-						<onclick>ActivateWindow(RadioChannels)</onclick>
-					</item>
-					<item id="7">
-                        <visible>PVR.HasRadioChannels</visible>
-						<label>22020</label>
-						<onclick>ActivateWindow(RadioGuide)</onclick>
-					</item>
-					<item id="8">
-                        <visible>PVR.HasRadioChannels</visible>
-						<label>19163</label>
-						<onclick>ActivateWindow(RadioRecordings)</onclick>
-					</item>
-					<item id="9">
-                        <visible>PVR.HasRadioChannels</visible>
-						<label>19040</label>
-						<onclick>ActivateWindow(RadioTimers)</onclick>
-					</item>
-					<item id="10">
-                        <visible>PVR.HasRadioChannels</visible>
-						<label>137</label>
-						<onclick>ActivateWindow(RadioSearch)</onclick>
-					</item>
-                </content>
-        </control>
-    </include>
-	<include name="dvd">
-        <control type="panel" id="323" description="TOP Shortcuts">
-                <visible>[Container(9000).HasFocus(354) | Control.HasFocus(323)]</visible>
-                <onup>323</onup>
-                <ondown>323</ondown>
-                <onleft>9000</onleft>
-                <onright>323</onright>
-				<top>550</top>
-				<left>130</left>
-				<width>1200</width>
-				<height>60</height>
-				<include>ShelfFade</include>
-				<orientation>horizontal</orientation>
-				<scrolltime>400</scrolltime>
-                <include>ShortcutsCommons</include>
-                <content>
-                    <item id="1" description="tvchannels">
-                        <label>Play</label>
-						<onclick>PlayDVD</onclick>
-                    </item>
-                    <item id="2" description="radiochannels">
-                        <label>Eject</label>
-						<onclick>EjectTray()</onclick>
-                    </item>
-                </content>
         </control>
     </include>
 	<include name="playTop">
         <control type="group" description="Player Info">
-			<width>1150</width>
-			<height>450</height>
+			<width>1000</width>
+			<height>850</height>
             <visible>Container(9000).HasFocus(349) + Player.HasMedia + ![Window.IsActive(DialogBusy.xml) | Window.IsActive(VideoFullscreen.xml) | Window.IsActive(myPVR.xml)]</visible>
 			<animation effect="fade" start="0" end="100" time="60" delay="0" reversible="true">Visible</animation>
             <animation effect="fade" start="100" end="0" time="160" delay="260" reversible="true">Hidden</animation>
-			<control type="visualisation" id ="3">>
-				<top>60</top>
-				<posx>00</posx>
-				<width>1100</width>
-				<height>430</height>
-				<aspectratio scalediffuse="false">strech</aspectratio>
-				<visible>Player.HasAudio</visible>
-				<visible>IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
-			</control>
 			<control type="image">
-				<top>60</top>
+				<top>40</top>
 				<posx>60</posx>
-				<width>430</width>
-				<height>430</height>
-				<aspectratio scalediffuse="false">strech</aspectratio>
-				<texture fallback="logo2.png">$INFO[MusicPlayer.Cover]</texture>
-				<colordiffuse>55FFFFFF</colordiffuse>
+				<width>970</width>
+				<height>875</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture background="true" colordiffuse="55ffffff" >$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture  border="40">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
 				<visible>Player.HasAudio</visible>
-			</control>
-			<control type="videowindow" id="2">
-				<top>60</top>
-				<posx>0</posx>
-				<height>420</height>
-				<visible>Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			</control>
 			<control type="group">
- 			<visible>Player.HasAudio</visible>
+ 			<posx>100</posx>
+            <top>80</top>
+            <visible>Player.HasAudio | Player.HasVideo</visible>
                <control type="label">
-                    <posx>550</posx>
-                    <top>160</top>
                     <aligny>center</aligny>
-                    <width>550</width>
+                    <align>center</align>
+					<width>890</width>
                     <height>40</height>
                     <font>LCARS24</font>
-                    <textcolor>White</textcolor>
-                    <label>$INFO[MusicPlayer.Title]</label>
+                    <textcolor>Orange</textcolor>
+                    <label>$INFO[VideoPlayer.ChannelNumber,(,) ]$INFO[VideoPlayer.ChannelName,, ]$INFO[VideoPlayer.Season,S , • ]$INFO[VideoPlayer.Episode,E , ]$INFO[Player.Title]</label>
                 </control>
                 <control type="label">
-                    <posx>550</posx>
-                    <top>210</top>
+                    <visible>Player.HasAudio</visible>
+					<top>42</top>
                     <aligny>center</aligny>
-                    <width>550</width>
+                    <align>center</align>
+					<width>890</width>
                     <height>40</height>
                     <font>LCARS24</font>
-                    <label>ARTIST: $INFO[MusicPlayer.Artist]</label>
+                    <label>[COLOR HellOrange]ARTIST: [/COLOR]$INFO[MusicPlayer.Artist]</label>
                 </control>
-                <control type="textbox">
-                    <posx>550</posx>
-                    <top>270</top>
+                <control type="label">
+                    <visible>Player.HasAudio</visible>
+					<top>84</top>
                     <aligny>center</aligny>
-                    <width>550</width>
-                    <height>100</height>
+                    <align>center</align>
+					<width>890</width>
+                    <height>40</height>
                     <font>LCARS24</font>
-                    <label>ALBUM: $INFO[MusicPlayer.Album]</label>
+                    <label>[COLOR HellOrange]ALBUM: [/COLOR]$INFO[MusicPlayer.Album]</label>
                 </control>
-            </control>
+				<control type="visualisation" id ="3">>
+					<top>150</top>
+					<width>890</width>
+					<aspectratio scalediffuse="false">strech</aspectratio>
+					<visible>Player.HasAudio</visible>
+					<visible>IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
+				</control>
+				<control type="videowindow" id="2">
+					<top>42</top>
+					<width>890</width>
+					<visible>Player.HasVideo + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
+				</control>
+           </control>
         </control>
 	</include>
-
 </includes>

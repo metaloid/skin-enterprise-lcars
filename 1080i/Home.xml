@@ -11,7 +11,7 @@
             <top>0</top>
             <posx>0</posx>
             <width>455</width>
-            <height>970</height>
+            <height>1020</height>
             <aspectratio>strech</aspectratio>
             <texture background="true" >Lcars/lineR.png</texture>
 		</control> 
@@ -19,24 +19,23 @@
             <top>0</top>
             <posx>455</posx>
             <width>1464</width>
-            <height>970</height>
+            <height>1020</height>
             <aspectratio>strech</aspectratio>
             <texture  background="true" >Lcars/lineL.png</texture>
 	    </control>
-        <include>InfoPanel</include>
         <control type="group">
         <!--ICON SETTINGS-->			
 			<control type="panel" id="9000" description="ICONE">
 				<scrolltime>300</scrolltime>
 				<width>320</width>
 				<height>750</height>
-				<top>120</top>
+				<top>115</top>
 				<posx>50</posx>
 				<onleft>60</onleft>
 				<pagecontrol>60</pagecontrol>
 				<onright condition="Container(9000).HasFocus(352)">ActivateWindow(Favourites)</onright>
 				<onright condition="Container(9000).HasFocus(345)">ActivateWindow(1120)</onright>
-				<onright condition="![Container(9000).HasFocus(345) | Container(9000).HasFocus(352)]">700</onright>
+				<onright condition="![Container(9000).HasFocus(345) | Container(9000).HasFocus(352)]">9002</onright>
 				<focusposition>1</focusposition>
 				<onup>9001</onup>
 				<ondown>9001</ondown>
@@ -76,7 +75,7 @@
 						<posx>20</posx>
 						<width>270</width>
 						<height>40</height>
-						<texture  colordiffuse="White">whiteallrounded2.png</texture>
+						<texture >whiteallrounded2.png</texture>
 					</control>
 					<control type="label" description="label">
 						<left>95</left>
@@ -98,7 +97,7 @@
 				<visible>Player.HasMedia</visible>
 				<width>280</width>
 				<height>800</height>
-				<top>810</top>
+				<top>850</top>
 				<posx>70</posx>
 				<onleft>noop</onleft>
 				<onright>noop</onright>
@@ -150,96 +149,279 @@
 				</control>				
 			</control>
 			<control type="group" id="700" description="Shelf items">
-				<posx>630</posx>
-				<top>200</top>
+				<posx>830</posx>
+				<top>35</top>
 				<control type="image" description="Logo">
-					<top>50</top>
+					<top>40</top>
 					<posx>60</posx>
-					<width>1180</width>
-					<height>450</height>
+					<width>970</width>
+					<height>875</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true" colordiffuse="55ffffff" >$VAR[shelfpic]</texture>
 					<bordertexture  border="40">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
 				</control>
-				<include>settingshelf</include>
 				<include>weather_shelf</include>
+				<include>Trailers</include>
 				<include condition="Library.HasContent(TVShows)">TV_RA</include>
 				<include>Addons_Shortcuts</include>
 				<include condition="System.HasAddon(script.tv.show.next.aired)">TV_NA</include>
 				<include condition="Library.HasContent(Movies)">Movies</include>
 				<include>Music_RA</include>
-				<include>epg</include>
-				<include>dvd</include>
 				<include>Favorites</include>
-				<include>energize</include>
-				<include>mediasource</include>
-				<control type="label" description="Top Label">
-					<include>ShelfTitle</include>
-					<label> $VAR[shelflabel] </label>
-				</control>
+				<include>playTop</include>
 			</control>
 		</control>
-		<control type="spincontrolex" id="66">
-			<visible>[Container(9000).HasFocus(340) + [Container(311).HasPrevious |  Container(311).HasNext]] | [Container(9000).HasFocus(341) + [Container(312).HasPrevious |  Container(312).HasNext]] | [Container(9000).HasFocus(358) + [Container(316).HasPrevious |  Container(316).HasNext]] | [Container(9000).HasFocus(343) + [Container(315).HasPrevious |  Container(315).HasNext]] | [Container(9000).HasFocus(342) + [Container(313).HasPrevious |  Container(313).HasNext]]</visible>
-			<description>Next page button</description>
-			<left>700</left>
-			<width>270</width>
-			<height>40</height>
-			<top>705</top>
-			<subtype>page</subtype>
-			<font>-</font>
-			<onleft>9000</onleft>
-			<onright>500</onright>
-			<ondown condition="Container(9000).HasFocus(343)">324</ondown>
-			<ondown>9000</ondown>
-			<onup condition="Container(9000).HasFocus(340)">311</onup>
-			<onup condition="Container(9000).HasFocus(341)">312</onup>
-			<onup condition="Container(9000).HasFocus(342)">313</onup>
-			<onup condition="Container(9000).HasFocus(343)">315</onup>
-			<onup condition="Container(9000).HasFocus(358)">316</onup>
-			<onup>9000</onup>
-			<textcolor>-</textcolor>
-			<showonepage>false</showonepage>
-			<spinwidth>100</spinwidth>
-			<spinheight>40</spinheight>
-			<texturenofocus></texturenofocus>
-			<texturefocus></texturefocus>
-			<textureup colordiffuse="HellOrange" >left.png</textureup>
-			<texturedown colordiffuse="HellOrange">right.png</texturedown>
-			<textureupfocus colordiffuse="HellOrange">leftp.png</textureupfocus>
-			<texturedownfocus colordiffuse="HellOrange">rightp.png</texturedownfocus>
-		</control>
-		<control type="button" id="500">
-			<visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)]</visible>
-			<onleft>66</onleft>
-			<onup condition="Container(9000).HasFocus(342)">313</onup>
-			<onright>9000</onright>
-			<description>Play all music</description>
-			<left>980</left>
-			<width>270</width>
-			<height>40</height>
-			<top>705</top>
-			<label>Play All</label>
-			<onclick>PlayMedia(special://skin/resources/randomMusic.xsp)</onclick>
-		</control>
-		<control type="button" id="500">
-			<visible>[Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
-			<onleft>66</onleft>
-			<onup condition="Container(9000).HasFocus(342)">313</onup>
-			<onright>9000</onright>
-			<description>Play Random</description>
-			<left>980</left>
-			<width>270</width>
-			<height>40</height>
-			<top>705</top>
-			<label>Play Random</label>
-			<onclick>PlayMedia(special://skin/resources/randomMov.xsp)</onclick>
+		<control type="label" description="Top Label">
+			<include>ShelfTitle</include>
+			<label> $VAR[shelflabel] </label>
 		</control>
 		<control type="grouplist">
-			<posx>730</posx>
-			<top>200</top>
-			<include>playTop</include>
+			<top>680</top>
+            <posx>625</posx>
+			<align>left</align>
+            <aligny>bottom</aligny>
+			<orientation>vertical</orientation>
+            <itemgap>10</itemgap>
+			<control type="button" description="movie">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(340)</visible>
+                <label>$INFO[Window.Property(Movies.Count),$LOCALIZE[342]: ]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="tv">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(341)</visible>
+                <label>$INFO[Window.Property(TVShows.Count),$LOCALIZE[20343]: ]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="songs">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(342)</visible>
+                <label>$INFO[Window.Property(Music.SongsCount),$LOCALIZE[134]: ]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="Clock">
+                <visible>!Skin.HasSetting(HideClock)</visible>
+                <label>$INFO[System.Time]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="cputemp">
+				<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
+            <width>250</width>
+                <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
+            </control>
+			<control type="button" description="WebLink">
+                <visible>!Skin.HasSetting(hideconnection)</visible>
+                <width>250</width>
+                <label>$INFO[Network.IPAddress,IP: ]</label>
+            </control>
+			<control type="button" description="Battery">
+                <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
+                <label>Power Level $INFO[System.BatteryLevel]</label>
+			    <texturenofocus colordiffuse="$VAR[Battery]" border="20">whiteallrounded.png</texturenofocus>
+				<width>250</width>
+            </control>
 		</control>
+		<control type="grouplist" id="9002">
+			<top>115</top>
+            <posx>625</posx>
+			<align>left</align>
+            <orientation>vertical</orientation>
+			<onright condition="Container(9000).HasFocus(339)">310</onright>
+			<onright condition="Container(9000).HasFocus(340)">311</onright>
+			<onright condition="Container(9000).HasFocus(341)">312</onright>
+			<onright condition="Container(9000).HasFocus(342)">313</onright>
+			<onright condition="Container(9000).HasFocus(343)">315</onright>
+			<onright condition="Container(9000).HasFocus(358)">316</onright>
+			<onleft>9000</onleft>
+			<onup>9002</onup>
+			<ondown>9002</ondown>
+			<itemgap>10</itemgap>
+			<control type="button" id="3200">
+				<visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)] | [Container(9000).HasFocus(340) | Control.HasFocus(311)] | [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
+				<description>Play Random</description>
+				<width>250</width>
+				<label>Play Random</label>
+				<onclick condition="[Container(9000).HasFocus(342) | Control.HasFocus(313)]">PlayMedia(special://skin/resources/randomMusic.xsp)</onclick>
+				<onclick condition="[Container(9000).HasFocus(340) | Control.HasFocus(311)]">PlayMedia(special://skin/resources/randomMov.xsp)</onclick>
+				<onclick condition="[Container(9000).HasFocus(341) | Control.HasFocus(312)]">PlayMedia(special://skin/resources/randomTV.xsp)</onclick>
+			</control>
+			<!--control type="button" id="64">
+				<visible>[Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
+				<description>Play Random</description>
+				<width>250</width>
+				<label>Play Random</label>
+				<onclick>PlayMedia(special://skin/resources/randomMov.xsp)</onclick>
+			</control-->
+            <control type="button" id="3201" description="radiochannels">
+                <visible>[Container(9000).HasFocus(354)]</visible>
+				<label>Eject</label>
+				<width>250</width>
+				<onclick>EjectTray()</onclick>
+            </control>
+            <control type="button" id="3202" description="shelf custom">
+                <visible>[Container(9000).HasFocus(354)]</visible>
+				<label>Play</label>
+				<width>250</width>
+				<onclick>PlayDVD</onclick>
+            </control>
+            <control type="button" id="3211" description="tvchannels">
+				<visible>[Container(9000).HasFocus(349)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+				<label>13009</label>
+				<width>250</width>
+				<onclick>XBMC.Quit()</onclick>
+            </control>
+            <control type="button" id="3212" description="radiochannels">
+				<visible>[Container(9000).HasFocus(349)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+				<visible>System.CanPowerDown</visible>
+				<label>13005</label>
+				<width>250</width>
+				<onclick>XBMC.Powerdown()</onclick>
+            </control>
+            <control type="button" id="3213" description="shelf custom">
+				<visible>[Container(9000).HasFocus(349)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+				<visible>System.CanSuspend</visible>
+				<label>13011</label>
+				<width>250</width>
+				<onclick>XBMC.Suspend()</onclick>
+            </control>
+            <control type="button" id="3214" description="radiochannels">
+				<visible>[Container(9000).HasFocus(349)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+				<visible>System.CanReboot</visible>
+				<label>13013</label>
+				<width>250</width>
+				<onclick>XBMC.Reset()</onclick>
+            </control>
+            <control type="button" id="3215" description="shelf custom">
+				<visible>[Container(9000).HasFocus(349)] + !Player.HasMedia + !Skin.HasSetting(quitter)</visible>
+				<visible>!System.Platform.ATV2 + !System.Platform.IOS</visible>
+				<label>Timer</label>
+				<width>250</width>
+				<onclick>AlarmClock(Timer,Quit())</onclick>
+            </control>
+            <control type="button" id="3220" description="shelf custom">
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355)]</visible>
+				<visible>PVR.HasTVChannels</visible>
+				<label>19023</label>
+				<width>250</width>
+				<onclick>ActivateWindow(TVChannels)</onclick>
+            </control>
+            <control type="button" id="3221" description="tvchannels">
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355)]</visible>
+				<visible>PVR.HasTVChannels</visible>
+				<label>19069</label>
+				<width>250</width>
+				<onclick>ActivateWindow(tvguide)</onclick>
+            </control>
+            <control type="button" id="3222" description="radiochannels">
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355)]</visible>
+				<visible>PVR.HasTVChannels</visible>
+				<label>19163</label>
+				<width>250</width>
+				<onclick>ActivateWindow(tvrecordings)</onclick>
+            </control>
+            <control type="button" id="3223" description="shelf custom">
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355)]</visible>
+                <visible>PVR.HasRadioChannels</visible>
+				<label>19019</label>
+				<width>250</width>
+				<onclick>ActivateWindow(RadioChannels)</onclick>
+            </control>
+            <control type="button" id="3224" description="radiochannels">
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355)]</visible>
+                <visible>PVR.HasRadioChannels</visible>
+				<label>22020</label>
+				<width>250</width>
+				<onclick>ActivateWindow(RadioGuide)</onclick>
+            </control>
+            <control type="button" id="3225" description="shelf custom">
+                <visible>[Container(9000).HasFocus(356) | Container(9000).HasFocus(355)]</visible>
+                <visible>PVR.HasRadioChannels</visible>
+				<label>19163</label>
+				<width>250</width>
+				<onclick>ActivateWindow(RadioRecordings)</onclick>
+            </control>
+            <control type="button" id="3241" description="tvchannels">
+                <visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+				<label>3</label>
+				<width>250</width>
+				<onclick>ActivateWindow(Videos,Addons)</onclick>
+            </control>
+            <control type="button" id="3242" description="radiochannels">
+            <visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+				<label>2</label>
+				<width>250</width>
+				<onclick>ActivateWindow(Music,Addons)</onclick>
+            </control>
+            <control type="button" id="3243" description="tvchannels">
+				<visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+				<label>31098</label>
+				<width>250</width>
+				<onclick>ActivateWindow(Programs,Addons)</onclick>
+            </control>
+            <control type="button" id="3244" description="tvchannels">
+				<visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+				<label>pictures</label>
+				<width>250</width>
+				<onclick>ActivateWindow(10002,addons://sources/image/,return)</onclick>
+            </control>
+            <control type="button" id="3245" description="radiochannels">
+                <visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+				<label>31037</label>
+				<width>250</width>
+				<onclick>ActivateWindow(AddonBrowser,root)</onclick>
+            </control>
+            <control type="button" id="3246" description="shelf custom">
+                <visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+				<label>31040</label>
+				<width>250</width>
+				<onclick>ActivateWindow(1617)</onclick>
+            </control>
+            <control type="button" id="3251" description="tvchannels">
+				<visible>Container(9000).HasFocus(365) | [Container(9000).HasFocus(348) + ![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]]</visible>
+				<label>Video Source</label>
+				<width>250</width>
+				<onclick>ActivateWindow(Videos,files)</onclick>
+            </control>
+            <control type="button" id="3252" description="radiochannels">
+				<visible>Container(9000).HasFocus(365) | [Container(9000).HasFocus(348) + ![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]]</visible>
+				<label>Audio Source</label>
+				<width>250</width>
+				<onclick>ActivateWindow(501,root)</onclick>
+            </control>
+            <control type="button" id="3253" description="shelf custom">
+                <visible>[Container(9000).HasFocus(348)]</visible>
+				<label>7</label>
+				<width>250</width>
+				<onclick>ActivateWindow(3)</onclick>
+            </control>
+            <control type="button" id="3254" description="radiochannels">
+                <visible>[Container(9000).HasFocus(348)]</visible>
+				<label>5</label>
+				<width>250</width>
+				<onclick>ActivateWindow(Settings)</onclick>
+            </control>
+            <control type="button" id="3255" description="shelf custom">
+                <visible>[Container(9000).HasFocus(348)]</visible>
+				<label>20077</label>
+				<width>250</width>
+				<onclick>ActivateWindow(1718)</onclick>
+            </control>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<visible>[Container(9000).HasFocus(339) + [Container(310).HasPrevious |  Container(310).HasNext]] | [Container(9000).HasFocus(340) + [Container(311).HasPrevious |  Container(311).HasNext]] | [Container(9000).HasFocus(341) + [Container(312).HasPrevious |  Container(312).HasNext]] | [Container(9000).HasFocus(358) + [Container(316).HasPrevious |  Container(316).HasNext]] | [Container(9000).HasFocus(343) + [Container(315).HasPrevious |  Container(315).HasNext]] | [Container(9000).HasFocus(342) + [Container(313).HasPrevious |  Container(313).HasNext]]</visible>
+				<width>258</width>
+				<subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>true</showonepage>
+				<spinwidth>125</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="HellOrange" >left.png</textureup>
+				<texturedown colordiffuse="HellOrange">right.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">leftp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">rightp.png</texturedownfocus>
+			</control>    
+		</control>		
 	</controls>
 </window>

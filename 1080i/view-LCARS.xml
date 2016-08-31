@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="VideoLcars">
-		<!--control type="image">
-          <posx>450</posx>
-		  <posy>70</posy>
-		  <width>1280</width>
-          <height>930</height>
-          <texture  background="true">images/LCARS.png</texture>
-          <colordiffuse>77FFFFFF</colordiffuse>
-		  <aspectratio scalediffuse="false">scale</aspectratio>
-		</control-->
-		<control type="panel" id="54">
-			<visible>![Container.Content(years) | Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
+		<!--control type="panel" id="54">
+			<visible>![Container.Content(Episodes) | Container.Content(years) | Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets)]</visible>
 			<include>ListLcars</include>
-		</control>
+		</control-->
 		<control type="panel" id="504">
-			<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
+			<visible>![Container.Content(genres) | Container.Content(sets) | Container.Content(years) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
 			<posx>430</posx>
-			<posy>110</posy>
+			<posy>90</posy>
 			<width>1300</width>
 			<height>850</height>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<onright>noop</onright>
+			<onleft>9000</onleft>
+		    <viewtype label="504">VideoLcars</viewtype>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime tween="sine" easing="inout">300</scrolltime>
+			<preloaditems>8</preloaditems>
+			<orientation>horizontal</orientation>
+			<include>IconLcars</include>
+		</control>
+		<control type="panel" id="54">
+			<visible>[Container.Content(genres) | Container.Content(sets) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>1300</width>
+			<height>450</height>
 			<onup>55</onup>
 			<ondown>55</ondown>
 			<onright>noop</onright>
@@ -27,36 +35,80 @@
 		    <viewtype label="54">VideoLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
-			<preloaditems>4</preloaditems>
-			<orientation>vertical</orientation>
+			<preloaditems>8</preloaditems>
+			<orientation>horizontal</orientation>
 			<include>IconLcars</include>
 		</control>
         <control type="panel" id="503">
           <visible>Container.Content(years)</visible>
 		  <include>YearsLcars</include>
         </control>
-		<control type="group" description="info">
-			<include>InfoLcars</include>
+		<control type="list">
+			<visible>[Container.Content(genres) | Container.Content(sets) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
+			<posx>428</posx>
+			<posy>530</posy>
+			<width>670</width>
+			<height>475</height>
+			<preloaditems>4</preloaditems>
+			<orientation>horizontal</orientation>
+			<itemlayout height="0" width="0">
+            <control type="image">
+                <posx>35</posx>
+				<width>600</width>
+				<height>475</height>
+				<texture fallback="logo2.png" diffuse="poster-mask.png">$VAR[fanart]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="20">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			</itemlayout>
+			<focusedlayout height="0" width="0">
+            <control type="image">
+                <posx>35</posx>
+				<width>600</width>
+				<height>475</height>
+				<texture fallback="logo2.png" diffuse="poster-mask.png">$VAR[fanart]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="20">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			</focusedlayout>
+			<content limit="1">$VAR[VARmovie]</content>
 		</control>
-		<control type="panel" description="info" id="666">
-			<visible>![Container.Content(years) | Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
-			<posx>1110</posx>
+		<control type="list">
+			<visible>[Container.Content(genres) | Container.Content(sets) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
+			<posx>1100</posx>
 			<posy>550</posy>
 			<width>670</width>
 			<height>450</height>
-			<include>MultiLcars</include>
-			<content target="video" limit="3">$VAR[VARmovie]</content>
+			<preloaditems>4</preloaditems>
+			<orientation>vertical</orientation>
+			<itemlayout height="50" width="670">
+				<control type="label">
+					<width>670</width>
+					<height>40</height>
+					<font>LCARS20</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>White</textcolor>
+					<label>$VAR[LcarsLabel]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50" width="670">
+				<control type="label">
+					<width>670</width>
+					<height>40</height>
+					<font>LCARS20</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>White</textcolor>
+					<label>$VAR[LcarsLabel]</label>
+				</control>
+			</focusedlayout>
+			<content limit="9">$VAR[VARmovie]</content>
 		</control>
-		<control type="panel" description="info">
-			<visible>!Container(666).HasFocus +  ![Container.Content(years) | Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Actors) | Container.Content(Sets)]</visible>
-			<posx>1110</posx>
-			<posy>550</posy>
-			<width>670</width>
-			<height>450</height>
-			<include>MultiLcars</include>
-			<content target="video" limit="3">$VAR[VARtv]</content>
-		</control>
-
     </include>
 </includes>	
 

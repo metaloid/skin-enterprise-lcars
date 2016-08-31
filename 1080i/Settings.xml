@@ -41,10 +41,19 @@
                 <!--scrolltime tween="sine" easing="inout">280</scrolltime-->
                <itemlayout height="50" width="310">
                     <control type="image" description="THMBSBASECOLOR">
-                        <posx>20</posx>
+                        <visible>Skin.HasSetting(colormenu)</visible>
+						<posx>20</posx>
                         <width>270</width>
                         <height>40</height>
 						<texture colordiffuse="HellOrange" >whiteallrounded2.png</texture>
+                    </control>
+                    <control type="image" description="THMBSBASECOLOR">
+                        <visible>!Skin.HasSetting(colormenu)</visible>
+						<posx>20</posx>
+                        <width>270</width>
+                        <height>40</height>
+						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
+						<texture diffuse="whiteallrounded2.png">$INFO[ListItem.Property(color),,.png]</texture>
                     </control>
 			  <control type="label" description="LABEL">
                         <left>95</left>
@@ -65,7 +74,6 @@
                         <posx>20</posx>
                         <width>270</width>
                         <height>40</height>
-                        
 						<texture >whiteallrounded2.png</texture>
                     </control>
 			  <control type="label" description="label">
@@ -84,59 +92,73 @@
                     <item id="1" description="Appearance">
                         <label>480</label>
                         <onclick>activatewindow(AppearanceSettings)</onclick>
+						<property name="color">c1</property>
                     </item>
                     <item id="3" description="Videos">
                         <label>3</label>
                         <onclick>activatewindow(VideosSettings)</onclick>
+						<property name="color">c1</property>
                     </item>
                     <item id="4" description="Music">
                         <label>2</label>
                         <onclick>activatewindow(MusicSettings)</onclick>
+						<property name="color">c1</property>
                     </item>
                     <item id="14" description="LiveTV">
                         <label>31059</label>
                         <onclick>activatewindow(PVRSettings)</onclick>
+						<property name="color">c5</property>
                     </item>
                     <item id="5" description="Pictures">
                         <label>1</label>
                         <onclick>activatewindow(PicturesSettings)</onclick>
+						<property name="color">c5</property>
                     </item>
                     <item id="8" description="Weather">
                         <label>8</label>
                         <onclick>activatewindow(WeatherSettings)</onclick>
+						<property name="color">c5</property>
                     </item>
                     <item id="9" description="Services">
                         <label>14036</label>
                         <onclick>Activatewindow(servicesettings)</onclick>
-                    </item>
+ 						<property name="color">c9</property>
+                   </item>
                     <item id="10" description="System">
                         <label>13000</label>
                         <onclick>activatewindow(SystemSettings)</onclick>
-                    </item>
+ 						<property name="color">c9</property>
+                   </item>
                     <item id="2" description="Skin Settings">
                         <label>20077</label>
                         <onclick>ActivateWindow(1718)</onclick>
+						<property name="color">c9</property>
                     </item>
                     <item id="13" description="Addons">
                         <label>24001</label>
                         <onclick>activatewindow(AddonBrowser,root)</onclick>
-                    </item>
+ 						<property name="color">c2</property>
+                   </item>
                     <item id="15" description="openELEC">
                         <visible>System.HasAddon(service.openelec.settings)</visible>
                         <label>$ADDON[service.openelec.settings 600]</label>
                         <onclick>RunAddon(service.openelec.settings)</onclick>
+						<property name="color">c2</property>
                     </item>
                     <item id="6" description="Sys Info">
                         <label>$LOCALIZE[138]</label>
                         <onclick>noop</onclick>
+						<property name="color">c2</property>
                     </item>
                     <item id="16" description="Sys Info">
                         <label>Event Log</label>
                         <onclick>activatewindow(EventLog)</onclick>
+						<property name="color">c4</property>
                     </item>
                     <item id="11" description="Home">
                         <label>Home</label>
                         <onclick>Back</onclick>
+						<property name="color">c4</property>
                     </item>
                 </content>
             </control>

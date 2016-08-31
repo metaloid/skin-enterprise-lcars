@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="MusicLcars">
-		<!--control type="image">
-          <posx>450</posx>
-		  <posy>70</posy>
-		  <width>1280</width>
-          <height>930</height>
-          <texture  background="true">images/LCARS.png</texture>
-          <colordiffuse>77FFFFFF</colordiffuse>
-		  <aspectratio scalediffuse="false">scale</aspectratio>
-		</control-->
-		<control type="panel" id="54">
-			<visible>![Container.Content(years) | Container.Content(albums)]</visible>
-			<include>ListLcars</include>
-		</control>
-        <control type="panel" id="503">
-			<visible>Container.Content(years)</visible>
-			<include>YearsLcars</include>
-        </control>
-        <control type="panel" id="504">
-			<visible>Container.Content(albums)</visible>
+		<control type="panel" id="504">
+			<visible>![Container.Content(years) | Container.Content(genres) | Container.Content(artists)]</visible>
 			<posx>430</posx>
-			<posy>110</posy>
+			<posy>90</posy>
 			<width>1300</width>
 			<height>850</height>
 			<onup>55</onup>
 			<ondown>55</ondown>
 			<onright>noop</onright>
 			<onleft>9000</onleft>
-		    <viewtype label="54">albumsLcars</viewtype>
+		    <viewtype label="504">VideoLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
-			<preloaditems>4</preloaditems>
-			<orientation>vertical</orientation>
+			<preloaditems>8</preloaditems>
+			<orientation>horizontal</orientation>
 			<include>SquareIconLcars</include>
-        </control>
-		<control type="group" description="info">
-			<include>InfoLcars</include>
 		</control>
-        <!--control type="list" id="501">
+		<control type="panel" id="54">
+			<visible>[Container.Content(genres) | Container.Content(artists)]</visible>
+			<posx>430</posx>
+			<posy>90</posy>
+			<width>1300</width>
+			<height>450</height>
+			<onup>noop</onup>
+			<ondown>55</ondown>
+			<onright>54</onright>
+			<onleft>9000</onleft>
+		    <viewtype label="54">VideoLcars</viewtype>
+			<pagecontrol>66</pagecontrol>
+			<scrolltime tween="sine" easing="inout">300</scrolltime>
+			<preloaditems>8</preloaditems>
+			<orientation>horizontal</orientation>
+			<include>SquareIconLcars</include>
+		</control>
+        <control type="panel" id="503">
+			<visible>Container.Content(years)</visible>
+			<include>YearsLcars</include>
+        </control>
+       <!--control type="list" id="501">
             <visible>Container.Content(artists)</visible>
             <posx>450</posx>
 			<posy>550</posy>
@@ -213,14 +214,73 @@
                 <bordersize>50</bordersize>
 			</control>
 		</control-->
-		<control type="panel" description="info">
-			<visible>![Container.Content(years) | Container.Content(albums)]</visible>
-			<posx>1110</posx>
+		<control type="list">
+			<visible>[Container.Content(genres) | Container.Content(artists)]</visible>
+			<posx>428</posx>
+			<posy>530</posy>
+			<width>670</width>
+			<height>475</height>
+			<preloaditems>4</preloaditems>
+			<orientation>horizontal</orientation>
+			<itemlayout height="0" width="0">
+            <control type="image">
+			<visible>!SubString(ListItem.Label,*,left)</visible>
+                <posx>35</posx>
+				<width>600</width>
+				<height>475</height>
+				<texture fallback="logo2.png" diffuse="poster-mask.png">$VAR[fanart]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="20">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			</itemlayout>
+			<focusedlayout height="0" width="0">
+            <control type="image">
+			<visible>!SubString(ListItem.Label,*,left)</visible>
+                <posx>35</posx>
+				<width>600</width>
+				<height>475</height>
+				<texture fallback="logo2.png" diffuse="poster-mask.png">$VAR[fanart]</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="20">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			</focusedlayout>
+			<content limit="2">$VAR[VARmovie]</content>
+		</control>
+		<control type="list">
+			<visible>[Container.Content(genres) | Container.Content(artists)]</visible>
+			<posx>1100</posx>
 			<posy>550</posy>
 			<width>670</width>
 			<height>450</height>
-			<include>MultiLcars</include>
-			<content target="music" limit="3">$VAR[VARmusic]</content>
+			<preloaditems>4</preloaditems>
+			<orientation>vertical</orientation>
+			<itemlayout height="50" width="670">
+				<control type="label">
+					<width>670</width>
+					<height>40</height>
+					<font>LCARS20</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>White</textcolor>
+					<label>$VAR[LcarsLabel]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="50" width="670">
+				<control type="label">
+					<width>670</width>
+					<height>40</height>
+					<font>LCARS20</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>White</textcolor>
+					<label>$VAR[LcarsLabel]</label>
+				</control>
+			</focusedlayout>
+			<content >$VAR[VARmovie]</content>
 		</control>
 
     </include>

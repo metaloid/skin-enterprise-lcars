@@ -7,7 +7,7 @@
  		<left>0</left>
 		<top>0</top>
  	</coordinates>
-  <include>OpenClose</include>
+	<include>OpenClose</include>
     <controls>
 		<include>DialogOpenCloseVisible</include>
 		<control type="group" description="Right panel">
@@ -84,38 +84,6 @@
 				<aligny>center</aligny>
 				<textcolor>blue</textcolor>
 			</control>
-			<!--control type="image">
-				<description>Used Scraper Image</description>
-				<left>30</left>
-				<top>195</top>
-				<width>320</width>
-				<height>130</height>
-				<aspectratio>keep</aspectratio>
-				<texture>$INFO[ListItem.Icon]</texture>
-			</control>
-			<control type="label">
-				<description>Used Scaper Label</description>
-				<left>30</left>
-				<top>335</top>
-				<width>320</width>
-				<height>30</height>
-				<font>LCARS20</font>
-				<label>$INFO[ListItem.Label]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-			</control>
-			<control type="label">
-				<description>Scraper List Header</description>
-				<left>400</left>
-				<top>80</top>
-				<width>360</width>
-				<height>40</height>
-				<font>LCARS20</font>
-				<label>$LOCALIZE[31313]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-			</control-->
 			<control type="list" id="21">
 				<left>760</left>
 				<top>275</top>
@@ -195,18 +163,6 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
-			<!--control type="label">
-				<description>Scanning Options Header</description>
-				<left>30</left>
-				<top>370</top>
-				<width>740</width>
-				<height>20</height>
-				<font>LCARS20</font>
-				<label>$LOCALIZE[31314]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-			</control-->
 			<control type="grouplist" id="5">
 				<description>control area</description>
 				<left>760</left>
@@ -275,5 +231,5 @@
 				</control>
 			</control>
 		</control>
-        </controls>
+    </controls>
 </window>

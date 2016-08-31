@@ -19,22 +19,22 @@
 		</control>
         <control type="label" id="1" description="Heading">
             <left>30</left>
-			<top>10</top>
+			<top>5</top>
 			<label></label>
             <width>550</width>
-            <font>LCARS24</font>
+            <font>LCARS20</font>
             <textcolor>Orange</textcolor>
 			<align>left</align>
         </control>
 		<control type="textbox" id="9">
 			<description>text</description>
 			<left>30</left>
-			<top>62</top>
+			<top>60</top>
 			<width>550</width>
-			<height>108</height>
+			<height>110</height>
 			<align>left</align>
 			<label>-</label>
-			<font>LCARS20</font>
+			<font>LCARS16</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>
 		<control type="button" id="10">

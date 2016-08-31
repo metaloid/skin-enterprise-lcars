@@ -46,7 +46,6 @@
             <onleft>143</onleft>
             <onright>144</onright>
             <ondown>143</ondown>
-            
         </control>
         <control type="button" id="144">
             <description>edit</description>
@@ -61,7 +60,6 @@
             <onleft>143</onleft>
             <onright>145</onright>
             <ondown>144</ondown>
-           
         </control>
         <control type="button" id="145">
             <description>ok</description>
@@ -76,7 +74,6 @@
             <onleft>144</onleft>
             <onright>146</onright>
             <ondown>145</ondown>
-            
         </control>
         <control type="button" id="146">
             <description>cancel</description>
@@ -90,7 +87,6 @@
             <onup>142</onup>
             <onleft>145</onleft>
             <ondown>146</ondown>
-            
         </control>
     </controls>
 </window>

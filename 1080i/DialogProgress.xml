@@ -27,12 +27,12 @@
             </control>
             <control type="textbox" id="9" description="content">
                 <top>60</top>
-                <font>LCARS20</font>
+                <font>LCARS16</font>
                 <label>-</label>
                 <width>250</width>
-                <height>150</height>
-                <align>center</align>
-                <autoscroll>false</autoscroll>
+                <height>180</height>
+                <align>left</align>
+                <autoscroll>true</autoscroll>
             </control>
 			<control type="label" description="Progress label">
 				<visible>IntegerGreaterThan(Control.GetLabel(32), 0)</visible>

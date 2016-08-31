@@ -25,9 +25,6 @@
 				<height>400</height>
 				<texture border="40">dialog2.png</texture>
 			</control>
-			
-			
-			
 			<control type="image">
 				<centerleft>750</centerleft>
 				<top>60</top>
@@ -48,14 +45,6 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 			</control>
-			<!--control type="image">
-				<left>130</left>
-				<top>110</top>
-				<width>600</width>
-				<height>30</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>DialogHeader.png</texture>
-			</control-->
 			<control type="group">
 				<left>115</left>
 				<top>110</top>
@@ -164,8 +153,6 @@
 						<onup>309</onup>
 						<ondown>303</ondown>
 						<include>Keyboardbuttons</include>
-					
-						
 					</control>
 					<control type="button" id="120">
 						<description>(1,0) key button</description>
@@ -333,14 +320,12 @@
 						<ondown>171</ondown>
 						<include>Keyboardbuttons</include>
 					</control>
-					
 				</control>
 					<!-- 4th row -->
 				<control type="grouplist">
 					<top>150</top>
 					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
-					
 					<control type="radiobutton" id="304">
 						<description>Symbols button</description>
 						<width>200</width>
@@ -421,7 +406,6 @@
 						<ondown>32</ondown>
 						<include>Keyboardbuttons</include>
 					</control>
-					
 				</control>
 					<!-- 5th row -->
 				<control type="grouplist">
@@ -435,7 +419,6 @@
 						<ondown>309</ondown>
 						<label>1006</label>
 						<include>Keyboardbuttons</include>
-						
 					</control>
 					<control type="button" id="32">
 						<description>SPACE button</description>
@@ -460,8 +443,6 @@
 						<onup>300</onup>
 						<ondown>8</ondown>
 					</control>
-					
-					
 				</control>
 			</control>
 		</control>

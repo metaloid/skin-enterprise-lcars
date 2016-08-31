@@ -205,7 +205,7 @@
 				<control type="radiobutton" id="300" description="Recent">
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
 					<width>520</width>
-					<label>359</label>
+					<label>Music Shelf $LOCALIZE[31097]</label>
 					<include>Keyboardbuttons</include>
 					<selected>StringCompare(Skin.String(musicshelf),)</selected>
 					<enable>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</enable>
@@ -217,24 +217,13 @@
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
 					<width>520</width>
 					<include>Keyboardbuttons</include>
-					<label>31097</label>
+					<label>Music Shelf $LOCALIZE[31100]</label>
 					<selected>StringCompare(Skin.String(Musicshelf),custom)</selected>
 					<enable>!Skin.HasSetting(hidemusic)</enable>
 					<onclick>Skin.ToggleSetting(MusicShelf_Custom)</onclick>
 					<onclick condition="Skin.HasSetting(MusicShelf_Custom)">Skin.Reset(MusicShelf_Custom)</onclick>
 					<onclick condition="!StringCompare(Skin.String(musicshelf),custom)">Skin.SetString(musicshelf,custom)</onclick>
 					<onclick condition="StringCompare(Skin.String(musicshelf),custom)">Skin.SetString(musicshelf,mushoff)</onclick>
-				</control>
-				<control type="radiobutton" id="304" description="100">
-                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
-					<width>520</width>
-					<include>Keyboardbuttons</include>
-					<label>Artists</label>
-					<selected>StringCompare(Skin.String(musicshelf),top)</selected>
-					<enable>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</enable>
-					<onclick>Skin.Reset(MusicShelf_Custom)</onclick>
-					<onclick condition="!StringCompare(Skin.String(musicshelf),top)">Skin.SetString(musicshelf,top)</onclick>
-					<onclick condition="StringCompare(Skin.String(musicshelf),top)">Skin.SetString(musicshelf,mushoff)</onclick>
 				</control>
                 <control type="button" id="1">
                     <width>520</width>
