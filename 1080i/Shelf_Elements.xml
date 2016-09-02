@@ -20,28 +20,9 @@
             <!--content target="video" limit="10">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</content-->
         </control>
     </include>
-    <include name="Trailers">
-        <control type="panel" id="310" description="Movies Shelf Shortcuts">
-            <visible>[Container(9000).HasFocus(339) | Control.HasFocus(310)]</visible>
-            <onup>311</onup>
-            <ondown>311</ondown>
-            <onleft>9002</onleft>
-            <onright>noop</onright>
-			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
-            <content target="video" limit="24">plugin://script.extendedinfo/?info=incinemas</content>
-        </control>
-    </include>
     <include name="Favorites">
         <control type="panel" id="317" description="Movies Shelf Shortcuts">
-            <visible>!Window.IsActive(134) + [Container(9000).HasFocus(352) | Control.HasFocus(317)]</visible>
+            <visible>!Window.IsActive(134) + [Container(9000).HasFocus(352) | Control.HasFocus(317)] + System.HasAddon(script.favourites)</visible>
             <onup>317</onup>
             <ondown>317</ondown>
             <onleft>9002</onleft>
@@ -56,7 +37,44 @@
 			<scrolltime>400</scrolltime>
 			<include>ShelfFade</include>
             <include>IconLcars</include>
-            <content limit="6">favourites://</content>
+                <content  limit="6">
+                    <item id="1" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),0)</visible>
+                        <label>$INFO[Window.Property(favourite.1.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.1.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.1.path)]</onclick>
+                    </item>
+                    <item id="2" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),1)</visible>
+                        <label>$INFO[Window.Property(favourite.2.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.2.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.2.path)]</onclick>
+                    </item>
+                    <item id="3" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),2)</visible>
+                        <label>$INFO[Window.Property(favourite.3.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.3.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.3.path)]</onclick>
+                    </item>
+                    <item id="4" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),3)</visible>
+                        <label>$INFO[Window.Property(favourite.4.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.4.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.4.path)]</onclick>
+                    </item>
+                    <item id="5" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),4)</visible>
+                        <label>$INFO[Window.Property(favourite.5.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.5.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.5.path)]</onclick>
+                    </item>
+                    <item id="6" description="Favss">
+                        <visible>IntegerGreaterThan(Window.Property(favourite.count),5)</visible>
+                        <label>$INFO[Window.Property(favourite.6.name)]</label>
+                        <thumb>$INFO[Window.Property(favourite.6.thumb)]</thumb>
+                        <onclick>$INFO[Window.Property(favourite.6.path)]</onclick>
+                    </item>
+                </content>
         </control>
     </include>
 	<include name="TV_RA">
@@ -281,7 +299,7 @@
                         <label>$INFO[system.addontitle(Skin.String(ShelfAddons.11.Label))]</label>
                         <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.11.Label))]</thumb>
                         <onclick>RunAddon($INFO[Skin.String(ShelfAddons.11.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24009]</property>
+                        <property name="ItemType">$LOCALIZE[24000]</property>
                     </item>
                     <item id="12" description="Scripts">
                         <visible>!IsEmpty(Skin.String(ShelfAddons.12.Label))</visible>
@@ -309,6 +327,13 @@
                         <label>$INFO[system.addontitle(Skin.String(ShelfAddons.15.Label))]</label>
                         <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.15.Label))]</thumb>
                         <onclick>RunAddon($INFO[Skin.String(ShelfAddons.15.Label)])</onclick>
+                        <property name="ItemType">$LOCALIZE[24009]</property>
+                    </item>
+                    <item id="16" description="Scripts">
+                        <visible>!IsEmpty(Skin.String(ShelfAddons.16.Label))</visible>
+                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.16.Label))]</label>
+                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.16.Label))]</thumb>
+                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.16.Label)])</onclick>
                         <property name="ItemType">$LOCALIZE[24009]</property>
                     </item>
                 </content>

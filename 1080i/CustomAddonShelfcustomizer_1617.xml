@@ -144,40 +144,40 @@
                 <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
                 <include>SettingsSubmenuButtons</include>
                 <label>$LOCALIZE[24009] 1</label>
-                <label2>$INFO[Skin.String(ShelfAddons.11.Label)]</label2>
-                <onclick>Skin.SetAddon(ShelfAddons.11.Label,xbmc.python.script)</onclick>
+                <label2>$INFO[Skin.String(ShelfAddons.12.Label)]</label2>
+                <onclick>Skin.SetAddon(ShelfAddons.12.Label,xbmc.python.script)</onclick>
             </control>
             <control type="button" id="516" description="SCRIPTS">
                 <visible>!Skin.HasSetting(AddonsSectionHide)</visible>
                 <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
                 <include>SettingsSubmenuButtons</include>
                 <label>$LOCALIZE[24009] 2</label>
-                <label2>$INFO[Skin.String(ShelfAddons.12.Label)]</label2>
-                <onclick>Skin.SetAddon(ShelfAddons.12.Label,xbmc.python.script)</onclick>
+                <label2>$INFO[Skin.String(ShelfAddons.13.Label)]</label2>
+                <onclick>Skin.SetAddon(ShelfAddons.13.Label,xbmc.python.script)</onclick>
             </control>
             <control type="button" id="517" description="SCRIPTS">
                 <visible>!Skin.HasSetting(AddonsSectionHide)</visible>
                 <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
                 <include>SettingsSubmenuButtons</include>
                 <label>$LOCALIZE[24009] 3</label>
-                <label2>$INFO[Skin.String(ShelfAddons.13.Label)]</label2>
-                <onclick>Skin.SetAddon(ShelfAddons.13.Label,xbmc.python.script)</onclick>
+                <label2>$INFO[Skin.String(ShelfAddons.14.Label)]</label2>
+                <onclick>Skin.SetAddon(ShelfAddons.14.Label,xbmc.python.script)</onclick>
             </control>
             <control type="button" id="518" description="SCRIPTS">
                 <visible>!Skin.HasSetting(AddonsSectionHide)</visible>
                 <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
                 <include>SettingsSubmenuButtons</include>
                 <label>$LOCALIZE[24009] 4</label>
-                <label2>$INFO[Skin.String(ShelfAddons.14.Label)]</label2>
-                <onclick>Skin.SetAddon(ShelfAddons.14.Label,xbmc.python.script)</onclick>
+                <label2>$INFO[Skin.String(ShelfAddons.15.Label)]</label2>
+                <onclick>Skin.SetAddon(ShelfAddons.15.Label,xbmc.python.script)</onclick>
             </control>
             <control type="button" id="519" description="SCRIPTS">
                 <visible>!Skin.HasSetting(AddonsSectionHide)</visible>
                 <include>SettingsSubmenuButtons</include>
                 <visible>Skin.HasSetting(AddonsShelf_Custom)</visible>
                 <label>$LOCALIZE[24009] 5</label>
-                <label2>$INFO[Skin.String(ShelfAddons.15.Label)]</label2>
-                <onclick>Skin.SetAddon(ShelfAddons.15.Label,xbmc.python.script)</onclick>
+                <label2>$INFO[Skin.String(ShelfAddons.16.Label)]</label2>
+                <onclick>Skin.SetAddon(ShelfAddons.16.Label,xbmc.python.script)</onclick>
             </control>
         </control>
     </controls>

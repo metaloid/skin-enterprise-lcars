@@ -14,12 +14,6 @@
             <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
             <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
         </item>
-        <item id="339">
-            <visible>!Skin.HasSetting(trailers) + System.HasAddon(script.extendedinfo)</visible>
-			<label>in cinema</label>
-            <property name="color">c1</property>
-            <onclick>ActivateWindow(10025,plugin://script.extendedinfo/?info=incinemas,return)</onclick>
-        </item>
 		<item id="341">
             <visible>!Skin.HasSetting(hidetv)</visible>
             <label>20343</label>

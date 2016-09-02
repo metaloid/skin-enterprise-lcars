@@ -183,6 +183,26 @@
             <aligny>bottom</aligny>
 			<orientation>vertical</orientation>
             <itemgap>10</itemgap>
+			<control type="button" description="tv">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(355)</visible>
+                <label>$INFO[Window(Home).Property(SkinHelper.TotalTVChannels),TV ch: ]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="radio">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(356)</visible>
+                <label>$INFO[Window(Home).Property(SkinHelper.TotalRadioChannels),Radio ch: ]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="favs">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(352)</visible>
+                <label>$INFO[Window(Home).Property(SkinHelper.TotalFavourites,$LOCALIZE[1036]: ]</label>
+				<width>250</width>
+            </control>
+			<control type="button" description="addons">
+                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(343)</visible>
+                <label>$INFO[Window(Home).Property(SkinHelper.TotalAddons),$LOCALIZE[24001]: ]</label>
+				<width>250</width>
+            </control>
 			<control type="button" description="movie">
                 <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(340)</visible>
                 <label>$INFO[Window.Property(Movies.Count),$LOCALIZE[342]: ]</label>
@@ -244,13 +264,6 @@
 				<onclick condition="[Container(9000).HasFocus(340) | Control.HasFocus(311)]">PlayMedia(special://skin/resources/randomMov.xsp)</onclick>
 				<onclick condition="[Container(9000).HasFocus(341) | Control.HasFocus(312)]">PlayMedia(special://skin/resources/randomTV.xsp)</onclick>
 			</control>
-			<!--control type="button" id="64">
-				<visible>[Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
-				<description>Play Random</description>
-				<width>250</width>
-				<label>Play Random</label>
-				<onclick>PlayMedia(special://skin/resources/randomMov.xsp)</onclick>
-			</control-->
             <control type="button" id="3201" description="radiochannels">
                 <visible>[Container(9000).HasFocus(354)]</visible>
 				<label>Eject</label>

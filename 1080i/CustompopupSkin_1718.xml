@@ -169,16 +169,6 @@
 					<onclick>Skin.ToggleSetting(hideaddon)</onclick>
                     <selected>!Skin.HasSetting(hideaddon)</selected>
                 </control>				
-                <control type="togglebutton" id="1007">
-					<visible>System.HasAddon(script.extendedinfo)</visible>
-                    <width>270</width>
-					<label>in cinemas</label>
-					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
-					<include>Keyboardbuttons</include>
-					<onclick>Skin.ToggleSetting(trailers)</onclick>
-                    <selected>!Skin.HasSetting(trailers)</selected>
-                </control>				
             </control>
  			<control type="grouplist" id="577">
 				<scrolltime>300</scrolltime>
