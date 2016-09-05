@@ -162,6 +162,8 @@
 					<bordersize>10</bordersize>
 				</control>
 				<include>weather_shelf</include>
+				<include>PVR</include>
+				<include>pictures</include>
 				<include>Trailers</include>
 				<include condition="Library.HasContent(TVShows)">TV_RA</include>
 				<include>Addons_Shortcuts</include>
@@ -249,6 +251,7 @@
 			<onright condition="Container(9000).HasFocus(340)">311</onright>
 			<onright condition="Container(9000).HasFocus(341)">312</onright>
 			<onright condition="Container(9000).HasFocus(342)">313</onright>
+			<onright condition="Container(9000).HasFocus(355)">314</onright>
 			<onright condition="Container(9000).HasFocus(343)">315</onright>
 			<onright condition="Container(9000).HasFocus(358)">316</onright>
 			<onleft>9000</onleft>

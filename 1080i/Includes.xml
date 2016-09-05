@@ -69,7 +69,7 @@
 				<width>222</width>
 				<height>380</height>
 				<aspectratio scalediffuse="false">strech</aspectratio>
-                <texture fallback="logo.png" background="true" diffuse="poster-mask.png">$VAR[Locandine]</texture>
+                <texture fallback="LCARS.png" background="true" diffuse="poster-mask.png">$VAR[Locandine]</texture>
                 <bordersize>10</bordersize>
 			</control>
 			<control type="textbox">
@@ -153,7 +153,7 @@
 					<top>46</top>
 					<width>370</width>
 					<height>324</height>
-					<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
+					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<bordertexture  border="10">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
@@ -199,7 +199,7 @@
 					<top>46</top>
 					<width>370</width>
 					<height>324</height>
-					<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
+					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<bordertexture  border="10">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
@@ -247,7 +247,7 @@
 				<top>25</top>
 				<width>250</width>
 				<height>375</height>
-				<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
+				<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -293,7 +293,7 @@
 					<top>46</top>
 					<width>370</width>
 					<height>324</height>
-					<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
+					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<bordertexture  border="10">shadow.png</bordertexture>
 					<bordersize>10</bordersize>
@@ -339,7 +339,7 @@
                 <top>25</top>
                 <width>250</width>
                 <height>375</height>
-                <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
+                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
                 <bordersize>10</bordersize>
@@ -385,7 +385,7 @@
 					<top>46</top>
 					<width>370</width>
 					<height>324</height>
-					<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
+					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<bordertexture  border="10">shadow.png</bordertexture>
 					<bordersize>10</bordersize>

@@ -27,16 +27,16 @@
         <control type="label" id="1">
             <description>dialog Heading</description>
             <posx>20</posx>
-				<posy>30</posy>
+				<posy>33</posy>
 				<width>300</width>
 				<height>40</height>
-				<font>LCARS20</font>
+				<font>LCARS18</font>
             <align>center</align>
         </control>
         <control type="image" description="Edit BG">
             <posx>30</posx>
 				<posy>70</posy>
-				<width>260</width>
+				<width>265</width>
 				<height>50</height>
 				<aspectratio>stretch</aspectratio>
 				<texture colordiffuse="lightblue" border="20">whiteallrounded.png</texture>
@@ -46,7 +46,7 @@
 				<posy>70</posy>
 				<width>250</width>
 				<height>50</height>
-				<font>LCARS24</font>
+				<font>LCARS20</font>
             <align>center</align>
             <aligny>center</aligny>
         </control>
@@ -66,7 +66,7 @@
             </control>
             <control type="button" id="12">
                 <description>2 button</description>
-                <posx>85</posx>
+                <posx>90</posx>
 				<posy>0</posy>
 				<include>Keyboardbuttons</include>
 				<label>12312</label>
@@ -77,7 +77,7 @@
             </control>
             <control type="button" id="13">
                 <description>3 button</description>
-                <posx>170</posx>
+                <posx>180</posx>
 				<posy>0</posy>
 				<include>Keyboardbuttons</include>
 				<label>12313</label>
@@ -99,7 +99,7 @@
             </control>
             <control type="button" id="15">
                 <description>5 button</description>
-                <posx>85</posx>
+                <posx>90</posx>
 				<posy>60</posy>
 				<include>Keyboardbuttons</include>
 				<label>12315</label>
@@ -110,7 +110,7 @@
             </control>
             <control type="button" id="16">
                 <description>6 button</description>
-                <posx>170</posx>
+                <posx>180</posx>
 				<posy>60</posy>
 				<include>Keyboardbuttons</include>
 				<label>12316</label>
@@ -132,7 +132,7 @@
             </control>
             <control type="button" id="18">
                 <description>8 button</description>
-                <posx>85</posx>
+                <posx>90</posx>
 				<posy>120</posy>
 				<include>Keyboardbuttons</include>
 				<label>12318</label>
@@ -143,7 +143,7 @@
             </control>
             <control type="button" id="19">
                 <description>9 button</description>
-                <posx>170</posx>
+                <posx>180</posx>
 				<posy>120</posy>
 				<include>Keyboardbuttons</include>
 				<label>12319</label>
@@ -165,7 +165,7 @@
             </control>
             <control type="button" id="10">
                 <description>0 button</description>
-                <posx>85</posx>
+                <posx>90</posx>
 				<posy>180</posy>
 				<include>Keyboardbuttons</include>
 				<label>12310</label>
@@ -176,7 +176,7 @@
             </control>
             <control type="button" id="22">
                 <description>next button</description>
-                <posx>170</posx>
+                <posx>180</posx>
 				<posy>180</posy>
 				<include>Keyboardbuttons</include>
 				<label>&gt;</label>
@@ -189,7 +189,7 @@
             <description>Backspace button</description>
 				<posx>0</posx>
 				<posy>240</posy>
-				<width>120</width>
+				<width>130</width>
 				<align>center</align>
 				<include>Keyboardbuttons</include>
 				<aligny>center</aligny>
@@ -203,9 +203,9 @@
         </control>
         <control type="button" id="21">
             <description>Done button</description>
-				<posx>125</posx>
+				<posx>135</posx>
 				<posy>240</posy>
-				<width>120</width>
+				<width>130</width>
 				<include>Keyboardbuttons</include>
 				<textwidth>120</textwidth>
 				<label>Done</label>

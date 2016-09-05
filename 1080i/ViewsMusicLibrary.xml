@@ -198,7 +198,7 @@
 				<width>600</width>
 				<height>385</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture fallback="logo.png" background="true" diffuse="poster-mask.png">$VAR[Locandine]</texture>
+                <texture fallback="LCARS.png" background="true" diffuse="poster-mask.png">$VAR[Locandine]</texture>
                 <bordertexture  border="40">dialog.png</bordertexture>
                 <bordersize>50</bordersize>
 			</control>

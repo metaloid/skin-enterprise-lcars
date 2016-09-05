@@ -39,7 +39,7 @@
 				<top>25</top>
 				<width>250</width>
 				<height>375</height>
-				<texture fallback="logo.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+				<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -105,7 +105,7 @@
                 <top>25</top>
                 <width>250</width>
                 <height>375</height>
-                <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
 				<bordertexture  border="10">shadow.png</bordertexture>
                 <bordersize>10</bordersize>

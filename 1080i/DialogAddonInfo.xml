@@ -23,7 +23,7 @@
 			<width>300</width>
 			<height>300</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture fallback="logo.png" diffuse="poster-mask.png" background="true">$VAR[Locandine]</texture>
+            <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[Locandine]</texture>
 			<bordertexture  border="10">shadow.png</bordertexture>
             <bordersize>10</bordersize>
         </control>
