@@ -97,7 +97,7 @@
         <value condition="!Container.Content(Seasons) + IsEmpty(ListItem.mpaa)"> </value>
        <value condition="!Container.Content(Seasons)">$INFO[ListItem.MPAA]</value>
 	</variable>
-	<variable name="Battery" description="Label for skin settings Quit function item">
+	<variable name="Battery">
         <value condition="IntegerGreaterThan(System.BatteryLevel,0) + !IntegerGreaterThan(System.BatteryLevel,20)">Red</value>
         <value condition="IntegerGreaterThan(System.BatteryLevel,20) + !IntegerGreaterThan(System.BatteryLevel,50)">Yellow</value>
         <value condition="IntegerGreaterThan(System.BatteryLevel,50) + !IntegerGreaterThan(System.BatteryLevel,80)">buttonselect2</value>
@@ -348,6 +348,10 @@
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),21)">plugin://script.extendedinfo?info=toprentals</value>
 		<value condition="StringCompare(Container(9000).ListItem.Property(Widget),22)">plugin://script.extendedinfo?info=trendingshows</value>
 	</variable-->
+    <variable name="setshelfname">
+        <value condition="StringCompare(Skin.String(musicshelf),custom)">$LOCALIZE[31100]</value>
+        <value>$LOCALIZE[31097]</value>
+    </variable>
     <variable name="musicshelfcontent">
         <value condition="StringCompare(Skin.String(musicshelf),custom) + Library.HasContent(Music)">special://skin/resources/randomMusic.xsp</value>
         <value condition="Library.HasContent(Music)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
@@ -359,7 +363,6 @@
         <value condition="Container(9000).HasFocus(341)">recents Episodes</value>
         <!--MUSIC-->
         <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),custom)">$LOCALIZE[31100]</value>
-        <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music) + StringCompare(Skin.String(musicshelf),top)">$LOCALIZE[31099]</value>
         <value condition="Container(9000).HasFocus(342) + Library.HasContent(Music)">$LOCALIZE[31097]</value>
         <!--ADDONS-->
         <value condition="Container(9000).HasFocus(343)">Addons</value>

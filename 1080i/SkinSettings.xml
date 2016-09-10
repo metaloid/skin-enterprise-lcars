@@ -24,15 +24,14 @@
 	     </control>
         <include>InfoPanel</include>
         <control type="group">
-<!--     BUTTON PAGE LAYOUT      -->							
             <posx>660</posx>
 			<top>70</top>
 			<control type="grouplist" id="575">
 				<scrolltime>300</scrolltime>
 				<onleft>9000</onleft>
-				<onright>576</onright>
+				<onright>577</onright>
 				<onup>noop</onup>
-				<ondown>578</ondown>
+				<ondown>noop</ondown>
 				<width>280</width>
                 <height>750</height>
 				<posx>20</posx>
@@ -84,25 +83,16 @@
 					<onclick>Skin.ToggleSetting(hidecpu)</onclick>
                     <selected>!Skin.HasSetting(hidecpu)</selected>
                 </control>				
-            </control>
- 			<control type="grouplist" id="576">
-				<scrolltime>300</scrolltime>
-				<onleft>575</onleft>
-				<onright>577</onright>
-				<onup>noop</onup>
-				<ondown>578</ondown>
-				<width>280</width>
-                <height>750</height>
-				<posx>310</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-				<scrolltime>300</scrolltime>
-				<width>280</width>
-                <height>750</height>
-				<posx>20</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-                <control type="togglebutton" id="1001">
+                <control type="togglebutton" id="15">
+                    <width>270</width>
+					<label>$LOCALIZE[653]</label>
+					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
+					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
+					<include>Keyboardbuttons</include>
+					<onclick>Skin.ToggleSetting(hideupdate)</onclick>
+                    <selected>!Skin.HasSetting(hideupdate)</selected>
+                </control>				
+                 <control type="togglebutton" id="16">
                     <width>270</width>
 					<label>$LOCALIZE[20342]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -111,7 +101,7 @@
 					<onclick>Skin.ToggleSetting(hidemovie)</onclick>
                     <selected>!Skin.HasSetting(hidemovie)</selected>
                 </control>
-                <control type="togglebutton" id="1002">
+                <control type="togglebutton" id="17">
                     <width>270</width>
 					<label>$LOCALIZE[20343]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -120,7 +110,7 @@
 					<onclick>Skin.ToggleSetting(hidetv)</onclick>
                     <selected>!Skin.HasSetting(hidetv)</selected>
                 </control>
-				<control type="togglebutton" id="1003">
+				<control type="togglebutton" id="18">
                     <width>270</width>
 					<label>$LOCALIZE[1]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -129,7 +119,7 @@
 					<onclick>Skin.ToggleSetting(hidepic)</onclick>
                     <selected>!Skin.HasSetting(hidepic)</selected>
                 </control>
-                <control type="togglebutton" id="1004">
+                <control type="togglebutton" id="19">
 					<visible>System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows)</visible>
                     <width>270</width>
 					<label>$ADDON[script.tv.show.next.aired 32019]</label>
@@ -139,7 +129,7 @@
 					<onclick>Skin.ToggleSetting(nextair)</onclick>
                     <selected>!Skin.HasSetting(nextair)</selected>
                 </control>
-                <control type="togglebutton" id="1005">
+                <control type="togglebutton" id="20">
                     <width>270</width>
 					<label>$LOCALIZE[1036]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -148,7 +138,7 @@
 					<onclick>Skin.ToggleSetting(hidefav)</onclick>
                     <selected>!Skin.HasSetting(hidefav)</selected>
                 </control>				
-                <control type="togglebutton" id="1006">
+                <control type="togglebutton" id="21">
                     <width>270</width>
 					<label>$LOCALIZE[24001]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -157,34 +147,7 @@
 					<onclick>Skin.ToggleSetting(hideaddon)</onclick>
                     <selected>!Skin.HasSetting(hideaddon)</selected>
                 </control>				
-                <control type="togglebutton" id="1007">
-                    <width>270</width>
-					<label>$LOCALIZE[653]</label>
-					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
-					<alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
-					<include>Keyboardbuttons</include>
-					<onclick>Skin.ToggleSetting(hideupdate)</onclick>
-                    <selected>!Skin.HasSetting(hideupdate)</selected>
-                </control>				
-            </control>
- 			<control type="grouplist" id="577">
-				<scrolltime>300</scrolltime>
-				<onleft>576</onleft>
-				<onright>noop</onright>
-				<onup>noop</onup>
-				<ondown>579</ondown>
-				<width>520</width>
-                <height>750</height>
-				<posx>600</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-				<scrolltime>300</scrolltime>
-				<width>280</width>
-                <height>750</height>
-				<posx>20</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-                <control type="togglebutton" id="1009">
+                 <control type="togglebutton" id="22">
                     <width>270</width>
 					<label>$LOCALIZE[8]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -193,7 +156,7 @@
 					<onclick>Skin.ToggleSetting(hidewtr)</onclick>
                     <selected>!Skin.HasSetting(hidewtr)</selected>
                 </control>
-                <control type="togglebutton" id="1008">
+                <control type="togglebutton" id="23">
                     <width>270</width>
 					<label>$LOCALIZE[2]</label>
 					<texturenofocus border="20" colordiffuse="Red">whiteallrounded.png</texturenofocus>
@@ -202,10 +165,33 @@
 					<onclick>Skin.ToggleSetting(hidemusic)</onclick>
                     <selected>!Skin.HasSetting(hidemusic)</selected>
                 </control>
+            </control>
+ 			<control type="grouplist" id="577">
+				<scrolltime>300</scrolltime>
+				<onleft>575</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<width>600</width>
+                <height>750</height>
+				<posx>510</posx>
+				<top>60</top>
+		        <itemgap>10</itemgap>
+				<scrolltime>300</scrolltime>
+				<width>280</width>
+                <height>750</height>
+				<posx>20</posx>
+				<top>60</top>
+		        <itemgap>10</itemgap>
+                <control type="label" id="10">
+                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+                    <width>600</width>
+                    <label>Music Shelf :   $VAR[setshelfname]</label>
+                </control>
 				<control type="radiobutton" id="300" description="Recent">
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
-					<width>520</width>
-					<label>Music Shelf $LOCALIZE[31097]</label>
+					<width>400</width>
+					<label>$LOCALIZE[31097]</label>
 					<include>Keyboardbuttons</include>
 					<selected>StringCompare(Skin.String(musicshelf),)</selected>
 					<enable>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</enable>
@@ -215,9 +201,9 @@
 				</control>
 				<control type="radiobutton" id="303" description="Custom">
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
-					<width>520</width>
+					<width>400</width>
 					<include>Keyboardbuttons</include>
-					<label>Music Shelf $LOCALIZE[31100]</label>
+					<label>$LOCALIZE[31100]</label>
 					<selected>StringCompare(Skin.String(Musicshelf),custom)</selected>
 					<enable>!Skin.HasSetting(hidemusic)</enable>
 					<onclick>Skin.ToggleSetting(MusicShelf_Custom)</onclick>
@@ -225,38 +211,9 @@
 					<onclick condition="!StringCompare(Skin.String(musicshelf),custom)">Skin.SetString(musicshelf,custom)</onclick>
 					<onclick condition="StringCompare(Skin.String(musicshelf),custom)">Skin.SetString(musicshelf,mushoff)</onclick>
 				</control>
-                <control type="button" id="1">
-                    <width>520</width>
-					<align>left</align>
-					<textoffsetx>10</textoffsetx>
-					<include>Keyboardbuttons</include>
-                    <label>31062</label>
-                    <label2>$INFO[Skin.String(LyricPath)]</label2>
-                    <onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
-                </control>
-            </control>
-       </control>
-
-        <control type="group">
-<!--     HOME PAGE LAYOUT      -->							
-            <posx>660</posx>
-			<top>440</top>
-            <control type="grouplist" id="578">
-				<scrolltime>300</scrolltime>
-				<onleft>PreviousMenu</onleft>
-				<onright>579</onright>
-				<onup>575</onup>
-				<ondown>noop</ondown>
-				<width>520</width>
-                <height>750</height>
-				<posx>20</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-                <control type="button" id="8">
-                    <width>520</width>
-					<include>Keyboardbuttons</include>
+                <control type="label" id="8">
+                    <width>600</width>
                     <label>$LOCALIZE[31049]   $VAR[QuitLabel]</label>
-                    <onclick>noop</onclick>
                 </control>
 				<control type="radiobutton" id="701" description="Quit">
                     <width>400</width>
@@ -310,24 +267,9 @@
 					<onclick condition="!Skin.HasSetting(quitter)">Skin.ToggleSetting(quitter)</onclick>
 					<selected>StringCompare(Skin.String(shutdown),quit)</selected>
 				</control>
-            </control>
-           <control type="grouplist" id="579">
-                <visible>!Skin.HasSetting(hidemusic)</visible>
-				<scrolltime>300</scrolltime>
-				<onleft>578</onleft>
-				<onright>noop</onright>
-				<onup>577</onup>
-				<ondown>noop</ondown>
-				<width>520</width>
-                <height>750</height>
-				<posx>600</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-                <control type="button" id="10">
-                    <width>520</width>
-					<include>Keyboardbuttons</include>
+                <control type="label" id="10">
+                    <width>600</width>
                     <label>$LOCALIZE[31053] :   $INFO[Skin.String(MusicLink)]</label>
-                    <onclick>noop</onclick>
                 </control>
                 <control type="radiobutton" id="707" description="Albums">
 					<width>400</width>
@@ -358,7 +300,7 @@
                     <selected>StringCompare(Skin.String(MusicLink),Songs)</selected>
                 </control>
             </control>
-		</control>
+       </control>
 	<control type="grouplist" id="9000">
                 <width>300</width>
                 <height>800</height>

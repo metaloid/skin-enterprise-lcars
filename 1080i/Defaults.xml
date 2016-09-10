@@ -78,8 +78,8 @@
         <font>LCARS20</font>
         <textoffsetx>30</textoffsetx>
         <textcolor>White</textcolor>
-        <focusedcolor>White</focusedcolor>
-        <selectedcolor>White</selectedcolor>
+        <focusedcolor>Red</focusedcolor>
+        <selectedcolor>Red</selectedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <invalidcolor>invalid</invalidcolor>
         <texturefocus colordiffuse="White" border="20">images/buttonselect.png</texturefocus>
