@@ -3,20 +3,74 @@
     <defaultcontrol always="true">5</defaultcontrol>
     <include>OpenClose</include>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>Black</backgroundcolor>
     <controls>
-        <include>BlackBackground</include>
-        <control type="image">
-            <width>1920</width>
-            <height>1080</height>
-            <texture >Lcars/lineL.png</texture>
-            <aspectratio>stretch</aspectratio>
+			<control type="image" description="Logo">
+                <top>250</top>
+				<posx>690</posx>
+				<width>900</width>
+        		<height>450</height>
+        		<aspectratio scalediffuse="false">scale</aspectratio>
+                <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
+                <bordertexture  border="40">shadow.png</bordertexture>
+        		<bordersize>10</bordersize>
+			</control>
+			<control type="label" description="Header Label">
+				<description>header label</description>
+				<left>780</left>
+				<top>250</top>
+				<width>530</width>
+				<height>30</height>
+				<font>LCARS24</font>
+				<label>20043</label>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<textcolor>shelffont</textcolor>
+			</control>
+        <control type="group">
+            <posx>760</posx>
+			<top>300</top>
+            <control type="grouplist" id="5">
+                <description>Control Area</description>
+                <width>725</width>
+				<height>600</height>
+                <itemgap>5</itemgap>
+                <align>left</align>
+				<orientation>vertical</orientation>
+                <onleft>noop</onleft>
+                <onright>noop</onright>
+                <onup>noop</onup>
+                <ondown>28</ondown>
+            </control>
+            <control type="button" id="7">
+            <align>left</align>
+            <texturenofocus border="20" colordiffuse="HellOrange">whiterounded.png</texturenofocus>
+			<texturefocus border="20" colordiffuse="White">whiterounded.png</texturefocus>
+			<textoffsetx>7</textoffsetx>
+            </control>
+            <control type="radiobutton" id="8">
+            </control>
+            <control type="spincontrolex" id="9">
+            </control>
+            
         </control>
-		<control type="label" description="Header Label">
-            <include>HeadingR</include>
-            <label>20043</label>
+        <control type="grouplist">
+			<left>780</left>
+			<top>650</top>
+			<align>left</align>
+            <orientation>horizontal</orientation>
+            <itemgap>5</itemgap>
+            <onleft>noop</onleft>
+            <onright>noop</onright>
+            <onup>5</onup>
+            <ondown>noop</ondown>
+            <control type="button" id="28" description="OK">
+                <width>200</width>
+                <label>186</label>
+            </control>
+            <control type="button" id="29" description="Cancel">
+                <width>200 </width>
+                <label>222</label>
+            </control>
         </control>
-        <include>profilecontent</include>
-        
     </controls>
 </window>
