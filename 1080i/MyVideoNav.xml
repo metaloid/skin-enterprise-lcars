@@ -29,13 +29,22 @@
 		</control>
 		<include>VideoLcars</include>		
 		<include>WindowsTopInfos</include>
+		<control type="list" id="6000" description="Scroll letter">
+            <visible>[Container.SortDirection(Ascending)] + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<visible>![Container.Content(seasons) | Container.Content(episode)  | Container.Content(songs) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml]</visible>
+			<onup>6000</onup>
+			<ondown>6000</ondown>
+			<onright>54</onright>
+			<onleft>9000</onleft>
+			<include>SCROLLLETTER</include>
+		</control>
 		<control type="grouplist" id="9000">
             <width>300</width>
             <height>800</height>
             <top>110</top>
             <posx>50</posx>
 			<onleft>noop</onleft>
-			<onright>54</onright>
+			<onright>6000</onright>
 			<onup>noop</onup>
 		    <ondown>noop</ondown>
 			<control type="button" id="607">

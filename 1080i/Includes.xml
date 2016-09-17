@@ -241,7 +241,7 @@
 			</focusedlayout>
 	</include>    
    	<include name="IconLcars">
-		<itemlayout height="420" width="320" condition="!Container.Content(Episodes)">
+		<itemlayout height="420" width="320" condition="![Container.Content(genres) | Container.Content(Episodes)]">
             <control type="image">
 				<posx>35</posx>
 				<top>25</top>
@@ -284,10 +284,10 @@
 				<aligny>top</aligny>
 				<scroll>false</scroll>
 				<textcolor>Black</textcolor>
-				<label>$VAR[FlagExtra] $VAR[rating] $VAR[Extra] $INFO[ListItem.Year,(,) ]</label>
+				<label>$VAR[LcarsLabel2]</label>
 			</control>
         </itemlayout>
-			<itemlayout height="420" width="430"  condition="Container.Content(Episodes)">
+			<itemlayout height="420" width="430"  condition="[Container.Content(genres) | Container.Content(Episodes)]">
 				<control type="image">
 					<posx>30</posx>
 					<top>46</top>
@@ -333,7 +333,7 @@
 					<label>$VAR[LcarsLabel2]</label>
 				</control>
 			</itemlayout>
-        <focusedlayout height="420" width="320"  condition="!Container.Content(Episodes)">
+        <focusedlayout height="420" width="320"  condition="![Container.Content(genres) | Container.Content(Episodes)]">
             <control type="image">
                 <posx>35</posx>
                 <top>25</top>
@@ -376,10 +376,10 @@
 				<aligny>top</aligny>
 				<scroll>true</scroll>
 				<textcolor>Black</textcolor>
-				<label>$VAR[FlagExtra] $VAR[rating] $VAR[Extra] $INFO[ListItem.Year,(,)]</label>
+				<label>$VAR[LcarsLabel2]</label>
 			</control>
         </focusedlayout>
-			<focusedlayout height="420" width="430" condition="Container.Content(Episodes)">
+			<focusedlayout height="420" width="430" condition="[Container.Content(genres) | Container.Content(Episodes)]">
 				<control type="image">
 					<posx>30</posx>
 					<top>46</top>
@@ -909,33 +909,58 @@
             </control>
         </control>
         <!--SCROLLLETTER-->
-        <control type="group" description="Scroll letter">
-            <visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
-			<!--visible>Container.Scrolling + Control.HasFocus(60)</visible-->
+			<!--visible>Container.Scrolling + Control.HasFocus(60)</visible>
             <animation effect="fade" start="0" end="100" time="60" delay="0" reversible="true">Visible</animation>
             <animation effect="fade" start="100" end="0" time="160" delay="260" reversible="true">Hidden</animation>
             <control type="image" >
-					<posx>50</posx>
-                    <top>575</top>
-                    <width>300</width>
-                    <height>330</height>
-                    <aspectratio scalediffuse="true">strech</aspectratio>
-                    <texture background="true"  >dialog.png</texture>
-					
-				</control>
-				<control type="label">
+				<posx>50</posx>
+                <top>575</top>
+                <width>300</width>
+                <height>330</height>
+                <aspectratio scalediffuse="true">strech</aspectratio>
+                <texture background="true"  >dialog.png</texture>
+			</control>
+			<control type="label">
                 <posx>75</posx>
-                    <top>620</top>
-                    <width>250</width>
-                    <height>250</height>
-                    <align>center</align>
+                <top>620</top>
+                <width>250</width>
+                <height>250</height>
+                <align>center</align>
                 <aligny>center</aligny>
                 <font>LCARS36</font>
                 <textcolor>shelffont</textcolor>
                 <label>$INFO[ListItem.SortLetter]</label>
+			</control-->
+    </include>
+    <include name="SCROLLLETTER">
+			<width>45</width>
+			<posx>390</posx>
+			<posy>50</posy>
+			<height>970</height>
+			<orientation>vertical</orientation>
+			<itemlayout height="35" width="45">
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<animation effect="fade" start="100" end="40" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
-        </control>
-        
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Orange</textcolor>
+					<align>center</align>
+					<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="35" width="45">
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Red</textcolor>
+					<align>center</align>
+					<animation effect="fade" start="100" end="40" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+				</control>
+			</focusedlayout>
+			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
     </include>
     <include name="profilecontent">
         <control type="group">

@@ -2,7 +2,6 @@
 <window id="106">
     <defaultcontrol always="true">996</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>Black</backgroundcolor>
     <include>OpenClose</include>
     <coordinates>
         <system>1</system>
@@ -13,8 +12,8 @@
             <width>380</width>
             <height max="940">auto</height>
             <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
-            <bordertexture  border="40">shadow.png</bordertexture>
+            <texture  background="true" colordiffuse="Fog" >lcars.png</texture>
+            <bordertexture border="40">shadow.png</bordertexture>
             <bordersize>10</bordersize>
         </control>
         <control type="grouplist" id="996" description="Context menu container">

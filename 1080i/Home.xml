@@ -423,7 +423,7 @@
             </control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
-				<visible>[Container(9000).HasFocus(339) + [Container(310).HasPrevious |  Container(310).HasNext]] | [Container(9000).HasFocus(340) + [Container(311).HasPrevious |  Container(311).HasNext]] | [Container(9000).HasFocus(341) + [Container(312).HasPrevious |  Container(312).HasNext]] | [Container(9000).HasFocus(358) + [Container(316).HasPrevious |  Container(316).HasNext]] | [Container(9000).HasFocus(343) + [Container(315).HasPrevious |  Container(315).HasNext]] | [Container(9000).HasFocus(342) + [Container(313).HasPrevious |  Container(313).HasNext]]</visible>
+				<visible>[Container(9000).HasFocus(355) + [Container(314).HasPrevious |  Container(314).HasNext]] | [Container(9000).HasFocus(339) + [Container(310).HasPrevious |  Container(310).HasNext]] | [Container(9000).HasFocus(340) + [Container(311).HasPrevious |  Container(311).HasNext]] | [Container(9000).HasFocus(341) + [Container(312).HasPrevious |  Container(312).HasNext]] | [Container(9000).HasFocus(358) + [Container(316).HasPrevious |  Container(316).HasNext]] | [Container(9000).HasFocus(343) + [Container(315).HasPrevious |  Container(315).HasNext]] | [Container(9000).HasFocus(342) + [Container(313).HasPrevious |  Container(313).HasNext]]</visible>
 				<width>258</width>
 				<subtype>page</subtype>
 				<font>-</font>

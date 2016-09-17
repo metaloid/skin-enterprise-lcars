@@ -26,6 +26,15 @@
             <aspectratio>keep</aspectratio>
 		</control>
 		<include>WindowsTopInfos</include>
+		<control type="list" id="6000" description="Scroll letter">
+            <visible>[Container.SortDirection(Ascending)] + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<visible>![Container.Content(seasons) | Container.Content(episode)  | Container.Content(songs) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml]</visible>
+			<onup>6000</onup>
+			<ondown>6000</ondown>
+			<onright>504</onright>
+			<onleft>9000</onleft>
+			<include>SCROLLLETTER</include>
+		</control>
 		<control type="panel" id="504">
 			<posx>430</posx>
 			<posy>90</posy>
@@ -34,7 +43,7 @@
 			<onup>55</onup>
 			<ondown>55</ondown>
 			<onright>noop</onright>
-			<onleft>9000</onleft>
+			<onleft>6000</onleft>
 		    <viewtype label="504">VideoLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
@@ -48,7 +57,7 @@
             <top>110</top>
             <posx>50</posx>
 			<onleft>noop</onleft>
-			<onright>504</onright>
+			<onright>6000</onright>
 			<onup>noop</onup>
 			<ondown>noop</ondown>
 			<control type="button" id="607">

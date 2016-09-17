@@ -7,14 +7,14 @@
 		</control-->
 		<control type="panel" id="504">
 			<visible>![Container.Content(genres) | Container.Content(sets) | Container.Content(years) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
-			<posx>430</posx>
+			<posx>450</posx>
 			<posy>90</posy>
 			<width>1300</width>
 			<height>850</height>
-			<onup>55</onup>
-			<ondown>55</ondown>
+			<onup>504</onup>
+			<ondown>504</ondown>
 			<onright>noop</onright>
-			<onleft>9000</onleft>
+			<onleft>6000</onleft>
 		    <viewtype label="504">VideoLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
@@ -24,14 +24,14 @@
 		</control>
 		<control type="panel" id="54">
 			<visible>[Container.Content(genres) | Container.Content(sets) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
-			<posx>430</posx>
+			<posx>450</posx>
 			<posy>90</posy>
 			<width>1300</width>
 			<height>450</height>
-			<onup>55</onup>
-			<ondown>55</ondown>
+			<onup>504</onup>
+			<ondown>504</ondown>
 			<onright>noop</onright>
-			<onleft>9000</onleft>
+			<onleft>6000</onleft>
 		    <viewtype label="54">VideoLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
@@ -45,7 +45,7 @@
         </control>
 		<control type="list">
 			<visible>[Container.Content(genres) | Container.Content(sets) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
-			<posx>428</posx>
+			<posx>448</posx>
 			<posy>530</posy>
 			<width>670</width>
 			<height>475</height>
@@ -78,7 +78,7 @@
 		<control type="list">
 			<visible>[Container.Content(genres) | Container.Content(sets) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries)]</visible>
 			<posx>1100</posx>
-			<posy>550</posy>
+			<posy>570</posy>
 			<width>670</width>
 			<height>450</height>
 			<preloaditems>4</preloaditems>

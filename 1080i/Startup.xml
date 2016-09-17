@@ -23,27 +23,7 @@
             <timeperimage>35</timeperimage>
             <fadetime>0</fadetime>
             <loop>no</loop>
-            <aspectratio>keep</aspectratio>
+            <aspectratio>strech</aspectratio>
 		</control>
-		<!--control type="label" description="Title">
-            <centerleft>960</centerleft>
-            <top>500</top>
-            <align>center</align>
-			<height>100</height>
-            <width>800</width>
-            <font>LCARS36</font>
-            <textcolor>HellOrange</textcolor>
-            <label>STARFLEET COMMAND</label>
-        </control>
-		<control type="textbox" description="Title">
-            <centerleft>960</centerleft>
-            <top>600</top>
-            <align>center</align>
-			<height>100</height>
-            <width>800</width>
-            <font>LCARS24</font>
-            <textcolor>White</textcolor>
-            <label>L.C.A.R.S System Online...</label>
-        </control-->
     </controls>
 </window>

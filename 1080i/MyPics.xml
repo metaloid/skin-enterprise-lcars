@@ -31,10 +31,10 @@
 			<posy>90</posy>
 			<width>1300</width>
 			<height>850</height>
-			<onup>55</onup>
-			<ondown>55</ondown>
+			<onup>504</onup>
+			<ondown>504</ondown>
 			<onright>noop</onright>
-			<onleft>9000</onleft>
+			<onleft>6000</onleft>
 		    <viewtype label="504">VideoLcars</viewtype>
 			<pagecontrol>66</pagecontrol>
 			<scrolltime tween="sine" easing="inout">300</scrolltime>
@@ -49,7 +49,7 @@
             <top>110</top>
             <posx>50</posx>
 			<onleft>noop</onleft>
-			<onright>504</onright>
+			<onright>6000</onright>
 			<onup>noop</onup>
 		    <ondown>noop</ondown>
 			<control type="button" id="607">

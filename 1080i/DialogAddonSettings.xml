@@ -24,12 +24,12 @@
             <align>center</align>
             <height>60</height>
             <orientation>horizontal</orientation>
-            <control type="label" id="7777" description="Heading">
+            <control type="label" id="20" description="Heading">
                 <width>auto</width>
                 <height>40</height>
                 <font>LCARS20</font>
                 <scroll>false</scroll>
-                <label>$INFO[ListItem.Property(Addon.Name)]: $LOCALIZE[1045]</label>
+                <label>-</label>
             </control>
         </control>
 		<control type="grouplist" id="9" description="TopHat">

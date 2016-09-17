@@ -3,25 +3,25 @@
     <defaultcontrol always="true">3</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-		<include>OpenClose</include>
+	<include>OpenClose</include>
     <controls>
         <include>Backgroundcolor</include>
 		<control type="image">
-                <top>0</top>
-                <posx>0</posx>
-                <width>455</width>
-                <height>970</height>
-                <aspectratio>strech</aspectratio>
-                <texture background="true" >Lcars/lineR.png</texture>
+            <top>0</top>
+            <posx>0</posx>
+            <width>455</width>
+            <height>970</height>
+            <aspectratio>strech</aspectratio>
+            <texture background="true" >Lcars/lineR.png</texture>
 		</control> 
 		<control type="image">
-                <top>0</top>
-                <posx>455</posx>
-                <width>1464</width>
-                <height>970</height>
-                <aspectratio>strech</aspectratio>
-                <texture  background="true" >Lcars/lineL.png</texture>
-	     </control>
+            <top>0</top>
+            <posx>455</posx>
+            <width>1464</width>
+            <height>970</height>
+            <aspectratio>strech</aspectratio>
+            <texture  background="true" >Lcars/lineL.png</texture>
+	    </control>
 		<control type="grouplist">
 			<top>980</top>
             <posx>70</posx>
@@ -34,8 +34,8 @@
                 <label>$INFO[Network.IPAddress,IP: ]</label>
             </control>
 			<control type="button" description="cputemp">
-			<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
-            <width>250</width>
+				<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
+				<width>250</width>
                 <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
             </control>
 			<control type="button" description="Clock">
@@ -78,7 +78,6 @@
             <height>0</height>
             <font>LCARS24</font>
         </control>
-        
         <control type="label" id="2" description="Heading">
             <width>280</width>
             <posx>70</posx>
@@ -101,9 +100,9 @@
         </control>
         <control type="grouplist" id="5" description="Stage">
             <top>80</top>
-            <left>760</left>
+            <left>650</left>
             <width>800</width>
-            <height>770</height>
+            <height>800</height>
             <onright>60</onright>
             <onup>5</onup>
             <ondown>5</ondown>
@@ -112,8 +111,7 @@
             <orientation>vertical</orientation>
             <itemgap>10</itemgap>
         </control>
-        
-	  <control type="button" id="7" description="Button">
+		<control type="button" id="7" description="Button">
             <description>Default Button</description>
             <height>40</height>
             <width>300</width>
@@ -123,7 +121,7 @@
 			<invalidcolor>invalid</invalidcolor>
             <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
             <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
-         </control>
+        </control>
         <control type="radiobutton" id="8" description="Radio Button">
             <width>300</width>
             <height>40</height>
@@ -136,7 +134,6 @@
             <height>40</height>
             <align>left</align>
             <font>LCARS20</font>
-            
         </control>
         <control type="button" id="10" description="Category Button">
             <width>270</width>
@@ -184,19 +181,18 @@
 				<width>270</width>
            		<onclick>SettingsLevelChange</onclick>
             </control>
-	  </control>
+		</control>
         <control type="group">
             <visible>!SubString(Control.GetLabel(6),No info) + !Control.HasFocus(20)</visible>
             <control type="textbox" id="90">
-            <left>760</left>
-            <top>850</top>
-            <aligny>top</aligny>
-            <align>center</align>
-            <width>800</width>
-                <height>80</height>
+				<left>1500</left>
+				<top>80</top>
+				<aligny>top</aligny>
+				<width>350</width>
+                <height>800</height>
                 <font>LCARS20</font>
                 <label>$INFO[Control.GetLabel(6)]</label>
-                <align>justify</align>
+                <align>left</align>
             </control>
         </control>
     </controls>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
    <!--nouvelle variable-->
+     <variable name="SimilarInfo">
+		<value condition="!IsEmpty(ListItem.IMDBNumber) + !IsEmpty(ListItem.TvShowTitle)">plugin://script.skin.helper.service/?action=similarshows&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=3</value>
+		<value condition="!IsEmpty(ListItem.IMDBNumber)">plugin://script.skin.helper.service/?action=similarmovies&amp;imdbid=$INFO[ListItem.IMDBNumber]&amp;limit=3</value>
+	 </variable>
 	<variable name="butcolor1">
 		<value condition="!Skin.HasSetting(colormenu)">Orange</value>
 		<value>HellOrange</value>
@@ -41,9 +45,14 @@
 		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png) + [Container.Content(movies) | Container.Content(Episodes)]">WATCHED</value>
 	</variable>
 	<variable name="Extra">
-		<value condition="!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719) + !Control.IsVisible(50)">SD</value>
+		<value condition="ListItem.IsStereoscopic + !Control.IsVisible(50)">3D</value>
+        <value condition="[IntegerGreaterThan(ListItem.VideoResolution,1080) | StringCompare(ListItem.VideoResolution,4K)] + !Control.IsVisible(50)">UHD</value>
+        <value condition="IntegerGreaterThan(ListItem.VideoResolution,720) + !Control.IsVisible(50)">FHD</value>
+		<value condition="IntegerGreaterThan(ListItem.VideoResolution,700) + !Control.IsVisible(50)">HD</value>
+		<value condition="!IsEmpty(ListItem.VideoResolution) + !Control.IsVisible(50)">SD</value>
+		<!--value condition="!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719) + !Control.IsVisible(50)">SD</value>
 		<value condition="!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719) + !Control.IsVisible(50)">HD</value>
-		<value condition="Container.Content(tvshows) | Container.Content(Seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, unwatch]</value>
+		<value condition="Container.Content(tvshows) | Container.Content(Seasons)">$INFO[ListItem.Property(UnWatchedEpisodes),, unwatch]</value-->
 		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]</value>
 		<value condition="Control.IsVisible(50)">$INFO[ListItem.ChannelNumber]</value>
 	</variable>
@@ -196,6 +205,7 @@
         <value condition="Container(5000).HasFocus(15)">$INFO[ListItem.Property(NextNumber),(,)] $INFO[ListItem.Property(SeasonEpisode)]$INFO[ListItem.Property(NextTitle)]</value>
         <value condition="Container(5000).HasFocus(16)">$INFO[ListItem.Property(NextNumber),(,)] $INFO[ListItem.Property(SeasonEpisode)]$INFO[ListItem.Property(NextTitle)]</value>
         <value condition="Container.Content(Episodes)">$VAR[FlagExtra] $VAR[Extra]</value>
+        <value condition="Container.Content(Movies)">$VAR[FlagExtra] $VAR[rating] $VAR[Extra] $INFO[ListItem.Year,(,) ]</value>
         <value>$INFO[ListItem.label2]</value>
 	</variable>
     <variable name="VARLabel3">
@@ -278,8 +288,8 @@
         <value condition="[Container(9000).HasFocus(341) | Control.HasFocus(312)]">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value condition="Container.Content(Episodes)">$INFO[ListItem.Icon]</value>
-        <value condition="[Container.Content(genres) + SubString(Container.FolderPath,videodb://movies/genres/)] + Window.IsActive(videolibrary)+ !StringCompare(ListItem.Label,..)">http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
-        <value condition="[Container.Content(genres) + SubString(Container.FolderPath,videodb://tvshows/genres/)] + Window.IsActive(videolibrary)+ !StringCompare(ListItem.Label,..)">http://localhost:52307/gettvshowgenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
+        <value condition="[Container.Content(genres) + SubString(Container.FolderPath,videodb://movies/genres/)] + Window.IsActive(videolibrary)+ !StringCompare(ListItem.Label,..)">http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
+        <value condition="[Container.Content(genres) + SubString(Container.FolderPath,videodb://tvshows/genres/)] + Window.IsActive(videolibrary)+ !StringCompare(ListItem.Label,..)">http://localhost:52307/gettvshowgenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
         <value condition="[Container.Content(genres) | StringCompare(ListItem.DBTYPE,genre)] + !SubString(ListItem.FolderPath,music)+ !StringCompare(ListItem.Label,..)">defaultgenre.png</value>
         <value condition="[Container.Content(genres) | StringCompare(ListItem.DBTYPE,genre)] + SubString(ListItem.FolderPath,music)+ !StringCompare(ListItem.Label,..)">defaultmusicgenres.png</value>
 		<value condition="Container.Content(directors) + IsEmpty(ListItem.Thumb)+ !StringCompare(ListItem.Label,..)">defaultdirector.png</value>
@@ -353,8 +363,9 @@
         <value>$LOCALIZE[31097]</value>
     </variable>
     <variable name="musicshelfcontent">
-        <value condition="StringCompare(Skin.String(musicshelf),custom) + Library.HasContent(Music)">special://skin/resources/randomMusic.xsp</value>
-        <value condition="Library.HasContent(Music)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+        <!--value condition="StringCompare(Skin.String(musicshelf),custom) + Library.HasContent(Music)">special://skin/resources/randomMusic.xsp</value-->
+        <value condition="StringCompare(Skin.String(musicshelf),custom) + Library.HasContent(Music)">plugin://service.library.data.provider?type=randomsongs&amp;reload=$INFO[Window.Property(randomsongs)]</value>
+		<value condition="Library.HasContent(Music)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
     </variable>
     <variable name="shelflabel">
         <!--MOVIES-->

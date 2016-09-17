@@ -2,29 +2,35 @@
 <window>
 	<defaultcontrol>29</defaultcontrol>
 	<coordinates>
-		<system>1</system>
-		<left>0</left>
-		<top>0</top>
+		<left>370</left>
+		<top>60</top>
 	</coordinates>
-	<controls>
-		<control type="image"><!-- Dialog background image -->
-			<left>275</left>
-			<top>30</top>
-			<width>730</width>
-			<height>660</height>
-			<texture border="150"  >dialog.png</texture>
+    <include>OpenClose</include>
+    <controls>
+        <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1400</width>
+			<height>950</height>
+            <aspectratio scalediffuse="false">scale</aspectratio>
+            <texture  background="true" colordiffuse="Fog" >LCARS.png</texture>
+            <bordertexture  border="40">shadow.png</bordertexture>
+            <bordersize>10</bordersize>
 		</control>
 		<control type="label" id="2"><!-- Dialog heading -->
-			<left>315</left>
-			<top>50</top>
-			<width>650</width>
-			<height>30</height>
-			<align>center</align>
+            <left>40</left>
+            <top>10</top>
+            <width>1320</width>
+            <height>30</height>
+            <font>LCARS20</font>
+            <align>center</align>
+            <aligny>center</aligny>
+            <textcolor>Yellow</textcolor>
 		</control>
 		<control type="grouplist" id="5"><!-- Control area -->
-			<left>305</left>
-			<top>100</top>
-			<width>670</width>
+            <posx>65</posx>
+            <top>190</top>
+			<width>600</width>
 			<height>510</height>
 			<itemgap>5</itemgap>
 			<onup>9001</onup>
@@ -33,46 +39,53 @@
 			<onright>9001</onright>
 		</control>
 		<control type="group" id="9001">
-			<left>435</left>
-			<top>620</top>
+            <posx>715</posx>
+            <top>190</top>
 			<control type="button" id="28"><!-- OK -->
 				<left>0</left>
 				<top>0</top>
-				<width>200</width>
+				<width>250</width>
 				<height>40</height>
 				<align>center</align>
 				<label>$LOCALIZE[186]</label>
-				<onleft>29</onleft>
-				<onright>29</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>29</onup>
+				<ondown>29</ondown>
 			</control>
 			<control type="button" id="29"><!-- Cancel -->
-				<left>210</left>
-				<top>0</top>
-				<width>200</width>
+				<left>0</left>
+				<top>45</top>
+				<width>250</width>
 				<height>40</height>
 				<align>center</align>
 				<label>$LOCALIZE[222]</label>
-				<onleft>28</onleft>
-				<onright>28</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
 			</control>
 		</control>
 		<control type="button" id="7"><!-- Default button -->
-		        <textoffsetx>7</textoffsetx>
-                <align>left</align>
-                <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
-                <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
+            <font>LCARS20</font>
+            <align>left</align>
+			<textoffsetx>7</textoffsetx>
+			<invalidcolor>invalid</invalidcolor>
+            <texturenofocus colordiffuse="HellOrange" border="20">whiterounded.png</texturenofocus>
+            <texturefocus colordiffuse="White" border="20">whiterounded.png</texturefocus>
         </control>
 		<control type="radiobutton" id="8"><!-- Default radiobutton -->
-			<radioposx>630</radioposx>
+            <radioposx>0</radioposx>
+            <font>LCARS20</font>
+            <align>left</align>
 		</control>
 		<control type="spincontrolex" id="9"><!-- Default spincontrolex -->
-			<reverse>yes</reverse>
+            <align>left</align>
+            <font>LCARS20</font>
 		</control>
 		<control type="sliderex" id="13"><!-- Default slider -->
+            <align>left</align>
+            <font>LCARS20</font>
 		</control>
 		<control type="edit" id="12"><!-- Default edit -->
 			<height>40</height>

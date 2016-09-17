@@ -18,7 +18,7 @@
             <bordersize>10</bordersize>
 		</control>
         <control type="image" description="Thumb">
-            <left>280</left>
+			<left>280</left>
 			<top>90</top>
             <height>350</height>
             <width>235</width>
@@ -135,7 +135,7 @@
         </control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
-				<visible>[Container(50).HasPrevious |  Container(50).HasNext]</visible>
+				<visible>[Container(50).HasPrevious |  Container(50).HasNext] | [Container(52).HasPrevious |  Container(52).HasNext]</visible>
 				<onleft>9000</onleft>
 				<onright>noop</onright>
 				<onup>50</onup>
@@ -194,6 +194,7 @@
             </control>
            <!--plot-->
             <control type="textbox" id="4" description="plot">
+				<visible  allowhiddenfocus="true">![Control.HasFocus(676) | Control.HasFocus(52)]</visible>
                 <left>500</left>
                 <top>90</top>
                 <font>LCARS18</font>
@@ -203,7 +204,7 @@
             </control>
             <control type="group" description="List Info">
                 <!--visible>![container.content(tvshows) | container.content(episodes) | SubString(Container.FolderPath,videodb://musicvideos/,left) | Control.HasFocus(10)]</visible-->
-                <include>VisibleFade</include>
+				<include>VisibleFade</include>
                 <control type="list">
                     <left>460</left>
                     <top>450</top>
@@ -362,18 +363,6 @@
                    </content>
                 </control>
             </control>
-           <!--flag-->
-           <!--control type="panel" description="Flags" id="49">
-                <left>15</left>
-                <top>800</top>
-                <width>200</width>
-                <height>1000</height>
-                <itemgap>10</itemgap>
-                <orientation>horizontal</orientation>
-                <aligny>bottom</aligny>
-                <align>center</align>
-                <include>CodecsCard</include>
-            </control>
             <!--button-->
             <control type="grouplist" id="9000">
                 <left>-30</left>
@@ -407,10 +396,18 @@
 					<label>38023</label>
 					<visible>Control.IsEnabled(7)</visible>
                 </control>
+                <control type="button" id="676">
+					<!--Similar Button-->
+					<onright>52</onright>
+					<label>Similar</label>
+					<width>200</width>
+					<onclick>SetFocus(52)</onclick>
+                    <visible>!IsEmpty(ListItem.IMDBNumber)</visible>
+				</control>
 				<control type="button" id="677">
-                    	<onclick>back</onclick>
-						<width>200</width>
-						<label>Close</label>
+                   	<onclick>back</onclick>
+					<width>200</width>
+					<label>Close</label>
 				</control>
 				
             </control>
@@ -460,43 +457,83 @@
                 </control>
             </control>
         </control>
-        <!--ActorsandRoles-->
-        <!--control type="group" description="actorsandroles">
-            <top>625</top>
-            <visible>control.HasFocus(50)</visible>
-            <animation effect="slide" start="0,100" end="0,0" time="200">visiblechange</animation>
-            <control type="image">
-                <centerleft>520</centerleft>
-                <height>100</height>
-                <width>870</width>
-                <texture colordiffuse="inverted" border="30">images/diffuserounded.png</texture>
-            </control>
-            <control type="label" description="Media details">
-                <centerleft>520</centerleft>
-                <width>800</width>
-                <align>center</align>
-                <textcolor>White</textcolor>
-                <font>LCARS20</font>
-                <label>$INFO[Container(50).ListItem.Label]</label>
-            </control>
+        <control type="panel" id="52">
+            <visible  allowhiddenfocus="true">[Control.HasFocus(676) | Control.HasFocus(52)]</visible>
+			<left>550</left>
+			<top>90</top>
+            <height>350</height>
+            <width>800</width>
+            <onleft>9000</onleft>
+            <onright>noop</onright>
+            <onup>noop</onup>
+            <ondown>50</ondown>
+            <orientation>horizontal</orientation>
+            <scrolltime easing="inout">280</scrolltime>
+            <itemlayout width="250" height="350">
+                <control type="image" description="Thumb">
+                    <left>15</left>
+                    <height>350</height>
+                    <width>235</width>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="poster-mask.png" fallback="LCARS.png">$VAR[Locandine]</texture>
+                    <bordertexture  border="10">shadow.png</bordertexture>
+                    <bordersize>10</bordersize>
+                </control>
+                <control type="image" description="Thumb">
+                    <left>15</left>
+                    <height>350</height>
+                    <width>235</width>
+					<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
+					<bordersize>10</bordersize>
+                </control>
+				<control type="label">
+					<posx>10</posx>
+					<top>10</top>
+					<width>215</width>
+					<height>30</height>
+					<font>LCARS12</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<scroll>false</scroll>
+					<textcolor>Black</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+            </itemlayout>
+            <focusedlayout width="250" height="350">
+                <control type="image" description="Thumb">
+                    <left>15</left>
+                    <height>350</height>
+                    <width>235</width>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="poster-mask.png" fallback="LCARS.png">$VAR[Locandine]</texture>
+                    <bordertexture  border="10">shadow.png</bordertexture>
+                    <bordersize>10</bordersize>
+                </control>
+                <control type="image" description="Thumb">
+                    <left>15</left>
+                    <height>350</height>
+                    <width>235</width>
+					<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordertexture colordiffuse="White" border="10">shadow2.png</bordertexture>
+					<bordersize>10</bordersize>
+                </control>
+				<control type="label">
+					<posx>10</posx>
+					<top>10</top>
+					<width>215</width>
+					<height>30</height>
+					<font>LCARS12</font>
+					<align>center</align>
+					<aligny>top</aligny>
+					<scroll>true</scroll>
+					<textcolor>Black</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+            <content>$VAR[SimilarInfo]</content>
         </control>
-       <<control type="list">-->
-            <!--<height>1080</height>-->
-            <!--<itemlayout height="80">-->
-                <!--<control type="label">-->
-                    <!--<width>132</width>-->
-                    <!--<height>80</height>-->
-                    <!--<info>ListItem.Label</info>-->
-                <!--</control>-->
-            <!--</itemlayout>-->
-            <!--<focusedlayout height="80">-->
-                <!--<control type="label">-->
-                    <!--<width>132</width>-->
-                    <!--<height>80</height>-->
-                    <!--<info>ListItem.Label</info>-->
-                <!--</control>-->
-            <!--</focusedlayout>-->
-            <!--<content>plugin://script.populate.set/</content>-->
-        <!--</control>-->
     </controls>
 </window>
