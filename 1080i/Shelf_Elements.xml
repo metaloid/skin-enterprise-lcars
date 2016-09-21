@@ -73,8 +73,8 @@
 			<orientation>horizontal</orientation>
 			<scrolltime>400</scrolltime>
 			<include>ShelfFade</include>
-			<include>IconLcars</include>
-            <content>plugin://script.skin.helper.service/?action=pvrchannels&amp;limit=1000&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</content>
+            <include>IconLcars</include>
+			<content>pvr://channels/tv/*/pvr.link.pvr </content>
 		</control>
     </include>
 	<include name="Addons_Shortcuts">
@@ -231,71 +231,71 @@
             <content>
                 <item id="1" description="Episodes1">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.1.NextTitle))</visible>
-                    <label>$INFO[Window(Home).Property(NextAired.1.Label)] $INFO[Window(Home).Property(NextAired.1.NextDay)]</label>
-                    <label2>S$INFO[Window(Home).Property(NextAired.1.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.1.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.1.NextTitle)]</label2>
+                    <label2>$INFO[Window(Home).Property(NextAired.1.Label)] $INFO[Window(Home).Property(NextAired.1.NextDay)]</label2>
+                    <label>S$INFO[Window(Home).Property(NextAired.1.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.1.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.1.NextTitle)]</label>
                     <thumb>$INFO[Window(Home).Property(NextAired.1.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.1.Library)])</onclick>
                 </item>
                 <item id="2" description="Episodes2">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.2.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.2.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.2.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.2.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.2.Label)] $INFO[Window(Home).Property(NextAired.2.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.2.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.2.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.2.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.2.Label)] $INFO[Window(Home).Property(NextAired.2.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.2.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.2.Library)])</onclick>
                 </item>
                 <item id="3" description="Episodes3">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.3.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.3.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.3.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.3.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.3.Label)] $INFO[Window(Home).Property(NextAired.3.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.3.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.3.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.3.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.3.Label)] $INFO[Window(Home).Property(NextAired.3.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.3.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.3.Library)])</onclick>
                 </item>
                 <item id="4" description="Episodes4">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.4.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.4.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.4.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.4.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.4.Label)] $INFO[Window(Home).Property(NextAired.4.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.4.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.4.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.4.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.4.Label)] $INFO[Window(Home).Property(NextAired.4.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.4.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.4.Library)])</onclick>
                 </item>
                 <item id="5" description="Episodes5">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.5.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.5.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.5.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.5.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.5.Label)] $INFO[Window(Home).Property(NextAired.5.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.5.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.5.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.5.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.5.Label)] $INFO[Window(Home).Property(NextAired.5.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.5.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.5.Library)])</onclick>
                 </item>
                 <item id="6" description="Episodes6">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.6.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.6.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.6.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.6.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.6.Label)] $INFO[Window(Home).Property(NextAired.6.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.6.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.6.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.6.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.6.Label)] $INFO[Window(Home).Property(NextAired.6.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.6.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.6.Library)])</onclick>
                 </item>
                 <item id="7" description="Episodes7">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.7.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.7.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.7.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.7.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.7.Label)] $INFO[Window(Home).Property(NextAired.7.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.7.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.7.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.7.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.7.Label)] $INFO[Window(Home).Property(NextAired.7.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.7.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.7.Library)])</onclick>
                 </item>
                 <item id="8" description="Episodes8">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.8.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.8.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.8.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.8.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.8.Label)] $INFO[Window(Home).Property(NextAired.8.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.8.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.8.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.8.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.8.Label)] $INFO[Window(Home).Property(NextAired.8.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.8.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.8.Library)])</onclick>
                 </item>
                 <item id="9" description="Episodes9">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.9.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.9.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.9.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.9.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.9.Label)] $INFO[Window(Home).Property(NextAired.9.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.9.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.9.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.9.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.9.Label)] $INFO[Window(Home).Property(NextAired.9.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.9.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.9.Library)])</onclick>
                 </item>
                 <item id="10" description="Episodes10">
                     <visible>!IsEmpty(Window(Home).Property(NextAired.10.NextTitle))</visible>
-                    <label2>S$INFO[Window(Home).Property(NextAired.10.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.10.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.10.NextTitle)]</label2>
-                    <label>$INFO[Window(Home).Property(NextAired.10.Label)] $INFO[Window(Home).Property(NextAired.10.NextDay)]</label>
+                    <label>S$INFO[Window(Home).Property(NextAired.10.NextSeasonNumber)]E$INFO[Window(Home).Property(NextAired.10.NextEpisodeNumber)] $INFO[Window(Home).Property(NextAired.10.NextTitle)]</label>
+                    <label2>$INFO[Window(Home).Property(NextAired.10.Label)] $INFO[Window(Home).Property(NextAired.10.NextDay)]</label2>
                     <thumb>$INFO[Window(Home).Property(NextAired.10.fanart)]</thumb>
                     <onclick>ActivateWindow(Video,$INFO[Window.Property(NextAired.10.Library)])</onclick>
                 </item>
@@ -319,8 +319,8 @@
 			<scrolltime>400</scrolltime>
 			<include>ShelfFade</include>
             <include>IconLcars</include>
-<!--content>plugin://script.skin.helper.service/?action=favourites&amp;limit=6&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</content-->
-                <content  limit="6">
+			<!--content>favourites://ListItem.FileNameAndPath</content-->
+                <content>
                     <item id="1" description="Favss">
                         <visible>IntegerGreaterThan(Window.Property(favourite.count),0)</visible>
                         <label>$INFO[Window.Property(favourite.1.name)]</label>

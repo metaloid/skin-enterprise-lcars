@@ -3,8 +3,9 @@
     <fontset id="Default" unicode="true">
        <font>
             <name>font10</name>
-            <filename>Default.ttf</filename>
+            <filename>Condensed-Regular.ttf</filename>
             <size>21</size>
+			<style>bold</style>
         </font>
         <font>
             <name>font13</name>

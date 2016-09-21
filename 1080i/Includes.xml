@@ -173,7 +173,7 @@
 					<top>60</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
@@ -185,7 +185,7 @@
 					<top>330</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
@@ -219,7 +219,7 @@
 					<top>60</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>true</scroll>
@@ -231,7 +231,7 @@
 					<top>330</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>true</scroll>
@@ -267,7 +267,7 @@
 				<top>40</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>false</scroll>
@@ -279,7 +279,7 @@
 				<top>355</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>false</scroll>
@@ -313,7 +313,7 @@
 					<top>60</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
@@ -325,7 +325,7 @@
 					<top>330</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
@@ -359,7 +359,7 @@
 				<top>40</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>true</scroll>
@@ -371,7 +371,7 @@
 				<top>355</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>true</scroll>
@@ -405,7 +405,7 @@
 					<top>60</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>true</scroll>
@@ -417,7 +417,7 @@
 					<top>330</top>
 					<width>335</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>true</scroll>
