@@ -3,43 +3,42 @@
     <defaultcontrol always="true">575</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-		<include>OpenClose</include>
-     <controls>
+	<!--include>OpenClose</include-->
+    <controls>
         <include>Backgroundcolor</include>
 		<control type="image">
-                <top>0</top>
-                <posx>0</posx>
-                <width>455</width>
-                <height>970</height>
-                <aspectratio>strech</aspectratio>
-                <texture background="true" >Lcars/lineR.png</texture>
+            <top>0</top>
+            <posx>0</posx>
+            <width>455</width>
+            <height>1050</height>
+            <aspectratio>strech</aspectratio>
+            <texture background="true" >Lcars/lineR.png</texture>
 		</control> 
 		<control type="image">
-                <top>0</top>
-                <posx>455</posx>
-                <width>1464</width>
-                <height>970</height>
-                <aspectratio>strech</aspectratio>
-                <texture  background="true" >Lcars/lineL.png</texture>
-	     </control>
-        <include>InfoPanel</include>
+            <top>0</top>
+            <posx>455</posx>
+            <width>1464</width>
+            <height>1050</height>
+            <aspectratio>strech</aspectratio>
+            <texture  background="true" >Lcars/lineL.png</texture>
+	    </control>
         <control type="group">
             <control type="list" id="575">
                 <scrolltime>300</scrolltime>
 				<width>320</width>
-                <height>750</height>
+                <height>850</height>
                 <top>120</top>
                 <posx>50</posx>
 		        <onleft>60</onleft>
                 <pagecontrol>60</pagecontrol>
-                <onright condition="Container(575).HasFocus(2)">ActivateWindow(1718)</onright>
-                <onright condition="!Container(575).HasFocus(2)">noop</onright>
+                <onright condition="Container(575).HasFocus(10)">activatewindow(1718)</onright>
+                <onright condition="!Container(575).HasFocus(10)">noop</onright>
                 <focusposition>1</focusposition>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
                 <orientation>vertical</orientation>
                 <!--scrolltime tween="sine" easing="inout">280</scrolltime-->
-               <itemlayout height="50" width="310">
+				<itemlayout height="50" width="310">
                     <control type="image" description="THMBSBASECOLOR">
                         <visible>Skin.HasSetting(colormenu)</visible>
 						<posx>20</posx>
@@ -55,7 +54,7 @@
 						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 						<texture diffuse="whiteallrounded2.png">$INFO[ListItem.Property(color),,.png]</texture>
                     </control>
-			  <control type="label" description="LABEL">
+					<control type="label" description="LABEL">
                         <left>95</left>
                         <top>8</top>
                         <width>180</width>
@@ -68,7 +67,6 @@
                         <label>$INFO[ListItem.label]</label>
                     </control>
                 </itemlayout>								
-			
                 <focusedlayout height="50" width="310">
                     <control type="image" description="THMBSBASE">
                         <posx>20</posx>
@@ -76,7 +74,7 @@
                         <height>40</height>
 						<texture >whiteallrounded2.png</texture>
                     </control>
-			  <control type="label" description="label">
+					<control type="label" description="label">
                         <left>95</left>
                         <top>8</top>
                         <width>180</width>
@@ -94,19 +92,19 @@
                         <onclick>activatewindow(AppearanceSettings)</onclick>
 						<property name="color">c1</property>
                     </item>
-                    <item id="3" description="Videos">
+                    <item id="2" description="Videos">
                         <label>3</label>
                         <onclick>activatewindow(VideosSettings)</onclick>
+						<property name="color">c1</property>
+                    </item>
+                    <item id="3" description="LiveTV">
+                        <label>31059</label>
+                        <onclick>activatewindow(PVRSettings)</onclick>
 						<property name="color">c1</property>
                     </item>
                     <item id="4" description="Music">
                         <label>2</label>
                         <onclick>activatewindow(MusicSettings)</onclick>
-						<property name="color">c1</property>
-                    </item>
-                    <item id="14" description="LiveTV">
-                        <label>31059</label>
-                        <onclick>activatewindow(PVRSettings)</onclick>
 						<property name="color">c5</property>
                     </item>
                     <item id="5" description="Pictures">
@@ -114,48 +112,60 @@
                         <onclick>activatewindow(PicturesSettings)</onclick>
 						<property name="color">c5</property>
                     </item>
-                    <item id="8" description="Weather">
+                    <item id="6" description="Weather">
                         <label>8</label>
                         <onclick>activatewindow(WeatherSettings)</onclick>
 						<property name="color">c5</property>
                     </item>
-                    <item id="9" description="Services">
+                    <item id="7" description="Addons">
+                        <label>24001</label>
+                        <onclick>activatewindow(AddonBrowser,root)</onclick>
+ 						<property name="color">c9</property>
+                   </item>
+                    <item id="8" description="Services">
                         <label>14036</label>
                         <onclick>Activatewindow(servicesettings)</onclick>
  						<property name="color">c9</property>
                    </item>
-                    <item id="10" description="System">
+                    <item id="9" description="System">
                         <label>13000</label>
                         <onclick>activatewindow(SystemSettings)</onclick>
  						<property name="color">c9</property>
                    </item>
-                    <item id="2" description="Skin Settings">
+                    <item id="10" description="Skin Settings">
                         <label>20077</label>
-                        <onclick>ActivateWindow(1718)</onclick>
-						<property name="color">c9</property>
+                        <onclick>activatewindow(1718)</onclick>
+						<property name="color">c2</property>
                     </item>
-                    <item id="13" description="Addons">
-                        <label>24001</label>
-                        <onclick>activatewindow(AddonBrowser,root)</onclick>
- 						<property name="color">c2</property>
-                   </item>
-                    <item id="15" description="openELEC">
+                    <item id="11" description="openELEC">
                         <visible>System.HasAddon(service.openelec.settings)</visible>
                         <label>$ADDON[service.openelec.settings 600]</label>
                         <onclick>RunAddon(service.openelec.settings)</onclick>
 						<property name="color">c2</property>
                     </item>
-                    <item id="6" description="Sys Info">
+                    <item id="12" description="Sys Info">
                         <label>$LOCALIZE[138]</label>
                         <onclick>noop</onclick>
 						<property name="color">c2</property>
                     </item>
-                    <item id="16" description="Sys Info">
+                    <item id="13" description="EventLog">
                         <label>Event Log</label>
                         <onclick>activatewindow(EventLog)</onclick>
 						<property name="color">c4</property>
                     </item>
-                    <item id="11" description="Home">
+					<item id="14">
+						<visible>!Skin.HasSetting(HideClock)</visible>
+                        <onclick>noop</onclick>
+						<label>$INFO[System.Time]</label>
+						<property name="color">c4</property>
+					</item>
+					<item id="15">
+						<visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
+                        <onclick>noop</onclick>
+						<label>$INFO[System.BatteryLevel,Pwr ]</label>
+						<property name="color">c4</property>
+					</item>
+                    <item id="16" description="Home">
                         <label>Home</label>
                         <onclick>Back</onclick>
 						<property name="color">c4</property>
@@ -163,93 +173,204 @@
                 </content>
             </control>
         </control>
-            <control type="group" id="700" description="Shelf items">
-                <posx>630</posx>
-				<top>200</top>
-				<control type="image" description="Logo">
-					<top>50</top>
-					<posx>60</posx>
-					<width>1180</width>
-					<height>450</height>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture  background="true" colordiffuse="Fog" >Capture4.png</texture>
-					<bordertexture  border="40">shadow.png</bordertexture>
-					<bordersize>10</bordersize>
-                </control>
-				<control type="grouplist">
-                <visible>[Container(575).HasFocus(6)]</visible>
-					<left>100</left>
-					<top>100</top>
-					<width>800</width>
-					<height>419</height>
-					<itemgap>8</itemgap>
-					<control type="label">
-					<description>BuildVersion</description>
-					<label>Version: $INFO[System.BuildVersion]  $INFO[System.BuildDate]</label>
-					<align>left</align>
+        <control type="group" id="700" description="Shelf items">
+            <posx>630</posx>
+			<top>120</top>
+			<control type="image" description="Logo">
+				<top>0</top>
+				<posx>-20</posx>
+				<width>1250</width>
+				<height>730</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<texture  background="true" colordiffuse="Fog" >Capture4.png</texture>
+				<bordertexture  border="40">shadow.png</bordertexture>
+				<bordersize>10</bordersize>
+            </control>
+			<control type="grouplist">
+				<visible>[Container(575).HasFocus(12)]</visible>
+				<left>-20</left>
+				<top>100</top>
+				<width>650</width>
+				<height>619</height>
+				<itemgap>-1</itemgap>
+				<control type="label">
+					<description>FriendlyName</description>
+					<label>$INFO[System.KernelVersion]</label>
+					<align>right</align>
 					<aligny>center</aligny>
-					<height>30</height>
+					<textcolor>red</textcolor>
+					<height>45</height>
 					<font>LCARS20</font>
 				</control>
 				<control type="label">
-					<description>CpuFrequency</description>
-					<label>Cpu Frequency: $INFO[System.CpuFrequency]</label>
-					<align>left</align>
+					<description>BuildVersion</description>
+					<label>Version: $INFO[System.BuildVersion]</label>
+					<align>right</align>
 					<aligny>center</aligny>
-					<height>30</height>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>Storage</description>
+					<label>Storage: $INFO[System.UsedSpace] / $INFO[System.TotalSpace] - $INFO[System.UsedSpacePercent]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>Memory Text</description>
+					<label>$LOCALIZE[31309] $INFO[system.memory(used)] / $INFO[system.memory(total)] - $INFO[system.memory(used.percent)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<height>45</height>
+					<textcolor>red</textcolor>
 					<font>LCARS20</font>
 				</control>
 				<control type="label">
 					<description>CPU Text</description>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>link</description>
+					<label>$INFO[Network.LinkState]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>IP</description>
+					<label>ip addres: $INFO[Network.IPAddress]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>mask</description>
+					<label>mask addres: $INFO[Network.SubnetMask]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>DNS1</description>
+					<label>dns primary: $INFO[Network.DNS1Address]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>ScreenResolution</description>
+					<label>resolution: $INFO[System.ScreenResolution]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+			</control>		
+			<control type="grouplist">
+				<visible>[Container(575).HasFocus(12)]</visible>
+				<left>650</left>
+				<top>100</top>
+				<width>550</width>
+				<height>619</height>
+				<itemgap>-1</itemgap>
+				<control type="label">
+					<description>CpuFrequency</description>
+					<label>Cpu Frequency: $INFO[System.CpuFrequency]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<height>30</height>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>BuildDate</description>
+					<info>System.BuildDate</info>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
 					<font>LCARS20</font>
 				</control>
 				<control type="progress">
-					<description>CPU BAR</description>
-					<width>350</width>
-					<colordiffuse>blue</colordiffuse> 
-					<height>25</height>
-					<info>System.CPUUsage</info>
-				</control>
-				<control type="label">
-					<description>Memory Text</description>
-					<label>Memory usage $INFO[system.memory(used.percent)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<height>30</height>
-					<font>LCARS20</font>
+					<description>Storage BAR</description>
+					<width>500</width>
+					<colordiffuse>red</colordiffuse> 
+					<height>45</height>
+					<info>System.UsedSpace</info>
 				</control>
 				<control type="progress">
 					<description>Memory BAR</description>
-					<width>350</width>
-					<colordiffuse>blue</colordiffuse> 
-					<height>25</height>
+					<width>500</width>
+					<colordiffuse>red</colordiffuse> 
+					<height>45</height>
 					<info>system.memory(used)</info>
+				</control>
+				<control type="progress">
+					<description>CPU BAR</description>
+					<width>500</width>
+					<colordiffuse>red</colordiffuse> 
+					<height>45</height>
+					<info>System.CPUUsage</info>
+				</control>
+				<control type="label">
+					<description>internet</description>
+					<label>internet: $INFO[System.InternetState]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
 				</control>
 				<control type="label">
 					<description>mac addres</description>
 					<label>mac addres: $INFO[Network.MacAddress]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<height>30</height>
+					<textcolor>red</textcolor>
+					<height>45</height>
 					<font>LCARS20</font>
 				</control>
 				<control type="label">
-					<description>ScreenResolution</description>
-					<label>resolution: $INFO[System.ScreenResolution]</label>
+					<description>gateway addres</description>
+					<label>gateway addres: $INFO[Network.GatewayAddress]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<height>30</height>
+					<textcolor>red</textcolor>
+					<height>45</height>
+					<font>LCARS20</font>
+				</control>
+				<control type="label">
+					<description>dns2</description>
+					<label>dns secondary: $INFO[Network.DNS2Address]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>red</textcolor>
+					<height>45</height>
 					<font>LCARS20</font>
 				</control>
 			</control>
 			<control type="textbox" description="infos">
-                <visible>![Container(575).HasFocus(6)]</visible>
+                <visible>![Container(575).HasFocus(12)]</visible>
 				<top>50</top>
-				<posx>60</posx>
+				<posx>0</posx>
 				<width>1180</width>
 				<height>500</height>
 				<font>LCARS24</font>
@@ -259,9 +380,9 @@
 				<label>$VAR[settingsmainico]</label>
 			</control>
 			<control type="textbox" description="infos">
-                <visible>![Container(575).HasFocus(6)]</visible>
+                <visible>![Container(575).HasFocus(12)]</visible>
 				<top>250</top>
-				<posx>100</posx>
+				<posx>40</posx>
 				<width>1100</width>
         		<height>450</height>
         		<font>LCARS20</font>
@@ -270,8 +391,6 @@
 				<align>center</align>
 				<label>$VAR[settingsmain]</label>
 			</control>
-			
         </control>
-	  
     </controls>
 </window>

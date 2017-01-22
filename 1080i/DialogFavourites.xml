@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="134">
-    <defaultcontrol always="true">9000</defaultcontrol>
+    <defaultcontrol always="true">450</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <onunload>RunScript(script.favourites)</onunload>
     <controls>
         <control type="panel" id="450">
-       		<posx>895</posx>
-			<top>85</top>
-       		<onleft>9000</onleft>
-       		<onright>noop</onright>
-       		<onup>450</onup>
-       		<ondown>450</ondown>
+			<include>NextPos</include>
        		<pagecontrol>66</pagecontrol>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
         </control>
-		<control type="grouplist" id="9000">
+		<control type="grouplist" id="5000">
 			<top>315</top>
             <posx>625</posx>
 			<align>left</align>
             <orientation>vertical</orientation>
-            <onup>9000</onup>
+            <onup>noop</onup>
 			<onright>450</onright>
-			<ondown>9000</ondown>
+			<ondown>noop</ondown>
 			<onleft>close</onleft>
 			<itemgap>10</itemgap>
 			<control type="button" id="677">
@@ -47,10 +36,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="HellOrange" >left.png</textureup>
-				<texturedown colordiffuse="HellOrange">right.png</texturedown>
-				<textureupfocus colordiffuse="HellOrange">leftp.png</textureupfocus>
-				<texturedownfocus colordiffuse="HellOrange">rightp.png</texturedownfocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
 			</control>    
 		</control>		
     </controls>

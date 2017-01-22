@@ -2,7 +2,7 @@
 <window id="106">
     <defaultcontrol always="true">996</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <coordinates>
         <system>1</system>
         <origin x="560" y="120" />

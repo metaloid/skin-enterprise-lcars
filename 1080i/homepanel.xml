@@ -69,7 +69,7 @@
             <visible>!Skin.HasSetting(hidewtr)</visible>
             <property name="color">c2</property>
             <label>$INFO[Weather.Temperature]</label>
-			<onclick>ActivateWindow(1120)</onclick>
+			<onclick>ActivateWindow(weather)</onclick>
         </item>
         <item id="346">
           <visible>!Skin.HasSetting(hideupdate)</visible>

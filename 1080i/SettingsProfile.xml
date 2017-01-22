@@ -3,7 +3,7 @@
     <defaultcontrol always="true">2</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <controls>
         <include>BlackBackground</include>
         <control type="image">

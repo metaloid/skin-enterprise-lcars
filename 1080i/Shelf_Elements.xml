@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="source">
+        <control type="panel" id="319" description="source Shortcuts">
+            <onup>313</onup>
+            <ondown>313</ondown>
+            <onleft>9002</onleft>
+            <onright>noop</onright>
+			<visible>[Container(9000).HasFocus(365)]| Control.HasFocus(319) | [Container(9000).HasFocus(348) + ![Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)]]</visible>
+			<pagecontrol>66</pagecontrol>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
+            <content target="video">$INFO[Skin.String(sourceshome)]</content>
+        </control>
+    </include>
     <include name="Movies">
         <control type="panel" id="311" description="Movies Shelf Shortcuts">
             <visible>Library.HasContent(Movies) + [Container(9000).HasFocus(340) | Control.HasFocus(311)]</visible>
@@ -8,38 +27,38 @@
             <onleft>9002</onleft>
             <onright>noop</onright>
 			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
             <content target="video" limit="16">videodb://recentlyaddedmovies/</content>
         </control>
     </include>
 	<include name="TV_RA">
-        <control type="panel" id="312" description="TOP Shortcuts">
+        <control type="panel" id="312" description="TV Shortcuts">
             <visible>Library.HasContent(TVShows) + [Container(9000).HasFocus(341) | Control.HasFocus(312)]</visible>
             <onup>312</onup>
             <ondown>312</ondown>
             <onleft>9002</onleft>
             <onright>noop</onright>
 			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-			<include>IconLcars</include>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
             <content target="video" limit="16">videodb://recentlyaddedepisodes/</content>
 		</control>
     </include>
 	<include name="Music_RA">
-        <control type="panel" id="313" description="TOP Shortcuts">
+        <control type="panel" id="313" description="Music Shortcuts">
             <onup>313</onup>
             <ondown>313</ondown>
             <onleft>9002</onleft>
@@ -47,186 +66,73 @@
             <visible>Library.HasContent(Music) | Library.HasContent(MusicVideos) | Skin.HasSetting(MusicShelf_Custom)</visible>
             <visible>[Container(9000).HasFocus(342) | Control.HasFocus(313)] + !StringCompare(Skin.String(musicshelf),mushoff)</visible>
 			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
             <content target="music" limit="16">$VAR[musicshelfcontent]</content>
         </control>
     </include>
  	<include name="PVR">
-        <control type="panel" id="314" description="TOP Shortcuts">
+        <control type="panel" id="314" description="PVR Shortcuts">
             <visible>[Container(9000).HasFocus(355) | Control.HasFocus(314)]</visible>
             <onup>312</onup>
             <ondown>312</ondown>
             <onleft>9002</onleft>
             <onright>noop</onright>
 			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
 			<content>pvr://channels/tv/*/pvr.link.pvr </content>
 		</control>
     </include>
 	<include name="Addons_Shortcuts">
 		<control type="group">
-            <control type="panel" id="315" description="TOP Shortcuts">
-                <visible> Skin.HasSetting(AddonsShelf_Custom)+ [Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
+            <control type="panel" id="315" description="Addons Shortcuts">
+                <visible>[Container(9000).HasFocus(343) | Control.HasFocus(315)]</visible>
                 <onup>315</onup>
                 <ondown>315</ondown>
                 <onleft>9002</onleft>
                 <onright>noop</onright>
 				<pagecontrol>66</pagecontrol>
-				<top>50</top>
-				<posx>65</posx>
-				<width>930</width>
-				<height>850</height>
-				<orientation>horizontal</orientation>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
 				<scrolltime>400</scrolltime>
 				<include>ShelfFade</include>
-				<include>IconLcars</include>
-                <content>
-                    <item id="1" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.1.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.1.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.1.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.1.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="2" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.2.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.2.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.2.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.2.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="3" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.3.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.3.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.3.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.3.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="4" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.4.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.4.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.4.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.4.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="5" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.5.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.5.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.5.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.5.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="6" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.6.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.6.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.6.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.6.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="7" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.7.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.7.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.7.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.7.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="8" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.8.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.8.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.8.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.8.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="9" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.9.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.9.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.9.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.9.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="10" description="Addons">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.10.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.10.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.10.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.10.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="11" description="Scripts">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.11.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.11.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.11.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.11.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24000]</property>
-                    </item>
-                    <item id="12" description="Scripts">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.12.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.12.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.12.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.12.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24009]</property>
-                    </item>
-                    <item id="13" description="Scripts">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.13.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.13.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.13.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.13.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24009]</property>
-                    </item>
-                    <item id="14" description="Scripts">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.14.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.14.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.14.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.14.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24009]</property>
-                    </item>
-                    <item id="15" description="Scripts">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.15.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.15.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.15.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.15.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24009]</property>
-                    </item>
-                    <item id="16" description="Scripts">
-                        <visible>!IsEmpty(Skin.String(ShelfAddons.16.Label))</visible>
-                        <label>$INFO[system.addontitle(Skin.String(ShelfAddons.16.Label))]</label>
-                        <thumb>$INFO[system.addonicon(Skin.String(ShelfAddons.16.Label))]</thumb>
-                        <onclick>RunAddon($INFO[Skin.String(ShelfAddons.16.Label)])</onclick>
-                        <property name="ItemType">$LOCALIZE[24009]</property>
-                    </item>
-                </content>
+				<include>weatherlcars</include>
+            <content target="video">$INFO[Skin.String(addonshome)]</content>
             </control>
         </control>
     </include>
 	<include name="TV_NA">
-        <control type="panel" id="316" description="TOP Shortcuts">
+        <control type="panel" id="316" description="TV_NA Shortcuts">
             <visible>Container(9000).HasFocus(358)</visible>
             <onup>316</onup>
             <ondown>316</ondown>
             <onleft>9002</onleft>
             <onright>noop</onright>
 			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
             <!--content>plugin://script.skin.helper.service/?action=nextairedtvshows&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</content-->
             <content>
                 <item id="1" description="Episodes1">
@@ -303,7 +209,7 @@
         </control>
     </include>
     <include name="Favorites">
-        <control type="panel" id="317" description="Movies Shelf Shortcuts">
+        <control type="panel" id="317" description="Favorites Shelf Shortcuts">
             <visible>!Window.IsActive(134) + [Container(9000).HasFocus(352) | Control.HasFocus(317)] + System.HasAddon(script.favourites)</visible>
             <onup>317</onup>
             <ondown>317</ondown>
@@ -311,15 +217,15 @@
             <onright>noop</onright>
 			<onfocus>ActivateWindow(Favourites)</onfocus>
 			<pagecontrol>66</pagecontrol>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-			<orientation>horizontal</orientation>
-			<scrolltime>400</scrolltime>
-			<include>ShelfFade</include>
-            <include>IconLcars</include>
-			<!--content>favourites://ListItem.FileNameAndPath</content-->
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<scrolltime>400</scrolltime>
+				<include>ShelfFade</include>
+				<include>weatherlcars</include>
+			<!--content limit="6">favourites://</content-->
                 <content>
                     <item id="1" description="Favss">
                         <visible>IntegerGreaterThan(Window.Property(favourite.count),0)</visible>
@@ -361,132 +267,44 @@
         </control>
     </include>
 	<include name="pictures">
-        <control type="group" id="318" description="Movies Shelf Shortcuts">
+        <control type="group" id="318" description="pictures Shelf">
             <visible>[Container(9000).HasFocus(344) | Control.HasFocus(318)]</visible>
-			<top>50</top>
-			<posx>65</posx>
-			<width>930</width>
-			<height>850</height>
-            <control type="image">
-                <posx>35</posx>
-                <top>25</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">pic1.jpg</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>35</posx>
-				<top>25</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10" colordiffuse="Orange">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
-            <control type="image">
-                <posx>355</posx>
-                <top>25</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">pic2.jpg</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>355</posx>
-				<top>25</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10" colordiffuse="Orange">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
-            <control type="image">
-                <posx>675</posx>
-                <top>25</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">pic3.jpg</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>675</posx>
-				<top>25</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10" colordiffuse="Orange">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
-            <control type="image">
-                <posx>35</posx>
-                <top>445</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">pic4.jpg</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>35</posx>
-				<top>445</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10" colordiffuse="Orange">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
-            <control type="image">
-                <posx>355</posx>
-                <top>445</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">pic5.jpg</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>355</posx>
-				<top>445</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10" colordiffuse="Orange">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
-            <control type="image">
-                <posx>675</posx>
-                <top>445</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">pic6.jpg</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>675</posx>
-				<top>445</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10" colordiffuse="Orange">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
+				<orientation>vertical</orientation>
+				<include>ShelfFade</include>
+					<control type="image">
+						<posx>30</posx>
+						<top>0</top>
+						<width>800</width>
+						<height>240</height>
+						<texture fallback="LCARS.png" background="true">pic2.jpg</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture  border="40">shadow.png</bordertexture>
+						<bordersize>40</bordersize>
+					</control>
+					<control type="image">
+						<posx>30</posx>
+						<top>240</top>
+						<width>800</width>
+						<height>240</height>
+						<texture fallback="LCARS.png" background="true">pic1.jpg</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture  border="40">shadow.png</bordertexture>
+						<bordersize>40</bordersize>
+					</control>
+					<control type="image">
+						<posx>30</posx>
+						<top>480</top>
+						<width>800</width>
+						<height>240</height>
+						<texture fallback="LCARS.png" background="true">pic5.jpg</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture  border="40">shadow.png</bordertexture>
+						<bordersize>40</bordersize>
+					</control>
         </control>
     </include>
 <!-- WEATHER SHELF -->	
@@ -497,7 +315,7 @@
             <include>ShelfFade</include>
 			<control type="image">
 				<left>650</left>
-				<top>80</top>
+				<top>810</top>
 				<width>400</width>
 				<height>40</height>
 				<aspectratio align="left" aligny="center">keep</aspectratio>
@@ -505,7 +323,7 @@
 			</control>
 			<control type="label">
                 <posx>50</posx>
-                <top>80</top>
+                <top>810</top>
                 <width>600</width>
                 <height>40</height>
                 <textcolor>yellow</textcolor>
@@ -513,102 +331,39 @@
 				<label>Last Update - $INFO[Window(Weather).Property(Updated)]</label>
 				<description>update label</description>
 			</control>
-            <control type="group">
-				<control type="label">
-					<left>50</left>
-					<top>150</top>
-					<width>1125</width>
-					<height>35</height>
-					<font>LCARS20</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[Window(Weather).Property(Current.Condition)] : $INFO[Window(Weather).Property(Current.Humidity)] Humidity : Wind $INFO[Window(Weather).Property(Current.Wind)]</label>
-				</control>
-				<control type="label">
-                    <left>50</left>
-                    <top>200</top>
-                    <width>1100</width>
-                    <height>35</height>
-                    <label>$LOCALIZE[402] : $INFO[Window(Weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits]</label>
-                    <font>LCARS20</font>
-                </control>
-				<control type="label">
-                    <left>50</left>
-                    <top>250</top>
-                    <width>1100</width>
-                    <height>35</height>
-                    <label>$LOCALIZE[405]: $INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
-                    <font>LCARS20</font>
-                </control>
-				<control type="label">
-                    <left>50</left>
-                    <top>300</top>
-                    <height>35</height>
-					<width>1100</width>
-                    <font>LCARS20</font>
-                    <label>$LOCALIZE[419] : $INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]     $LOCALIZE[418] : $INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
-                </control>
-				<control type="label">
-					<description>current Precipitation label</description>
-					<left>50</left>
-					<top>350</top>
-					<width>1100</width>
-					<height>35</height>
-					<font>LCARS20</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$LOCALIZE[33021] : $INFO[Window(Weather).Property(Current.Precipitation)]</label>
-					<visible>!IsEmpty(Window(Weather).Property(Current.Precipitation))</visible>
-				</control>
-				<control type="label">
-					<description>Sunrise Label</description>
-					<left>50</left>
-					<top>400</top>
-					<width>300</width>
-					<height>35</height>
-					<font>LCARS20</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$LOCALIZE[33027] : $INFO[Window(Weather).Property(Today.Sunrise)]</label>
-					<visible>!IsEmpty(Window(Weather).Property(Today.Sunrise))</visible>
-				</control>
-				<control type="label">
-					<description>Sunset label</description>
-					<left>200</left>
-					<top>400</top>
-					<width>300</width>
-					<height>35</height>
-					<font>LCARS20</font>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$LOCALIZE[33028] : $INFO[Window(Weather).Property(Today.Sunset)]</label>
-					<visible>!IsEmpty(Window(Weather).Property(Today.Sunset))</visible>
-				</control>
-            </control>
 			<control type="panel">
-				<top>450</top>
-				<posx>25</posx>
-				<width>1000</width>
-				<height>450</height>
+				<top>75</top>
+				<posx>75</posx>
+				<width>860</width>
+				<height>720</height>
 				<orientation>vertical</orientation>
 				<scrolltime>400</scrolltime>
 				<include>ShelfFade</include>
-				<include>IconLcars</include>
+				<include>weatherlcars</include>
 				<content>
 					<item id="1">
-						<label>$INFO[Window(weather).Property(Day0.Title)] </label>
+						<label>$INFO[Window(weather).Property(Day0.Title)] $INFO[Window(weather).Property(Daily.1.ShortDate)] </label>
+						<label2>$INFO[Window(weather).Property(Day0.Outlook)]</label2>
+						<property name="LowTemp">$INFO[Window(weather).Property(Day0.LowTemp)]</property>
+						<property name="HighTemp">$INFO[Window(weather).Property(Day0.HighTemp)] </property>
 						<onclick>noop</onclick>
-						<thumb>$INFO[Window(Weather).Property(Current.ConditionIcon)]</thumb>
+						<icon>$INFO[Window(weather).Property(Day0.OutlookIcon)]</icon>
 					</item>
 					<item id="2">
-						<label>$INFO[Window(weather).Property(Day1.Title)]</label>
+						<label>$INFO[Window(weather).Property(Day1.Title)] $INFO[Window(weather).Property(Daily.2.ShortDate)] </label>
+						<label2>$INFO[Window(weather).Property(Day1.Outlook)]</label2>
+						<property name="LowTemp">$INFO[Window(weather).Property(Day1.LowTemp)] </property>
+						<property name="HighTemp">$INFO[Window(weather).Property(Day1.HighTemp)] </property>
 						<onclick>noop</onclick>
-						<thumb>$INFO[Window(weather).Property(Day1.OutlookIcon)]</thumb>
+						<icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
 					</item>
 					<item id="3">
-						<label>$INFO[Window(weather).Property(Day2.Title)]</label>
+						<label>$INFO[Window(weather).Property(Day2.Title)] $INFO[Window(weather).Property(Daily.3.ShortDate)] </label>
+						<label2>$INFO[Window(weather).Property(Day2.Outlook)]</label2>
+						<property name="LowTemp">$INFO[Window(weather).Property(Day2.LowTemp)] </property>
+						<property name="HighTemp">$INFO[Window(weather).Property(Day2.HighTemp)] </property>
 						<onclick>noop</onclick>
-						<thumb>$INFO[Window(weather).Property(Day2.OutlookIcon)]</thumb>
+						<icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
 					</item>
 				</content>
 			</control>

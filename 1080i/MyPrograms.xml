@@ -14,17 +14,6 @@
             <aspectratio>strech</aspectratio>
             <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
-		<control type="multiimage" >
-			<posx>50</posx>
-			<top>575</top>
-            <width>300</width>
-            <height>330</height>
-            <imagepath>panel1</imagepath>
-            <timeperimage>600</timeperimage>
-            <fadetime>0</fadetime>
-            <loop>yes</loop>
-            <aspectratio>keep</aspectratio>
-		</control>
 		<include>WindowsTopInfos</include>
 		<control type="list" id="6000" description="Scroll letter">
             <visible>[Container.SortDirection(Ascending)] + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
@@ -36,10 +25,10 @@
 			<include>SCROLLLETTER</include>
 		</control>
 		<control type="panel" id="504">
-			<posx>430</posx>
-			<posy>90</posy>
-			<width>1300</width>
-			<height>850</height>
+			<posx>420</posx>
+			<posy>60</posy>
+			<width>1350</width>
+			<height>980</height>
 			<onup>55</onup>
 			<ondown>55</ondown>
 			<onright>noop</onright>
@@ -60,55 +49,7 @@
 			<onright>6000</onright>
 			<onup>noop</onup>
 			<ondown>noop</ondown>
-			<control type="button" id="607">
-                <onclick>ActivateWindow(Home)</onclick>
-				<width>300</width>
-				<label>Home</label>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>
-            <control type="button" id="677">
-                <onclick>ParentDir</onclick>
-				<width>300</width>
-				<label>Back</label>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>   
-            <control type="button" id="3" description="Sort">
-                <width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>
-            <control type="togglebutton" id="4" description="SortMode">
-                <width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-				<include>Keyboardbuttons</include>
-				<label>585</label>
-                <altlabel>584</altlabel>
-				<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-            </control>
-            <control type="edit" id="19">
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-				<description>Filter</description>
-				<height>40</height>
-				<width>300</width>
-				<textwidth>230</textwidth>
-				<label>587</label>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-				<texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus>
-				<textcolor>Black</textcolor>
-				<focusedcolor>Black</focusedcolor>
-				<selectedcolor>Black</selectedcolor>
-			</control>
-			<control type="togglebutton" id="699" description="Playing">
-                <visible>Player.HasMedia</visible>
-				<width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-				<include>Keyboardbuttons</include>
-				<label>$LOCALIZE[16003]</label>
-                <altlabel>$LOCALIZE[31055]</altlabel>
-                <usealttexture>Player.HasMedia</usealttexture>
-                <onclick>fullscreen</onclick>
-                <altclick>fullscreen</altclick>
-                <animation effect="fade" start="100" end="60" time="100" condition="!Player.HasMedia">Conditional</animation>
-            </control>
+			<include>Mainbuttons</include>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(504).HasPrevious |  Container(504).HasNext]</visible>
@@ -121,10 +62,10 @@
 				<spinheight>40</spinheight>
 				<texturenofocus></texturenofocus>
 				<texturefocus></texturefocus>
-				<textureup colordiffuse="$VAR[butcolor3]" >left.png</textureup>
-				<texturedown colordiffuse="$VAR[butcolor3]">right.png</texturedown>
-				<textureupfocus colordiffuse="$VAR[butcolor3]">leftp.png</textureupfocus>
-				<texturedownfocus colordiffuse="$VAR[butcolor3]">rightp.png</texturedownfocus>
+				<textureup colordiffuse="$VAR[butcolor4]" >left.png</textureup>
+				<texturedown colordiffuse="$VAR[butcolor4]">right.png</texturedown>
+				<textureupfocus colordiffuse="$VAR[butcolor4]">leftp.png</textureupfocus>
+				<texturedownfocus colordiffuse="$VAR[butcolor4]">rightp.png</texturedownfocus>
 			</control>    
 		</control>
     </controls>

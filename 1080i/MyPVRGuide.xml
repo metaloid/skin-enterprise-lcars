@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<backgroundcolor>Black</backgroundcolor>
     <views>10</views>
-	<include>OpenClose</include>
+	<!--include>OpenClose</include-->
 	<controls>
 		<control type="image">
             <top>0</top>
@@ -14,7 +14,7 @@
             <aspectratio>strech</aspectratio>
             <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
-		<control type="multiimage" >
+		<!--control type="multiimage" >
 			<posx>50</posx>
 			<top>575</top>
             <width>300</width>
@@ -24,13 +24,8 @@
             <fadetime>0</fadetime>
             <loop>yes</loop>
             <aspectratio>keep</aspectratio>
-		</control>
+		</control-->
 		<include>WindowsTopInfos</include>
- 		<control type="group">
-			<posx>415</posx>
-			<posy>100</posy>
-			<include file="View-PVR.xml">PVRTimelineView</include>
-		</control>
 		<control type="grouplist" id="9000">
             <width>300</width>
             <height>800</height>
@@ -48,6 +43,211 @@
                 <visible>Player.HasMedia</visible>
                 <onclick>fullscreen</onclick>
             </control>
+			<control type="spincontrolex" id="66">
+				<description>Next page button</description>
+				<width>307</width>
+				<subtype>page</subtype>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<showonepage>false</showonepage>
+				<spinwidth>150</spinwidth>
+				<spinheight>40</spinheight>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<textureup colordiffuse="HellOrange" >down1.png</textureup>
+				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
+				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
+				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
+			</control>    
+		</control>
+		<control type="group"><!-- TV guide timeline -->
+			<posx>415</posx>
+			<posy>100</posy>
+			<visible>Control.IsVisible(10)</visible>
+			<control type="epggrid" id="10"><!-- EPG grid -->
+				<viewtype label="19032">list</viewtype>
+				<posx>30</posx>
+				<posy>10</posy>
+				<width>1300</width>
+				<height>700</height>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<timeblocks>40</timeblocks>
+				<progresstexture border="5">pvr/EpgProgressIndicator.png</progresstexture>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<rulerunit>6</rulerunit>
+				<onright>60</onright>
+          		<onleft>9000</onleft>
+		  		<rulerlayout height="50" width="45">
+					<control type="image" id="1">
+						<width>40</width>
+						<height>40</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture border="20" >pvr/0.png</texture>
+						<colordiffuse>HellOrange</colordiffuse>
+					</control>
+					<control type="label" id="2">
+						<posx>10</posx>
+						<posy>8</posy>
+						<width>34</width>
+						<height>30</height>
+						<scroll>false</scroll>
+						<textcolor>Black</textcolor>
+						<font>LCARS18</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</rulerlayout>
+				<channellayout height="50" width="305">
+					<animation effect="fade" start="110" time="200">UnFocus</animation>
+					<control type="image">
+                    	<width>300</width>
+                    	<height>40</height>
+                    	<texture border="20">pvr/0.png</texture>
+						<colordiffuse>Blue</colordiffuse>
+                	</control>
+                	<control type="label">
+						<posx>4</posx>
+						<posy>0</posy>
+						<width>44</width>
+						<height>40</height>
+						<font>LCARS18</font>
+						<textcolor>Red</textcolor>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.ChannelNumber]</label>
+					</control>
+					<control type="label" id="1">
+						<posx>75</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<font>LCARS18</font>
+						<textcolor>Black</textcolor>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+				</channellayout>
+				<focusedchannellayout height="50" width="305">
+					<animation effect="fade" start="110" time="200">OnFocus</animation>
+					<control type="image">
+                    	<width>300</width>
+                    	<height>40</height>
+                    	<texture border="20">pvr/0.png</texture>
+                	</control>
+                	<control type="label">
+						<posx>4</posx>
+						<posy>0</posy>
+						<width>44</width>
+						<height>40</height>
+						<font>LCARS18</font>
+						<textcolor>Red</textcolor>
+						<align>center</align>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.ChannelNumber]</label>
+					</control>
+					<control type="label" id="1">
+						<posx>75</posx>
+						<posy>0</posy>
+						<width>220</width>
+						<height>40</height>
+						<textcolor>Black</textcolor>
+						<font>LCARS18</font>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+				</focusedchannellayout>
+				<itemlayout height="50" width="45">
+					<control type="image" id="2">
+						<width>40</width>
+						<height>40</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20" fallback="pvr/pvrbutton.png">$INFO[ListItem.Property(GenreType),pvr/,.png]</texture>
+					</control>
+					<control type="label" id="1">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>10</width>
+						<height>40</height>
+						<font>LCARS18</font>
+                        <scroll>false</scroll>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<posx>2</posx>
+						<posy>18</posy>
+						<width>16</width>
+						<height>16</height>
+						<texture>$VAR[PVROverlay]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="45">
+					<control type="image" id="14">
+						<width>40</width>
+						<height>40</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture border="20">pvr/pvrbuttonFO.png</texture>
+                        <colordiffuse>Blue</colordiffuse>
+					</control>
+					<control type="image" id="2">
+						<width>40</width>
+						<height>40</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20" fallback="pvr/pvrbutton.png">$INFO[ListItem.Property(GenreType),pvr/,.png]</texture>
+						<colordiffuse>A0FFFFFF</colordiffuse>
+					</control>
+					<control type="label" id="1">
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>10</width>
+						<height>40</height>
+						<font>LCARS18</font>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<posx>2</posx>
+						<posy>18</posy>
+						<width>16</width>
+						<height>16</height>
+						<texture>$VAR[PVROverlay]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="label">
+				<label>$INFO[ListItem.Title]</label>
+				<posx>30</posx>
+				<posy>766</posy>
+				<width>700</width>
+				<height>32</height>
+				<font>LCARS20</font>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="label"><!-- Start time -->
+				<visible>!IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.StartTime) + !IsEmpty(ListItem.EndTime)</visible>
+				<posx>1250</posx>
+				<posy>774</posy>
+				<width>320</width>
+				<height>24</height>
+				<font>LCARS20</font>
+				<align>right</align>
+				<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+			</control>
+			<control type="textbox"><!-- Plot -->
+				<posx>30</posx>
+				<posy>808</posy>
+				<width>1220</width>
+				<height>78</height>
+				<font>LCARS20</font>
+				<label>$INFO[ListItem.Plot]</label>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
+			</control>
 		</control>
 	</controls>
 </window>

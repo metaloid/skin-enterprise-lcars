@@ -5,7 +5,7 @@
 		<left>600</left>
 		<top>105</top>
 	</coordinates>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <controls>
         <visible>!Window.IsVisible(FileBrowser)</visible>
         <control type="image" description="Dialog">

@@ -13,98 +13,162 @@
     <include file="Includes_Home.xml" />
     <include file="Shelf_Elements.xml" />
 
+
+	<include name="NextPos">
+		<posx>905</posx>
+		<top>110</top>
+		<width>860</width>
+		<height>720</height>
+		<orientation>vertical</orientation>
+		<scrolltime>400</scrolltime>
+		<onup>noop</onup>
+		<ondown>noop</ondown>
+		<onleft>5000</onleft>
+		<onright>noop</onright>
+		<pagecontrol>-</pagecontrol>
+		<include>ShelfFade</include>
+		<include>weatherlcars</include>
+    </include>
+
+
+	<include name="weatherlcars">
+		<itemlayout  height="240" width="810" >
+			<control type="image">
+				<posx>30</posx>
+				<top>0</top>
+				<width>800</width>
+				<height>240</height>
+                <texture fallback="LCARS.png" background="true">$VAR[IconSquare]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="40">shadow.png</bordertexture>
+                <bordersize>40</bordersize>
+            </control>
+			<control type="label">
+				<posx>50</posx>
+				<top>5</top>
+				<width>760</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<textcolor>Orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$VAR[LcarsLabel]</label>
+			</control>
+			<control type="label">
+				<posx>50</posx>
+				<top>195</top>
+				<width>760</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<textcolor>Orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$VAR[LcarsLabel2]</label>
+			</control>
+            <control type="label">
+                <posx>50</posx>
+                <top>65</top>
+                <width>760</width>
+                <height>34</height>
+                <align>left</align>
+				<font>LCARS20</font>
+                <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
+                <shadowcolor>black</shadowcolor>
+				<textcolor>Orange</textcolor>
+            </control>
+            <control type="label">
+                <posx>50</posx>
+                <top>120</top>
+                <width>760</width>
+                <font>LCARS20</font>
+                <align>left</align>
+				<height>34</height>
+                <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
+                <shadowcolor>black</shadowcolor>
+				<textcolor>Blue</textcolor>
+            </control>
+        </itemlayout>
+        <focusedlayout  height="240" width="810" >
+            <control type="image">
+				<posx>30</posx>
+				<top>0</top>
+				<width>800</width>
+				<height>240</height>
+                <texture fallback="LCARS.png" background="true">$VAR[IconSquare]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="40">shadow.png</bordertexture>
+                <bordersize>40</bordersize>
+            </control>
+			<control type="label">
+				<posx>50</posx>
+				<top>5</top>
+				<width>760</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<textcolor>White</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$VAR[LcarsLabel]</label>
+			</control>
+			<control type="label">
+				<posx>50</posx>
+				<top>195</top>
+				<width>760</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<textcolor>White</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$VAR[LcarsLabel2]</label>
+			</control>
+            <control type="label">
+                <posx>50</posx>
+                <top>65</top>
+                <width>760</width>
+                <height>34</height>
+                <align>left</align>
+				<font>LCARS20</font>
+                <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
+                <shadowcolor>black</shadowcolor>
+				<textcolor>Orange</textcolor>
+            </control>
+            <control type="label">
+                <posx>50</posx>
+                <top>120</top>
+                <width>760</width>
+                <font>LCARS20</font>
+                <align>left</align>
+				<height>34</height>
+                <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
+                <shadowcolor>black</shadowcolor>
+				<textcolor>Blue</textcolor>
+            </control>
+		</focusedlayout>
+    </include>
+
     <include name="VisibleFade">
         <animation effect="fade" start="0" end="100" time="200">visiblechange</animation>
     </include>
-	<include name="CommonNowPlaying_Controls">
-		<visible>Player.HasMedia</visible>
-			<control type="button" id="610">
-				<description>Fake Button to fix Player Controls Navigation</description>
-				<visible>false</visible>
-			</control>
-			<control type="button" id="603">
-				<width>270</width>
-				<height>40</height>
-				<textoffsetx>75</textoffsetx>
-				<align>left</align>
-				<label>Stop</label>
-                <texturenofocus diffuse="whiteallrounded2.png">c3.png</texturenofocus>
-                <texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
-				<onclick>PlayerControl(Stop)</onclick>
-			</control>
-			<control type="togglebutton" id="604">
-				<width>270</width>
-				<height>40</height>
-				<textoffsetx>75</textoffsetx>
-				<align>left</align>
-				<label>Pause</label>
-				<texturenofocus colordiffuse="HellOrange">whiteallrounded2.png</texturenofocus>
-                <texturefocus colordiffuse="White">whiteallrounded2.png</texturefocus>
-				<alttexturenofocus colordiffuse="Blue">whiteallrounded2.png</alttexturenofocus>
-				<alttexturefocus colordiffuse="White">whiteallrounded2.png</alttexturefocus>
-				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-				<altlabel>Play</altlabel>
-				<onclick>PlayerControl(Play)</onclick>
-				<enable>Player.PauseEnabled</enable>
-			</control>
-	</include>
-    <include name="InfoLcars">
-            <visible>Control.IsVisible(54)</visible>
-			<posx>1050</posx>
-			<posy>90</posy>
-			<width>670</width>
-			<height>900</height>
-			<control type="image">
-                <posx>190</posx>
-				<posy>50</posy>
-				<width>490</width>
-				<height>380</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-                <texture fallback="logo2.png" background="true"  diffuse="poster-mask.png">$VAR[fanart]</texture>
-                <bordersize>10</bordersize>
-			</control>
-			<control type="image">
-                <posx>35</posx>
-				<posy>50</posy>
-				<width>222</width>
-				<height>380</height>
-				<aspectratio scalediffuse="false">strech</aspectratio>
-                <texture fallback="LCARS.png" background="true" diffuse="poster-mask.png">$VAR[Locandine]</texture>
-                <bordersize>10</bordersize>
-			</control>
-			<control type="textbox">
-				<posx>45</posx>
-				<posy>440</posy>
-				<width>630</width>
-				<height>170</height>
-				<font>LCARS18</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<label>$VAR[TopLabel]</label>
-			</control>
-			<control type="textbox">
-				<posx>45</posx>
-				<posy>590</posy>
-				<width>630</width>
-				<height>310</height>
-				<font>LCARS18</font>
-				<align>justify</align>
-				<textcolor>white</textcolor>
-				<label>$VAR[Plots]</label>
-			</control>
-    </include>
     <include name="YearsLcars">
-            <visible>Container.Content(years)</visible>
-            <posx>450</posx>
-			<posy>110</posy>
-			<height>900</height>
-            <width>1300</width>
-            <onup>401</onup>
-            <ondown>401</ondown>
-            <onleft>9000</onleft>
-            <onright>noop</onright>
-            <pagecontrol>66</pagecontrol>
-			<orientation>horizontal</orientation>
+        <visible>Container.Content(years)</visible>
+        <posx>450</posx>
+		<posy>110</posy>
+		<height>900</height>
+        <width>1300</width>
+        <onup>401</onup>
+        <ondown>401</ondown>
+        <onleft>9000</onleft>
+        <onright>noop</onright>
+        <pagecontrol>66</pagecontrol>
+		<orientation>horizontal</orientation>
             <itemlayout  height="50" width="260">
                 <control type="image" description="THMBSBASECOLOR">
                     <posx>0</posx>
@@ -147,372 +211,266 @@
             </focusedlayout>
     </include>
    	<include name="SquareIconLcars">
-			<itemlayout height="420" width="430">
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture  border="10">shadow.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-					<aspectratio scalediffuse="false">strech</aspectratio>
-					<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>60</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>false</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel]</label>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>330</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>false</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel2]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="420" width="430">
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture  border="10">shadow.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-					<aspectratio scalediffuse="false">strech</aspectratio>
-					<bordertexture  border="10">shadow2.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>60</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>true</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel]</label>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>330</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>true</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel2]</label>
-				</control>
-			</focusedlayout>
-	</include>    
-   	<include name="IconLcars">
-		<itemlayout height="420" width="320" condition="![Container.Content(genres) | Container.Content(Episodes)]">
-            <control type="image">
-				<posx>35</posx>
-				<top>25</top>
-				<width>250</width>
-				<height>375</height>
-				<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
-            <control type="image">
-				<posx>35</posx>
-				<top>25</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
-            </control>
+		<itemlayout height="325" width="450">
+			<control type="image">
+				<posx>25</posx>
+				<top>10</top>
+				<width>425</width>
+				<height>315</height>
+				<texture fallback="LCARS.png" background="true">$VAR[IconSquare]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="60">shadow.png</bordertexture>
+                <bordersize>50</bordersize>
+			</control>
 			<control type="label">
-				<posx>50</posx>
-				<top>40</top>
-				<width>220</width>
+				<posx>30</posx>
+				<top>15</top>
+				<width>415</width>
 				<height>30</height>
-				<font>font10</font>
+				<font>LCARS20</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>false</scroll>
-				<textcolor>Black</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>White</textcolor>
 				<label>$VAR[LcarsLabel]</label>
 			</control>
 			<control type="label">
-				<posx>50</posx>
-				<top>355</top>
-				<width>220</width>
+				<posx>30</posx>
+				<top>280</top>
+				<width>415</width>
 				<height>30</height>
-				<font>font10</font>
+				<font>LCARS20</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>false</scroll>
-				<textcolor>Black</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>White</textcolor>
+				<label>$VAR[LcarsLabel2]</label>
+			</control>
+		</itemlayout>
+		<focusedlayout height="325" width="450">
+			<control type="image">
+				<posx>25</posx>
+				<top>10</top>
+				<width>425</width>
+				<height>315</height>
+				<texture fallback="LCARS.png" background="true">$VAR[IconSquare]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+				<bordertexture  border="60">shadow.png</bordertexture>
+                <bordersize>50</bordersize>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<top>10</top>
+				<width>425</width>
+				<height>315</height>
+				<texture colordiffuse="44FF9900" background="true">images/white.png</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <bordersize>45</bordersize>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<top>15</top>
+				<width>415</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>Orange</textcolor>
+				<label>$VAR[LcarsLabel]</label>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<top>280</top>
+				<width>415</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>Orange</textcolor>
+				<label>$VAR[LcarsLabel2]</label>
+			</control>
+		</focusedlayout>
+	</include>    
+   	<include name="IconLcars">
+		<itemlayout height="450" width="325">
+            <control type="image">
+				<posx>25</posx>
+				<top>10</top>
+				<width>300</width>
+				<height>440</height>
+				<texture fallback="LCARS.png" background="true">$VAR[IconSquare]</texture>
+                <aspectratio scalediffuse="false">strech</aspectratio>
+				<bordertexture  border="60">shadow.png</bordertexture>
+                <bordersize>50</bordersize>
+            </control>
+			<control type="label">
+				<posx>30</posx>
+				<top>15</top>
+				<width>290</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>White</textcolor>
+				<label>$VAR[LcarsLabel]</label>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<top>400</top>
+				<width>290</width>
+				<height>30</height>
+				<font>LCARS20</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<scroll>false</scroll>
+				<shadowcolor>black</shadowcolor>
+				<textcolor>White</textcolor>
 				<label>$VAR[LcarsLabel2]</label>
 			</control>
         </itemlayout>
-			<itemlayout height="420" width="430"  condition="[Container.Content(genres) | Container.Content(Episodes)]">
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture  border="10">shadow.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-					<aspectratio scalediffuse="false">strech</aspectratio>
-					<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>60</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>false</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel]</label>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>330</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>false</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel2]</label>
-				</control>
-			</itemlayout>
-        <focusedlayout height="420" width="320"  condition="![Container.Content(genres) | Container.Content(Episodes)]">
+        <focusedlayout height="450" width="325">
             <control type="image">
-                <posx>35</posx>
-                <top>25</top>
-                <width>250</width>
-                <height>375</height>
-                <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
+				<posx>25</posx>
+				<top>10</top>
+				<width>300</width>
+				<height>440</height>
+				<texture fallback="LCARS.png" background="true">$VAR[IconSquare]</texture>
+                <aspectratio scalediffuse="false">strech</aspectratio>
+				<bordertexture  border="60">shadow.png</bordertexture>
+                <bordersize>50</bordersize>
             </control>
             <control type="image">
-				<posx>35</posx>
-				<top>25</top>
-				<width>250</width>
-				<height>375</height>
-				<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
+				<posx>25</posx>
+				<top>10</top>
+				<width>300</width>
+				<height>440</height>
+                <texture colordiffuse="44FF9900" background="true" >images/white.png</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <bordersize>45</bordersize>
             </control>
 			<control type="label">
-				<posx>50</posx>
-				<top>40</top>
-				<width>220</width>
+				<posx>30</posx>
+				<top>15</top>
+				<width>290</width>
 				<height>30</height>
-				<font>font10</font>
+				<font>LCARS20</font>
 				<align>center</align>
 				<aligny>top</aligny>
+				<shadowcolor>black</shadowcolor>
 				<scroll>true</scroll>
-				<textcolor>Black</textcolor>
+				<textcolor>Orange</textcolor>
 				<label>$VAR[LcarsLabel]</label>
 			</control>
 			<control type="label">
-				<posx>50</posx>
-				<top>355</top>
-				<width>220</width>
+				<posx>30</posx>
+				<top>400</top>
+				<width>290</width>
 				<height>30</height>
-				<font>font10</font>
+				<font>LCARS20</font>
+				<shadowcolor>black</shadowcolor>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>true</scroll>
-				<textcolor>Black</textcolor>
+				<textcolor>Orange</textcolor>
 				<label>$VAR[LcarsLabel2]</label>
 			</control>
         </focusedlayout>
-			<focusedlayout height="420" width="430" condition="[Container.Content(genres) | Container.Content(Episodes)]">
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$VAR[IconSquare]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture  border="10">shadow.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="image">
-					<posx>30</posx>
-					<top>46</top>
-					<width>370</width>
-					<height>324</height>
-					<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-					<aspectratio scalediffuse="false">strech</aspectratio>
-					<bordertexture  border="10">shadow2.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>60</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>true</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel]</label>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<top>330</top>
-					<width>335</width>
-					<height>30</height>
-					<font>font10</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>true</scroll>
-					<textcolor>Black</textcolor>
-					<label>$VAR[LcarsLabel2]</label>
-				</control>
-			</focusedlayout>
 	</include>    
 	<include name="ListLcars">
-          <posx>430</posx>
-		  <posy>110</posy>
-		  <width>650</width>
-          <height>900</height>
-          <onup>54</onup>
-          <ondown>54</ondown>
-          <onright>noop</onright>
-          <onleft>9000</onleft>
-		  <viewtype label="54">VideoLcars</viewtype>
-          <pagecontrol>66</pagecontrol>
-          <scrolltime tween="sine" easing="inout">300</scrolltime>
-          <preloaditems>4</preloaditems>
-          <orientation>vertical</orientation>
-			<itemlayout  height="50" width="640">
-				<control type="image">
-					<centerleft>50</centerleft>
-					<height>40</height>
-					<width>100</width>
-					<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="HellOrange">button-focus.png</texture>
-				</control>
-				<control type="image">
-					<centerleft>360</centerleft>
-					<height>40</height>
-					<width>510</width>
-					<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
-				</control>
-				<control type="label">
-					<centerleft>50</centerleft>
-					<posy>10</posy>
-					<width>80</width>
-					<height>20</height>
-					<font>LCARS18</font>
-					<scroll>false</scroll>
-					<align>center</align>
-					<textcolor>Black</textcolor>
-					<aligny>center</aligny>
-					<label>$VAR[Extra]</label>
-				</control>
-				<control type="label">
-					<centerleft>360</centerleft>
-					<posy>10</posy>
-					<width>460</width>
-					<height>20</height>
-					<textcolor>Black</textcolor>
-					<font>LCARS20</font>
-					<scroll>false</scroll>
-                    <aligny>center</aligny>
-					<label >$VAR[VARLabel3]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout  height="50" width="640">
-				<control type="image">
-					<centerleft>50</centerleft>
-					<height>40</height>
-					<width>100</width>
-					<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="$VAR[diffuseselect]">button-focus.png</texture>
-				</control>
-				<control type="image">
-					<centerleft>360</centerleft>
-					<height>40</height>
-					<width>510</width>
-					<texture border="5" colordiffuse="$VAR[diffuseselect]">button-focus.png</texture>
-				</control>
-				<control type="label">
-					<centerleft>50</centerleft>
-					<posy>10</posy>
-					<width>80</width>
-					<height>20</height>
-					<font>LCARS18</font>
-					<scroll>false</scroll>
-					<align>center</align>
-					<textcolor>Black</textcolor>
-					<aligny>center</aligny>
-					<label>$VAR[Extra]</label>
-				</control>
-				<control type="label">
-					<centerleft>360</centerleft>
-					<posy>10</posy>
-					<width>460</width>
-					<height>20</height>
-					<textcolor>Black</textcolor>
-					<font>LCARS20</font>
-					<aligny>center</aligny>
-					<label >$VAR[VARLabel3]</label>
-				</control>
-			</focusedlayout>
+        <posx>430</posx>
+		<posy>110</posy>
+		<width>650</width>
+        <height>900</height>
+        <onup>54</onup>
+        <ondown>54</ondown>
+        <onright>noop</onright>
+        <onleft>9000</onleft>
+		<viewtype label="54">VideoLcars</viewtype>
+        <pagecontrol>66</pagecontrol>
+        <scrolltime tween="sine" easing="inout">300</scrolltime>
+        <preloaditems>4</preloaditems>
+        <orientation>vertical</orientation>
+		<itemlayout  height="50" width="640">
+			<control type="image">
+				<centerleft>50</centerleft>
+				<height>40</height>
+				<width>100</width>
+				<texture  diffuse="whiterounded.png" flipx="true" colordiffuse="HellOrange">button-focus.png</texture>
+			</control>
+			<control type="image">
+				<centerleft>360</centerleft>
+				<height>40</height>
+				<width>510</width>
+				<texture border="5" colordiffuse="HellOrange">button-focus.png</texture>
+			</control>
+			<control type="label">
+				<centerleft>50</centerleft>
+				<posy>10</posy>
+				<width>80</width>
+				<height>20</height>
+				<font>LCARS18</font>
+				<scroll>false</scroll>
+				<align>center</align>
+				<textcolor>Black</textcolor>
+				<aligny>center</aligny>
+				<label>$VAR[Extra]</label>
+			</control>
+			<control type="label">
+				<centerleft>360</centerleft>
+				<posy>10</posy>
+				<width>460</width>
+				<height>20</height>
+				<textcolor>Black</textcolor>
+				<font>LCARS20</font>
+				<scroll>false</scroll>
+                <aligny>center</aligny>
+				<label >$VAR[VARLabel3]</label>
+			</control>
+		</itemlayout>
+		<focusedlayout  height="50" width="640">
+			<control type="image">
+				<centerleft>50</centerleft>
+				<height>40</height>
+				<width>100</width>
+				<texture  diffuse="whiterounded.png"  flipx="true" colordiffuse="$VAR[diffuseselect]">button-focus.png</texture>
+			</control>
+			<control type="image">
+				<centerleft>360</centerleft>
+				<height>40</height>
+				<width>510</width>
+				<texture border="5" colordiffuse="$VAR[diffuseselect]">button-focus.png</texture>
+			</control>
+			<control type="label">
+				<centerleft>50</centerleft>
+				<posy>10</posy>
+				<width>80</width>
+				<height>20</height>
+				<font>LCARS18</font>
+				<scroll>false</scroll>
+				<align>center</align>
+				<textcolor>Black</textcolor>
+				<aligny>center</aligny>
+				<label>$VAR[Extra]</label>
+			</control>
+			<control type="label">
+				<centerleft>360</centerleft>
+				<posy>10</posy>
+				<width>460</width>
+				<height>20</height>
+				<textcolor>Black</textcolor>
+				<font>LCARS20</font>
+				<aligny>center</aligny>
+				<label >$VAR[VARLabel3]</label>
+			</control>
+		</focusedlayout>
 	</include>
 	<include name="Backgroundcolor">
 		<control type="image" description="Default BG Color">
@@ -526,6 +484,23 @@
 		<value>$INFO[ListItem.TrackNumber,([COLOR=selected],[/COLOR]) - ]$INFO[ListItem.Label]</value>
 	</variable>
 	<include name="InfoPanel">
+        <control type="grouplist" description="LCARS">
+            <visible>Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRTimers.xml)</visible>
+            <top>50</top>
+            <posx>50</posx>
+			<width>300</width>
+            <height>60</height>
+            <align>center</align>
+            <orientation>horizontal</orientation>
+            <control type="label" id="7777" description="Heading">
+                <width>auto</width>
+                <height>60</height>
+                <font>LCARS20</font>
+                <scroll>false</scroll>
+                <textcolor>HellOrange</textcolor>
+				<label>$VAR[RootLabel]</label>
+            </control>
+		</control>
 		<control type="grouplist">
 			<top>980</top>
             <posx>70</posx>
@@ -538,8 +513,8 @@
                 <label>$INFO[Network.IPAddress,IP: ]</label>
             </control>
 			<control type="button" description="cputemp">
-			<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
-            <width>250</width>
+				<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
+				<width>250</width>
                 <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
             </control>
 			<control type="button" description="Clock">
@@ -549,27 +524,12 @@
             </control>
 			<control type="button" description="Battery">
                 <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
-                <label>Power Level $INFO[System.BatteryLevel]</label>
+                <label>$INFO[System.BatteryLevel,Power Level ]</label>
 			    <texturenofocus colordiffuse="$VAR[Battery]" border="20">whiteallrounded.png</texturenofocus>
 				<width>250</width>
             </control>
-			<control type="button" description="movie">
-                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(340)</visible>
-                <label>$INFO[Window.Property(Movies.Count),$LOCALIZE[342]: ]</label>
-				<width>250</width>
-            </control>
-			<control type="button" description="tv">
-                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(341)</visible>
-                <label>$INFO[Window.Property(TVShows.Count),$LOCALIZE[20343]: ]</label>
-				<width>250</width>
-            </control>
-			<control type="button" description="songs">
-                <visible>!Skin.HasSetting(Hidedb) + Container(9000).HasFocus(342)</visible>
-                <label>$INFO[Window.Property(Music.SongsCount),$LOCALIZE[134]: ]</label>
-				<width>250</width>
-            </control>
 		</control>
-  </include>
+	</include>
 	<include name="AlbumInfoPanel">
 		<control type="panel" id="50">
 			<left>$PARAM[panel-left]</left>
@@ -585,11 +545,11 @@
 			<scrolltime>200</scrolltime>
 			<orientation>vertical</orientation>
 			<itemlayout height="45" width="$PARAM[item-width]">
-                    <control type="image" description="THMBSBASECOLOR">
-                        <width>$PARAM[item-width]</width>
-                        <height>40</height>
-						<texture colordiffuse="HellOrange" border="40" >whiterounded.png</texture>
-                    </control>
+                <control type="image" description="THMBSBASECOLOR">
+                    <width>$PARAM[item-width]</width>
+                    <height>40</height>
+					<texture colordiffuse="HellOrange" border="40" >whiterounded.png</texture>
+                </control>
 				<control type="label">
 					<left>10</left>
 					<top>0</top>
@@ -616,11 +576,11 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="45" width="$PARAM[item-width]">
-                    <control type="image" description="THMBSBASECOLOR">
-                        <width>$PARAM[item-width]</width>
-                        <height>40</height>
-						<texture colordiffuse="White"  border="40">whiterounded.png</texture>
-                    </control>
+                <control type="image" description="THMBSBASECOLOR">
+                    <width>$PARAM[item-width]</width>
+                    <height>40</height>
+					<texture colordiffuse="White"  border="40">whiterounded.png</texture>
+                </control>
 				<control type="label">
 					<left>10</left>
 					<top>0</top>
@@ -649,96 +609,88 @@
 		</control>
 	</include>
 	<include name="CodecsCard">
-			<itemlayout height="50" width="190">
-                    <control type="image" description="THMBSBASECOLOR">
-                        <width>185</width>
-                        <height>40</height>
-                        <texture border="20" colordiffuse="HellOrange">whiteallrounded.png</texture>
-                    </control>
-					<control type="label" description="LABEL">
-                        <centerleft>95</centerleft>
-                        <top>8</top>
-                        <width>165</width>
-                        <height>28</height>
-                        <font>LCARS20</font>
-                        <align>center</align>
-                        <scroll>false</scroll>
-				        <textcolor>Black</textcolor>
-                        <label>$INFO[ListItem.label]</label>
-                    </control>
-                </itemlayout>								
-			
-                <focusedlayout height="60" width="190">
-                    <control type="image" description="THMBSBASE">
-                        <width>185</width>
-                        <height>40</height>
-                        <texture border="20" colordiffuse="White">whiteallrounded.png</texture>
-                    </control>
-					<control type="label" description="label">
-                        <centerleft>95</centerleft>
-                        <top>8</top>
-                        <width>165</width>
-                        <height>28</height>
-                        <font>LCARS20</font>
-                        <align>center</align>
-                        <textcolor>Black</textcolor>
-                        <label>$INFO[ListItem.label]</label>
-                    </control>
-                </focusedlayout>
-                <content>
-					<item>
-					<label>SD: $INFO[ListItem.VideoResolution]</label>
-					<onclick>noop</onclick>
-					<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
-					</item>
-					<item>
-					<label>HD : $INFO[ListItem.VideoResolution]</label>
-					<onclick>noop</onclick>
-					<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
-					</item>
-					
-					<item>
-					<label>Rated: $VAR[MediaFlag_MPAA]</label>
-					<onclick>noop</onclick>
-					<visible>!IsEmpty(ListItem.MPAA)</visible>
-					</item>
-					<item>
-					<label>$LOCALIZE[1212]: $INFO[ListItem.VideoCodec]</label>
-					<onclick>noop</onclick>
-					<visible>!IsEmpty(ListItem.VideoCodec)</visible>
-					</item>
-					
-					<item>
-					<label>Audio: $INFO[ListItem.AudioCodec]</label>
-					<onclick>noop</onclick>
-					<visible>!IsEmpty(ListItem.AudioCodec)</visible>
-					</item>
-					
-					<item>
-					<label>Chanel: $INFO[ListItem.AudioChannels]</label>
-					<onclick>noop</onclick>
-					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
-					</item>
-					<item>
-					<label>OK</label>
-					<onclick>ParentDir</onclick>
-					</item>
-					</content>				
+		<itemlayout height="50" width="190">
+            <control type="image" description="THMBSBASECOLOR">
+                <width>185</width>
+                <height>40</height>
+                <texture border="20" colordiffuse="HellOrange">whiteallrounded.png</texture>
+            </control>
+			<control type="label" description="LABEL">
+                <centerleft>95</centerleft>
+                <top>8</top>
+                <width>165</width>
+                <height>28</height>
+                <font>LCARS20</font>
+                <align>center</align>
+                <scroll>false</scroll>
+				<textcolor>Black</textcolor>
+                <label>$INFO[ListItem.label]</label>
+            </control>
+        </itemlayout>								
+        <focusedlayout height="60" width="190">
+            <control type="image" description="THMBSBASE">
+                <width>185</width>
+                <height>40</height>
+                <texture border="20" colordiffuse="White">whiteallrounded.png</texture>
+            </control>
+			<control type="label" description="label">
+                <centerleft>95</centerleft>
+                <top>8</top>
+                <width>165</width>
+                <height>28</height>
+                <font>LCARS20</font>
+                <align>center</align>
+                <textcolor>Black</textcolor>
+                <label>$INFO[ListItem.label]</label>
+            </control>
+        </focusedlayout>
+        <content>
+			<item>
+				<label>SD: $INFO[ListItem.VideoResolution]</label>
+				<onclick>noop</onclick>
+				<visible>!IsEmpty(ListItem.videoresolution) + !IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+				</item>
+			<item>
+				<label>HD : $INFO[ListItem.VideoResolution]</label>
+				<onclick>noop</onclick>
+				<visible>!IsEmpty(ListItem.videoresolution) + IntegerGreaterThan(ListItem.videoresolution,719)</visible>
+			</item>
+			<item>
+				<label>Rated: $VAR[MediaFlag_MPAA]</label>
+				<onclick>noop</onclick>
+				<visible>!IsEmpty(ListItem.MPAA)</visible>
+			</item>
+			<item>
+				<label>$LOCALIZE[1212]: $INFO[ListItem.VideoCodec]</label>
+				<onclick>noop</onclick>
+				<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+			</item>
+			<item>
+				<label>Audio: $INFO[ListItem.AudioCodec]</label>
+				<onclick>noop</onclick>
+				<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+			</item>
+			<item>
+				<label>Chanel: $INFO[ListItem.AudioChannels]</label>
+				<onclick>noop</onclick>
+				<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+			</item>
+			<item>
+				<label>OK</label>
+				<onclick>ParentDir</onclick>
+			</item>
+		</content>				
     </include>
 	<include name="BlackBackground">
-        <control type="group">
-            <control type="image" description="Default BG">
-                <left>0</left>
-                <top>0</top>
-                <width>1920</width>
-                <height>1080</height>
-                <texture>images/LCARS.png</texture>
-                <aspectratio align="left">scale</aspectratio>
-            </control>
+        <control type="image" description="Default BG">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>images/LCARS.png</texture>
+            <aspectratio align="left">scale</aspectratio>
         </control>
     </include>	
-		
-	
 <!--    BACKGROUND SETTINGS END     -->	
     <include name="OpenClose">
         <animation effect="fade" time="100">WindowOpen</animation>
@@ -758,16 +710,6 @@
         <animation effect="fade" end="100" delay="200" time="250">Visible</animation>
         <animation effect="fade" end="0" time="100">Hidden</animation>
     </include>
-    <include name="ShelfTitle">
-        <posx>625</posx>
-        <top>75</top>
-        <height>40</height>
-        <width>250</width>
-        <align>center</align>
-        <aligny>center</aligny>
-        <font>LCARS20</font>
-        <textcolor>White</textcolor>
-	</include>
     <include name="Icon_Fade">
         <fadetime>200</fadetime>
         <animation effect="fade" time="200">Visible</animation>
@@ -791,26 +733,6 @@
         <textcolor>Black</textcolor>
 		<font>LCARS24</font>
     </include>
-    <include name="HeadingL">
-        <centerleft>960</centerleft>
-        <top>30</top>
-        <align>center</align>
-        <aligny>center</aligny>
-        <width>1110</width>
-        <height>45</height>
-        <textcolor>Black</textcolor>
-        <font>LCARS24</font>
-    </include>
-    <include name="HeadingR">
-        <left>960</left>
-        <top>0</top>
-        <width>960</width>
-        <height>45</height>
-        <align>center</align>
-        <aligny>bottom</aligny>
-        <textcolor>White</textcolor>
-        <font>LCARS24</font>
-    </include>
     <include name="Dimensions_Fullscreen">
         <posx>0</posx>
         <top>0</top>
@@ -818,11 +740,11 @@
         <height>1080</height>
     </include>
 <!--VIEWTOPINFOS-->
-        <include name="WindowsTopInfos">
-        <control type="grouplist" description="LCARS">
+    <include name="WindowsTopInfos">
+        <control type="grouplist" description="LCARS title">
             <!--visible>!Window.IsActive(DialogPictureInfo.xml)</visible-->
-            <visible>Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRTimers.xml)</visible>
-            <bottom>120</bottom>
+            <visible>Control.IsVisible(570) | Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(505)  | Control.IsVisible(501) | Window.IsActive(MyPVRTimers.xml)</visible>
+            <top>50</top>
             <posx>50</posx>
 			<width>300</width>
             <height>60</height>
@@ -834,133 +756,68 @@
                 <font>LCARS20</font>
                 <scroll>false</scroll>
                 <textcolor>HellOrange</textcolor>
-		    <label>$VAR[RootLabel]</label>
+				<label>$VAR[RootLabel]</label>
             </control>
-            <control type="label" description="Number of files">
-                <width>auto</width>
-                <height>60</height>
-                <font>LCARS20</font>
-                <textcolor>White</textcolor>
-		    <label>$INFO[Container.NumItems, (,)]</label>
-            </control>
-	  </control>
-	  <control type="grouplist" description="LCARS">
+		</control>
+		<control type="grouplist" description="LCARS info">
             <!--visible>!Window.IsActive(DialogPictureInfo.xml)</visible-->
-            <visible>Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(501) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)</visible>
-            <bottom>60</bottom>
-            <posx>50</posx>
-			<width>300</width>
-            <height>60</height>
+            <visible>Control.IsVisible(570) | Control.IsVisible(50) | Control.IsVisible(10) | Control.IsVisible(54) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(505)  | Control.IsVisible(501) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)</visible>
+			<posx>50</posx>
+			<top>580</top>
+            <height>500</height>
             <align>center</align>
-            <orientation>horizontal</orientation>
+            <orientation>Vertical</orientation>
+			<control type="multiimage" >
+				<width>300</width>
+				<height>300</height>
+				<imagepath>Alert/</imagepath>
+				<timeperimage>150</timeperimage>
+				<fadetime>0</fadetime>
+				<loop>yes</loop>
+				<aspectratio>keep</aspectratio>
+			</control>
             <control type="button" description="WebLink">
+                <width>300</width>
+                <align>center</align>
+				<label>$INFO[Container.NumItems,(,) ]$INFO[Container.CurrentPage, - (]$INFO[Container.NumPages,/,)]</label>
+			</control>
+			<control type="button" description="WebLink">
                 <visible>!Skin.HasSetting(hideconnection)</visible>
                 <width>300</width>
                 <align>center</align>
                 <label>$INFO[Network.IPAddress,IP: ]</label>
             </control>
-      </control>
-        
-        <control type="grouplist" description="ukn">
-            <visible>!Window.IsActive(DialogPictureInfo.xml)</visible>
-            <visible>Control.IsVisible(575)</visible>
-            <top>15</top>
-            <centerleft>960</centerleft>
-            <width>580</width>
-            <height>60</height>
-            <align>center</align>
-            <orientation>horizontal</orientation>
-            <control type="label" id="7777" description="Heading">
-                <top>20</top>
-        		<textcolor>white</textcolor>
-        		<font>LCARS24</font>
-                <label>$VAR[RootLabel]</label>
-            </control>
-            <!--control type="label" description="Number of files">
-                <width>auto</width>
-                <height>70</height>
-                <font>LCARS20</font>
-                <textcolor>White</textcolor>
-                <label>$INFO[Container.NumItems, (,)]</label>
-            </control-->
-        </control>
-        <control type="grouplist" description="centered">
-            <visible>!Window.IsActive(DialogPictureInfo.xml)</visible>
-            <visible>Control.IsVisible(53)</visible>
-            <top>1</top>
-            <centerleft>960</centerleft>
-            <width>580</width>
-            <height>60</height>
-            <align>center</align>
-            <orientation>horizontal</orientation>
-            <control type="label" id="7777" description="Heading">
-                <width>auto</width>
-                <height>60</height>
-                <font>LCARS20</font>
-                <scroll>false</scroll>
-                <label>$VAR[RootLabel]</label>
-            </control>
-            <control type="label" description="Number of files">
-                <width>auto</width>
-                <height>70</height>
-                <font>LCARS20</font>
-                <textcolor>White</textcolor>
-                <label>$INFO[Container.NumItems, (,)]</label>
-            </control>
-        </control>
-        <!--SCROLLLETTER-->
-			<!--visible>Container.Scrolling + Control.HasFocus(60)</visible>
-            <animation effect="fade" start="0" end="100" time="60" delay="0" reversible="true">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="160" delay="260" reversible="true">Hidden</animation>
-            <control type="image" >
-				<posx>50</posx>
-                <top>575</top>
-                <width>300</width>
-                <height>330</height>
-                <aspectratio scalediffuse="true">strech</aspectratio>
-                <texture background="true"  >dialog.png</texture>
-			</control>
-			<control type="label">
-                <posx>75</posx>
-                <top>620</top>
-                <width>250</width>
-                <height>250</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <font>LCARS36</font>
-                <textcolor>shelffont</textcolor>
-                <label>$INFO[ListItem.SortLetter]</label>
-			</control-->
+		</control>
     </include>
     <include name="SCROLLLETTER">
-			<width>45</width>
-			<posx>390</posx>
-			<posy>50</posy>
-			<height>970</height>
-			<orientation>vertical</orientation>
-			<itemlayout height="35" width="45">
-				<control type="label">
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>white</textcolor>
-					<align>center</align>
-					<animation effect="fade" start="100" end="40" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-				</control>
-				<control type="label">
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>Orange</textcolor>
-					<align>center</align>
-					<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
-				</control>
-			</itemlayout>
-			<focusedlayout height="35" width="45">
-				<control type="label">
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>Red</textcolor>
-					<align>center</align>
-					<animation effect="fade" start="100" end="40" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-				</control>
-			</focusedlayout>
-			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
+		<width>45</width>
+		<posx>390</posx>
+		<posy>50</posy>
+		<height>970</height>
+		<orientation>vertical</orientation>
+		<itemlayout height="35" width="45">
+			<control type="label">
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<animation effect="fade" start="100" end="40" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+			</control>
+			<control type="label">
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>Orange</textcolor>
+				<align>center</align>
+				<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="35" width="45">
+			<control type="label">
+				<label>$INFO[ListItem.Label]</label>
+				<textcolor>Red</textcolor>
+				<align>center</align>
+				<animation effect="fade" start="100" end="40" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+			</control>
+		</focusedlayout>
+		<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
     </include>
     <include name="profilecontent">
         <control type="group">
@@ -979,16 +836,15 @@
                 <ondown>28</ondown>
             </control>
             <control type="button" id="7">
-            <align>left</align>
-            <texturenofocus border="20" colordiffuse="HellOrange">whiterounded.png</texturenofocus>
-			<texturefocus border="20" colordiffuse="White">whiterounded.png</texturefocus>
-			<textoffsetx>7</textoffsetx>
+				<align>left</align>
+				<texturenofocus border="20" colordiffuse="HellOrange">whiterounded.png</texturenofocus>
+				<texturefocus border="20" colordiffuse="White">whiterounded.png</texturefocus>
+				<textoffsetx>7</textoffsetx>
             </control>
-            <control type="radiobutton" id="8">
+				<control type="radiobutton" id="8">
             </control>
-            <control type="spincontrolex" id="9">
+				<control type="spincontrolex" id="9">
             </control>
-            
         </control>
         <control type="grouplist">
             <left>960</left>
@@ -1013,116 +869,115 @@
         </control>
     </include>
     <include name="PvrLcarsB">
-            <control type="button" id="100">
-                <visible>![Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)]</visible>
-                <description>Channels</description>
-				<width>300</width>
-                <label>19019</label>
-                <onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
-            <control type="button" id="101">
-                <description>TV Guide</description>
-                <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
-				<width>300</width>
-                <label>22020</label>
-                <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
-            <control type="button" id="102">
-                <description>Recordings</description>
-                <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible><textwidth>235</textwidth>
-				<width>300</width>
-                <label>19163</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
-            <control type="button" id="103">
-                <description>Timers</description>
-                <visible>![Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)]</visible><textwidth>235</textwidth>
-				<width>300</width>
-                <label>19040</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
-            <control type="button" id="104">
-                <description>Search</description>
-                <visible>![Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)]</visible><textwidth>235</textwidth>
-				<width>300</width>
-                <label>137</label>
-                <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-                <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
-            <control type="button" id="28">
-                <description>Channel Groups</description>
-				<width>300</width>
-                <label>-</label>
- 				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-           </control>
-            <control type="button" id="3">
-                <description>Sort by button</description>
-				<width>300</width>
-                <label>103</label>
-				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
-            <control type="togglebutton" id="4">
-                <description>Sort asc</description>
-				<width>300</width>
-                <label>585</label>
-                <altlabel>584</altlabel>
-                <usealttexture>Container.SortDirection(Ascending)</usealttexture>
- 				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
-           </control>
-            <control type="radiobutton" id="31">
-                <description>Filter</description>
-				<width>300</width>
-                <label>587</label>
-				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
-				<include>Keyboardbuttons</include>
-                <onclick>right</onclick>
-                <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
-            </control>
-            <!-- Misc Options (ID is completely arbitrary) -->
-            <control type="radiobutton" id="5">
-                <description>Group recording items by folder structure</description>
-				<width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
-                <include>Keyboardbuttons</include>
-				<label>19270</label>
-                <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
-            </control>
-            <control type="radiobutton" id="6">
-                <description>Show hidden channels</description>
-				<width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
-                <include>Keyboardbuttons</include>
-                <label>hidden channels</label>
-                <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
-            </control>
-            <control type="radiobutton" id="7">
-                <description>Show deleted recordings</description>
-				<width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
-                <include>Keyboardbuttons</include>
-                <label>19184</label>
-                <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
-            </control>
-			<control type="button" id="607">
-                <onclick>ActivateWindow(Home)</onclick>
-				<width>300</width>
-				<width>300</width>
-				<label>Home</label>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>
+        <control type="button" id="100">
+			<visible>![Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)]</visible>
+            <description>Channels</description>
+			<width>300</width>
+            <label>19019</label>
+            <onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+			<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="button" id="101">
+            <description>TV Guide</description>
+            <visible>![Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)]</visible>
+			<width>300</width>
+            <label>22020</label>
+            <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+			<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="button" id="102">
+            <description>Recordings</description>
+            <visible>![Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]</visible><textwidth>235</textwidth>
+			<width>300</width>
+            <label>19163</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+			<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="button" id="103">
+            <description>Timers</description>
+            <visible>![Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)]</visible><textwidth>235</textwidth>
+			<width>300</width>
+            <label>19040</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+			<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+		<control type="button" id="104">
+            <description>Search</description>
+            <visible>![Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)]</visible><textwidth>235</textwidth>
+			<width>300</width>
+            <label>137</label>
+            <onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+            <onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+			<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="button" id="28">
+            <description>Channel Groups</description>
+			<width>300</width>
+            <label>-</label>
+			<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="button" id="3">
+            <description>Sort by button</description>
+			<width>300</width>
+            <label>103</label>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="togglebutton" id="4">
+            <description>Sort asc</description>
+			<width>300</width>
+            <label>585</label>
+            <altlabel>584</altlabel>
+            <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+        <control type="radiobutton" id="31">
+            <description>Filter</description>
+			<width>300</width>
+            <label>587</label>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+			<include>Keyboardbuttons</include>
+            <onclick>right</onclick>
+            <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+        </control>
+        <!-- Misc Options (ID is completely arbitrary) -->
+        <control type="radiobutton" id="5">
+            <description>Group recording items by folder structure</description>
+			<width>300</width>
+			<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
+            <include>Keyboardbuttons</include>
+			<label>19270</label>
+            <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+        </control>
+        <control type="radiobutton" id="6">
+            <description>Show hidden channels</description>
+			<width>300</width>
+			<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
+            <include>Keyboardbuttons</include>
+            <label>hidden channels</label>
+            <visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+        </control>
+        <control type="radiobutton" id="7">
+            <description>Show deleted recordings</description>
+			<width>300</width>
+			<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
+            <include>Keyboardbuttons</include>
+            <label>19184</label>
+            <visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+        </control>
+		<control type="button" id="607">
+            <onclick>ActivateWindow(Home)</onclick>
+			<width>300</width>
+			<label>Home</label>
+			<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+		</control>
     </include>
-		<include name="Keyboardbuttons">
+	<include name="Keyboardbuttons">
         <width>85</width>
         <height>40</height>
         <texturenofocus border="20" colordiffuse="HellOrange">whiteallrounded.png</texturenofocus>
@@ -1130,7 +985,7 @@
         <alttexturenofocus border="20" colordiffuse="Blue">whiteallrounded.png</alttexturenofocus>
         <alttexturefocus border="20" colordiffuse="White">whiteallrounded.png</alttexturefocus>
         <align>center</align>
-        <aligny>center</aligny>
+        <aligny>top</aligny>
         <textoffsetx>0</textoffsetx>
 		<font>LCARS20</font>
 		<textcolor>Black</textcolor>
@@ -1153,12 +1008,57 @@
         <textcolor>White</textcolor>
         <scroll>false</scroll>
     </include>
-    <include name="SettingsSubmenuButtons">
-        <width>420</width>
-        <textoffsetx>22</textoffsetx>
-        <height>40</height>
-        <align>left</align>
-        <font>LCARS20</font>
-        <disabledcolor>Disabled</disabledcolor>
+	<include name="Mainbuttons">
+        <control type="edit" id="19">
+			<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+			<description>Filter</description>
+			<height>40</height>
+			<width>300</width>
+			<textwidth>230</textwidth>
+			<label>587</label>
+			<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+			<texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus>
+			<textcolor>Black</textcolor>
+			<focusedcolor>Black</focusedcolor>
+			<selectedcolor>Black</selectedcolor>
+		</control>
+        <control type="togglebutton" id="4" description="SortOrder">
+            <width>300</width>
+			<label>585</label>
+            <altlabel>584</altlabel>
+			<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+            <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+        </control>
+		<control type="button" id="3" description="Sort">
+            <width>300</width>
+			<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+		</control>
+        <control type="button" id="8" description="search">
+            <width>300</width>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+			<label>137</label>
+        </control>
+        <control type="togglebutton" id="699" description="Playing">
+            <visible>Player.HasMedia</visible>
+			<width>300</width>
+			<label>$LOCALIZE[16003]</label>
+            <altlabel>$LOCALIZE[31055]</altlabel>
+            <usealttexture>Player.HasMedia</usealttexture>
+            <onclick>fullscreen</onclick>
+            <altclick>fullscreen</altclick>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+        </control>
+		<control type="button" id="607">
+            <onclick>ActivateWindow(Home)</onclick>
+			<width>300</width>
+			<label>Home</label>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+		</control>
+        <control type="button" id="677">
+            <onclick>back</onclick>
+			<width>300</width>
+			<label>Back</label>
+			<texturenofocus colordiffuse="$VAR[butcolor4]" border="20">whiteallrounded.png</texturenofocus>
+		</control>   
     </include>
 </includes>

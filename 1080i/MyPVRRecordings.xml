@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<backgroundcolor>Black</backgroundcolor>
     <views>50</views>
-	<include>OpenClose</include>
+	<!--include>OpenClose</include-->
 	<controls>
 		<control type="image">
             <top>0</top>
@@ -14,7 +14,7 @@
             <aspectratio>strech</aspectratio>
             <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
-		<control type="multiimage" >
+		<!--control type="multiimage" >
 			<posx>50</posx>
 			<top>575</top>
             <width>300</width>
@@ -24,7 +24,7 @@
             <fadetime>0</fadetime>
             <loop>yes</loop>
             <aspectratio>keep</aspectratio>
-		</control>
+		</control-->
 		<include>WindowsTopInfos</include>
  		<control type="group">
 			<description>Small Media Window</description>

@@ -74,7 +74,7 @@
         <width>390</width>
         <height>75</height>
         <align>center</align>
-        <aligny>center</aligny>
+        <aligny>top</aligny>
         <font>LCARS20</font>
         <textoffsetx>30</textoffsetx>
         <textcolor>White</textcolor>
@@ -121,6 +121,7 @@
 		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
         <textoffsetx>7</textoffsetx>
+		<aligny>top</aligny>
         <pulseonselect>no</pulseonselect>
     </default>
     <default type="spincontrol">
@@ -162,7 +163,7 @@
 		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
         <textoffsetx>7</textoffsetx>
-        <aligny>center</aligny>
+		<aligny>top</aligny>
         <reverse>yes</reverse>
         <pulseonselect>no</pulseonselect>
     </default>

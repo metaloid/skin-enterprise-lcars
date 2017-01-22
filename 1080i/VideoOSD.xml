@@ -9,7 +9,7 @@
             <posx>60</posx>
 			<top>40</top>
 			<control type="slider" id="87">
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
+				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 				<description>Seek Slider</description>
 				<visible>true</visible>
 				<posx>275</posx>
@@ -19,7 +19,7 @@
 				<texturesliderbar>-</texturesliderbar>
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
-				</control>
+			</control>
 		</control>
         <control type="grouplist" id="100" description="Options content">
                 <posx>130</posx>

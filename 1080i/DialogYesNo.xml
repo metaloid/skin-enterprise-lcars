@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="100">
     <defaultcontrol always="true">10</defaultcontrol>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
  	<coordinates>
 		<left>335</left>
 		<top>230</top>

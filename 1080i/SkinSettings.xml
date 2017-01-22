@@ -3,7 +3,7 @@
     <defaultcontrol always="true">575</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-		<include>OpenClose</include>
+		<!--include>OpenClose</include-->
     <controls>
         <include>Backgroundcolor</include>
 		<control type="image">
@@ -173,17 +173,12 @@
 				<onup>noop</onup>
 				<ondown>noop</ondown>
 				<width>600</width>
-                <height>750</height>
+                <height>850</height>
 				<posx>510</posx>
-				<top>60</top>
+				<top>0</top>
 		        <itemgap>10</itemgap>
-				<scrolltime>300</scrolltime>
-				<width>280</width>
-                <height>750</height>
-				<posx>20</posx>
-				<top>60</top>
-		        <itemgap>10</itemgap>
-                <control type="label" id="10">
+				<control type="label" id="10">
+					<height>40</height>
                     <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
                     <width>600</width>
                     <label>Music Shelf :   $VAR[setshelfname]</label>
@@ -211,11 +206,50 @@
 					<onclick condition="!StringCompare(Skin.String(musicshelf),custom)">Skin.SetString(musicshelf,custom)</onclick>
 					<onclick condition="StringCompare(Skin.String(musicshelf),custom)">Skin.SetString(musicshelf,mushoff)</onclick>
 				</control>
-                <control type="label" id="8">
+                <control type="label" id="700">
+                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+					<height>40</height>
+                    <width>600</width>
+                    <label>$LOCALIZE[31053] :   $INFO[Skin.String(MusicLink)]</label>
+                </control>
+                <control type="radiobutton" id="701" description="Albums">
+                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+					<width>400</width>
+					<include>Keyboardbuttons</include>
+                    <label>$LOCALIZE[132]</label>
+                    <onclick>Skin.SetString(MusicLink,Albums)</onclick>
+                    <selected>StringCompare(Skin.String(MusicLink),Albums)</selected>
+                </control>
+                <control type="radiobutton" id="702" description="Artists">
+                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+                    <width>400</width>
+					<include>Keyboardbuttons</include>
+                    <label>$LOCALIZE[133]</label>
+                    <onclick>Skin.SetString(MusicLink,Artists)</onclick>
+                    <selected>StringCompare(Skin.String(MusicLink),Artists)</selected>
+                </control>
+                <control type="radiobutton" id="703" description="Genres">
+                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+                    <width>400</width>
+					<include>Keyboardbuttons</include>
+                    <label>$LOCALIZE[135]</label>
+                    <onclick>Skin.SetString(MusicLink,Genres)</onclick>
+                    <selected>StringCompare(Skin.String(MusicLink),Genres)</selected>
+                </control>
+                <control type="radiobutton" id="704" description="Songs">
+                    <visible>!Skin.HasSetting(hidemusic) + [Library.HasContent(Music) | Library.HasContent(MusicVideos)]</visible>
+                    <width>400</width>
+					<include>Keyboardbuttons</include>
+                    <label>$LOCALIZE[134]</label>
+                    <onclick>Skin.SetString(MusicLink,Songs)</onclick>
+                    <selected>StringCompare(Skin.String(MusicLink),Songs)</selected>
+                </control>
+                <control type="label" id="705">
+					<height>40</height>
                     <width>600</width>
                     <label>$LOCALIZE[31049]   $VAR[QuitLabel]</label>
                 </control>
-				<control type="radiobutton" id="701" description="Quit">
+				<control type="radiobutton" id="706" description="Quit">
                     <width>400</width>
 					<include>Keyboardbuttons</include>
 					<label>31050</label>
@@ -223,7 +257,7 @@
 					<onclick>Skin.Reset(quitter)</onclick>
 					<selected>IsEmpty(Skin.String(shutdown))</selected>
 				</control>
-				<control type="radiobutton" id="702" description="Suspend">
+				<control type="radiobutton" id="707" description="Suspend">
 					<width>400</width>
 					<include>Keyboardbuttons</include>
 					<enable>System.CanSuspend</enable>
@@ -232,7 +266,7 @@
 					<onclick condition="!Skin.HasSetting(quitter)">Skin.ToggleSetting(quitter)</onclick>
 					<selected>StringCompare(Skin.String(shutdown),suspend)</selected>
 				</control>
-				<control type="radiobutton" id="703" description="Hibernate">
+				<control type="radiobutton" id="708" description="Hibernate">
 					<width>400</width>
 					<include>Keyboardbuttons</include>
 					<enable>System.CanHibernate</enable>
@@ -241,7 +275,7 @@
 					<onclick condition="!Skin.HasSetting(quitter)">Skin.ToggleSetting(quitter)</onclick>
 					<selected>StringCompare(Skin.String(shutdown),hibernate)</selected>
 				</control>
-				<control type="radiobutton" id="704" description="Shutdown">
+				<control type="radiobutton" id="709" description="Shutdown">
 					<width>400</width>
 					<include>Keyboardbuttons</include>
 					<enable>System.CanPowerdown</enable>
@@ -250,7 +284,7 @@
 					<onclick condition="!Skin.HasSetting(quitter)">Skin.ToggleSetting(quitter)</onclick>
 					<selected>StringCompare(Skin.String(shutdown),powerdown)</selected>
 				</control>
-				<control type="radiobutton" id="705" description="Reboot">
+				<control type="radiobutton" id="710" description="Reboot">
 					<width>400</width>
 					<include>Keyboardbuttons</include>
 					<enable>System.CanReboot</enable>
@@ -259,7 +293,7 @@
 					<onclick condition="!Skin.HasSetting(quitter)">Skin.ToggleSetting(quitter)</onclick>
 					<selected>StringCompare(Skin.String(shutdown),reboot)</selected>
 				</control>
-				<control type="radiobutton" id="706" description="Quit">
+				<control type="radiobutton" id="711" description="Quit">
 					<width>400</width>
 					<include>Keyboardbuttons</include>
 					<label>$LOCALIZE[13009]</label>
@@ -267,38 +301,6 @@
 					<onclick condition="!Skin.HasSetting(quitter)">Skin.ToggleSetting(quitter)</onclick>
 					<selected>StringCompare(Skin.String(shutdown),quit)</selected>
 				</control>
-                <control type="label" id="10">
-                    <width>600</width>
-                    <label>$LOCALIZE[31053] :   $INFO[Skin.String(MusicLink)]</label>
-                </control>
-                <control type="radiobutton" id="707" description="Albums">
-					<width>400</width>
-					<include>Keyboardbuttons</include>
-                    <label>$LOCALIZE[132]</label>
-                    <onclick>Skin.SetString(MusicLink,Albums)</onclick>
-                    <selected>StringCompare(Skin.String(MusicLink),Albums)</selected>
-                </control>
-                <control type="radiobutton" id="708" description="Artists">
-                    <width>400</width>
-					<include>Keyboardbuttons</include>
-                    <label>$LOCALIZE[133]</label>
-                    <onclick>Skin.SetString(MusicLink,Artists)</onclick>
-                    <selected>StringCompare(Skin.String(MusicLink),Artists)</selected>
-                </control>
-                <control type="radiobutton" id="709" description="Genres">
-                    <width>400</width>
-					<include>Keyboardbuttons</include>
-                    <label>$LOCALIZE[135]</label>
-                    <onclick>Skin.SetString(MusicLink,Genres)</onclick>
-                    <selected>StringCompare(Skin.String(MusicLink),Genres)</selected>
-                </control>
-                <control type="radiobutton" id="710" description="Songs">
-                    <width>400</width>
-					<include>Keyboardbuttons</include>
-                    <label>$LOCALIZE[134]</label>
-                    <onclick>Skin.SetString(MusicLink,Songs)</onclick>
-                    <selected>StringCompare(Skin.String(MusicLink),Songs)</selected>
-                </control>
             </control>
        </control>
 	<control type="grouplist" id="9000">

@@ -4,7 +4,7 @@
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
     <views>54,501,503,504</views>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <controls>
         <include>Backgroundcolor</include>
         <control type="image">
@@ -15,17 +15,6 @@
             <aspectratio>strech</aspectratio>
             <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
-		<control type="multiimage" >
-			<posx>50</posx>
-			<top>575</top>
-            <width>300</width>
-            <height>330</height>
-            <imagepath>panel2</imagepath>
-            <timeperimage>600</timeperimage>
-            <fadetime>0</fadetime>
-            <loop>yes</loop>
-            <aspectratio>keep</aspectratio>
-		</control>
 		<include>MusicLcars</include>
 		<include>WindowsTopInfos</include>
 		<control type="list" id="6000" description="Scroll letter">
@@ -46,65 +35,19 @@
 		    <onright>6000</onright>
 		    <onup>noop</onup>
 		    <ondown>noop</ondown>
-			<control type="button" id="607">
-                <onclick>ActivateWindow(Home)</onclick>
-				<width>300</width>
-				<label>Home</label>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>
-            <control type="button" id="677">
-                <onclick>back</onclick>
-				<width>300</width>
-				<label>Back</label>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>   
-            <control type="button" id="3" description="Sort">
-                <width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-			</control>
-            <control type="togglebutton" id="4" description="SortOrder">
-                <width>300</width>
-				<label>585</label>
-                <altlabel>584</altlabel>
-                <usealttexture>Container.SortDirection(Ascending)</usealttexture>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-            </control>
             <control type="togglebutton" id="16" description="PartyMode">
                 <width>300</width>
 				<label>$LOCALIZE[589]: $LOCALIZE[1223]</label>
                 <altlabel>$LOCALIZE[589]: $LOCALIZE[305]</altlabel>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
             </control>
             <control type="radiobutton" id="98" description="Filter">
                 <width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
+				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
 				<include>Keyboardbuttons</include>
 				<visible>Container.CanFilterAdvanced</visible>
                 <onclick>Filter</onclick>
                 <label>587</label>
-            </control>
-            <control type="edit" id="19">
-				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-				<description>Filter</description>
-				<height>40</height>
-				<width>300</width>
-				<textwidth>230</textwidth>
-				<label>587</label>
-				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
-				<texturefocus colordiffuse="White" border="20">whiteallrounded.png</texturefocus>
-				<textcolor>Black</textcolor>
-				<focusedcolor>Black</focusedcolor>
-				<selectedcolor>Black</selectedcolor>
-			</control>
-            <control type="togglebutton" id="699" description="Playing">
-                <width>300</width>
-                <visible>Player.HasMedia</visible>
-                <label>$LOCALIZE[16003]</label>
-                <altlabel>$LOCALIZE[31055]</altlabel>
-                <usealttexture>Player.HasMedia</usealttexture>
-                <onclick>fullscreen</onclick>
-                <altclick>fullscreen</altclick>
-				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
             </control>
             <control type="togglebutton" id="20">
                 <description>Update library</description>
@@ -112,8 +55,9 @@
 				<label>653</label>
                 <altlabel>13353</altlabel>
                 <usealttexture>library.isscanningmusic</usealttexture>
-				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
+				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
             </control>
+			<include>Mainbuttons</include>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(504).HasPrevious |  Container(504).HasNext] | [Container(54).HasPrevious |  Container(54).HasNext] | [Container(503).HasPrevious |  Container(503).HasNext] | [Container(501).HasPrevious |  Container(501).HasNext]</visible>

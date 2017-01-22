@@ -4,8 +4,8 @@
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
     <views>504</views>
-    <include>OpenClose</include>
-     <controls>
+    <!--include>OpenClose</include-->
+    <controls>
         <include>Backgroundcolor</include>
         <control type="image">
             <top>0</top>
@@ -15,22 +15,11 @@
             <aspectratio>strech</aspectratio>
             <texture background="true" flipx="true">Lcars/lineL.png</texture>
 		</control> 
-		<control type="multiimage" >
-			<posx>50</posx>
-			<top>575</top>
-            <width>300</width>
-            <height>330</height>
-            <imagepath>panel1</imagepath>
-            <timeperimage>600</timeperimage>
-            <fadetime>0</fadetime>
-            <loop>yes</loop>
-            <aspectratio>keep</aspectratio>
-		</control>
 		<control type="panel" id="504">
-			<posx>430</posx>
-			<posy>90</posy>
-			<width>1300</width>
-			<height>850</height>
+			<posx>400</posx>
+			<posy>60</posy>
+			<width>1350</width>
+			<height>980</height>
 			<onup>504</onup>
 			<ondown>504</ondown>
 			<onright>noop</onright>
@@ -61,50 +50,48 @@
 			<onright>6000</onright>
 			<onup>noop</onup>
 		    <ondown>noop</ondown>
-				<control type="button" id="3" description="Sort">
-					<width>300</width>
-					<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Sort asc</description>
-					<width>300</width>
-					<label>585</label>
-					<altlabel>584</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-					<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-				</control>
-				<control type="togglebutton" id="5" description="Updates">
-					<width>300</width>
-					<label>$LOCALIZE[24063]: $LOCALIZE[1223]</label>
-					<altlabel>$LOCALIZE[24063]: $LOCALIZE[305]</altlabel>
-					<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
-				</control>
-                <control type="togglebutton" id="6" description="Notifications">
-					<width>300</width>
-					<label>$LOCALIZE[25000]: $LOCALIZE[1223]</label>
-					<altlabel>$LOCALIZE[25000]: $LOCALIZE[305]</altlabel>
+			<control type="button" id="3" description="Sort">
+				<width>300</width>
+				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<width>300</width>
+				<label>585</label>
+				<altlabel>584</altlabel>
+				<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+			</control>
+			<control type="togglebutton" id="5" description="Updates">
+				<width>300</width>
+				<label>$LOCALIZE[24063]: $LOCALIZE[1223]</label>
+				<altlabel>$LOCALIZE[24063]: $LOCALIZE[305]</altlabel>
+				<texturenofocus colordiffuse="$VAR[butcolor1]" border="20">whiteallrounded.png</texturenofocus>
+			</control>
+            <control type="togglebutton" id="6" description="Notifications">
+				<width>300</width>
+				<label>$LOCALIZE[25000]: $LOCALIZE[1223]</label>
+				<altlabel>$LOCALIZE[25000]: $LOCALIZE[305]</altlabel>
 				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-				</control>
-				<control type="radiobutton" id="7">
-					<description>Hide foreign</description>
-					<width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-					<include>Keyboardbuttons</include>
-					<label>25001</label>
-				</control>
-				<control type="radiobutton" id="8">
-					<description>Hide broken</description>
-					<width>300</width>
-				<texturenofocus colordiffuse="$VAR[butcolor2]" border="20">whiteallrounded.png</texturenofocus>
-					<include>Keyboardbuttons</include>
-					<label>24999</label>
-				</control>
-				<control type="button" id="9">
-					<description>Check for updates</description>
-					<label>24034</label>
-					<width>300</width>
+			</control>
+			<control type="radiobutton" id="7">
+				<description>Hide foreign</description>
+				<width>300</width>
+				<include>Keyboardbuttons</include>
+				<label>25001</label>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Hide broken</description>
+				<width>300</width>
+				<include>Keyboardbuttons</include>
+				<label>24999</label>
+			</control>
+			<control type="button" id="9">
+				<description>Check for updates</description>
+				<label>24034</label>
+				<width>300</width>
 				<texturenofocus colordiffuse="$VAR[butcolor3]" border="20">whiteallrounded.png</texturenofocus>
-				</control>
+			</control>
 			<control type="spincontrolex" id="66">
 				<description>Next page button</description>
 				<visible>[Container(504).HasPrevious |  Container(504).HasNext]</visible>

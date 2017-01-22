@@ -5,7 +5,7 @@
 		<left>370</left>
 		<top>60</top>
 	</coordinates>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <controls>
         <control type="image">
 			<left>0</left>
@@ -66,7 +66,7 @@
 					<top>25</top>
 					<width>215</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
@@ -78,7 +78,7 @@
 					<top>295</top>
 					<width>215</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>false</scroll>
@@ -112,7 +112,7 @@
 					<top>25</top>
 					<width>215</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>true</scroll>
@@ -124,7 +124,7 @@
 					<top>295</top>
 					<width>215</width>
 					<height>30</height>
-					<font>LCARS12</font>
+					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<scroll>true</scroll>
@@ -479,27 +479,6 @@
                     <bordertexture  border="10">shadow.png</bordertexture>
                     <bordersize>10</bordersize>
                 </control>
-                <control type="image" description="Thumb">
-                    <left>15</left>
-                    <height>350</height>
-                    <width>235</width>
-					<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
-					<bordersize>10</bordersize>
-                </control>
-				<control type="label">
-					<posx>10</posx>
-					<top>10</top>
-					<width>215</width>
-					<height>30</height>
-					<font>LCARS12</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>false</scroll>
-					<textcolor>Black</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
             </itemlayout>
             <focusedlayout width="250" height="350">
                 <control type="image" description="Thumb">
@@ -508,30 +487,9 @@
                     <width>235</width>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <texture background="true" diffuse="poster-mask.png" fallback="LCARS.png">$VAR[Locandine]</texture>
-                    <bordertexture  border="10">shadow.png</bordertexture>
+                    <bordertexture colordiffuse="White" border="10">shadow2.png</bordertexture>
                     <bordersize>10</bordersize>
                 </control>
-                <control type="image" description="Thumb">
-                    <left>15</left>
-                    <height>350</height>
-                    <width>235</width>
-					<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture colordiffuse="White" border="10">shadow2.png</bordertexture>
-					<bordersize>10</bordersize>
-                </control>
-				<control type="label">
-					<posx>10</posx>
-					<top>10</top>
-					<width>215</width>
-					<height>30</height>
-					<font>LCARS12</font>
-					<align>center</align>
-					<aligny>top</aligny>
-					<scroll>true</scroll>
-					<textcolor>Black</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
 			</focusedlayout>
             <content>$VAR[SimilarInfo]</content>
         </control>

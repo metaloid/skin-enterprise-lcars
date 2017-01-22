@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">100</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
 	<onload condition="!MusicPlayer.Content(LiveTV)">SetFocus(602)</onload>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <controls>
         <control type="group">
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>

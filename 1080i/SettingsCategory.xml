@@ -3,14 +3,14 @@
     <defaultcontrol always="true">3</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>Black</backgroundcolor>
-	<include>OpenClose</include>
+	<!--include>OpenClose</include-->
     <controls>
         <include>Backgroundcolor</include>
 		<control type="image">
             <top>0</top>
             <posx>0</posx>
             <width>455</width>
-            <height>970</height>
+            <height>1050</height>
             <aspectratio>strech</aspectratio>
             <texture background="true" >Lcars/lineR.png</texture>
 		</control> 
@@ -18,75 +18,32 @@
             <top>0</top>
             <posx>455</posx>
             <width>1464</width>
-            <height>970</height>
+            <height>1050</height>
             <aspectratio>strech</aspectratio>
             <texture  background="true" >Lcars/lineL.png</texture>
 	    </control>
-		<control type="grouplist">
-			<top>980</top>
-            <posx>70</posx>
-			<align>left</align>
-            <orientation>horizontal</orientation>
-            <itemgap>10</itemgap>
-			<control type="button" description="WebLink">
-                <visible>!Skin.HasSetting(hideconnection)</visible>
-                <width>250</width>
-                <label>$INFO[Network.IPAddress,IP: ]</label>
-            </control>
-			<control type="button" description="cputemp">
-				<visible>!Skin.HasSetting(hidecpu) + System.Platform.Linux.RaspberryPi</visible>
-				<width>250</width>
-                <label>$INFO[System.CPUTemperature,$LOCALIZE[140] ]</label>
-            </control>
-			<control type="button" description="Clock">
-                <visible>!Skin.HasSetting(HideClock)</visible>
-                <label>$INFO[System.Time]</label>
-				<width>250</width>
-            </control>
-			<control type="button" description="Battery">
-                <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
-                <label>Power Level $INFO[System.BatteryLevel]</label>
-			    <texturenofocus colordiffuse="$VAR[Battery]" border="20">whiteallrounded.png</texturenofocus>
-				<width>250</width>
-            </control>
-			<control type="spincontrolex" id="66">
-				<description>Next page button</description>
-				<visible>[Container(5).HasPrevious |  Container(5).HasNext]</visible>
-				<onleft>noop</onleft>
-				<onright>5</onright>
-				<onup>555</onup>
-				<ondown>noop</ondown>
-				<width>260</width>
-				<height>40</height>
-                <subtype>page</subtype>
-				<font>-</font>
-				<textcolor>-</textcolor>
-				<showonepage>false</showonepage>
-				<spinwidth>125</spinwidth>
-				<spinheight>40</spinheight>
-				<texturenofocus></texturenofocus>
-				<texturefocus></texturefocus>
-				<textureup colordiffuse="HellOrange" >down1.png</textureup>
-				<texturedown colordiffuse="HellOrange">up1.png</texturedown>
-				<textureupfocus colordiffuse="HellOrange">downp.png</textureupfocus>
-				<texturedownfocus colordiffuse="HellOrange">upp.png</texturedownfocus>
-			</control>    
-		</control>		
         <control type="label" id="6">
             <top>-500</top>
             <width>0</width>
             <height>0</height>
             <font>LCARS24</font>
         </control>
-        <control type="label" id="2" description="Heading">
-            <width>280</width>
-            <posx>70</posx>
-		    <top>850</top>
-        	<textcolor>white</textcolor>
-            <font>LCARS24</font>
+        <control type="grouplist" description="LCARS">
+            <top>50</top>
+            <posx>50</posx>
+			<width>300</width>
+            <height>60</height>
             <align>center</align>
-            <label>-</label>
-        </control>
+            <orientation>horizontal</orientation>
+            <control type="label" id="2" description="Heading">
+                <width>auto</width>
+                <height>60</height>
+                <font>LCARS20</font>
+                <scroll>false</scroll>
+                <textcolor>HellOrange</textcolor>
+				<label>$VAR[RootLabel]</label>
+            </control>
+		</control>
         <control type="grouplist" id="3" description="TopMenu">
             <width>280</width>
             <height>750</height>
@@ -94,7 +51,7 @@
             <posx>70</posx>
 		    <itemgap>10</itemgap>
             <onup>noop</onup>
-            <ondown>555</ondown>
+            <ondown>9000</ondown>
             <onright>5</onright>
             <onleft>5</onleft>	  
         </control>
@@ -102,12 +59,11 @@
             <top>80</top>
             <left>650</left>
             <width>800</width>
-            <height>800</height>
+            <height>900</height>
             <onright>60</onright>
             <onup>5</onup>
             <ondown>5</ondown>
             <onleft>3</onleft>
-            <pagecontrol>66</pagecontrol>
             <orientation>vertical</orientation>
             <itemgap>10</itemgap>
         </control>
@@ -139,48 +95,66 @@
             <width>270</width>
             <textoffsetx>75</textoffsetx>
 			<textwidth>180</textwidth>
-			<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+			<texturenofocus colordiffuse="$VAR[butcolor3]" >whiteallrounded2.png</texturenofocus>
 			<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
-			<align>LEFT</align>
-            <aligny>center</aligny>
+			<align>left</align>
+            <aligny>top</aligny>
         </control>
-        <control type="grouplist" id="555">
+        <control type="grouplist" id="9000">
             <width>320</width>
             <height>300</height>
             <top>620</top>
             <posx>70</posx>
 		    <itemgap>10</itemgap>
-            <ondown>66</ondown>
+            <ondown>noop</ondown>
 			<onup>3</onup>
 			<orientation>vertical</orientation>
-            <control type="button" id="607">
+			<control type="button" id="20">
+                <description>Setting level button</description>
+                <textoffsetx>75</textoffsetx>
+				<height>40</height>
+				<align>LEFT</align>
+				<texturenofocus colordiffuse="$VAR[butcolor4]" >whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
+				<width>270</width>
+           		<onclick>SettingsLevelChange</onclick>
+            </control>
+			<control type="button" description="Battery" id="22">
+                <visible>IntegerGreaterThan(System.BatteryLevel,0)</visible>
+                <label>$INFO[System.BatteryLevel,pwr ]</label>
+				<texturenofocus colordiffuse="$VAR[Battery]" >whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
+				<width>270</width>
+				<align>LEFT</align>
+				<textoffsetx>75</textoffsetx>
+            </control>
+			<control type="button" description="Clock" id="23">
+                <visible>!Skin.HasSetting(HideClock)</visible>
+                <label>$INFO[System.Time]</label>
+				<texturenofocus colordiffuse="$VAR[butcolor4]" >whiteallrounded2.png</texturenofocus>
+				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
+				<width>270</width>
+				<align>LEFT</align>
+				<textoffsetx>75</textoffsetx>
+            </control>
+            <control type="button" id="24">
                 <onclick>ActivateWindow(Home)</onclick>
-				<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+				<texturenofocus colordiffuse="$VAR[butcolor4]" >whiteallrounded2.png</texturenofocus>
 				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
 				<width>270</width>
 				<align>LEFT</align>
 				<textoffsetx>75</textoffsetx>
 				<label>Home</label>
 			</control>
-        	<control type="button" id="677">
+        	<control type="button" id="25">
                 <onclick>back</onclick>
-				<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
+				<texturenofocus colordiffuse="$VAR[butcolor4]" >whiteallrounded2.png</texturenofocus>
 				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
 				<width>270</width>
 				<align>LEFT</align>
 				<textoffsetx>75</textoffsetx>
 				<label>Back</label>
 			</control>   
-			<control type="button" id="20">
-                <description>Setting level button</description>
-                <textoffsetx>75</textoffsetx>
-				<height>40</height>
-				<align>LEFT</align>
-				<texturenofocus colordiffuse="HellOrange" >whiteallrounded2.png</texturenofocus>
-				<texturefocus colordiffuse="White" >whiteallrounded2.png</texturefocus>
-				<width>270</width>
-           		<onclick>SettingsLevelChange</onclick>
-            </control>
 		</control>
         <control type="group">
             <visible>!SubString(Control.GetLabel(6),No info) + !Control.HasFocus(20)</visible>

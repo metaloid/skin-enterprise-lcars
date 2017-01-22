@@ -6,7 +6,7 @@
 		<left>950</left>
 		<top>305</top>
 	</coordinates>
-    <include>OpenClose</include>
+    <!--include>OpenClose</include-->
     <controls>
         <control type="image">
 			<left>0</left>

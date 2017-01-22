@@ -2,7 +2,7 @@
 <window type="dialog" id="1120">
    <defaultcontrol always="true">9000</defaultcontrol>
    <allowoverlay>no</allowoverlay>
-   <include>OpenClose</include>
+   <!--include>OpenClose</include-->
    <controls>
 		<control type="grouplist" id="9000">
 			<top>315</top>
@@ -39,10 +39,16 @@
 				<top>25</top>
 				<width>250</width>
 				<height>375</height>
-				<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+				<texture colordiffuse="Black" diffuse="poster-mask.png" background="true">poster-mask.png</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-				<bordersize>10</bordersize>
+            </control>
+            <control type="image">
+				<posx>35</posx>
+				<top>25</top>
+				<width>250</width>
+				<height>375</height>
+				<texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
+				<aspectratio scalediffuse="false">keep</aspectratio>
             </control>
             <control type="image">
 				<posx>35</posx>
@@ -51,15 +57,13 @@
 				<height>375</height>
 				<texture colordiffuse="Orange" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture colordiffuse="Orange" border="10">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
             </control>
 			<control type="label">
 				<posx>50</posx>
-				<top>40</top>
+				<top>30</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>false</scroll>
@@ -68,10 +72,10 @@
 			</control>
 			<control type="label">
 				<posx>50</posx>
-				<top>355</top>
+				<top>365</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>false</scroll>
@@ -101,14 +105,20 @@
         </itemlayout>
         <focusedlayout height="420" width="320" >
             <control type="image">
+				<posx>35</posx>
+				<top>25</top>
+				<width>250</width>
+				<height>375</height>
+				<texture colordiffuse="Black" diffuse="poster-mask.png" background="true">poster-mask.png</texture>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+            </control>
+            <control type="image">
                 <posx>35</posx>
                 <top>25</top>
                 <width>250</width>
                 <height>375</height>
                 <texture fallback="LCARS.png" diffuse="poster-mask.png" background="true">$INFO[ListItem.ActualIcon]</texture>
-                <aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow.png</bordertexture>
-                <bordersize>10</bordersize>
+                <aspectratio scalediffuse="false">keep</aspectratio>
             </control>
             <control type="image">
 				<posx>35</posx>
@@ -117,15 +127,13 @@
 				<height>375</height>
 				<texture colordiffuse="White" diffuse="poster-mask.png" background="true">poster-mask2.png</texture>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<bordertexture  border="10">shadow2.png</bordertexture>
-				<bordersize>10</bordersize>
             </control>
 			<control type="label">
 				<posx>50</posx>
-				<top>40</top>
+				<top>30</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>true</scroll>
@@ -134,10 +142,10 @@
 			</control>
 			<control type="label">
 				<posx>50</posx>
-				<top>355</top>
+				<top>365</top>
 				<width>220</width>
 				<height>30</height>
-				<font>LCARS12</font>
+				<font>font10</font>
 				<align>center</align>
 				<aligny>top</aligny>
 				<scroll>true</scroll>

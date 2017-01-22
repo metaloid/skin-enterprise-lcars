@@ -164,101 +164,31 @@
 			<control type="group" id="9001">
 				<control type="panel" id="200">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(1)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 				<control type="panel" id="201">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(2)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 				<control type="panel" id="202">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(3)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 				<control type="panel" id="203">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(4)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 				<control type="panel" id="204">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(5)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 				<control type="panel" id="205">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(6)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 				<control type="panel" id="206">
 					<visible allowhiddenfocus="false">[Container(5000).HasFocus(7)]</visible>
-					<posx>630</posx>
-					<top>70</top>
-					<width>1300</width>
-					<height>860</height>
-					<onup>noop</onup>
-					<ondown>noop</ondown>
-					<onleft>5000</onleft>
-					<onright>noop</onright>
-					<pagecontrol>-</pagecontrol>
-					<orientation>vertical</orientation>
-					<include>SquareIconLcars</include>				
+					<include>NextPos</include>
 				</control>
 			</control>
 		
